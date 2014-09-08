@@ -6,7 +6,7 @@ FileLogPath=../logs
 FileStorePath=../store
 
 [SESSION]
-BeginString=FIX.4.2
+BeginString=FIX.4.4
 TargetCompID=banzai
 UseDataDictionary=N
 StartTime=00:00:00
