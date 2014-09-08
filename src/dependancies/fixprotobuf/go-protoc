@@ -1,0 +1,2 @@
+/usr/local/bin/protoc --cpp_out=cpp_out --java_out=java_out -I. -I/usr/include *.proto 
+

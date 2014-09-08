@@ -1,0 +1,1245 @@
+//
+//	FIX Unified Repository mapping to Google Protocol Buffers
+//
+//	Copyright (c) FIX Protocol Ltd. All Rights Reserved.
+//
+//	Category: SingleGeneralOrderHandling
+//
+//	File: singlegeneralorderhandling.proto
+//
+import "meta.proto";
+import "fix.proto";
+import "session.proto";
+import "common.proto";
+
+option java_outer_classname = "SingleGeneralOrderHandling";
+option java_package = "org.fixprotocol.components";
+package SingleGeneralOrderHandling;
+
+enum AcctIdSourceEnum {
+	ACCT_ID_SOURCE_BIC = 0					[(fix.enum_value)="1"];
+	ACCT_ID_SOURCE_DTCCCODE = 1				[(fix.enum_value)="5"];
+	ACCT_ID_SOURCE_OMGEO = 2				[(fix.enum_value)="4"];
+	ACCT_ID_SOURCE_OTHER = 3				[(fix.enum_value)="99"];
+	ACCT_ID_SOURCE_SID_CODE = 4				[(fix.enum_value)="2"];
+	ACCT_ID_SOURCE_TFM = 5					[(fix.enum_value)="3"];
+}
+
+enum AccountTypeEnum {
+	ACCOUNT_TYPE_CARRIED_CUSTOMER_SIDE = 0			[(fix.enum_value)="1"];
+	ACCOUNT_TYPE_CARRIED_NON_CUSTOMER_SIDE = 1		[(fix.enum_value)="2"];
+	ACCOUNT_TYPE_CARRIED_NON_CUSTOMER_SIDE_CROSS_MARGINED = 2	[(fix.enum_value)="6"];
+	ACCOUNT_TYPE_FLOOR_TRADER = 3				[(fix.enum_value)="4"];
+	ACCOUNT_TYPE_HOUSE_TRADER = 4				[(fix.enum_value)="3"];
+	ACCOUNT_TYPE_HOUSE_TRADER_CROSS_MARGINED = 5		[(fix.enum_value)="7"];
+	ACCOUNT_TYPE_JOINT_BACK_OFFICE_ACCOUNT = 6		[(fix.enum_value)="8"];
+}
+
+enum DayBookingInstEnum {
+	DAY_BOOKING_INST_AUTO = 0				[(fix.enum_value)="0"];
+	DAY_BOOKING_INST_SPEAK_WITH_ORDER_INITIATOR_BEFORE_BOOKING = 1	[(fix.enum_value)="1"];
+	DAY_BOOKING_INST_ACCUMULATE = 2				[(fix.enum_value)="2"];
+}
+
+enum BookingUnitEnum {
+	BOOKING_UNIT_AGGREGATE_EXECUTIONS_FOR_THIS_SYMBOL = 0	[(fix.enum_value)="2"];
+	BOOKING_UNIT_AGGREGATE_PARTIAL_EXECUTIONS_ON_THIS_ORDER = 1	[(fix.enum_value)="1"];
+	BOOKING_UNIT_EACH_PARTIAL_EXECUTION_IS_ABOOKABLE_UNIT = 2	[(fix.enum_value)="0"];
+}
+
+enum PreallocMethodEnum {
+	PREALLOC_METHOD_DO_NOT_PRO_RATA = 0			[(fix.enum_value)="1"];
+	PREALLOC_METHOD_PRO_RATA = 1				[(fix.enum_value)="0"];
+}
+
+enum SettlTypeEnum {
+	SETTL_TYPE_CASH = 0					[(fix.enum_value)="1"];
+	SETTL_TYPE_FUTURE = 1					[(fix.enum_value)="6"];
+	SETTL_TYPE_NEXT_DAY = 2					[(fix.enum_value)="2"];
+	SETTL_TYPE_REGULAR = 3					[(fix.enum_value)="0"];
+	SETTL_TYPE_SELLERS_OPTION = 4				[(fix.enum_value)="8"];
+	SETTL_TYPE_TPLUS2 = 5					[(fix.enum_value)="3"];
+	SETTL_TYPE_TPLUS3 = 6					[(fix.enum_value)="4"];
+	SETTL_TYPE_TPLUS4 = 7					[(fix.enum_value)="5"];
+	SETTL_TYPE_WHEN_AND_IF_ISSUED = 8			[(fix.enum_value)="7"];
+	SETTL_TYPE_TPLUS5 = 9					[(fix.enum_value)="9"];
+	SETTL_TYPE_FX_SPOT_NEXT_SETTLEMENT = 10			[(fix.enum_value)="C"];
+	SETTL_TYPE_BROKEN_DATE = 11				[(fix.enum_value)="B"];
+}
+
+enum CashMarginEnum {
+	CASH_MARGIN_CASH = 0					[(fix.enum_value)="1"];
+	CASH_MARGIN_MARGIN_CLOSE = 1				[(fix.enum_value)="3"];
+	CASH_MARGIN_MARGIN_OPEN = 2				[(fix.enum_value)="2"];
+}
+
+enum ClearingFeeIndicatorEnum {
+	CLEARING_FEE_INDICATOR_ALL_OTHER_OWNERSHIP_TYPES = 0	[(fix.enum_value)="M"];
+	CLEARING_FEE_INDICATOR_CBOEMEMBER = 1			[(fix.enum_value)="B"];
+	CLEARING_FEE_INDICATOR_EQUITY_MEMBER_AND_CLEARING_MEMBER = 2	[(fix.enum_value)="E"];
+	CLEARING_FEE_INDICATOR_FIFTH_YEAR_DELEGATE = 3		[(fix.enum_value)="5"];
+	CLEARING_FEE_INDICATOR_FIRMS106HAND106J = 4		[(fix.enum_value)="H"];
+	CLEARING_FEE_INDICATOR_FIRST_YEAR_DELEGATE = 5		[(fix.enum_value)="1"];
+	CLEARING_FEE_INDICATOR_FOURTH_YEAR_DELEGATE = 6		[(fix.enum_value)="4"];
+	CLEARING_FEE_INDICATOR_FULL_AND_ASSOCIATE_MEMBER = 7	[(fix.enum_value)="F"];
+	CLEARING_FEE_INDICATOR_GIM = 8				[(fix.enum_value)="I"];
+	CLEARING_FEE_INDICATOR_LESSEE106FEMPLOYEES = 9		[(fix.enum_value)="L"];
+	CLEARING_FEE_INDICATOR_NON_MEMBER_AND_CUSTOMER = 10	[(fix.enum_value)="C"];
+	CLEARING_FEE_INDICATOR_SECOND_YEAR_DELEGATE = 11	[(fix.enum_value)="2"];
+	CLEARING_FEE_INDICATOR_SIXTH_YEAR_DELEGATE = 12		[(fix.enum_value)="9"];
+	CLEARING_FEE_INDICATOR_THIRD_YEAR_DELEGATE = 13		[(fix.enum_value)="3"];
+}
+
+enum HandlInstEnum {
+	HANDL_INST_AUTOMATED_EXECUTION_INTERVENTION_OK = 0	[(fix.enum_value)="2"];
+	HANDL_INST_AUTOMATED_EXECUTION_NO_INTERVENTION = 1	[(fix.enum_value)="1"];
+	HANDL_INST_MANUAL_ORDER = 2				[(fix.enum_value)="3"];
+}
+
+enum ExecInstEnum {
+	EXEC_INST_ALL_OR_NONE = 0				[(fix.enum_value)="G"];
+	EXEC_INST_CALL_FIRST = 1				[(fix.enum_value)="C"];
+	EXEC_INST_DO_NOT_INCREASE = 2				[(fix.enum_value)="E"];
+	EXEC_INST_DO_NOT_REDUCE = 3				[(fix.enum_value)="F"];
+	EXEC_INST_GO_ALONG = 4					[(fix.enum_value)="3"];
+	EXEC_INST_HELD = 5					[(fix.enum_value)="5"];
+	EXEC_INST_NO_CROSS = 6					[(fix.enum_value)="A"];
+	EXEC_INST_NOT_HELD = 7					[(fix.enum_value)="1"];
+	EXEC_INST_OKTO_CROSS = 8				[(fix.enum_value)="B"];
+	EXEC_INST_OVER_THE_DAY = 9				[(fix.enum_value)="4"];
+	EXEC_INST_PARTICIPATE_DO_NOT_INITIATE = 10		[(fix.enum_value)="6"];
+	EXEC_INST_PERCENT_OF_VOLUME = 11			[(fix.enum_value)="D"];
+	EXEC_INST_STAY_ON_BID_SIDE = 12				[(fix.enum_value)="9"];
+	EXEC_INST_STAY_ON_OFFER_SIDE = 13			[(fix.enum_value)="0"];
+	EXEC_INST_STRICT_SCALE = 14				[(fix.enum_value)="7"];
+	EXEC_INST_TRY_TO_SCALE = 15				[(fix.enum_value)="8"];
+	EXEC_INST_WORK = 16					[(fix.enum_value)="2"];
+	EXEC_INST_INSTITUTIONS_ONLY = 17			[(fix.enum_value)="I"];
+	EXEC_INST_LAST_PEG = 18					[(fix.enum_value)="L", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_MARKET_PEG = 19				[(fix.enum_value)="P", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_MID_PRICE_PEG = 20				[(fix.enum_value)="M", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_NON_NEGOTIABLE = 21				[(fix.enum_value)="N"];
+	EXEC_INST_OPENING_PEG = 22				[(fix.enum_value)="O", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_PRIMARY_PEG = 23				[(fix.enum_value)="R", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_SUSPEND = 24					[(fix.enum_value)="S"];
+	EXEC_INST_CUSTOMER_DISPLAY_INSTRUCTION = 25		[(fix.enum_value)="U"];
+	EXEC_INST_NETTING = 26					[(fix.enum_value)="V"];
+	EXEC_INST_PEG_TO_VWAP = 27				[(fix.enum_value)="W", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_CANCEL_ON_SYSTEM_FAILURE = 28			[(fix.enum_value)="Q"];
+	EXEC_INST_CANCEL_ON_TRADING_HALT = 29			[(fix.enum_value)="K"];
+	EXEC_INST_REINSTATE_ON_SYSTEM_FAILURE = 30		[(fix.enum_value)="H"];
+	EXEC_INST_REINSTATE_ON_TRADING_HALT = 31		[(fix.enum_value)="J"];
+	EXEC_INST_TRADE_ALONG = 32				[(fix.enum_value)="X"];
+	EXEC_INST_TRY_TO_STOP = 33				[(fix.enum_value)="Y"];
+	EXEC_INST_CANCEL_IF_NOT_BEST = 34			[(fix.enum_value)="Z"];
+	EXEC_INST_IGNORE_PRICE_VALIDITY_CHECKS = 35		[(fix.enum_value)="c"];
+	EXEC_INST_PEG_TO_LIMIT_PRICE = 36			[(fix.enum_value)="d", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_STRICT_LIMIT = 37				[(fix.enum_value)="b"];
+	EXEC_INST_TRAILING_STOP_PEG = 38			[(fix.enum_value)="a", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_WORK_TO_TARGET_STRATEGY = 39			[(fix.enum_value)="e"];
+	EXEC_INST_INTERMARKET_SWEEP = 40			[(fix.enum_value)="f"];
+	EXEC_INST_SINGLE_EXECUTION_REQUESTED_FOR_BLOCK_TRADE = 41	[(fix.enum_value)="j"];
+	EXEC_INST_EXTERNAL_ROUTING_ALLOWED = 42			[(fix.enum_value)="g"];
+	EXEC_INST_EXTERNAL_ROUTING_NOT_ALLOWED = 43		[(fix.enum_value)="h"];
+	EXEC_INST_IMBALANCE_ONLY = 44				[(fix.enum_value)="i"];
+	EXEC_INST_BEST_EXECUTION = 45				[(fix.enum_value)="k"];
+	EXEC_INST_FIXED_PEG_TO_LOCAL_BEST_BID_OR_OFFER_AT_TIME_OF_ORDER = 46	[(fix.enum_value)="T", (fix.enum_deprecated)=FIX_5_0];
+	EXEC_INST_CANCEL_ON_CONNECTION_LOSS = 47		[(fix.enum_value)="o"];
+	EXEC_INST_REINSTATE_ON_CONNECTION_LOSS = 48		[(fix.enum_value)="n"];
+	EXEC_INST_RELEASE_FROM_SUSPENSION = 49			[(fix.enum_value)="q"];
+	EXEC_INST_SUSPEND_ON_CONNECTION_LOSS = 50		[(fix.enum_value)="p"];
+	EXEC_INST_SUSPEND_ON_SYSTEM_FAILURE = 51		[(fix.enum_value)="l"];
+	EXEC_INST_SUSPEND_ON_TRADING_HALT = 52			[(fix.enum_value)="m"];
+	EXEC_INST_EXECUTE_AS_DELTA_NEUTRAL = 53			[(fix.enum_value)="r"];
+	EXEC_INST_EXECUTE_AS_DURATION_NEUTRAL = 54		[(fix.enum_value)="s"];
+	EXEC_INST_EXECUTE_AS_FX_NEUTRAL = 55			[(fix.enum_value)="t"];
+}
+
+enum ExDestinationIdSourceEnum {
+	EX_DESTINATION_ID_SOURCE_BIC = 0			[(fix.enum_value)="B"];
+	EX_DESTINATION_ID_SOURCE_GENERAL_IDENTIFIER = 1		[(fix.enum_value)="C"];
+	EX_DESTINATION_ID_SOURCE_ISO_COUNTRY_CODE = 2		[(fix.enum_value)="E"];
+	EX_DESTINATION_ID_SOURCE_MIC = 3			[(fix.enum_value)="G"];
+	EX_DESTINATION_ID_SOURCE_PROPRIETARY = 4		[(fix.enum_value)="D"];
+}
+
+enum ProcessCodeEnum {
+	PROCESS_CODE_REGULAR = 0				[(fix.enum_value)="0"];
+	PROCESS_CODE_SOFT_DOLLAR = 1				[(fix.enum_value)="1"];
+	PROCESS_CODE_SOFT_DOLLAR_STEP_IN = 2			[(fix.enum_value)="4"];
+	PROCESS_CODE_SOFT_DOLLAR_STEP_OUT = 3			[(fix.enum_value)="5"];
+	PROCESS_CODE_STEP_IN = 4				[(fix.enum_value)="2"];
+	PROCESS_CODE_STEP_OUT = 5				[(fix.enum_value)="3"];
+	PROCESS_CODE_PLAN_SPONSOR = 6				[(fix.enum_value)="6"];
+}
+
+enum SideEnum {
+	SIDE_BUY = 0						[(fix.enum_value)="1"];
+	SIDE_BUY_MINUS = 1					[(fix.enum_value)="3"];
+	SIDE_SELL = 2						[(fix.enum_value)="2"];
+	SIDE_SELL_PLUS = 3					[(fix.enum_value)="4"];
+	SIDE_SELL_SHORT = 4					[(fix.enum_value)="5"];
+	SIDE_SELL_SHORT_EXEMPT = 5				[(fix.enum_value)="6"];
+	SIDE_CROSS = 6						[(fix.enum_value)="8"];
+	SIDE_UNDISCLOSED = 7					[(fix.enum_value)="7"];
+	SIDE_CROSS_SHORT = 8					[(fix.enum_value)="9"];
+	SIDE_AS_DEFINED = 9					[(fix.enum_value)="B"];
+	SIDE_CROSS_SHORT_EXEMPT = 10				[(fix.enum_value)="A"];
+	SIDE_OPPOSITE = 11					[(fix.enum_value)="C"];
+	SIDE_BORROW = 12					[(fix.enum_value)="G"];
+	SIDE_LEND = 13						[(fix.enum_value)="F"];
+	SIDE_REDEEM = 14					[(fix.enum_value)="E"];
+	SIDE_SUBSCRIBE = 15					[(fix.enum_value)="D"];
+}
+
+enum LocateReqdEnum {
+	LOCATE_REQD_NO = 0					[(fix.enum_value)="N"];
+	LOCATE_REQD_YES = 1					[(fix.enum_value)="Y"];
+}
+
+enum QtyTypeEnum {
+	QTY_TYPE_CONTRACTS = 0					[(fix.enum_value)="1"];
+	QTY_TYPE_UNITS = 1					[(fix.enum_value)="0"];
+	QTY_TYPE_UNITS_OF_MEASURE_PER_TIME_UNIT = 2		[(fix.enum_value)="2"];
+}
+
+enum OrdTypeEnum {
+	ORD_TYPE_LIMIT = 0					[(fix.enum_value)="2"];
+	ORD_TYPE_LIMIT_ON_CLOSE = 1				[(fix.enum_value)="B", (fix.enum_deprecated)=FIX_4_3];
+	ORD_TYPE_LIMIT_OR_BETTER = 2				[(fix.enum_value)="7", (fix.enum_deprecated)=FIX_4_4];
+	ORD_TYPE_LIMIT_WITH_OR_WITHOUT = 3			[(fix.enum_value)="8"];
+	ORD_TYPE_MARKET = 4					[(fix.enum_value)="1"];
+	ORD_TYPE_MARKET_ON_CLOSE = 5				[(fix.enum_value)="5", (fix.enum_deprecated)=FIX_4_3];
+	ORD_TYPE_ON_BASIS = 6					[(fix.enum_value)="9"];
+	ORD_TYPE_ON_CLOSE = 7					[(fix.enum_value)="A", (fix.enum_deprecated)=FIX_4_3];
+	ORD_TYPE_STOP = 8					[(fix.enum_value)="3"];
+	ORD_TYPE_STOP_LIMIT = 9					[(fix.enum_value)="4"];
+	ORD_TYPE_WITH_OR_WITHOUT = 10				[(fix.enum_value)="6"];
+	ORD_TYPE_PEGGED = 11					[(fix.enum_value)="P"];
+	ORD_TYPE_FOREX_MARKET = 12				[(fix.enum_value)="C", (fix.enum_deprecated)=FIX_4_3];
+	ORD_TYPE_PREVIOUSLY_INDICATED = 13			[(fix.enum_value)="E"];
+	ORD_TYPE_PREVIOUSLY_QUOTED = 14				[(fix.enum_value)="D"];
+	ORD_TYPE_FOREX_LIMIT = 15				[(fix.enum_value)="F", (fix.enum_deprecated)=FIX_4_3];
+	ORD_TYPE_FOREX_PREVIOUSLY_QUOTED = 16			[(fix.enum_value)="H", (fix.enum_deprecated)=FIX_4_3];
+	ORD_TYPE_FOREX_SWAP = 17				[(fix.enum_value)="G"];
+	ORD_TYPE_FUNARI = 18					[(fix.enum_value)="I"];
+	ORD_TYPE_MARKET_IF_TOUCHED = 19				[(fix.enum_value)="J"];
+	ORD_TYPE_MARKET_WITH_LEFT_OVER_AS_LIMIT = 20		[(fix.enum_value)="K"];
+	ORD_TYPE_NEXT_FUND_VALUATION_POINT = 21			[(fix.enum_value)="M"];
+	ORD_TYPE_PREVIOUS_FUND_VALUATION_POINT = 22		[(fix.enum_value)="L"];
+	ORD_TYPE_COUNTER_ORDER_SELECTION = 23			[(fix.enum_value)="Q"];
+}
+
+enum PriceTypeEnum {
+	PRICE_TYPE_FIXED_AMOUNT = 0				[(fix.enum_value)="3"];
+	PRICE_TYPE_PER_UNIT = 1					[(fix.enum_value)="2"];
+	PRICE_TYPE_PERCENTAGE = 2				[(fix.enum_value)="1"];
+	PRICE_TYPE_DISCOUNT = 3					[(fix.enum_value)="4"];
+	PRICE_TYPE_PREMIUM = 4					[(fix.enum_value)="5"];
+	PRICE_TYPE_SPREAD = 5					[(fix.enum_value)="6"];
+	PRICE_TYPE_TEDPRICE = 6					[(fix.enum_value)="7"];
+	PRICE_TYPE_TEDYIELD = 7					[(fix.enum_value)="8"];
+	PRICE_TYPE_FIXED_CABINET_TRADE_PRICE = 8		[(fix.enum_value)="10"];
+	PRICE_TYPE_VARIABLE_CABINET_TRADE_PRICE = 9		[(fix.enum_value)="11"];
+	PRICE_TYPE_YIELD = 10					[(fix.enum_value)="9"];
+	PRICE_TYPE_PRODUCT_TICKS_IN_EIGHTS = 11			[(fix.enum_value)="15"];
+	PRICE_TYPE_PRODUCT_TICKS_IN_FOURTHS = 12		[(fix.enum_value)="14"];
+	PRICE_TYPE_PRODUCT_TICKS_IN_HALFS = 13			[(fix.enum_value)="13"];
+	PRICE_TYPE_PRODUCT_TICKS_IN_ONE_TWENTY_EIGHTS = 14	[(fix.enum_value)="19"];
+	PRICE_TYPE_PRODUCT_TICKS_IN_SIXTEENTHS = 15		[(fix.enum_value)="16"];
+	PRICE_TYPE_PRODUCT_TICKS_IN_SIXTY_FORTHS = 16		[(fix.enum_value)="18"];
+	PRICE_TYPE_PRODUCT_TICKS_IN_THIRTY_SECONDS = 17		[(fix.enum_value)="17"];
+}
+
+enum PriceProtectionScopeEnum {
+	PRICE_PROTECTION_SCOPE_GLOBAL = 0			[(fix.enum_value)="3"];
+	PRICE_PROTECTION_SCOPE_LOCAL = 1			[(fix.enum_value)="1"];
+	PRICE_PROTECTION_SCOPE_NATIONAL = 2			[(fix.enum_value)="2"];
+	PRICE_PROTECTION_SCOPE_NONE = 3				[(fix.enum_value)="0"];
+}
+
+enum SolicitedFlagEnum {
+	SOLICITED_FLAG_WAS_NOT_SOLICITED = 0			[(fix.enum_value)="N"];
+	SOLICITED_FLAG_WAS_SOLICITED = 1			[(fix.enum_value)="Y"];
+}
+
+enum TimeInForceEnum {
+	TIME_IN_FORCE_AT_THE_OPENING = 0			[(fix.enum_value)="2"];
+	TIME_IN_FORCE_DAY = 1					[(fix.enum_value)="0"];
+	TIME_IN_FORCE_FILL_OR_KILL = 2				[(fix.enum_value)="4"];
+	TIME_IN_FORCE_GOOD_TILL_CANCEL = 3			[(fix.enum_value)="1"];
+	TIME_IN_FORCE_GOOD_TILL_CROSSING = 4			[(fix.enum_value)="5"];
+	TIME_IN_FORCE_IMMEDIATE_OR_CANCEL = 5			[(fix.enum_value)="3"];
+	TIME_IN_FORCE_GOOD_TILL_DATE = 6			[(fix.enum_value)="6"];
+	TIME_IN_FORCE_AT_THE_CLOSE = 7				[(fix.enum_value)="7"];
+	TIME_IN_FORCE_AT_CROSSING = 8				[(fix.enum_value)="9"];
+	TIME_IN_FORCE_GOOD_THROUGH_CROSSING = 9			[(fix.enum_value)="8"];
+}
+
+enum GtBookingInstEnum {
+	GT_BOOKING_INST_ACCUMULATE_UNTIL_FILLED_OR_EXPIRED = 0	[(fix.enum_value)="1"];
+	GT_BOOKING_INST_ACCUMULATE_UNTIL_VERBALLLY_NOTIFIED_OTHERWISE = 1	[(fix.enum_value)="2"];
+	GT_BOOKING_INST_BOOK_OUT_ALL_TRADES_ON_DAY_OF_EXECUTION = 2	[(fix.enum_value)="0"];
+}
+
+enum OrderCapacityEnum {
+	ORDER_CAPACITY_AGENCY = 0				[(fix.enum_value)="A"];
+	ORDER_CAPACITY_AGENT_FOR_OTHER_MEMBER = 1		[(fix.enum_value)="W"];
+	ORDER_CAPACITY_INDIVIDUAL = 2				[(fix.enum_value)="I"];
+	ORDER_CAPACITY_PRINCIPAL = 3				[(fix.enum_value)="P"];
+	ORDER_CAPACITY_PROPRIETARY = 4				[(fix.enum_value)="G"];
+	ORDER_CAPACITY_RISKLESS_PRINCIPAL = 5			[(fix.enum_value)="R"];
+}
+
+enum OrderRestrictionsEnum {
+	ORDER_RESTRICTIONS_ACTING_AS_MARKET_MAKER_OR_SPECIALIST_IN_SECURITY = 0	[(fix.enum_value)="5"];
+	ORDER_RESTRICTIONS_ACTING_AS_MARKET_MAKER_OR_SPECIALIST_IN_UNDERLYING = 1	[(fix.enum_value)="6"];
+	ORDER_RESTRICTIONS_COMPETING_MARKET_MAKER = 2		[(fix.enum_value)="4"];
+	ORDER_RESTRICTIONS_EXTERNAL_INTER_CONNECTED_MARKET_LINKAGE = 3	[(fix.enum_value)="9"];
+	ORDER_RESTRICTIONS_EXTERNAL_MARKET_PARTICIPANT = 4	[(fix.enum_value)="8"];
+	ORDER_RESTRICTIONS_FOREIGN_ENTITY = 5			[(fix.enum_value)="7"];
+	ORDER_RESTRICTIONS_INDEX_ARBITRAGE = 6			[(fix.enum_value)="2"];
+	ORDER_RESTRICTIONS_NON_INDEX_ARBITRAGE = 7		[(fix.enum_value)="3"];
+	ORDER_RESTRICTIONS_PROGRAM_TRADE = 8			[(fix.enum_value)="1"];
+	ORDER_RESTRICTIONS_RISKLESS_ARBITRAGE = 9		[(fix.enum_value)="A"];
+	ORDER_RESTRICTIONS_ALGORITHMIC = 10			[(fix.enum_value)="E"];
+	ORDER_RESTRICTIONS_NON_ALGORITHMIC = 11			[(fix.enum_value)="D"];
+	ORDER_RESTRICTIONS_ISSUE_PRICE_STABILIZATION = 12	[(fix.enum_value)="C"];
+	ORDER_RESTRICTIONS_ISSUER_HOLDING = 13			[(fix.enum_value)="B"];
+	ORDER_RESTRICTIONS_CROSS = 14				[(fix.enum_value)="F"];
+}
+
+enum CustOrderCapacityEnum {
+	CUST_ORDER_CAPACITY_ALL_OTHER = 0			[(fix.enum_value)="4"];
+	CUST_ORDER_CAPACITY_CLEARING_FIRM_TRADING_FOR_ITS_PROPRIETARY_ACCOUNT = 1	[(fix.enum_value)="2"];
+	CUST_ORDER_CAPACITY_MEMBER_TRADING_FOR_ANOTHER_MEMBER = 2	[(fix.enum_value)="3"];
+	CUST_ORDER_CAPACITY_MEMBER_TRADING_FOR_THEIR_OWN_ACCOUNT = 3	[(fix.enum_value)="1"];
+}
+
+enum ForexReqEnum {
+	FOREX_REQ_DO_NOT_EXECUTE_FOREX_AFTER_SECURITY_TRADE = 0	[(fix.enum_value)="N"];
+	FOREX_REQ_EXECUTE_FOREX_AFTER_SECURITY_TRADE = 1	[(fix.enum_value)="Y"];
+}
+
+enum BookingTypeEnum {
+	BOOKING_TYPE_CFD = 0					[(fix.enum_value)="1"];
+	BOOKING_TYPE_REGULAR_BOOKING = 1			[(fix.enum_value)="0"];
+	BOOKING_TYPE_TOTAL_RETURN_SWAP = 2			[(fix.enum_value)="2"];
+}
+
+enum PositionEffectEnum {
+	POSITION_EFFECT_CLOSE = 0				[(fix.enum_value)="C"];
+	POSITION_EFFECT_OPEN = 1				[(fix.enum_value)="O"];
+	POSITION_EFFECT_FIFO = 2				[(fix.enum_value)="F"];
+	POSITION_EFFECT_ROLLED = 3				[(fix.enum_value)="R"];
+	POSITION_EFFECT_CLOSE_BUT_NOTIFY_ON_OPEN = 4		[(fix.enum_value)="N"];
+	POSITION_EFFECT_DEFAULT = 5				[(fix.enum_value)="D"];
+}
+
+enum CoveredOrUncoveredEnum {
+	COVERED_OR_UNCOVERED_COVERED = 0			[(fix.enum_value)="0"];
+	COVERED_OR_UNCOVERED_UNCOVERED = 1			[(fix.enum_value)="1"];
+}
+
+enum TargetStrategyEnum {
+	TARGET_STRATEGY_MININIZE_MARKET_IMPACT = 0		[(fix.enum_value)="3"];
+	TARGET_STRATEGY_PARTICIPATE = 1				[(fix.enum_value)="2"];
+	TARGET_STRATEGY_VWAP = 2				[(fix.enum_value)="1"];
+}
+
+enum CancellationRightsEnum {
+	CANCELLATION_RIGHTS_NO_EXECUTION_ONLY = 0		[(fix.enum_value)="N"];
+	CANCELLATION_RIGHTS_NO_INSTITUTIONAL = 1		[(fix.enum_value)="O"];
+	CANCELLATION_RIGHTS_NO_WAIVER_AGREEMENT = 2		[(fix.enum_value)="M"];
+	CANCELLATION_RIGHTS_YES = 3				[(fix.enum_value)="Y"];
+}
+
+enum MoneyLaunderingStatusEnum {
+	MONEY_LAUNDERING_STATUS_EXEMPT_AUTHORISED = 0		[(fix.enum_value)="3"];
+	MONEY_LAUNDERING_STATUS_EXEMPT_BELOW_LIMIT = 1		[(fix.enum_value)="1"];
+	MONEY_LAUNDERING_STATUS_EXEMPT_MONEY_TYPE = 2		[(fix.enum_value)="2"];
+	MONEY_LAUNDERING_STATUS_NOT_CHECKED = 3			[(fix.enum_value)="N"];
+	MONEY_LAUNDERING_STATUS_PASSED = 4			[(fix.enum_value)="Y"];
+}
+
+enum CustOrderHandlingInstEnum {
+	CUST_ORDER_HANDLING_INST_ADD_ON_ORDER = 0		[(fix.enum_value)="ADD"];
+	CUST_ORDER_HANDLING_INST_ALL_OR_NONE = 1		[(fix.enum_value)="AON"];
+	CUST_ORDER_HANDLING_INST_CASH_NOT_HELD = 2		[(fix.enum_value)="CNH"];
+	CUST_ORDER_HANDLING_INST_DIRECTED_ORDER = 3		[(fix.enum_value)="DIR"];
+	CUST_ORDER_HANDLING_INST_EXCHANGE_FOR_PHYSICAL_TRANSACTION = 4	[(fix.enum_value)="E.W"];
+	CUST_ORDER_HANDLING_INST_FILL_OR_KILL = 5		[(fix.enum_value)="FOK"];
+	CUST_ORDER_HANDLING_INST_IMBALANCE_ONLY = 6		[(fix.enum_value)="IO"];
+	CUST_ORDER_HANDLING_INST_IMMEDIATE_OR_CANCEL = 7	[(fix.enum_value)="IOC"];
+	CUST_ORDER_HANDLING_INST_LIMIT_ON_CLOSE = 8		[(fix.enum_value)="LOC"];
+	CUST_ORDER_HANDLING_INST_LIMIT_ON_OPEN = 9		[(fix.enum_value)="LOO"];
+	CUST_ORDER_HANDLING_INST_MARKET_AT_CLOSE = 10		[(fix.enum_value)="MAC"];
+	CUST_ORDER_HANDLING_INST_MARKET_AT_OPEN = 11		[(fix.enum_value)="MAO"];
+	CUST_ORDER_HANDLING_INST_MARKET_ON_CLOSE = 12		[(fix.enum_value)="MOC"];
+	CUST_ORDER_HANDLING_INST_MARKET_ON_OPEN = 13		[(fix.enum_value)="MOO"];
+	CUST_ORDER_HANDLING_INST_MINIMUM_QUANTITY = 14		[(fix.enum_value)="MQT"];
+	CUST_ORDER_HANDLING_INST_NOT_HELD = 15			[(fix.enum_value)="NH"];
+	CUST_ORDER_HANDLING_INST_OVER_THE_DAY = 16		[(fix.enum_value)="OVD"];
+	CUST_ORDER_HANDLING_INST_PEGGED = 17			[(fix.enum_value)="PEG"];
+	CUST_ORDER_HANDLING_INST_RESERVE_SIZE_ORDER = 18	[(fix.enum_value)="RSV"];
+	CUST_ORDER_HANDLING_INST_SCALE = 19			[(fix.enum_value)="SCL"];
+	CUST_ORDER_HANDLING_INST_STOP_STOCK_TRANSACTION = 20	[(fix.enum_value)="S.W"];
+	CUST_ORDER_HANDLING_INST_TIME_ORDER = 21		[(fix.enum_value)="TMO"];
+	CUST_ORDER_HANDLING_INST_TRAILING_STOP = 22		[(fix.enum_value)="TS"];
+	CUST_ORDER_HANDLING_INST_WORK = 23			[(fix.enum_value)="WRK"];
+}
+
+enum OrderHandlingInstSourceEnum {
+	ORDER_HANDLING_INST_SOURCE_NASDOATS = 0			[(fix.enum_value)="1"];
+}
+
+enum RefOrderIdSourceEnum {
+	REF_ORDER_ID_SOURCE_MD_ENTRY_ID = 0			[(fix.enum_value)="2"];
+	REF_ORDER_ID_SOURCE_ORDER_ID = 1			[(fix.enum_value)="1"];
+	REF_ORDER_ID_SOURCE_QUOTE_ENTRY_ID = 2			[(fix.enum_value)="3"];
+	REF_ORDER_ID_SOURCE_SECONDARY_ORDER_ID = 3		[(fix.enum_value)="0"];
+	REF_ORDER_ID_SOURCE_ORIGINAL_ORDER_ID = 4		[(fix.enum_value)="4"];
+}
+
+message AcctIdSourceUnion {
+	optional AcctIdSourceEnum acct_id_source = 1;
+	optional sfixed64 acct_id_source_sfixed64 = 2;
+}
+
+message SettlTypeUnion {
+	optional SettlTypeEnum settl_type = 1;
+	optional fix.Tenor settl_type_tenor = 2;
+}
+
+message TargetStrategyUnion {
+	optional TargetStrategyEnum target_strategy = 1;
+	optional sfixed64 target_strategy_sfixed64 = 2;
+}
+
+message NewOrderSingle {
+	option (fix.msg_type) = "D";
+	optional string account = 1				[(fix.tag)=1, (fix.type)=STRING];
+	optional string cl_ord_id = 2				[(fix.tag)=11, (fix.type)=STRING];
+	optional string currency = 3				[(fix.tag)=15, (fix.type)=CURRENCY];
+	optional string ex_destination = 4			[(fix.tag)=100, (fix.type)=EXCHANGE];
+	repeated ExecInstEnum exec_inst = 5			[packed=true,(fix.tag)=18, (fix.type)=MULTIPLE_CHAR_VALUE];
+	optional HandlInstEnum handl_inst = 6			[(fix.tag)=21, (fix.type)=CHAR];
+	optional string ioi_id = 7				[(fix.tag)=23, (fix.type)=STRING];
+	optional sfixed64 max_floor = 8				[(fix.tag)=111, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 max_floor_exponent = 9;
+	optional sfixed64 min_qty = 10				[(fix.tag)=110, (fix.type)=QTY];
+	optional sfixed32 min_qty_exponent = 11;
+	optional OrdTypeEnum ord_type = 12			[(fix.tag)=40, (fix.type)=CHAR];
+	optional sfixed64 price = 13				[(fix.tag)=44, (fix.type)=PRICE];
+	optional sfixed32 price_exponent = 14;
+	optional ProcessCodeEnum process_code = 15		[(fix.tag)=81, (fix.type)=CHAR];
+	optional sfixed32 settl_date = 16			[(fix.tag)=64, (fix.type)=LOCAL_MKT_DATE];
+	optional SettlTypeEnum settl_type = 17			[(fix.tag)=63, (fix.type)=STRING];
+	optional SideEnum side = 18				[(fix.tag)=54, (fix.type)=CHAR];
+	optional Session.StandardHeader standard_header = 19	[(fix.field_added)=FIX_2_7];
+	optional Session.StandardTrailer standard_trailer = 20	[(fix.field_added)=FIX_2_7];
+	optional sfixed64 stop_px = 21				[(fix.tag)=99, (fix.type)=PRICE];
+	optional sfixed32 stop_px_exponent = 22;
+	optional string text = 23				[(fix.tag)=58, (fix.type)=STRING];
+	optional TimeInForceEnum time_in_force = 24		[(fix.tag)=59, (fix.type)=CHAR];
+	optional sfixed64 expire_time = 25			[(fix.tag)=126, (fix.type)=UTC_TIMESTAMP];
+	optional bool forex_req = 26				[(fix.tag)=121, (fix.type)=BOOLEAN];
+	optional bool locate_reqd = 27				[(fix.tag)=114, (fix.type)=BOOLEAN];
+	optional sfixed64 prev_close_px = 28			[(fix.tag)=140, (fix.type)=PRICE];
+	optional sfixed32 prev_close_px_exponent = 29;
+	optional string quote_id = 30				[(fix.tag)=117, (fix.type)=STRING];
+	optional string settl_currency = 31			[(fix.tag)=120, (fix.type)=CURRENCY];
+	optional CoveredOrUncoveredEnum covered_or_uncovered = 32	[(fix.tag)=203, (fix.type)=INT];
+	optional sfixed64 max_show = 33				[(fix.tag)=210, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 max_show_exponent = 34;
+	optional sfixed64 order_qty2 = 35			[(fix.tag)=192, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 order_qty2_exponent = 36;
+	optional PositionEffectEnum position_effect = 37	[(fix.tag)=77, (fix.type)=CHAR];
+	optional sfixed32 settl_date2 = 38			[(fix.tag)=193, (fix.type)=LOCAL_MKT_DATE, (fix.field_deprecated)=FIX_5_0];
+	optional string compliance_id = 39			[(fix.tag)=376, (fix.type)=STRING];
+	optional sfixed64 effective_time = 40			[(fix.tag)=168, (fix.type)=UTC_TIMESTAMP];
+	optional bytes encoded_text = 41			[(fix.tag)=355, (fix.type)=DATA];
+	optional fixed32 encoded_text_len = 42			[(fix.tag)=354, (fix.type)=LENGTH];
+	optional sfixed32 expire_date = 43			[(fix.tag)=432, (fix.type)=LOCAL_MKT_DATE];
+	optional GtBookingInstEnum gt_booking_inst = 44		[(fix.tag)=427, (fix.type)=INT];
+	optional bool solicited_flag = 45			[(fix.tag)=377, (fix.type)=BOOLEAN];
+	optional sfixed64 transact_time = 46			[(fix.tag)=60, (fix.type)=UTC_TIMESTAMP];
+	optional AccountTypeEnum account_type = 47		[(fix.tag)=581, (fix.type)=INT];
+	optional BookingUnitEnum booking_unit = 48		[(fix.tag)=590, (fix.type)=CHAR];
+	optional CancellationRightsEnum cancellation_rights = 49	[(fix.tag)=480, (fix.type)=CHAR];
+	optional CashMarginEnum cash_margin = 50		[(fix.tag)=544, (fix.type)=CHAR];
+	optional string cl_ord_link_id = 51			[(fix.tag)=583, (fix.type)=STRING];
+	optional ClearingFeeIndicatorEnum clearing_fee_indicator = 52	[(fix.tag)=635, (fix.type)=STRING];
+	optional Common.CommissionData commission_data = 53	[(fix.field_added)=FIX_4_3];
+	optional CustOrderCapacityEnum cust_order_capacity = 54	[(fix.tag)=582, (fix.type)=INT];
+	optional DayBookingInstEnum day_booking_inst = 55	[(fix.tag)=589, (fix.type)=CHAR];
+	optional string designation = 56			[(fix.tag)=494, (fix.type)=STRING];
+	optional Common.Instrument instrument = 57		[(fix.field_added)=FIX_4_3];
+	optional MoneyLaunderingStatusEnum money_laundering_status = 58	[(fix.tag)=481, (fix.type)=CHAR];
+	optional OrderCapacityEnum order_capacity = 59		[(fix.tag)=528, (fix.type)=CHAR];
+	optional Common.OrderQtyData order_qty_data = 60	[(fix.field_added)=FIX_4_3];
+	repeated OrderRestrictionsEnum order_restrictions = 61	[packed=true,(fix.tag)=529, (fix.type)=MULTIPLE_CHAR_VALUE];
+	repeated Common.Parties parties = 62			[(fix.tag)=453];
+	optional PreallocMethodEnum prealloc_method = 63	[(fix.tag)=591, (fix.type)=CHAR];
+	optional sfixed64 price2 = 64				[(fix.tag)=640, (fix.type)=PRICE, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 price2_exponent = 65;
+	optional PriceTypeEnum price_type = 66			[(fix.tag)=423, (fix.type)=INT];
+	optional string regist_id = 67				[(fix.tag)=513, (fix.type)=STRING];
+	optional string secondary_cl_ord_id = 68		[(fix.tag)=526, (fix.type)=STRING];
+	optional Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 69	[(fix.field_added)=FIX_4_3];
+	repeated Common.Stipulations stipulations = 70		[(fix.tag)=232];
+	optional sfixed32 trade_origination_date = 71		[(fix.tag)=229, (fix.type)=LOCAL_MKT_DATE];
+	optional Common.YieldData yield_data = 72		[(fix.field_added)=FIX_4_3];
+	optional AcctIdSourceEnum acct_id_source = 73		[(fix.tag)=660, (fix.type)=INT];
+	optional string alloc_id = 74				[(fix.tag)=70, (fix.type)=STRING];
+	optional BookingTypeEnum booking_type = 75		[(fix.tag)=775, (fix.type)=INT];
+	optional bool cust_directed_order = 76			[(fix.tag)=1029, (fix.type)=BOOLEAN];
+	optional CustOrderHandlingInstEnum cust_order_handling_inst = 77	[(fix.tag)=1031, (fix.type)=MULTIPLE_STRING_VALUE];
+	optional Common.DiscretionInstructions discretion_instructions = 78	[(fix.field_added)=FIX_4_4];
+	optional Common.DisplayInstruction display_instruction = 79	[(fix.field_added)=FIX_4_4];
+	optional ExDestinationIdSourceEnum ex_destination_id_source = 80	[(fix.tag)=1133, (fix.type)=CHAR];
+	optional Common.FinancingDetails financing_details = 81	[(fix.field_added)=FIX_4_4];
+	optional bool manual_order_indicator = 82		[(fix.tag)=1028, (fix.type)=BOOLEAN];
+	optional sfixed64 match_increment = 83			[(fix.tag)=1089, (fix.type)=QTY];
+	optional sfixed32 match_increment_exponent = 84;
+	optional sfixed64 max_price_levels = 85			[(fix.tag)=1090, (fix.type)=INT];
+	optional OrderHandlingInstSourceEnum order_handling_inst_source = 86	[(fix.tag)=1032, (fix.type)=INT];
+	optional sfixed64 participation_rate = 87		[(fix.tag)=849, (fix.type)=PERCENTAGE, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 participation_rate_exponent = 88;
+	optional Common.PegInstructions peg_instructions = 89	[(fix.field_added)=FIX_4_4];
+	repeated Common.PreAllocGrp pre_alloc_grp = 90		[(fix.tag)=78];
+	optional bool pre_trade_anonymity = 91			[(fix.tag)=1091, (fix.type)=BOOLEAN];
+	optional PriceProtectionScopeEnum price_protection_scope = 92	[(fix.tag)=1092, (fix.type)=CHAR];
+	optional QtyTypeEnum qty_type = 93			[(fix.tag)=854, (fix.type)=INT];
+	optional string received_dept_id = 94			[(fix.tag)=1030, (fix.type)=STRING];
+	optional string ref_order_id = 95			[(fix.tag)=1080, (fix.type)=STRING];
+	optional RefOrderIdSourceEnum ref_order_id_source = 96	[(fix.tag)=1081, (fix.type)=CHAR];
+	repeated Common.StrategyParametersGrp strategy_parameters_grp = 97	[(fix.tag)=957];
+	optional TargetStrategyEnum target_strategy = 98	[(fix.tag)=847, (fix.type)=INT];
+	optional string target_strategy_parameters = 99		[(fix.tag)=848, (fix.type)=STRING, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 trade_date = 100			[(fix.tag)=75, (fix.type)=LOCAL_MKT_DATE];
+	repeated Common.TrdRegTimestamps trd_reg_timestamps = 101	[(fix.tag)=768];
+	repeated Common.TrdgSesGrp trdg_ses_grp = 102		[(fix.tag)=386];
+	optional Common.TriggeringInstruction triggering_instruction = 103	[(fix.field_added)=FIX_4_4];
+	repeated Common.UndInstrmtGrp und_instrmt_grp = 104	[(fix.tag)=711];
+}
+message OrderCancelReplaceRequest {
+	option (fix.msg_type) = "G";
+	optional string account = 1				[(fix.tag)=1, (fix.type)=STRING];
+	optional string cl_ord_id = 2				[(fix.tag)=11, (fix.type)=STRING];
+	optional string currency = 3				[(fix.tag)=15, (fix.type)=CURRENCY];
+	repeated ExecInstEnum exec_inst = 4			[packed=true,(fix.tag)=18, (fix.type)=MULTIPLE_CHAR_VALUE];
+	optional HandlInstEnum handl_inst = 5			[(fix.tag)=21, (fix.type)=CHAR];
+	optional string list_id = 6				[(fix.tag)=66, (fix.type)=STRING];
+	optional OrdTypeEnum ord_type = 7			[(fix.tag)=40, (fix.type)=CHAR];
+	optional string order_id = 8				[(fix.tag)=37, (fix.type)=STRING];
+	optional string orig_cl_ord_id = 9			[(fix.tag)=41, (fix.type)=STRING];
+	optional sfixed64 price = 10				[(fix.tag)=44, (fix.type)=PRICE];
+	optional sfixed32 price_exponent = 11;
+	optional sfixed32 settl_date = 12			[(fix.tag)=64, (fix.type)=LOCAL_MKT_DATE];
+	optional SettlTypeEnum settl_type = 13			[(fix.tag)=63, (fix.type)=STRING];
+	optional SideEnum side = 14				[(fix.tag)=54, (fix.type)=CHAR];
+	optional Session.StandardHeader standard_header = 15	[(fix.field_added)=FIX_2_7];
+	optional Session.StandardTrailer standard_trailer = 16	[(fix.field_added)=FIX_2_7];
+	optional sfixed64 stop_px = 17				[(fix.tag)=99, (fix.type)=PRICE];
+	optional sfixed32 stop_px_exponent = 18;
+	optional string text = 19				[(fix.tag)=58, (fix.type)=STRING];
+	optional TimeInForceEnum time_in_force = 20		[(fix.tag)=59, (fix.type)=CHAR];
+	optional string ex_destination = 21			[(fix.tag)=100, (fix.type)=EXCHANGE];
+	optional sfixed64 max_floor = 22			[(fix.tag)=111, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 max_floor_exponent = 23;
+	optional sfixed64 min_qty = 24				[(fix.tag)=110, (fix.type)=QTY];
+	optional sfixed32 min_qty_exponent = 25;
+	optional sfixed64 expire_time = 26			[(fix.tag)=126, (fix.type)=UTC_TIMESTAMP];
+	optional bool forex_req = 27				[(fix.tag)=121, (fix.type)=BOOLEAN];
+	optional string settl_currency = 28			[(fix.tag)=120, (fix.type)=CURRENCY];
+	optional CoveredOrUncoveredEnum covered_or_uncovered = 29	[(fix.tag)=203, (fix.type)=INT];
+	optional bool locate_reqd = 30				[(fix.tag)=114, (fix.type)=BOOLEAN];
+	optional sfixed64 max_show = 31				[(fix.tag)=210, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 max_show_exponent = 32;
+	optional sfixed64 order_qty2 = 33			[(fix.tag)=192, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 order_qty2_exponent = 34;
+	optional PositionEffectEnum position_effect = 35	[(fix.tag)=77, (fix.type)=CHAR];
+	optional sfixed32 settl_date2 = 36			[(fix.tag)=193, (fix.type)=LOCAL_MKT_DATE, (fix.field_deprecated)=FIX_5_0];
+	optional string compliance_id = 37			[(fix.tag)=376, (fix.type)=STRING];
+	optional sfixed64 effective_time = 38			[(fix.tag)=168, (fix.type)=UTC_TIMESTAMP];
+	optional bytes encoded_text = 39			[(fix.tag)=355, (fix.type)=DATA];
+	optional fixed32 encoded_text_len = 40			[(fix.tag)=354, (fix.type)=LENGTH];
+	optional sfixed32 expire_date = 41			[(fix.tag)=432, (fix.type)=LOCAL_MKT_DATE];
+	optional GtBookingInstEnum gt_booking_inst = 42		[(fix.tag)=427, (fix.type)=INT];
+	optional bool solicited_flag = 43			[(fix.tag)=377, (fix.type)=BOOLEAN];
+	optional sfixed64 transact_time = 44			[(fix.tag)=60, (fix.type)=UTC_TIMESTAMP];
+	optional AccountTypeEnum account_type = 45		[(fix.tag)=581, (fix.type)=INT];
+	optional BookingUnitEnum booking_unit = 46		[(fix.tag)=590, (fix.type)=CHAR];
+	optional CancellationRightsEnum cancellation_rights = 47	[(fix.tag)=480, (fix.type)=CHAR];
+	optional CashMarginEnum cash_margin = 48		[(fix.tag)=544, (fix.type)=CHAR];
+	optional string cl_ord_link_id = 49			[(fix.tag)=583, (fix.type)=STRING];
+	optional ClearingFeeIndicatorEnum clearing_fee_indicator = 50	[(fix.tag)=635, (fix.type)=STRING];
+	optional Common.CommissionData commission_data = 51	[(fix.field_added)=FIX_4_3];
+	optional CustOrderCapacityEnum cust_order_capacity = 52	[(fix.tag)=582, (fix.type)=INT];
+	optional DayBookingInstEnum day_booking_inst = 53	[(fix.tag)=589, (fix.type)=CHAR];
+	optional string designation = 54			[(fix.tag)=494, (fix.type)=STRING];
+	optional Common.Instrument instrument = 55		[(fix.field_added)=FIX_4_3];
+	optional MoneyLaunderingStatusEnum money_laundering_status = 56	[(fix.tag)=481, (fix.type)=CHAR];
+	optional OrderCapacityEnum order_capacity = 57		[(fix.tag)=528, (fix.type)=CHAR];
+	optional Common.OrderQtyData order_qty_data = 58	[(fix.field_added)=FIX_4_3];
+	repeated OrderRestrictionsEnum order_restrictions = 59	[packed=true,(fix.tag)=529, (fix.type)=MULTIPLE_CHAR_VALUE];
+	optional sfixed64 orig_ord_mod_time = 60		[(fix.tag)=586, (fix.type)=UTC_TIMESTAMP];
+	repeated Common.Parties parties = 61			[(fix.tag)=453];
+	optional PreallocMethodEnum prealloc_method = 62	[(fix.tag)=591, (fix.type)=CHAR];
+	optional sfixed64 price2 = 63				[(fix.tag)=640, (fix.type)=PRICE, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 price2_exponent = 64;
+	optional PriceTypeEnum price_type = 65			[(fix.tag)=423, (fix.type)=INT];
+	optional string regist_id = 66				[(fix.tag)=513, (fix.type)=STRING];
+	optional string secondary_cl_ord_id = 67		[(fix.tag)=526, (fix.type)=STRING];
+	optional Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 68	[(fix.field_added)=FIX_4_3];
+	optional sfixed32 trade_origination_date = 69		[(fix.tag)=229, (fix.type)=LOCAL_MKT_DATE];
+	optional Common.YieldData yield_data = 70		[(fix.field_added)=FIX_4_3];
+	optional AcctIdSourceEnum acct_id_source = 71		[(fix.tag)=660, (fix.type)=INT];
+	optional string alloc_id = 72				[(fix.tag)=70, (fix.type)=STRING];
+	optional BookingTypeEnum booking_type = 73		[(fix.tag)=775, (fix.type)=INT];
+	optional bool cust_directed_order = 74			[(fix.tag)=1029, (fix.type)=BOOLEAN];
+	optional CustOrderHandlingInstEnum cust_order_handling_inst = 75	[(fix.tag)=1031, (fix.type)=MULTIPLE_STRING_VALUE];
+	optional Common.DiscretionInstructions discretion_instructions = 76	[(fix.field_added)=FIX_4_4];
+	optional Common.DisplayInstruction display_instruction = 77	[(fix.field_added)=FIX_4_4];
+	optional ExDestinationIdSourceEnum ex_destination_id_source = 78	[(fix.tag)=1133, (fix.type)=CHAR];
+	optional Common.FinancingDetails financing_details = 79	[(fix.field_added)=FIX_4_4];
+	optional bool manual_order_indicator = 80		[(fix.tag)=1028, (fix.type)=BOOLEAN];
+	optional sfixed64 match_increment = 81			[(fix.tag)=1089, (fix.type)=QTY];
+	optional sfixed32 match_increment_exponent = 82;
+	optional sfixed64 max_price_levels = 83			[(fix.tag)=1090, (fix.type)=INT];
+	optional OrderHandlingInstSourceEnum order_handling_inst_source = 84	[(fix.tag)=1032, (fix.type)=INT];
+	optional sfixed64 participation_rate = 85		[(fix.tag)=849, (fix.type)=PERCENTAGE, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 participation_rate_exponent = 86;
+	optional Common.PegInstructions peg_instructions = 87	[(fix.field_added)=FIX_4_4];
+	repeated Common.PreAllocGrp pre_alloc_grp = 88		[(fix.tag)=78];
+	optional bool pre_trade_anonymity = 89			[(fix.tag)=1091, (fix.type)=BOOLEAN];
+	optional PriceProtectionScopeEnum price_protection_scope = 90	[(fix.tag)=1092, (fix.type)=CHAR];
+	optional QtyTypeEnum qty_type = 91			[(fix.tag)=854, (fix.type)=INT];
+	optional string received_dept_id = 92			[(fix.tag)=1030, (fix.type)=STRING];
+	repeated Common.StrategyParametersGrp strategy_parameters_grp = 93	[(fix.tag)=957];
+	optional TargetStrategyEnum target_strategy = 94	[(fix.tag)=847, (fix.type)=INT];
+	optional string target_strategy_parameters = 95		[(fix.tag)=848, (fix.type)=STRING, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 trade_date = 96			[(fix.tag)=75, (fix.type)=LOCAL_MKT_DATE];
+	repeated Common.TrdRegTimestamps trd_reg_timestamps = 97	[(fix.tag)=768];
+	repeated Common.TrdgSesGrp trdg_ses_grp = 98		[(fix.tag)=386];
+	optional Common.TriggeringInstruction triggering_instruction = 99	[(fix.field_added)=FIX_4_4];
+	repeated Common.UndInstrmtGrp und_instrmt_grp = 100	[(fix.tag)=711];
+}
+message OrderCancelRequest {
+	option (fix.msg_type) = "F";
+	optional string cl_ord_id = 1				[(fix.tag)=11, (fix.type)=STRING];
+	optional string list_id = 2				[(fix.tag)=66, (fix.type)=STRING];
+	optional string order_id = 3				[(fix.tag)=37, (fix.type)=STRING];
+	optional string orig_cl_ord_id = 4			[(fix.tag)=41, (fix.type)=STRING];
+	optional SideEnum side = 5				[(fix.tag)=54, (fix.type)=CHAR];
+	optional Session.StandardHeader standard_header = 6	[(fix.field_added)=FIX_2_7];
+	optional Session.StandardTrailer standard_trailer = 7	[(fix.field_added)=FIX_2_7];
+	optional string text = 8				[(fix.tag)=58, (fix.type)=STRING];
+	optional string account = 9				[(fix.tag)=1, (fix.type)=STRING];
+	optional string compliance_id = 10			[(fix.tag)=376, (fix.type)=STRING];
+	optional bytes encoded_text = 11			[(fix.tag)=355, (fix.type)=DATA];
+	optional fixed32 encoded_text_len = 12			[(fix.tag)=354, (fix.type)=LENGTH];
+	optional sfixed64 transact_time = 13			[(fix.tag)=60, (fix.type)=UTC_TIMESTAMP];
+	optional AccountTypeEnum account_type = 14		[(fix.tag)=581, (fix.type)=INT];
+	optional string cl_ord_link_id = 15			[(fix.tag)=583, (fix.type)=STRING];
+	optional Common.Instrument instrument = 16		[(fix.field_added)=FIX_4_3];
+	optional Common.OrderQtyData order_qty_data = 17	[(fix.field_added)=FIX_4_3];
+	optional sfixed64 orig_ord_mod_time = 18		[(fix.tag)=586, (fix.type)=UTC_TIMESTAMP];
+	repeated Common.Parties parties = 19			[(fix.tag)=453];
+	optional string secondary_cl_ord_id = 20		[(fix.tag)=526, (fix.type)=STRING];
+	optional AcctIdSourceEnum acct_id_source = 21		[(fix.tag)=660, (fix.type)=INT];
+	optional Common.FinancingDetails financing_details = 22	[(fix.field_added)=FIX_4_4];
+	repeated Common.UndInstrmtGrp und_instrmt_grp = 23	[(fix.tag)=711];
+}
+enum OrdStatusEnum {
+	ORD_STATUS_CANCELED = 0					[(fix.enum_value)="4"];
+	ORD_STATUS_DONE_FOR_DAY = 1				[(fix.enum_value)="3"];
+	ORD_STATUS_FILLED = 2					[(fix.enum_value)="2"];
+	ORD_STATUS_NEW = 3					[(fix.enum_value)="0"];
+	ORD_STATUS_PARTIALLY_FILLED = 4				[(fix.enum_value)="1"];
+	ORD_STATUS_PENDING_CANCEL = 5				[(fix.enum_value)="6"];
+	ORD_STATUS_REJECTED = 6					[(fix.enum_value)="8"];
+	ORD_STATUS_STOPPED = 7					[(fix.enum_value)="7"];
+	ORD_STATUS_PENDING_NEW = 8				[(fix.enum_value)="A"];
+	ORD_STATUS_SUSPENDED = 9				[(fix.enum_value)="9"];
+	ORD_STATUS_CALCULATED = 10				[(fix.enum_value)="B"];
+	ORD_STATUS_EXPIRED = 11					[(fix.enum_value)="C"];
+	ORD_STATUS_ACCEPTED_FOR_BIDDING = 12			[(fix.enum_value)="D"];
+	ORD_STATUS_PENDING_REPLACE = 13				[(fix.enum_value)="E"];
+	ORD_STATUS_REPLACED = 14				[(fix.enum_value)="5", (fix.enum_deprecated)=FIX_4_3];
+}
+
+enum WorkingIndicatorEnum {
+	WORKING_INDICATOR_NOT_WORKING = 0			[(fix.enum_value)="N"];
+	WORKING_INDICATOR_WORKING = 1				[(fix.enum_value)="Y"];
+}
+
+enum CxlRejResponseToEnum {
+	CXL_REJ_RESPONSE_TO_ORDER_CANCEL = 0			[(fix.enum_value)="2"];
+	CXL_REJ_RESPONSE_TO_ORDER_CANCEL_REQUEST = 1		[(fix.enum_value)="1"];
+}
+
+enum CxlRejReasonEnum {
+	CXL_REJ_REASON_TOO_LATE_TO_CANCEL = 0			[(fix.enum_value)="0"];
+	CXL_REJ_REASON_UNKNOWN_ORDER = 1			[(fix.enum_value)="1"];
+	CXL_REJ_REASON_BROKER_CREDIT = 2			[(fix.enum_value)="2"];
+	CXL_REJ_REASON_ORDER_ALREADY_IN_PENDING_STATUS = 3	[(fix.enum_value)="3"];
+	CXL_REJ_REASON_DUPLICATE_CL_ORD_ID = 4			[(fix.enum_value)="6"];
+	CXL_REJ_REASON_ORIG_ORD_MOD_TIME = 5			[(fix.enum_value)="5"];
+	CXL_REJ_REASON_UNABLE_TO_PROCESS_ORDER_MASS_CANCEL_REQUEST = 6	[(fix.enum_value)="4"];
+	CXL_REJ_REASON_OTHER = 7				[(fix.enum_value)="99"];
+	CXL_REJ_REASON_INVALID_PRICE_INCREMENT = 8		[(fix.enum_value)="18"];
+	CXL_REJ_REASON_PRICE_EXCEEDS_CURRENT_PRICE = 9		[(fix.enum_value)="7"];
+	CXL_REJ_REASON_PRICE_EXCEEDS_CURRENT_PRICE_BAND = 10	[(fix.enum_value)="8"];
+}
+
+message CxlRejReasonUnion {
+	optional CxlRejReasonEnum cxl_rej_reason = 1;
+	optional sfixed64 cxl_rej_reason_sfixed64 = 2;
+}
+
+message OrderCancelReject {
+	option (fix.msg_type) = "9";
+	optional string cl_ord_id = 1				[(fix.tag)=11, (fix.type)=STRING];
+	optional CxlRejReasonEnum cxl_rej_reason = 2		[(fix.tag)=102, (fix.type)=INT];
+	optional string list_id = 3				[(fix.tag)=66, (fix.type)=STRING];
+	optional string order_id = 4				[(fix.tag)=37, (fix.type)=STRING];
+	optional Session.StandardHeader standard_header = 5	[(fix.field_added)=FIX_2_7];
+	optional Session.StandardTrailer standard_trailer = 6	[(fix.field_added)=FIX_2_7];
+	optional string text = 7				[(fix.tag)=58, (fix.type)=STRING];
+	optional OrdStatusEnum ord_status = 8			[(fix.tag)=39, (fix.type)=CHAR];
+	optional string orig_cl_ord_id = 9			[(fix.tag)=41, (fix.type)=STRING];
+	optional string secondary_order_id = 10			[(fix.tag)=198, (fix.type)=STRING];
+	optional string account = 11				[(fix.tag)=1, (fix.type)=STRING];
+	optional CxlRejResponseToEnum cxl_rej_response_to = 12	[(fix.tag)=434, (fix.type)=CHAR];
+	optional bytes encoded_text = 13			[(fix.tag)=355, (fix.type)=DATA];
+	optional fixed32 encoded_text_len = 14			[(fix.tag)=354, (fix.type)=LENGTH];
+	optional sfixed64 transact_time = 15			[(fix.tag)=60, (fix.type)=UTC_TIMESTAMP];
+	optional AccountTypeEnum account_type = 16		[(fix.tag)=581, (fix.type)=INT];
+	optional string cl_ord_link_id = 17			[(fix.tag)=583, (fix.type)=STRING];
+	optional sfixed64 orig_ord_mod_time = 18		[(fix.tag)=586, (fix.type)=UTC_TIMESTAMP];
+	optional string secondary_cl_ord_id = 19		[(fix.tag)=526, (fix.type)=STRING];
+	optional sfixed32 trade_origination_date = 20		[(fix.tag)=229, (fix.type)=LOCAL_MKT_DATE];
+	optional bool working_indicator = 21			[(fix.tag)=636, (fix.type)=BOOLEAN];
+	optional AcctIdSourceEnum acct_id_source = 22		[(fix.tag)=660, (fix.type)=INT];
+	optional sfixed32 trade_date = 23			[(fix.tag)=75, (fix.type)=LOCAL_MKT_DATE];
+}
+message FillsGrp {
+	optional string fill_exec_id = 1			[(fix.tag)=1363, (fix.type)=STRING];
+	optional sfixed64 fill_px = 2				[(fix.tag)=1364, (fix.type)=PRICE];
+	optional sfixed32 fill_px_exponent = 3;
+	optional sfixed64 fill_qty = 4				[(fix.tag)=1365, (fix.type)=QTY];
+	optional sfixed32 fill_qty_exponent = 5;
+	repeated Common.NestedParties4 nested_parties4 = 6	[(fix.tag)=1414];
+	optional sfixed64 fill_liquidity_ind = 7		[(fix.tag)=1443, (fix.type)=INT];
+}
+
+enum LastRptRequestedEnum {
+	LAST_RPT_REQUESTED_LAST_MESSAGE = 0			[(fix.enum_value)="Y"];
+	LAST_RPT_REQUESTED_NOT_LAST_MESSAGE = 1			[(fix.enum_value)="N"];
+}
+
+enum CrossTypeEnum {
+	CROSS_TYPE_CROSS_AON = 0				[(fix.enum_value)="1"];
+	CROSS_TYPE_CROSS_IOC = 1				[(fix.enum_value)="2"];
+	CROSS_TYPE_CROSS_ONE_SIDE = 2				[(fix.enum_value)="3"];
+	CROSS_TYPE_CROSS_SAME_PRICE = 3				[(fix.enum_value)="4"];
+}
+
+enum ExecTypeEnum {
+	EXEC_TYPE_CALCULATED = 0				[(fix.enum_value)="B"];
+	EXEC_TYPE_CANCELED = 1					[(fix.enum_value)="4"];
+	EXEC_TYPE_DONE_FOR_DAY = 2				[(fix.enum_value)="3"];
+	EXEC_TYPE_EXPIRED = 3					[(fix.enum_value)="C"];
+	EXEC_TYPE_NEW = 4					[(fix.enum_value)="0"];
+	EXEC_TYPE_PENDING_CANCEL = 5				[(fix.enum_value)="6"];
+	EXEC_TYPE_PENDING_NEW = 6				[(fix.enum_value)="A"];
+	EXEC_TYPE_REJECTED = 7					[(fix.enum_value)="8"];
+	EXEC_TYPE_REPLACED = 8					[(fix.enum_value)="5"];
+	EXEC_TYPE_STOPPED = 9					[(fix.enum_value)="7"];
+	EXEC_TYPE_SUSPENDED = 10				[(fix.enum_value)="9"];
+	EXEC_TYPE_PENDING_REPLACE = 11				[(fix.enum_value)="E"];
+	EXEC_TYPE_RESTATED = 12					[(fix.enum_value)="D"];
+	EXEC_TYPE_ORDER_STATUS = 13				[(fix.enum_value)="I"];
+	EXEC_TYPE_TRADE = 14					[(fix.enum_value)="F"];
+	EXEC_TYPE_TRADE_CANCEL = 15				[(fix.enum_value)="H"];
+	EXEC_TYPE_TRADE_CORRECT = 16				[(fix.enum_value)="G"];
+	EXEC_TYPE_TRADE_HAS_BEEN_RELEASED_TO_CLEARING = 17	[(fix.enum_value)="K"];
+	EXEC_TYPE_TRADE_IN_ACLEARING_HOLD = 18			[(fix.enum_value)="J"];
+	EXEC_TYPE_TRIGGERED_OR_ACTIVATED_BY_SYSTEM = 19		[(fix.enum_value)="L"];
+}
+
+enum OrdRejReasonEnum {
+	ORD_REJ_REASON_BROKER_CREDIT = 0			[(fix.enum_value)="0"];
+	ORD_REJ_REASON_EXCHANGE_CLOSED = 1			[(fix.enum_value)="2"];
+	ORD_REJ_REASON_ORDER_EXCEEDS_LIMIT = 2			[(fix.enum_value)="3"];
+	ORD_REJ_REASON_UNKNOWN_SYMBOL = 3			[(fix.enum_value)="1"];
+	ORD_REJ_REASON_TOO_LATE_TO_ENTER = 4			[(fix.enum_value)="4"];
+	ORD_REJ_REASON_DUPLICATE_ORDER = 5			[(fix.enum_value)="6"];
+	ORD_REJ_REASON_UNKNOWN_ORDER = 6			[(fix.enum_value)="5"];
+	ORD_REJ_REASON_DUPLICATE_OF_AVERBALLY_COMMUNICATED_ORDER = 7	[(fix.enum_value)="7"];
+	ORD_REJ_REASON_STALE_ORDER = 8				[(fix.enum_value)="8"];
+	ORD_REJ_REASON_INVALID_INVESTOR_ID = 9			[(fix.enum_value)="10"];
+	ORD_REJ_REASON_SURVEILLENCE_OPTION = 10			[(fix.enum_value)="12"];
+	ORD_REJ_REASON_TRADE_ALONG_REQUIRED = 11		[(fix.enum_value)="9"];
+	ORD_REJ_REASON_UNSUPPORTED_ORDER_CHARACTERISTIC = 12	[(fix.enum_value)="11"];
+	ORD_REJ_REASON_INCORRECT_ALLOCATED_QUANTITY = 13	[(fix.enum_value)="14"];
+	ORD_REJ_REASON_INCORRECT_QUANTITY = 14			[(fix.enum_value)="13"];
+	ORD_REJ_REASON_OTHER = 15				[(fix.enum_value)="99"];
+	ORD_REJ_REASON_UNKNOWN_ACCOUNT = 16			[(fix.enum_value)="15"];
+	ORD_REJ_REASON_INVALID_PRICE_INCREMENT = 17		[(fix.enum_value)="18"];
+	ORD_REJ_REASON_PRICE_EXCEEDS_CURRENT_PRICE_BAND = 18	[(fix.enum_value)="16"];
+}
+
+enum ExecRestatementReasonEnum {
+	EXEC_RESTATEMENT_REASON_BROKER_OPTION = 0		[(fix.enum_value)="4"];
+	EXEC_RESTATEMENT_REASON_GT_CORPORATE_ACTION = 1		[(fix.enum_value)="0"];
+	EXEC_RESTATEMENT_REASON_GT_RENEWAL = 2			[(fix.enum_value)="1"];
+	EXEC_RESTATEMENT_REASON_PARTIAL_DECLINE_OF_ORDER_QTY = 3	[(fix.enum_value)="5"];
+	EXEC_RESTATEMENT_REASON_REPRICING_OF_ORDER = 4		[(fix.enum_value)="3"];
+	EXEC_RESTATEMENT_REASON_VERBAL_CHANGE = 5		[(fix.enum_value)="2"];
+	EXEC_RESTATEMENT_REASON_CANCEL_ON_SYSTEM_FAILURE = 6	[(fix.enum_value)="7"];
+	EXEC_RESTATEMENT_REASON_CANCEL_ON_TRADING_HALT = 7	[(fix.enum_value)="6"];
+	EXEC_RESTATEMENT_REASON_MARKET = 8			[(fix.enum_value)="8"];
+	EXEC_RESTATEMENT_REASON_CANCELED = 9			[(fix.enum_value)="9"];
+	EXEC_RESTATEMENT_REASON_OTHER = 10			[(fix.enum_value)="99"];
+	EXEC_RESTATEMENT_REASON_WAREHOUSE_RECAP = 11		[(fix.enum_value)="10"];
+	EXEC_RESTATEMENT_REASON_PEG_REFRESH = 12		[(fix.enum_value)="11"];
+}
+
+enum MatchTypeEnum {
+	MATCH_TYPE_A1EXACT_MATCH_SUMMARIZED_QUANTITY = 0	[(fix.enum_value)="S1"];
+	MATCH_TYPE_A2EXACT_MATCH_SUMMARIZED_QUANTITY = 1	[(fix.enum_value)="S2"];
+	MATCH_TYPE_A3EXACT_MATCH_SUMMARIZED_QUANTITY = 2	[(fix.enum_value)="S3"];
+	MATCH_TYPE_A4EXACT_MATCH_SUMMARIZED_QUANTITY = 3	[(fix.enum_value)="S4"];
+	MATCH_TYPE_A5EXACT_MATCH_SUMMARIZED_QUANTITY = 4	[(fix.enum_value)="S5"];
+	MATCH_TYPE_ACTACCEPTED_TRADE = 5			[(fix.enum_value)="M3"];
+	MATCH_TYPE_ACTDEFAULT_AFTER_M2 = 6			[(fix.enum_value)="M5"];
+	MATCH_TYPE_ACTDEFAULT_TRADE = 7				[(fix.enum_value)="M4"];
+	MATCH_TYPE_ACTM6MATCH = 8				[(fix.enum_value)="M6"];
+	MATCH_TYPE_EXACT_MATCH_MINUS_BADGES_TIMES = 9		[(fix.enum_value)="M1"];
+	MATCH_TYPE_EXACT_MATCH_PLUS2BADGES = 10			[(fix.enum_value)="A4"];
+	MATCH_TYPE_EXACT_MATCH_PLUS2BADGES_EXEC_TIME = 11	[(fix.enum_value)="A3"];
+	MATCH_TYPE_EXACT_MATCH_PLUS4BADGES = 12			[(fix.enum_value)="A2"];
+	MATCH_TYPE_EXACT_MATCH_PLUS4BADGES_EXEC_TIME = 13	[(fix.enum_value)="A1"];
+	MATCH_TYPE_EXACT_MATCH_PLUS_EXEC_TIME = 14		[(fix.enum_value)="A5"];
+	MATCH_TYPE_OCSLOCKED_IN = 15				[(fix.enum_value)="MT"];
+	MATCH_TYPE_STAMPED_ADVISORIES_OR_SPECIALIST_ACCEPTS = 16	[(fix.enum_value)="AQ"];
+	MATCH_TYPE_SUMMARIZED_MATCH_MINUS_BADGES_TIMES = 17	[(fix.enum_value)="M2"];
+	MATCH_TYPE_AUTO_MATCH = 18				[(fix.enum_value)="4"];
+	MATCH_TYPE_CALL_AUCTION = 19				[(fix.enum_value)="7"];
+	MATCH_TYPE_CONFIRMED_TRADE_REPORT = 20			[(fix.enum_value)="3"];
+	MATCH_TYPE_COUNTER_ORDER_SELECTION = 21			[(fix.enum_value)="6"];
+	MATCH_TYPE_CROSS_AUCTION = 22				[(fix.enum_value)="5"];
+	MATCH_TYPE_ONE_PARTY_TRADE_REPORT = 23			[(fix.enum_value)="1"];
+	MATCH_TYPE_TWO_PARTY_TRADE_REPORT = 24			[(fix.enum_value)="2"];
+	MATCH_TYPE_ISSUING = 25					[(fix.enum_value)="8"];
+}
+
+enum OrderCategoryEnum {
+	ORDER_CATEGORY_CROSS_ORDER = 0				[(fix.enum_value)="8"];
+	ORDER_CATEGORY_IMPLIED_ORDER = 1			[(fix.enum_value)="7"];
+	ORDER_CATEGORY_LINKED_ORDER = 2				[(fix.enum_value)="5"];
+	ORDER_CATEGORY_MULTILEG_ORDER = 3			[(fix.enum_value)="4"];
+	ORDER_CATEGORY_ORDER = 4				[(fix.enum_value)="1"];
+	ORDER_CATEGORY_PRIVATELY_NEGOTIATED_TRADE = 5		[(fix.enum_value)="3"];
+	ORDER_CATEGORY_QUOTE = 6				[(fix.enum_value)="2"];
+	ORDER_CATEGORY_QUOTE_REQUEST = 7			[(fix.enum_value)="6"];
+	ORDER_CATEGORY_STREAMING_PRICE = 8			[(fix.enum_value)="9"];
+}
+
+enum LotTypeEnum {
+	LOT_TYPE_BLOCK_LOT = 0					[(fix.enum_value)="3"];
+	LOT_TYPE_ODD_LOT = 1					[(fix.enum_value)="1"];
+	LOT_TYPE_ROUND_LOT = 2					[(fix.enum_value)="2"];
+	LOT_TYPE_ROUND_LOT_BASED_UPON = 3			[(fix.enum_value)="4"];
+}
+
+enum AggressorIndicatorEnum {
+	AGGRESSOR_INDICATOR_ORDER_INITIATOR_IS_AGGRESSOR = 0	[(fix.enum_value)="Y"];
+	AGGRESSOR_INDICATOR_ORDER_INITIATOR_IS_PASSIVE = 1	[(fix.enum_value)="N"];
+}
+
+enum TradingSessionIdEnum {
+	TRADING_SESSION_ID_AFTER_HOURS = 0			[(fix.enum_value)="6"];
+	TRADING_SESSION_ID_AFTERNOON = 1			[(fix.enum_value)="4"];
+	TRADING_SESSION_ID_DAY = 2				[(fix.enum_value)="1"];
+	TRADING_SESSION_ID_EVENING = 3				[(fix.enum_value)="5"];
+	TRADING_SESSION_ID_HALF_DAY = 4				[(fix.enum_value)="2"];
+	TRADING_SESSION_ID_MORNING = 5				[(fix.enum_value)="3"];
+}
+
+enum TradingSessionSubIdEnum {
+	TRADING_SESSION_SUB_ID_CLOSING_OR_CLOSING_AUCTION = 0	[(fix.enum_value)="4"];
+	TRADING_SESSION_SUB_ID_CONTINUOUS = 1			[(fix.enum_value)="3"];
+	TRADING_SESSION_SUB_ID_INTRADAY_AUCTION = 2		[(fix.enum_value)="6"];
+	TRADING_SESSION_SUB_ID_OPENING_OR_OPENING_AUCTION = 3	[(fix.enum_value)="2"];
+	TRADING_SESSION_SUB_ID_POST_TRADING = 4			[(fix.enum_value)="5"];
+	TRADING_SESSION_SUB_ID_PRE_TRADING = 5			[(fix.enum_value)="1"];
+	TRADING_SESSION_SUB_ID_QUIESCENT = 6			[(fix.enum_value)="7"];
+}
+
+enum LastCapacityEnum {
+	LAST_CAPACITY_AGENT = 0					[(fix.enum_value)="1"];
+	LAST_CAPACITY_CROSS_AS_AGENT = 1			[(fix.enum_value)="2"];
+	LAST_CAPACITY_CROSS_AS_PRINCIPAL = 2			[(fix.enum_value)="3"];
+	LAST_CAPACITY_PRINCIPAL = 3				[(fix.enum_value)="4"];
+}
+
+enum LastFragmentEnum {
+	LAST_FRAGMENT_LAST_MESSAGE = 0				[(fix.enum_value)="Y"];
+	LAST_FRAGMENT_NOT_LAST_MESSAGE = 1			[(fix.enum_value)="N"];
+}
+
+enum ReportToExchEnum {
+	REPORT_TO_EXCH_RECEIVER_REPORTS = 0			[(fix.enum_value)="Y"];
+	REPORT_TO_EXCH_SENDER_REPORTS = 1			[(fix.enum_value)="N"];
+}
+
+enum TradedFlatSwitchEnum {
+	TRADED_FLAT_SWITCH_NOT_TRADED_FLAT = 0			[(fix.enum_value)="N"];
+	TRADED_FLAT_SWITCH_TRADED_FLAT = 1			[(fix.enum_value)="Y"];
+}
+
+enum SettlCurrFxRateCalcEnum {
+	SETTL_CURR_FX_RATE_CALC_DIVIDE = 0			[(fix.enum_value)="D"];
+	SETTL_CURR_FX_RATE_CALC_MULTIPLY = 1			[(fix.enum_value)="M"];
+}
+
+enum MultiLegReportingTypeEnum {
+	MULTI_LEG_REPORTING_TYPE_INDIVIDUAL_LEG_OF_AMULTI_LEG_SECURITY = 0	[(fix.enum_value)="2"];
+	MULTI_LEG_REPORTING_TYPE_MULTI_LEG_SECURITY = 1		[(fix.enum_value)="3"];
+	MULTI_LEG_REPORTING_TYPE_SINGLE_SECURITY = 2		[(fix.enum_value)="1"];
+}
+
+enum ExecPriceTypeEnum {
+	EXEC_PRICE_TYPE_BID_PRICE = 0				[(fix.enum_value)="B"];
+	EXEC_PRICE_TYPE_CREATION_PRICE = 1			[(fix.enum_value)="C"];
+	EXEC_PRICE_TYPE_CREATION_PRICE_PLUS_ADJUSTMENT_AMOUNT = 2	[(fix.enum_value)="E"];
+	EXEC_PRICE_TYPE_CREATION_PRICE_PLUS_ADJUSTMENT_PERCENT = 3	[(fix.enum_value)="D"];
+	EXEC_PRICE_TYPE_OFFER_PRICE = 4				[(fix.enum_value)="O"];
+	EXEC_PRICE_TYPE_OFFER_PRICE_MINUS_ADJUSTMENT_AMOUNT = 5	[(fix.enum_value)="Q"];
+	EXEC_PRICE_TYPE_OFFER_PRICE_MINUS_ADJUSTMENT_PERCENT = 6	[(fix.enum_value)="P"];
+	EXEC_PRICE_TYPE_SINGLE_PRICE = 7			[(fix.enum_value)="S"];
+}
+
+enum PriorityIndicatorEnum {
+	PRIORITY_INDICATOR_LOST_PRIORITY_AS_RESULT_OF_ORDER_CHANGE = 0	[(fix.enum_value)="1"];
+	PRIORITY_INDICATOR_PRIORITY_UNCHANGED = 1		[(fix.enum_value)="0"];
+}
+
+enum LastLiquidityIndEnum {
+	LAST_LIQUIDITY_IND_ADDED_LIQUIDITY = 0			[(fix.enum_value)="1"];
+	LAST_LIQUIDITY_IND_LIQUIDITY_ROUTED_OUT = 1		[(fix.enum_value)="3"];
+	LAST_LIQUIDITY_IND_REMOVED_LIQUIDITY = 2		[(fix.enum_value)="2"];
+	LAST_LIQUIDITY_IND_AUCTION = 3				[(fix.enum_value)="4"];
+}
+
+message OrdRejReasonUnion {
+	optional OrdRejReasonEnum ord_rej_reason = 1;
+	optional sfixed64 ord_rej_reason_sfixed64 = 2;
+}
+
+message ExecRestatementReasonUnion {
+	optional ExecRestatementReasonEnum exec_restatement_reason = 1;
+	optional sfixed64 exec_restatement_reason_sfixed64 = 2;
+}
+
+message ExecutionReport {
+	option (fix.msg_type) = "8";
+	optional string account = 1				[(fix.tag)=1, (fix.type)=STRING];
+	optional sfixed64 avg_px = 2				[(fix.tag)=6, (fix.type)=PRICE, (meta.exponent) = -4];
+	optional string cl_ord_id = 3				[(fix.tag)=11, (fix.type)=STRING];
+	optional sfixed64 cum_qty = 4				[(fix.tag)=14, (fix.type)=QTY];
+	optional sfixed32 cum_qty_exponent = 5;
+	optional string currency = 6				[(fix.tag)=15, (fix.type)=CURRENCY];
+	optional string exec_id = 7				[(fix.tag)=17, (fix.type)=STRING];
+	repeated ExecInstEnum exec_inst = 8			[packed=true,(fix.tag)=18, (fix.type)=MULTIPLE_CHAR_VALUE];
+	optional string exec_ref_id = 9				[(fix.tag)=19, (fix.type)=STRING];
+	optional LastCapacityEnum last_capacity = 10		[(fix.tag)=29, (fix.type)=CHAR];
+	optional string last_mkt = 11				[(fix.tag)=30, (fix.type)=EXCHANGE];
+	optional double last_px = 12				[(fix.tag)=31, (fix.type)=PRICE];
+	optional sfixed64 last_qty = 13				[(fix.tag)=32, (fix.type)=QTY];
+	optional sfixed32 last_qty_exponent = 14;
+	optional string list_id = 15				[(fix.tag)=66, (fix.type)=STRING];
+	optional OrdRejReasonEnum ord_rej_reason = 16		[(fix.tag)=103, (fix.type)=INT];
+	optional OrdStatusEnum ord_status = 17			[(fix.tag)=39, (fix.type)=CHAR];
+	optional OrdTypeEnum ord_type = 18			[(fix.tag)=40, (fix.type)=CHAR];
+	optional string order_id = 19				[(fix.tag)=37, (fix.type)=STRING];
+	optional sfixed64 price = 20				[(fix.tag)=44, (fix.type)=PRICE];
+	optional sfixed32 price_exponent = 21;
+	optional sfixed32 settl_date = 22			[(fix.tag)=64, (fix.type)=LOCAL_MKT_DATE];
+	optional SettlTypeEnum settl_type = 23			[(fix.tag)=63, (fix.type)=STRING];
+	optional SideEnum side = 24				[(fix.tag)=54, (fix.type)=CHAR];
+	optional Session.StandardHeader standard_header = 25	[(fix.field_added)=FIX_2_7];
+	optional Session.StandardTrailer standard_trailer = 26	[(fix.field_added)=FIX_2_7];
+	optional sfixed64 stop_px = 27				[(fix.tag)=99, (fix.type)=PRICE];
+	optional sfixed32 stop_px_exponent = 28;
+	optional string text = 29				[(fix.tag)=58, (fix.type)=STRING];
+	optional TimeInForceEnum time_in_force = 30		[(fix.tag)=59, (fix.type)=CHAR];
+	optional sfixed32 trade_date = 31			[(fix.tag)=75, (fix.type)=LOCAL_MKT_DATE];
+	optional sfixed64 transact_time = 32			[(fix.tag)=60, (fix.type)=UTC_TIMESTAMP];
+	optional bool report_to_exch = 33			[(fix.tag)=113, (fix.type)=BOOLEAN];
+	optional sfixed64 expire_time = 34			[(fix.tag)=126, (fix.type)=UTC_TIMESTAMP];
+	optional sfixed64 net_money = 35			[(fix.tag)=118, (fix.type)=AMT];
+	optional sfixed32 net_money_exponent = 36;
+	optional sfixed64 settl_curr_amt = 37			[(fix.tag)=119, (fix.type)=AMT];
+	optional sfixed32 settl_curr_amt_exponent = 38;
+	optional string settl_currency = 39			[(fix.tag)=120, (fix.type)=CURRENCY];
+	optional ExecTypeEnum exec_type = 40			[(fix.tag)=150, (fix.type)=CHAR];
+	optional sfixed64 last_forward_points = 41		[(fix.tag)=195, (fix.type)=PRICE_OFFSET];
+	optional sfixed32 last_forward_points_exponent = 42;
+	optional sfixed64 last_spot_rate = 43			[(fix.tag)=194, (fix.type)=PRICE];
+	optional sfixed32 last_spot_rate_exponent = 44;
+	optional sfixed64 leaves_qty = 45			[(fix.tag)=151, (fix.type)=QTY];
+	optional sfixed32 leaves_qty_exponent = 46;
+	optional string orig_cl_ord_id = 47			[(fix.tag)=41, (fix.type)=STRING];
+	optional string secondary_order_id = 48			[(fix.tag)=198, (fix.type)=STRING];
+	optional double settl_curr_fx_rate = 49			[(fix.tag)=155, (fix.type)=FLOAT];
+	optional SettlCurrFxRateCalcEnum settl_curr_fx_rate_calc = 50	[(fix.tag)=156, (fix.type)=CHAR];
+	optional string compliance_id = 51			[(fix.tag)=376, (fix.type)=STRING];
+	optional sfixed64 day_avg_px = 52			[(fix.tag)=426, (fix.type)=PRICE];
+	optional sfixed32 day_avg_px_exponent = 53;
+	optional sfixed64 day_cum_qty = 54			[(fix.tag)=425, (fix.type)=QTY];
+	optional sfixed32 day_cum_qty_exponent = 55;
+	optional sfixed64 day_order_qty = 56			[(fix.tag)=424, (fix.type)=QTY];
+	optional sfixed32 day_order_qty_exponent = 57;
+	optional sfixed64 effective_time = 58			[(fix.tag)=168, (fix.type)=UTC_TIMESTAMP];
+	optional bytes encoded_text = 59			[(fix.tag)=355, (fix.type)=DATA];
+	optional fixed32 encoded_text_len = 60			[(fix.tag)=354, (fix.type)=LENGTH];
+	optional ExecRestatementReasonEnum exec_restatement_reason = 61	[(fix.tag)=378, (fix.type)=INT];
+	optional sfixed32 expire_date = 62			[(fix.tag)=432, (fix.type)=LOCAL_MKT_DATE];
+	optional GtBookingInstEnum gt_booking_inst = 63		[(fix.tag)=427, (fix.type)=INT];
+	optional sfixed64 gross_trade_amt = 64			[(fix.tag)=381, (fix.type)=AMT];
+	optional sfixed32 gross_trade_amt_exponent = 65;
+	optional HandlInstEnum handl_inst = 66			[(fix.tag)=21, (fix.type)=CHAR];
+	optional sfixed64 max_floor = 67			[(fix.tag)=111, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 max_floor_exponent = 68;
+	optional sfixed64 max_show = 69				[(fix.tag)=210, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 max_show_exponent = 70;
+	optional sfixed64 min_qty = 71				[(fix.tag)=110, (fix.type)=QTY];
+	optional sfixed32 min_qty_exponent = 72;
+	optional MultiLegReportingTypeEnum multi_leg_reporting_type = 73	[(fix.tag)=442, (fix.type)=CHAR];
+	optional sfixed64 order_qty2 = 74			[(fix.tag)=192, (fix.type)=QTY, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 order_qty2_exponent = 75;
+	optional PositionEffectEnum position_effect = 76	[(fix.tag)=77, (fix.type)=CHAR];
+	optional sfixed32 settl_date2 = 77			[(fix.tag)=193, (fix.type)=LOCAL_MKT_DATE, (fix.field_deprecated)=FIX_5_0];
+	optional bool solicited_flag = 78			[(fix.tag)=377, (fix.type)=BOOLEAN];
+	optional TradingSessionIdEnum trading_session_id = 79	[(fix.tag)=336, (fix.type)=STRING];
+	optional AccountTypeEnum account_type = 80		[(fix.tag)=581, (fix.type)=INT];
+	optional sfixed64 accrued_interest_amt = 81		[(fix.tag)=159, (fix.type)=AMT];
+	optional sfixed32 accrued_interest_amt_exponent = 82;
+	optional sfixed64 accrued_interest_rate = 83		[(fix.tag)=158, (fix.type)=PERCENTAGE];
+	optional sfixed32 accrued_interest_rate_exponent = 84;
+	optional sfixed32 basis_feature_date = 85		[(fix.tag)=259, (fix.type)=LOCAL_MKT_DATE];
+	optional sfixed64 basis_feature_price = 86		[(fix.tag)=260, (fix.type)=PRICE];
+	optional sfixed32 basis_feature_price_exponent = 87;
+	optional BookingUnitEnum booking_unit = 88		[(fix.tag)=590, (fix.type)=CHAR];
+	optional CancellationRightsEnum cancellation_rights = 89	[(fix.tag)=480, (fix.type)=CHAR];
+	optional CashMarginEnum cash_margin = 90		[(fix.tag)=544, (fix.type)=CHAR];
+	optional string cl_ord_link_id = 91			[(fix.tag)=583, (fix.type)=STRING];
+	optional ClearingFeeIndicatorEnum clearing_fee_indicator = 92	[(fix.tag)=635, (fix.type)=STRING];
+	optional Common.CommissionData commission_data = 93	[(fix.field_added)=FIX_4_3];
+	optional sfixed64 concession = 94			[(fix.tag)=238, (fix.type)=AMT];
+	optional sfixed32 concession_exponent = 95;
+	optional string cross_id = 96				[(fix.tag)=548, (fix.type)=STRING];
+	optional CrossTypeEnum cross_type = 97			[(fix.tag)=549, (fix.type)=INT];
+	optional CustOrderCapacityEnum cust_order_capacity = 98	[(fix.tag)=582, (fix.type)=INT];
+	optional DayBookingInstEnum day_booking_inst = 99	[(fix.tag)=589, (fix.type)=CHAR];
+	optional string designation = 100			[(fix.tag)=494, (fix.type)=STRING];
+	optional sfixed32 ex_date = 101				[(fix.tag)=230, (fix.type)=LOCAL_MKT_DATE];
+	optional double exec_price_adjustment = 102		[(fix.tag)=485, (fix.type)=FLOAT];
+	optional ExecPriceTypeEnum exec_price_type = 103	[(fix.tag)=484, (fix.type)=CHAR];
+	optional sfixed64 exec_valuation_point = 104		[(fix.tag)=515, (fix.type)=UTC_TIMESTAMP];
+	optional Common.Instrument instrument = 105		[(fix.field_added)=FIX_4_3];
+	optional sfixed64 last_forward_points2 = 106		[(fix.tag)=641, (fix.type)=PRICE_OFFSET, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 last_forward_points2_exponent = 107;
+	optional MoneyLaunderingStatusEnum money_laundering_status = 108	[(fix.tag)=481, (fix.type)=CHAR];
+	optional sfixed64 num_days_interest = 109		[(fix.tag)=157, (fix.type)=INT];
+	optional OrderCapacityEnum order_capacity = 110		[(fix.tag)=528, (fix.type)=CHAR];
+	optional Common.OrderQtyData order_qty_data = 111	[(fix.field_added)=FIX_4_3];
+	repeated OrderRestrictionsEnum order_restrictions = 112	[packed=true,(fix.tag)=529, (fix.type)=MULTIPLE_CHAR_VALUE];
+	optional string orig_cross_id = 113			[(fix.tag)=551, (fix.type)=STRING];
+	repeated Common.Parties parties = 114			[(fix.tag)=453];
+	optional PreallocMethodEnum prealloc_method = 115	[(fix.tag)=591, (fix.type)=CHAR];
+	optional sfixed64 price_improvement = 116		[(fix.tag)=639, (fix.type)=PRICE_OFFSET];
+	optional sfixed32 price_improvement_exponent = 117;
+	optional PriceTypeEnum price_type = 118			[(fix.tag)=423, (fix.type)=INT];
+	optional PriorityIndicatorEnum priority_indicator = 119	[(fix.tag)=638, (fix.type)=INT];
+	optional string regist_id = 120				[(fix.tag)=513, (fix.type)=STRING];
+	optional string secondary_cl_ord_id = 121		[(fix.tag)=526, (fix.type)=STRING];
+	optional string secondary_exec_id = 122			[(fix.tag)=527, (fix.type)=STRING];
+	optional Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 123	[(fix.field_added)=FIX_4_3];
+	repeated Common.Stipulations stipulations = 124		[(fix.tag)=232];
+	optional sfixed64 total_takedown = 125			[(fix.tag)=237, (fix.type)=AMT];
+	optional sfixed32 total_takedown_exponent = 126;
+	optional sfixed32 trade_origination_date = 127		[(fix.tag)=229, (fix.type)=LOCAL_MKT_DATE];
+	optional bool traded_flat_switch = 128			[(fix.tag)=258, (fix.type)=BOOLEAN];
+	optional TradingSessionSubIdEnum trading_session_sub_id = 129	[(fix.tag)=625, (fix.type)=STRING];
+	optional sfixed64 trans_bkd_time = 130			[(fix.tag)=483, (fix.type)=UTC_TIMESTAMP];
+	optional sfixed64 underlying_last_px = 131		[(fix.tag)=651, (fix.type)=PRICE];
+	optional sfixed32 underlying_last_px_exponent = 132;
+	optional sfixed64 underlying_last_qty = 133		[(fix.tag)=652, (fix.type)=QTY];
+	optional sfixed32 underlying_last_qty_exponent = 134;
+	optional bool working_indicator = 135			[(fix.tag)=636, (fix.type)=BOOLEAN];
+	optional Common.YieldData yield_data = 136		[(fix.field_added)=FIX_4_3];
+	optional AcctIdSourceEnum acct_id_source = 137		[(fix.tag)=660, (fix.type)=INT];
+	optional bool aggressor_indicator = 138			[(fix.tag)=1057, (fix.type)=BOOLEAN];
+	optional BookingTypeEnum booking_type = 139		[(fix.tag)=775, (fix.type)=INT];
+	optional sfixed64 calculated_ccy_last_qty = 140		[(fix.tag)=1056, (fix.type)=QTY];
+	optional sfixed32 calculated_ccy_last_qty_exponent = 141;
+	repeated Common.ContAmtGrp cont_amt_grp = 142		[(fix.tag)=518];
+	repeated Common.ContraGrp contra_grp = 143		[(fix.tag)=382];
+	optional bool copy_msg_indicator = 144			[(fix.tag)=797, (fix.type)=BOOLEAN];
+	optional bool cust_directed_order = 145			[(fix.tag)=1029, (fix.type)=BOOLEAN];
+	optional CustOrderHandlingInstEnum cust_order_handling_inst = 146	[(fix.tag)=1031, (fix.type)=MULTIPLE_STRING_VALUE];
+	optional Common.DiscretionInstructions discretion_instructions = 147	[(fix.field_added)=FIX_4_4];
+	optional sfixed64 discretion_price = 148		[(fix.tag)=845, (fix.type)=PRICE];
+	optional sfixed32 discretion_price_exponent = 149;
+	optional Common.DisplayInstruction display_instruction = 150	[(fix.field_added)=FIX_4_4];
+	optional sfixed64 end_accrued_interest_amt = 151	[(fix.tag)=920, (fix.type)=AMT];
+	optional sfixed32 end_accrued_interest_amt_exponent = 152;
+	optional sfixed64 end_cash = 153			[(fix.tag)=922, (fix.type)=AMT];
+	optional sfixed32 end_cash_exponent = 154;
+	optional Common.FinancingDetails financing_details = 155	[(fix.field_added)=FIX_4_4];
+	optional string host_cross_id = 156			[(fix.tag)=961, (fix.type)=STRING];
+	repeated Common.InstrmtLegExecGrp instrmt_leg_exec_grp = 157	[(fix.tag)=555];
+	optional sfixed64 interest_at_maturity = 158		[(fix.tag)=738, (fix.type)=AMT];
+	optional sfixed32 interest_at_maturity_exponent = 159;
+	optional LastLiquidityIndEnum last_liquidity_ind = 160	[(fix.tag)=851, (fix.type)=INT];
+	optional sfixed64 last_par_px = 161			[(fix.tag)=669, (fix.type)=PRICE];
+	optional sfixed32 last_par_px_exponent = 162;
+	optional bool last_rpt_requested = 163			[(fix.tag)=912, (fix.type)=BOOLEAN];
+	optional sfixed64 last_swap_points = 164		[(fix.tag)=1071, (fix.type)=PRICE_OFFSET];
+	optional sfixed32 last_swap_points_exponent = 165;
+	optional LotTypeEnum lot_type = 166			[(fix.tag)=1093, (fix.type)=CHAR];
+	optional bool manual_order_indicator = 167		[(fix.tag)=1028, (fix.type)=BOOLEAN];
+	optional string mass_status_req_id = 168		[(fix.tag)=584, (fix.type)=STRING];
+	optional sfixed64 match_increment = 169			[(fix.tag)=1089, (fix.type)=QTY];
+	optional sfixed32 match_increment_exponent = 170;
+	optional MatchTypeEnum match_type = 171			[(fix.tag)=574, (fix.type)=STRING];
+	optional sfixed64 max_price_levels = 172		[(fix.tag)=1090, (fix.type)=INT];
+	repeated Common.MiscFeesGrp misc_fees_grp = 173		[(fix.tag)=136];
+	optional string ord_status_req_id = 174			[(fix.tag)=790, (fix.type)=STRING];
+	optional OrderCategoryEnum order_category = 175		[(fix.tag)=1115, (fix.type)=CHAR];
+	optional OrderHandlingInstSourceEnum order_handling_inst_source = 176	[(fix.tag)=1032, (fix.type)=INT];
+	optional sfixed64 participation_rate = 177		[(fix.tag)=849, (fix.type)=PERCENTAGE, (fix.field_deprecated)=FIX_5_0];
+	optional sfixed32 participation_rate_exponent = 178;
+	optional Common.PegInstructions peg_instructions = 179	[(fix.field_added)=FIX_4_4];
+	optional sfixed64 pegged_price = 180			[(fix.tag)=839, (fix.type)=PRICE];
+	optional sfixed32 pegged_price_exponent = 181;
+	optional sfixed64 pegged_ref_price = 182		[(fix.tag)=1095, (fix.type)=PRICE];
+	optional sfixed32 pegged_ref_price_exponent = 183;
+	optional bool pre_trade_anonymity = 184			[(fix.tag)=1091, (fix.type)=BOOLEAN];
+	optional PriceProtectionScopeEnum price_protection_scope = 185	[(fix.tag)=1092, (fix.type)=CHAR];
+	optional QtyTypeEnum qty_type = 186			[(fix.tag)=854, (fix.type)=INT];
+	optional string quote_resp_id = 187			[(fix.tag)=693, (fix.type)=STRING];
+	optional string received_dept_id = 188			[(fix.tag)=1030, (fix.type)=STRING];
+	optional sfixed64 start_cash = 189			[(fix.tag)=921, (fix.type)=AMT];
+	optional sfixed32 start_cash_exponent = 190;
+	repeated Common.StrategyParametersGrp strategy_parameters_grp = 191	[(fix.tag)=957];
+	optional TargetStrategyEnum target_strategy = 192	[(fix.tag)=847, (fix.type)=INT];
+	optional string target_strategy_parameters = 193	[(fix.tag)=848, (fix.type)=STRING, (fix.field_deprecated)=FIX_5_0];
+	optional double target_strategy_performance = 194	[(fix.tag)=850, (fix.type)=FLOAT];
+	optional string time_bracket = 195			[(fix.tag)=943, (fix.type)=STRING];
+	optional sfixed64 tot_num_reports = 196			[(fix.tag)=911, (fix.type)=INT];
+	repeated Common.TrdRegTimestamps trd_reg_timestamps = 197	[(fix.tag)=768];
+	optional Common.TriggeringInstruction triggering_instruction = 198	[(fix.field_added)=FIX_4_4];
+	repeated Common.UndInstrmtGrp und_instrmt_grp = 199	[(fix.tag)=711];
+	optional string alloc_id = 200				[(fix.tag)=70, (fix.type)=STRING];
+	optional Common.ApplicationSequenceControl application_sequence_control = 201	[(fix.field_added)=FIX_5_0];
+	optional sfixed64 dividend_yield = 202			[(fix.tag)=1380, (fix.type)=PERCENTAGE];
+	optional sfixed32 dividend_yield_exponent = 203;
+	repeated FillsGrp fills_grp = 204			[(fix.tag)=1362];
+	optional bool last_fragment = 205			[(fix.tag)=893, (fix.type)=BOOLEAN];
+	repeated Common.PreAllocGrp pre_alloc_grp = 206		[(fix.tag)=78];
+	optional double price_delta = 207			[(fix.tag)=811, (fix.type)=FLOAT];
+	optional double risk_free_rate = 208			[(fix.tag)=1190, (fix.type)=FLOAT];
+	optional double time_to_expiration = 209		[(fix.tag)=1189, (fix.type)=FLOAT];
+	optional sfixed64 tot_no_fills = 210			[(fix.tag)=1361, (fix.type)=INT];
+	optional string trd_match_id = 211			[(fix.tag)=880, (fix.type)=STRING];
+	optional double volatility = 212			[(fix.tag)=1188, (fix.type)=FLOAT];
+	repeated Common.RateSource rate_source = 213		[(fix.tag)=1445];
+}
+message OrderStatusRequest {
+	option (fix.msg_type) = "H";
+	optional string cl_ord_id = 1				[(fix.tag)=11, (fix.type)=STRING];
+	optional string order_id = 2				[(fix.tag)=37, (fix.type)=STRING];
+	optional SideEnum side = 3				[(fix.tag)=54, (fix.type)=CHAR];
+	optional Session.StandardHeader standard_header = 4	[(fix.field_added)=FIX_2_7];
+	optional Session.StandardTrailer standard_trailer = 5	[(fix.field_added)=FIX_2_7];
+	optional string account = 6				[(fix.tag)=1, (fix.type)=STRING];
+	optional string cl_ord_link_id = 7			[(fix.tag)=583, (fix.type)=STRING];
+	optional Common.Instrument instrument = 8		[(fix.field_added)=FIX_4_3];
+	repeated Common.Parties parties = 9			[(fix.tag)=453];
+	optional string secondary_cl_ord_id = 10		[(fix.tag)=526, (fix.type)=STRING];
+	optional AcctIdSourceEnum acct_id_source = 11		[(fix.tag)=660, (fix.type)=INT];
+	optional Common.FinancingDetails financing_details = 12	[(fix.field_added)=FIX_4_4];
+	optional string ord_status_req_id = 13			[(fix.tag)=790, (fix.type)=STRING];
+	repeated Common.UndInstrmtGrp und_instrmt_grp = 14	[(fix.tag)=711];
+}
+enum ExecAckStatusEnum {
+	EXEC_ACK_STATUS_ACCEPTED = 0				[(fix.enum_value)="1"];
+	EXEC_ACK_STATUS_DON = 1					[(fix.enum_value)="2"];
+	EXEC_ACK_STATUS_RECEIVED = 2				[(fix.enum_value)="0"];
+}
+
+enum DKReasonEnum {
+	DKREASON_NO_MATCHING_ORDER = 0				[(fix.enum_value)="D"];
+	DKREASON_OTHER = 1					[(fix.enum_value)="Z"];
+	DKREASON_PRICE_EXCEEDS_LIMIT = 2			[(fix.enum_value)="E"];
+	DKREASON_QUANTITY_EXCEEDS_ORDER = 3			[(fix.enum_value)="C"];
+	DKREASON_UNKNOWN_SYMBOL = 4				[(fix.enum_value)="A"];
+	DKREASON_WRONG_SIDE = 5					[(fix.enum_value)="B"];
+	DKREASON_CALCULATION_DIFFERENCE = 6			[(fix.enum_value)="F"];
+}
+
+message ExecutionAcknowledgement {
+	option (fix.msg_type) = "BN";
+	optional sfixed64 avg_px = 1				[(fix.tag)=6, (fix.type)=PRICE, (meta.exponent) = -4];
+	optional string cl_ord_id = 2				[(fix.tag)=11, (fix.type)=STRING];
+	optional sfixed64 cum_qty = 3				[(fix.tag)=14, (fix.type)=QTY];
+	optional sfixed32 cum_qty_exponent = 4;
+	optional DKReasonEnum dkreason = 5			[(fix.tag)=127, (fix.type)=CHAR];
+	optional bytes encoded_text = 6				[(fix.tag)=355, (fix.type)=DATA];
+	optional fixed32 encoded_text_len = 7			[(fix.tag)=354, (fix.type)=LENGTH];
+	optional ExecAckStatusEnum exec_ack_status = 8		[(fix.tag)=1036, (fix.type)=CHAR];
+	optional string exec_id = 9				[(fix.tag)=17, (fix.type)=STRING];
+	repeated Common.InstrmtLegGrp instrmt_leg_grp = 10	[(fix.tag)=555];
+	optional Common.Instrument instrument = 11		[(fix.field_added)=FIX_4_4];
+	optional sfixed64 last_par_px = 12			[(fix.tag)=669, (fix.type)=PRICE];
+	optional sfixed32 last_par_px_exponent = 13;
+	optional double last_px = 14				[(fix.tag)=31, (fix.type)=PRICE];
+	optional sfixed64 last_qty = 15				[(fix.tag)=32, (fix.type)=QTY];
+	optional sfixed32 last_qty_exponent = 16;
+	optional string order_id = 17				[(fix.tag)=37, (fix.type)=STRING];
+	optional Common.OrderQtyData order_qty_data = 18	[(fix.field_added)=FIX_4_4];
+	optional PriceTypeEnum price_type = 19			[(fix.tag)=423, (fix.type)=INT];
+	optional string secondary_order_id = 20			[(fix.tag)=198, (fix.type)=STRING];
+	optional SideEnum side = 21				[(fix.tag)=54, (fix.type)=CHAR];
+	optional Session.StandardHeader standard_header = 22	[(fix.field_added)=FIX_4_4];
+	optional Session.StandardTrailer standard_trailer = 23	[(fix.field_added)=FIX_4_4];
+	optional string text = 24				[(fix.tag)=58, (fix.type)=STRING];
+	repeated Common.UndInstrmtGrp und_instrmt_grp = 25	[(fix.tag)=711];
+}
+message DontKnowTrade {
+	option (fix.msg_type) = "Q";
+	optional DKReasonEnum dkreason = 1			[(fix.tag)=127, (fix.type)=CHAR];
+	optional string exec_id = 2				[(fix.tag)=17, (fix.type)=STRING];
+	optional double last_px = 3				[(fix.tag)=31, (fix.type)=PRICE];
+	optional sfixed64 last_qty = 4				[(fix.tag)=32, (fix.type)=QTY];
+	optional sfixed32 last_qty_exponent = 5;
+	optional string order_id = 6				[(fix.tag)=37, (fix.type)=STRING];
+	optional SideEnum side = 7				[(fix.tag)=54, (fix.type)=CHAR];
+	optional Session.StandardHeader standard_header = 8	[(fix.field_added)=FIX_4_0];
+	optional Session.StandardTrailer standard_trailer = 9	[(fix.field_added)=FIX_4_0];
+	optional string text = 10				[(fix.tag)=58, (fix.type)=STRING];
+	optional bytes encoded_text = 11			[(fix.tag)=355, (fix.type)=DATA];
+	optional fixed32 encoded_text_len = 12			[(fix.tag)=354, (fix.type)=LENGTH];
+	optional Common.Instrument instrument = 13		[(fix.field_added)=FIX_4_3];
+	optional Common.OrderQtyData order_qty_data = 14	[(fix.field_added)=FIX_4_3];
+	repeated Common.InstrmtLegGrp instrmt_leg_grp = 15	[(fix.tag)=555];
+	optional string secondary_order_id = 16			[(fix.tag)=198, (fix.type)=STRING];
+	repeated Common.UndInstrmtGrp und_instrmt_grp = 17	[(fix.tag)=711];
+}

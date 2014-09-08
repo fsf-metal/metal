@@ -1,0 +1,92 @@
+//
+//	FIX Unified Repository mapping to Google Protocol Buffers
+//
+//	Copyright (c) FIX Protocol Ltd. All Rights Reserved.
+//
+//	File: fix.proto
+//
+import "google/protobuf/descriptor.proto";
+option java_outer_classname = "Fix";option java_package = "org.fixprotocol.components";package fix;
+
+extend google.protobuf.FileOptions {
+	optional string category = 53002;
+}
+
+extend google.protobuf.MessageOptions {
+	optional string msg_type = 55001;
+}
+
+extend google.protobuf.FieldOptions {
+	optional fixed32 tag = 56003;
+	optional Datatype type = 56004;
+	optional Version field_added = 56005;
+	optional sfixed32 field_added_ep = 56006;
+	optional Version field_deprecated = 56007;
+}
+
+extend google.protobuf.EnumValueOptions {
+	optional string enum_value = 72004;
+	optional Version enum_added = 72005;
+	optional sfixed32 enum_added_ep = 72006;
+	optional Version enum_deprecated = 72007;
+}
+
+enum Datatype {
+	CHAR = 0	[(fix.enum_added)=FIX_2_7];
+	DATA = 1	[(fix.enum_added)=FIX_2_7];
+	FLOAT = 2	[(fix.enum_added)=FIX_2_7];
+	INT = 3	[(fix.enum_added)=FIX_2_7];
+	DAY_OF_MONTH = 4	[(fix.enum_added)=FIX_4_1];
+	MONTH_YEAR = 5	[(fix.enum_added)=FIX_4_1];
+	AMT = 6	[(fix.enum_added)=FIX_4_2];
+	BOOLEAN = 7	[(fix.enum_added)=FIX_4_2];
+	CURRENCY = 8	[(fix.enum_added)=FIX_4_2];
+	EXCHANGE = 9	[(fix.enum_added)=FIX_4_2];
+	LOCAL_MKT_DATE = 10	[(fix.enum_added)=FIX_4_2];
+	MULTIPLE_STRING_VALUE = 11	[(fix.enum_added)=FIX_4_2];
+	PRICE = 12	[(fix.enum_added)=FIX_4_2];
+	PRICE_OFFSET = 13	[(fix.enum_added)=FIX_4_2];
+	QTY = 14	[(fix.enum_added)=FIX_4_2];
+	STRING = 15	[(fix.enum_added)=FIX_4_2];
+	UTC_TIME_ONLY = 16	[(fix.enum_added)=FIX_4_2];
+	UTC_TIMESTAMP = 17	[(fix.enum_added)=FIX_4_2];
+	LENGTH = 18	[(fix.enum_added)=FIX_4_3];
+	NUM_IN_GROUP = 19	[(fix.enum_added)=FIX_4_3];
+	PERCENTAGE = 20	[(fix.enum_added)=FIX_4_3];
+	SEQ_NUM = 21	[(fix.enum_added)=FIX_4_3];
+	TAG_NUM = 22	[(fix.enum_added)=FIX_4_3];
+	COUNTRY = 23	[(fix.enum_added)=FIX_4_4];
+	MULTIPLE_CHAR_VALUE = 24	[(fix.enum_added)=FIX_4_4];
+	PATTERN = 25	[(fix.enum_added)=FIX_4_4];
+	RESERVED1000PLUS = 26	[(fix.enum_added)=FIX_4_4];
+	RESERVED100PLUS = 27	[(fix.enum_added)=FIX_4_4];
+	RESERVED4000PLUS = 28	[(fix.enum_added)=FIX_4_4];
+	TZ_TIME_ONLY = 29	[(fix.enum_added)=FIX_4_4];
+	TZ_TIMESTAMP = 30	[(fix.enum_added)=FIX_4_4];
+	TENOR = 31	[(fix.enum_added)=FIX_4_4];
+	UTC_DATE_ONLY = 32	[(fix.enum_added)=FIX_4_4];
+	XML_DATA = 33	[(fix.enum_added)=FIX_5_0];
+	LANGUAGE = 34	[(fix.enum_added)=FIX_5_0_SP_1, (fix.enum_added_ep)=90];
+}
+
+enum Version {
+	FIX_2_7 = 0;
+	FIX_3_0 = 1;
+	FIX_4_0 = 2;
+	FIX_4_1 = 3;
+	FIX_4_2 = 4;
+	FIX_4_3 = 5;
+	FIX_4_4 = 6;
+	FIX_5_0 = 7;
+	FIXT_1_1 = 8;
+	FIX_5_0_SP_1 = 9;
+	FIX_5_0_SP_2 = 10;
+}
+
+message Tenor {
+	optional uint32 days = 1;
+	optional uint32 weeks = 2;
+	optional uint32 months = 3;
+	optional uint32 years = 4;
+}
+

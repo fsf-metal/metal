@@ -1,0 +1,36 @@
+//
+//	FIX Unified Repository mapping to Google Protocol Buffers
+//
+//	Copyright (c) FIX Protocol Ltd. All Rights Reserved.
+//
+//	File: meta.proto
+//
+import "google/protobuf/descriptor.proto";
+
+option java_outer_classname = "Meta";option java_package = "org.fixprotocol.components";package meta;
+
+enum TimeUnit {
+	TIME_UNIT_DAYS = 0;
+	TIME_UNIT_SECONDS = 1;
+	TIME_UNIT_MILLISECONDS = 2;
+	TIME_UNIT_MICROSECONDS = 3;
+	TIME_UNIT_NANOSECONDS = 4;
+	TIME_UNIT_PICOSECONDS = 5;
+}
+
+enum Epoch {
+	EPOCH_MIDNIGHT = 0;		// For time-only fields, midnight of a given date
+	EPOCH_UNIX = 1;		// Midnight of Jan-01 1970
+	EPOCH_1900 = 2;		// Midnight of Jan-01 1900
+	EPOCH_2000 = 3;		// Midnight of Jan-01 2000
+}
+
+extend google.protobuf.FieldOptions {
+	optional TimeUnit time_unit = 51001;
+	optional sfixed32 exponent = 51003;
+	optional fixed32 min_length = 51004;
+	optional fixed32 max_length = 51005;
+	optional sfixed64 min_value = 51006;
+	optional sfixed64 max_value = 51007;
+}
+
