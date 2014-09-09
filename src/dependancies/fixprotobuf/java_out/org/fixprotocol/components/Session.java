@@ -1270,10 +1270,10 @@ public final class Session {
     // @@protoc_insertion_point(enum_scope:Session.ApplVerIdEnum)
   }
 
-  public interface HopGrpOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface HopGrpOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Session.HopGrp)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string hop_comp_id = 1;
     /**
      * <code>optional string hop_comp_id = 1;</code>
      */
@@ -1288,7 +1288,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getHopCompIdBytes();
 
-    // optional fixed32 hop_ref_id = 2;
     /**
      * <code>optional fixed32 hop_ref_id = 2;</code>
      */
@@ -1298,7 +1297,6 @@ public final class Session {
      */
     int getHopRefId();
 
-    // optional sfixed64 hop_sending_time = 3;
     /**
      * <code>optional sfixed64 hop_sending_time = 3;</code>
      */
@@ -1312,8 +1310,9 @@ public final class Session {
    * Protobuf type {@code Session.HopGrp}
    */
   public static final class HopGrp extends
-      com.google.protobuf.GeneratedMessage
-      implements HopGrpOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Session.HopGrp)
+      HopGrpOrBuilder {
     // Use HopGrp.newBuilder() to construct.
     private HopGrp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -1360,8 +1359,9 @@ public final class Session {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              hopCompId_ = input.readBytes();
+              hopCompId_ = bs;
               break;
             }
             case 21: {
@@ -1414,7 +1414,6 @@ public final class Session {
     }
 
     private int bitField0_;
-    // optional string hop_comp_id = 1;
     public static final int HOP_COMP_ID_FIELD_NUMBER = 1;
     private java.lang.Object hopCompId_;
     /**
@@ -1457,7 +1456,6 @@ public final class Session {
       }
     }
 
-    // optional fixed32 hop_ref_id = 2;
     public static final int HOP_REF_ID_FIELD_NUMBER = 2;
     private int hopRefId_;
     /**
@@ -1473,7 +1471,6 @@ public final class Session {
       return hopRefId_;
     }
 
-    // optional sfixed64 hop_sending_time = 3;
     public static final int HOP_SENDING_TIME_FIELD_NUMBER = 3;
     private long hopSendingTime_;
     /**
@@ -1497,7 +1494,8 @@ public final class Session {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -1618,8 +1616,9 @@ public final class Session {
      * Protobuf type {@code Session.HopGrp}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.Session.HopGrpOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Session.HopGrp)
+        org.fixprotocol.components.Session.HopGrpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.Session.internal_static_Session_HopGrp_descriptor;
@@ -1752,7 +1751,6 @@ public final class Session {
       }
       private int bitField0_;
 
-      // optional string hop_comp_id = 1;
       private java.lang.Object hopCompId_ = "";
       /**
        * <code>optional string hop_comp_id = 1;</code>
@@ -1766,9 +1764,12 @@ public final class Session {
       public java.lang.String getHopCompId() {
         java.lang.Object ref = hopCompId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          hopCompId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            hopCompId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1826,7 +1827,6 @@ public final class Session {
         return this;
       }
 
-      // optional fixed32 hop_ref_id = 2;
       private int hopRefId_ ;
       /**
        * <code>optional fixed32 hop_ref_id = 2;</code>
@@ -1859,7 +1859,6 @@ public final class Session {
         return this;
       }
 
-      // optional sfixed64 hop_sending_time = 3;
       private long hopSendingTime_ ;
       /**
        * <code>optional sfixed64 hop_sending_time = 3;</code>
@@ -1903,10 +1902,10 @@ public final class Session {
     // @@protoc_insertion_point(class_scope:Session.HopGrp)
   }
 
-  public interface StandardHeaderOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface StandardHeaderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Session.StandardHeader)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string deliver_to_comp_id = 1;
     /**
      * <code>optional string deliver_to_comp_id = 1;</code>
      */
@@ -1921,7 +1920,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getDeliverToCompIdBytes();
 
-    // optional string deliver_to_sub_id = 2;
     /**
      * <code>optional string deliver_to_sub_id = 2;</code>
      */
@@ -1936,7 +1934,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getDeliverToSubIdBytes();
 
-    // optional fixed32 msg_seq_num = 3;
     /**
      * <code>optional fixed32 msg_seq_num = 3;</code>
      */
@@ -1946,7 +1943,6 @@ public final class Session {
      */
     int getMsgSeqNum();
 
-    // optional string on_behalf_of_comp_id = 4;
     /**
      * <code>optional string on_behalf_of_comp_id = 4;</code>
      */
@@ -1961,7 +1957,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getOnBehalfOfCompIdBytes();
 
-    // optional string on_behalf_of_sub_id = 5;
     /**
      * <code>optional string on_behalf_of_sub_id = 5;</code>
      */
@@ -1976,7 +1971,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getOnBehalfOfSubIdBytes();
 
-    // optional sfixed64 orig_sending_time = 6;
     /**
      * <code>optional sfixed64 orig_sending_time = 6;</code>
      */
@@ -1986,7 +1980,6 @@ public final class Session {
      */
     long getOrigSendingTime();
 
-    // optional bool poss_dup_flag = 7;
     /**
      * <code>optional bool poss_dup_flag = 7;</code>
      */
@@ -1996,7 +1989,6 @@ public final class Session {
      */
     boolean getPossDupFlag();
 
-    // optional bool poss_resend = 8;
     /**
      * <code>optional bool poss_resend = 8;</code>
      */
@@ -2006,7 +1998,6 @@ public final class Session {
      */
     boolean getPossResend();
 
-    // optional bytes secure_data = 9;
     /**
      * <code>optional bytes secure_data = 9;</code>
      */
@@ -2016,7 +2007,6 @@ public final class Session {
      */
     com.google.protobuf.ByteString getSecureData();
 
-    // optional fixed32 secure_data_len = 10;
     /**
      * <code>optional fixed32 secure_data_len = 10;</code>
      */
@@ -2026,7 +2016,6 @@ public final class Session {
      */
     int getSecureDataLen();
 
-    // optional string sender_comp_id = 11;
     /**
      * <code>optional string sender_comp_id = 11;</code>
      */
@@ -2041,7 +2030,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getSenderCompIdBytes();
 
-    // optional string sender_sub_id = 12;
     /**
      * <code>optional string sender_sub_id = 12;</code>
      */
@@ -2056,7 +2044,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getSenderSubIdBytes();
 
-    // optional sfixed64 sending_time = 13;
     /**
      * <code>optional sfixed64 sending_time = 13;</code>
      */
@@ -2066,7 +2053,6 @@ public final class Session {
      */
     long getSendingTime();
 
-    // optional string target_comp_id = 14;
     /**
      * <code>optional string target_comp_id = 14;</code>
      */
@@ -2081,7 +2067,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getTargetCompIdBytes();
 
-    // optional string target_sub_id = 15;
     /**
      * <code>optional string target_sub_id = 15;</code>
      */
@@ -2096,7 +2081,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getTargetSubIdBytes();
 
-    // optional string deliver_to_location_id = 16;
     /**
      * <code>optional string deliver_to_location_id = 16;</code>
      */
@@ -2111,7 +2095,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getDeliverToLocationIdBytes();
 
-    // optional string on_behalf_of_location_id = 17;
     /**
      * <code>optional string on_behalf_of_location_id = 17;</code>
      */
@@ -2126,7 +2109,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getOnBehalfOfLocationIdBytes();
 
-    // optional string sender_location_id = 18;
     /**
      * <code>optional string sender_location_id = 18;</code>
      */
@@ -2141,7 +2123,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getSenderLocationIdBytes();
 
-    // optional string target_location_id = 19;
     /**
      * <code>optional string target_location_id = 19;</code>
      */
@@ -2156,7 +2137,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getTargetLocationIdBytes();
 
-    // optional fixed32 last_msg_seq_num_processed = 20;
     /**
      * <code>optional fixed32 last_msg_seq_num_processed = 20;</code>
      */
@@ -2166,7 +2146,6 @@ public final class Session {
      */
     int getLastMsgSeqNumProcessed();
 
-    // optional string message_encoding = 21;
     /**
      * <code>optional string message_encoding = 21;</code>
      */
@@ -2181,7 +2160,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getMessageEncodingBytes();
 
-    // optional bytes xml_data = 22;
     /**
      * <code>optional bytes xml_data = 22;</code>
      */
@@ -2191,7 +2169,6 @@ public final class Session {
      */
     com.google.protobuf.ByteString getXmlData();
 
-    // optional fixed32 xml_data_len = 23;
     /**
      * <code>optional fixed32 xml_data_len = 23;</code>
      */
@@ -2201,7 +2178,6 @@ public final class Session {
      */
     int getXmlDataLen();
 
-    // optional .Session.ApplVerIdEnum appl_ver_id = 24;
     /**
      * <code>optional .Session.ApplVerIdEnum appl_ver_id = 24;</code>
      */
@@ -2211,7 +2187,6 @@ public final class Session {
      */
     org.fixprotocol.components.Session.ApplVerIdEnum getApplVerId();
 
-    // optional string cstm_appl_ver_id = 25;
     /**
      * <code>optional string cstm_appl_ver_id = 25;</code>
      */
@@ -2226,7 +2201,6 @@ public final class Session {
     com.google.protobuf.ByteString
         getCstmApplVerIdBytes();
 
-    // repeated .Session.HopGrp hop_grp = 26;
     /**
      * <code>repeated .Session.HopGrp hop_grp = 26;</code>
      */
@@ -2251,7 +2225,6 @@ public final class Session {
     org.fixprotocol.components.Session.HopGrpOrBuilder getHopGrpOrBuilder(
         int index);
 
-    // optional sfixed64 appl_ext_id = 27;
     /**
      * <code>optional sfixed64 appl_ext_id = 27;</code>
      */
@@ -2265,8 +2238,9 @@ public final class Session {
    * Protobuf type {@code Session.StandardHeader}
    */
   public static final class StandardHeader extends
-      com.google.protobuf.GeneratedMessage
-      implements StandardHeaderOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Session.StandardHeader)
+      StandardHeaderOrBuilder {
     // Use StandardHeader.newBuilder() to construct.
     private StandardHeader(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -2313,13 +2287,15 @@ public final class Session {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              deliverToCompId_ = input.readBytes();
+              deliverToCompId_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              deliverToSubId_ = input.readBytes();
+              deliverToSubId_ = bs;
               break;
             }
             case 29: {
@@ -2328,13 +2304,15 @@ public final class Session {
               break;
             }
             case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              onBehalfOfCompId_ = input.readBytes();
+              onBehalfOfCompId_ = bs;
               break;
             }
             case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
-              onBehalfOfSubId_ = input.readBytes();
+              onBehalfOfSubId_ = bs;
               break;
             }
             case 49: {
@@ -2363,13 +2341,15 @@ public final class Session {
               break;
             }
             case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000400;
-              senderCompId_ = input.readBytes();
+              senderCompId_ = bs;
               break;
             }
             case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000800;
-              senderSubId_ = input.readBytes();
+              senderSubId_ = bs;
               break;
             }
             case 105: {
@@ -2378,33 +2358,39 @@ public final class Session {
               break;
             }
             case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00002000;
-              targetCompId_ = input.readBytes();
+              targetCompId_ = bs;
               break;
             }
             case 122: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00004000;
-              targetSubId_ = input.readBytes();
+              targetSubId_ = bs;
               break;
             }
             case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
-              deliverToLocationId_ = input.readBytes();
+              deliverToLocationId_ = bs;
               break;
             }
             case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
-              onBehalfOfLocationId_ = input.readBytes();
+              onBehalfOfLocationId_ = bs;
               break;
             }
             case 146: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00020000;
-              senderLocationId_ = input.readBytes();
+              senderLocationId_ = bs;
               break;
             }
             case 154: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00040000;
-              targetLocationId_ = input.readBytes();
+              targetLocationId_ = bs;
               break;
             }
             case 165: {
@@ -2413,8 +2399,9 @@ public final class Session {
               break;
             }
             case 170: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00100000;
-              messageEncoding_ = input.readBytes();
+              messageEncoding_ = bs;
               break;
             }
             case 178: {
@@ -2439,8 +2426,9 @@ public final class Session {
               break;
             }
             case 202: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x01000000;
-              cstmApplVerId_ = input.readBytes();
+              cstmApplVerId_ = bs;
               break;
             }
             case 210: {
@@ -2499,7 +2487,6 @@ public final class Session {
     }
 
     private int bitField0_;
-    // optional string deliver_to_comp_id = 1;
     public static final int DELIVER_TO_COMP_ID_FIELD_NUMBER = 1;
     private java.lang.Object deliverToCompId_;
     /**
@@ -2542,7 +2529,6 @@ public final class Session {
       }
     }
 
-    // optional string deliver_to_sub_id = 2;
     public static final int DELIVER_TO_SUB_ID_FIELD_NUMBER = 2;
     private java.lang.Object deliverToSubId_;
     /**
@@ -2585,7 +2571,6 @@ public final class Session {
       }
     }
 
-    // optional fixed32 msg_seq_num = 3;
     public static final int MSG_SEQ_NUM_FIELD_NUMBER = 3;
     private int msgSeqNum_;
     /**
@@ -2601,7 +2586,6 @@ public final class Session {
       return msgSeqNum_;
     }
 
-    // optional string on_behalf_of_comp_id = 4;
     public static final int ON_BEHALF_OF_COMP_ID_FIELD_NUMBER = 4;
     private java.lang.Object onBehalfOfCompId_;
     /**
@@ -2644,7 +2628,6 @@ public final class Session {
       }
     }
 
-    // optional string on_behalf_of_sub_id = 5;
     public static final int ON_BEHALF_OF_SUB_ID_FIELD_NUMBER = 5;
     private java.lang.Object onBehalfOfSubId_;
     /**
@@ -2687,7 +2670,6 @@ public final class Session {
       }
     }
 
-    // optional sfixed64 orig_sending_time = 6;
     public static final int ORIG_SENDING_TIME_FIELD_NUMBER = 6;
     private long origSendingTime_;
     /**
@@ -2703,7 +2685,6 @@ public final class Session {
       return origSendingTime_;
     }
 
-    // optional bool poss_dup_flag = 7;
     public static final int POSS_DUP_FLAG_FIELD_NUMBER = 7;
     private boolean possDupFlag_;
     /**
@@ -2719,7 +2700,6 @@ public final class Session {
       return possDupFlag_;
     }
 
-    // optional bool poss_resend = 8;
     public static final int POSS_RESEND_FIELD_NUMBER = 8;
     private boolean possResend_;
     /**
@@ -2735,7 +2715,6 @@ public final class Session {
       return possResend_;
     }
 
-    // optional bytes secure_data = 9;
     public static final int SECURE_DATA_FIELD_NUMBER = 9;
     private com.google.protobuf.ByteString secureData_;
     /**
@@ -2751,7 +2730,6 @@ public final class Session {
       return secureData_;
     }
 
-    // optional fixed32 secure_data_len = 10;
     public static final int SECURE_DATA_LEN_FIELD_NUMBER = 10;
     private int secureDataLen_;
     /**
@@ -2767,7 +2745,6 @@ public final class Session {
       return secureDataLen_;
     }
 
-    // optional string sender_comp_id = 11;
     public static final int SENDER_COMP_ID_FIELD_NUMBER = 11;
     private java.lang.Object senderCompId_;
     /**
@@ -2810,7 +2787,6 @@ public final class Session {
       }
     }
 
-    // optional string sender_sub_id = 12;
     public static final int SENDER_SUB_ID_FIELD_NUMBER = 12;
     private java.lang.Object senderSubId_;
     /**
@@ -2853,7 +2829,6 @@ public final class Session {
       }
     }
 
-    // optional sfixed64 sending_time = 13;
     public static final int SENDING_TIME_FIELD_NUMBER = 13;
     private long sendingTime_;
     /**
@@ -2869,7 +2844,6 @@ public final class Session {
       return sendingTime_;
     }
 
-    // optional string target_comp_id = 14;
     public static final int TARGET_COMP_ID_FIELD_NUMBER = 14;
     private java.lang.Object targetCompId_;
     /**
@@ -2912,7 +2886,6 @@ public final class Session {
       }
     }
 
-    // optional string target_sub_id = 15;
     public static final int TARGET_SUB_ID_FIELD_NUMBER = 15;
     private java.lang.Object targetSubId_;
     /**
@@ -2955,7 +2928,6 @@ public final class Session {
       }
     }
 
-    // optional string deliver_to_location_id = 16;
     public static final int DELIVER_TO_LOCATION_ID_FIELD_NUMBER = 16;
     private java.lang.Object deliverToLocationId_;
     /**
@@ -2998,7 +2970,6 @@ public final class Session {
       }
     }
 
-    // optional string on_behalf_of_location_id = 17;
     public static final int ON_BEHALF_OF_LOCATION_ID_FIELD_NUMBER = 17;
     private java.lang.Object onBehalfOfLocationId_;
     /**
@@ -3041,7 +3012,6 @@ public final class Session {
       }
     }
 
-    // optional string sender_location_id = 18;
     public static final int SENDER_LOCATION_ID_FIELD_NUMBER = 18;
     private java.lang.Object senderLocationId_;
     /**
@@ -3084,7 +3054,6 @@ public final class Session {
       }
     }
 
-    // optional string target_location_id = 19;
     public static final int TARGET_LOCATION_ID_FIELD_NUMBER = 19;
     private java.lang.Object targetLocationId_;
     /**
@@ -3127,7 +3096,6 @@ public final class Session {
       }
     }
 
-    // optional fixed32 last_msg_seq_num_processed = 20;
     public static final int LAST_MSG_SEQ_NUM_PROCESSED_FIELD_NUMBER = 20;
     private int lastMsgSeqNumProcessed_;
     /**
@@ -3143,7 +3111,6 @@ public final class Session {
       return lastMsgSeqNumProcessed_;
     }
 
-    // optional string message_encoding = 21;
     public static final int MESSAGE_ENCODING_FIELD_NUMBER = 21;
     private java.lang.Object messageEncoding_;
     /**
@@ -3186,7 +3153,6 @@ public final class Session {
       }
     }
 
-    // optional bytes xml_data = 22;
     public static final int XML_DATA_FIELD_NUMBER = 22;
     private com.google.protobuf.ByteString xmlData_;
     /**
@@ -3202,7 +3168,6 @@ public final class Session {
       return xmlData_;
     }
 
-    // optional fixed32 xml_data_len = 23;
     public static final int XML_DATA_LEN_FIELD_NUMBER = 23;
     private int xmlDataLen_;
     /**
@@ -3218,7 +3183,6 @@ public final class Session {
       return xmlDataLen_;
     }
 
-    // optional .Session.ApplVerIdEnum appl_ver_id = 24;
     public static final int APPL_VER_ID_FIELD_NUMBER = 24;
     private org.fixprotocol.components.Session.ApplVerIdEnum applVerId_;
     /**
@@ -3234,7 +3198,6 @@ public final class Session {
       return applVerId_;
     }
 
-    // optional string cstm_appl_ver_id = 25;
     public static final int CSTM_APPL_VER_ID_FIELD_NUMBER = 25;
     private java.lang.Object cstmApplVerId_;
     /**
@@ -3277,7 +3240,6 @@ public final class Session {
       }
     }
 
-    // repeated .Session.HopGrp hop_grp = 26;
     public static final int HOP_GRP_FIELD_NUMBER = 26;
     private java.util.List<org.fixprotocol.components.Session.HopGrp> hopGrp_;
     /**
@@ -3313,7 +3275,6 @@ public final class Session {
       return hopGrp_.get(index);
     }
 
-    // optional sfixed64 appl_ext_id = 27;
     public static final int APPL_EXT_ID_FIELD_NUMBER = 27;
     private long applExtId_;
     /**
@@ -3361,7 +3322,8 @@ public final class Session {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -3650,8 +3612,9 @@ public final class Session {
      * Protobuf type {@code Session.StandardHeader}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.Session.StandardHeaderOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Session.StandardHeader)
+        org.fixprotocol.components.Session.StandardHeaderOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.Session.internal_static_Session_StandardHeader_descriptor;
@@ -4059,7 +4022,6 @@ public final class Session {
       }
       private int bitField0_;
 
-      // optional string deliver_to_comp_id = 1;
       private java.lang.Object deliverToCompId_ = "";
       /**
        * <code>optional string deliver_to_comp_id = 1;</code>
@@ -4073,9 +4035,12 @@ public final class Session {
       public java.lang.String getDeliverToCompId() {
         java.lang.Object ref = deliverToCompId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          deliverToCompId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            deliverToCompId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4133,7 +4098,6 @@ public final class Session {
         return this;
       }
 
-      // optional string deliver_to_sub_id = 2;
       private java.lang.Object deliverToSubId_ = "";
       /**
        * <code>optional string deliver_to_sub_id = 2;</code>
@@ -4147,9 +4111,12 @@ public final class Session {
       public java.lang.String getDeliverToSubId() {
         java.lang.Object ref = deliverToSubId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          deliverToSubId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            deliverToSubId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4207,7 +4174,6 @@ public final class Session {
         return this;
       }
 
-      // optional fixed32 msg_seq_num = 3;
       private int msgSeqNum_ ;
       /**
        * <code>optional fixed32 msg_seq_num = 3;</code>
@@ -4240,7 +4206,6 @@ public final class Session {
         return this;
       }
 
-      // optional string on_behalf_of_comp_id = 4;
       private java.lang.Object onBehalfOfCompId_ = "";
       /**
        * <code>optional string on_behalf_of_comp_id = 4;</code>
@@ -4254,9 +4219,12 @@ public final class Session {
       public java.lang.String getOnBehalfOfCompId() {
         java.lang.Object ref = onBehalfOfCompId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          onBehalfOfCompId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            onBehalfOfCompId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4314,7 +4282,6 @@ public final class Session {
         return this;
       }
 
-      // optional string on_behalf_of_sub_id = 5;
       private java.lang.Object onBehalfOfSubId_ = "";
       /**
        * <code>optional string on_behalf_of_sub_id = 5;</code>
@@ -4328,9 +4295,12 @@ public final class Session {
       public java.lang.String getOnBehalfOfSubId() {
         java.lang.Object ref = onBehalfOfSubId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          onBehalfOfSubId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            onBehalfOfSubId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4388,7 +4358,6 @@ public final class Session {
         return this;
       }
 
-      // optional sfixed64 orig_sending_time = 6;
       private long origSendingTime_ ;
       /**
        * <code>optional sfixed64 orig_sending_time = 6;</code>
@@ -4421,7 +4390,6 @@ public final class Session {
         return this;
       }
 
-      // optional bool poss_dup_flag = 7;
       private boolean possDupFlag_ ;
       /**
        * <code>optional bool poss_dup_flag = 7;</code>
@@ -4454,7 +4422,6 @@ public final class Session {
         return this;
       }
 
-      // optional bool poss_resend = 8;
       private boolean possResend_ ;
       /**
        * <code>optional bool poss_resend = 8;</code>
@@ -4487,7 +4454,6 @@ public final class Session {
         return this;
       }
 
-      // optional bytes secure_data = 9;
       private com.google.protobuf.ByteString secureData_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes secure_data = 9;</code>
@@ -4523,7 +4489,6 @@ public final class Session {
         return this;
       }
 
-      // optional fixed32 secure_data_len = 10;
       private int secureDataLen_ ;
       /**
        * <code>optional fixed32 secure_data_len = 10;</code>
@@ -4556,7 +4521,6 @@ public final class Session {
         return this;
       }
 
-      // optional string sender_comp_id = 11;
       private java.lang.Object senderCompId_ = "";
       /**
        * <code>optional string sender_comp_id = 11;</code>
@@ -4570,9 +4534,12 @@ public final class Session {
       public java.lang.String getSenderCompId() {
         java.lang.Object ref = senderCompId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          senderCompId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            senderCompId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4630,7 +4597,6 @@ public final class Session {
         return this;
       }
 
-      // optional string sender_sub_id = 12;
       private java.lang.Object senderSubId_ = "";
       /**
        * <code>optional string sender_sub_id = 12;</code>
@@ -4644,9 +4610,12 @@ public final class Session {
       public java.lang.String getSenderSubId() {
         java.lang.Object ref = senderSubId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          senderSubId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            senderSubId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4704,7 +4673,6 @@ public final class Session {
         return this;
       }
 
-      // optional sfixed64 sending_time = 13;
       private long sendingTime_ ;
       /**
        * <code>optional sfixed64 sending_time = 13;</code>
@@ -4737,7 +4705,6 @@ public final class Session {
         return this;
       }
 
-      // optional string target_comp_id = 14;
       private java.lang.Object targetCompId_ = "";
       /**
        * <code>optional string target_comp_id = 14;</code>
@@ -4751,9 +4718,12 @@ public final class Session {
       public java.lang.String getTargetCompId() {
         java.lang.Object ref = targetCompId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          targetCompId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            targetCompId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4811,7 +4781,6 @@ public final class Session {
         return this;
       }
 
-      // optional string target_sub_id = 15;
       private java.lang.Object targetSubId_ = "";
       /**
        * <code>optional string target_sub_id = 15;</code>
@@ -4825,9 +4794,12 @@ public final class Session {
       public java.lang.String getTargetSubId() {
         java.lang.Object ref = targetSubId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          targetSubId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            targetSubId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4885,7 +4857,6 @@ public final class Session {
         return this;
       }
 
-      // optional string deliver_to_location_id = 16;
       private java.lang.Object deliverToLocationId_ = "";
       /**
        * <code>optional string deliver_to_location_id = 16;</code>
@@ -4899,9 +4870,12 @@ public final class Session {
       public java.lang.String getDeliverToLocationId() {
         java.lang.Object ref = deliverToLocationId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          deliverToLocationId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            deliverToLocationId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4959,7 +4933,6 @@ public final class Session {
         return this;
       }
 
-      // optional string on_behalf_of_location_id = 17;
       private java.lang.Object onBehalfOfLocationId_ = "";
       /**
        * <code>optional string on_behalf_of_location_id = 17;</code>
@@ -4973,9 +4946,12 @@ public final class Session {
       public java.lang.String getOnBehalfOfLocationId() {
         java.lang.Object ref = onBehalfOfLocationId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          onBehalfOfLocationId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            onBehalfOfLocationId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5033,7 +5009,6 @@ public final class Session {
         return this;
       }
 
-      // optional string sender_location_id = 18;
       private java.lang.Object senderLocationId_ = "";
       /**
        * <code>optional string sender_location_id = 18;</code>
@@ -5047,9 +5022,12 @@ public final class Session {
       public java.lang.String getSenderLocationId() {
         java.lang.Object ref = senderLocationId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          senderLocationId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            senderLocationId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5107,7 +5085,6 @@ public final class Session {
         return this;
       }
 
-      // optional string target_location_id = 19;
       private java.lang.Object targetLocationId_ = "";
       /**
        * <code>optional string target_location_id = 19;</code>
@@ -5121,9 +5098,12 @@ public final class Session {
       public java.lang.String getTargetLocationId() {
         java.lang.Object ref = targetLocationId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          targetLocationId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            targetLocationId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5181,7 +5161,6 @@ public final class Session {
         return this;
       }
 
-      // optional fixed32 last_msg_seq_num_processed = 20;
       private int lastMsgSeqNumProcessed_ ;
       /**
        * <code>optional fixed32 last_msg_seq_num_processed = 20;</code>
@@ -5214,7 +5193,6 @@ public final class Session {
         return this;
       }
 
-      // optional string message_encoding = 21;
       private java.lang.Object messageEncoding_ = "";
       /**
        * <code>optional string message_encoding = 21;</code>
@@ -5228,9 +5206,12 @@ public final class Session {
       public java.lang.String getMessageEncoding() {
         java.lang.Object ref = messageEncoding_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          messageEncoding_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            messageEncoding_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5288,7 +5269,6 @@ public final class Session {
         return this;
       }
 
-      // optional bytes xml_data = 22;
       private com.google.protobuf.ByteString xmlData_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes xml_data = 22;</code>
@@ -5324,7 +5304,6 @@ public final class Session {
         return this;
       }
 
-      // optional fixed32 xml_data_len = 23;
       private int xmlDataLen_ ;
       /**
        * <code>optional fixed32 xml_data_len = 23;</code>
@@ -5357,7 +5336,6 @@ public final class Session {
         return this;
       }
 
-      // optional .Session.ApplVerIdEnum appl_ver_id = 24;
       private org.fixprotocol.components.Session.ApplVerIdEnum applVerId_ = org.fixprotocol.components.Session.ApplVerIdEnum.APPL_VER_ID_FIX27;
       /**
        * <code>optional .Session.ApplVerIdEnum appl_ver_id = 24;</code>
@@ -5393,7 +5371,6 @@ public final class Session {
         return this;
       }
 
-      // optional string cstm_appl_ver_id = 25;
       private java.lang.Object cstmApplVerId_ = "";
       /**
        * <code>optional string cstm_appl_ver_id = 25;</code>
@@ -5407,9 +5384,12 @@ public final class Session {
       public java.lang.String getCstmApplVerId() {
         java.lang.Object ref = cstmApplVerId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          cstmApplVerId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            cstmApplVerId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5467,7 +5447,6 @@ public final class Session {
         return this;
       }
 
-      // repeated .Session.HopGrp hop_grp = 26;
       private java.util.List<org.fixprotocol.components.Session.HopGrp> hopGrp_ =
         java.util.Collections.emptyList();
       private void ensureHopGrpIsMutable() {
@@ -5609,7 +5588,8 @@ public final class Session {
           java.lang.Iterable<? extends org.fixprotocol.components.Session.HopGrp> values) {
         if (hopGrpBuilder_ == null) {
           ensureHopGrpIsMutable();
-          super.addAll(values, hopGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, hopGrp_);
           onChanged();
         } else {
           hopGrpBuilder_.addAllMessages(values);
@@ -5707,7 +5687,6 @@ public final class Session {
         return hopGrpBuilder_;
       }
 
-      // optional sfixed64 appl_ext_id = 27;
       private long applExtId_ ;
       /**
        * <code>optional sfixed64 appl_ext_id = 27;</code>
@@ -5751,10 +5730,10 @@ public final class Session {
     // @@protoc_insertion_point(class_scope:Session.StandardHeader)
   }
 
-  public interface StandardTrailerOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface StandardTrailerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Session.StandardTrailer)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional bytes signature = 1;
     /**
      * <code>optional bytes signature = 1;</code>
      */
@@ -5764,7 +5743,6 @@ public final class Session {
      */
     com.google.protobuf.ByteString getSignature();
 
-    // optional fixed32 signature_length = 2;
     /**
      * <code>optional fixed32 signature_length = 2;</code>
      */
@@ -5778,8 +5756,9 @@ public final class Session {
    * Protobuf type {@code Session.StandardTrailer}
    */
   public static final class StandardTrailer extends
-      com.google.protobuf.GeneratedMessage
-      implements StandardTrailerOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Session.StandardTrailer)
+      StandardTrailerOrBuilder {
     // Use StandardTrailer.newBuilder() to construct.
     private StandardTrailer(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -5875,7 +5854,6 @@ public final class Session {
     }
 
     private int bitField0_;
-    // optional bytes signature = 1;
     public static final int SIGNATURE_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString signature_;
     /**
@@ -5891,7 +5869,6 @@ public final class Session {
       return signature_;
     }
 
-    // optional fixed32 signature_length = 2;
     public static final int SIGNATURE_LENGTH_FIELD_NUMBER = 2;
     private int signatureLength_;
     /**
@@ -5914,7 +5891,8 @@ public final class Session {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -6028,8 +6006,9 @@ public final class Session {
      * Protobuf type {@code Session.StandardTrailer}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.Session.StandardTrailerOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Session.StandardTrailer)
+        org.fixprotocol.components.Session.StandardTrailerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.Session.internal_static_Session_StandardTrailer_descriptor;
@@ -6151,7 +6130,6 @@ public final class Session {
       }
       private int bitField0_;
 
-      // optional bytes signature = 1;
       private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes signature = 1;</code>
@@ -6187,7 +6165,6 @@ public final class Session {
         return this;
       }
 
-      // optional fixed32 signature_length = 2;
       private int signatureLength_ ;
       /**
        * <code>optional fixed32 signature_length = 2;</code>
@@ -6231,17 +6208,17 @@ public final class Session {
     // @@protoc_insertion_point(class_scope:Session.StandardTrailer)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Session_HopGrp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Session_HopGrp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Session_StandardHeader_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Session_StandardHeader_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Session_StandardTrailer_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -6426,232 +6403,236 @@ public final class Session {
       "protocol.componentsB\007Session"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Session_HopGrp_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Session_HopGrp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Session_HopGrp_descriptor,
-              new java.lang.String[] { "HopCompId", "HopRefId", "HopSendingTime", });
-          internal_static_Session_StandardHeader_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Session_StandardHeader_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Session_StandardHeader_descriptor,
-              new java.lang.String[] { "DeliverToCompId", "DeliverToSubId", "MsgSeqNum", "OnBehalfOfCompId", "OnBehalfOfSubId", "OrigSendingTime", "PossDupFlag", "PossResend", "SecureData", "SecureDataLen", "SenderCompId", "SenderSubId", "SendingTime", "TargetCompId", "TargetSubId", "DeliverToLocationId", "OnBehalfOfLocationId", "SenderLocationId", "TargetLocationId", "LastMsgSeqNumProcessed", "MessageEncoding", "XmlData", "XmlDataLen", "ApplVerId", "CstmApplVerId", "HopGrp", "ApplExtId", });
-          internal_static_Session_StandardTrailer_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Session_StandardTrailer_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Session_StandardTrailer_descriptor,
-              new java.lang.String[] { "Signature", "SignatureLength", });
-          com.google.protobuf.ExtensionRegistry registry =
-            com.google.protobuf.ExtensionRegistry.newInstance();
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          return registry;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.fixprotocol.components.Meta.getDescriptor(),
           org.fixprotocol.components.Fix.getDescriptor(),
         }, assigner);
+    internal_static_Session_HopGrp_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Session_HopGrp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Session_HopGrp_descriptor,
+        new java.lang.String[] { "HopCompId", "HopRefId", "HopSendingTime", });
+    internal_static_Session_StandardHeader_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Session_StandardHeader_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Session_StandardHeader_descriptor,
+        new java.lang.String[] { "DeliverToCompId", "DeliverToSubId", "MsgSeqNum", "OnBehalfOfCompId", "OnBehalfOfSubId", "OrigSendingTime", "PossDupFlag", "PossResend", "SecureData", "SecureDataLen", "SenderCompId", "SenderSubId", "SendingTime", "TargetCompId", "TargetSubId", "DeliverToLocationId", "OnBehalfOfLocationId", "SenderLocationId", "TargetLocationId", "LastMsgSeqNumProcessed", "MessageEncoding", "XmlData", "XmlDataLen", "ApplVerId", "CstmApplVerId", "HopGrp", "ApplExtId", });
+    internal_static_Session_StandardTrailer_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Session_StandardTrailer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Session_StandardTrailer_descriptor,
+        new java.lang.String[] { "Signature", "SignatureLength", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    org.fixprotocol.components.Meta.getDescriptor();
+    org.fixprotocol.components.Fix.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

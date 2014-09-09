@@ -20,16 +20,14 @@
 #include <thread>
 
 #include "InboundFIXSession.h"
-//#include "OutboundAdapter.h"
-#include "QuickFIXAdapter/QuickFIXAdapter.h"
+#include "OutboundAdapter.h"
 
 using namespace std;
 
 // NewOrderSingle will flow in from client to adapter
 // ExecutionReports will take the opposite route
 InboundFIXSession client;
-//OutboundAdapter adapter;
-QuickFIXAdapter adapter;
+OutboundAdapter adapter;
 
 void installHandler();
 void handler(int s); 

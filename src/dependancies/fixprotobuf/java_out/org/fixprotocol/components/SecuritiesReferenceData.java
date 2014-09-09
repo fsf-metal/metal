@@ -1678,10 +1678,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(enum_scope:SecuritiesReferenceData.LegSwapTypeEnum)
   }
 
-  public interface SecurityDefinitionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecurityDefinitionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecurityDefinition)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string currency = 1;
     /**
      * <code>optional string currency = 1;</code>
      */
@@ -1696,7 +1696,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional bytes encoded_text = 2;
     /**
      * <code>optional bytes encoded_text = 2;</code>
      */
@@ -1706,7 +1705,6 @@ public final class SecuritiesReferenceData {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 3;
     /**
      * <code>optional fixed32 encoded_text_len = 3;</code>
      */
@@ -1716,7 +1714,6 @@ public final class SecuritiesReferenceData {
      */
     int getEncodedTextLen();
 
-    // optional string security_req_id = 4;
     /**
      * <code>optional string security_req_id = 4;</code>
      */
@@ -1731,7 +1728,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityReqIdBytes();
 
-    // optional string security_response_id = 5;
     /**
      * <code>optional string security_response_id = 5;</code>
      */
@@ -1746,7 +1742,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityResponseIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 6;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 6;</code>
      */
@@ -1756,7 +1751,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityResponseTypeEnum getSecurityResponseType();
 
-    // optional .Session.StandardHeader standard_header = 7;
     /**
      * <code>optional .Session.StandardHeader standard_header = 7;</code>
      */
@@ -1770,7 +1764,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 8;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 8;</code>
      */
@@ -1784,7 +1777,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 9;
     /**
      * <code>optional string text = 9;</code>
      */
@@ -1799,7 +1791,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .Common.Instrument instrument = 10;
     /**
      * <code>optional .Common.Instrument instrument = 10;</code>
      */
@@ -1813,7 +1804,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional sfixed32 clearing_business_date = 11;
     /**
      * <code>optional sfixed32 clearing_business_date = 11;</code>
      */
@@ -1823,7 +1813,6 @@ public final class SecuritiesReferenceData {
      */
     int getClearingBusinessDate();
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 12;
     /**
      * <code>repeated .Common.InstrmtLegGrp instrmt_leg_grp = 12;</code>
      */
@@ -1848,7 +1837,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.InstrmtLegGrpOrBuilder getInstrmtLegGrpOrBuilder(
         int index);
 
-    // optional .Common.InstrumentExtension instrument_extension = 13;
     /**
      * <code>optional .Common.InstrumentExtension instrument_extension = 13;</code>
      */
@@ -1862,7 +1850,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentExtensionOrBuilder getInstrumentExtensionOrBuilder();
 
-    // optional sfixed64 security_report_id = 14;
     /**
      * <code>optional sfixed64 security_report_id = 14;</code>
      */
@@ -1872,7 +1859,6 @@ public final class SecuritiesReferenceData {
      */
     long getSecurityReportId();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 15;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 15;</code>
      */
@@ -1897,7 +1883,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.UndInstrmtGrpOrBuilder getUndInstrmtGrpOrBuilder(
         int index);
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 16;
     /**
      * <code>optional .Common.ApplicationSequenceControl application_sequence_control = 16;</code>
      */
@@ -1911,7 +1896,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder getApplicationSequenceControlOrBuilder();
 
-    // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 17 [packed = true];
     /**
      * <code>repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 17 [packed = true];</code>
      */
@@ -1925,7 +1909,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum getCorporateAction(int index);
 
-    // repeated .Common.MarketSegmentGrp market_segment_grp = 18;
     /**
      * <code>repeated .Common.MarketSegmentGrp market_segment_grp = 18;</code>
      */
@@ -1950,7 +1933,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.MarketSegmentGrpOrBuilder getMarketSegmentGrpOrBuilder(
         int index);
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;</code>
      */
@@ -1964,7 +1946,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // repeated .Common.Stipulations stipulations = 20;
     /**
      * <code>repeated .Common.Stipulations stipulations = 20;</code>
      */
@@ -1989,7 +1970,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.StipulationsOrBuilder getStipulationsOrBuilder(
         int index);
 
-    // optional .Common.YieldData yield_data = 21;
     /**
      * <code>optional .Common.YieldData yield_data = 21;</code>
      */
@@ -2003,7 +1983,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.YieldDataOrBuilder getYieldDataOrBuilder();
 
-    // optional sfixed64 transact_time = 22;
     /**
      * <code>optional sfixed64 transact_time = 22;</code>
      */
@@ -2017,8 +1996,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecurityDefinition}
    */
   public static final class SecurityDefinition extends
-      com.google.protobuf.GeneratedMessage
-      implements SecurityDefinitionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecurityDefinition)
+      SecurityDefinitionOrBuilder {
     // Use SecurityDefinition.newBuilder() to construct.
     private SecurityDefinition(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -2065,8 +2045,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 18: {
@@ -2080,13 +2061,15 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              securityReqId_ = input.readBytes();
+              securityReqId_ = bs;
               break;
             }
             case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
-              securityResponseId_ = input.readBytes();
+              securityResponseId_ = bs;
               break;
             }
             case 48: {
@@ -2127,8 +2110,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000100;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 82: {
@@ -2201,7 +2185,7 @@ public final class SecuritiesReferenceData {
               org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum value = org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(17, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
                   corporateAction_ = new java.util.ArrayList<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum>();
                   mutable_bitField0_ |= 0x00010000;
@@ -2218,7 +2202,7 @@ public final class SecuritiesReferenceData {
                 org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum value = org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(17, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
                     corporateAction_ = new java.util.ArrayList<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum>();
                     mutable_bitField0_ |= 0x00010000;
@@ -2331,7 +2315,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional string currency = 1;
     public static final int CURRENCY_FIELD_NUMBER = 1;
     private java.lang.Object currency_;
     /**
@@ -2374,7 +2357,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional bytes encoded_text = 2;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -2390,7 +2372,6 @@ public final class SecuritiesReferenceData {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 3;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 3;
     private int encodedTextLen_;
     /**
@@ -2406,7 +2387,6 @@ public final class SecuritiesReferenceData {
       return encodedTextLen_;
     }
 
-    // optional string security_req_id = 4;
     public static final int SECURITY_REQ_ID_FIELD_NUMBER = 4;
     private java.lang.Object securityReqId_;
     /**
@@ -2449,7 +2429,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string security_response_id = 5;
     public static final int SECURITY_RESPONSE_ID_FIELD_NUMBER = 5;
     private java.lang.Object securityResponseId_;
     /**
@@ -2492,7 +2471,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 6;
     public static final int SECURITY_RESPONSE_TYPE_FIELD_NUMBER = 6;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityResponseTypeEnum securityResponseType_;
     /**
@@ -2508,7 +2486,6 @@ public final class SecuritiesReferenceData {
       return securityResponseType_;
     }
 
-    // optional .Session.StandardHeader standard_header = 7;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 7;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -2530,7 +2507,6 @@ public final class SecuritiesReferenceData {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 8;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 8;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -2552,7 +2528,6 @@ public final class SecuritiesReferenceData {
       return standardTrailer_;
     }
 
-    // optional string text = 9;
     public static final int TEXT_FIELD_NUMBER = 9;
     private java.lang.Object text_;
     /**
@@ -2595,7 +2570,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .Common.Instrument instrument = 10;
     public static final int INSTRUMENT_FIELD_NUMBER = 10;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -2617,7 +2591,6 @@ public final class SecuritiesReferenceData {
       return instrument_;
     }
 
-    // optional sfixed32 clearing_business_date = 11;
     public static final int CLEARING_BUSINESS_DATE_FIELD_NUMBER = 11;
     private int clearingBusinessDate_;
     /**
@@ -2633,7 +2606,6 @@ public final class SecuritiesReferenceData {
       return clearingBusinessDate_;
     }
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 12;
     public static final int INSTRMT_LEG_GRP_FIELD_NUMBER = 12;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_;
     /**
@@ -2669,7 +2641,6 @@ public final class SecuritiesReferenceData {
       return instrmtLegGrp_.get(index);
     }
 
-    // optional .Common.InstrumentExtension instrument_extension = 13;
     public static final int INSTRUMENT_EXTENSION_FIELD_NUMBER = 13;
     private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_;
     /**
@@ -2691,7 +2662,6 @@ public final class SecuritiesReferenceData {
       return instrumentExtension_;
     }
 
-    // optional sfixed64 security_report_id = 14;
     public static final int SECURITY_REPORT_ID_FIELD_NUMBER = 14;
     private long securityReportId_;
     /**
@@ -2707,7 +2677,6 @@ public final class SecuritiesReferenceData {
       return securityReportId_;
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 15;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 15;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -2743,7 +2712,6 @@ public final class SecuritiesReferenceData {
       return undInstrmtGrp_.get(index);
     }
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 16;
     public static final int APPLICATION_SEQUENCE_CONTROL_FIELD_NUMBER = 16;
     private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_;
     /**
@@ -2765,7 +2733,6 @@ public final class SecuritiesReferenceData {
       return applicationSequenceControl_;
     }
 
-    // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 17 [packed = true];
     public static final int CORPORATE_ACTION_FIELD_NUMBER = 17;
     private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> corporateAction_;
     /**
@@ -2788,7 +2755,6 @@ public final class SecuritiesReferenceData {
     }
     private int corporateActionMemoizedSerializedSize;
 
-    // repeated .Common.MarketSegmentGrp market_segment_grp = 18;
     public static final int MARKET_SEGMENT_GRP_FIELD_NUMBER = 18;
     private java.util.List<org.fixprotocol.components.Common.MarketSegmentGrp> marketSegmentGrp_;
     /**
@@ -2824,7 +2790,6 @@ public final class SecuritiesReferenceData {
       return marketSegmentGrp_.get(index);
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 19;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -2846,7 +2811,6 @@ public final class SecuritiesReferenceData {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // repeated .Common.Stipulations stipulations = 20;
     public static final int STIPULATIONS_FIELD_NUMBER = 20;
     private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_;
     /**
@@ -2882,7 +2846,6 @@ public final class SecuritiesReferenceData {
       return stipulations_.get(index);
     }
 
-    // optional .Common.YieldData yield_data = 21;
     public static final int YIELD_DATA_FIELD_NUMBER = 21;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -2904,7 +2867,6 @@ public final class SecuritiesReferenceData {
       return yieldData_;
     }
 
-    // optional sfixed64 transact_time = 22;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 22;
     private long transactTime_;
     /**
@@ -2947,7 +2909,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -3213,8 +3176,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecurityDefinition}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecurityDefinitionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecurityDefinition)
+        org.fixprotocol.components.SecuritiesReferenceData.SecurityDefinitionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecurityDefinition_descriptor;
@@ -3727,7 +3691,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional string currency = 1;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 1;</code>
@@ -3741,9 +3704,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3801,7 +3767,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bytes encoded_text = 2;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 2;</code>
@@ -3837,7 +3802,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 3;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 3;</code>
@@ -3870,7 +3834,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_req_id = 4;
       private java.lang.Object securityReqId_ = "";
       /**
        * <code>optional string security_req_id = 4;</code>
@@ -3884,9 +3847,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityReqId() {
         java.lang.Object ref = securityReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3944,7 +3910,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_response_id = 5;
       private java.lang.Object securityResponseId_ = "";
       /**
        * <code>optional string security_response_id = 5;</code>
@@ -3958,9 +3923,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityResponseId() {
         java.lang.Object ref = securityResponseId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityResponseId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityResponseId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4018,7 +3986,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 6;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityResponseTypeEnum securityResponseType_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityResponseTypeEnum.SECURITY_RESPONSE_TYPE_ACCEPT_AS_IS;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 6;</code>
@@ -4054,7 +4021,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 7;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -4163,7 +4129,7 @@ public final class SecuritiesReferenceData {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -4171,7 +4137,6 @@ public final class SecuritiesReferenceData {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 8;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -4280,7 +4245,7 @@ public final class SecuritiesReferenceData {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -4288,7 +4253,6 @@ public final class SecuritiesReferenceData {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 9;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 9;</code>
@@ -4302,9 +4266,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4362,7 +4329,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 10;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -4471,7 +4437,7 @@ public final class SecuritiesReferenceData {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -4479,7 +4445,6 @@ public final class SecuritiesReferenceData {
         return instrumentBuilder_;
       }
 
-      // optional sfixed32 clearing_business_date = 11;
       private int clearingBusinessDate_ ;
       /**
        * <code>optional sfixed32 clearing_business_date = 11;</code>
@@ -4512,7 +4477,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 12;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegGrpIsMutable() {
@@ -4654,7 +4618,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegGrp> values) {
         if (instrmtLegGrpBuilder_ == null) {
           ensureInstrmtLegGrpIsMutable();
-          super.addAll(values, instrmtLegGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegGrp_);
           onChanged();
         } else {
           instrmtLegGrpBuilder_.addAllMessages(values);
@@ -4752,7 +4717,6 @@ public final class SecuritiesReferenceData {
         return instrmtLegGrpBuilder_;
       }
 
-      // optional .Common.InstrumentExtension instrument_extension = 13;
       private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_ = org.fixprotocol.components.Common.InstrumentExtension.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder> instrumentExtensionBuilder_;
@@ -4861,7 +4825,7 @@ public final class SecuritiesReferenceData {
         if (instrumentExtensionBuilder_ == null) {
           instrumentExtensionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder>(
-                  instrumentExtension_,
+                  getInstrumentExtension(),
                   getParentForChildren(),
                   isClean());
           instrumentExtension_ = null;
@@ -4869,7 +4833,6 @@ public final class SecuritiesReferenceData {
         return instrumentExtensionBuilder_;
       }
 
-      // optional sfixed64 security_report_id = 14;
       private long securityReportId_ ;
       /**
        * <code>optional sfixed64 security_report_id = 14;</code>
@@ -4902,7 +4865,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 15;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -5044,7 +5006,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -5142,7 +5105,6 @@ public final class SecuritiesReferenceData {
         return undInstrmtGrpBuilder_;
       }
 
-      // optional .Common.ApplicationSequenceControl application_sequence_control = 16;
       private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_ = org.fixprotocol.components.Common.ApplicationSequenceControl.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder> applicationSequenceControlBuilder_;
@@ -5251,7 +5213,7 @@ public final class SecuritiesReferenceData {
         if (applicationSequenceControlBuilder_ == null) {
           applicationSequenceControlBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder>(
-                  applicationSequenceControl_,
+                  getApplicationSequenceControl(),
                   getParentForChildren(),
                   isClean());
           applicationSequenceControl_ = null;
@@ -5259,7 +5221,6 @@ public final class SecuritiesReferenceData {
         return applicationSequenceControlBuilder_;
       }
 
-      // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 17 [packed = true];
       private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> corporateAction_ =
         java.util.Collections.emptyList();
       private void ensureCorporateActionIsMutable() {
@@ -5317,7 +5278,8 @@ public final class SecuritiesReferenceData {
       public Builder addAllCorporateAction(
           java.lang.Iterable<? extends org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> values) {
         ensureCorporateActionIsMutable();
-        super.addAll(values, corporateAction_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, corporateAction_);
         onChanged();
         return this;
       }
@@ -5331,7 +5293,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .Common.MarketSegmentGrp market_segment_grp = 18;
       private java.util.List<org.fixprotocol.components.Common.MarketSegmentGrp> marketSegmentGrp_ =
         java.util.Collections.emptyList();
       private void ensureMarketSegmentGrpIsMutable() {
@@ -5473,7 +5434,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.MarketSegmentGrp> values) {
         if (marketSegmentGrpBuilder_ == null) {
           ensureMarketSegmentGrpIsMutable();
-          super.addAll(values, marketSegmentGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, marketSegmentGrp_);
           onChanged();
         } else {
           marketSegmentGrpBuilder_.addAllMessages(values);
@@ -5571,7 +5533,6 @@ public final class SecuritiesReferenceData {
         return marketSegmentGrpBuilder_;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -5680,7 +5641,7 @@ public final class SecuritiesReferenceData {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -5688,7 +5649,6 @@ public final class SecuritiesReferenceData {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // repeated .Common.Stipulations stipulations = 20;
       private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_ =
         java.util.Collections.emptyList();
       private void ensureStipulationsIsMutable() {
@@ -5830,7 +5790,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Stipulations> values) {
         if (stipulationsBuilder_ == null) {
           ensureStipulationsIsMutable();
-          super.addAll(values, stipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stipulations_);
           onChanged();
         } else {
           stipulationsBuilder_.addAllMessages(values);
@@ -5928,7 +5889,6 @@ public final class SecuritiesReferenceData {
         return stipulationsBuilder_;
       }
 
-      // optional .Common.YieldData yield_data = 21;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -6037,7 +5997,7 @@ public final class SecuritiesReferenceData {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -6045,7 +6005,6 @@ public final class SecuritiesReferenceData {
         return yieldDataBuilder_;
       }
 
-      // optional sfixed64 transact_time = 22;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 22;</code>
@@ -6089,10 +6048,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecurityDefinition)
   }
 
-  public interface SecurityDefinitionRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecurityDefinitionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecurityDefinitionRequest)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string currency = 1;
     /**
      * <code>optional string currency = 1;</code>
      */
@@ -6107,7 +6066,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional bytes encoded_text = 2;
     /**
      * <code>optional bytes encoded_text = 2;</code>
      */
@@ -6117,7 +6075,6 @@ public final class SecuritiesReferenceData {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 3;
     /**
      * <code>optional fixed32 encoded_text_len = 3;</code>
      */
@@ -6127,7 +6084,6 @@ public final class SecuritiesReferenceData {
      */
     int getEncodedTextLen();
 
-    // optional string security_req_id = 4;
     /**
      * <code>optional string security_req_id = 4;</code>
      */
@@ -6142,7 +6098,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityReqIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityRequestTypeEnum security_request_type = 5;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityRequestTypeEnum security_request_type = 5;</code>
      */
@@ -6152,7 +6107,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestTypeEnum getSecurityRequestType();
 
-    // optional .Session.StandardHeader standard_header = 6;
     /**
      * <code>optional .Session.StandardHeader standard_header = 6;</code>
      */
@@ -6166,7 +6120,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 7;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 7;</code>
      */
@@ -6180,7 +6133,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 8;
     /**
      * <code>optional string text = 8;</code>
      */
@@ -6195,7 +6147,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 9;
     /**
      * <code>optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 9;</code>
      */
@@ -6205,7 +6156,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.TradingSessionIdEnum getTradingSessionId();
 
-    // optional .Common.Instrument instrument = 10;
     /**
      * <code>optional .Common.Instrument instrument = 10;</code>
      */
@@ -6219,7 +6169,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 11;
     /**
      * <code>optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 11;</code>
      */
@@ -6229,7 +6178,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SubscriptionRequestTypeEnum getSubscriptionRequestType();
 
-    // optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;
     /**
      * <code>optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;</code>
      */
@@ -6239,7 +6187,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.TradingSessionSubIdEnum getTradingSessionSubId();
 
-    // optional .SecuritiesReferenceData.ExpirationCycleEnum expiration_cycle = 13;
     /**
      * <code>optional .SecuritiesReferenceData.ExpirationCycleEnum expiration_cycle = 13;</code>
      */
@@ -6249,7 +6196,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.ExpirationCycleEnum getExpirationCycle();
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 14;
     /**
      * <code>repeated .Common.InstrmtLegGrp instrmt_leg_grp = 14;</code>
      */
@@ -6274,7 +6220,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.InstrmtLegGrpOrBuilder getInstrmtLegGrpOrBuilder(
         int index);
 
-    // optional .Common.InstrumentExtension instrument_extension = 15;
     /**
      * <code>optional .Common.InstrumentExtension instrument_extension = 15;</code>
      */
@@ -6288,7 +6233,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentExtensionOrBuilder getInstrumentExtensionOrBuilder();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 16;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 16;</code>
      */
@@ -6313,7 +6257,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.UndInstrmtGrpOrBuilder getUndInstrmtGrpOrBuilder(
         int index);
 
-    // optional string market_id = 17;
     /**
      * <code>optional string market_id = 17;</code>
      */
@@ -6328,7 +6271,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getMarketIdBytes();
 
-    // optional string market_segment_id = 18;
     /**
      * <code>optional string market_segment_id = 18;</code>
      */
@@ -6343,7 +6285,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getMarketSegmentIdBytes();
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;</code>
      */
@@ -6357,7 +6298,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // repeated .Common.Stipulations stipulations = 20;
     /**
      * <code>repeated .Common.Stipulations stipulations = 20;</code>
      */
@@ -6382,7 +6322,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.StipulationsOrBuilder getStipulationsOrBuilder(
         int index);
 
-    // optional .Common.YieldData yield_data = 21;
     /**
      * <code>optional .Common.YieldData yield_data = 21;</code>
      */
@@ -6400,8 +6339,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecurityDefinitionRequest}
    */
   public static final class SecurityDefinitionRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements SecurityDefinitionRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecurityDefinitionRequest)
+      SecurityDefinitionRequestOrBuilder {
     // Use SecurityDefinitionRequest.newBuilder() to construct.
     private SecurityDefinitionRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -6448,8 +6388,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 18: {
@@ -6463,8 +6404,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              securityReqId_ = input.readBytes();
+              securityReqId_ = bs;
               break;
             }
             case 40: {
@@ -6505,8 +6447,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 72: {
@@ -6596,13 +6539,15 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00004000;
-              marketId_ = input.readBytes();
+              marketId_ = bs;
               break;
             }
             case 146: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
-              marketSegmentId_ = input.readBytes();
+              marketSegmentId_ = bs;
               break;
             }
             case 154: {
@@ -6688,7 +6633,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional string currency = 1;
     public static final int CURRENCY_FIELD_NUMBER = 1;
     private java.lang.Object currency_;
     /**
@@ -6731,7 +6675,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional bytes encoded_text = 2;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -6747,7 +6690,6 @@ public final class SecuritiesReferenceData {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 3;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 3;
     private int encodedTextLen_;
     /**
@@ -6763,7 +6705,6 @@ public final class SecuritiesReferenceData {
       return encodedTextLen_;
     }
 
-    // optional string security_req_id = 4;
     public static final int SECURITY_REQ_ID_FIELD_NUMBER = 4;
     private java.lang.Object securityReqId_;
     /**
@@ -6806,7 +6747,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityRequestTypeEnum security_request_type = 5;
     public static final int SECURITY_REQUEST_TYPE_FIELD_NUMBER = 5;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestTypeEnum securityRequestType_;
     /**
@@ -6822,7 +6762,6 @@ public final class SecuritiesReferenceData {
       return securityRequestType_;
     }
 
-    // optional .Session.StandardHeader standard_header = 6;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 6;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -6844,7 +6783,6 @@ public final class SecuritiesReferenceData {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 7;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 7;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -6866,7 +6804,6 @@ public final class SecuritiesReferenceData {
       return standardTrailer_;
     }
 
-    // optional string text = 8;
     public static final int TEXT_FIELD_NUMBER = 8;
     private java.lang.Object text_;
     /**
@@ -6909,7 +6846,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 9;
     public static final int TRADING_SESSION_ID_FIELD_NUMBER = 9;
     private org.fixprotocol.components.SecuritiesReferenceData.TradingSessionIdEnum tradingSessionId_;
     /**
@@ -6925,7 +6861,6 @@ public final class SecuritiesReferenceData {
       return tradingSessionId_;
     }
 
-    // optional .Common.Instrument instrument = 10;
     public static final int INSTRUMENT_FIELD_NUMBER = 10;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -6947,7 +6882,6 @@ public final class SecuritiesReferenceData {
       return instrument_;
     }
 
-    // optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 11;
     public static final int SUBSCRIPTION_REQUEST_TYPE_FIELD_NUMBER = 11;
     private org.fixprotocol.components.SecuritiesReferenceData.SubscriptionRequestTypeEnum subscriptionRequestType_;
     /**
@@ -6963,7 +6897,6 @@ public final class SecuritiesReferenceData {
       return subscriptionRequestType_;
     }
 
-    // optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;
     public static final int TRADING_SESSION_SUB_ID_FIELD_NUMBER = 12;
     private org.fixprotocol.components.SecuritiesReferenceData.TradingSessionSubIdEnum tradingSessionSubId_;
     /**
@@ -6979,7 +6912,6 @@ public final class SecuritiesReferenceData {
       return tradingSessionSubId_;
     }
 
-    // optional .SecuritiesReferenceData.ExpirationCycleEnum expiration_cycle = 13;
     public static final int EXPIRATION_CYCLE_FIELD_NUMBER = 13;
     private org.fixprotocol.components.SecuritiesReferenceData.ExpirationCycleEnum expirationCycle_;
     /**
@@ -6995,7 +6927,6 @@ public final class SecuritiesReferenceData {
       return expirationCycle_;
     }
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 14;
     public static final int INSTRMT_LEG_GRP_FIELD_NUMBER = 14;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_;
     /**
@@ -7031,7 +6962,6 @@ public final class SecuritiesReferenceData {
       return instrmtLegGrp_.get(index);
     }
 
-    // optional .Common.InstrumentExtension instrument_extension = 15;
     public static final int INSTRUMENT_EXTENSION_FIELD_NUMBER = 15;
     private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_;
     /**
@@ -7053,7 +6983,6 @@ public final class SecuritiesReferenceData {
       return instrumentExtension_;
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 16;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 16;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -7089,7 +7018,6 @@ public final class SecuritiesReferenceData {
       return undInstrmtGrp_.get(index);
     }
 
-    // optional string market_id = 17;
     public static final int MARKET_ID_FIELD_NUMBER = 17;
     private java.lang.Object marketId_;
     /**
@@ -7132,7 +7060,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string market_segment_id = 18;
     public static final int MARKET_SEGMENT_ID_FIELD_NUMBER = 18;
     private java.lang.Object marketSegmentId_;
     /**
@@ -7175,7 +7102,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 19;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -7197,7 +7123,6 @@ public final class SecuritiesReferenceData {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // repeated .Common.Stipulations stipulations = 20;
     public static final int STIPULATIONS_FIELD_NUMBER = 20;
     private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_;
     /**
@@ -7233,7 +7158,6 @@ public final class SecuritiesReferenceData {
       return stipulations_.get(index);
     }
 
-    // optional .Common.YieldData yield_data = 21;
     public static final int YIELD_DATA_FIELD_NUMBER = 21;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -7281,7 +7205,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -7528,8 +7453,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecurityDefinitionRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecurityDefinitionRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecurityDefinitionRequest)
+        org.fixprotocol.components.SecuritiesReferenceData.SecurityDefinitionRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_descriptor;
@@ -7985,7 +7911,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional string currency = 1;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 1;</code>
@@ -7999,9 +7924,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8059,7 +7987,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bytes encoded_text = 2;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 2;</code>
@@ -8095,7 +8022,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 3;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 3;</code>
@@ -8128,7 +8054,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_req_id = 4;
       private java.lang.Object securityReqId_ = "";
       /**
        * <code>optional string security_req_id = 4;</code>
@@ -8142,9 +8067,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityReqId() {
         java.lang.Object ref = securityReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8202,7 +8130,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityRequestTypeEnum security_request_type = 5;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestTypeEnum securityRequestType_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestTypeEnum.SECURITY_REQUEST_TYPE_REQUEST_LIST_SECURITIES;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityRequestTypeEnum security_request_type = 5;</code>
@@ -8238,7 +8165,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 6;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -8347,7 +8273,7 @@ public final class SecuritiesReferenceData {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -8355,7 +8281,6 @@ public final class SecuritiesReferenceData {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 7;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -8464,7 +8389,7 @@ public final class SecuritiesReferenceData {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -8472,7 +8397,6 @@ public final class SecuritiesReferenceData {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 8;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 8;</code>
@@ -8486,9 +8410,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8546,7 +8473,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 9;
       private org.fixprotocol.components.SecuritiesReferenceData.TradingSessionIdEnum tradingSessionId_ = org.fixprotocol.components.SecuritiesReferenceData.TradingSessionIdEnum.TRADING_SESSION_ID_AFTER_HOURS;
       /**
        * <code>optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 9;</code>
@@ -8582,7 +8508,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 10;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -8691,7 +8616,7 @@ public final class SecuritiesReferenceData {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -8699,7 +8624,6 @@ public final class SecuritiesReferenceData {
         return instrumentBuilder_;
       }
 
-      // optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 11;
       private org.fixprotocol.components.SecuritiesReferenceData.SubscriptionRequestTypeEnum subscriptionRequestType_ = org.fixprotocol.components.SecuritiesReferenceData.SubscriptionRequestTypeEnum.SUBSCRIPTION_REQUEST_TYPE_DISABLE_PREVIOUS_SNAPSHOT;
       /**
        * <code>optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 11;</code>
@@ -8735,7 +8659,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;
       private org.fixprotocol.components.SecuritiesReferenceData.TradingSessionSubIdEnum tradingSessionSubId_ = org.fixprotocol.components.SecuritiesReferenceData.TradingSessionSubIdEnum.TRADING_SESSION_SUB_ID_CLOSING_OR_CLOSING_AUCTION;
       /**
        * <code>optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;</code>
@@ -8771,7 +8694,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.ExpirationCycleEnum expiration_cycle = 13;
       private org.fixprotocol.components.SecuritiesReferenceData.ExpirationCycleEnum expirationCycle_ = org.fixprotocol.components.SecuritiesReferenceData.ExpirationCycleEnum.EXPIRATION_CYCLE_EXPIRE_ON_TRADING_SESSION_CLOSE;
       /**
        * <code>optional .SecuritiesReferenceData.ExpirationCycleEnum expiration_cycle = 13;</code>
@@ -8807,7 +8729,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 14;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegGrpIsMutable() {
@@ -8949,7 +8870,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegGrp> values) {
         if (instrmtLegGrpBuilder_ == null) {
           ensureInstrmtLegGrpIsMutable();
-          super.addAll(values, instrmtLegGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegGrp_);
           onChanged();
         } else {
           instrmtLegGrpBuilder_.addAllMessages(values);
@@ -9047,7 +8969,6 @@ public final class SecuritiesReferenceData {
         return instrmtLegGrpBuilder_;
       }
 
-      // optional .Common.InstrumentExtension instrument_extension = 15;
       private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_ = org.fixprotocol.components.Common.InstrumentExtension.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder> instrumentExtensionBuilder_;
@@ -9156,7 +9077,7 @@ public final class SecuritiesReferenceData {
         if (instrumentExtensionBuilder_ == null) {
           instrumentExtensionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder>(
-                  instrumentExtension_,
+                  getInstrumentExtension(),
                   getParentForChildren(),
                   isClean());
           instrumentExtension_ = null;
@@ -9164,7 +9085,6 @@ public final class SecuritiesReferenceData {
         return instrumentExtensionBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 16;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -9306,7 +9226,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -9404,7 +9325,6 @@ public final class SecuritiesReferenceData {
         return undInstrmtGrpBuilder_;
       }
 
-      // optional string market_id = 17;
       private java.lang.Object marketId_ = "";
       /**
        * <code>optional string market_id = 17;</code>
@@ -9418,9 +9338,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getMarketId() {
         java.lang.Object ref = marketId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          marketId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            marketId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9478,7 +9401,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string market_segment_id = 18;
       private java.lang.Object marketSegmentId_ = "";
       /**
        * <code>optional string market_segment_id = 18;</code>
@@ -9492,9 +9414,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getMarketSegmentId() {
         java.lang.Object ref = marketSegmentId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          marketSegmentId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            marketSegmentId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9552,7 +9477,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -9661,7 +9585,7 @@ public final class SecuritiesReferenceData {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -9669,7 +9593,6 @@ public final class SecuritiesReferenceData {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // repeated .Common.Stipulations stipulations = 20;
       private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_ =
         java.util.Collections.emptyList();
       private void ensureStipulationsIsMutable() {
@@ -9811,7 +9734,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Stipulations> values) {
         if (stipulationsBuilder_ == null) {
           ensureStipulationsIsMutable();
-          super.addAll(values, stipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stipulations_);
           onChanged();
         } else {
           stipulationsBuilder_.addAllMessages(values);
@@ -9909,7 +9833,6 @@ public final class SecuritiesReferenceData {
         return stipulationsBuilder_;
       }
 
-      // optional .Common.YieldData yield_data = 21;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -10018,7 +9941,7 @@ public final class SecuritiesReferenceData {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -10037,10 +9960,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecurityDefinitionRequest)
   }
 
-  public interface SecurityDefinitionUpdateReportOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecurityDefinitionUpdateReportOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecurityDefinitionUpdateReport)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional sfixed32 clearing_business_date = 1;
     /**
      * <code>optional sfixed32 clearing_business_date = 1;</code>
      */
@@ -10050,7 +9973,6 @@ public final class SecuritiesReferenceData {
      */
     int getClearingBusinessDate();
 
-    // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 2 [packed = true];
     /**
      * <code>repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 2 [packed = true];</code>
      */
@@ -10064,7 +9986,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum getCorporateAction(int index);
 
-    // optional string currency = 3;
     /**
      * <code>optional string currency = 3;</code>
      */
@@ -10079,7 +10000,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional bytes encoded_text = 4;
     /**
      * <code>optional bytes encoded_text = 4;</code>
      */
@@ -10089,7 +10009,6 @@ public final class SecuritiesReferenceData {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 5;
     /**
      * <code>optional fixed32 encoded_text_len = 5;</code>
      */
@@ -10099,7 +10018,6 @@ public final class SecuritiesReferenceData {
      */
     int getEncodedTextLen();
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 6;
     /**
      * <code>repeated .Common.InstrmtLegGrp instrmt_leg_grp = 6;</code>
      */
@@ -10124,7 +10042,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.InstrmtLegGrpOrBuilder getInstrmtLegGrpOrBuilder(
         int index);
 
-    // optional .Common.Instrument instrument = 7;
     /**
      * <code>optional .Common.Instrument instrument = 7;</code>
      */
@@ -10138,7 +10055,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional sfixed64 security_report_id = 8;
     /**
      * <code>optional sfixed64 security_report_id = 8;</code>
      */
@@ -10148,7 +10064,6 @@ public final class SecuritiesReferenceData {
      */
     long getSecurityReportId();
 
-    // optional string security_req_id = 9;
     /**
      * <code>optional string security_req_id = 9;</code>
      */
@@ -10163,7 +10078,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityReqIdBytes();
 
-    // optional string security_response_id = 10;
     /**
      * <code>optional string security_response_id = 10;</code>
      */
@@ -10178,7 +10092,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityResponseIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 11;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 11;</code>
      */
@@ -10188,7 +10101,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityResponseTypeEnum getSecurityResponseType();
 
-    // optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 12;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 12;</code>
      */
@@ -10198,7 +10110,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityUpdateActionEnum getSecurityUpdateAction();
 
-    // optional .Session.StandardHeader standard_header = 13;
     /**
      * <code>optional .Session.StandardHeader standard_header = 13;</code>
      */
@@ -10212,7 +10123,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 14;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 14;</code>
      */
@@ -10226,7 +10136,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 15;
     /**
      * <code>optional string text = 15;</code>
      */
@@ -10241,7 +10150,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 16;
     /**
      * <code>optional .Common.ApplicationSequenceControl application_sequence_control = 16;</code>
      */
@@ -10255,7 +10163,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder getApplicationSequenceControlOrBuilder();
 
-    // optional .Common.InstrumentExtension instrument_extension = 17;
     /**
      * <code>optional .Common.InstrumentExtension instrument_extension = 17;</code>
      */
@@ -10269,7 +10176,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentExtensionOrBuilder getInstrumentExtensionOrBuilder();
 
-    // repeated .Common.MarketSegmentGrp market_segment_grp = 18;
     /**
      * <code>repeated .Common.MarketSegmentGrp market_segment_grp = 18;</code>
      */
@@ -10294,7 +10200,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.MarketSegmentGrpOrBuilder getMarketSegmentGrpOrBuilder(
         int index);
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;</code>
      */
@@ -10308,7 +10213,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // repeated .Common.Stipulations stipulations = 20;
     /**
      * <code>repeated .Common.Stipulations stipulations = 20;</code>
      */
@@ -10333,7 +10237,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.StipulationsOrBuilder getStipulationsOrBuilder(
         int index);
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 21;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 21;</code>
      */
@@ -10358,7 +10261,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.UndInstrmtGrpOrBuilder getUndInstrmtGrpOrBuilder(
         int index);
 
-    // optional .Common.YieldData yield_data = 22;
     /**
      * <code>optional .Common.YieldData yield_data = 22;</code>
      */
@@ -10372,7 +10274,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.YieldDataOrBuilder getYieldDataOrBuilder();
 
-    // optional sfixed64 transact_time = 23;
     /**
      * <code>optional sfixed64 transact_time = 23;</code>
      */
@@ -10386,8 +10287,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecurityDefinitionUpdateReport}
    */
   public static final class SecurityDefinitionUpdateReport extends
-      com.google.protobuf.GeneratedMessage
-      implements SecurityDefinitionUpdateReportOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecurityDefinitionUpdateReport)
+      SecurityDefinitionUpdateReportOrBuilder {
     // Use SecurityDefinitionUpdateReport.newBuilder() to construct.
     private SecurityDefinitionUpdateReport(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -10443,7 +10345,7 @@ public final class SecuritiesReferenceData {
               org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum value = org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(2, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                   corporateAction_ = new java.util.ArrayList<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum>();
                   mutable_bitField0_ |= 0x00000002;
@@ -10460,7 +10362,7 @@ public final class SecuritiesReferenceData {
                 org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum value = org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(2, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                     corporateAction_ = new java.util.ArrayList<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum>();
                     mutable_bitField0_ |= 0x00000002;
@@ -10472,8 +10374,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 34: {
@@ -10513,13 +10416,15 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000040;
-              securityReqId_ = input.readBytes();
+              securityReqId_ = bs;
               break;
             }
             case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
-              securityResponseId_ = input.readBytes();
+              securityResponseId_ = bs;
               break;
             }
             case 88: {
@@ -10571,8 +10476,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 122: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00001000;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 130: {
@@ -10711,7 +10617,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional sfixed32 clearing_business_date = 1;
     public static final int CLEARING_BUSINESS_DATE_FIELD_NUMBER = 1;
     private int clearingBusinessDate_;
     /**
@@ -10727,7 +10632,6 @@ public final class SecuritiesReferenceData {
       return clearingBusinessDate_;
     }
 
-    // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 2 [packed = true];
     public static final int CORPORATE_ACTION_FIELD_NUMBER = 2;
     private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> corporateAction_;
     /**
@@ -10750,7 +10654,6 @@ public final class SecuritiesReferenceData {
     }
     private int corporateActionMemoizedSerializedSize;
 
-    // optional string currency = 3;
     public static final int CURRENCY_FIELD_NUMBER = 3;
     private java.lang.Object currency_;
     /**
@@ -10793,7 +10696,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional bytes encoded_text = 4;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -10809,7 +10711,6 @@ public final class SecuritiesReferenceData {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 5;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 5;
     private int encodedTextLen_;
     /**
@@ -10825,7 +10726,6 @@ public final class SecuritiesReferenceData {
       return encodedTextLen_;
     }
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 6;
     public static final int INSTRMT_LEG_GRP_FIELD_NUMBER = 6;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_;
     /**
@@ -10861,7 +10761,6 @@ public final class SecuritiesReferenceData {
       return instrmtLegGrp_.get(index);
     }
 
-    // optional .Common.Instrument instrument = 7;
     public static final int INSTRUMENT_FIELD_NUMBER = 7;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -10883,7 +10782,6 @@ public final class SecuritiesReferenceData {
       return instrument_;
     }
 
-    // optional sfixed64 security_report_id = 8;
     public static final int SECURITY_REPORT_ID_FIELD_NUMBER = 8;
     private long securityReportId_;
     /**
@@ -10899,7 +10797,6 @@ public final class SecuritiesReferenceData {
       return securityReportId_;
     }
 
-    // optional string security_req_id = 9;
     public static final int SECURITY_REQ_ID_FIELD_NUMBER = 9;
     private java.lang.Object securityReqId_;
     /**
@@ -10942,7 +10839,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string security_response_id = 10;
     public static final int SECURITY_RESPONSE_ID_FIELD_NUMBER = 10;
     private java.lang.Object securityResponseId_;
     /**
@@ -10985,7 +10881,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 11;
     public static final int SECURITY_RESPONSE_TYPE_FIELD_NUMBER = 11;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityResponseTypeEnum securityResponseType_;
     /**
@@ -11001,7 +10896,6 @@ public final class SecuritiesReferenceData {
       return securityResponseType_;
     }
 
-    // optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 12;
     public static final int SECURITY_UPDATE_ACTION_FIELD_NUMBER = 12;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityUpdateActionEnum securityUpdateAction_;
     /**
@@ -11017,7 +10911,6 @@ public final class SecuritiesReferenceData {
       return securityUpdateAction_;
     }
 
-    // optional .Session.StandardHeader standard_header = 13;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 13;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -11039,7 +10932,6 @@ public final class SecuritiesReferenceData {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 14;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 14;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -11061,7 +10953,6 @@ public final class SecuritiesReferenceData {
       return standardTrailer_;
     }
 
-    // optional string text = 15;
     public static final int TEXT_FIELD_NUMBER = 15;
     private java.lang.Object text_;
     /**
@@ -11104,7 +10995,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 16;
     public static final int APPLICATION_SEQUENCE_CONTROL_FIELD_NUMBER = 16;
     private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_;
     /**
@@ -11126,7 +11016,6 @@ public final class SecuritiesReferenceData {
       return applicationSequenceControl_;
     }
 
-    // optional .Common.InstrumentExtension instrument_extension = 17;
     public static final int INSTRUMENT_EXTENSION_FIELD_NUMBER = 17;
     private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_;
     /**
@@ -11148,7 +11037,6 @@ public final class SecuritiesReferenceData {
       return instrumentExtension_;
     }
 
-    // repeated .Common.MarketSegmentGrp market_segment_grp = 18;
     public static final int MARKET_SEGMENT_GRP_FIELD_NUMBER = 18;
     private java.util.List<org.fixprotocol.components.Common.MarketSegmentGrp> marketSegmentGrp_;
     /**
@@ -11184,7 +11072,6 @@ public final class SecuritiesReferenceData {
       return marketSegmentGrp_.get(index);
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 19;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -11206,7 +11093,6 @@ public final class SecuritiesReferenceData {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // repeated .Common.Stipulations stipulations = 20;
     public static final int STIPULATIONS_FIELD_NUMBER = 20;
     private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_;
     /**
@@ -11242,7 +11128,6 @@ public final class SecuritiesReferenceData {
       return stipulations_.get(index);
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 21;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 21;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -11278,7 +11163,6 @@ public final class SecuritiesReferenceData {
       return undInstrmtGrp_.get(index);
     }
 
-    // optional .Common.YieldData yield_data = 22;
     public static final int YIELD_DATA_FIELD_NUMBER = 22;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -11300,7 +11184,6 @@ public final class SecuritiesReferenceData {
       return yieldData_;
     }
 
-    // optional sfixed64 transact_time = 23;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 23;
     private long transactTime_;
     /**
@@ -11344,7 +11227,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -11617,8 +11501,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecurityDefinitionUpdateReport}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecurityDefinitionUpdateReportOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecurityDefinitionUpdateReport)
+        org.fixprotocol.components.SecuritiesReferenceData.SecurityDefinitionUpdateReportOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_descriptor;
@@ -12140,7 +12025,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional sfixed32 clearing_business_date = 1;
       private int clearingBusinessDate_ ;
       /**
        * <code>optional sfixed32 clearing_business_date = 1;</code>
@@ -12173,7 +12057,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 2 [packed = true];
       private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> corporateAction_ =
         java.util.Collections.emptyList();
       private void ensureCorporateActionIsMutable() {
@@ -12231,7 +12114,8 @@ public final class SecuritiesReferenceData {
       public Builder addAllCorporateAction(
           java.lang.Iterable<? extends org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> values) {
         ensureCorporateActionIsMutable();
-        super.addAll(values, corporateAction_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, corporateAction_);
         onChanged();
         return this;
       }
@@ -12245,7 +12129,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string currency = 3;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 3;</code>
@@ -12259,9 +12142,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -12319,7 +12205,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bytes encoded_text = 4;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 4;</code>
@@ -12355,7 +12240,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 5;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 5;</code>
@@ -12388,7 +12272,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 6;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegGrpIsMutable() {
@@ -12530,7 +12413,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegGrp> values) {
         if (instrmtLegGrpBuilder_ == null) {
           ensureInstrmtLegGrpIsMutable();
-          super.addAll(values, instrmtLegGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegGrp_);
           onChanged();
         } else {
           instrmtLegGrpBuilder_.addAllMessages(values);
@@ -12628,7 +12512,6 @@ public final class SecuritiesReferenceData {
         return instrmtLegGrpBuilder_;
       }
 
-      // optional .Common.Instrument instrument = 7;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -12737,7 +12620,7 @@ public final class SecuritiesReferenceData {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -12745,7 +12628,6 @@ public final class SecuritiesReferenceData {
         return instrumentBuilder_;
       }
 
-      // optional sfixed64 security_report_id = 8;
       private long securityReportId_ ;
       /**
        * <code>optional sfixed64 security_report_id = 8;</code>
@@ -12778,7 +12660,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_req_id = 9;
       private java.lang.Object securityReqId_ = "";
       /**
        * <code>optional string security_req_id = 9;</code>
@@ -12792,9 +12673,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityReqId() {
         java.lang.Object ref = securityReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -12852,7 +12736,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_response_id = 10;
       private java.lang.Object securityResponseId_ = "";
       /**
        * <code>optional string security_response_id = 10;</code>
@@ -12866,9 +12749,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityResponseId() {
         java.lang.Object ref = securityResponseId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityResponseId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityResponseId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -12926,7 +12812,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 11;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityResponseTypeEnum securityResponseType_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityResponseTypeEnum.SECURITY_RESPONSE_TYPE_ACCEPT_AS_IS;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityResponseTypeEnum security_response_type = 11;</code>
@@ -12962,7 +12847,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 12;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityUpdateActionEnum securityUpdateAction_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityUpdateActionEnum.SECURITY_UPDATE_ACTION_ADD;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 12;</code>
@@ -12998,7 +12882,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 13;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -13107,7 +12990,7 @@ public final class SecuritiesReferenceData {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -13115,7 +12998,6 @@ public final class SecuritiesReferenceData {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 14;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -13224,7 +13106,7 @@ public final class SecuritiesReferenceData {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -13232,7 +13114,6 @@ public final class SecuritiesReferenceData {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 15;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 15;</code>
@@ -13246,9 +13127,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -13306,7 +13190,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.ApplicationSequenceControl application_sequence_control = 16;
       private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_ = org.fixprotocol.components.Common.ApplicationSequenceControl.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder> applicationSequenceControlBuilder_;
@@ -13415,7 +13298,7 @@ public final class SecuritiesReferenceData {
         if (applicationSequenceControlBuilder_ == null) {
           applicationSequenceControlBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder>(
-                  applicationSequenceControl_,
+                  getApplicationSequenceControl(),
                   getParentForChildren(),
                   isClean());
           applicationSequenceControl_ = null;
@@ -13423,7 +13306,6 @@ public final class SecuritiesReferenceData {
         return applicationSequenceControlBuilder_;
       }
 
-      // optional .Common.InstrumentExtension instrument_extension = 17;
       private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_ = org.fixprotocol.components.Common.InstrumentExtension.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder> instrumentExtensionBuilder_;
@@ -13532,7 +13414,7 @@ public final class SecuritiesReferenceData {
         if (instrumentExtensionBuilder_ == null) {
           instrumentExtensionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder>(
-                  instrumentExtension_,
+                  getInstrumentExtension(),
                   getParentForChildren(),
                   isClean());
           instrumentExtension_ = null;
@@ -13540,7 +13422,6 @@ public final class SecuritiesReferenceData {
         return instrumentExtensionBuilder_;
       }
 
-      // repeated .Common.MarketSegmentGrp market_segment_grp = 18;
       private java.util.List<org.fixprotocol.components.Common.MarketSegmentGrp> marketSegmentGrp_ =
         java.util.Collections.emptyList();
       private void ensureMarketSegmentGrpIsMutable() {
@@ -13682,7 +13563,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.MarketSegmentGrp> values) {
         if (marketSegmentGrpBuilder_ == null) {
           ensureMarketSegmentGrpIsMutable();
-          super.addAll(values, marketSegmentGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, marketSegmentGrp_);
           onChanged();
         } else {
           marketSegmentGrpBuilder_.addAllMessages(values);
@@ -13780,7 +13662,6 @@ public final class SecuritiesReferenceData {
         return marketSegmentGrpBuilder_;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 19;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -13889,7 +13770,7 @@ public final class SecuritiesReferenceData {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -13897,7 +13778,6 @@ public final class SecuritiesReferenceData {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // repeated .Common.Stipulations stipulations = 20;
       private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_ =
         java.util.Collections.emptyList();
       private void ensureStipulationsIsMutable() {
@@ -14039,7 +13919,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Stipulations> values) {
         if (stipulationsBuilder_ == null) {
           ensureStipulationsIsMutable();
-          super.addAll(values, stipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stipulations_);
           onChanged();
         } else {
           stipulationsBuilder_.addAllMessages(values);
@@ -14137,7 +14018,6 @@ public final class SecuritiesReferenceData {
         return stipulationsBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 21;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -14279,7 +14159,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -14377,7 +14258,6 @@ public final class SecuritiesReferenceData {
         return undInstrmtGrpBuilder_;
       }
 
-      // optional .Common.YieldData yield_data = 22;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -14486,7 +14366,7 @@ public final class SecuritiesReferenceData {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -14494,7 +14374,6 @@ public final class SecuritiesReferenceData {
         return yieldDataBuilder_;
       }
 
-      // optional sfixed64 transact_time = 23;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 23;</code>
@@ -14538,10 +14417,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecurityDefinitionUpdateReport)
   }
 
-  public interface SecListGrpOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecListGrpOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecListGrp)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string currency = 1;
     /**
      * <code>optional string currency = 1;</code>
      */
@@ -14556,7 +14435,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional bytes encoded_text = 2;
     /**
      * <code>optional bytes encoded_text = 2;</code>
      */
@@ -14566,7 +14444,6 @@ public final class SecuritiesReferenceData {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 3;
     /**
      * <code>optional fixed32 encoded_text_len = 3;</code>
      */
@@ -14576,7 +14453,6 @@ public final class SecuritiesReferenceData {
      */
     int getEncodedTextLen();
 
-    // optional .Common.FinancingDetails financing_details = 4;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 4;</code>
      */
@@ -14590,7 +14466,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // repeated .Common.InstrmtLegSecListGrp instrmt_leg_sec_list_grp = 5;
     /**
      * <code>repeated .Common.InstrmtLegSecListGrp instrmt_leg_sec_list_grp = 5;</code>
      */
@@ -14615,7 +14490,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.InstrmtLegSecListGrpOrBuilder getInstrmtLegSecListGrpOrBuilder(
         int index);
 
-    // optional .Common.Instrument instrument = 6;
     /**
      * <code>optional .Common.Instrument instrument = 6;</code>
      */
@@ -14629,7 +14503,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .Common.InstrumentExtension instrument_extension = 7;
     /**
      * <code>optional .Common.InstrumentExtension instrument_extension = 7;</code>
      */
@@ -14643,7 +14516,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentExtensionOrBuilder getInstrumentExtensionOrBuilder();
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 8;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 8;</code>
      */
@@ -14657,7 +14529,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // repeated .Common.Stipulations stipulations = 9;
     /**
      * <code>repeated .Common.Stipulations stipulations = 9;</code>
      */
@@ -14682,7 +14553,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.StipulationsOrBuilder getStipulationsOrBuilder(
         int index);
 
-    // optional string text = 10;
     /**
      * <code>optional string text = 10;</code>
      */
@@ -14697,7 +14567,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 11;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 11;</code>
      */
@@ -14722,7 +14591,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.UndInstrmtGrpOrBuilder getUndInstrmtGrpOrBuilder(
         int index);
 
-    // optional .Common.YieldData yield_data = 12;
     /**
      * <code>optional .Common.YieldData yield_data = 12;</code>
      */
@@ -14736,7 +14604,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.YieldDataOrBuilder getYieldDataOrBuilder();
 
-    // optional .Common.SecurityTradingRules security_trading_rules = 13;
     /**
      * <code>optional .Common.SecurityTradingRules security_trading_rules = 13;</code>
      */
@@ -14750,7 +14617,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.SecurityTradingRulesOrBuilder getSecurityTradingRulesOrBuilder();
 
-    // repeated .Common.StrikeRules strike_rules = 14;
     /**
      * <code>repeated .Common.StrikeRules strike_rules = 14;</code>
      */
@@ -14775,7 +14641,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.StrikeRulesOrBuilder getStrikeRulesOrBuilder(
         int index);
 
-    // optional sfixed64 rel_sym_transact_time = 15;
     /**
      * <code>optional sfixed64 rel_sym_transact_time = 15;</code>
      */
@@ -14789,8 +14654,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecListGrp}
    */
   public static final class SecListGrp extends
-      com.google.protobuf.GeneratedMessage
-      implements SecListGrpOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecListGrp)
+      SecListGrpOrBuilder {
     // Use SecListGrp.newBuilder() to construct.
     private SecListGrp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -14837,8 +14703,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 18: {
@@ -14920,8 +14787,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 90: {
@@ -15023,7 +14891,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional string currency = 1;
     public static final int CURRENCY_FIELD_NUMBER = 1;
     private java.lang.Object currency_;
     /**
@@ -15066,7 +14933,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional bytes encoded_text = 2;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -15082,7 +14948,6 @@ public final class SecuritiesReferenceData {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 3;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 3;
     private int encodedTextLen_;
     /**
@@ -15098,7 +14963,6 @@ public final class SecuritiesReferenceData {
       return encodedTextLen_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 4;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 4;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -15120,7 +14984,6 @@ public final class SecuritiesReferenceData {
       return financingDetails_;
     }
 
-    // repeated .Common.InstrmtLegSecListGrp instrmt_leg_sec_list_grp = 5;
     public static final int INSTRMT_LEG_SEC_LIST_GRP_FIELD_NUMBER = 5;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegSecListGrp> instrmtLegSecListGrp_;
     /**
@@ -15156,7 +15019,6 @@ public final class SecuritiesReferenceData {
       return instrmtLegSecListGrp_.get(index);
     }
 
-    // optional .Common.Instrument instrument = 6;
     public static final int INSTRUMENT_FIELD_NUMBER = 6;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -15178,7 +15040,6 @@ public final class SecuritiesReferenceData {
       return instrument_;
     }
 
-    // optional .Common.InstrumentExtension instrument_extension = 7;
     public static final int INSTRUMENT_EXTENSION_FIELD_NUMBER = 7;
     private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_;
     /**
@@ -15200,7 +15061,6 @@ public final class SecuritiesReferenceData {
       return instrumentExtension_;
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 8;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 8;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -15222,7 +15082,6 @@ public final class SecuritiesReferenceData {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // repeated .Common.Stipulations stipulations = 9;
     public static final int STIPULATIONS_FIELD_NUMBER = 9;
     private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_;
     /**
@@ -15258,7 +15117,6 @@ public final class SecuritiesReferenceData {
       return stipulations_.get(index);
     }
 
-    // optional string text = 10;
     public static final int TEXT_FIELD_NUMBER = 10;
     private java.lang.Object text_;
     /**
@@ -15301,7 +15159,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 11;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 11;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -15337,7 +15194,6 @@ public final class SecuritiesReferenceData {
       return undInstrmtGrp_.get(index);
     }
 
-    // optional .Common.YieldData yield_data = 12;
     public static final int YIELD_DATA_FIELD_NUMBER = 12;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -15359,7 +15215,6 @@ public final class SecuritiesReferenceData {
       return yieldData_;
     }
 
-    // optional .Common.SecurityTradingRules security_trading_rules = 13;
     public static final int SECURITY_TRADING_RULES_FIELD_NUMBER = 13;
     private org.fixprotocol.components.Common.SecurityTradingRules securityTradingRules_;
     /**
@@ -15381,7 +15236,6 @@ public final class SecuritiesReferenceData {
       return securityTradingRules_;
     }
 
-    // repeated .Common.StrikeRules strike_rules = 14;
     public static final int STRIKE_RULES_FIELD_NUMBER = 14;
     private java.util.List<org.fixprotocol.components.Common.StrikeRules> strikeRules_;
     /**
@@ -15417,7 +15271,6 @@ public final class SecuritiesReferenceData {
       return strikeRules_.get(index);
     }
 
-    // optional sfixed64 rel_sym_transact_time = 15;
     public static final int REL_SYM_TRANSACT_TIME_FIELD_NUMBER = 15;
     private long relSymTransactTime_;
     /**
@@ -15453,7 +15306,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -15658,8 +15512,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecListGrp}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecListGrpOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecListGrp)
+        org.fixprotocol.components.SecuritiesReferenceData.SecListGrpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecListGrp_descriptor;
@@ -16088,7 +15943,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional string currency = 1;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 1;</code>
@@ -16102,9 +15956,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -16162,7 +16019,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bytes encoded_text = 2;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 2;</code>
@@ -16198,7 +16054,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 3;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 3;</code>
@@ -16231,7 +16086,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.FinancingDetails financing_details = 4;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -16340,7 +16194,7 @@ public final class SecuritiesReferenceData {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -16348,7 +16202,6 @@ public final class SecuritiesReferenceData {
         return financingDetailsBuilder_;
       }
 
-      // repeated .Common.InstrmtLegSecListGrp instrmt_leg_sec_list_grp = 5;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegSecListGrp> instrmtLegSecListGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegSecListGrpIsMutable() {
@@ -16490,7 +16343,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegSecListGrp> values) {
         if (instrmtLegSecListGrpBuilder_ == null) {
           ensureInstrmtLegSecListGrpIsMutable();
-          super.addAll(values, instrmtLegSecListGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegSecListGrp_);
           onChanged();
         } else {
           instrmtLegSecListGrpBuilder_.addAllMessages(values);
@@ -16588,7 +16442,6 @@ public final class SecuritiesReferenceData {
         return instrmtLegSecListGrpBuilder_;
       }
 
-      // optional .Common.Instrument instrument = 6;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -16697,7 +16550,7 @@ public final class SecuritiesReferenceData {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -16705,7 +16558,6 @@ public final class SecuritiesReferenceData {
         return instrumentBuilder_;
       }
 
-      // optional .Common.InstrumentExtension instrument_extension = 7;
       private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_ = org.fixprotocol.components.Common.InstrumentExtension.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder> instrumentExtensionBuilder_;
@@ -16814,7 +16666,7 @@ public final class SecuritiesReferenceData {
         if (instrumentExtensionBuilder_ == null) {
           instrumentExtensionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder>(
-                  instrumentExtension_,
+                  getInstrumentExtension(),
                   getParentForChildren(),
                   isClean());
           instrumentExtension_ = null;
@@ -16822,7 +16674,6 @@ public final class SecuritiesReferenceData {
         return instrumentExtensionBuilder_;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 8;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -16931,7 +16782,7 @@ public final class SecuritiesReferenceData {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -16939,7 +16790,6 @@ public final class SecuritiesReferenceData {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // repeated .Common.Stipulations stipulations = 9;
       private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_ =
         java.util.Collections.emptyList();
       private void ensureStipulationsIsMutable() {
@@ -17081,7 +16931,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Stipulations> values) {
         if (stipulationsBuilder_ == null) {
           ensureStipulationsIsMutable();
-          super.addAll(values, stipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stipulations_);
           onChanged();
         } else {
           stipulationsBuilder_.addAllMessages(values);
@@ -17179,7 +17030,6 @@ public final class SecuritiesReferenceData {
         return stipulationsBuilder_;
       }
 
-      // optional string text = 10;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 10;</code>
@@ -17193,9 +17043,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -17253,7 +17106,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 11;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -17395,7 +17247,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -17493,7 +17346,6 @@ public final class SecuritiesReferenceData {
         return undInstrmtGrpBuilder_;
       }
 
-      // optional .Common.YieldData yield_data = 12;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -17602,7 +17454,7 @@ public final class SecuritiesReferenceData {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -17610,7 +17462,6 @@ public final class SecuritiesReferenceData {
         return yieldDataBuilder_;
       }
 
-      // optional .Common.SecurityTradingRules security_trading_rules = 13;
       private org.fixprotocol.components.Common.SecurityTradingRules securityTradingRules_ = org.fixprotocol.components.Common.SecurityTradingRules.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SecurityTradingRules, org.fixprotocol.components.Common.SecurityTradingRules.Builder, org.fixprotocol.components.Common.SecurityTradingRulesOrBuilder> securityTradingRulesBuilder_;
@@ -17719,7 +17570,7 @@ public final class SecuritiesReferenceData {
         if (securityTradingRulesBuilder_ == null) {
           securityTradingRulesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SecurityTradingRules, org.fixprotocol.components.Common.SecurityTradingRules.Builder, org.fixprotocol.components.Common.SecurityTradingRulesOrBuilder>(
-                  securityTradingRules_,
+                  getSecurityTradingRules(),
                   getParentForChildren(),
                   isClean());
           securityTradingRules_ = null;
@@ -17727,7 +17578,6 @@ public final class SecuritiesReferenceData {
         return securityTradingRulesBuilder_;
       }
 
-      // repeated .Common.StrikeRules strike_rules = 14;
       private java.util.List<org.fixprotocol.components.Common.StrikeRules> strikeRules_ =
         java.util.Collections.emptyList();
       private void ensureStrikeRulesIsMutable() {
@@ -17869,7 +17719,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.StrikeRules> values) {
         if (strikeRulesBuilder_ == null) {
           ensureStrikeRulesIsMutable();
-          super.addAll(values, strikeRules_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, strikeRules_);
           onChanged();
         } else {
           strikeRulesBuilder_.addAllMessages(values);
@@ -17967,7 +17818,6 @@ public final class SecuritiesReferenceData {
         return strikeRulesBuilder_;
       }
 
-      // optional sfixed64 rel_sym_transact_time = 15;
       private long relSymTransactTime_ ;
       /**
        * <code>optional sfixed64 rel_sym_transact_time = 15;</code>
@@ -18011,10 +17861,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecListGrp)
   }
 
-  public interface SecurityListTypeUnionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecurityListTypeUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecurityListTypeUnion)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 1;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 1;</code>
      */
@@ -18024,7 +17874,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum getSecurityListType();
 
-    // optional sfixed64 security_list_type_sfixed64 = 2;
     /**
      * <code>optional sfixed64 security_list_type_sfixed64 = 2;</code>
      */
@@ -18038,8 +17887,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecurityListTypeUnion}
    */
   public static final class SecurityListTypeUnion extends
-      com.google.protobuf.GeneratedMessage
-      implements SecurityListTypeUnionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecurityListTypeUnion)
+      SecurityListTypeUnionOrBuilder {
     // Use SecurityListTypeUnion.newBuilder() to construct.
     private SecurityListTypeUnion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -18141,7 +17991,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 1;
     public static final int SECURITY_LIST_TYPE_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum securityListType_;
     /**
@@ -18157,7 +18006,6 @@ public final class SecuritiesReferenceData {
       return securityListType_;
     }
 
-    // optional sfixed64 security_list_type_sfixed64 = 2;
     public static final int SECURITY_LIST_TYPE_SFIXED64_FIELD_NUMBER = 2;
     private long securityListTypeSfixed64_;
     /**
@@ -18180,7 +18028,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -18294,8 +18143,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecurityListTypeUnion}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeUnionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecurityListTypeUnion)
+        org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeUnionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecurityListTypeUnion_descriptor;
@@ -18417,7 +18267,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 1;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum securityListType_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum.SECURITY_LIST_TYPE_INDUSTRY_CLASSIFICATION;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 1;</code>
@@ -18453,7 +18302,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional sfixed64 security_list_type_sfixed64 = 2;
       private long securityListTypeSfixed64_ ;
       /**
        * <code>optional sfixed64 security_list_type_sfixed64 = 2;</code>
@@ -18497,10 +18345,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecurityListTypeUnion)
   }
 
-  public interface SecurityListTypeSourceUnionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecurityListTypeSourceUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecurityListTypeSourceUnion)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 1;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 1;</code>
      */
@@ -18510,7 +18358,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum getSecurityListTypeSource();
 
-    // optional sfixed64 security_list_type_source_sfixed64 = 2;
     /**
      * <code>optional sfixed64 security_list_type_source_sfixed64 = 2;</code>
      */
@@ -18524,8 +18371,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecurityListTypeSourceUnion}
    */
   public static final class SecurityListTypeSourceUnion extends
-      com.google.protobuf.GeneratedMessage
-      implements SecurityListTypeSourceUnionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecurityListTypeSourceUnion)
+      SecurityListTypeSourceUnionOrBuilder {
     // Use SecurityListTypeSourceUnion.newBuilder() to construct.
     private SecurityListTypeSourceUnion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -18627,7 +18475,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 1;
     public static final int SECURITY_LIST_TYPE_SOURCE_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum securityListTypeSource_;
     /**
@@ -18643,7 +18490,6 @@ public final class SecuritiesReferenceData {
       return securityListTypeSource_;
     }
 
-    // optional sfixed64 security_list_type_source_sfixed64 = 2;
     public static final int SECURITY_LIST_TYPE_SOURCE_SFIXED64_FIELD_NUMBER = 2;
     private long securityListTypeSourceSfixed64_;
     /**
@@ -18666,7 +18512,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -18780,8 +18627,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecurityListTypeSourceUnion}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceUnionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecurityListTypeSourceUnion)
+        org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceUnionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_descriptor;
@@ -18903,7 +18751,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 1;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum securityListTypeSource_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum.SECURITY_LIST_TYPE_SOURCE_GICS;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 1;</code>
@@ -18939,7 +18786,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional sfixed64 security_list_type_source_sfixed64 = 2;
       private long securityListTypeSourceSfixed64_ ;
       /**
        * <code>optional sfixed64 security_list_type_source_sfixed64 = 2;</code>
@@ -18983,10 +18829,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecurityListTypeSourceUnion)
   }
 
-  public interface SecurityListOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecurityListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecurityList)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string security_req_id = 1;
     /**
      * <code>optional string security_req_id = 1;</code>
      */
@@ -19001,7 +18847,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityReqIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 2;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 2;</code>
      */
@@ -19011,7 +18856,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestResultEnum getSecurityRequestResult();
 
-    // optional string security_response_id = 3;
     /**
      * <code>optional string security_response_id = 3;</code>
      */
@@ -19026,7 +18870,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityResponseIdBytes();
 
-    // optional .Session.StandardHeader standard_header = 4;
     /**
      * <code>optional .Session.StandardHeader standard_header = 4;</code>
      */
@@ -19040,7 +18883,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 5;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 5;</code>
      */
@@ -19054,7 +18896,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional sfixed64 tot_no_related_sym = 6;
     /**
      * <code>optional sfixed64 tot_no_related_sym = 6;</code>
      */
@@ -19064,7 +18905,6 @@ public final class SecuritiesReferenceData {
      */
     long getTotNoRelatedSym();
 
-    // optional sfixed32 clearing_business_date = 7;
     /**
      * <code>optional sfixed32 clearing_business_date = 7;</code>
      */
@@ -19074,7 +18914,6 @@ public final class SecuritiesReferenceData {
      */
     int getClearingBusinessDate();
 
-    // optional bool last_fragment = 8;
     /**
      * <code>optional bool last_fragment = 8;</code>
      */
@@ -19084,7 +18923,6 @@ public final class SecuritiesReferenceData {
      */
     boolean getLastFragment();
 
-    // repeated .SecuritiesReferenceData.SecListGrp sec_list_grp = 9;
     /**
      * <code>repeated .SecuritiesReferenceData.SecListGrp sec_list_grp = 9;</code>
      */
@@ -19109,7 +18947,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.SecuritiesReferenceData.SecListGrpOrBuilder getSecListGrpOrBuilder(
         int index);
 
-    // optional sfixed64 security_report_id = 10;
     /**
      * <code>optional sfixed64 security_report_id = 10;</code>
      */
@@ -19119,7 +18956,6 @@ public final class SecuritiesReferenceData {
      */
     long getSecurityReportId();
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 11;
     /**
      * <code>optional .Common.ApplicationSequenceControl application_sequence_control = 11;</code>
      */
@@ -19133,7 +18969,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder getApplicationSequenceControlOrBuilder();
 
-    // optional string market_id = 12;
     /**
      * <code>optional string market_id = 12;</code>
      */
@@ -19148,7 +18983,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getMarketIdBytes();
 
-    // optional string market_segment_id = 13;
     /**
      * <code>optional string market_segment_id = 13;</code>
      */
@@ -19163,7 +18997,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getMarketSegmentIdBytes();
 
-    // optional bytes encoded_security_list_desc = 14;
     /**
      * <code>optional bytes encoded_security_list_desc = 14;</code>
      */
@@ -19173,7 +19006,6 @@ public final class SecuritiesReferenceData {
      */
     com.google.protobuf.ByteString getEncodedSecurityListDesc();
 
-    // optional fixed32 encoded_security_list_desc_len = 15;
     /**
      * <code>optional fixed32 encoded_security_list_desc_len = 15;</code>
      */
@@ -19183,7 +19015,6 @@ public final class SecuritiesReferenceData {
      */
     int getEncodedSecurityListDescLen();
 
-    // optional string security_list_desc = 16;
     /**
      * <code>optional string security_list_desc = 16;</code>
      */
@@ -19198,7 +19029,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityListDescBytes();
 
-    // optional string security_list_id = 17;
     /**
      * <code>optional string security_list_id = 17;</code>
      */
@@ -19213,7 +19043,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityListIdBytes();
 
-    // optional string security_list_ref_id = 18;
     /**
      * <code>optional string security_list_ref_id = 18;</code>
      */
@@ -19228,7 +19057,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityListRefIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 19;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 19;</code>
      */
@@ -19238,7 +19066,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum getSecurityListType();
 
-    // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 20;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 20;</code>
      */
@@ -19248,7 +19075,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum getSecurityListTypeSource();
 
-    // optional sfixed64 transact_time = 21;
     /**
      * <code>optional sfixed64 transact_time = 21;</code>
      */
@@ -19262,8 +19088,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecurityList}
    */
   public static final class SecurityList extends
-      com.google.protobuf.GeneratedMessage
-      implements SecurityListOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecurityList)
+      SecurityListOrBuilder {
     // Use SecurityList.newBuilder() to construct.
     private SecurityList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -19310,8 +19137,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              securityReqId_ = input.readBytes();
+              securityReqId_ = bs;
               break;
             }
             case 16: {
@@ -19326,8 +19154,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              securityResponseId_ = input.readBytes();
+              securityResponseId_ = bs;
               break;
             }
             case 34: {
@@ -19398,13 +19227,15 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000400;
-              marketId_ = input.readBytes();
+              marketId_ = bs;
               break;
             }
             case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000800;
-              marketSegmentId_ = input.readBytes();
+              marketSegmentId_ = bs;
               break;
             }
             case 114: {
@@ -19418,18 +19249,21 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00004000;
-              securityListDesc_ = input.readBytes();
+              securityListDesc_ = bs;
               break;
             }
             case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
-              securityListId_ = input.readBytes();
+              securityListId_ = bs;
               break;
             }
             case 146: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
-              securityListRefId_ = input.readBytes();
+              securityListRefId_ = bs;
               break;
             }
             case 152: {
@@ -19502,7 +19336,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional string security_req_id = 1;
     public static final int SECURITY_REQ_ID_FIELD_NUMBER = 1;
     private java.lang.Object securityReqId_;
     /**
@@ -19545,7 +19378,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 2;
     public static final int SECURITY_REQUEST_RESULT_FIELD_NUMBER = 2;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestResultEnum securityRequestResult_;
     /**
@@ -19561,7 +19393,6 @@ public final class SecuritiesReferenceData {
       return securityRequestResult_;
     }
 
-    // optional string security_response_id = 3;
     public static final int SECURITY_RESPONSE_ID_FIELD_NUMBER = 3;
     private java.lang.Object securityResponseId_;
     /**
@@ -19604,7 +19435,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .Session.StandardHeader standard_header = 4;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 4;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -19626,7 +19456,6 @@ public final class SecuritiesReferenceData {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 5;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 5;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -19648,7 +19477,6 @@ public final class SecuritiesReferenceData {
       return standardTrailer_;
     }
 
-    // optional sfixed64 tot_no_related_sym = 6;
     public static final int TOT_NO_RELATED_SYM_FIELD_NUMBER = 6;
     private long totNoRelatedSym_;
     /**
@@ -19664,7 +19492,6 @@ public final class SecuritiesReferenceData {
       return totNoRelatedSym_;
     }
 
-    // optional sfixed32 clearing_business_date = 7;
     public static final int CLEARING_BUSINESS_DATE_FIELD_NUMBER = 7;
     private int clearingBusinessDate_;
     /**
@@ -19680,7 +19507,6 @@ public final class SecuritiesReferenceData {
       return clearingBusinessDate_;
     }
 
-    // optional bool last_fragment = 8;
     public static final int LAST_FRAGMENT_FIELD_NUMBER = 8;
     private boolean lastFragment_;
     /**
@@ -19696,7 +19522,6 @@ public final class SecuritiesReferenceData {
       return lastFragment_;
     }
 
-    // repeated .SecuritiesReferenceData.SecListGrp sec_list_grp = 9;
     public static final int SEC_LIST_GRP_FIELD_NUMBER = 9;
     private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.SecListGrp> secListGrp_;
     /**
@@ -19732,7 +19557,6 @@ public final class SecuritiesReferenceData {
       return secListGrp_.get(index);
     }
 
-    // optional sfixed64 security_report_id = 10;
     public static final int SECURITY_REPORT_ID_FIELD_NUMBER = 10;
     private long securityReportId_;
     /**
@@ -19748,7 +19572,6 @@ public final class SecuritiesReferenceData {
       return securityReportId_;
     }
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 11;
     public static final int APPLICATION_SEQUENCE_CONTROL_FIELD_NUMBER = 11;
     private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_;
     /**
@@ -19770,7 +19593,6 @@ public final class SecuritiesReferenceData {
       return applicationSequenceControl_;
     }
 
-    // optional string market_id = 12;
     public static final int MARKET_ID_FIELD_NUMBER = 12;
     private java.lang.Object marketId_;
     /**
@@ -19813,7 +19635,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string market_segment_id = 13;
     public static final int MARKET_SEGMENT_ID_FIELD_NUMBER = 13;
     private java.lang.Object marketSegmentId_;
     /**
@@ -19856,7 +19677,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional bytes encoded_security_list_desc = 14;
     public static final int ENCODED_SECURITY_LIST_DESC_FIELD_NUMBER = 14;
     private com.google.protobuf.ByteString encodedSecurityListDesc_;
     /**
@@ -19872,7 +19692,6 @@ public final class SecuritiesReferenceData {
       return encodedSecurityListDesc_;
     }
 
-    // optional fixed32 encoded_security_list_desc_len = 15;
     public static final int ENCODED_SECURITY_LIST_DESC_LEN_FIELD_NUMBER = 15;
     private int encodedSecurityListDescLen_;
     /**
@@ -19888,7 +19707,6 @@ public final class SecuritiesReferenceData {
       return encodedSecurityListDescLen_;
     }
 
-    // optional string security_list_desc = 16;
     public static final int SECURITY_LIST_DESC_FIELD_NUMBER = 16;
     private java.lang.Object securityListDesc_;
     /**
@@ -19931,7 +19749,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string security_list_id = 17;
     public static final int SECURITY_LIST_ID_FIELD_NUMBER = 17;
     private java.lang.Object securityListId_;
     /**
@@ -19974,7 +19791,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string security_list_ref_id = 18;
     public static final int SECURITY_LIST_REF_ID_FIELD_NUMBER = 18;
     private java.lang.Object securityListRefId_;
     /**
@@ -20017,7 +19833,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 19;
     public static final int SECURITY_LIST_TYPE_FIELD_NUMBER = 19;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum securityListType_;
     /**
@@ -20033,7 +19848,6 @@ public final class SecuritiesReferenceData {
       return securityListType_;
     }
 
-    // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 20;
     public static final int SECURITY_LIST_TYPE_SOURCE_FIELD_NUMBER = 20;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum securityListTypeSource_;
     /**
@@ -20049,7 +19863,6 @@ public final class SecuritiesReferenceData {
       return securityListTypeSource_;
     }
 
-    // optional sfixed64 transact_time = 21;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 21;
     private long transactTime_;
     /**
@@ -20091,7 +19904,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -20338,8 +20152,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecurityList}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecurityListOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecurityList)
+        org.fixprotocol.components.SecuritiesReferenceData.SecurityListOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecurityList_descriptor;
@@ -20706,7 +20521,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional string security_req_id = 1;
       private java.lang.Object securityReqId_ = "";
       /**
        * <code>optional string security_req_id = 1;</code>
@@ -20720,9 +20534,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityReqId() {
         java.lang.Object ref = securityReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -20780,7 +20597,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 2;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestResultEnum securityRequestResult_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestResultEnum.SECURITY_REQUEST_RESULT_INSTRUMENT_DATA_TEMPORARILY_UNAVAILABLE;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 2;</code>
@@ -20816,7 +20632,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_response_id = 3;
       private java.lang.Object securityResponseId_ = "";
       /**
        * <code>optional string security_response_id = 3;</code>
@@ -20830,9 +20645,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityResponseId() {
         java.lang.Object ref = securityResponseId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityResponseId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityResponseId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -20890,7 +20708,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 4;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -20999,7 +20816,7 @@ public final class SecuritiesReferenceData {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -21007,7 +20824,6 @@ public final class SecuritiesReferenceData {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 5;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -21116,7 +20932,7 @@ public final class SecuritiesReferenceData {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -21124,7 +20940,6 @@ public final class SecuritiesReferenceData {
         return standardTrailerBuilder_;
       }
 
-      // optional sfixed64 tot_no_related_sym = 6;
       private long totNoRelatedSym_ ;
       /**
        * <code>optional sfixed64 tot_no_related_sym = 6;</code>
@@ -21157,7 +20972,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional sfixed32 clearing_business_date = 7;
       private int clearingBusinessDate_ ;
       /**
        * <code>optional sfixed32 clearing_business_date = 7;</code>
@@ -21190,7 +21004,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bool last_fragment = 8;
       private boolean lastFragment_ ;
       /**
        * <code>optional bool last_fragment = 8;</code>
@@ -21223,7 +21036,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .SecuritiesReferenceData.SecListGrp sec_list_grp = 9;
       private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.SecListGrp> secListGrp_ =
         java.util.Collections.emptyList();
       private void ensureSecListGrpIsMutable() {
@@ -21365,7 +21177,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.SecuritiesReferenceData.SecListGrp> values) {
         if (secListGrpBuilder_ == null) {
           ensureSecListGrpIsMutable();
-          super.addAll(values, secListGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, secListGrp_);
           onChanged();
         } else {
           secListGrpBuilder_.addAllMessages(values);
@@ -21463,7 +21276,6 @@ public final class SecuritiesReferenceData {
         return secListGrpBuilder_;
       }
 
-      // optional sfixed64 security_report_id = 10;
       private long securityReportId_ ;
       /**
        * <code>optional sfixed64 security_report_id = 10;</code>
@@ -21496,7 +21308,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.ApplicationSequenceControl application_sequence_control = 11;
       private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_ = org.fixprotocol.components.Common.ApplicationSequenceControl.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder> applicationSequenceControlBuilder_;
@@ -21605,7 +21416,7 @@ public final class SecuritiesReferenceData {
         if (applicationSequenceControlBuilder_ == null) {
           applicationSequenceControlBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder>(
-                  applicationSequenceControl_,
+                  getApplicationSequenceControl(),
                   getParentForChildren(),
                   isClean());
           applicationSequenceControl_ = null;
@@ -21613,7 +21424,6 @@ public final class SecuritiesReferenceData {
         return applicationSequenceControlBuilder_;
       }
 
-      // optional string market_id = 12;
       private java.lang.Object marketId_ = "";
       /**
        * <code>optional string market_id = 12;</code>
@@ -21627,9 +21437,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getMarketId() {
         java.lang.Object ref = marketId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          marketId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            marketId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -21687,7 +21500,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string market_segment_id = 13;
       private java.lang.Object marketSegmentId_ = "";
       /**
        * <code>optional string market_segment_id = 13;</code>
@@ -21701,9 +21513,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getMarketSegmentId() {
         java.lang.Object ref = marketSegmentId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          marketSegmentId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            marketSegmentId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -21761,7 +21576,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bytes encoded_security_list_desc = 14;
       private com.google.protobuf.ByteString encodedSecurityListDesc_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_security_list_desc = 14;</code>
@@ -21797,7 +21611,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional fixed32 encoded_security_list_desc_len = 15;
       private int encodedSecurityListDescLen_ ;
       /**
        * <code>optional fixed32 encoded_security_list_desc_len = 15;</code>
@@ -21830,7 +21643,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_list_desc = 16;
       private java.lang.Object securityListDesc_ = "";
       /**
        * <code>optional string security_list_desc = 16;</code>
@@ -21844,9 +21656,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityListDesc() {
         java.lang.Object ref = securityListDesc_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityListDesc_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityListDesc_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -21904,7 +21719,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_list_id = 17;
       private java.lang.Object securityListId_ = "";
       /**
        * <code>optional string security_list_id = 17;</code>
@@ -21918,9 +21732,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityListId() {
         java.lang.Object ref = securityListId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityListId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityListId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -21978,7 +21795,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_list_ref_id = 18;
       private java.lang.Object securityListRefId_ = "";
       /**
        * <code>optional string security_list_ref_id = 18;</code>
@@ -21992,9 +21808,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityListRefId() {
         java.lang.Object ref = securityListRefId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityListRefId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityListRefId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -22052,7 +21871,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 19;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum securityListType_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum.SECURITY_LIST_TYPE_INDUSTRY_CLASSIFICATION;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 19;</code>
@@ -22088,7 +21906,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 20;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum securityListTypeSource_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum.SECURITY_LIST_TYPE_SOURCE_GICS;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 20;</code>
@@ -22124,7 +21941,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional sfixed64 transact_time = 21;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 21;</code>
@@ -22168,10 +21984,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecurityList)
   }
 
-  public interface SecurityListRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecurityListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecurityListRequest)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string currency = 1;
     /**
      * <code>optional string currency = 1;</code>
      */
@@ -22186,7 +22002,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional bytes encoded_text = 2;
     /**
      * <code>optional bytes encoded_text = 2;</code>
      */
@@ -22196,7 +22011,6 @@ public final class SecuritiesReferenceData {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 3;
     /**
      * <code>optional fixed32 encoded_text_len = 3;</code>
      */
@@ -22206,7 +22020,6 @@ public final class SecuritiesReferenceData {
      */
     int getEncodedTextLen();
 
-    // optional .Common.Instrument instrument = 4;
     /**
      * <code>optional .Common.Instrument instrument = 4;</code>
      */
@@ -22220,7 +22033,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .SecuritiesReferenceData.SecurityListRequestTypeEnum security_list_request_type = 5;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListRequestTypeEnum security_list_request_type = 5;</code>
      */
@@ -22230,7 +22042,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityListRequestTypeEnum getSecurityListRequestType();
 
-    // optional string security_req_id = 6;
     /**
      * <code>optional string security_req_id = 6;</code>
      */
@@ -22245,7 +22056,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityReqIdBytes();
 
-    // optional .Session.StandardHeader standard_header = 7;
     /**
      * <code>optional .Session.StandardHeader standard_header = 7;</code>
      */
@@ -22259,7 +22069,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 8;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 8;</code>
      */
@@ -22273,7 +22082,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 9;
     /**
      * <code>optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 9;</code>
      */
@@ -22283,7 +22091,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SubscriptionRequestTypeEnum getSubscriptionRequestType();
 
-    // optional string text = 10;
     /**
      * <code>optional string text = 10;</code>
      */
@@ -22298,7 +22105,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 11;
     /**
      * <code>optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 11;</code>
      */
@@ -22308,7 +22114,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.TradingSessionIdEnum getTradingSessionId();
 
-    // optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;
     /**
      * <code>optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;</code>
      */
@@ -22318,7 +22123,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.TradingSessionSubIdEnum getTradingSessionSubId();
 
-    // optional .Common.FinancingDetails financing_details = 13;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 13;</code>
      */
@@ -22332,7 +22136,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 14;
     /**
      * <code>repeated .Common.InstrmtLegGrp instrmt_leg_grp = 14;</code>
      */
@@ -22357,7 +22160,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.InstrmtLegGrpOrBuilder getInstrmtLegGrpOrBuilder(
         int index);
 
-    // optional .Common.InstrumentExtension instrument_extension = 15;
     /**
      * <code>optional .Common.InstrumentExtension instrument_extension = 15;</code>
      */
@@ -22371,7 +22173,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentExtensionOrBuilder getInstrumentExtensionOrBuilder();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 16;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 16;</code>
      */
@@ -22396,7 +22197,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.UndInstrmtGrpOrBuilder getUndInstrmtGrpOrBuilder(
         int index);
 
-    // optional string market_id = 17;
     /**
      * <code>optional string market_id = 17;</code>
      */
@@ -22411,7 +22211,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getMarketIdBytes();
 
-    // optional string market_segment_id = 18;
     /**
      * <code>optional string market_segment_id = 18;</code>
      */
@@ -22426,7 +22225,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getMarketSegmentIdBytes();
 
-    // optional string security_list_id = 19;
     /**
      * <code>optional string security_list_id = 19;</code>
      */
@@ -22441,7 +22239,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityListIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 20;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 20;</code>
      */
@@ -22451,7 +22248,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum getSecurityListType();
 
-    // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 21;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 21;</code>
      */
@@ -22465,8 +22261,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecurityListRequest}
    */
   public static final class SecurityListRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements SecurityListRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecurityListRequest)
+      SecurityListRequestOrBuilder {
     // Use SecurityListRequest.newBuilder() to construct.
     private SecurityListRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -22513,8 +22310,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 18: {
@@ -22552,8 +22350,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              securityReqId_ = input.readBytes();
+              securityReqId_ = bs;
               break;
             }
             case 58: {
@@ -22594,8 +22393,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000200;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 88: {
@@ -22663,18 +22463,21 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00004000;
-              marketId_ = input.readBytes();
+              marketId_ = bs;
               break;
             }
             case 146: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
-              marketSegmentId_ = input.readBytes();
+              marketSegmentId_ = bs;
               break;
             }
             case 154: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
-              securityListId_ = input.readBytes();
+              securityListId_ = bs;
               break;
             }
             case 160: {
@@ -22745,7 +22548,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional string currency = 1;
     public static final int CURRENCY_FIELD_NUMBER = 1;
     private java.lang.Object currency_;
     /**
@@ -22788,7 +22590,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional bytes encoded_text = 2;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -22804,7 +22605,6 @@ public final class SecuritiesReferenceData {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 3;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 3;
     private int encodedTextLen_;
     /**
@@ -22820,7 +22620,6 @@ public final class SecuritiesReferenceData {
       return encodedTextLen_;
     }
 
-    // optional .Common.Instrument instrument = 4;
     public static final int INSTRUMENT_FIELD_NUMBER = 4;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -22842,7 +22641,6 @@ public final class SecuritiesReferenceData {
       return instrument_;
     }
 
-    // optional .SecuritiesReferenceData.SecurityListRequestTypeEnum security_list_request_type = 5;
     public static final int SECURITY_LIST_REQUEST_TYPE_FIELD_NUMBER = 5;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListRequestTypeEnum securityListRequestType_;
     /**
@@ -22858,7 +22656,6 @@ public final class SecuritiesReferenceData {
       return securityListRequestType_;
     }
 
-    // optional string security_req_id = 6;
     public static final int SECURITY_REQ_ID_FIELD_NUMBER = 6;
     private java.lang.Object securityReqId_;
     /**
@@ -22901,7 +22698,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .Session.StandardHeader standard_header = 7;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 7;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -22923,7 +22719,6 @@ public final class SecuritiesReferenceData {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 8;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 8;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -22945,7 +22740,6 @@ public final class SecuritiesReferenceData {
       return standardTrailer_;
     }
 
-    // optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 9;
     public static final int SUBSCRIPTION_REQUEST_TYPE_FIELD_NUMBER = 9;
     private org.fixprotocol.components.SecuritiesReferenceData.SubscriptionRequestTypeEnum subscriptionRequestType_;
     /**
@@ -22961,7 +22755,6 @@ public final class SecuritiesReferenceData {
       return subscriptionRequestType_;
     }
 
-    // optional string text = 10;
     public static final int TEXT_FIELD_NUMBER = 10;
     private java.lang.Object text_;
     /**
@@ -23004,7 +22797,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 11;
     public static final int TRADING_SESSION_ID_FIELD_NUMBER = 11;
     private org.fixprotocol.components.SecuritiesReferenceData.TradingSessionIdEnum tradingSessionId_;
     /**
@@ -23020,7 +22812,6 @@ public final class SecuritiesReferenceData {
       return tradingSessionId_;
     }
 
-    // optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;
     public static final int TRADING_SESSION_SUB_ID_FIELD_NUMBER = 12;
     private org.fixprotocol.components.SecuritiesReferenceData.TradingSessionSubIdEnum tradingSessionSubId_;
     /**
@@ -23036,7 +22827,6 @@ public final class SecuritiesReferenceData {
       return tradingSessionSubId_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 13;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 13;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -23058,7 +22848,6 @@ public final class SecuritiesReferenceData {
       return financingDetails_;
     }
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 14;
     public static final int INSTRMT_LEG_GRP_FIELD_NUMBER = 14;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_;
     /**
@@ -23094,7 +22883,6 @@ public final class SecuritiesReferenceData {
       return instrmtLegGrp_.get(index);
     }
 
-    // optional .Common.InstrumentExtension instrument_extension = 15;
     public static final int INSTRUMENT_EXTENSION_FIELD_NUMBER = 15;
     private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_;
     /**
@@ -23116,7 +22904,6 @@ public final class SecuritiesReferenceData {
       return instrumentExtension_;
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 16;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 16;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -23152,7 +22939,6 @@ public final class SecuritiesReferenceData {
       return undInstrmtGrp_.get(index);
     }
 
-    // optional string market_id = 17;
     public static final int MARKET_ID_FIELD_NUMBER = 17;
     private java.lang.Object marketId_;
     /**
@@ -23195,7 +22981,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string market_segment_id = 18;
     public static final int MARKET_SEGMENT_ID_FIELD_NUMBER = 18;
     private java.lang.Object marketSegmentId_;
     /**
@@ -23238,7 +23023,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string security_list_id = 19;
     public static final int SECURITY_LIST_ID_FIELD_NUMBER = 19;
     private java.lang.Object securityListId_;
     /**
@@ -23281,7 +23065,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 20;
     public static final int SECURITY_LIST_TYPE_FIELD_NUMBER = 20;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum securityListType_;
     /**
@@ -23297,7 +23080,6 @@ public final class SecuritiesReferenceData {
       return securityListType_;
     }
 
-    // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 21;
     public static final int SECURITY_LIST_TYPE_SOURCE_FIELD_NUMBER = 21;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum securityListTypeSource_;
     /**
@@ -23339,7 +23121,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -23586,8 +23369,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecurityListRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecurityListRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecurityListRequest)
+        org.fixprotocol.components.SecuritiesReferenceData.SecurityListRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecurityListRequest_descriptor;
@@ -24003,7 +23787,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional string currency = 1;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 1;</code>
@@ -24017,9 +23800,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -24077,7 +23863,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bytes encoded_text = 2;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 2;</code>
@@ -24113,7 +23898,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 3;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 3;</code>
@@ -24146,7 +23930,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 4;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -24255,7 +24038,7 @@ public final class SecuritiesReferenceData {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -24263,7 +24046,6 @@ public final class SecuritiesReferenceData {
         return instrumentBuilder_;
       }
 
-      // optional .SecuritiesReferenceData.SecurityListRequestTypeEnum security_list_request_type = 5;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListRequestTypeEnum securityListRequestType_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListRequestTypeEnum.SECURITY_LIST_REQUEST_TYPE_ALL_SECURITIES;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListRequestTypeEnum security_list_request_type = 5;</code>
@@ -24299,7 +24081,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_req_id = 6;
       private java.lang.Object securityReqId_ = "";
       /**
        * <code>optional string security_req_id = 6;</code>
@@ -24313,9 +24094,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityReqId() {
         java.lang.Object ref = securityReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -24373,7 +24157,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 7;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -24482,7 +24265,7 @@ public final class SecuritiesReferenceData {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -24490,7 +24273,6 @@ public final class SecuritiesReferenceData {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 8;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -24599,7 +24381,7 @@ public final class SecuritiesReferenceData {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -24607,7 +24389,6 @@ public final class SecuritiesReferenceData {
         return standardTrailerBuilder_;
       }
 
-      // optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 9;
       private org.fixprotocol.components.SecuritiesReferenceData.SubscriptionRequestTypeEnum subscriptionRequestType_ = org.fixprotocol.components.SecuritiesReferenceData.SubscriptionRequestTypeEnum.SUBSCRIPTION_REQUEST_TYPE_DISABLE_PREVIOUS_SNAPSHOT;
       /**
        * <code>optional .SecuritiesReferenceData.SubscriptionRequestTypeEnum subscription_request_type = 9;</code>
@@ -24643,7 +24424,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string text = 10;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 10;</code>
@@ -24657,9 +24437,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -24717,7 +24500,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 11;
       private org.fixprotocol.components.SecuritiesReferenceData.TradingSessionIdEnum tradingSessionId_ = org.fixprotocol.components.SecuritiesReferenceData.TradingSessionIdEnum.TRADING_SESSION_ID_AFTER_HOURS;
       /**
        * <code>optional .SecuritiesReferenceData.TradingSessionIdEnum trading_session_id = 11;</code>
@@ -24753,7 +24535,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;
       private org.fixprotocol.components.SecuritiesReferenceData.TradingSessionSubIdEnum tradingSessionSubId_ = org.fixprotocol.components.SecuritiesReferenceData.TradingSessionSubIdEnum.TRADING_SESSION_SUB_ID_CLOSING_OR_CLOSING_AUCTION;
       /**
        * <code>optional .SecuritiesReferenceData.TradingSessionSubIdEnum trading_session_sub_id = 12;</code>
@@ -24789,7 +24570,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.FinancingDetails financing_details = 13;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -24898,7 +24678,7 @@ public final class SecuritiesReferenceData {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -24906,7 +24686,6 @@ public final class SecuritiesReferenceData {
         return financingDetailsBuilder_;
       }
 
-      // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 14;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegGrpIsMutable() {
@@ -25048,7 +24827,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegGrp> values) {
         if (instrmtLegGrpBuilder_ == null) {
           ensureInstrmtLegGrpIsMutable();
-          super.addAll(values, instrmtLegGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegGrp_);
           onChanged();
         } else {
           instrmtLegGrpBuilder_.addAllMessages(values);
@@ -25146,7 +24926,6 @@ public final class SecuritiesReferenceData {
         return instrmtLegGrpBuilder_;
       }
 
-      // optional .Common.InstrumentExtension instrument_extension = 15;
       private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_ = org.fixprotocol.components.Common.InstrumentExtension.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder> instrumentExtensionBuilder_;
@@ -25255,7 +25034,7 @@ public final class SecuritiesReferenceData {
         if (instrumentExtensionBuilder_ == null) {
           instrumentExtensionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder>(
-                  instrumentExtension_,
+                  getInstrumentExtension(),
                   getParentForChildren(),
                   isClean());
           instrumentExtension_ = null;
@@ -25263,7 +25042,6 @@ public final class SecuritiesReferenceData {
         return instrumentExtensionBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 16;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -25405,7 +25183,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -25503,7 +25282,6 @@ public final class SecuritiesReferenceData {
         return undInstrmtGrpBuilder_;
       }
 
-      // optional string market_id = 17;
       private java.lang.Object marketId_ = "";
       /**
        * <code>optional string market_id = 17;</code>
@@ -25517,9 +25295,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getMarketId() {
         java.lang.Object ref = marketId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          marketId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            marketId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -25577,7 +25358,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string market_segment_id = 18;
       private java.lang.Object marketSegmentId_ = "";
       /**
        * <code>optional string market_segment_id = 18;</code>
@@ -25591,9 +25371,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getMarketSegmentId() {
         java.lang.Object ref = marketSegmentId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          marketSegmentId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            marketSegmentId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -25651,7 +25434,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_list_id = 19;
       private java.lang.Object securityListId_ = "";
       /**
        * <code>optional string security_list_id = 19;</code>
@@ -25665,9 +25447,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityListId() {
         java.lang.Object ref = securityListId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityListId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityListId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -25725,7 +25510,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 20;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum securityListType_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum.SECURITY_LIST_TYPE_INDUSTRY_CLASSIFICATION;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 20;</code>
@@ -25761,7 +25545,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 21;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum securityListTypeSource_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum.SECURITY_LIST_TYPE_SOURCE_GICS;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 21;</code>
@@ -25808,10 +25591,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecurityListRequest)
   }
 
-  public interface SecLstUpdRelSymsLegGrpOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecLstUpdRelSymsLegGrpOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecLstUpdRelSymsLegGrp)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .Common.InstrumentLeg instrument_leg = 1;
     /**
      * <code>optional .Common.InstrumentLeg instrument_leg = 1;</code>
      */
@@ -25825,7 +25608,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentLegOrBuilder getInstrumentLegOrBuilder();
 
-    // optional .Common.LegBenchmarkCurveData leg_benchmark_curve_data = 2;
     /**
      * <code>optional .Common.LegBenchmarkCurveData leg_benchmark_curve_data = 2;</code>
      */
@@ -25839,7 +25621,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.LegBenchmarkCurveDataOrBuilder getLegBenchmarkCurveDataOrBuilder();
 
-    // optional string leg_settl_type = 3;
     /**
      * <code>optional string leg_settl_type = 3;</code>
      */
@@ -25854,7 +25635,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getLegSettlTypeBytes();
 
-    // repeated .Common.LegStipulations leg_stipulations = 4;
     /**
      * <code>repeated .Common.LegStipulations leg_stipulations = 4;</code>
      */
@@ -25879,7 +25659,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.LegStipulationsOrBuilder getLegStipulationsOrBuilder(
         int index);
 
-    // optional .SecuritiesReferenceData.LegSwapTypeEnum leg_swap_type = 5;
     /**
      * <code>optional .SecuritiesReferenceData.LegSwapTypeEnum leg_swap_type = 5;</code>
      */
@@ -25893,8 +25672,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecLstUpdRelSymsLegGrp}
    */
   public static final class SecLstUpdRelSymsLegGrp extends
-      com.google.protobuf.GeneratedMessage
-      implements SecLstUpdRelSymsLegGrpOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecLstUpdRelSymsLegGrp)
+      SecLstUpdRelSymsLegGrpOrBuilder {
     // Use SecLstUpdRelSymsLegGrp.newBuilder() to construct.
     private SecLstUpdRelSymsLegGrp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -25967,8 +25747,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              legSettlType_ = input.readBytes();
+              legSettlType_ = bs;
               break;
             }
             case 34: {
@@ -26033,7 +25814,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional .Common.InstrumentLeg instrument_leg = 1;
     public static final int INSTRUMENT_LEG_FIELD_NUMBER = 1;
     private org.fixprotocol.components.Common.InstrumentLeg instrumentLeg_;
     /**
@@ -26055,7 +25835,6 @@ public final class SecuritiesReferenceData {
       return instrumentLeg_;
     }
 
-    // optional .Common.LegBenchmarkCurveData leg_benchmark_curve_data = 2;
     public static final int LEG_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 2;
     private org.fixprotocol.components.Common.LegBenchmarkCurveData legBenchmarkCurveData_;
     /**
@@ -26077,7 +25856,6 @@ public final class SecuritiesReferenceData {
       return legBenchmarkCurveData_;
     }
 
-    // optional string leg_settl_type = 3;
     public static final int LEG_SETTL_TYPE_FIELD_NUMBER = 3;
     private java.lang.Object legSettlType_;
     /**
@@ -26120,7 +25898,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // repeated .Common.LegStipulations leg_stipulations = 4;
     public static final int LEG_STIPULATIONS_FIELD_NUMBER = 4;
     private java.util.List<org.fixprotocol.components.Common.LegStipulations> legStipulations_;
     /**
@@ -26156,7 +25933,6 @@ public final class SecuritiesReferenceData {
       return legStipulations_.get(index);
     }
 
-    // optional .SecuritiesReferenceData.LegSwapTypeEnum leg_swap_type = 5;
     public static final int LEG_SWAP_TYPE_FIELD_NUMBER = 5;
     private org.fixprotocol.components.SecuritiesReferenceData.LegSwapTypeEnum legSwapType_;
     /**
@@ -26182,7 +25958,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -26317,8 +26094,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecLstUpdRelSymsLegGrp}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymsLegGrpOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecLstUpdRelSymsLegGrp)
+        org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymsLegGrpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_descriptor;
@@ -26520,7 +26298,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional .Common.InstrumentLeg instrument_leg = 1;
       private org.fixprotocol.components.Common.InstrumentLeg instrumentLeg_ = org.fixprotocol.components.Common.InstrumentLeg.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.InstrumentLeg, org.fixprotocol.components.Common.InstrumentLeg.Builder, org.fixprotocol.components.Common.InstrumentLegOrBuilder> instrumentLegBuilder_;
@@ -26629,7 +26406,7 @@ public final class SecuritiesReferenceData {
         if (instrumentLegBuilder_ == null) {
           instrumentLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.InstrumentLeg, org.fixprotocol.components.Common.InstrumentLeg.Builder, org.fixprotocol.components.Common.InstrumentLegOrBuilder>(
-                  instrumentLeg_,
+                  getInstrumentLeg(),
                   getParentForChildren(),
                   isClean());
           instrumentLeg_ = null;
@@ -26637,7 +26414,6 @@ public final class SecuritiesReferenceData {
         return instrumentLegBuilder_;
       }
 
-      // optional .Common.LegBenchmarkCurveData leg_benchmark_curve_data = 2;
       private org.fixprotocol.components.Common.LegBenchmarkCurveData legBenchmarkCurveData_ = org.fixprotocol.components.Common.LegBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.LegBenchmarkCurveData, org.fixprotocol.components.Common.LegBenchmarkCurveData.Builder, org.fixprotocol.components.Common.LegBenchmarkCurveDataOrBuilder> legBenchmarkCurveDataBuilder_;
@@ -26746,7 +26522,7 @@ public final class SecuritiesReferenceData {
         if (legBenchmarkCurveDataBuilder_ == null) {
           legBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.LegBenchmarkCurveData, org.fixprotocol.components.Common.LegBenchmarkCurveData.Builder, org.fixprotocol.components.Common.LegBenchmarkCurveDataOrBuilder>(
-                  legBenchmarkCurveData_,
+                  getLegBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           legBenchmarkCurveData_ = null;
@@ -26754,7 +26530,6 @@ public final class SecuritiesReferenceData {
         return legBenchmarkCurveDataBuilder_;
       }
 
-      // optional string leg_settl_type = 3;
       private java.lang.Object legSettlType_ = "";
       /**
        * <code>optional string leg_settl_type = 3;</code>
@@ -26768,9 +26543,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getLegSettlType() {
         java.lang.Object ref = legSettlType_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          legSettlType_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            legSettlType_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -26828,7 +26606,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .Common.LegStipulations leg_stipulations = 4;
       private java.util.List<org.fixprotocol.components.Common.LegStipulations> legStipulations_ =
         java.util.Collections.emptyList();
       private void ensureLegStipulationsIsMutable() {
@@ -26970,7 +26747,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.LegStipulations> values) {
         if (legStipulationsBuilder_ == null) {
           ensureLegStipulationsIsMutable();
-          super.addAll(values, legStipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, legStipulations_);
           onChanged();
         } else {
           legStipulationsBuilder_.addAllMessages(values);
@@ -27068,7 +26846,6 @@ public final class SecuritiesReferenceData {
         return legStipulationsBuilder_;
       }
 
-      // optional .SecuritiesReferenceData.LegSwapTypeEnum leg_swap_type = 5;
       private org.fixprotocol.components.SecuritiesReferenceData.LegSwapTypeEnum legSwapType_ = org.fixprotocol.components.SecuritiesReferenceData.LegSwapTypeEnum.LEG_SWAP_TYPE_MODIFIED_DURATION;
       /**
        * <code>optional .SecuritiesReferenceData.LegSwapTypeEnum leg_swap_type = 5;</code>
@@ -27115,10 +26892,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecLstUpdRelSymsLegGrp)
   }
 
-  public interface SecLstUpdRelSymGrpOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecLstUpdRelSymGrpOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecLstUpdRelSymGrp)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string currency = 1;
     /**
      * <code>optional string currency = 1;</code>
      */
@@ -27133,7 +26910,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional bytes encoded_text = 2;
     /**
      * <code>optional bytes encoded_text = 2;</code>
      */
@@ -27143,7 +26919,6 @@ public final class SecuritiesReferenceData {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 3;
     /**
      * <code>optional fixed32 encoded_text_len = 3;</code>
      */
@@ -27153,7 +26928,6 @@ public final class SecuritiesReferenceData {
      */
     int getEncodedTextLen();
 
-    // optional .Common.FinancingDetails financing_details = 4;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 4;</code>
      */
@@ -27167,7 +26941,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // optional .Common.Instrument instrument = 5;
     /**
      * <code>optional .Common.Instrument instrument = 5;</code>
      */
@@ -27181,7 +26954,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .Common.InstrumentExtension instrument_extension = 6;
     /**
      * <code>optional .Common.InstrumentExtension instrument_extension = 6;</code>
      */
@@ -27195,7 +26967,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.InstrumentExtensionOrBuilder getInstrumentExtensionOrBuilder();
 
-    // repeated .SecuritiesReferenceData.SecLstUpdRelSymsLegGrp sec_lst_upd_rel_syms_leg_grp = 7;
     /**
      * <code>repeated .SecuritiesReferenceData.SecLstUpdRelSymsLegGrp sec_lst_upd_rel_syms_leg_grp = 7;</code>
      */
@@ -27220,7 +26991,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymsLegGrpOrBuilder getSecLstUpdRelSymsLegGrpOrBuilder(
         int index);
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 8;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 8;</code>
      */
@@ -27234,7 +27004,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // repeated .Common.Stipulations stipulations = 9;
     /**
      * <code>repeated .Common.Stipulations stipulations = 9;</code>
      */
@@ -27259,7 +27028,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.StipulationsOrBuilder getStipulationsOrBuilder(
         int index);
 
-    // optional string text = 10;
     /**
      * <code>optional string text = 10;</code>
      */
@@ -27274,7 +27042,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .Common.YieldData yield_data = 11;
     /**
      * <code>optional .Common.YieldData yield_data = 11;</code>
      */
@@ -27288,7 +27055,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.YieldDataOrBuilder getYieldDataOrBuilder();
 
-    // optional string list_update_action = 12;
     /**
      * <code>optional string list_update_action = 12;</code>
      */
@@ -27303,7 +27069,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getListUpdateActionBytes();
 
-    // optional .Common.SecurityTradingRules security_trading_rules = 13;
     /**
      * <code>optional .Common.SecurityTradingRules security_trading_rules = 13;</code>
      */
@@ -27317,7 +27082,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.SecurityTradingRulesOrBuilder getSecurityTradingRulesOrBuilder();
 
-    // repeated .Common.StrikeRules strike_rules = 14;
     /**
      * <code>repeated .Common.StrikeRules strike_rules = 14;</code>
      */
@@ -27342,7 +27106,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.StrikeRulesOrBuilder getStrikeRulesOrBuilder(
         int index);
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 15;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 15;</code>
      */
@@ -27367,7 +27130,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.Common.UndInstrmtGrpOrBuilder getUndInstrmtGrpOrBuilder(
         int index);
 
-    // optional sfixed64 rel_sym_transact_time = 16;
     /**
      * <code>optional sfixed64 rel_sym_transact_time = 16;</code>
      */
@@ -27381,8 +27143,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecLstUpdRelSymGrp}
    */
   public static final class SecLstUpdRelSymGrp extends
-      com.google.protobuf.GeneratedMessage
-      implements SecLstUpdRelSymGrpOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecLstUpdRelSymGrp)
+      SecLstUpdRelSymGrpOrBuilder {
     // Use SecLstUpdRelSymGrp.newBuilder() to construct.
     private SecLstUpdRelSymGrp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -27429,8 +27192,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 18: {
@@ -27512,8 +27276,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 90: {
@@ -27530,8 +27295,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000200;
-              listUpdateAction_ = input.readBytes();
+              listUpdateAction_ = bs;
               break;
             }
             case 106: {
@@ -27620,7 +27386,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional string currency = 1;
     public static final int CURRENCY_FIELD_NUMBER = 1;
     private java.lang.Object currency_;
     /**
@@ -27663,7 +27428,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional bytes encoded_text = 2;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -27679,7 +27443,6 @@ public final class SecuritiesReferenceData {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 3;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 3;
     private int encodedTextLen_;
     /**
@@ -27695,7 +27458,6 @@ public final class SecuritiesReferenceData {
       return encodedTextLen_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 4;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 4;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -27717,7 +27479,6 @@ public final class SecuritiesReferenceData {
       return financingDetails_;
     }
 
-    // optional .Common.Instrument instrument = 5;
     public static final int INSTRUMENT_FIELD_NUMBER = 5;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -27739,7 +27500,6 @@ public final class SecuritiesReferenceData {
       return instrument_;
     }
 
-    // optional .Common.InstrumentExtension instrument_extension = 6;
     public static final int INSTRUMENT_EXTENSION_FIELD_NUMBER = 6;
     private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_;
     /**
@@ -27761,7 +27521,6 @@ public final class SecuritiesReferenceData {
       return instrumentExtension_;
     }
 
-    // repeated .SecuritiesReferenceData.SecLstUpdRelSymsLegGrp sec_lst_upd_rel_syms_leg_grp = 7;
     public static final int SEC_LST_UPD_REL_SYMS_LEG_GRP_FIELD_NUMBER = 7;
     private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymsLegGrp> secLstUpdRelSymsLegGrp_;
     /**
@@ -27797,7 +27556,6 @@ public final class SecuritiesReferenceData {
       return secLstUpdRelSymsLegGrp_.get(index);
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 8;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 8;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -27819,7 +27577,6 @@ public final class SecuritiesReferenceData {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // repeated .Common.Stipulations stipulations = 9;
     public static final int STIPULATIONS_FIELD_NUMBER = 9;
     private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_;
     /**
@@ -27855,7 +27612,6 @@ public final class SecuritiesReferenceData {
       return stipulations_.get(index);
     }
 
-    // optional string text = 10;
     public static final int TEXT_FIELD_NUMBER = 10;
     private java.lang.Object text_;
     /**
@@ -27898,7 +27654,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .Common.YieldData yield_data = 11;
     public static final int YIELD_DATA_FIELD_NUMBER = 11;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -27920,7 +27675,6 @@ public final class SecuritiesReferenceData {
       return yieldData_;
     }
 
-    // optional string list_update_action = 12;
     public static final int LIST_UPDATE_ACTION_FIELD_NUMBER = 12;
     private java.lang.Object listUpdateAction_;
     /**
@@ -27963,7 +27717,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .Common.SecurityTradingRules security_trading_rules = 13;
     public static final int SECURITY_TRADING_RULES_FIELD_NUMBER = 13;
     private org.fixprotocol.components.Common.SecurityTradingRules securityTradingRules_;
     /**
@@ -27985,7 +27738,6 @@ public final class SecuritiesReferenceData {
       return securityTradingRules_;
     }
 
-    // repeated .Common.StrikeRules strike_rules = 14;
     public static final int STRIKE_RULES_FIELD_NUMBER = 14;
     private java.util.List<org.fixprotocol.components.Common.StrikeRules> strikeRules_;
     /**
@@ -28021,7 +27773,6 @@ public final class SecuritiesReferenceData {
       return strikeRules_.get(index);
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 15;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 15;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -28057,7 +27808,6 @@ public final class SecuritiesReferenceData {
       return undInstrmtGrp_.get(index);
     }
 
-    // optional sfixed64 rel_sym_transact_time = 16;
     public static final int REL_SYM_TRANSACT_TIME_FIELD_NUMBER = 16;
     private long relSymTransactTime_;
     /**
@@ -28094,7 +27844,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -28306,8 +28057,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecLstUpdRelSymGrp}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymGrpOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecLstUpdRelSymGrp)
+        org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymGrpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_descriptor;
@@ -28747,7 +28499,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional string currency = 1;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 1;</code>
@@ -28761,9 +28512,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -28821,7 +28575,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bytes encoded_text = 2;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 2;</code>
@@ -28857,7 +28610,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 3;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 3;</code>
@@ -28890,7 +28642,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.FinancingDetails financing_details = 4;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -28999,7 +28750,7 @@ public final class SecuritiesReferenceData {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -29007,7 +28758,6 @@ public final class SecuritiesReferenceData {
         return financingDetailsBuilder_;
       }
 
-      // optional .Common.Instrument instrument = 5;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -29116,7 +28866,7 @@ public final class SecuritiesReferenceData {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -29124,7 +28874,6 @@ public final class SecuritiesReferenceData {
         return instrumentBuilder_;
       }
 
-      // optional .Common.InstrumentExtension instrument_extension = 6;
       private org.fixprotocol.components.Common.InstrumentExtension instrumentExtension_ = org.fixprotocol.components.Common.InstrumentExtension.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder> instrumentExtensionBuilder_;
@@ -29233,7 +28982,7 @@ public final class SecuritiesReferenceData {
         if (instrumentExtensionBuilder_ == null) {
           instrumentExtensionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.InstrumentExtension, org.fixprotocol.components.Common.InstrumentExtension.Builder, org.fixprotocol.components.Common.InstrumentExtensionOrBuilder>(
-                  instrumentExtension_,
+                  getInstrumentExtension(),
                   getParentForChildren(),
                   isClean());
           instrumentExtension_ = null;
@@ -29241,7 +28990,6 @@ public final class SecuritiesReferenceData {
         return instrumentExtensionBuilder_;
       }
 
-      // repeated .SecuritiesReferenceData.SecLstUpdRelSymsLegGrp sec_lst_upd_rel_syms_leg_grp = 7;
       private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymsLegGrp> secLstUpdRelSymsLegGrp_ =
         java.util.Collections.emptyList();
       private void ensureSecLstUpdRelSymsLegGrpIsMutable() {
@@ -29383,7 +29131,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymsLegGrp> values) {
         if (secLstUpdRelSymsLegGrpBuilder_ == null) {
           ensureSecLstUpdRelSymsLegGrpIsMutable();
-          super.addAll(values, secLstUpdRelSymsLegGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, secLstUpdRelSymsLegGrp_);
           onChanged();
         } else {
           secLstUpdRelSymsLegGrpBuilder_.addAllMessages(values);
@@ -29481,7 +29230,6 @@ public final class SecuritiesReferenceData {
         return secLstUpdRelSymsLegGrpBuilder_;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 8;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -29590,7 +29338,7 @@ public final class SecuritiesReferenceData {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -29598,7 +29346,6 @@ public final class SecuritiesReferenceData {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // repeated .Common.Stipulations stipulations = 9;
       private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_ =
         java.util.Collections.emptyList();
       private void ensureStipulationsIsMutable() {
@@ -29740,7 +29487,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Stipulations> values) {
         if (stipulationsBuilder_ == null) {
           ensureStipulationsIsMutable();
-          super.addAll(values, stipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stipulations_);
           onChanged();
         } else {
           stipulationsBuilder_.addAllMessages(values);
@@ -29838,7 +29586,6 @@ public final class SecuritiesReferenceData {
         return stipulationsBuilder_;
       }
 
-      // optional string text = 10;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 10;</code>
@@ -29852,9 +29599,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -29912,7 +29662,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.YieldData yield_data = 11;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -30021,7 +29770,7 @@ public final class SecuritiesReferenceData {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -30029,7 +29778,6 @@ public final class SecuritiesReferenceData {
         return yieldDataBuilder_;
       }
 
-      // optional string list_update_action = 12;
       private java.lang.Object listUpdateAction_ = "";
       /**
        * <code>optional string list_update_action = 12;</code>
@@ -30043,9 +29791,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getListUpdateAction() {
         java.lang.Object ref = listUpdateAction_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          listUpdateAction_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            listUpdateAction_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -30103,7 +29854,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.SecurityTradingRules security_trading_rules = 13;
       private org.fixprotocol.components.Common.SecurityTradingRules securityTradingRules_ = org.fixprotocol.components.Common.SecurityTradingRules.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SecurityTradingRules, org.fixprotocol.components.Common.SecurityTradingRules.Builder, org.fixprotocol.components.Common.SecurityTradingRulesOrBuilder> securityTradingRulesBuilder_;
@@ -30212,7 +29962,7 @@ public final class SecuritiesReferenceData {
         if (securityTradingRulesBuilder_ == null) {
           securityTradingRulesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SecurityTradingRules, org.fixprotocol.components.Common.SecurityTradingRules.Builder, org.fixprotocol.components.Common.SecurityTradingRulesOrBuilder>(
-                  securityTradingRules_,
+                  getSecurityTradingRules(),
                   getParentForChildren(),
                   isClean());
           securityTradingRules_ = null;
@@ -30220,7 +29970,6 @@ public final class SecuritiesReferenceData {
         return securityTradingRulesBuilder_;
       }
 
-      // repeated .Common.StrikeRules strike_rules = 14;
       private java.util.List<org.fixprotocol.components.Common.StrikeRules> strikeRules_ =
         java.util.Collections.emptyList();
       private void ensureStrikeRulesIsMutable() {
@@ -30362,7 +30111,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.StrikeRules> values) {
         if (strikeRulesBuilder_ == null) {
           ensureStrikeRulesIsMutable();
-          super.addAll(values, strikeRules_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, strikeRules_);
           onChanged();
         } else {
           strikeRulesBuilder_.addAllMessages(values);
@@ -30460,7 +30210,6 @@ public final class SecuritiesReferenceData {
         return strikeRulesBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 15;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -30602,7 +30351,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -30700,7 +30450,6 @@ public final class SecuritiesReferenceData {
         return undInstrmtGrpBuilder_;
       }
 
-      // optional sfixed64 rel_sym_transact_time = 16;
       private long relSymTransactTime_ ;
       /**
        * <code>optional sfixed64 rel_sym_transact_time = 16;</code>
@@ -30744,10 +30493,10 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecLstUpdRelSymGrp)
   }
 
-  public interface SecurityListUpdateReportOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SecurityListUpdateReportOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SecuritiesReferenceData.SecurityListUpdateReport)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional sfixed32 clearing_business_date = 1;
     /**
      * <code>optional sfixed32 clearing_business_date = 1;</code>
      */
@@ -30757,7 +30506,6 @@ public final class SecuritiesReferenceData {
      */
     int getClearingBusinessDate();
 
-    // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 2 [packed = true];
     /**
      * <code>repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 2 [packed = true];</code>
      */
@@ -30771,7 +30519,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum getCorporateAction(int index);
 
-    // optional bool last_fragment = 3;
     /**
      * <code>optional bool last_fragment = 3;</code>
      */
@@ -30781,7 +30528,6 @@ public final class SecuritiesReferenceData {
      */
     boolean getLastFragment();
 
-    // repeated .SecuritiesReferenceData.SecLstUpdRelSymGrp sec_lst_upd_rel_sym_grp = 4;
     /**
      * <code>repeated .SecuritiesReferenceData.SecLstUpdRelSymGrp sec_lst_upd_rel_sym_grp = 4;</code>
      */
@@ -30806,7 +30552,6 @@ public final class SecuritiesReferenceData {
     org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymGrpOrBuilder getSecLstUpdRelSymGrpOrBuilder(
         int index);
 
-    // optional sfixed64 security_report_id = 5;
     /**
      * <code>optional sfixed64 security_report_id = 5;</code>
      */
@@ -30816,7 +30561,6 @@ public final class SecuritiesReferenceData {
      */
     long getSecurityReportId();
 
-    // optional string security_req_id = 6;
     /**
      * <code>optional string security_req_id = 6;</code>
      */
@@ -30831,7 +30575,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityReqIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 7;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 7;</code>
      */
@@ -30841,7 +30584,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestResultEnum getSecurityRequestResult();
 
-    // optional string security_response_id = 8;
     /**
      * <code>optional string security_response_id = 8;</code>
      */
@@ -30856,7 +30598,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityResponseIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 9;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 9;</code>
      */
@@ -30866,7 +30607,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityUpdateActionEnum getSecurityUpdateAction();
 
-    // optional .Session.StandardHeader standard_header = 10;
     /**
      * <code>optional .Session.StandardHeader standard_header = 10;</code>
      */
@@ -30880,7 +30620,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 11;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 11;</code>
      */
@@ -30894,7 +30633,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional sfixed64 tot_no_related_sym = 12;
     /**
      * <code>optional sfixed64 tot_no_related_sym = 12;</code>
      */
@@ -30904,7 +30642,6 @@ public final class SecuritiesReferenceData {
      */
     long getTotNoRelatedSym();
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 13;
     /**
      * <code>optional .Common.ApplicationSequenceControl application_sequence_control = 13;</code>
      */
@@ -30918,7 +30655,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder getApplicationSequenceControlOrBuilder();
 
-    // optional string market_id = 14;
     /**
      * <code>optional string market_id = 14;</code>
      */
@@ -30933,7 +30669,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getMarketIdBytes();
 
-    // optional string market_segment_id = 15;
     /**
      * <code>optional string market_segment_id = 15;</code>
      */
@@ -30948,7 +30683,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getMarketSegmentIdBytes();
 
-    // optional bytes encoded_security_list_desc = 16;
     /**
      * <code>optional bytes encoded_security_list_desc = 16;</code>
      */
@@ -30958,7 +30692,6 @@ public final class SecuritiesReferenceData {
      */
     com.google.protobuf.ByteString getEncodedSecurityListDesc();
 
-    // optional fixed32 encoded_security_list_desc_len = 17;
     /**
      * <code>optional fixed32 encoded_security_list_desc_len = 17;</code>
      */
@@ -30968,7 +30701,6 @@ public final class SecuritiesReferenceData {
      */
     int getEncodedSecurityListDescLen();
 
-    // optional string security_list_desc = 18;
     /**
      * <code>optional string security_list_desc = 18;</code>
      */
@@ -30983,7 +30715,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityListDescBytes();
 
-    // optional string security_list_id = 19;
     /**
      * <code>optional string security_list_id = 19;</code>
      */
@@ -30998,7 +30729,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityListIdBytes();
 
-    // optional string security_list_ref_id = 20;
     /**
      * <code>optional string security_list_ref_id = 20;</code>
      */
@@ -31013,7 +30743,6 @@ public final class SecuritiesReferenceData {
     com.google.protobuf.ByteString
         getSecurityListRefIdBytes();
 
-    // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 21;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 21;</code>
      */
@@ -31023,7 +30752,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum getSecurityListType();
 
-    // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 22;
     /**
      * <code>optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 22;</code>
      */
@@ -31033,7 +30761,6 @@ public final class SecuritiesReferenceData {
      */
     org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum getSecurityListTypeSource();
 
-    // optional sfixed64 transact_time = 23;
     /**
      * <code>optional sfixed64 transact_time = 23;</code>
      */
@@ -31047,8 +30774,9 @@ public final class SecuritiesReferenceData {
    * Protobuf type {@code SecuritiesReferenceData.SecurityListUpdateReport}
    */
   public static final class SecurityListUpdateReport extends
-      com.google.protobuf.GeneratedMessage
-      implements SecurityListUpdateReportOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SecuritiesReferenceData.SecurityListUpdateReport)
+      SecurityListUpdateReportOrBuilder {
     // Use SecurityListUpdateReport.newBuilder() to construct.
     private SecurityListUpdateReport(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -31104,7 +30832,7 @@ public final class SecuritiesReferenceData {
               org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum value = org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(2, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                   corporateAction_ = new java.util.ArrayList<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum>();
                   mutable_bitField0_ |= 0x00000002;
@@ -31121,7 +30849,7 @@ public final class SecuritiesReferenceData {
                 org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum value = org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(2, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                     corporateAction_ = new java.util.ArrayList<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum>();
                     mutable_bitField0_ |= 0x00000002;
@@ -31151,8 +30879,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              securityReqId_ = input.readBytes();
+              securityReqId_ = bs;
               break;
             }
             case 56: {
@@ -31167,8 +30896,9 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              securityResponseId_ = input.readBytes();
+              securityResponseId_ = bs;
               break;
             }
             case 72: {
@@ -31227,13 +30957,15 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000800;
-              marketId_ = input.readBytes();
+              marketId_ = bs;
               break;
             }
             case 122: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00001000;
-              marketSegmentId_ = input.readBytes();
+              marketSegmentId_ = bs;
               break;
             }
             case 130: {
@@ -31247,18 +30979,21 @@ public final class SecuritiesReferenceData {
               break;
             }
             case 146: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
-              securityListDesc_ = input.readBytes();
+              securityListDesc_ = bs;
               break;
             }
             case 154: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
-              securityListId_ = input.readBytes();
+              securityListId_ = bs;
               break;
             }
             case 162: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00020000;
-              securityListRefId_ = input.readBytes();
+              securityListRefId_ = bs;
               break;
             }
             case 168: {
@@ -31334,7 +31069,6 @@ public final class SecuritiesReferenceData {
     }
 
     private int bitField0_;
-    // optional sfixed32 clearing_business_date = 1;
     public static final int CLEARING_BUSINESS_DATE_FIELD_NUMBER = 1;
     private int clearingBusinessDate_;
     /**
@@ -31350,7 +31084,6 @@ public final class SecuritiesReferenceData {
       return clearingBusinessDate_;
     }
 
-    // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 2 [packed = true];
     public static final int CORPORATE_ACTION_FIELD_NUMBER = 2;
     private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> corporateAction_;
     /**
@@ -31373,7 +31106,6 @@ public final class SecuritiesReferenceData {
     }
     private int corporateActionMemoizedSerializedSize;
 
-    // optional bool last_fragment = 3;
     public static final int LAST_FRAGMENT_FIELD_NUMBER = 3;
     private boolean lastFragment_;
     /**
@@ -31389,7 +31121,6 @@ public final class SecuritiesReferenceData {
       return lastFragment_;
     }
 
-    // repeated .SecuritiesReferenceData.SecLstUpdRelSymGrp sec_lst_upd_rel_sym_grp = 4;
     public static final int SEC_LST_UPD_REL_SYM_GRP_FIELD_NUMBER = 4;
     private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymGrp> secLstUpdRelSymGrp_;
     /**
@@ -31425,7 +31156,6 @@ public final class SecuritiesReferenceData {
       return secLstUpdRelSymGrp_.get(index);
     }
 
-    // optional sfixed64 security_report_id = 5;
     public static final int SECURITY_REPORT_ID_FIELD_NUMBER = 5;
     private long securityReportId_;
     /**
@@ -31441,7 +31171,6 @@ public final class SecuritiesReferenceData {
       return securityReportId_;
     }
 
-    // optional string security_req_id = 6;
     public static final int SECURITY_REQ_ID_FIELD_NUMBER = 6;
     private java.lang.Object securityReqId_;
     /**
@@ -31484,7 +31213,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 7;
     public static final int SECURITY_REQUEST_RESULT_FIELD_NUMBER = 7;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestResultEnum securityRequestResult_;
     /**
@@ -31500,7 +31228,6 @@ public final class SecuritiesReferenceData {
       return securityRequestResult_;
     }
 
-    // optional string security_response_id = 8;
     public static final int SECURITY_RESPONSE_ID_FIELD_NUMBER = 8;
     private java.lang.Object securityResponseId_;
     /**
@@ -31543,7 +31270,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 9;
     public static final int SECURITY_UPDATE_ACTION_FIELD_NUMBER = 9;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityUpdateActionEnum securityUpdateAction_;
     /**
@@ -31559,7 +31285,6 @@ public final class SecuritiesReferenceData {
       return securityUpdateAction_;
     }
 
-    // optional .Session.StandardHeader standard_header = 10;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 10;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -31581,7 +31306,6 @@ public final class SecuritiesReferenceData {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 11;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 11;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -31603,7 +31327,6 @@ public final class SecuritiesReferenceData {
       return standardTrailer_;
     }
 
-    // optional sfixed64 tot_no_related_sym = 12;
     public static final int TOT_NO_RELATED_SYM_FIELD_NUMBER = 12;
     private long totNoRelatedSym_;
     /**
@@ -31619,7 +31342,6 @@ public final class SecuritiesReferenceData {
       return totNoRelatedSym_;
     }
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 13;
     public static final int APPLICATION_SEQUENCE_CONTROL_FIELD_NUMBER = 13;
     private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_;
     /**
@@ -31641,7 +31363,6 @@ public final class SecuritiesReferenceData {
       return applicationSequenceControl_;
     }
 
-    // optional string market_id = 14;
     public static final int MARKET_ID_FIELD_NUMBER = 14;
     private java.lang.Object marketId_;
     /**
@@ -31684,7 +31405,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string market_segment_id = 15;
     public static final int MARKET_SEGMENT_ID_FIELD_NUMBER = 15;
     private java.lang.Object marketSegmentId_;
     /**
@@ -31727,7 +31447,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional bytes encoded_security_list_desc = 16;
     public static final int ENCODED_SECURITY_LIST_DESC_FIELD_NUMBER = 16;
     private com.google.protobuf.ByteString encodedSecurityListDesc_;
     /**
@@ -31743,7 +31462,6 @@ public final class SecuritiesReferenceData {
       return encodedSecurityListDesc_;
     }
 
-    // optional fixed32 encoded_security_list_desc_len = 17;
     public static final int ENCODED_SECURITY_LIST_DESC_LEN_FIELD_NUMBER = 17;
     private int encodedSecurityListDescLen_;
     /**
@@ -31759,7 +31477,6 @@ public final class SecuritiesReferenceData {
       return encodedSecurityListDescLen_;
     }
 
-    // optional string security_list_desc = 18;
     public static final int SECURITY_LIST_DESC_FIELD_NUMBER = 18;
     private java.lang.Object securityListDesc_;
     /**
@@ -31802,7 +31519,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string security_list_id = 19;
     public static final int SECURITY_LIST_ID_FIELD_NUMBER = 19;
     private java.lang.Object securityListId_;
     /**
@@ -31845,7 +31561,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional string security_list_ref_id = 20;
     public static final int SECURITY_LIST_REF_ID_FIELD_NUMBER = 20;
     private java.lang.Object securityListRefId_;
     /**
@@ -31888,7 +31603,6 @@ public final class SecuritiesReferenceData {
       }
     }
 
-    // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 21;
     public static final int SECURITY_LIST_TYPE_FIELD_NUMBER = 21;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum securityListType_;
     /**
@@ -31904,7 +31618,6 @@ public final class SecuritiesReferenceData {
       return securityListType_;
     }
 
-    // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 22;
     public static final int SECURITY_LIST_TYPE_SOURCE_FIELD_NUMBER = 22;
     private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum securityListTypeSource_;
     /**
@@ -31920,7 +31633,6 @@ public final class SecuritiesReferenceData {
       return securityListTypeSource_;
     }
 
-    // optional sfixed64 transact_time = 23;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 23;
     private long transactTime_;
     /**
@@ -31964,7 +31676,8 @@ public final class SecuritiesReferenceData {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -32237,8 +31950,9 @@ public final class SecuritiesReferenceData {
      * Protobuf type {@code SecuritiesReferenceData.SecurityListUpdateReport}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SecuritiesReferenceData.SecurityListUpdateReportOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SecuritiesReferenceData.SecurityListUpdateReport)
+        org.fixprotocol.components.SecuritiesReferenceData.SecurityListUpdateReportOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SecuritiesReferenceData.internal_static_SecuritiesReferenceData_SecurityListUpdateReport_descriptor;
@@ -32631,7 +32345,6 @@ public final class SecuritiesReferenceData {
       }
       private int bitField0_;
 
-      // optional sfixed32 clearing_business_date = 1;
       private int clearingBusinessDate_ ;
       /**
        * <code>optional sfixed32 clearing_business_date = 1;</code>
@@ -32664,7 +32377,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .SecuritiesReferenceData.CorporateActionEnum corporate_action = 2 [packed = true];
       private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> corporateAction_ =
         java.util.Collections.emptyList();
       private void ensureCorporateActionIsMutable() {
@@ -32722,7 +32434,8 @@ public final class SecuritiesReferenceData {
       public Builder addAllCorporateAction(
           java.lang.Iterable<? extends org.fixprotocol.components.SecuritiesReferenceData.CorporateActionEnum> values) {
         ensureCorporateActionIsMutable();
-        super.addAll(values, corporateAction_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, corporateAction_);
         onChanged();
         return this;
       }
@@ -32736,7 +32449,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bool last_fragment = 3;
       private boolean lastFragment_ ;
       /**
        * <code>optional bool last_fragment = 3;</code>
@@ -32769,7 +32481,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // repeated .SecuritiesReferenceData.SecLstUpdRelSymGrp sec_lst_upd_rel_sym_grp = 4;
       private java.util.List<org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymGrp> secLstUpdRelSymGrp_ =
         java.util.Collections.emptyList();
       private void ensureSecLstUpdRelSymGrpIsMutable() {
@@ -32911,7 +32622,8 @@ public final class SecuritiesReferenceData {
           java.lang.Iterable<? extends org.fixprotocol.components.SecuritiesReferenceData.SecLstUpdRelSymGrp> values) {
         if (secLstUpdRelSymGrpBuilder_ == null) {
           ensureSecLstUpdRelSymGrpIsMutable();
-          super.addAll(values, secLstUpdRelSymGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, secLstUpdRelSymGrp_);
           onChanged();
         } else {
           secLstUpdRelSymGrpBuilder_.addAllMessages(values);
@@ -33009,7 +32721,6 @@ public final class SecuritiesReferenceData {
         return secLstUpdRelSymGrpBuilder_;
       }
 
-      // optional sfixed64 security_report_id = 5;
       private long securityReportId_ ;
       /**
        * <code>optional sfixed64 security_report_id = 5;</code>
@@ -33042,7 +32753,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_req_id = 6;
       private java.lang.Object securityReqId_ = "";
       /**
        * <code>optional string security_req_id = 6;</code>
@@ -33056,9 +32766,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityReqId() {
         java.lang.Object ref = securityReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -33116,7 +32829,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 7;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestResultEnum securityRequestResult_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityRequestResultEnum.SECURITY_REQUEST_RESULT_INSTRUMENT_DATA_TEMPORARILY_UNAVAILABLE;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityRequestResultEnum security_request_result = 7;</code>
@@ -33152,7 +32864,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_response_id = 8;
       private java.lang.Object securityResponseId_ = "";
       /**
        * <code>optional string security_response_id = 8;</code>
@@ -33166,9 +32877,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityResponseId() {
         java.lang.Object ref = securityResponseId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityResponseId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityResponseId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -33226,7 +32940,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 9;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityUpdateActionEnum securityUpdateAction_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityUpdateActionEnum.SECURITY_UPDATE_ACTION_ADD;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityUpdateActionEnum security_update_action = 9;</code>
@@ -33262,7 +32975,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 10;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -33371,7 +33083,7 @@ public final class SecuritiesReferenceData {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -33379,7 +33091,6 @@ public final class SecuritiesReferenceData {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 11;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -33488,7 +33199,7 @@ public final class SecuritiesReferenceData {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -33496,7 +33207,6 @@ public final class SecuritiesReferenceData {
         return standardTrailerBuilder_;
       }
 
-      // optional sfixed64 tot_no_related_sym = 12;
       private long totNoRelatedSym_ ;
       /**
        * <code>optional sfixed64 tot_no_related_sym = 12;</code>
@@ -33529,7 +33239,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .Common.ApplicationSequenceControl application_sequence_control = 13;
       private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_ = org.fixprotocol.components.Common.ApplicationSequenceControl.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder> applicationSequenceControlBuilder_;
@@ -33638,7 +33347,7 @@ public final class SecuritiesReferenceData {
         if (applicationSequenceControlBuilder_ == null) {
           applicationSequenceControlBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder>(
-                  applicationSequenceControl_,
+                  getApplicationSequenceControl(),
                   getParentForChildren(),
                   isClean());
           applicationSequenceControl_ = null;
@@ -33646,7 +33355,6 @@ public final class SecuritiesReferenceData {
         return applicationSequenceControlBuilder_;
       }
 
-      // optional string market_id = 14;
       private java.lang.Object marketId_ = "";
       /**
        * <code>optional string market_id = 14;</code>
@@ -33660,9 +33368,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getMarketId() {
         java.lang.Object ref = marketId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          marketId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            marketId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -33720,7 +33431,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string market_segment_id = 15;
       private java.lang.Object marketSegmentId_ = "";
       /**
        * <code>optional string market_segment_id = 15;</code>
@@ -33734,9 +33444,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getMarketSegmentId() {
         java.lang.Object ref = marketSegmentId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          marketSegmentId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            marketSegmentId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -33794,7 +33507,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional bytes encoded_security_list_desc = 16;
       private com.google.protobuf.ByteString encodedSecurityListDesc_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_security_list_desc = 16;</code>
@@ -33830,7 +33542,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional fixed32 encoded_security_list_desc_len = 17;
       private int encodedSecurityListDescLen_ ;
       /**
        * <code>optional fixed32 encoded_security_list_desc_len = 17;</code>
@@ -33863,7 +33574,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_list_desc = 18;
       private java.lang.Object securityListDesc_ = "";
       /**
        * <code>optional string security_list_desc = 18;</code>
@@ -33877,9 +33587,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityListDesc() {
         java.lang.Object ref = securityListDesc_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityListDesc_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityListDesc_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -33937,7 +33650,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_list_id = 19;
       private java.lang.Object securityListId_ = "";
       /**
        * <code>optional string security_list_id = 19;</code>
@@ -33951,9 +33663,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityListId() {
         java.lang.Object ref = securityListId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityListId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityListId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -34011,7 +33726,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional string security_list_ref_id = 20;
       private java.lang.Object securityListRefId_ = "";
       /**
        * <code>optional string security_list_ref_id = 20;</code>
@@ -34025,9 +33739,12 @@ public final class SecuritiesReferenceData {
       public java.lang.String getSecurityListRefId() {
         java.lang.Object ref = securityListRefId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          securityListRefId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            securityListRefId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -34085,7 +33802,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 21;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum securityListType_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeEnum.SECURITY_LIST_TYPE_INDUSTRY_CLASSIFICATION;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListTypeEnum security_list_type = 21;</code>
@@ -34121,7 +33837,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 22;
       private org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum securityListTypeSource_ = org.fixprotocol.components.SecuritiesReferenceData.SecurityListTypeSourceEnum.SECURITY_LIST_TYPE_SOURCE_GICS;
       /**
        * <code>optional .SecuritiesReferenceData.SecurityListTypeSourceEnum security_list_type_source = 22;</code>
@@ -34157,7 +33872,6 @@ public final class SecuritiesReferenceData {
         return this;
       }
 
-      // optional sfixed64 transact_time = 23;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 23;</code>
@@ -34201,57 +33915,57 @@ public final class SecuritiesReferenceData {
     // @@protoc_insertion_point(class_scope:SecuritiesReferenceData.SecurityListUpdateReport)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecurityDefinition_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecurityDefinition_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecListGrp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecListGrp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecurityListTypeUnion_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecurityListTypeUnion_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecurityList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecurityList_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecurityListRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecurityListRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SecuritiesReferenceData_SecurityListUpdateReport_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -34637,441 +34351,13 @@ public final class SecuritiesReferenceData {
       "ata"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_SecuritiesReferenceData_SecurityDefinition_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_SecuritiesReferenceData_SecurityDefinition_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecurityDefinition_descriptor,
-              new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "SecurityReqId", "SecurityResponseId", "SecurityResponseType", "StandardHeader", "StandardTrailer", "Text", "Instrument", "ClearingBusinessDate", "InstrmtLegGrp", "InstrumentExtension", "SecurityReportId", "UndInstrmtGrp", "ApplicationSequenceControl", "CorporateAction", "MarketSegmentGrp", "SpreadOrBenchmarkCurveData", "Stipulations", "YieldData", "TransactTime", });
-          internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_descriptor,
-              new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "SecurityReqId", "SecurityRequestType", "StandardHeader", "StandardTrailer", "Text", "TradingSessionId", "Instrument", "SubscriptionRequestType", "TradingSessionSubId", "ExpirationCycle", "InstrmtLegGrp", "InstrumentExtension", "UndInstrmtGrp", "MarketId", "MarketSegmentId", "SpreadOrBenchmarkCurveData", "Stipulations", "YieldData", });
-          internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_descriptor,
-              new java.lang.String[] { "ClearingBusinessDate", "CorporateAction", "Currency", "EncodedText", "EncodedTextLen", "InstrmtLegGrp", "Instrument", "SecurityReportId", "SecurityReqId", "SecurityResponseId", "SecurityResponseType", "SecurityUpdateAction", "StandardHeader", "StandardTrailer", "Text", "ApplicationSequenceControl", "InstrumentExtension", "MarketSegmentGrp", "SpreadOrBenchmarkCurveData", "Stipulations", "UndInstrmtGrp", "YieldData", "TransactTime", });
-          internal_static_SecuritiesReferenceData_SecListGrp_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_SecuritiesReferenceData_SecListGrp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecListGrp_descriptor,
-              new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "FinancingDetails", "InstrmtLegSecListGrp", "Instrument", "InstrumentExtension", "SpreadOrBenchmarkCurveData", "Stipulations", "Text", "UndInstrmtGrp", "YieldData", "SecurityTradingRules", "StrikeRules", "RelSymTransactTime", });
-          internal_static_SecuritiesReferenceData_SecurityListTypeUnion_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_SecuritiesReferenceData_SecurityListTypeUnion_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecurityListTypeUnion_descriptor,
-              new java.lang.String[] { "SecurityListType", "SecurityListTypeSfixed64", });
-          internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_descriptor,
-              new java.lang.String[] { "SecurityListTypeSource", "SecurityListTypeSourceSfixed64", });
-          internal_static_SecuritiesReferenceData_SecurityList_descriptor =
-            getDescriptor().getMessageTypes().get(6);
-          internal_static_SecuritiesReferenceData_SecurityList_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecurityList_descriptor,
-              new java.lang.String[] { "SecurityReqId", "SecurityRequestResult", "SecurityResponseId", "StandardHeader", "StandardTrailer", "TotNoRelatedSym", "ClearingBusinessDate", "LastFragment", "SecListGrp", "SecurityReportId", "ApplicationSequenceControl", "MarketId", "MarketSegmentId", "EncodedSecurityListDesc", "EncodedSecurityListDescLen", "SecurityListDesc", "SecurityListId", "SecurityListRefId", "SecurityListType", "SecurityListTypeSource", "TransactTime", });
-          internal_static_SecuritiesReferenceData_SecurityListRequest_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_SecuritiesReferenceData_SecurityListRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecurityListRequest_descriptor,
-              new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "Instrument", "SecurityListRequestType", "SecurityReqId", "StandardHeader", "StandardTrailer", "SubscriptionRequestType", "Text", "TradingSessionId", "TradingSessionSubId", "FinancingDetails", "InstrmtLegGrp", "InstrumentExtension", "UndInstrmtGrp", "MarketId", "MarketSegmentId", "SecurityListId", "SecurityListType", "SecurityListTypeSource", });
-          internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_descriptor,
-              new java.lang.String[] { "InstrumentLeg", "LegBenchmarkCurveData", "LegSettlType", "LegStipulations", "LegSwapType", });
-          internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_descriptor =
-            getDescriptor().getMessageTypes().get(9);
-          internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_descriptor,
-              new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "FinancingDetails", "Instrument", "InstrumentExtension", "SecLstUpdRelSymsLegGrp", "SpreadOrBenchmarkCurveData", "Stipulations", "Text", "YieldData", "ListUpdateAction", "SecurityTradingRules", "StrikeRules", "UndInstrmtGrp", "RelSymTransactTime", });
-          internal_static_SecuritiesReferenceData_SecurityListUpdateReport_descriptor =
-            getDescriptor().getMessageTypes().get(10);
-          internal_static_SecuritiesReferenceData_SecurityListUpdateReport_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SecuritiesReferenceData_SecurityListUpdateReport_descriptor,
-              new java.lang.String[] { "ClearingBusinessDate", "CorporateAction", "LastFragment", "SecLstUpdRelSymGrp", "SecurityReportId", "SecurityReqId", "SecurityRequestResult", "SecurityResponseId", "SecurityUpdateAction", "StandardHeader", "StandardTrailer", "TotNoRelatedSym", "ApplicationSequenceControl", "MarketId", "MarketSegmentId", "EncodedSecurityListDesc", "EncodedSecurityListDescLen", "SecurityListDesc", "SecurityListId", "SecurityListRefId", "SecurityListType", "SecurityListTypeSource", "TransactTime", });
-          com.google.protobuf.ExtensionRegistry registry =
-            com.google.protobuf.ExtensionRegistry.newInstance();
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          return registry;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
@@ -35080,6 +34366,440 @@ public final class SecuritiesReferenceData {
           org.fixprotocol.components.Session.getDescriptor(),
           org.fixprotocol.components.Common.getDescriptor(),
         }, assigner);
+    internal_static_SecuritiesReferenceData_SecurityDefinition_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_SecuritiesReferenceData_SecurityDefinition_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecurityDefinition_descriptor,
+        new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "SecurityReqId", "SecurityResponseId", "SecurityResponseType", "StandardHeader", "StandardTrailer", "Text", "Instrument", "ClearingBusinessDate", "InstrmtLegGrp", "InstrumentExtension", "SecurityReportId", "UndInstrmtGrp", "ApplicationSequenceControl", "CorporateAction", "MarketSegmentGrp", "SpreadOrBenchmarkCurveData", "Stipulations", "YieldData", "TransactTime", });
+    internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecurityDefinitionRequest_descriptor,
+        new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "SecurityReqId", "SecurityRequestType", "StandardHeader", "StandardTrailer", "Text", "TradingSessionId", "Instrument", "SubscriptionRequestType", "TradingSessionSubId", "ExpirationCycle", "InstrmtLegGrp", "InstrumentExtension", "UndInstrmtGrp", "MarketId", "MarketSegmentId", "SpreadOrBenchmarkCurveData", "Stipulations", "YieldData", });
+    internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecurityDefinitionUpdateReport_descriptor,
+        new java.lang.String[] { "ClearingBusinessDate", "CorporateAction", "Currency", "EncodedText", "EncodedTextLen", "InstrmtLegGrp", "Instrument", "SecurityReportId", "SecurityReqId", "SecurityResponseId", "SecurityResponseType", "SecurityUpdateAction", "StandardHeader", "StandardTrailer", "Text", "ApplicationSequenceControl", "InstrumentExtension", "MarketSegmentGrp", "SpreadOrBenchmarkCurveData", "Stipulations", "UndInstrmtGrp", "YieldData", "TransactTime", });
+    internal_static_SecuritiesReferenceData_SecListGrp_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_SecuritiesReferenceData_SecListGrp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecListGrp_descriptor,
+        new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "FinancingDetails", "InstrmtLegSecListGrp", "Instrument", "InstrumentExtension", "SpreadOrBenchmarkCurveData", "Stipulations", "Text", "UndInstrmtGrp", "YieldData", "SecurityTradingRules", "StrikeRules", "RelSymTransactTime", });
+    internal_static_SecuritiesReferenceData_SecurityListTypeUnion_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_SecuritiesReferenceData_SecurityListTypeUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecurityListTypeUnion_descriptor,
+        new java.lang.String[] { "SecurityListType", "SecurityListTypeSfixed64", });
+    internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecurityListTypeSourceUnion_descriptor,
+        new java.lang.String[] { "SecurityListTypeSource", "SecurityListTypeSourceSfixed64", });
+    internal_static_SecuritiesReferenceData_SecurityList_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_SecuritiesReferenceData_SecurityList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecurityList_descriptor,
+        new java.lang.String[] { "SecurityReqId", "SecurityRequestResult", "SecurityResponseId", "StandardHeader", "StandardTrailer", "TotNoRelatedSym", "ClearingBusinessDate", "LastFragment", "SecListGrp", "SecurityReportId", "ApplicationSequenceControl", "MarketId", "MarketSegmentId", "EncodedSecurityListDesc", "EncodedSecurityListDescLen", "SecurityListDesc", "SecurityListId", "SecurityListRefId", "SecurityListType", "SecurityListTypeSource", "TransactTime", });
+    internal_static_SecuritiesReferenceData_SecurityListRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_SecuritiesReferenceData_SecurityListRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecurityListRequest_descriptor,
+        new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "Instrument", "SecurityListRequestType", "SecurityReqId", "StandardHeader", "StandardTrailer", "SubscriptionRequestType", "Text", "TradingSessionId", "TradingSessionSubId", "FinancingDetails", "InstrmtLegGrp", "InstrumentExtension", "UndInstrmtGrp", "MarketId", "MarketSegmentId", "SecurityListId", "SecurityListType", "SecurityListTypeSource", });
+    internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecLstUpdRelSymsLegGrp_descriptor,
+        new java.lang.String[] { "InstrumentLeg", "LegBenchmarkCurveData", "LegSettlType", "LegStipulations", "LegSwapType", });
+    internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecLstUpdRelSymGrp_descriptor,
+        new java.lang.String[] { "Currency", "EncodedText", "EncodedTextLen", "FinancingDetails", "Instrument", "InstrumentExtension", "SecLstUpdRelSymsLegGrp", "SpreadOrBenchmarkCurveData", "Stipulations", "Text", "YieldData", "ListUpdateAction", "SecurityTradingRules", "StrikeRules", "UndInstrmtGrp", "RelSymTransactTime", });
+    internal_static_SecuritiesReferenceData_SecurityListUpdateReport_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_SecuritiesReferenceData_SecurityListUpdateReport_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SecuritiesReferenceData_SecurityListUpdateReport_descriptor,
+        new java.lang.String[] { "ClearingBusinessDate", "CorporateAction", "LastFragment", "SecLstUpdRelSymGrp", "SecurityReportId", "SecurityReqId", "SecurityRequestResult", "SecurityResponseId", "SecurityUpdateAction", "StandardHeader", "StandardTrailer", "TotNoRelatedSym", "ApplicationSequenceControl", "MarketId", "MarketSegmentId", "EncodedSecurityListDesc", "EncodedSecurityListDescLen", "SecurityListDesc", "SecurityListId", "SecurityListRefId", "SecurityListType", "SecurityListTypeSource", "TransactTime", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    org.fixprotocol.components.Meta.getDescriptor();
+    org.fixprotocol.components.Fix.getDescriptor();
+    org.fixprotocol.components.Session.getDescriptor();
+    org.fixprotocol.components.Common.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

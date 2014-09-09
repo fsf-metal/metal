@@ -642,6 +642,7 @@ const int Advertisement::kUndInstrmtGrpFieldNumber;
 Advertisement::Advertisement()
   : ::google::protobuf::Message() {
   SharedCtor();
+  // @@protoc_insertion_point(constructor:Indication.Advertisement)
 }
 
 void Advertisement::InitAsDefaultInstance() {
@@ -654,27 +655,29 @@ Advertisement::Advertisement(const Advertisement& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:Indication.Advertisement)
 }
 
 void Advertisement::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  adv_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  adv_ref_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  adv_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  adv_ref_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   adv_side_ = 0;
   adv_trans_type_ = 0;
-  currency_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  currency_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   price_ = GOOGLE_LONGLONG(0);
   price_exponent_ = 0;
   quantity_ = GOOGLE_LONGLONG(0);
   quantity_exponent_ = 0;
   standard_header_ = NULL;
   standard_trailer_ = NULL;
-  text_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  text_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   transact_time_ = GOOGLE_LONGLONG(0);
-  last_mkt_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  last_mkt_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   trade_date_ = 0;
-  urllink_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  encoded_text_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  urllink_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  encoded_text_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   encoded_text_len_ = 0u;
   trading_session_id_ = 0;
   instrument_ = NULL;
@@ -684,29 +687,30 @@ void Advertisement::SharedCtor() {
 }
 
 Advertisement::~Advertisement() {
+  // @@protoc_insertion_point(destructor:Indication.Advertisement)
   SharedDtor();
 }
 
 void Advertisement::SharedDtor() {
-  if (adv_id_ != &::google::protobuf::internal::kEmptyString) {
+  if (adv_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete adv_id_;
   }
-  if (adv_ref_id_ != &::google::protobuf::internal::kEmptyString) {
+  if (adv_ref_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete adv_ref_id_;
   }
-  if (currency_ != &::google::protobuf::internal::kEmptyString) {
+  if (currency_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete currency_;
   }
-  if (text_ != &::google::protobuf::internal::kEmptyString) {
+  if (text_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete text_;
   }
-  if (last_mkt_ != &::google::protobuf::internal::kEmptyString) {
+  if (last_mkt_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete last_mkt_;
   }
-  if (urllink_ != &::google::protobuf::internal::kEmptyString) {
+  if (urllink_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete urllink_;
   }
-  if (encoded_text_ != &::google::protobuf::internal::kEmptyString) {
+  if (encoded_text_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete encoded_text_;
   }
   if (this != default_instance_) {
@@ -738,29 +742,36 @@ Advertisement* Advertisement::New() const {
 }
 
 void Advertisement::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<Advertisement*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
+  if (_has_bits_[0 / 32] & 255) {
+    ZR_(adv_side_, adv_trans_type_);
+    ZR_(price_, price_exponent_);
     if (has_adv_id()) {
-      if (adv_id_ != &::google::protobuf::internal::kEmptyString) {
+      if (adv_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         adv_id_->clear();
       }
     }
     if (has_adv_ref_id()) {
-      if (adv_ref_id_ != &::google::protobuf::internal::kEmptyString) {
+      if (adv_ref_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         adv_ref_id_->clear();
       }
     }
-    adv_side_ = 0;
-    adv_trans_type_ = 0;
     if (has_currency()) {
-      if (currency_ != &::google::protobuf::internal::kEmptyString) {
+      if (currency_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         currency_->clear();
       }
     }
-    price_ = GOOGLE_LONGLONG(0);
-    price_exponent_ = 0;
-    quantity_ = GOOGLE_LONGLONG(0);
   }
-  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
+  if (_has_bits_[8 / 32] & 65280) {
     quantity_exponent_ = 0;
     if (has_standard_header()) {
       if (standard_header_ != NULL) standard_header_->::Session::StandardHeader::Clear();
@@ -769,37 +780,40 @@ void Advertisement::Clear() {
       if (standard_trailer_ != NULL) standard_trailer_->::Session::StandardTrailer::Clear();
     }
     if (has_text()) {
-      if (text_ != &::google::protobuf::internal::kEmptyString) {
+      if (text_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         text_->clear();
       }
     }
     transact_time_ = GOOGLE_LONGLONG(0);
     if (has_last_mkt()) {
-      if (last_mkt_ != &::google::protobuf::internal::kEmptyString) {
+      if (last_mkt_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         last_mkt_->clear();
       }
     }
     trade_date_ = 0;
     if (has_urllink()) {
-      if (urllink_ != &::google::protobuf::internal::kEmptyString) {
+      if (urllink_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         urllink_->clear();
       }
     }
   }
-  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+  if (_has_bits_[16 / 32] & 6225920) {
+    ZR_(trading_session_id_, trading_session_sub_id_);
     if (has_encoded_text()) {
-      if (encoded_text_ != &::google::protobuf::internal::kEmptyString) {
+      if (encoded_text_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         encoded_text_->clear();
       }
     }
     encoded_text_len_ = 0u;
-    trading_session_id_ = 0;
     if (has_instrument()) {
       if (instrument_ != NULL) instrument_->::Common::Instrument::Clear();
     }
-    trading_session_sub_id_ = 0;
     qty_type_ = 0;
   }
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
   instrmt_leg_grp_.Clear();
   und_instrmt_grp_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -808,21 +822,25 @@ void Advertisement::Clear() {
 
 bool Advertisement::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
+  // @@protoc_insertion_point(parse_start:Indication.Advertisement)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional string adv_id = 1;
       case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_adv_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->adv_id().data(), this->adv_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "adv_id");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(18)) goto parse_adv_ref_id;
         break;
@@ -830,16 +848,16 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional string adv_ref_id = 2;
       case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 18) {
          parse_adv_ref_id:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_adv_ref_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->adv_ref_id().data(), this->adv_ref_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "adv_ref_id");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(24)) goto parse_adv_side;
         break;
@@ -847,8 +865,7 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional .Indication.AdvSideEnum adv_side = 3;
       case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 24) {
          parse_adv_side:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -860,7 +877,7 @@ bool Advertisement::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(3, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(32)) goto parse_adv_trans_type;
         break;
@@ -868,8 +885,7 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional .Indication.AdvTransTypeEnum adv_trans_type = 4;
       case 4: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 32) {
          parse_adv_trans_type:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -881,7 +897,7 @@ bool Advertisement::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(4, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(42)) goto parse_currency;
         break;
@@ -889,16 +905,16 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional string currency = 5;
       case 5: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 42) {
          parse_currency:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_currency()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->currency().data(), this->currency().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "currency");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(49)) goto parse_price;
         break;
@@ -906,15 +922,14 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional sfixed64 price = 6;
       case 6: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+        if (tag == 49) {
          parse_price:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED64>(
                  input, &price_)));
           set_has_price();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(61)) goto parse_price_exponent;
         break;
@@ -922,15 +937,14 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional sfixed32 price_exponent = 7;
       case 7: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+        if (tag == 61) {
          parse_price_exponent:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED32>(
                  input, &price_exponent_)));
           set_has_price_exponent();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(65)) goto parse_quantity;
         break;
@@ -938,15 +952,14 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional sfixed64 quantity = 8;
       case 8: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+        if (tag == 65) {
          parse_quantity:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED64>(
                  input, &quantity_)));
           set_has_quantity();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(77)) goto parse_quantity_exponent;
         break;
@@ -954,15 +967,14 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional sfixed32 quantity_exponent = 9;
       case 9: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+        if (tag == 77) {
          parse_quantity_exponent:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED32>(
                  input, &quantity_exponent_)));
           set_has_quantity_exponent();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(82)) goto parse_standard_header;
         break;
@@ -970,13 +982,12 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional .Session.StandardHeader standard_header = 10;
       case 10: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 82) {
          parse_standard_header:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_standard_header()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(90)) goto parse_standard_trailer;
         break;
@@ -984,13 +995,12 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional .Session.StandardTrailer standard_trailer = 11;
       case 11: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 90) {
          parse_standard_trailer:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_standard_trailer()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(98)) goto parse_text;
         break;
@@ -998,16 +1008,16 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional string text = 12;
       case 12: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 98) {
          parse_text:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_text()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->text().data(), this->text().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "text");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(105)) goto parse_transact_time;
         break;
@@ -1015,15 +1025,14 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional sfixed64 transact_time = 13;
       case 13: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+        if (tag == 105) {
          parse_transact_time:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED64>(
                  input, &transact_time_)));
           set_has_transact_time();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(114)) goto parse_last_mkt;
         break;
@@ -1031,16 +1040,16 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional string last_mkt = 14;
       case 14: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 114) {
          parse_last_mkt:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_last_mkt()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->last_mkt().data(), this->last_mkt().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "last_mkt");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(125)) goto parse_trade_date;
         break;
@@ -1048,15 +1057,14 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional sfixed32 trade_date = 15;
       case 15: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+        if (tag == 125) {
          parse_trade_date:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED32>(
                  input, &trade_date_)));
           set_has_trade_date();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(130)) goto parse_urllink;
         break;
@@ -1064,16 +1072,16 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional string urllink = 16;
       case 16: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 130) {
          parse_urllink:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_urllink()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->urllink().data(), this->urllink().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "urllink");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(138)) goto parse_encoded_text;
         break;
@@ -1081,13 +1089,12 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional bytes encoded_text = 17;
       case 17: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 138) {
          parse_encoded_text:
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_encoded_text()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(149)) goto parse_encoded_text_len;
         break;
@@ -1095,15 +1102,14 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional fixed32 encoded_text_len = 18;
       case 18: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+        if (tag == 149) {
          parse_encoded_text_len:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
                  input, &encoded_text_len_)));
           set_has_encoded_text_len();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(152)) goto parse_trading_session_id;
         break;
@@ -1111,8 +1117,7 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional .Indication.TradingSessionIdEnum trading_session_id = 19;
       case 19: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 152) {
          parse_trading_session_id:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -1124,7 +1129,7 @@ bool Advertisement::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(19, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(162)) goto parse_instrument;
         break;
@@ -1132,13 +1137,12 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional .Common.Instrument instrument = 20;
       case 20: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 162) {
          parse_instrument:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_instrument()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(168)) goto parse_trading_session_sub_id;
         break;
@@ -1146,8 +1150,7 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional .Indication.TradingSessionSubIdEnum trading_session_sub_id = 21;
       case 21: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 168) {
          parse_trading_session_sub_id:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -1159,7 +1162,7 @@ bool Advertisement::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(21, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(178)) goto parse_instrmt_leg_grp;
         break;
@@ -1167,13 +1170,12 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 22;
       case 22: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 178) {
          parse_instrmt_leg_grp:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_instrmt_leg_grp()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(178)) goto parse_instrmt_leg_grp;
         if (input->ExpectTag(184)) goto parse_qty_type;
@@ -1182,8 +1184,7 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // optional .Indication.QtyTypeEnum qty_type = 23;
       case 23: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 184) {
          parse_qty_type:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -1195,7 +1196,7 @@ bool Advertisement::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(23, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(194)) goto parse_und_instrmt_grp;
         break;
@@ -1203,24 +1204,24 @@ bool Advertisement::MergePartialFromCodedStream(
 
       // repeated .Common.UndInstrmtGrp und_instrmt_grp = 24;
       case 24: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 194) {
          parse_und_instrmt_grp:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_und_instrmt_grp()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(194)) goto parse_und_instrmt_grp;
-        if (input->ExpectAtEnd()) return true;
+        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
+          goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
               input, tag, mutable_unknown_fields()));
@@ -1228,27 +1229,35 @@ bool Advertisement::MergePartialFromCodedStream(
       }
     }
   }
+success:
+  // @@protoc_insertion_point(parse_success:Indication.Advertisement)
   return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:Indication.Advertisement)
+  return false;
 #undef DO_
 }
 
 void Advertisement::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:Indication.Advertisement)
   // optional string adv_id = 1;
   if (has_adv_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->adv_id().data(), this->adv_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "adv_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->adv_id(), output);
   }
 
   // optional string adv_ref_id = 2;
   if (has_adv_ref_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->adv_ref_id().data(), this->adv_ref_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "adv_ref_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->adv_ref_id(), output);
   }
 
@@ -1266,10 +1275,11 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string currency = 5;
   if (has_currency()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->currency().data(), this->currency().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "currency");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->currency(), output);
   }
 
@@ -1307,10 +1317,11 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string text = 12;
   if (has_text()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->text().data(), this->text().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "text");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       12, this->text(), output);
   }
 
@@ -1321,10 +1332,11 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string last_mkt = 14;
   if (has_last_mkt()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->last_mkt().data(), this->last_mkt().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "last_mkt");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       14, this->last_mkt(), output);
   }
 
@@ -1335,16 +1347,17 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string urllink = 16;
   if (has_urllink()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->urllink().data(), this->urllink().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "urllink");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       16, this->urllink(), output);
   }
 
   // optional bytes encoded_text = 17;
   if (has_encoded_text()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytes(
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
       17, this->encoded_text(), output);
   }
 
@@ -1393,15 +1406,18 @@ void Advertisement::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
+  // @@protoc_insertion_point(serialize_end:Indication.Advertisement)
 }
 
 ::google::protobuf::uint8* Advertisement::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Indication.Advertisement)
   // optional string adv_id = 1;
   if (has_adv_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->adv_id().data(), this->adv_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "adv_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->adv_id(), target);
@@ -1409,9 +1425,10 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string adv_ref_id = 2;
   if (has_adv_ref_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->adv_ref_id().data(), this->adv_ref_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "adv_ref_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->adv_ref_id(), target);
@@ -1431,9 +1448,10 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string currency = 5;
   if (has_currency()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->currency().data(), this->currency().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "currency");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         5, this->currency(), target);
@@ -1475,9 +1493,10 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string text = 12;
   if (has_text()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->text().data(), this->text().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "text");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         12, this->text(), target);
@@ -1490,9 +1509,10 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string last_mkt = 14;
   if (has_last_mkt()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->last_mkt().data(), this->last_mkt().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "last_mkt");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         14, this->last_mkt(), target);
@@ -1505,9 +1525,10 @@ void Advertisement::SerializeWithCachedSizes(
 
   // optional string urllink = 16;
   if (has_urllink()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->urllink().data(), this->urllink().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "urllink");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         16, this->urllink(), target);
@@ -1568,6 +1589,7 @@ void Advertisement::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
+  // @@protoc_insertion_point(serialize_to_array_end:Indication.Advertisement)
   return target;
 }
 
@@ -1900,6 +1922,7 @@ const int IoiQualGrp::kIoiQualifierFieldNumber;
 IoiQualGrp::IoiQualGrp()
   : ::google::protobuf::Message() {
   SharedCtor();
+  // @@protoc_insertion_point(constructor:Indication.IoiQualGrp)
 }
 
 void IoiQualGrp::InitAsDefaultInstance() {
@@ -1909,6 +1932,7 @@ IoiQualGrp::IoiQualGrp(const IoiQualGrp& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:Indication.IoiQualGrp)
 }
 
 void IoiQualGrp::SharedCtor() {
@@ -1918,6 +1942,7 @@ void IoiQualGrp::SharedCtor() {
 }
 
 IoiQualGrp::~IoiQualGrp() {
+  // @@protoc_insertion_point(destructor:Indication.IoiQualGrp)
   SharedDtor();
 }
 
@@ -1948,23 +1973,24 @@ IoiQualGrp* IoiQualGrp::New() const {
 }
 
 void IoiQualGrp::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    ioi_qualifier_ = 0;
-  }
+  ioi_qualifier_ = 0;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
 
 bool IoiQualGrp::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
+  // @@protoc_insertion_point(parse_start:Indication.IoiQualGrp)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional .Indication.IoiQualifierEnum ioi_qualifier = 1;
       case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 8) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1975,17 +2001,18 @@ bool IoiQualGrp::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(1, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) return true;
+        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
+          goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
               input, tag, mutable_unknown_fields()));
@@ -1993,12 +2020,18 @@ bool IoiQualGrp::MergePartialFromCodedStream(
       }
     }
   }
+success:
+  // @@protoc_insertion_point(parse_success:Indication.IoiQualGrp)
   return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:Indication.IoiQualGrp)
+  return false;
 #undef DO_
 }
 
 void IoiQualGrp::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:Indication.IoiQualGrp)
   // optional .Indication.IoiQualifierEnum ioi_qualifier = 1;
   if (has_ioi_qualifier()) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -2009,10 +2042,12 @@ void IoiQualGrp::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
+  // @@protoc_insertion_point(serialize_end:Indication.IoiQualGrp)
 }
 
 ::google::protobuf::uint8* IoiQualGrp::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Indication.IoiQualGrp)
   // optional .Indication.IoiQualifierEnum ioi_qualifier = 1;
   if (has_ioi_qualifier()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -2023,6 +2058,7 @@ void IoiQualGrp::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
+  // @@protoc_insertion_point(serialize_to_array_end:Indication.IoiQualGrp)
   return target;
 }
 
@@ -2145,6 +2181,7 @@ const int Ioi::kApplicationSequenceControlFieldNumber;
 Ioi::Ioi()
   : ::google::protobuf::Message() {
   SharedCtor();
+  // @@protoc_insertion_point(constructor:Indication.Ioi)
 }
 
 void Ioi::InitAsDefaultInstance() {
@@ -2162,27 +2199,29 @@ Ioi::Ioi(const Ioi& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:Indication.Ioi)
 }
 
 void Ioi::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  currency_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  ioi_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  currency_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ioi_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ioi_qlty_ind_ = 0;
   ioi_qty_ = 0;
-  ioi_ref_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ioi_ref_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ioi_trans_type_ = 0;
   price_ = GOOGLE_LONGLONG(0);
   price_exponent_ = 0;
   side_ = 0;
   standard_header_ = NULL;
   standard_trailer_ = NULL;
-  text_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  text_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   valid_until_time_ = GOOGLE_LONGLONG(0);
   ioi_natural_flag_ = false;
   transact_time_ = GOOGLE_LONGLONG(0);
-  urllink_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  encoded_text_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  urllink_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  encoded_text_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   encoded_text_len_ = 0u;
   instrument_ = NULL;
   price_type_ = 0;
@@ -2196,26 +2235,27 @@ void Ioi::SharedCtor() {
 }
 
 Ioi::~Ioi() {
+  // @@protoc_insertion_point(destructor:Indication.Ioi)
   SharedDtor();
 }
 
 void Ioi::SharedDtor() {
-  if (currency_ != &::google::protobuf::internal::kEmptyString) {
+  if (currency_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete currency_;
   }
-  if (ioi_id_ != &::google::protobuf::internal::kEmptyString) {
+  if (ioi_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete ioi_id_;
   }
-  if (ioi_ref_id_ != &::google::protobuf::internal::kEmptyString) {
+  if (ioi_ref_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete ioi_ref_id_;
   }
-  if (text_ != &::google::protobuf::internal::kEmptyString) {
+  if (text_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete text_;
   }
-  if (urllink_ != &::google::protobuf::internal::kEmptyString) {
+  if (urllink_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete urllink_;
   }
-  if (encoded_text_ != &::google::protobuf::internal::kEmptyString) {
+  if (encoded_text_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete encoded_text_;
   }
   if (this != default_instance_) {
@@ -2252,30 +2292,38 @@ Ioi* Ioi::New() const {
 }
 
 void Ioi::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<Ioi*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
+  if (_has_bits_[0 / 32] & 255) {
+    ZR_(ioi_qlty_ind_, ioi_qty_);
+    ZR_(price_, price_exponent_);
     if (has_currency()) {
-      if (currency_ != &::google::protobuf::internal::kEmptyString) {
+      if (currency_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         currency_->clear();
       }
     }
     if (has_ioi_id()) {
-      if (ioi_id_ != &::google::protobuf::internal::kEmptyString) {
+      if (ioi_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         ioi_id_->clear();
       }
     }
-    ioi_qlty_ind_ = 0;
-    ioi_qty_ = 0;
     if (has_ioi_ref_id()) {
-      if (ioi_ref_id_ != &::google::protobuf::internal::kEmptyString) {
+      if (ioi_ref_id_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         ioi_ref_id_->clear();
       }
     }
-    ioi_trans_type_ = 0;
-    price_ = GOOGLE_LONGLONG(0);
-    price_exponent_ = 0;
   }
-  if (_has_bits_[8 / 32] & (0xffu << (8 % 32))) {
-    side_ = 0;
+  if (_has_bits_[8 / 32] & 65280) {
+    ZR_(side_, ioi_natural_flag_);
+    ZR_(valid_until_time_, transact_time_);
     if (has_standard_header()) {
       if (standard_header_ != NULL) standard_header_->::Session::StandardHeader::Clear();
     }
@@ -2283,30 +2331,26 @@ void Ioi::Clear() {
       if (standard_trailer_ != NULL) standard_trailer_->::Session::StandardTrailer::Clear();
     }
     if (has_text()) {
-      if (text_ != &::google::protobuf::internal::kEmptyString) {
+      if (text_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         text_->clear();
       }
     }
-    valid_until_time_ = GOOGLE_LONGLONG(0);
-    ioi_natural_flag_ = false;
-    transact_time_ = GOOGLE_LONGLONG(0);
     if (has_urllink()) {
-      if (urllink_ != &::google::protobuf::internal::kEmptyString) {
+      if (urllink_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         urllink_->clear();
       }
     }
   }
-  if (_has_bits_[16 / 32] & (0xffu << (16 % 32))) {
+  if (_has_bits_[16 / 32] & 4128768) {
+    ZR_(encoded_text_len_, price_type_);
     if (has_encoded_text()) {
-      if (encoded_text_ != &::google::protobuf::internal::kEmptyString) {
+      if (encoded_text_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         encoded_text_->clear();
       }
     }
-    encoded_text_len_ = 0u;
     if (has_instrument()) {
       if (instrument_ != NULL) instrument_->::Common::Instrument::Clear();
     }
-    price_type_ = 0;
     if (has_spread_or_benchmark_curve_data()) {
       if (spread_or_benchmark_curve_data_ != NULL) spread_or_benchmark_curve_data_->::Common::SpreadOrBenchmarkCurveData::Clear();
     }
@@ -2314,7 +2358,7 @@ void Ioi::Clear() {
       if (financing_details_ != NULL) financing_details_->::Common::FinancingDetails::Clear();
     }
   }
-  if (_has_bits_[24 / 32] & (0xffu << (24 % 32))) {
+  if (_has_bits_[24 / 32] & 3305111552) {
     if (has_order_qty_data()) {
       if (order_qty_data_ != NULL) order_qty_data_->::Common::OrderQtyData::Clear();
     }
@@ -2326,6 +2370,10 @@ void Ioi::Clear() {
       if (application_sequence_control_ != NULL) application_sequence_control_->::Common::ApplicationSequenceControl::Clear();
     }
   }
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
   ioi_qual_grp_.Clear();
   instrmt_leg_ioi_grp_.Clear();
   parties_.Clear();
@@ -2338,21 +2386,25 @@ void Ioi::Clear() {
 
 bool Ioi::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  while ((tag = input->ReadTag()) != 0) {
+  // @@protoc_insertion_point(parse_start:Indication.Ioi)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // optional string currency = 1;
       case 1: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_currency()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->currency().data(), this->currency().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "currency");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(18)) goto parse_ioi_id;
         break;
@@ -2360,16 +2412,16 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional string ioi_id = 2;
       case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 18) {
          parse_ioi_id:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_ioi_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->ioi_id().data(), this->ioi_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "ioi_id");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(24)) goto parse_ioi_qlty_ind;
         break;
@@ -2377,8 +2429,7 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Indication.IoiQltyIndEnum ioi_qlty_ind = 3;
       case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 24) {
          parse_ioi_qlty_ind:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -2390,7 +2441,7 @@ bool Ioi::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(3, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(32)) goto parse_ioi_qty;
         break;
@@ -2398,8 +2449,7 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Indication.IoiQtyEnum ioi_qty = 4;
       case 4: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 32) {
          parse_ioi_qty:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -2411,7 +2461,7 @@ bool Ioi::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(4, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(42)) goto parse_ioi_ref_id;
         break;
@@ -2419,16 +2469,16 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional string ioi_ref_id = 5;
       case 5: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 42) {
          parse_ioi_ref_id:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_ioi_ref_id()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->ioi_ref_id().data(), this->ioi_ref_id().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "ioi_ref_id");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(48)) goto parse_ioi_trans_type;
         break;
@@ -2436,8 +2486,7 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Indication.IoiTransTypeEnum ioi_trans_type = 6;
       case 6: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 48) {
          parse_ioi_trans_type:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -2449,7 +2498,7 @@ bool Ioi::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(6, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(57)) goto parse_price;
         break;
@@ -2457,15 +2506,14 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional sfixed64 price = 7;
       case 7: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+        if (tag == 57) {
          parse_price:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED64>(
                  input, &price_)));
           set_has_price();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(69)) goto parse_price_exponent;
         break;
@@ -2473,15 +2521,14 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional sfixed32 price_exponent = 8;
       case 8: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+        if (tag == 69) {
          parse_price_exponent:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED32>(
                  input, &price_exponent_)));
           set_has_price_exponent();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(72)) goto parse_side;
         break;
@@ -2489,8 +2536,7 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Indication.SideEnum side = 9;
       case 9: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 72) {
          parse_side:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -2502,7 +2548,7 @@ bool Ioi::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(9, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(82)) goto parse_standard_header;
         break;
@@ -2510,13 +2556,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Session.StandardHeader standard_header = 10;
       case 10: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 82) {
          parse_standard_header:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_standard_header()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(90)) goto parse_standard_trailer;
         break;
@@ -2524,13 +2569,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Session.StandardTrailer standard_trailer = 11;
       case 11: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 90) {
          parse_standard_trailer:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_standard_trailer()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(98)) goto parse_text;
         break;
@@ -2538,16 +2582,16 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional string text = 12;
       case 12: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 98) {
          parse_text:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_text()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->text().data(), this->text().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "text");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(105)) goto parse_valid_until_time;
         break;
@@ -2555,15 +2599,14 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional sfixed64 valid_until_time = 13;
       case 13: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+        if (tag == 105) {
          parse_valid_until_time:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED64>(
                  input, &valid_until_time_)));
           set_has_valid_until_time();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(112)) goto parse_ioi_natural_flag;
         break;
@@ -2571,15 +2614,14 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional bool ioi_natural_flag = 14;
       case 14: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 112) {
          parse_ioi_natural_flag:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &ioi_natural_flag_)));
           set_has_ioi_natural_flag();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(121)) goto parse_transact_time;
         break;
@@ -2587,15 +2629,14 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional sfixed64 transact_time = 15;
       case 15: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+        if (tag == 121) {
          parse_transact_time:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED64>(
                  input, &transact_time_)));
           set_has_transact_time();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(130)) goto parse_urllink;
         break;
@@ -2603,16 +2644,16 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional string urllink = 16;
       case 16: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 130) {
          parse_urllink:
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_urllink()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
             this->urllink().data(), this->urllink().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+            ::google::protobuf::internal::WireFormat::PARSE,
+            "urllink");
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(138)) goto parse_encoded_text;
         break;
@@ -2620,13 +2661,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional bytes encoded_text = 17;
       case 17: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 138) {
          parse_encoded_text:
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_encoded_text()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(149)) goto parse_encoded_text_len;
         break;
@@ -2634,15 +2674,14 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional fixed32 encoded_text_len = 18;
       case 18: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+        if (tag == 149) {
          parse_encoded_text_len:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
                  input, &encoded_text_len_)));
           set_has_encoded_text_len();
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(154)) goto parse_instrument;
         break;
@@ -2650,13 +2689,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Common.Instrument instrument = 19;
       case 19: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 154) {
          parse_instrument:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_instrument()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(160)) goto parse_price_type;
         break;
@@ -2664,8 +2702,7 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Indication.PriceTypeEnum price_type = 20;
       case 20: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 160) {
          parse_price_type:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -2677,7 +2714,7 @@ bool Ioi::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(20, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(170)) goto parse_spread_or_benchmark_curve_data;
         break;
@@ -2685,13 +2722,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 21;
       case 21: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 170) {
          parse_spread_or_benchmark_curve_data:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_spread_or_benchmark_curve_data()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(178)) goto parse_financing_details;
         break;
@@ -2699,13 +2735,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Common.FinancingDetails financing_details = 22;
       case 22: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 178) {
          parse_financing_details:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_financing_details()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(186)) goto parse_ioi_qual_grp;
         break;
@@ -2713,13 +2748,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // repeated .Indication.IoiQualGrp ioi_qual_grp = 23;
       case 23: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 186) {
          parse_ioi_qual_grp:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_ioi_qual_grp()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(186)) goto parse_ioi_qual_grp;
         if (input->ExpectTag(194)) goto parse_instrmt_leg_ioi_grp;
@@ -2728,13 +2762,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // repeated .Common.InstrmtLegIoiGrp instrmt_leg_ioi_grp = 24;
       case 24: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 194) {
          parse_instrmt_leg_ioi_grp:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_instrmt_leg_ioi_grp()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(194)) goto parse_instrmt_leg_ioi_grp;
         if (input->ExpectTag(202)) goto parse_order_qty_data;
@@ -2743,13 +2776,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Common.OrderQtyData order_qty_data = 25;
       case 25: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 202) {
          parse_order_qty_data:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_order_qty_data()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(210)) goto parse_parties;
         break;
@@ -2757,13 +2789,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // repeated .Common.Parties parties = 26;
       case 26: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 210) {
          parse_parties:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_parties()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(210)) goto parse_parties;
         if (input->ExpectTag(216)) goto parse_qty_type;
@@ -2772,8 +2803,7 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Indication.QtyTypeEnum qty_type = 27;
       case 27: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+        if (tag == 216) {
          parse_qty_type:
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
@@ -2785,7 +2815,7 @@ bool Ioi::MergePartialFromCodedStream(
             mutable_unknown_fields()->AddVarint(27, value);
           }
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(226)) goto parse_routing_grp;
         break;
@@ -2793,13 +2823,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // repeated .Common.RoutingGrp routing_grp = 28;
       case 28: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 226) {
          parse_routing_grp:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_routing_grp()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(226)) goto parse_routing_grp;
         if (input->ExpectTag(234)) goto parse_stipulations;
@@ -2808,13 +2837,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // repeated .Common.Stipulations stipulations = 29;
       case 29: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 234) {
          parse_stipulations:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_stipulations()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(234)) goto parse_stipulations;
         if (input->ExpectTag(242)) goto parse_und_instrmt_grp;
@@ -2823,13 +2851,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // repeated .Common.UndInstrmtGrp und_instrmt_grp = 30;
       case 30: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 242) {
          parse_und_instrmt_grp:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_und_instrmt_grp()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(242)) goto parse_und_instrmt_grp;
         if (input->ExpectTag(250)) goto parse_yield_data;
@@ -2838,13 +2865,12 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Common.YieldData yield_data = 31;
       case 31: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 250) {
          parse_yield_data:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_yield_data()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
         if (input->ExpectTag(258)) goto parse_application_sequence_control;
         break;
@@ -2852,23 +2878,23 @@ bool Ioi::MergePartialFromCodedStream(
 
       // optional .Common.ApplicationSequenceControl application_sequence_control = 32;
       case 32: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+        if (tag == 258) {
          parse_application_sequence_control:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_application_sequence_control()));
         } else {
-          goto handle_uninterpreted;
+          goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) return true;
+        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
-      handle_uninterpreted:
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          return true;
+          goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
               input, tag, mutable_unknown_fields()));
@@ -2876,27 +2902,35 @@ bool Ioi::MergePartialFromCodedStream(
       }
     }
   }
+success:
+  // @@protoc_insertion_point(parse_success:Indication.Ioi)
   return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:Indication.Ioi)
+  return false;
 #undef DO_
 }
 
 void Ioi::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:Indication.Ioi)
   // optional string currency = 1;
   if (has_currency()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->currency().data(), this->currency().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "currency");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->currency(), output);
   }
 
   // optional string ioi_id = 2;
   if (has_ioi_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->ioi_id().data(), this->ioi_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "ioi_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->ioi_id(), output);
   }
 
@@ -2914,10 +2948,11 @@ void Ioi::SerializeWithCachedSizes(
 
   // optional string ioi_ref_id = 5;
   if (has_ioi_ref_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->ioi_ref_id().data(), this->ioi_ref_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "ioi_ref_id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->ioi_ref_id(), output);
   }
 
@@ -2957,10 +2992,11 @@ void Ioi::SerializeWithCachedSizes(
 
   // optional string text = 12;
   if (has_text()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->text().data(), this->text().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "text");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       12, this->text(), output);
   }
 
@@ -2981,16 +3017,17 @@ void Ioi::SerializeWithCachedSizes(
 
   // optional string urllink = 16;
   if (has_urllink()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->urllink().data(), this->urllink().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "urllink");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       16, this->urllink(), output);
   }
 
   // optional bytes encoded_text = 17;
   if (has_encoded_text()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytes(
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
       17, this->encoded_text(), output);
   }
 
@@ -3087,15 +3124,18 @@ void Ioi::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
+  // @@protoc_insertion_point(serialize_end:Indication.Ioi)
 }
 
 ::google::protobuf::uint8* Ioi::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Indication.Ioi)
   // optional string currency = 1;
   if (has_currency()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->currency().data(), this->currency().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "currency");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->currency(), target);
@@ -3103,9 +3143,10 @@ void Ioi::SerializeWithCachedSizes(
 
   // optional string ioi_id = 2;
   if (has_ioi_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->ioi_id().data(), this->ioi_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "ioi_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->ioi_id(), target);
@@ -3125,9 +3166,10 @@ void Ioi::SerializeWithCachedSizes(
 
   // optional string ioi_ref_id = 5;
   if (has_ioi_ref_id()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->ioi_ref_id().data(), this->ioi_ref_id().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "ioi_ref_id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         5, this->ioi_ref_id(), target);
@@ -3171,9 +3213,10 @@ void Ioi::SerializeWithCachedSizes(
 
   // optional string text = 12;
   if (has_text()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->text().data(), this->text().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "text");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         12, this->text(), target);
@@ -3196,9 +3239,10 @@ void Ioi::SerializeWithCachedSizes(
 
   // optional string urllink = 16;
   if (has_urllink()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
       this->urllink().data(), this->urllink().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
+      ::google::protobuf::internal::WireFormat::SERIALIZE,
+      "urllink");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         16, this->urllink(), target);
@@ -3316,6 +3360,7 @@ void Ioi::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
+  // @@protoc_insertion_point(serialize_to_array_end:Indication.Ioi)
   return target;
 }
 

@@ -8024,10 +8024,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(enum_scope:SingleGeneralOrderHandling.DKReasonEnum)
   }
 
-  public interface AcctIdSourceUnionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AcctIdSourceUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.AcctIdSourceUnion)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 1;
     /**
      * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 1;</code>
      */
@@ -8037,7 +8037,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum getAcctIdSource();
 
-    // optional sfixed64 acct_id_source_sfixed64 = 2;
     /**
      * <code>optional sfixed64 acct_id_source_sfixed64 = 2;</code>
      */
@@ -8051,8 +8050,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.AcctIdSourceUnion}
    */
   public static final class AcctIdSourceUnion extends
-      com.google.protobuf.GeneratedMessage
-      implements AcctIdSourceUnionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.AcctIdSourceUnion)
+      AcctIdSourceUnionOrBuilder {
     // Use AcctIdSourceUnion.newBuilder() to construct.
     private AcctIdSourceUnion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -8154,7 +8154,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 1;
     public static final int ACCT_ID_SOURCE_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_;
     /**
@@ -8170,7 +8169,6 @@ public final class SingleGeneralOrderHandling {
       return acctIdSource_;
     }
 
-    // optional sfixed64 acct_id_source_sfixed64 = 2;
     public static final int ACCT_ID_SOURCE_SFIXED64_FIELD_NUMBER = 2;
     private long acctIdSourceSfixed64_;
     /**
@@ -8193,7 +8191,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -8307,8 +8306,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.AcctIdSourceUnion}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceUnionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.AcctIdSourceUnion)
+        org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceUnionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_descriptor;
@@ -8430,7 +8430,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 1;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum.ACCT_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 1;</code>
@@ -8466,7 +8465,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 acct_id_source_sfixed64 = 2;
       private long acctIdSourceSfixed64_ ;
       /**
        * <code>optional sfixed64 acct_id_source_sfixed64 = 2;</code>
@@ -8510,10 +8508,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.AcctIdSourceUnion)
   }
 
-  public interface SettlTypeUnionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SettlTypeUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.SettlTypeUnion)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 1;
     /**
      * <code>optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 1;</code>
      */
@@ -8523,7 +8521,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum getSettlType();
 
-    // optional .fix.Tenor settl_type_tenor = 2;
     /**
      * <code>optional .fix.Tenor settl_type_tenor = 2;</code>
      */
@@ -8541,8 +8538,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.SettlTypeUnion}
    */
   public static final class SettlTypeUnion extends
-      com.google.protobuf.GeneratedMessage
-      implements SettlTypeUnionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.SettlTypeUnion)
+      SettlTypeUnionOrBuilder {
     // Use SettlTypeUnion.newBuilder() to construct.
     private SettlTypeUnion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -8652,7 +8650,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 1;
     public static final int SETTL_TYPE_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum settlType_;
     /**
@@ -8668,7 +8665,6 @@ public final class SingleGeneralOrderHandling {
       return settlType_;
     }
 
-    // optional .fix.Tenor settl_type_tenor = 2;
     public static final int SETTL_TYPE_TENOR_FIELD_NUMBER = 2;
     private org.fixprotocol.components.Fix.Tenor settlTypeTenor_;
     /**
@@ -8697,7 +8693,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -8811,8 +8808,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.SettlTypeUnion}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeUnionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.SettlTypeUnion)
+        org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeUnionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_SettlTypeUnion_descriptor;
@@ -8943,7 +8941,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 1;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum settlType_ = org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum.SETTL_TYPE_CASH;
       /**
        * <code>optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 1;</code>
@@ -8979,7 +8976,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .fix.Tenor settl_type_tenor = 2;
       private org.fixprotocol.components.Fix.Tenor settlTypeTenor_ = org.fixprotocol.components.Fix.Tenor.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Fix.Tenor, org.fixprotocol.components.Fix.Tenor.Builder, org.fixprotocol.components.Fix.TenorOrBuilder> settlTypeTenorBuilder_;
@@ -9088,7 +9084,7 @@ public final class SingleGeneralOrderHandling {
         if (settlTypeTenorBuilder_ == null) {
           settlTypeTenorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Fix.Tenor, org.fixprotocol.components.Fix.Tenor.Builder, org.fixprotocol.components.Fix.TenorOrBuilder>(
-                  settlTypeTenor_,
+                  getSettlTypeTenor(),
                   getParentForChildren(),
                   isClean());
           settlTypeTenor_ = null;
@@ -9107,10 +9103,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.SettlTypeUnion)
   }
 
-  public interface TargetStrategyUnionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface TargetStrategyUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.TargetStrategyUnion)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 1;
     /**
      * <code>optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 1;</code>
      */
@@ -9120,7 +9116,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum getTargetStrategy();
 
-    // optional sfixed64 target_strategy_sfixed64 = 2;
     /**
      * <code>optional sfixed64 target_strategy_sfixed64 = 2;</code>
      */
@@ -9134,8 +9129,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.TargetStrategyUnion}
    */
   public static final class TargetStrategyUnion extends
-      com.google.protobuf.GeneratedMessage
-      implements TargetStrategyUnionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.TargetStrategyUnion)
+      TargetStrategyUnionOrBuilder {
     // Use TargetStrategyUnion.newBuilder() to construct.
     private TargetStrategyUnion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -9237,7 +9233,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 1;
     public static final int TARGET_STRATEGY_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum targetStrategy_;
     /**
@@ -9253,7 +9248,6 @@ public final class SingleGeneralOrderHandling {
       return targetStrategy_;
     }
 
-    // optional sfixed64 target_strategy_sfixed64 = 2;
     public static final int TARGET_STRATEGY_SFIXED64_FIELD_NUMBER = 2;
     private long targetStrategySfixed64_;
     /**
@@ -9276,7 +9270,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -9390,8 +9385,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.TargetStrategyUnion}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyUnionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.TargetStrategyUnion)
+        org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyUnionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_descriptor;
@@ -9513,7 +9509,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 1;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum targetStrategy_ = org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum.TARGET_STRATEGY_MININIZE_MARKET_IMPACT;
       /**
        * <code>optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 1;</code>
@@ -9549,7 +9544,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 target_strategy_sfixed64 = 2;
       private long targetStrategySfixed64_ ;
       /**
        * <code>optional sfixed64 target_strategy_sfixed64 = 2;</code>
@@ -9593,10 +9587,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.TargetStrategyUnion)
   }
 
-  public interface NewOrderSingleOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface NewOrderSingleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.NewOrderSingle)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string account = 1;
     /**
      * <code>optional string account = 1;</code>
      */
@@ -9611,7 +9605,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAccountBytes();
 
-    // optional string cl_ord_id = 2;
     /**
      * <code>optional string cl_ord_id = 2;</code>
      */
@@ -9626,7 +9619,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdIdBytes();
 
-    // optional string currency = 3;
     /**
      * <code>optional string currency = 3;</code>
      */
@@ -9641,7 +9633,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional string ex_destination = 4;
     /**
      * <code>optional string ex_destination = 4;</code>
      */
@@ -9656,7 +9647,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getExDestinationBytes();
 
-    // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 5 [packed = true];
     /**
      * <code>repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 5 [packed = true];</code>
      */
@@ -9670,7 +9660,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum getExecInst(int index);
 
-    // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 6;
     /**
      * <code>optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 6;</code>
      */
@@ -9680,7 +9669,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum getHandlInst();
 
-    // optional string ioi_id = 7;
     /**
      * <code>optional string ioi_id = 7;</code>
      */
@@ -9695,7 +9683,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getIoiIdBytes();
 
-    // optional sfixed64 max_floor = 8;
     /**
      * <code>optional sfixed64 max_floor = 8;</code>
      */
@@ -9705,7 +9692,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxFloor();
 
-    // optional sfixed32 max_floor_exponent = 9;
     /**
      * <code>optional sfixed32 max_floor_exponent = 9;</code>
      */
@@ -9715,7 +9701,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMaxFloorExponent();
 
-    // optional sfixed64 min_qty = 10;
     /**
      * <code>optional sfixed64 min_qty = 10;</code>
      */
@@ -9725,7 +9710,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMinQty();
 
-    // optional sfixed32 min_qty_exponent = 11;
     /**
      * <code>optional sfixed32 min_qty_exponent = 11;</code>
      */
@@ -9735,7 +9719,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMinQtyExponent();
 
-    // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 12;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 12;</code>
      */
@@ -9745,7 +9728,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum getOrdType();
 
-    // optional sfixed64 price = 13;
     /**
      * <code>optional sfixed64 price = 13;</code>
      */
@@ -9755,7 +9737,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPrice();
 
-    // optional sfixed32 price_exponent = 14;
     /**
      * <code>optional sfixed32 price_exponent = 14;</code>
      */
@@ -9765,7 +9746,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPriceExponent();
 
-    // optional .SingleGeneralOrderHandling.ProcessCodeEnum process_code = 15;
     /**
      * <code>optional .SingleGeneralOrderHandling.ProcessCodeEnum process_code = 15;</code>
      */
@@ -9775,7 +9755,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ProcessCodeEnum getProcessCode();
 
-    // optional sfixed32 settl_date = 16;
     /**
      * <code>optional sfixed32 settl_date = 16;</code>
      */
@@ -9785,7 +9764,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getSettlDate();
 
-    // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 17;
     /**
      * <code>optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 17;</code>
      */
@@ -9795,7 +9773,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum getSettlType();
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 18;
     /**
      * <code>optional .SingleGeneralOrderHandling.SideEnum side = 18;</code>
      */
@@ -9805,7 +9782,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum getSide();
 
-    // optional .Session.StandardHeader standard_header = 19;
     /**
      * <code>optional .Session.StandardHeader standard_header = 19;</code>
      */
@@ -9819,7 +9795,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 20;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 20;</code>
      */
@@ -9833,7 +9808,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional sfixed64 stop_px = 21;
     /**
      * <code>optional sfixed64 stop_px = 21;</code>
      */
@@ -9843,7 +9817,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getStopPx();
 
-    // optional sfixed32 stop_px_exponent = 22;
     /**
      * <code>optional sfixed32 stop_px_exponent = 22;</code>
      */
@@ -9853,7 +9826,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getStopPxExponent();
 
-    // optional string text = 23;
     /**
      * <code>optional string text = 23;</code>
      */
@@ -9868,7 +9840,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 24;
     /**
      * <code>optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 24;</code>
      */
@@ -9878,7 +9849,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum getTimeInForce();
 
-    // optional sfixed64 expire_time = 25;
     /**
      * <code>optional sfixed64 expire_time = 25;</code>
      */
@@ -9888,7 +9858,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getExpireTime();
 
-    // optional bool forex_req = 26;
     /**
      * <code>optional bool forex_req = 26;</code>
      */
@@ -9898,7 +9867,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getForexReq();
 
-    // optional bool locate_reqd = 27;
     /**
      * <code>optional bool locate_reqd = 27;</code>
      */
@@ -9908,7 +9876,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getLocateReqd();
 
-    // optional sfixed64 prev_close_px = 28;
     /**
      * <code>optional sfixed64 prev_close_px = 28;</code>
      */
@@ -9918,7 +9885,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPrevClosePx();
 
-    // optional sfixed32 prev_close_px_exponent = 29;
     /**
      * <code>optional sfixed32 prev_close_px_exponent = 29;</code>
      */
@@ -9928,7 +9894,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPrevClosePxExponent();
 
-    // optional string quote_id = 30;
     /**
      * <code>optional string quote_id = 30;</code>
      */
@@ -9943,7 +9908,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getQuoteIdBytes();
 
-    // optional string settl_currency = 31;
     /**
      * <code>optional string settl_currency = 31;</code>
      */
@@ -9958,7 +9922,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSettlCurrencyBytes();
 
-    // optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 32;
     /**
      * <code>optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 32;</code>
      */
@@ -9968,7 +9931,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CoveredOrUncoveredEnum getCoveredOrUncovered();
 
-    // optional sfixed64 max_show = 33;
     /**
      * <code>optional sfixed64 max_show = 33;</code>
      */
@@ -9978,7 +9940,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxShow();
 
-    // optional sfixed32 max_show_exponent = 34;
     /**
      * <code>optional sfixed32 max_show_exponent = 34;</code>
      */
@@ -9988,7 +9949,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMaxShowExponent();
 
-    // optional sfixed64 order_qty2 = 35;
     /**
      * <code>optional sfixed64 order_qty2 = 35;</code>
      */
@@ -9998,7 +9958,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getOrderQty2();
 
-    // optional sfixed32 order_qty2_exponent = 36;
     /**
      * <code>optional sfixed32 order_qty2_exponent = 36;</code>
      */
@@ -10008,7 +9967,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getOrderQty2Exponent();
 
-    // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 37;
     /**
      * <code>optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 37;</code>
      */
@@ -10018,7 +9976,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum getPositionEffect();
 
-    // optional sfixed32 settl_date2 = 38;
     /**
      * <code>optional sfixed32 settl_date2 = 38;</code>
      */
@@ -10028,7 +9985,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getSettlDate2();
 
-    // optional string compliance_id = 39;
     /**
      * <code>optional string compliance_id = 39;</code>
      */
@@ -10043,7 +9999,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getComplianceIdBytes();
 
-    // optional sfixed64 effective_time = 40;
     /**
      * <code>optional sfixed64 effective_time = 40;</code>
      */
@@ -10053,7 +10008,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getEffectiveTime();
 
-    // optional bytes encoded_text = 41;
     /**
      * <code>optional bytes encoded_text = 41;</code>
      */
@@ -10063,7 +10017,6 @@ public final class SingleGeneralOrderHandling {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 42;
     /**
      * <code>optional fixed32 encoded_text_len = 42;</code>
      */
@@ -10073,7 +10026,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEncodedTextLen();
 
-    // optional sfixed32 expire_date = 43;
     /**
      * <code>optional sfixed32 expire_date = 43;</code>
      */
@@ -10083,7 +10035,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getExpireDate();
 
-    // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 44;
     /**
      * <code>optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 44;</code>
      */
@@ -10093,7 +10044,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum getGtBookingInst();
 
-    // optional bool solicited_flag = 45;
     /**
      * <code>optional bool solicited_flag = 45;</code>
      */
@@ -10103,7 +10053,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getSolicitedFlag();
 
-    // optional sfixed64 transact_time = 46;
     /**
      * <code>optional sfixed64 transact_time = 46;</code>
      */
@@ -10113,7 +10062,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTransactTime();
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 47;
     /**
      * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 47;</code>
      */
@@ -10123,7 +10071,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum getAccountType();
 
-    // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 48;
     /**
      * <code>optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 48;</code>
      */
@@ -10133,7 +10080,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum getBookingUnit();
 
-    // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 49;
     /**
      * <code>optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 49;</code>
      */
@@ -10143,7 +10089,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum getCancellationRights();
 
-    // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 50;
     /**
      * <code>optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 50;</code>
      */
@@ -10153,7 +10098,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum getCashMargin();
 
-    // optional string cl_ord_link_id = 51;
     /**
      * <code>optional string cl_ord_link_id = 51;</code>
      */
@@ -10168,7 +10112,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdLinkIdBytes();
 
-    // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 52;
     /**
      * <code>optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 52;</code>
      */
@@ -10178,7 +10121,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum getClearingFeeIndicator();
 
-    // optional .Common.CommissionData commission_data = 53;
     /**
      * <code>optional .Common.CommissionData commission_data = 53;</code>
      */
@@ -10192,7 +10134,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.CommissionDataOrBuilder getCommissionDataOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 54;
     /**
      * <code>optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 54;</code>
      */
@@ -10202,7 +10143,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum getCustOrderCapacity();
 
-    // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 55;
     /**
      * <code>optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 55;</code>
      */
@@ -10212,7 +10152,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum getDayBookingInst();
 
-    // optional string designation = 56;
     /**
      * <code>optional string designation = 56;</code>
      */
@@ -10227,7 +10166,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getDesignationBytes();
 
-    // optional .Common.Instrument instrument = 57;
     /**
      * <code>optional .Common.Instrument instrument = 57;</code>
      */
@@ -10241,7 +10179,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 58;
     /**
      * <code>optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 58;</code>
      */
@@ -10251,7 +10188,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum getMoneyLaunderingStatus();
 
-    // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 59;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 59;</code>
      */
@@ -10261,7 +10197,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum getOrderCapacity();
 
-    // optional .Common.OrderQtyData order_qty_data = 60;
     /**
      * <code>optional .Common.OrderQtyData order_qty_data = 60;</code>
      */
@@ -10275,7 +10210,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.OrderQtyDataOrBuilder getOrderQtyDataOrBuilder();
 
-    // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 61 [packed = true];
     /**
      * <code>repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 61 [packed = true];</code>
      */
@@ -10289,7 +10223,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum getOrderRestrictions(int index);
 
-    // repeated .Common.Parties parties = 62;
     /**
      * <code>repeated .Common.Parties parties = 62;</code>
      */
@@ -10314,7 +10247,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.PartiesOrBuilder getPartiesOrBuilder(
         int index);
 
-    // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 63;
     /**
      * <code>optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 63;</code>
      */
@@ -10324,7 +10256,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum getPreallocMethod();
 
-    // optional sfixed64 price2 = 64;
     /**
      * <code>optional sfixed64 price2 = 64;</code>
      */
@@ -10334,7 +10265,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPrice2();
 
-    // optional sfixed32 price2_exponent = 65;
     /**
      * <code>optional sfixed32 price2_exponent = 65;</code>
      */
@@ -10344,7 +10274,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPrice2Exponent();
 
-    // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 66;
     /**
      * <code>optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 66;</code>
      */
@@ -10354,7 +10283,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum getPriceType();
 
-    // optional string regist_id = 67;
     /**
      * <code>optional string regist_id = 67;</code>
      */
@@ -10369,7 +10297,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getRegistIdBytes();
 
-    // optional string secondary_cl_ord_id = 68;
     /**
      * <code>optional string secondary_cl_ord_id = 68;</code>
      */
@@ -10384,7 +10311,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryClOrdIdBytes();
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 69;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 69;</code>
      */
@@ -10398,7 +10324,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // repeated .Common.Stipulations stipulations = 70;
     /**
      * <code>repeated .Common.Stipulations stipulations = 70;</code>
      */
@@ -10423,7 +10348,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.StipulationsOrBuilder getStipulationsOrBuilder(
         int index);
 
-    // optional sfixed32 trade_origination_date = 71;
     /**
      * <code>optional sfixed32 trade_origination_date = 71;</code>
      */
@@ -10433,7 +10357,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getTradeOriginationDate();
 
-    // optional .Common.YieldData yield_data = 72;
     /**
      * <code>optional .Common.YieldData yield_data = 72;</code>
      */
@@ -10447,7 +10370,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.YieldDataOrBuilder getYieldDataOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 73;
     /**
      * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 73;</code>
      */
@@ -10457,7 +10379,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum getAcctIdSource();
 
-    // optional string alloc_id = 74;
     /**
      * <code>optional string alloc_id = 74;</code>
      */
@@ -10472,7 +10393,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAllocIdBytes();
 
-    // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 75;
     /**
      * <code>optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 75;</code>
      */
@@ -10482,7 +10402,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum getBookingType();
 
-    // optional bool cust_directed_order = 76;
     /**
      * <code>optional bool cust_directed_order = 76;</code>
      */
@@ -10492,7 +10411,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getCustDirectedOrder();
 
-    // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 77;
     /**
      * <code>optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 77;</code>
      */
@@ -10502,7 +10420,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum getCustOrderHandlingInst();
 
-    // optional .Common.DiscretionInstructions discretion_instructions = 78;
     /**
      * <code>optional .Common.DiscretionInstructions discretion_instructions = 78;</code>
      */
@@ -10516,7 +10433,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder getDiscretionInstructionsOrBuilder();
 
-    // optional .Common.DisplayInstruction display_instruction = 79;
     /**
      * <code>optional .Common.DisplayInstruction display_instruction = 79;</code>
      */
@@ -10530,7 +10446,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.DisplayInstructionOrBuilder getDisplayInstructionOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 80;
     /**
      * <code>optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 80;</code>
      */
@@ -10540,7 +10455,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExDestinationIdSourceEnum getExDestinationIdSource();
 
-    // optional .Common.FinancingDetails financing_details = 81;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 81;</code>
      */
@@ -10554,7 +10468,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // optional bool manual_order_indicator = 82;
     /**
      * <code>optional bool manual_order_indicator = 82;</code>
      */
@@ -10564,7 +10477,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getManualOrderIndicator();
 
-    // optional sfixed64 match_increment = 83;
     /**
      * <code>optional sfixed64 match_increment = 83;</code>
      */
@@ -10574,7 +10486,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMatchIncrement();
 
-    // optional sfixed32 match_increment_exponent = 84;
     /**
      * <code>optional sfixed32 match_increment_exponent = 84;</code>
      */
@@ -10584,7 +10495,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMatchIncrementExponent();
 
-    // optional sfixed64 max_price_levels = 85;
     /**
      * <code>optional sfixed64 max_price_levels = 85;</code>
      */
@@ -10594,7 +10504,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxPriceLevels();
 
-    // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 86;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 86;</code>
      */
@@ -10604,7 +10513,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum getOrderHandlingInstSource();
 
-    // optional sfixed64 participation_rate = 87;
     /**
      * <code>optional sfixed64 participation_rate = 87;</code>
      */
@@ -10614,7 +10522,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getParticipationRate();
 
-    // optional sfixed32 participation_rate_exponent = 88;
     /**
      * <code>optional sfixed32 participation_rate_exponent = 88;</code>
      */
@@ -10624,7 +10531,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getParticipationRateExponent();
 
-    // optional .Common.PegInstructions peg_instructions = 89;
     /**
      * <code>optional .Common.PegInstructions peg_instructions = 89;</code>
      */
@@ -10638,7 +10544,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.PegInstructionsOrBuilder getPegInstructionsOrBuilder();
 
-    // repeated .Common.PreAllocGrp pre_alloc_grp = 90;
     /**
      * <code>repeated .Common.PreAllocGrp pre_alloc_grp = 90;</code>
      */
@@ -10663,7 +10568,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.PreAllocGrpOrBuilder getPreAllocGrpOrBuilder(
         int index);
 
-    // optional bool pre_trade_anonymity = 91;
     /**
      * <code>optional bool pre_trade_anonymity = 91;</code>
      */
@@ -10673,7 +10577,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getPreTradeAnonymity();
 
-    // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 92;
     /**
      * <code>optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 92;</code>
      */
@@ -10683,7 +10586,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum getPriceProtectionScope();
 
-    // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 93;
     /**
      * <code>optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 93;</code>
      */
@@ -10693,7 +10595,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum getQtyType();
 
-    // optional string received_dept_id = 94;
     /**
      * <code>optional string received_dept_id = 94;</code>
      */
@@ -10708,7 +10609,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getReceivedDeptIdBytes();
 
-    // optional string ref_order_id = 95;
     /**
      * <code>optional string ref_order_id = 95;</code>
      */
@@ -10723,7 +10623,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getRefOrderIdBytes();
 
-    // optional .SingleGeneralOrderHandling.RefOrderIdSourceEnum ref_order_id_source = 96;
     /**
      * <code>optional .SingleGeneralOrderHandling.RefOrderIdSourceEnum ref_order_id_source = 96;</code>
      */
@@ -10733,7 +10632,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.RefOrderIdSourceEnum getRefOrderIdSource();
 
-    // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 97;
     /**
      * <code>repeated .Common.StrategyParametersGrp strategy_parameters_grp = 97;</code>
      */
@@ -10758,7 +10656,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.StrategyParametersGrpOrBuilder getStrategyParametersGrpOrBuilder(
         int index);
 
-    // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 98;
     /**
      * <code>optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 98;</code>
      */
@@ -10768,7 +10665,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum getTargetStrategy();
 
-    // optional string target_strategy_parameters = 99;
     /**
      * <code>optional string target_strategy_parameters = 99;</code>
      */
@@ -10783,7 +10679,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTargetStrategyParametersBytes();
 
-    // optional sfixed32 trade_date = 100;
     /**
      * <code>optional sfixed32 trade_date = 100;</code>
      */
@@ -10793,7 +10688,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getTradeDate();
 
-    // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 101;
     /**
      * <code>repeated .Common.TrdRegTimestamps trd_reg_timestamps = 101;</code>
      */
@@ -10818,7 +10712,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.TrdRegTimestampsOrBuilder getTrdRegTimestampsOrBuilder(
         int index);
 
-    // repeated .Common.TrdgSesGrp trdg_ses_grp = 102;
     /**
      * <code>repeated .Common.TrdgSesGrp trdg_ses_grp = 102;</code>
      */
@@ -10843,7 +10736,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.TrdgSesGrpOrBuilder getTrdgSesGrpOrBuilder(
         int index);
 
-    // optional .Common.TriggeringInstruction triggering_instruction = 103;
     /**
      * <code>optional .Common.TriggeringInstruction triggering_instruction = 103;</code>
      */
@@ -10857,7 +10749,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.TriggeringInstructionOrBuilder getTriggeringInstructionOrBuilder();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 104;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 104;</code>
      */
@@ -10886,8 +10777,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.NewOrderSingle}
    */
   public static final class NewOrderSingle extends
-      com.google.protobuf.GeneratedMessage
-      implements NewOrderSingleOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.NewOrderSingle)
+      NewOrderSingleOrBuilder {
     // Use NewOrderSingle.newBuilder() to construct.
     private NewOrderSingle(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -10937,23 +10829,27 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              account_ = input.readBytes();
+              account_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              clOrdId_ = input.readBytes();
+              clOrdId_ = bs;
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              exDestination_ = input.readBytes();
+              exDestination_ = bs;
               break;
             }
             case 40: {
@@ -10961,7 +10857,7 @@ public final class SingleGeneralOrderHandling {
               org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(5, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                   execInst_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum>();
                   mutable_bitField0_ |= 0x00000010;
@@ -10978,7 +10874,7 @@ public final class SingleGeneralOrderHandling {
                 org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(5, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                     execInst_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum>();
                     mutable_bitField0_ |= 0x00000010;
@@ -11001,8 +10897,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              ioiId_ = input.readBytes();
+              ioiId_ = bs;
               break;
             }
             case 65: {
@@ -11121,8 +11018,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 186: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00200000;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 192: {
@@ -11162,13 +11060,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 242: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x10000000;
-              quoteId_ = input.readBytes();
+              quoteId_ = bs;
               break;
             }
             case 250: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x20000000;
-              settlCurrency_ = input.readBytes();
+              settlCurrency_ = bs;
               break;
             }
             case 256: {
@@ -11219,8 +11119,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 314: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00000020;
-              complianceId_ = input.readBytes();
+              complianceId_ = bs;
               break;
             }
             case 321: {
@@ -11309,8 +11210,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 410: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00020000;
-              clOrdLinkId_ = input.readBytes();
+              clOrdLinkId_ = bs;
               break;
             }
             case 416: {
@@ -11360,8 +11262,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 450: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00400000;
-              designation_ = input.readBytes();
+              designation_ = bs;
               break;
             }
             case 458: {
@@ -11417,7 +11320,7 @@ public final class SingleGeneralOrderHandling {
               org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(61, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField1_ & 0x10000000) == 0x10000000)) {
                   orderRestrictions_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum>();
                   mutable_bitField1_ |= 0x10000000;
@@ -11434,7 +11337,7 @@ public final class SingleGeneralOrderHandling {
                 org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(61, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField1_ & 0x10000000) == 0x10000000)) {
                     orderRestrictions_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum>();
                     mutable_bitField1_ |= 0x10000000;
@@ -11486,13 +11389,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 538: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x80000000;
-              registId_ = input.readBytes();
+              registId_ = bs;
               break;
             }
             case 546: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x00000001;
-              secondaryClOrdId_ = input.readBytes();
+              secondaryClOrdId_ = bs;
               break;
             }
             case 554: {
@@ -11546,8 +11451,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 594: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x00000020;
-              allocId_ = input.readBytes();
+              allocId_ = bs;
               break;
             }
             case 600: {
@@ -11717,13 +11623,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 754: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x01000000;
-              receivedDeptId_ = input.readBytes();
+              receivedDeptId_ = bs;
               break;
             }
             case 762: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x02000000;
-              refOrderId_ = input.readBytes();
+              refOrderId_ = bs;
               break;
             }
             case 768: {
@@ -11757,8 +11665,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 794: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x10000000;
-              targetStrategyParameters_ = input.readBytes();
+              targetStrategyParameters_ = bs;
               break;
             }
             case 805: {
@@ -11872,7 +11781,6 @@ public final class SingleGeneralOrderHandling {
     private int bitField0_;
     private int bitField1_;
     private int bitField2_;
-    // optional string account = 1;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     private java.lang.Object account_;
     /**
@@ -11915,7 +11823,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string cl_ord_id = 2;
     public static final int CL_ORD_ID_FIELD_NUMBER = 2;
     private java.lang.Object clOrdId_;
     /**
@@ -11958,7 +11865,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string currency = 3;
     public static final int CURRENCY_FIELD_NUMBER = 3;
     private java.lang.Object currency_;
     /**
@@ -12001,7 +11907,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string ex_destination = 4;
     public static final int EX_DESTINATION_FIELD_NUMBER = 4;
     private java.lang.Object exDestination_;
     /**
@@ -12044,7 +11949,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 5 [packed = true];
     public static final int EXEC_INST_FIELD_NUMBER = 5;
     private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> execInst_;
     /**
@@ -12067,7 +11971,6 @@ public final class SingleGeneralOrderHandling {
     }
     private int execInstMemoizedSerializedSize;
 
-    // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 6;
     public static final int HANDL_INST_FIELD_NUMBER = 6;
     private org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum handlInst_;
     /**
@@ -12083,7 +11986,6 @@ public final class SingleGeneralOrderHandling {
       return handlInst_;
     }
 
-    // optional string ioi_id = 7;
     public static final int IOI_ID_FIELD_NUMBER = 7;
     private java.lang.Object ioiId_;
     /**
@@ -12126,7 +12028,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 max_floor = 8;
     public static final int MAX_FLOOR_FIELD_NUMBER = 8;
     private long maxFloor_;
     /**
@@ -12142,7 +12043,6 @@ public final class SingleGeneralOrderHandling {
       return maxFloor_;
     }
 
-    // optional sfixed32 max_floor_exponent = 9;
     public static final int MAX_FLOOR_EXPONENT_FIELD_NUMBER = 9;
     private int maxFloorExponent_;
     /**
@@ -12158,7 +12058,6 @@ public final class SingleGeneralOrderHandling {
       return maxFloorExponent_;
     }
 
-    // optional sfixed64 min_qty = 10;
     public static final int MIN_QTY_FIELD_NUMBER = 10;
     private long minQty_;
     /**
@@ -12174,7 +12073,6 @@ public final class SingleGeneralOrderHandling {
       return minQty_;
     }
 
-    // optional sfixed32 min_qty_exponent = 11;
     public static final int MIN_QTY_EXPONENT_FIELD_NUMBER = 11;
     private int minQtyExponent_;
     /**
@@ -12190,7 +12088,6 @@ public final class SingleGeneralOrderHandling {
       return minQtyExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 12;
     public static final int ORD_TYPE_FIELD_NUMBER = 12;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum ordType_;
     /**
@@ -12206,7 +12103,6 @@ public final class SingleGeneralOrderHandling {
       return ordType_;
     }
 
-    // optional sfixed64 price = 13;
     public static final int PRICE_FIELD_NUMBER = 13;
     private long price_;
     /**
@@ -12222,7 +12118,6 @@ public final class SingleGeneralOrderHandling {
       return price_;
     }
 
-    // optional sfixed32 price_exponent = 14;
     public static final int PRICE_EXPONENT_FIELD_NUMBER = 14;
     private int priceExponent_;
     /**
@@ -12238,7 +12133,6 @@ public final class SingleGeneralOrderHandling {
       return priceExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.ProcessCodeEnum process_code = 15;
     public static final int PROCESS_CODE_FIELD_NUMBER = 15;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ProcessCodeEnum processCode_;
     /**
@@ -12254,7 +12148,6 @@ public final class SingleGeneralOrderHandling {
       return processCode_;
     }
 
-    // optional sfixed32 settl_date = 16;
     public static final int SETTL_DATE_FIELD_NUMBER = 16;
     private int settlDate_;
     /**
@@ -12270,7 +12163,6 @@ public final class SingleGeneralOrderHandling {
       return settlDate_;
     }
 
-    // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 17;
     public static final int SETTL_TYPE_FIELD_NUMBER = 17;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum settlType_;
     /**
@@ -12286,7 +12178,6 @@ public final class SingleGeneralOrderHandling {
       return settlType_;
     }
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 18;
     public static final int SIDE_FIELD_NUMBER = 18;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_;
     /**
@@ -12302,7 +12193,6 @@ public final class SingleGeneralOrderHandling {
       return side_;
     }
 
-    // optional .Session.StandardHeader standard_header = 19;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 19;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -12324,7 +12214,6 @@ public final class SingleGeneralOrderHandling {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 20;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 20;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -12346,7 +12235,6 @@ public final class SingleGeneralOrderHandling {
       return standardTrailer_;
     }
 
-    // optional sfixed64 stop_px = 21;
     public static final int STOP_PX_FIELD_NUMBER = 21;
     private long stopPx_;
     /**
@@ -12362,7 +12250,6 @@ public final class SingleGeneralOrderHandling {
       return stopPx_;
     }
 
-    // optional sfixed32 stop_px_exponent = 22;
     public static final int STOP_PX_EXPONENT_FIELD_NUMBER = 22;
     private int stopPxExponent_;
     /**
@@ -12378,7 +12265,6 @@ public final class SingleGeneralOrderHandling {
       return stopPxExponent_;
     }
 
-    // optional string text = 23;
     public static final int TEXT_FIELD_NUMBER = 23;
     private java.lang.Object text_;
     /**
@@ -12421,7 +12307,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 24;
     public static final int TIME_IN_FORCE_FIELD_NUMBER = 24;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum timeInForce_;
     /**
@@ -12437,7 +12322,6 @@ public final class SingleGeneralOrderHandling {
       return timeInForce_;
     }
 
-    // optional sfixed64 expire_time = 25;
     public static final int EXPIRE_TIME_FIELD_NUMBER = 25;
     private long expireTime_;
     /**
@@ -12453,7 +12337,6 @@ public final class SingleGeneralOrderHandling {
       return expireTime_;
     }
 
-    // optional bool forex_req = 26;
     public static final int FOREX_REQ_FIELD_NUMBER = 26;
     private boolean forexReq_;
     /**
@@ -12469,7 +12352,6 @@ public final class SingleGeneralOrderHandling {
       return forexReq_;
     }
 
-    // optional bool locate_reqd = 27;
     public static final int LOCATE_REQD_FIELD_NUMBER = 27;
     private boolean locateReqd_;
     /**
@@ -12485,7 +12367,6 @@ public final class SingleGeneralOrderHandling {
       return locateReqd_;
     }
 
-    // optional sfixed64 prev_close_px = 28;
     public static final int PREV_CLOSE_PX_FIELD_NUMBER = 28;
     private long prevClosePx_;
     /**
@@ -12501,7 +12382,6 @@ public final class SingleGeneralOrderHandling {
       return prevClosePx_;
     }
 
-    // optional sfixed32 prev_close_px_exponent = 29;
     public static final int PREV_CLOSE_PX_EXPONENT_FIELD_NUMBER = 29;
     private int prevClosePxExponent_;
     /**
@@ -12517,7 +12397,6 @@ public final class SingleGeneralOrderHandling {
       return prevClosePxExponent_;
     }
 
-    // optional string quote_id = 30;
     public static final int QUOTE_ID_FIELD_NUMBER = 30;
     private java.lang.Object quoteId_;
     /**
@@ -12560,7 +12439,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string settl_currency = 31;
     public static final int SETTL_CURRENCY_FIELD_NUMBER = 31;
     private java.lang.Object settlCurrency_;
     /**
@@ -12603,7 +12481,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 32;
     public static final int COVERED_OR_UNCOVERED_FIELD_NUMBER = 32;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CoveredOrUncoveredEnum coveredOrUncovered_;
     /**
@@ -12619,7 +12496,6 @@ public final class SingleGeneralOrderHandling {
       return coveredOrUncovered_;
     }
 
-    // optional sfixed64 max_show = 33;
     public static final int MAX_SHOW_FIELD_NUMBER = 33;
     private long maxShow_;
     /**
@@ -12635,7 +12511,6 @@ public final class SingleGeneralOrderHandling {
       return maxShow_;
     }
 
-    // optional sfixed32 max_show_exponent = 34;
     public static final int MAX_SHOW_EXPONENT_FIELD_NUMBER = 34;
     private int maxShowExponent_;
     /**
@@ -12651,7 +12526,6 @@ public final class SingleGeneralOrderHandling {
       return maxShowExponent_;
     }
 
-    // optional sfixed64 order_qty2 = 35;
     public static final int ORDER_QTY2_FIELD_NUMBER = 35;
     private long orderQty2_;
     /**
@@ -12667,7 +12541,6 @@ public final class SingleGeneralOrderHandling {
       return orderQty2_;
     }
 
-    // optional sfixed32 order_qty2_exponent = 36;
     public static final int ORDER_QTY2_EXPONENT_FIELD_NUMBER = 36;
     private int orderQty2Exponent_;
     /**
@@ -12683,7 +12556,6 @@ public final class SingleGeneralOrderHandling {
       return orderQty2Exponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 37;
     public static final int POSITION_EFFECT_FIELD_NUMBER = 37;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum positionEffect_;
     /**
@@ -12699,7 +12571,6 @@ public final class SingleGeneralOrderHandling {
       return positionEffect_;
     }
 
-    // optional sfixed32 settl_date2 = 38;
     public static final int SETTL_DATE2_FIELD_NUMBER = 38;
     private int settlDate2_;
     /**
@@ -12715,7 +12586,6 @@ public final class SingleGeneralOrderHandling {
       return settlDate2_;
     }
 
-    // optional string compliance_id = 39;
     public static final int COMPLIANCE_ID_FIELD_NUMBER = 39;
     private java.lang.Object complianceId_;
     /**
@@ -12758,7 +12628,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 effective_time = 40;
     public static final int EFFECTIVE_TIME_FIELD_NUMBER = 40;
     private long effectiveTime_;
     /**
@@ -12774,7 +12643,6 @@ public final class SingleGeneralOrderHandling {
       return effectiveTime_;
     }
 
-    // optional bytes encoded_text = 41;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 41;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -12790,7 +12658,6 @@ public final class SingleGeneralOrderHandling {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 42;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 42;
     private int encodedTextLen_;
     /**
@@ -12806,7 +12673,6 @@ public final class SingleGeneralOrderHandling {
       return encodedTextLen_;
     }
 
-    // optional sfixed32 expire_date = 43;
     public static final int EXPIRE_DATE_FIELD_NUMBER = 43;
     private int expireDate_;
     /**
@@ -12822,7 +12688,6 @@ public final class SingleGeneralOrderHandling {
       return expireDate_;
     }
 
-    // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 44;
     public static final int GT_BOOKING_INST_FIELD_NUMBER = 44;
     private org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum gtBookingInst_;
     /**
@@ -12838,7 +12703,6 @@ public final class SingleGeneralOrderHandling {
       return gtBookingInst_;
     }
 
-    // optional bool solicited_flag = 45;
     public static final int SOLICITED_FLAG_FIELD_NUMBER = 45;
     private boolean solicitedFlag_;
     /**
@@ -12854,7 +12718,6 @@ public final class SingleGeneralOrderHandling {
       return solicitedFlag_;
     }
 
-    // optional sfixed64 transact_time = 46;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 46;
     private long transactTime_;
     /**
@@ -12870,7 +12733,6 @@ public final class SingleGeneralOrderHandling {
       return transactTime_;
     }
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 47;
     public static final int ACCOUNT_TYPE_FIELD_NUMBER = 47;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_;
     /**
@@ -12886,7 +12748,6 @@ public final class SingleGeneralOrderHandling {
       return accountType_;
     }
 
-    // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 48;
     public static final int BOOKING_UNIT_FIELD_NUMBER = 48;
     private org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum bookingUnit_;
     /**
@@ -12902,7 +12763,6 @@ public final class SingleGeneralOrderHandling {
       return bookingUnit_;
     }
 
-    // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 49;
     public static final int CANCELLATION_RIGHTS_FIELD_NUMBER = 49;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum cancellationRights_;
     /**
@@ -12918,7 +12778,6 @@ public final class SingleGeneralOrderHandling {
       return cancellationRights_;
     }
 
-    // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 50;
     public static final int CASH_MARGIN_FIELD_NUMBER = 50;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum cashMargin_;
     /**
@@ -12934,7 +12793,6 @@ public final class SingleGeneralOrderHandling {
       return cashMargin_;
     }
 
-    // optional string cl_ord_link_id = 51;
     public static final int CL_ORD_LINK_ID_FIELD_NUMBER = 51;
     private java.lang.Object clOrdLinkId_;
     /**
@@ -12977,7 +12835,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 52;
     public static final int CLEARING_FEE_INDICATOR_FIELD_NUMBER = 52;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearingFeeIndicator_;
     /**
@@ -12993,7 +12850,6 @@ public final class SingleGeneralOrderHandling {
       return clearingFeeIndicator_;
     }
 
-    // optional .Common.CommissionData commission_data = 53;
     public static final int COMMISSION_DATA_FIELD_NUMBER = 53;
     private org.fixprotocol.components.Common.CommissionData commissionData_;
     /**
@@ -13015,7 +12871,6 @@ public final class SingleGeneralOrderHandling {
       return commissionData_;
     }
 
-    // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 54;
     public static final int CUST_ORDER_CAPACITY_FIELD_NUMBER = 54;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum custOrderCapacity_;
     /**
@@ -13031,7 +12886,6 @@ public final class SingleGeneralOrderHandling {
       return custOrderCapacity_;
     }
 
-    // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 55;
     public static final int DAY_BOOKING_INST_FIELD_NUMBER = 55;
     private org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum dayBookingInst_;
     /**
@@ -13047,7 +12901,6 @@ public final class SingleGeneralOrderHandling {
       return dayBookingInst_;
     }
 
-    // optional string designation = 56;
     public static final int DESIGNATION_FIELD_NUMBER = 56;
     private java.lang.Object designation_;
     /**
@@ -13090,7 +12943,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.Instrument instrument = 57;
     public static final int INSTRUMENT_FIELD_NUMBER = 57;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -13112,7 +12964,6 @@ public final class SingleGeneralOrderHandling {
       return instrument_;
     }
 
-    // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 58;
     public static final int MONEY_LAUNDERING_STATUS_FIELD_NUMBER = 58;
     private org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum moneyLaunderingStatus_;
     /**
@@ -13128,7 +12979,6 @@ public final class SingleGeneralOrderHandling {
       return moneyLaunderingStatus_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 59;
     public static final int ORDER_CAPACITY_FIELD_NUMBER = 59;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum orderCapacity_;
     /**
@@ -13144,7 +12994,6 @@ public final class SingleGeneralOrderHandling {
       return orderCapacity_;
     }
 
-    // optional .Common.OrderQtyData order_qty_data = 60;
     public static final int ORDER_QTY_DATA_FIELD_NUMBER = 60;
     private org.fixprotocol.components.Common.OrderQtyData orderQtyData_;
     /**
@@ -13166,7 +13015,6 @@ public final class SingleGeneralOrderHandling {
       return orderQtyData_;
     }
 
-    // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 61 [packed = true];
     public static final int ORDER_RESTRICTIONS_FIELD_NUMBER = 61;
     private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> orderRestrictions_;
     /**
@@ -13189,7 +13037,6 @@ public final class SingleGeneralOrderHandling {
     }
     private int orderRestrictionsMemoizedSerializedSize;
 
-    // repeated .Common.Parties parties = 62;
     public static final int PARTIES_FIELD_NUMBER = 62;
     private java.util.List<org.fixprotocol.components.Common.Parties> parties_;
     /**
@@ -13225,7 +13072,6 @@ public final class SingleGeneralOrderHandling {
       return parties_.get(index);
     }
 
-    // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 63;
     public static final int PREALLOC_METHOD_FIELD_NUMBER = 63;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum preallocMethod_;
     /**
@@ -13241,7 +13087,6 @@ public final class SingleGeneralOrderHandling {
       return preallocMethod_;
     }
 
-    // optional sfixed64 price2 = 64;
     public static final int PRICE2_FIELD_NUMBER = 64;
     private long price2_;
     /**
@@ -13257,7 +13102,6 @@ public final class SingleGeneralOrderHandling {
       return price2_;
     }
 
-    // optional sfixed32 price2_exponent = 65;
     public static final int PRICE2_EXPONENT_FIELD_NUMBER = 65;
     private int price2Exponent_;
     /**
@@ -13273,7 +13117,6 @@ public final class SingleGeneralOrderHandling {
       return price2Exponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 66;
     public static final int PRICE_TYPE_FIELD_NUMBER = 66;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum priceType_;
     /**
@@ -13289,7 +13132,6 @@ public final class SingleGeneralOrderHandling {
       return priceType_;
     }
 
-    // optional string regist_id = 67;
     public static final int REGIST_ID_FIELD_NUMBER = 67;
     private java.lang.Object registId_;
     /**
@@ -13332,7 +13174,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string secondary_cl_ord_id = 68;
     public static final int SECONDARY_CL_ORD_ID_FIELD_NUMBER = 68;
     private java.lang.Object secondaryClOrdId_;
     /**
@@ -13375,7 +13216,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 69;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 69;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -13397,7 +13237,6 @@ public final class SingleGeneralOrderHandling {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // repeated .Common.Stipulations stipulations = 70;
     public static final int STIPULATIONS_FIELD_NUMBER = 70;
     private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_;
     /**
@@ -13433,7 +13272,6 @@ public final class SingleGeneralOrderHandling {
       return stipulations_.get(index);
     }
 
-    // optional sfixed32 trade_origination_date = 71;
     public static final int TRADE_ORIGINATION_DATE_FIELD_NUMBER = 71;
     private int tradeOriginationDate_;
     /**
@@ -13449,7 +13287,6 @@ public final class SingleGeneralOrderHandling {
       return tradeOriginationDate_;
     }
 
-    // optional .Common.YieldData yield_data = 72;
     public static final int YIELD_DATA_FIELD_NUMBER = 72;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -13471,7 +13308,6 @@ public final class SingleGeneralOrderHandling {
       return yieldData_;
     }
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 73;
     public static final int ACCT_ID_SOURCE_FIELD_NUMBER = 73;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_;
     /**
@@ -13487,7 +13323,6 @@ public final class SingleGeneralOrderHandling {
       return acctIdSource_;
     }
 
-    // optional string alloc_id = 74;
     public static final int ALLOC_ID_FIELD_NUMBER = 74;
     private java.lang.Object allocId_;
     /**
@@ -13530,7 +13365,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 75;
     public static final int BOOKING_TYPE_FIELD_NUMBER = 75;
     private org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum bookingType_;
     /**
@@ -13546,7 +13380,6 @@ public final class SingleGeneralOrderHandling {
       return bookingType_;
     }
 
-    // optional bool cust_directed_order = 76;
     public static final int CUST_DIRECTED_ORDER_FIELD_NUMBER = 76;
     private boolean custDirectedOrder_;
     /**
@@ -13562,7 +13395,6 @@ public final class SingleGeneralOrderHandling {
       return custDirectedOrder_;
     }
 
-    // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 77;
     public static final int CUST_ORDER_HANDLING_INST_FIELD_NUMBER = 77;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum custOrderHandlingInst_;
     /**
@@ -13578,7 +13410,6 @@ public final class SingleGeneralOrderHandling {
       return custOrderHandlingInst_;
     }
 
-    // optional .Common.DiscretionInstructions discretion_instructions = 78;
     public static final int DISCRETION_INSTRUCTIONS_FIELD_NUMBER = 78;
     private org.fixprotocol.components.Common.DiscretionInstructions discretionInstructions_;
     /**
@@ -13600,7 +13431,6 @@ public final class SingleGeneralOrderHandling {
       return discretionInstructions_;
     }
 
-    // optional .Common.DisplayInstruction display_instruction = 79;
     public static final int DISPLAY_INSTRUCTION_FIELD_NUMBER = 79;
     private org.fixprotocol.components.Common.DisplayInstruction displayInstruction_;
     /**
@@ -13622,7 +13452,6 @@ public final class SingleGeneralOrderHandling {
       return displayInstruction_;
     }
 
-    // optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 80;
     public static final int EX_DESTINATION_ID_SOURCE_FIELD_NUMBER = 80;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ExDestinationIdSourceEnum exDestinationIdSource_;
     /**
@@ -13638,7 +13467,6 @@ public final class SingleGeneralOrderHandling {
       return exDestinationIdSource_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 81;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 81;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -13660,7 +13488,6 @@ public final class SingleGeneralOrderHandling {
       return financingDetails_;
     }
 
-    // optional bool manual_order_indicator = 82;
     public static final int MANUAL_ORDER_INDICATOR_FIELD_NUMBER = 82;
     private boolean manualOrderIndicator_;
     /**
@@ -13676,7 +13503,6 @@ public final class SingleGeneralOrderHandling {
       return manualOrderIndicator_;
     }
 
-    // optional sfixed64 match_increment = 83;
     public static final int MATCH_INCREMENT_FIELD_NUMBER = 83;
     private long matchIncrement_;
     /**
@@ -13692,7 +13518,6 @@ public final class SingleGeneralOrderHandling {
       return matchIncrement_;
     }
 
-    // optional sfixed32 match_increment_exponent = 84;
     public static final int MATCH_INCREMENT_EXPONENT_FIELD_NUMBER = 84;
     private int matchIncrementExponent_;
     /**
@@ -13708,7 +13533,6 @@ public final class SingleGeneralOrderHandling {
       return matchIncrementExponent_;
     }
 
-    // optional sfixed64 max_price_levels = 85;
     public static final int MAX_PRICE_LEVELS_FIELD_NUMBER = 85;
     private long maxPriceLevels_;
     /**
@@ -13724,7 +13548,6 @@ public final class SingleGeneralOrderHandling {
       return maxPriceLevels_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 86;
     public static final int ORDER_HANDLING_INST_SOURCE_FIELD_NUMBER = 86;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum orderHandlingInstSource_;
     /**
@@ -13740,7 +13563,6 @@ public final class SingleGeneralOrderHandling {
       return orderHandlingInstSource_;
     }
 
-    // optional sfixed64 participation_rate = 87;
     public static final int PARTICIPATION_RATE_FIELD_NUMBER = 87;
     private long participationRate_;
     /**
@@ -13756,7 +13578,6 @@ public final class SingleGeneralOrderHandling {
       return participationRate_;
     }
 
-    // optional sfixed32 participation_rate_exponent = 88;
     public static final int PARTICIPATION_RATE_EXPONENT_FIELD_NUMBER = 88;
     private int participationRateExponent_;
     /**
@@ -13772,7 +13593,6 @@ public final class SingleGeneralOrderHandling {
       return participationRateExponent_;
     }
 
-    // optional .Common.PegInstructions peg_instructions = 89;
     public static final int PEG_INSTRUCTIONS_FIELD_NUMBER = 89;
     private org.fixprotocol.components.Common.PegInstructions pegInstructions_;
     /**
@@ -13794,7 +13614,6 @@ public final class SingleGeneralOrderHandling {
       return pegInstructions_;
     }
 
-    // repeated .Common.PreAllocGrp pre_alloc_grp = 90;
     public static final int PRE_ALLOC_GRP_FIELD_NUMBER = 90;
     private java.util.List<org.fixprotocol.components.Common.PreAllocGrp> preAllocGrp_;
     /**
@@ -13830,7 +13649,6 @@ public final class SingleGeneralOrderHandling {
       return preAllocGrp_.get(index);
     }
 
-    // optional bool pre_trade_anonymity = 91;
     public static final int PRE_TRADE_ANONYMITY_FIELD_NUMBER = 91;
     private boolean preTradeAnonymity_;
     /**
@@ -13846,7 +13664,6 @@ public final class SingleGeneralOrderHandling {
       return preTradeAnonymity_;
     }
 
-    // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 92;
     public static final int PRICE_PROTECTION_SCOPE_FIELD_NUMBER = 92;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum priceProtectionScope_;
     /**
@@ -13862,7 +13679,6 @@ public final class SingleGeneralOrderHandling {
       return priceProtectionScope_;
     }
 
-    // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 93;
     public static final int QTY_TYPE_FIELD_NUMBER = 93;
     private org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum qtyType_;
     /**
@@ -13878,7 +13694,6 @@ public final class SingleGeneralOrderHandling {
       return qtyType_;
     }
 
-    // optional string received_dept_id = 94;
     public static final int RECEIVED_DEPT_ID_FIELD_NUMBER = 94;
     private java.lang.Object receivedDeptId_;
     /**
@@ -13921,7 +13736,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string ref_order_id = 95;
     public static final int REF_ORDER_ID_FIELD_NUMBER = 95;
     private java.lang.Object refOrderId_;
     /**
@@ -13964,7 +13778,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.RefOrderIdSourceEnum ref_order_id_source = 96;
     public static final int REF_ORDER_ID_SOURCE_FIELD_NUMBER = 96;
     private org.fixprotocol.components.SingleGeneralOrderHandling.RefOrderIdSourceEnum refOrderIdSource_;
     /**
@@ -13980,7 +13793,6 @@ public final class SingleGeneralOrderHandling {
       return refOrderIdSource_;
     }
 
-    // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 97;
     public static final int STRATEGY_PARAMETERS_GRP_FIELD_NUMBER = 97;
     private java.util.List<org.fixprotocol.components.Common.StrategyParametersGrp> strategyParametersGrp_;
     /**
@@ -14016,7 +13828,6 @@ public final class SingleGeneralOrderHandling {
       return strategyParametersGrp_.get(index);
     }
 
-    // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 98;
     public static final int TARGET_STRATEGY_FIELD_NUMBER = 98;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum targetStrategy_;
     /**
@@ -14032,7 +13843,6 @@ public final class SingleGeneralOrderHandling {
       return targetStrategy_;
     }
 
-    // optional string target_strategy_parameters = 99;
     public static final int TARGET_STRATEGY_PARAMETERS_FIELD_NUMBER = 99;
     private java.lang.Object targetStrategyParameters_;
     /**
@@ -14075,7 +13885,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed32 trade_date = 100;
     public static final int TRADE_DATE_FIELD_NUMBER = 100;
     private int tradeDate_;
     /**
@@ -14091,7 +13900,6 @@ public final class SingleGeneralOrderHandling {
       return tradeDate_;
     }
 
-    // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 101;
     public static final int TRD_REG_TIMESTAMPS_FIELD_NUMBER = 101;
     private java.util.List<org.fixprotocol.components.Common.TrdRegTimestamps> trdRegTimestamps_;
     /**
@@ -14127,7 +13935,6 @@ public final class SingleGeneralOrderHandling {
       return trdRegTimestamps_.get(index);
     }
 
-    // repeated .Common.TrdgSesGrp trdg_ses_grp = 102;
     public static final int TRDG_SES_GRP_FIELD_NUMBER = 102;
     private java.util.List<org.fixprotocol.components.Common.TrdgSesGrp> trdgSesGrp_;
     /**
@@ -14163,7 +13970,6 @@ public final class SingleGeneralOrderHandling {
       return trdgSesGrp_.get(index);
     }
 
-    // optional .Common.TriggeringInstruction triggering_instruction = 103;
     public static final int TRIGGERING_INSTRUCTION_FIELD_NUMBER = 103;
     private org.fixprotocol.components.Common.TriggeringInstruction triggeringInstruction_;
     /**
@@ -14185,7 +13991,6 @@ public final class SingleGeneralOrderHandling {
       return triggeringInstruction_;
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 104;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 104;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -14330,7 +14135,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -15182,8 +14988,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.NewOrderSingle}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.NewOrderSingleOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.NewOrderSingle)
+        org.fixprotocol.components.SingleGeneralOrderHandling.NewOrderSingleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_NewOrderSingle_descriptor;
@@ -16622,7 +16429,6 @@ public final class SingleGeneralOrderHandling {
       private int bitField2_;
       private int bitField3_;
 
-      // optional string account = 1;
       private java.lang.Object account_ = "";
       /**
        * <code>optional string account = 1;</code>
@@ -16636,9 +16442,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAccount() {
         java.lang.Object ref = account_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          account_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            account_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -16696,7 +16505,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_id = 2;
       private java.lang.Object clOrdId_ = "";
       /**
        * <code>optional string cl_ord_id = 2;</code>
@@ -16710,9 +16518,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdId() {
         java.lang.Object ref = clOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -16770,7 +16581,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string currency = 3;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 3;</code>
@@ -16784,9 +16594,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -16844,7 +16657,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string ex_destination = 4;
       private java.lang.Object exDestination_ = "";
       /**
        * <code>optional string ex_destination = 4;</code>
@@ -16858,9 +16670,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getExDestination() {
         java.lang.Object ref = exDestination_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          exDestination_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            exDestination_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -16918,7 +16733,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 5 [packed = true];
       private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> execInst_ =
         java.util.Collections.emptyList();
       private void ensureExecInstIsMutable() {
@@ -16976,7 +16790,8 @@ public final class SingleGeneralOrderHandling {
       public Builder addAllExecInst(
           java.lang.Iterable<? extends org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> values) {
         ensureExecInstIsMutable();
-        super.addAll(values, execInst_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, execInst_);
         onChanged();
         return this;
       }
@@ -16990,7 +16805,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 6;
       private org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum handlInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum.HANDL_INST_AUTOMATED_EXECUTION_INTERVENTION_OK;
       /**
        * <code>optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 6;</code>
@@ -17026,7 +16840,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string ioi_id = 7;
       private java.lang.Object ioiId_ = "";
       /**
        * <code>optional string ioi_id = 7;</code>
@@ -17040,9 +16853,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getIoiId() {
         java.lang.Object ref = ioiId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          ioiId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ioiId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -17100,7 +16916,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_floor = 8;
       private long maxFloor_ ;
       /**
        * <code>optional sfixed64 max_floor = 8;</code>
@@ -17133,7 +16948,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 max_floor_exponent = 9;
       private int maxFloorExponent_ ;
       /**
        * <code>optional sfixed32 max_floor_exponent = 9;</code>
@@ -17166,7 +16980,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 min_qty = 10;
       private long minQty_ ;
       /**
        * <code>optional sfixed64 min_qty = 10;</code>
@@ -17199,7 +17012,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 min_qty_exponent = 11;
       private int minQtyExponent_ ;
       /**
        * <code>optional sfixed32 min_qty_exponent = 11;</code>
@@ -17232,7 +17044,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 12;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum ordType_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum.ORD_TYPE_LIMIT;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 12;</code>
@@ -17268,7 +17079,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 price = 13;
       private long price_ ;
       /**
        * <code>optional sfixed64 price = 13;</code>
@@ -17301,7 +17111,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 price_exponent = 14;
       private int priceExponent_ ;
       /**
        * <code>optional sfixed32 price_exponent = 14;</code>
@@ -17334,7 +17143,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.ProcessCodeEnum process_code = 15;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ProcessCodeEnum processCode_ = org.fixprotocol.components.SingleGeneralOrderHandling.ProcessCodeEnum.PROCESS_CODE_REGULAR;
       /**
        * <code>optional .SingleGeneralOrderHandling.ProcessCodeEnum process_code = 15;</code>
@@ -17370,7 +17178,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 settl_date = 16;
       private int settlDate_ ;
       /**
        * <code>optional sfixed32 settl_date = 16;</code>
@@ -17403,7 +17210,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 17;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum settlType_ = org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum.SETTL_TYPE_CASH;
       /**
        * <code>optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 17;</code>
@@ -17439,7 +17245,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SideEnum side = 18;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_ = org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum.SIDE_BUY;
       /**
        * <code>optional .SingleGeneralOrderHandling.SideEnum side = 18;</code>
@@ -17475,7 +17280,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 19;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -17584,7 +17388,7 @@ public final class SingleGeneralOrderHandling {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -17592,7 +17396,6 @@ public final class SingleGeneralOrderHandling {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 20;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -17701,7 +17504,7 @@ public final class SingleGeneralOrderHandling {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -17709,7 +17512,6 @@ public final class SingleGeneralOrderHandling {
         return standardTrailerBuilder_;
       }
 
-      // optional sfixed64 stop_px = 21;
       private long stopPx_ ;
       /**
        * <code>optional sfixed64 stop_px = 21;</code>
@@ -17742,7 +17544,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 stop_px_exponent = 22;
       private int stopPxExponent_ ;
       /**
        * <code>optional sfixed32 stop_px_exponent = 22;</code>
@@ -17775,7 +17576,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string text = 23;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 23;</code>
@@ -17789,9 +17589,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -17849,7 +17652,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 24;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum timeInForce_ = org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum.TIME_IN_FORCE_AT_THE_OPENING;
       /**
        * <code>optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 24;</code>
@@ -17885,7 +17687,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 expire_time = 25;
       private long expireTime_ ;
       /**
        * <code>optional sfixed64 expire_time = 25;</code>
@@ -17918,7 +17719,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool forex_req = 26;
       private boolean forexReq_ ;
       /**
        * <code>optional bool forex_req = 26;</code>
@@ -17951,7 +17751,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool locate_reqd = 27;
       private boolean locateReqd_ ;
       /**
        * <code>optional bool locate_reqd = 27;</code>
@@ -17984,7 +17783,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 prev_close_px = 28;
       private long prevClosePx_ ;
       /**
        * <code>optional sfixed64 prev_close_px = 28;</code>
@@ -18017,7 +17815,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 prev_close_px_exponent = 29;
       private int prevClosePxExponent_ ;
       /**
        * <code>optional sfixed32 prev_close_px_exponent = 29;</code>
@@ -18050,7 +17847,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string quote_id = 30;
       private java.lang.Object quoteId_ = "";
       /**
        * <code>optional string quote_id = 30;</code>
@@ -18064,9 +17860,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getQuoteId() {
         java.lang.Object ref = quoteId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          quoteId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            quoteId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -18124,7 +17923,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string settl_currency = 31;
       private java.lang.Object settlCurrency_ = "";
       /**
        * <code>optional string settl_currency = 31;</code>
@@ -18138,9 +17936,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSettlCurrency() {
         java.lang.Object ref = settlCurrency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          settlCurrency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            settlCurrency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -18198,7 +17999,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 32;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CoveredOrUncoveredEnum coveredOrUncovered_ = org.fixprotocol.components.SingleGeneralOrderHandling.CoveredOrUncoveredEnum.COVERED_OR_UNCOVERED_COVERED;
       /**
        * <code>optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 32;</code>
@@ -18234,7 +18034,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_show = 33;
       private long maxShow_ ;
       /**
        * <code>optional sfixed64 max_show = 33;</code>
@@ -18267,7 +18066,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 max_show_exponent = 34;
       private int maxShowExponent_ ;
       /**
        * <code>optional sfixed32 max_show_exponent = 34;</code>
@@ -18300,7 +18098,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 order_qty2 = 35;
       private long orderQty2_ ;
       /**
        * <code>optional sfixed64 order_qty2 = 35;</code>
@@ -18333,7 +18130,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 order_qty2_exponent = 36;
       private int orderQty2Exponent_ ;
       /**
        * <code>optional sfixed32 order_qty2_exponent = 36;</code>
@@ -18366,7 +18162,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 37;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum positionEffect_ = org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum.POSITION_EFFECT_CLOSE;
       /**
        * <code>optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 37;</code>
@@ -18402,7 +18197,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 settl_date2 = 38;
       private int settlDate2_ ;
       /**
        * <code>optional sfixed32 settl_date2 = 38;</code>
@@ -18435,7 +18229,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string compliance_id = 39;
       private java.lang.Object complianceId_ = "";
       /**
        * <code>optional string compliance_id = 39;</code>
@@ -18449,9 +18242,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getComplianceId() {
         java.lang.Object ref = complianceId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          complianceId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            complianceId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -18509,7 +18305,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 effective_time = 40;
       private long effectiveTime_ ;
       /**
        * <code>optional sfixed64 effective_time = 40;</code>
@@ -18542,7 +18337,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bytes encoded_text = 41;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 41;</code>
@@ -18578,7 +18372,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 42;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 42;</code>
@@ -18611,7 +18404,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 expire_date = 43;
       private int expireDate_ ;
       /**
        * <code>optional sfixed32 expire_date = 43;</code>
@@ -18644,7 +18436,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 44;
       private org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum gtBookingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum.GT_BOOKING_INST_ACCUMULATE_UNTIL_FILLED_OR_EXPIRED;
       /**
        * <code>optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 44;</code>
@@ -18680,7 +18471,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool solicited_flag = 45;
       private boolean solicitedFlag_ ;
       /**
        * <code>optional bool solicited_flag = 45;</code>
@@ -18713,7 +18503,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 transact_time = 46;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 46;</code>
@@ -18746,7 +18535,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 47;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_ = org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum.ACCOUNT_TYPE_CARRIED_CUSTOMER_SIDE;
       /**
        * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 47;</code>
@@ -18782,7 +18570,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 48;
       private org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum bookingUnit_ = org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum.BOOKING_UNIT_AGGREGATE_EXECUTIONS_FOR_THIS_SYMBOL;
       /**
        * <code>optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 48;</code>
@@ -18818,7 +18605,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 49;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum cancellationRights_ = org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum.CANCELLATION_RIGHTS_NO_EXECUTION_ONLY;
       /**
        * <code>optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 49;</code>
@@ -18854,7 +18640,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 50;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum cashMargin_ = org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum.CASH_MARGIN_CASH;
       /**
        * <code>optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 50;</code>
@@ -18890,7 +18675,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_link_id = 51;
       private java.lang.Object clOrdLinkId_ = "";
       /**
        * <code>optional string cl_ord_link_id = 51;</code>
@@ -18904,9 +18688,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdLinkId() {
         java.lang.Object ref = clOrdLinkId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdLinkId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdLinkId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -18964,7 +18751,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 52;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearingFeeIndicator_ = org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum.CLEARING_FEE_INDICATOR_ALL_OTHER_OWNERSHIP_TYPES;
       /**
        * <code>optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 52;</code>
@@ -19000,7 +18786,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.CommissionData commission_data = 53;
       private org.fixprotocol.components.Common.CommissionData commissionData_ = org.fixprotocol.components.Common.CommissionData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.CommissionData, org.fixprotocol.components.Common.CommissionData.Builder, org.fixprotocol.components.Common.CommissionDataOrBuilder> commissionDataBuilder_;
@@ -19109,7 +18894,7 @@ public final class SingleGeneralOrderHandling {
         if (commissionDataBuilder_ == null) {
           commissionDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.CommissionData, org.fixprotocol.components.Common.CommissionData.Builder, org.fixprotocol.components.Common.CommissionDataOrBuilder>(
-                  commissionData_,
+                  getCommissionData(),
                   getParentForChildren(),
                   isClean());
           commissionData_ = null;
@@ -19117,7 +18902,6 @@ public final class SingleGeneralOrderHandling {
         return commissionDataBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 54;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum custOrderCapacity_ = org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum.CUST_ORDER_CAPACITY_ALL_OTHER;
       /**
        * <code>optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 54;</code>
@@ -19153,7 +18937,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 55;
       private org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum dayBookingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum.DAY_BOOKING_INST_AUTO;
       /**
        * <code>optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 55;</code>
@@ -19189,7 +18972,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string designation = 56;
       private java.lang.Object designation_ = "";
       /**
        * <code>optional string designation = 56;</code>
@@ -19203,9 +18985,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getDesignation() {
         java.lang.Object ref = designation_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          designation_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            designation_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -19263,7 +19048,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 57;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -19372,7 +19156,7 @@ public final class SingleGeneralOrderHandling {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -19380,7 +19164,6 @@ public final class SingleGeneralOrderHandling {
         return instrumentBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 58;
       private org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum moneyLaunderingStatus_ = org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum.MONEY_LAUNDERING_STATUS_EXEMPT_AUTHORISED;
       /**
        * <code>optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 58;</code>
@@ -19416,7 +19199,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 59;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum orderCapacity_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum.ORDER_CAPACITY_AGENCY;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 59;</code>
@@ -19452,7 +19234,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.OrderQtyData order_qty_data = 60;
       private org.fixprotocol.components.Common.OrderQtyData orderQtyData_ = org.fixprotocol.components.Common.OrderQtyData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder> orderQtyDataBuilder_;
@@ -19561,7 +19342,7 @@ public final class SingleGeneralOrderHandling {
         if (orderQtyDataBuilder_ == null) {
           orderQtyDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder>(
-                  orderQtyData_,
+                  getOrderQtyData(),
                   getParentForChildren(),
                   isClean());
           orderQtyData_ = null;
@@ -19569,7 +19350,6 @@ public final class SingleGeneralOrderHandling {
         return orderQtyDataBuilder_;
       }
 
-      // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 61 [packed = true];
       private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> orderRestrictions_ =
         java.util.Collections.emptyList();
       private void ensureOrderRestrictionsIsMutable() {
@@ -19627,7 +19407,8 @@ public final class SingleGeneralOrderHandling {
       public Builder addAllOrderRestrictions(
           java.lang.Iterable<? extends org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> values) {
         ensureOrderRestrictionsIsMutable();
-        super.addAll(values, orderRestrictions_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, orderRestrictions_);
         onChanged();
         return this;
       }
@@ -19641,7 +19422,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.Parties parties = 62;
       private java.util.List<org.fixprotocol.components.Common.Parties> parties_ =
         java.util.Collections.emptyList();
       private void ensurePartiesIsMutable() {
@@ -19783,7 +19563,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Parties> values) {
         if (partiesBuilder_ == null) {
           ensurePartiesIsMutable();
-          super.addAll(values, parties_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parties_);
           onChanged();
         } else {
           partiesBuilder_.addAllMessages(values);
@@ -19881,7 +19662,6 @@ public final class SingleGeneralOrderHandling {
         return partiesBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 63;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum preallocMethod_ = org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum.PREALLOC_METHOD_DO_NOT_PRO_RATA;
       /**
        * <code>optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 63;</code>
@@ -19917,7 +19697,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 price2 = 64;
       private long price2_ ;
       /**
        * <code>optional sfixed64 price2 = 64;</code>
@@ -19950,7 +19729,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 price2_exponent = 65;
       private int price2Exponent_ ;
       /**
        * <code>optional sfixed32 price2_exponent = 65;</code>
@@ -19983,7 +19761,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 66;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum priceType_ = org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum.PRICE_TYPE_FIXED_AMOUNT;
       /**
        * <code>optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 66;</code>
@@ -20019,7 +19796,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string regist_id = 67;
       private java.lang.Object registId_ = "";
       /**
        * <code>optional string regist_id = 67;</code>
@@ -20033,9 +19809,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getRegistId() {
         java.lang.Object ref = registId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          registId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            registId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -20093,7 +19872,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string secondary_cl_ord_id = 68;
       private java.lang.Object secondaryClOrdId_ = "";
       /**
        * <code>optional string secondary_cl_ord_id = 68;</code>
@@ -20107,9 +19885,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryClOrdId() {
         java.lang.Object ref = secondaryClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -20167,7 +19948,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 69;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -20276,7 +20056,7 @@ public final class SingleGeneralOrderHandling {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -20284,7 +20064,6 @@ public final class SingleGeneralOrderHandling {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // repeated .Common.Stipulations stipulations = 70;
       private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_ =
         java.util.Collections.emptyList();
       private void ensureStipulationsIsMutable() {
@@ -20426,7 +20205,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Stipulations> values) {
         if (stipulationsBuilder_ == null) {
           ensureStipulationsIsMutable();
-          super.addAll(values, stipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stipulations_);
           onChanged();
         } else {
           stipulationsBuilder_.addAllMessages(values);
@@ -20524,7 +20304,6 @@ public final class SingleGeneralOrderHandling {
         return stipulationsBuilder_;
       }
 
-      // optional sfixed32 trade_origination_date = 71;
       private int tradeOriginationDate_ ;
       /**
        * <code>optional sfixed32 trade_origination_date = 71;</code>
@@ -20557,7 +20336,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.YieldData yield_data = 72;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -20666,7 +20444,7 @@ public final class SingleGeneralOrderHandling {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -20674,7 +20452,6 @@ public final class SingleGeneralOrderHandling {
         return yieldDataBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 73;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum.ACCT_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 73;</code>
@@ -20710,7 +20487,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string alloc_id = 74;
       private java.lang.Object allocId_ = "";
       /**
        * <code>optional string alloc_id = 74;</code>
@@ -20724,9 +20500,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAllocId() {
         java.lang.Object ref = allocId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          allocId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            allocId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -20784,7 +20563,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 75;
       private org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum bookingType_ = org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum.BOOKING_TYPE_CFD;
       /**
        * <code>optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 75;</code>
@@ -20820,7 +20598,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool cust_directed_order = 76;
       private boolean custDirectedOrder_ ;
       /**
        * <code>optional bool cust_directed_order = 76;</code>
@@ -20853,7 +20630,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 77;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum custOrderHandlingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum.CUST_ORDER_HANDLING_INST_ADD_ON_ORDER;
       /**
        * <code>optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 77;</code>
@@ -20889,7 +20665,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.DiscretionInstructions discretion_instructions = 78;
       private org.fixprotocol.components.Common.DiscretionInstructions discretionInstructions_ = org.fixprotocol.components.Common.DiscretionInstructions.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.DiscretionInstructions, org.fixprotocol.components.Common.DiscretionInstructions.Builder, org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder> discretionInstructionsBuilder_;
@@ -20998,7 +20773,7 @@ public final class SingleGeneralOrderHandling {
         if (discretionInstructionsBuilder_ == null) {
           discretionInstructionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.DiscretionInstructions, org.fixprotocol.components.Common.DiscretionInstructions.Builder, org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder>(
-                  discretionInstructions_,
+                  getDiscretionInstructions(),
                   getParentForChildren(),
                   isClean());
           discretionInstructions_ = null;
@@ -21006,7 +20781,6 @@ public final class SingleGeneralOrderHandling {
         return discretionInstructionsBuilder_;
       }
 
-      // optional .Common.DisplayInstruction display_instruction = 79;
       private org.fixprotocol.components.Common.DisplayInstruction displayInstruction_ = org.fixprotocol.components.Common.DisplayInstruction.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.DisplayInstruction, org.fixprotocol.components.Common.DisplayInstruction.Builder, org.fixprotocol.components.Common.DisplayInstructionOrBuilder> displayInstructionBuilder_;
@@ -21115,7 +20889,7 @@ public final class SingleGeneralOrderHandling {
         if (displayInstructionBuilder_ == null) {
           displayInstructionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.DisplayInstruction, org.fixprotocol.components.Common.DisplayInstruction.Builder, org.fixprotocol.components.Common.DisplayInstructionOrBuilder>(
-                  displayInstruction_,
+                  getDisplayInstruction(),
                   getParentForChildren(),
                   isClean());
           displayInstruction_ = null;
@@ -21123,7 +20897,6 @@ public final class SingleGeneralOrderHandling {
         return displayInstructionBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 80;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ExDestinationIdSourceEnum exDestinationIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.ExDestinationIdSourceEnum.EX_DESTINATION_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 80;</code>
@@ -21159,7 +20932,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.FinancingDetails financing_details = 81;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -21268,7 +21040,7 @@ public final class SingleGeneralOrderHandling {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -21276,7 +21048,6 @@ public final class SingleGeneralOrderHandling {
         return financingDetailsBuilder_;
       }
 
-      // optional bool manual_order_indicator = 82;
       private boolean manualOrderIndicator_ ;
       /**
        * <code>optional bool manual_order_indicator = 82;</code>
@@ -21309,7 +21080,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 match_increment = 83;
       private long matchIncrement_ ;
       /**
        * <code>optional sfixed64 match_increment = 83;</code>
@@ -21342,7 +21112,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 match_increment_exponent = 84;
       private int matchIncrementExponent_ ;
       /**
        * <code>optional sfixed32 match_increment_exponent = 84;</code>
@@ -21375,7 +21144,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_price_levels = 85;
       private long maxPriceLevels_ ;
       /**
        * <code>optional sfixed64 max_price_levels = 85;</code>
@@ -21408,7 +21176,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 86;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum orderHandlingInstSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum.ORDER_HANDLING_INST_SOURCE_NASDOATS;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 86;</code>
@@ -21444,7 +21211,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 participation_rate = 87;
       private long participationRate_ ;
       /**
        * <code>optional sfixed64 participation_rate = 87;</code>
@@ -21477,7 +21243,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 participation_rate_exponent = 88;
       private int participationRateExponent_ ;
       /**
        * <code>optional sfixed32 participation_rate_exponent = 88;</code>
@@ -21510,7 +21275,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.PegInstructions peg_instructions = 89;
       private org.fixprotocol.components.Common.PegInstructions pegInstructions_ = org.fixprotocol.components.Common.PegInstructions.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.PegInstructions, org.fixprotocol.components.Common.PegInstructions.Builder, org.fixprotocol.components.Common.PegInstructionsOrBuilder> pegInstructionsBuilder_;
@@ -21619,7 +21383,7 @@ public final class SingleGeneralOrderHandling {
         if (pegInstructionsBuilder_ == null) {
           pegInstructionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.PegInstructions, org.fixprotocol.components.Common.PegInstructions.Builder, org.fixprotocol.components.Common.PegInstructionsOrBuilder>(
-                  pegInstructions_,
+                  getPegInstructions(),
                   getParentForChildren(),
                   isClean());
           pegInstructions_ = null;
@@ -21627,7 +21391,6 @@ public final class SingleGeneralOrderHandling {
         return pegInstructionsBuilder_;
       }
 
-      // repeated .Common.PreAllocGrp pre_alloc_grp = 90;
       private java.util.List<org.fixprotocol.components.Common.PreAllocGrp> preAllocGrp_ =
         java.util.Collections.emptyList();
       private void ensurePreAllocGrpIsMutable() {
@@ -21769,7 +21532,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.PreAllocGrp> values) {
         if (preAllocGrpBuilder_ == null) {
           ensurePreAllocGrpIsMutable();
-          super.addAll(values, preAllocGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, preAllocGrp_);
           onChanged();
         } else {
           preAllocGrpBuilder_.addAllMessages(values);
@@ -21867,7 +21631,6 @@ public final class SingleGeneralOrderHandling {
         return preAllocGrpBuilder_;
       }
 
-      // optional bool pre_trade_anonymity = 91;
       private boolean preTradeAnonymity_ ;
       /**
        * <code>optional bool pre_trade_anonymity = 91;</code>
@@ -21900,7 +21663,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 92;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum priceProtectionScope_ = org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum.PRICE_PROTECTION_SCOPE_GLOBAL;
       /**
        * <code>optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 92;</code>
@@ -21936,7 +21698,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 93;
       private org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum qtyType_ = org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum.QTY_TYPE_CONTRACTS;
       /**
        * <code>optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 93;</code>
@@ -21972,7 +21733,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string received_dept_id = 94;
       private java.lang.Object receivedDeptId_ = "";
       /**
        * <code>optional string received_dept_id = 94;</code>
@@ -21986,9 +21746,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getReceivedDeptId() {
         java.lang.Object ref = receivedDeptId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          receivedDeptId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            receivedDeptId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -22046,7 +21809,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string ref_order_id = 95;
       private java.lang.Object refOrderId_ = "";
       /**
        * <code>optional string ref_order_id = 95;</code>
@@ -22060,9 +21822,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getRefOrderId() {
         java.lang.Object ref = refOrderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          refOrderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            refOrderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -22120,7 +21885,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.RefOrderIdSourceEnum ref_order_id_source = 96;
       private org.fixprotocol.components.SingleGeneralOrderHandling.RefOrderIdSourceEnum refOrderIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.RefOrderIdSourceEnum.REF_ORDER_ID_SOURCE_MD_ENTRY_ID;
       /**
        * <code>optional .SingleGeneralOrderHandling.RefOrderIdSourceEnum ref_order_id_source = 96;</code>
@@ -22156,7 +21920,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 97;
       private java.util.List<org.fixprotocol.components.Common.StrategyParametersGrp> strategyParametersGrp_ =
         java.util.Collections.emptyList();
       private void ensureStrategyParametersGrpIsMutable() {
@@ -22298,7 +22061,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.StrategyParametersGrp> values) {
         if (strategyParametersGrpBuilder_ == null) {
           ensureStrategyParametersGrpIsMutable();
-          super.addAll(values, strategyParametersGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, strategyParametersGrp_);
           onChanged();
         } else {
           strategyParametersGrpBuilder_.addAllMessages(values);
@@ -22396,7 +22160,6 @@ public final class SingleGeneralOrderHandling {
         return strategyParametersGrpBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 98;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum targetStrategy_ = org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum.TARGET_STRATEGY_MININIZE_MARKET_IMPACT;
       /**
        * <code>optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 98;</code>
@@ -22432,7 +22195,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string target_strategy_parameters = 99;
       private java.lang.Object targetStrategyParameters_ = "";
       /**
        * <code>optional string target_strategy_parameters = 99;</code>
@@ -22446,9 +22208,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getTargetStrategyParameters() {
         java.lang.Object ref = targetStrategyParameters_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          targetStrategyParameters_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            targetStrategyParameters_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -22506,7 +22271,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 trade_date = 100;
       private int tradeDate_ ;
       /**
        * <code>optional sfixed32 trade_date = 100;</code>
@@ -22539,7 +22303,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 101;
       private java.util.List<org.fixprotocol.components.Common.TrdRegTimestamps> trdRegTimestamps_ =
         java.util.Collections.emptyList();
       private void ensureTrdRegTimestampsIsMutable() {
@@ -22681,7 +22444,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.TrdRegTimestamps> values) {
         if (trdRegTimestampsBuilder_ == null) {
           ensureTrdRegTimestampsIsMutable();
-          super.addAll(values, trdRegTimestamps_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trdRegTimestamps_);
           onChanged();
         } else {
           trdRegTimestampsBuilder_.addAllMessages(values);
@@ -22779,7 +22543,6 @@ public final class SingleGeneralOrderHandling {
         return trdRegTimestampsBuilder_;
       }
 
-      // repeated .Common.TrdgSesGrp trdg_ses_grp = 102;
       private java.util.List<org.fixprotocol.components.Common.TrdgSesGrp> trdgSesGrp_ =
         java.util.Collections.emptyList();
       private void ensureTrdgSesGrpIsMutable() {
@@ -22921,7 +22684,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.TrdgSesGrp> values) {
         if (trdgSesGrpBuilder_ == null) {
           ensureTrdgSesGrpIsMutable();
-          super.addAll(values, trdgSesGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trdgSesGrp_);
           onChanged();
         } else {
           trdgSesGrpBuilder_.addAllMessages(values);
@@ -23019,7 +22783,6 @@ public final class SingleGeneralOrderHandling {
         return trdgSesGrpBuilder_;
       }
 
-      // optional .Common.TriggeringInstruction triggering_instruction = 103;
       private org.fixprotocol.components.Common.TriggeringInstruction triggeringInstruction_ = org.fixprotocol.components.Common.TriggeringInstruction.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.TriggeringInstruction, org.fixprotocol.components.Common.TriggeringInstruction.Builder, org.fixprotocol.components.Common.TriggeringInstructionOrBuilder> triggeringInstructionBuilder_;
@@ -23128,7 +22891,7 @@ public final class SingleGeneralOrderHandling {
         if (triggeringInstructionBuilder_ == null) {
           triggeringInstructionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.TriggeringInstruction, org.fixprotocol.components.Common.TriggeringInstruction.Builder, org.fixprotocol.components.Common.TriggeringInstructionOrBuilder>(
-                  triggeringInstruction_,
+                  getTriggeringInstruction(),
                   getParentForChildren(),
                   isClean());
           triggeringInstruction_ = null;
@@ -23136,7 +22899,6 @@ public final class SingleGeneralOrderHandling {
         return triggeringInstructionBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 104;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -23278,7 +23040,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -23387,10 +23150,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.NewOrderSingle)
   }
 
-  public interface OrderCancelReplaceRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface OrderCancelReplaceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.OrderCancelReplaceRequest)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string account = 1;
     /**
      * <code>optional string account = 1;</code>
      */
@@ -23405,7 +23168,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAccountBytes();
 
-    // optional string cl_ord_id = 2;
     /**
      * <code>optional string cl_ord_id = 2;</code>
      */
@@ -23420,7 +23182,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdIdBytes();
 
-    // optional string currency = 3;
     /**
      * <code>optional string currency = 3;</code>
      */
@@ -23435,7 +23196,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 4 [packed = true];
     /**
      * <code>repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 4 [packed = true];</code>
      */
@@ -23449,7 +23209,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum getExecInst(int index);
 
-    // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 5;
     /**
      * <code>optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 5;</code>
      */
@@ -23459,7 +23218,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum getHandlInst();
 
-    // optional string list_id = 6;
     /**
      * <code>optional string list_id = 6;</code>
      */
@@ -23474,7 +23232,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getListIdBytes();
 
-    // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 7;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 7;</code>
      */
@@ -23484,7 +23241,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum getOrdType();
 
-    // optional string order_id = 8;
     /**
      * <code>optional string order_id = 8;</code>
      */
@@ -23499,7 +23255,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrderIdBytes();
 
-    // optional string orig_cl_ord_id = 9;
     /**
      * <code>optional string orig_cl_ord_id = 9;</code>
      */
@@ -23514,7 +23269,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrigClOrdIdBytes();
 
-    // optional sfixed64 price = 10;
     /**
      * <code>optional sfixed64 price = 10;</code>
      */
@@ -23524,7 +23278,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPrice();
 
-    // optional sfixed32 price_exponent = 11;
     /**
      * <code>optional sfixed32 price_exponent = 11;</code>
      */
@@ -23534,7 +23287,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPriceExponent();
 
-    // optional sfixed32 settl_date = 12;
     /**
      * <code>optional sfixed32 settl_date = 12;</code>
      */
@@ -23544,7 +23296,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getSettlDate();
 
-    // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 13;
     /**
      * <code>optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 13;</code>
      */
@@ -23554,7 +23305,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum getSettlType();
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 14;
     /**
      * <code>optional .SingleGeneralOrderHandling.SideEnum side = 14;</code>
      */
@@ -23564,7 +23314,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum getSide();
 
-    // optional .Session.StandardHeader standard_header = 15;
     /**
      * <code>optional .Session.StandardHeader standard_header = 15;</code>
      */
@@ -23578,7 +23327,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 16;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 16;</code>
      */
@@ -23592,7 +23340,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional sfixed64 stop_px = 17;
     /**
      * <code>optional sfixed64 stop_px = 17;</code>
      */
@@ -23602,7 +23349,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getStopPx();
 
-    // optional sfixed32 stop_px_exponent = 18;
     /**
      * <code>optional sfixed32 stop_px_exponent = 18;</code>
      */
@@ -23612,7 +23358,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getStopPxExponent();
 
-    // optional string text = 19;
     /**
      * <code>optional string text = 19;</code>
      */
@@ -23627,7 +23372,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 20;
     /**
      * <code>optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 20;</code>
      */
@@ -23637,7 +23381,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum getTimeInForce();
 
-    // optional string ex_destination = 21;
     /**
      * <code>optional string ex_destination = 21;</code>
      */
@@ -23652,7 +23395,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getExDestinationBytes();
 
-    // optional sfixed64 max_floor = 22;
     /**
      * <code>optional sfixed64 max_floor = 22;</code>
      */
@@ -23662,7 +23404,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxFloor();
 
-    // optional sfixed32 max_floor_exponent = 23;
     /**
      * <code>optional sfixed32 max_floor_exponent = 23;</code>
      */
@@ -23672,7 +23413,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMaxFloorExponent();
 
-    // optional sfixed64 min_qty = 24;
     /**
      * <code>optional sfixed64 min_qty = 24;</code>
      */
@@ -23682,7 +23422,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMinQty();
 
-    // optional sfixed32 min_qty_exponent = 25;
     /**
      * <code>optional sfixed32 min_qty_exponent = 25;</code>
      */
@@ -23692,7 +23431,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMinQtyExponent();
 
-    // optional sfixed64 expire_time = 26;
     /**
      * <code>optional sfixed64 expire_time = 26;</code>
      */
@@ -23702,7 +23440,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getExpireTime();
 
-    // optional bool forex_req = 27;
     /**
      * <code>optional bool forex_req = 27;</code>
      */
@@ -23712,7 +23449,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getForexReq();
 
-    // optional string settl_currency = 28;
     /**
      * <code>optional string settl_currency = 28;</code>
      */
@@ -23727,7 +23463,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSettlCurrencyBytes();
 
-    // optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 29;
     /**
      * <code>optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 29;</code>
      */
@@ -23737,7 +23472,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CoveredOrUncoveredEnum getCoveredOrUncovered();
 
-    // optional bool locate_reqd = 30;
     /**
      * <code>optional bool locate_reqd = 30;</code>
      */
@@ -23747,7 +23481,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getLocateReqd();
 
-    // optional sfixed64 max_show = 31;
     /**
      * <code>optional sfixed64 max_show = 31;</code>
      */
@@ -23757,7 +23490,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxShow();
 
-    // optional sfixed32 max_show_exponent = 32;
     /**
      * <code>optional sfixed32 max_show_exponent = 32;</code>
      */
@@ -23767,7 +23499,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMaxShowExponent();
 
-    // optional sfixed64 order_qty2 = 33;
     /**
      * <code>optional sfixed64 order_qty2 = 33;</code>
      */
@@ -23777,7 +23508,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getOrderQty2();
 
-    // optional sfixed32 order_qty2_exponent = 34;
     /**
      * <code>optional sfixed32 order_qty2_exponent = 34;</code>
      */
@@ -23787,7 +23517,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getOrderQty2Exponent();
 
-    // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 35;
     /**
      * <code>optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 35;</code>
      */
@@ -23797,7 +23526,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum getPositionEffect();
 
-    // optional sfixed32 settl_date2 = 36;
     /**
      * <code>optional sfixed32 settl_date2 = 36;</code>
      */
@@ -23807,7 +23535,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getSettlDate2();
 
-    // optional string compliance_id = 37;
     /**
      * <code>optional string compliance_id = 37;</code>
      */
@@ -23822,7 +23549,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getComplianceIdBytes();
 
-    // optional sfixed64 effective_time = 38;
     /**
      * <code>optional sfixed64 effective_time = 38;</code>
      */
@@ -23832,7 +23558,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getEffectiveTime();
 
-    // optional bytes encoded_text = 39;
     /**
      * <code>optional bytes encoded_text = 39;</code>
      */
@@ -23842,7 +23567,6 @@ public final class SingleGeneralOrderHandling {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 40;
     /**
      * <code>optional fixed32 encoded_text_len = 40;</code>
      */
@@ -23852,7 +23576,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEncodedTextLen();
 
-    // optional sfixed32 expire_date = 41;
     /**
      * <code>optional sfixed32 expire_date = 41;</code>
      */
@@ -23862,7 +23585,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getExpireDate();
 
-    // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 42;
     /**
      * <code>optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 42;</code>
      */
@@ -23872,7 +23594,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum getGtBookingInst();
 
-    // optional bool solicited_flag = 43;
     /**
      * <code>optional bool solicited_flag = 43;</code>
      */
@@ -23882,7 +23603,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getSolicitedFlag();
 
-    // optional sfixed64 transact_time = 44;
     /**
      * <code>optional sfixed64 transact_time = 44;</code>
      */
@@ -23892,7 +23612,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTransactTime();
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 45;
     /**
      * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 45;</code>
      */
@@ -23902,7 +23621,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum getAccountType();
 
-    // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 46;
     /**
      * <code>optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 46;</code>
      */
@@ -23912,7 +23630,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum getBookingUnit();
 
-    // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 47;
     /**
      * <code>optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 47;</code>
      */
@@ -23922,7 +23639,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum getCancellationRights();
 
-    // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 48;
     /**
      * <code>optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 48;</code>
      */
@@ -23932,7 +23648,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum getCashMargin();
 
-    // optional string cl_ord_link_id = 49;
     /**
      * <code>optional string cl_ord_link_id = 49;</code>
      */
@@ -23947,7 +23662,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdLinkIdBytes();
 
-    // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 50;
     /**
      * <code>optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 50;</code>
      */
@@ -23957,7 +23671,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum getClearingFeeIndicator();
 
-    // optional .Common.CommissionData commission_data = 51;
     /**
      * <code>optional .Common.CommissionData commission_data = 51;</code>
      */
@@ -23971,7 +23684,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.CommissionDataOrBuilder getCommissionDataOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 52;
     /**
      * <code>optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 52;</code>
      */
@@ -23981,7 +23693,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum getCustOrderCapacity();
 
-    // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 53;
     /**
      * <code>optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 53;</code>
      */
@@ -23991,7 +23702,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum getDayBookingInst();
 
-    // optional string designation = 54;
     /**
      * <code>optional string designation = 54;</code>
      */
@@ -24006,7 +23716,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getDesignationBytes();
 
-    // optional .Common.Instrument instrument = 55;
     /**
      * <code>optional .Common.Instrument instrument = 55;</code>
      */
@@ -24020,7 +23729,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 56;
     /**
      * <code>optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 56;</code>
      */
@@ -24030,7 +23738,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum getMoneyLaunderingStatus();
 
-    // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 57;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 57;</code>
      */
@@ -24040,7 +23747,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum getOrderCapacity();
 
-    // optional .Common.OrderQtyData order_qty_data = 58;
     /**
      * <code>optional .Common.OrderQtyData order_qty_data = 58;</code>
      */
@@ -24054,7 +23760,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.OrderQtyDataOrBuilder getOrderQtyDataOrBuilder();
 
-    // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 59 [packed = true];
     /**
      * <code>repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 59 [packed = true];</code>
      */
@@ -24068,7 +23773,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum getOrderRestrictions(int index);
 
-    // optional sfixed64 orig_ord_mod_time = 60;
     /**
      * <code>optional sfixed64 orig_ord_mod_time = 60;</code>
      */
@@ -24078,7 +23782,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getOrigOrdModTime();
 
-    // repeated .Common.Parties parties = 61;
     /**
      * <code>repeated .Common.Parties parties = 61;</code>
      */
@@ -24103,7 +23806,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.PartiesOrBuilder getPartiesOrBuilder(
         int index);
 
-    // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 62;
     /**
      * <code>optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 62;</code>
      */
@@ -24113,7 +23815,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum getPreallocMethod();
 
-    // optional sfixed64 price2 = 63;
     /**
      * <code>optional sfixed64 price2 = 63;</code>
      */
@@ -24123,7 +23824,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPrice2();
 
-    // optional sfixed32 price2_exponent = 64;
     /**
      * <code>optional sfixed32 price2_exponent = 64;</code>
      */
@@ -24133,7 +23833,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPrice2Exponent();
 
-    // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 65;
     /**
      * <code>optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 65;</code>
      */
@@ -24143,7 +23842,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum getPriceType();
 
-    // optional string regist_id = 66;
     /**
      * <code>optional string regist_id = 66;</code>
      */
@@ -24158,7 +23856,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getRegistIdBytes();
 
-    // optional string secondary_cl_ord_id = 67;
     /**
      * <code>optional string secondary_cl_ord_id = 67;</code>
      */
@@ -24173,7 +23870,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryClOrdIdBytes();
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 68;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 68;</code>
      */
@@ -24187,7 +23883,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // optional sfixed32 trade_origination_date = 69;
     /**
      * <code>optional sfixed32 trade_origination_date = 69;</code>
      */
@@ -24197,7 +23892,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getTradeOriginationDate();
 
-    // optional .Common.YieldData yield_data = 70;
     /**
      * <code>optional .Common.YieldData yield_data = 70;</code>
      */
@@ -24211,7 +23905,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.YieldDataOrBuilder getYieldDataOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 71;
     /**
      * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 71;</code>
      */
@@ -24221,7 +23914,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum getAcctIdSource();
 
-    // optional string alloc_id = 72;
     /**
      * <code>optional string alloc_id = 72;</code>
      */
@@ -24236,7 +23928,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAllocIdBytes();
 
-    // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 73;
     /**
      * <code>optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 73;</code>
      */
@@ -24246,7 +23937,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum getBookingType();
 
-    // optional bool cust_directed_order = 74;
     /**
      * <code>optional bool cust_directed_order = 74;</code>
      */
@@ -24256,7 +23946,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getCustDirectedOrder();
 
-    // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 75;
     /**
      * <code>optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 75;</code>
      */
@@ -24266,7 +23955,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum getCustOrderHandlingInst();
 
-    // optional .Common.DiscretionInstructions discretion_instructions = 76;
     /**
      * <code>optional .Common.DiscretionInstructions discretion_instructions = 76;</code>
      */
@@ -24280,7 +23968,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder getDiscretionInstructionsOrBuilder();
 
-    // optional .Common.DisplayInstruction display_instruction = 77;
     /**
      * <code>optional .Common.DisplayInstruction display_instruction = 77;</code>
      */
@@ -24294,7 +23981,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.DisplayInstructionOrBuilder getDisplayInstructionOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 78;
     /**
      * <code>optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 78;</code>
      */
@@ -24304,7 +23990,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExDestinationIdSourceEnum getExDestinationIdSource();
 
-    // optional .Common.FinancingDetails financing_details = 79;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 79;</code>
      */
@@ -24318,7 +24003,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // optional bool manual_order_indicator = 80;
     /**
      * <code>optional bool manual_order_indicator = 80;</code>
      */
@@ -24328,7 +24012,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getManualOrderIndicator();
 
-    // optional sfixed64 match_increment = 81;
     /**
      * <code>optional sfixed64 match_increment = 81;</code>
      */
@@ -24338,7 +24021,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMatchIncrement();
 
-    // optional sfixed32 match_increment_exponent = 82;
     /**
      * <code>optional sfixed32 match_increment_exponent = 82;</code>
      */
@@ -24348,7 +24030,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMatchIncrementExponent();
 
-    // optional sfixed64 max_price_levels = 83;
     /**
      * <code>optional sfixed64 max_price_levels = 83;</code>
      */
@@ -24358,7 +24039,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxPriceLevels();
 
-    // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 84;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 84;</code>
      */
@@ -24368,7 +24048,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum getOrderHandlingInstSource();
 
-    // optional sfixed64 participation_rate = 85;
     /**
      * <code>optional sfixed64 participation_rate = 85;</code>
      */
@@ -24378,7 +24057,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getParticipationRate();
 
-    // optional sfixed32 participation_rate_exponent = 86;
     /**
      * <code>optional sfixed32 participation_rate_exponent = 86;</code>
      */
@@ -24388,7 +24066,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getParticipationRateExponent();
 
-    // optional .Common.PegInstructions peg_instructions = 87;
     /**
      * <code>optional .Common.PegInstructions peg_instructions = 87;</code>
      */
@@ -24402,7 +24079,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.PegInstructionsOrBuilder getPegInstructionsOrBuilder();
 
-    // repeated .Common.PreAllocGrp pre_alloc_grp = 88;
     /**
      * <code>repeated .Common.PreAllocGrp pre_alloc_grp = 88;</code>
      */
@@ -24427,7 +24103,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.PreAllocGrpOrBuilder getPreAllocGrpOrBuilder(
         int index);
 
-    // optional bool pre_trade_anonymity = 89;
     /**
      * <code>optional bool pre_trade_anonymity = 89;</code>
      */
@@ -24437,7 +24112,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getPreTradeAnonymity();
 
-    // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 90;
     /**
      * <code>optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 90;</code>
      */
@@ -24447,7 +24121,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum getPriceProtectionScope();
 
-    // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 91;
     /**
      * <code>optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 91;</code>
      */
@@ -24457,7 +24130,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum getQtyType();
 
-    // optional string received_dept_id = 92;
     /**
      * <code>optional string received_dept_id = 92;</code>
      */
@@ -24472,7 +24144,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getReceivedDeptIdBytes();
 
-    // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 93;
     /**
      * <code>repeated .Common.StrategyParametersGrp strategy_parameters_grp = 93;</code>
      */
@@ -24497,7 +24168,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.StrategyParametersGrpOrBuilder getStrategyParametersGrpOrBuilder(
         int index);
 
-    // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 94;
     /**
      * <code>optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 94;</code>
      */
@@ -24507,7 +24177,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum getTargetStrategy();
 
-    // optional string target_strategy_parameters = 95;
     /**
      * <code>optional string target_strategy_parameters = 95;</code>
      */
@@ -24522,7 +24191,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTargetStrategyParametersBytes();
 
-    // optional sfixed32 trade_date = 96;
     /**
      * <code>optional sfixed32 trade_date = 96;</code>
      */
@@ -24532,7 +24200,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getTradeDate();
 
-    // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 97;
     /**
      * <code>repeated .Common.TrdRegTimestamps trd_reg_timestamps = 97;</code>
      */
@@ -24557,7 +24224,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.TrdRegTimestampsOrBuilder getTrdRegTimestampsOrBuilder(
         int index);
 
-    // repeated .Common.TrdgSesGrp trdg_ses_grp = 98;
     /**
      * <code>repeated .Common.TrdgSesGrp trdg_ses_grp = 98;</code>
      */
@@ -24582,7 +24248,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.TrdgSesGrpOrBuilder getTrdgSesGrpOrBuilder(
         int index);
 
-    // optional .Common.TriggeringInstruction triggering_instruction = 99;
     /**
      * <code>optional .Common.TriggeringInstruction triggering_instruction = 99;</code>
      */
@@ -24596,7 +24261,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.TriggeringInstructionOrBuilder getTriggeringInstructionOrBuilder();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 100;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 100;</code>
      */
@@ -24625,8 +24289,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.OrderCancelReplaceRequest}
    */
   public static final class OrderCancelReplaceRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements OrderCancelReplaceRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.OrderCancelReplaceRequest)
+      OrderCancelReplaceRequestOrBuilder {
     // Use OrderCancelReplaceRequest.newBuilder() to construct.
     private OrderCancelReplaceRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -24676,18 +24341,21 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              account_ = input.readBytes();
+              account_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              clOrdId_ = input.readBytes();
+              clOrdId_ = bs;
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 32: {
@@ -24695,7 +24363,7 @@ public final class SingleGeneralOrderHandling {
               org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(4, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                   execInst_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum>();
                   mutable_bitField0_ |= 0x00000008;
@@ -24712,7 +24380,7 @@ public final class SingleGeneralOrderHandling {
                 org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(4, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                     execInst_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum>();
                     mutable_bitField0_ |= 0x00000008;
@@ -24735,8 +24403,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
-              listId_ = input.readBytes();
+              listId_ = bs;
               break;
             }
             case 56: {
@@ -24751,13 +24420,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000040;
-              orderId_ = input.readBytes();
+              orderId_ = bs;
               break;
             }
             case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
-              origClOrdId_ = input.readBytes();
+              origClOrdId_ = bs;
               break;
             }
             case 81: {
@@ -24834,8 +24505,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 154: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00020000;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 160: {
@@ -24850,8 +24522,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 170: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00080000;
-              exDestination_ = input.readBytes();
+              exDestination_ = bs;
               break;
             }
             case 177: {
@@ -24885,8 +24558,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 226: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x04000000;
-              settlCurrency_ = input.readBytes();
+              settlCurrency_ = bs;
               break;
             }
             case 232: {
@@ -24942,8 +24616,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 298: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00000008;
-              complianceId_ = input.readBytes();
+              complianceId_ = bs;
               break;
             }
             case 305: {
@@ -25032,8 +24707,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 394: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00008000;
-              clOrdLinkId_ = input.readBytes();
+              clOrdLinkId_ = bs;
               break;
             }
             case 400: {
@@ -25083,8 +24759,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 434: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00100000;
-              designation_ = input.readBytes();
+              designation_ = bs;
               break;
             }
             case 442: {
@@ -25140,7 +24817,7 @@ public final class SingleGeneralOrderHandling {
               org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(59, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField1_ & 0x04000000) == 0x04000000)) {
                   orderRestrictions_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum>();
                   mutable_bitField1_ |= 0x04000000;
@@ -25157,7 +24834,7 @@ public final class SingleGeneralOrderHandling {
                 org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(59, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField1_ & 0x04000000) == 0x04000000)) {
                     orderRestrictions_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum>();
                     mutable_bitField1_ |= 0x04000000;
@@ -25214,13 +24891,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 530: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x40000000;
-              registId_ = input.readBytes();
+              registId_ = bs;
               break;
             }
             case 538: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x80000000;
-              secondaryClOrdId_ = input.readBytes();
+              secondaryClOrdId_ = bs;
               break;
             }
             case 546: {
@@ -25266,8 +24945,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 578: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x00000010;
-              allocId_ = input.readBytes();
+              allocId_ = bs;
               break;
             }
             case 584: {
@@ -25437,8 +25117,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 738: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x00800000;
-              receivedDeptId_ = input.readBytes();
+              receivedDeptId_ = bs;
               break;
             }
             case 746: {
@@ -25461,8 +25142,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 762: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x02000000;
-              targetStrategyParameters_ = input.readBytes();
+              targetStrategyParameters_ = bs;
               break;
             }
             case 773: {
@@ -25573,7 +25255,6 @@ public final class SingleGeneralOrderHandling {
     private int bitField0_;
     private int bitField1_;
     private int bitField2_;
-    // optional string account = 1;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     private java.lang.Object account_;
     /**
@@ -25616,7 +25297,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string cl_ord_id = 2;
     public static final int CL_ORD_ID_FIELD_NUMBER = 2;
     private java.lang.Object clOrdId_;
     /**
@@ -25659,7 +25339,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string currency = 3;
     public static final int CURRENCY_FIELD_NUMBER = 3;
     private java.lang.Object currency_;
     /**
@@ -25702,7 +25381,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 4 [packed = true];
     public static final int EXEC_INST_FIELD_NUMBER = 4;
     private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> execInst_;
     /**
@@ -25725,7 +25403,6 @@ public final class SingleGeneralOrderHandling {
     }
     private int execInstMemoizedSerializedSize;
 
-    // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 5;
     public static final int HANDL_INST_FIELD_NUMBER = 5;
     private org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum handlInst_;
     /**
@@ -25741,7 +25418,6 @@ public final class SingleGeneralOrderHandling {
       return handlInst_;
     }
 
-    // optional string list_id = 6;
     public static final int LIST_ID_FIELD_NUMBER = 6;
     private java.lang.Object listId_;
     /**
@@ -25784,7 +25460,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 7;
     public static final int ORD_TYPE_FIELD_NUMBER = 7;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum ordType_;
     /**
@@ -25800,7 +25475,6 @@ public final class SingleGeneralOrderHandling {
       return ordType_;
     }
 
-    // optional string order_id = 8;
     public static final int ORDER_ID_FIELD_NUMBER = 8;
     private java.lang.Object orderId_;
     /**
@@ -25843,7 +25517,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string orig_cl_ord_id = 9;
     public static final int ORIG_CL_ORD_ID_FIELD_NUMBER = 9;
     private java.lang.Object origClOrdId_;
     /**
@@ -25886,7 +25559,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 price = 10;
     public static final int PRICE_FIELD_NUMBER = 10;
     private long price_;
     /**
@@ -25902,7 +25574,6 @@ public final class SingleGeneralOrderHandling {
       return price_;
     }
 
-    // optional sfixed32 price_exponent = 11;
     public static final int PRICE_EXPONENT_FIELD_NUMBER = 11;
     private int priceExponent_;
     /**
@@ -25918,7 +25589,6 @@ public final class SingleGeneralOrderHandling {
       return priceExponent_;
     }
 
-    // optional sfixed32 settl_date = 12;
     public static final int SETTL_DATE_FIELD_NUMBER = 12;
     private int settlDate_;
     /**
@@ -25934,7 +25604,6 @@ public final class SingleGeneralOrderHandling {
       return settlDate_;
     }
 
-    // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 13;
     public static final int SETTL_TYPE_FIELD_NUMBER = 13;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum settlType_;
     /**
@@ -25950,7 +25619,6 @@ public final class SingleGeneralOrderHandling {
       return settlType_;
     }
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 14;
     public static final int SIDE_FIELD_NUMBER = 14;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_;
     /**
@@ -25966,7 +25634,6 @@ public final class SingleGeneralOrderHandling {
       return side_;
     }
 
-    // optional .Session.StandardHeader standard_header = 15;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 15;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -25988,7 +25655,6 @@ public final class SingleGeneralOrderHandling {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 16;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 16;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -26010,7 +25676,6 @@ public final class SingleGeneralOrderHandling {
       return standardTrailer_;
     }
 
-    // optional sfixed64 stop_px = 17;
     public static final int STOP_PX_FIELD_NUMBER = 17;
     private long stopPx_;
     /**
@@ -26026,7 +25691,6 @@ public final class SingleGeneralOrderHandling {
       return stopPx_;
     }
 
-    // optional sfixed32 stop_px_exponent = 18;
     public static final int STOP_PX_EXPONENT_FIELD_NUMBER = 18;
     private int stopPxExponent_;
     /**
@@ -26042,7 +25706,6 @@ public final class SingleGeneralOrderHandling {
       return stopPxExponent_;
     }
 
-    // optional string text = 19;
     public static final int TEXT_FIELD_NUMBER = 19;
     private java.lang.Object text_;
     /**
@@ -26085,7 +25748,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 20;
     public static final int TIME_IN_FORCE_FIELD_NUMBER = 20;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum timeInForce_;
     /**
@@ -26101,7 +25763,6 @@ public final class SingleGeneralOrderHandling {
       return timeInForce_;
     }
 
-    // optional string ex_destination = 21;
     public static final int EX_DESTINATION_FIELD_NUMBER = 21;
     private java.lang.Object exDestination_;
     /**
@@ -26144,7 +25805,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 max_floor = 22;
     public static final int MAX_FLOOR_FIELD_NUMBER = 22;
     private long maxFloor_;
     /**
@@ -26160,7 +25820,6 @@ public final class SingleGeneralOrderHandling {
       return maxFloor_;
     }
 
-    // optional sfixed32 max_floor_exponent = 23;
     public static final int MAX_FLOOR_EXPONENT_FIELD_NUMBER = 23;
     private int maxFloorExponent_;
     /**
@@ -26176,7 +25835,6 @@ public final class SingleGeneralOrderHandling {
       return maxFloorExponent_;
     }
 
-    // optional sfixed64 min_qty = 24;
     public static final int MIN_QTY_FIELD_NUMBER = 24;
     private long minQty_;
     /**
@@ -26192,7 +25850,6 @@ public final class SingleGeneralOrderHandling {
       return minQty_;
     }
 
-    // optional sfixed32 min_qty_exponent = 25;
     public static final int MIN_QTY_EXPONENT_FIELD_NUMBER = 25;
     private int minQtyExponent_;
     /**
@@ -26208,7 +25865,6 @@ public final class SingleGeneralOrderHandling {
       return minQtyExponent_;
     }
 
-    // optional sfixed64 expire_time = 26;
     public static final int EXPIRE_TIME_FIELD_NUMBER = 26;
     private long expireTime_;
     /**
@@ -26224,7 +25880,6 @@ public final class SingleGeneralOrderHandling {
       return expireTime_;
     }
 
-    // optional bool forex_req = 27;
     public static final int FOREX_REQ_FIELD_NUMBER = 27;
     private boolean forexReq_;
     /**
@@ -26240,7 +25895,6 @@ public final class SingleGeneralOrderHandling {
       return forexReq_;
     }
 
-    // optional string settl_currency = 28;
     public static final int SETTL_CURRENCY_FIELD_NUMBER = 28;
     private java.lang.Object settlCurrency_;
     /**
@@ -26283,7 +25937,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 29;
     public static final int COVERED_OR_UNCOVERED_FIELD_NUMBER = 29;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CoveredOrUncoveredEnum coveredOrUncovered_;
     /**
@@ -26299,7 +25952,6 @@ public final class SingleGeneralOrderHandling {
       return coveredOrUncovered_;
     }
 
-    // optional bool locate_reqd = 30;
     public static final int LOCATE_REQD_FIELD_NUMBER = 30;
     private boolean locateReqd_;
     /**
@@ -26315,7 +25967,6 @@ public final class SingleGeneralOrderHandling {
       return locateReqd_;
     }
 
-    // optional sfixed64 max_show = 31;
     public static final int MAX_SHOW_FIELD_NUMBER = 31;
     private long maxShow_;
     /**
@@ -26331,7 +25982,6 @@ public final class SingleGeneralOrderHandling {
       return maxShow_;
     }
 
-    // optional sfixed32 max_show_exponent = 32;
     public static final int MAX_SHOW_EXPONENT_FIELD_NUMBER = 32;
     private int maxShowExponent_;
     /**
@@ -26347,7 +25997,6 @@ public final class SingleGeneralOrderHandling {
       return maxShowExponent_;
     }
 
-    // optional sfixed64 order_qty2 = 33;
     public static final int ORDER_QTY2_FIELD_NUMBER = 33;
     private long orderQty2_;
     /**
@@ -26363,7 +26012,6 @@ public final class SingleGeneralOrderHandling {
       return orderQty2_;
     }
 
-    // optional sfixed32 order_qty2_exponent = 34;
     public static final int ORDER_QTY2_EXPONENT_FIELD_NUMBER = 34;
     private int orderQty2Exponent_;
     /**
@@ -26379,7 +26027,6 @@ public final class SingleGeneralOrderHandling {
       return orderQty2Exponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 35;
     public static final int POSITION_EFFECT_FIELD_NUMBER = 35;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum positionEffect_;
     /**
@@ -26395,7 +26042,6 @@ public final class SingleGeneralOrderHandling {
       return positionEffect_;
     }
 
-    // optional sfixed32 settl_date2 = 36;
     public static final int SETTL_DATE2_FIELD_NUMBER = 36;
     private int settlDate2_;
     /**
@@ -26411,7 +26057,6 @@ public final class SingleGeneralOrderHandling {
       return settlDate2_;
     }
 
-    // optional string compliance_id = 37;
     public static final int COMPLIANCE_ID_FIELD_NUMBER = 37;
     private java.lang.Object complianceId_;
     /**
@@ -26454,7 +26099,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 effective_time = 38;
     public static final int EFFECTIVE_TIME_FIELD_NUMBER = 38;
     private long effectiveTime_;
     /**
@@ -26470,7 +26114,6 @@ public final class SingleGeneralOrderHandling {
       return effectiveTime_;
     }
 
-    // optional bytes encoded_text = 39;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 39;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -26486,7 +26129,6 @@ public final class SingleGeneralOrderHandling {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 40;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 40;
     private int encodedTextLen_;
     /**
@@ -26502,7 +26144,6 @@ public final class SingleGeneralOrderHandling {
       return encodedTextLen_;
     }
 
-    // optional sfixed32 expire_date = 41;
     public static final int EXPIRE_DATE_FIELD_NUMBER = 41;
     private int expireDate_;
     /**
@@ -26518,7 +26159,6 @@ public final class SingleGeneralOrderHandling {
       return expireDate_;
     }
 
-    // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 42;
     public static final int GT_BOOKING_INST_FIELD_NUMBER = 42;
     private org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum gtBookingInst_;
     /**
@@ -26534,7 +26174,6 @@ public final class SingleGeneralOrderHandling {
       return gtBookingInst_;
     }
 
-    // optional bool solicited_flag = 43;
     public static final int SOLICITED_FLAG_FIELD_NUMBER = 43;
     private boolean solicitedFlag_;
     /**
@@ -26550,7 +26189,6 @@ public final class SingleGeneralOrderHandling {
       return solicitedFlag_;
     }
 
-    // optional sfixed64 transact_time = 44;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 44;
     private long transactTime_;
     /**
@@ -26566,7 +26204,6 @@ public final class SingleGeneralOrderHandling {
       return transactTime_;
     }
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 45;
     public static final int ACCOUNT_TYPE_FIELD_NUMBER = 45;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_;
     /**
@@ -26582,7 +26219,6 @@ public final class SingleGeneralOrderHandling {
       return accountType_;
     }
 
-    // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 46;
     public static final int BOOKING_UNIT_FIELD_NUMBER = 46;
     private org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum bookingUnit_;
     /**
@@ -26598,7 +26234,6 @@ public final class SingleGeneralOrderHandling {
       return bookingUnit_;
     }
 
-    // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 47;
     public static final int CANCELLATION_RIGHTS_FIELD_NUMBER = 47;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum cancellationRights_;
     /**
@@ -26614,7 +26249,6 @@ public final class SingleGeneralOrderHandling {
       return cancellationRights_;
     }
 
-    // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 48;
     public static final int CASH_MARGIN_FIELD_NUMBER = 48;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum cashMargin_;
     /**
@@ -26630,7 +26264,6 @@ public final class SingleGeneralOrderHandling {
       return cashMargin_;
     }
 
-    // optional string cl_ord_link_id = 49;
     public static final int CL_ORD_LINK_ID_FIELD_NUMBER = 49;
     private java.lang.Object clOrdLinkId_;
     /**
@@ -26673,7 +26306,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 50;
     public static final int CLEARING_FEE_INDICATOR_FIELD_NUMBER = 50;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearingFeeIndicator_;
     /**
@@ -26689,7 +26321,6 @@ public final class SingleGeneralOrderHandling {
       return clearingFeeIndicator_;
     }
 
-    // optional .Common.CommissionData commission_data = 51;
     public static final int COMMISSION_DATA_FIELD_NUMBER = 51;
     private org.fixprotocol.components.Common.CommissionData commissionData_;
     /**
@@ -26711,7 +26342,6 @@ public final class SingleGeneralOrderHandling {
       return commissionData_;
     }
 
-    // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 52;
     public static final int CUST_ORDER_CAPACITY_FIELD_NUMBER = 52;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum custOrderCapacity_;
     /**
@@ -26727,7 +26357,6 @@ public final class SingleGeneralOrderHandling {
       return custOrderCapacity_;
     }
 
-    // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 53;
     public static final int DAY_BOOKING_INST_FIELD_NUMBER = 53;
     private org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum dayBookingInst_;
     /**
@@ -26743,7 +26372,6 @@ public final class SingleGeneralOrderHandling {
       return dayBookingInst_;
     }
 
-    // optional string designation = 54;
     public static final int DESIGNATION_FIELD_NUMBER = 54;
     private java.lang.Object designation_;
     /**
@@ -26786,7 +26414,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.Instrument instrument = 55;
     public static final int INSTRUMENT_FIELD_NUMBER = 55;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -26808,7 +26435,6 @@ public final class SingleGeneralOrderHandling {
       return instrument_;
     }
 
-    // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 56;
     public static final int MONEY_LAUNDERING_STATUS_FIELD_NUMBER = 56;
     private org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum moneyLaunderingStatus_;
     /**
@@ -26824,7 +26450,6 @@ public final class SingleGeneralOrderHandling {
       return moneyLaunderingStatus_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 57;
     public static final int ORDER_CAPACITY_FIELD_NUMBER = 57;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum orderCapacity_;
     /**
@@ -26840,7 +26465,6 @@ public final class SingleGeneralOrderHandling {
       return orderCapacity_;
     }
 
-    // optional .Common.OrderQtyData order_qty_data = 58;
     public static final int ORDER_QTY_DATA_FIELD_NUMBER = 58;
     private org.fixprotocol.components.Common.OrderQtyData orderQtyData_;
     /**
@@ -26862,7 +26486,6 @@ public final class SingleGeneralOrderHandling {
       return orderQtyData_;
     }
 
-    // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 59 [packed = true];
     public static final int ORDER_RESTRICTIONS_FIELD_NUMBER = 59;
     private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> orderRestrictions_;
     /**
@@ -26885,7 +26508,6 @@ public final class SingleGeneralOrderHandling {
     }
     private int orderRestrictionsMemoizedSerializedSize;
 
-    // optional sfixed64 orig_ord_mod_time = 60;
     public static final int ORIG_ORD_MOD_TIME_FIELD_NUMBER = 60;
     private long origOrdModTime_;
     /**
@@ -26901,7 +26523,6 @@ public final class SingleGeneralOrderHandling {
       return origOrdModTime_;
     }
 
-    // repeated .Common.Parties parties = 61;
     public static final int PARTIES_FIELD_NUMBER = 61;
     private java.util.List<org.fixprotocol.components.Common.Parties> parties_;
     /**
@@ -26937,7 +26558,6 @@ public final class SingleGeneralOrderHandling {
       return parties_.get(index);
     }
 
-    // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 62;
     public static final int PREALLOC_METHOD_FIELD_NUMBER = 62;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum preallocMethod_;
     /**
@@ -26953,7 +26573,6 @@ public final class SingleGeneralOrderHandling {
       return preallocMethod_;
     }
 
-    // optional sfixed64 price2 = 63;
     public static final int PRICE2_FIELD_NUMBER = 63;
     private long price2_;
     /**
@@ -26969,7 +26588,6 @@ public final class SingleGeneralOrderHandling {
       return price2_;
     }
 
-    // optional sfixed32 price2_exponent = 64;
     public static final int PRICE2_EXPONENT_FIELD_NUMBER = 64;
     private int price2Exponent_;
     /**
@@ -26985,7 +26603,6 @@ public final class SingleGeneralOrderHandling {
       return price2Exponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 65;
     public static final int PRICE_TYPE_FIELD_NUMBER = 65;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum priceType_;
     /**
@@ -27001,7 +26618,6 @@ public final class SingleGeneralOrderHandling {
       return priceType_;
     }
 
-    // optional string regist_id = 66;
     public static final int REGIST_ID_FIELD_NUMBER = 66;
     private java.lang.Object registId_;
     /**
@@ -27044,7 +26660,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string secondary_cl_ord_id = 67;
     public static final int SECONDARY_CL_ORD_ID_FIELD_NUMBER = 67;
     private java.lang.Object secondaryClOrdId_;
     /**
@@ -27087,7 +26702,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 68;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 68;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -27109,7 +26723,6 @@ public final class SingleGeneralOrderHandling {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // optional sfixed32 trade_origination_date = 69;
     public static final int TRADE_ORIGINATION_DATE_FIELD_NUMBER = 69;
     private int tradeOriginationDate_;
     /**
@@ -27125,7 +26738,6 @@ public final class SingleGeneralOrderHandling {
       return tradeOriginationDate_;
     }
 
-    // optional .Common.YieldData yield_data = 70;
     public static final int YIELD_DATA_FIELD_NUMBER = 70;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -27147,7 +26759,6 @@ public final class SingleGeneralOrderHandling {
       return yieldData_;
     }
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 71;
     public static final int ACCT_ID_SOURCE_FIELD_NUMBER = 71;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_;
     /**
@@ -27163,7 +26774,6 @@ public final class SingleGeneralOrderHandling {
       return acctIdSource_;
     }
 
-    // optional string alloc_id = 72;
     public static final int ALLOC_ID_FIELD_NUMBER = 72;
     private java.lang.Object allocId_;
     /**
@@ -27206,7 +26816,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 73;
     public static final int BOOKING_TYPE_FIELD_NUMBER = 73;
     private org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum bookingType_;
     /**
@@ -27222,7 +26831,6 @@ public final class SingleGeneralOrderHandling {
       return bookingType_;
     }
 
-    // optional bool cust_directed_order = 74;
     public static final int CUST_DIRECTED_ORDER_FIELD_NUMBER = 74;
     private boolean custDirectedOrder_;
     /**
@@ -27238,7 +26846,6 @@ public final class SingleGeneralOrderHandling {
       return custDirectedOrder_;
     }
 
-    // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 75;
     public static final int CUST_ORDER_HANDLING_INST_FIELD_NUMBER = 75;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum custOrderHandlingInst_;
     /**
@@ -27254,7 +26861,6 @@ public final class SingleGeneralOrderHandling {
       return custOrderHandlingInst_;
     }
 
-    // optional .Common.DiscretionInstructions discretion_instructions = 76;
     public static final int DISCRETION_INSTRUCTIONS_FIELD_NUMBER = 76;
     private org.fixprotocol.components.Common.DiscretionInstructions discretionInstructions_;
     /**
@@ -27276,7 +26882,6 @@ public final class SingleGeneralOrderHandling {
       return discretionInstructions_;
     }
 
-    // optional .Common.DisplayInstruction display_instruction = 77;
     public static final int DISPLAY_INSTRUCTION_FIELD_NUMBER = 77;
     private org.fixprotocol.components.Common.DisplayInstruction displayInstruction_;
     /**
@@ -27298,7 +26903,6 @@ public final class SingleGeneralOrderHandling {
       return displayInstruction_;
     }
 
-    // optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 78;
     public static final int EX_DESTINATION_ID_SOURCE_FIELD_NUMBER = 78;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ExDestinationIdSourceEnum exDestinationIdSource_;
     /**
@@ -27314,7 +26918,6 @@ public final class SingleGeneralOrderHandling {
       return exDestinationIdSource_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 79;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 79;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -27336,7 +26939,6 @@ public final class SingleGeneralOrderHandling {
       return financingDetails_;
     }
 
-    // optional bool manual_order_indicator = 80;
     public static final int MANUAL_ORDER_INDICATOR_FIELD_NUMBER = 80;
     private boolean manualOrderIndicator_;
     /**
@@ -27352,7 +26954,6 @@ public final class SingleGeneralOrderHandling {
       return manualOrderIndicator_;
     }
 
-    // optional sfixed64 match_increment = 81;
     public static final int MATCH_INCREMENT_FIELD_NUMBER = 81;
     private long matchIncrement_;
     /**
@@ -27368,7 +26969,6 @@ public final class SingleGeneralOrderHandling {
       return matchIncrement_;
     }
 
-    // optional sfixed32 match_increment_exponent = 82;
     public static final int MATCH_INCREMENT_EXPONENT_FIELD_NUMBER = 82;
     private int matchIncrementExponent_;
     /**
@@ -27384,7 +26984,6 @@ public final class SingleGeneralOrderHandling {
       return matchIncrementExponent_;
     }
 
-    // optional sfixed64 max_price_levels = 83;
     public static final int MAX_PRICE_LEVELS_FIELD_NUMBER = 83;
     private long maxPriceLevels_;
     /**
@@ -27400,7 +26999,6 @@ public final class SingleGeneralOrderHandling {
       return maxPriceLevels_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 84;
     public static final int ORDER_HANDLING_INST_SOURCE_FIELD_NUMBER = 84;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum orderHandlingInstSource_;
     /**
@@ -27416,7 +27014,6 @@ public final class SingleGeneralOrderHandling {
       return orderHandlingInstSource_;
     }
 
-    // optional sfixed64 participation_rate = 85;
     public static final int PARTICIPATION_RATE_FIELD_NUMBER = 85;
     private long participationRate_;
     /**
@@ -27432,7 +27029,6 @@ public final class SingleGeneralOrderHandling {
       return participationRate_;
     }
 
-    // optional sfixed32 participation_rate_exponent = 86;
     public static final int PARTICIPATION_RATE_EXPONENT_FIELD_NUMBER = 86;
     private int participationRateExponent_;
     /**
@@ -27448,7 +27044,6 @@ public final class SingleGeneralOrderHandling {
       return participationRateExponent_;
     }
 
-    // optional .Common.PegInstructions peg_instructions = 87;
     public static final int PEG_INSTRUCTIONS_FIELD_NUMBER = 87;
     private org.fixprotocol.components.Common.PegInstructions pegInstructions_;
     /**
@@ -27470,7 +27065,6 @@ public final class SingleGeneralOrderHandling {
       return pegInstructions_;
     }
 
-    // repeated .Common.PreAllocGrp pre_alloc_grp = 88;
     public static final int PRE_ALLOC_GRP_FIELD_NUMBER = 88;
     private java.util.List<org.fixprotocol.components.Common.PreAllocGrp> preAllocGrp_;
     /**
@@ -27506,7 +27100,6 @@ public final class SingleGeneralOrderHandling {
       return preAllocGrp_.get(index);
     }
 
-    // optional bool pre_trade_anonymity = 89;
     public static final int PRE_TRADE_ANONYMITY_FIELD_NUMBER = 89;
     private boolean preTradeAnonymity_;
     /**
@@ -27522,7 +27115,6 @@ public final class SingleGeneralOrderHandling {
       return preTradeAnonymity_;
     }
 
-    // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 90;
     public static final int PRICE_PROTECTION_SCOPE_FIELD_NUMBER = 90;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum priceProtectionScope_;
     /**
@@ -27538,7 +27130,6 @@ public final class SingleGeneralOrderHandling {
       return priceProtectionScope_;
     }
 
-    // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 91;
     public static final int QTY_TYPE_FIELD_NUMBER = 91;
     private org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum qtyType_;
     /**
@@ -27554,7 +27145,6 @@ public final class SingleGeneralOrderHandling {
       return qtyType_;
     }
 
-    // optional string received_dept_id = 92;
     public static final int RECEIVED_DEPT_ID_FIELD_NUMBER = 92;
     private java.lang.Object receivedDeptId_;
     /**
@@ -27597,7 +27187,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 93;
     public static final int STRATEGY_PARAMETERS_GRP_FIELD_NUMBER = 93;
     private java.util.List<org.fixprotocol.components.Common.StrategyParametersGrp> strategyParametersGrp_;
     /**
@@ -27633,7 +27222,6 @@ public final class SingleGeneralOrderHandling {
       return strategyParametersGrp_.get(index);
     }
 
-    // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 94;
     public static final int TARGET_STRATEGY_FIELD_NUMBER = 94;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum targetStrategy_;
     /**
@@ -27649,7 +27237,6 @@ public final class SingleGeneralOrderHandling {
       return targetStrategy_;
     }
 
-    // optional string target_strategy_parameters = 95;
     public static final int TARGET_STRATEGY_PARAMETERS_FIELD_NUMBER = 95;
     private java.lang.Object targetStrategyParameters_;
     /**
@@ -27692,7 +27279,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed32 trade_date = 96;
     public static final int TRADE_DATE_FIELD_NUMBER = 96;
     private int tradeDate_;
     /**
@@ -27708,7 +27294,6 @@ public final class SingleGeneralOrderHandling {
       return tradeDate_;
     }
 
-    // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 97;
     public static final int TRD_REG_TIMESTAMPS_FIELD_NUMBER = 97;
     private java.util.List<org.fixprotocol.components.Common.TrdRegTimestamps> trdRegTimestamps_;
     /**
@@ -27744,7 +27329,6 @@ public final class SingleGeneralOrderHandling {
       return trdRegTimestamps_.get(index);
     }
 
-    // repeated .Common.TrdgSesGrp trdg_ses_grp = 98;
     public static final int TRDG_SES_GRP_FIELD_NUMBER = 98;
     private java.util.List<org.fixprotocol.components.Common.TrdgSesGrp> trdgSesGrp_;
     /**
@@ -27780,7 +27364,6 @@ public final class SingleGeneralOrderHandling {
       return trdgSesGrp_.get(index);
     }
 
-    // optional .Common.TriggeringInstruction triggering_instruction = 99;
     public static final int TRIGGERING_INSTRUCTION_FIELD_NUMBER = 99;
     private org.fixprotocol.components.Common.TriggeringInstruction triggeringInstruction_;
     /**
@@ -27802,7 +27385,6 @@ public final class SingleGeneralOrderHandling {
       return triggeringInstruction_;
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 100;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 100;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -27943,7 +27525,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -28767,8 +28350,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.OrderCancelReplaceRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.OrderCancelReplaceRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.OrderCancelReplaceRequest)
+        org.fixprotocol.components.SingleGeneralOrderHandling.OrderCancelReplaceRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_descriptor;
@@ -30138,7 +29722,6 @@ public final class SingleGeneralOrderHandling {
       private int bitField2_;
       private int bitField3_;
 
-      // optional string account = 1;
       private java.lang.Object account_ = "";
       /**
        * <code>optional string account = 1;</code>
@@ -30152,9 +29735,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAccount() {
         java.lang.Object ref = account_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          account_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            account_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -30212,7 +29798,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_id = 2;
       private java.lang.Object clOrdId_ = "";
       /**
        * <code>optional string cl_ord_id = 2;</code>
@@ -30226,9 +29811,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdId() {
         java.lang.Object ref = clOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -30286,7 +29874,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string currency = 3;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 3;</code>
@@ -30300,9 +29887,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -30360,7 +29950,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 4 [packed = true];
       private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> execInst_ =
         java.util.Collections.emptyList();
       private void ensureExecInstIsMutable() {
@@ -30418,7 +30007,8 @@ public final class SingleGeneralOrderHandling {
       public Builder addAllExecInst(
           java.lang.Iterable<? extends org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> values) {
         ensureExecInstIsMutable();
-        super.addAll(values, execInst_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, execInst_);
         onChanged();
         return this;
       }
@@ -30432,7 +30022,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 5;
       private org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum handlInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum.HANDL_INST_AUTOMATED_EXECUTION_INTERVENTION_OK;
       /**
        * <code>optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 5;</code>
@@ -30468,7 +30057,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string list_id = 6;
       private java.lang.Object listId_ = "";
       /**
        * <code>optional string list_id = 6;</code>
@@ -30482,9 +30070,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getListId() {
         java.lang.Object ref = listId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          listId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            listId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -30542,7 +30133,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 7;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum ordType_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum.ORD_TYPE_LIMIT;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 7;</code>
@@ -30578,7 +30168,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string order_id = 8;
       private java.lang.Object orderId_ = "";
       /**
        * <code>optional string order_id = 8;</code>
@@ -30592,9 +30181,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrderId() {
         java.lang.Object ref = orderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            orderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -30652,7 +30244,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string orig_cl_ord_id = 9;
       private java.lang.Object origClOrdId_ = "";
       /**
        * <code>optional string orig_cl_ord_id = 9;</code>
@@ -30666,9 +30257,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrigClOrdId() {
         java.lang.Object ref = origClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          origClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            origClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -30726,7 +30320,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 price = 10;
       private long price_ ;
       /**
        * <code>optional sfixed64 price = 10;</code>
@@ -30759,7 +30352,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 price_exponent = 11;
       private int priceExponent_ ;
       /**
        * <code>optional sfixed32 price_exponent = 11;</code>
@@ -30792,7 +30384,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 settl_date = 12;
       private int settlDate_ ;
       /**
        * <code>optional sfixed32 settl_date = 12;</code>
@@ -30825,7 +30416,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 13;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum settlType_ = org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum.SETTL_TYPE_CASH;
       /**
        * <code>optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 13;</code>
@@ -30861,7 +30451,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SideEnum side = 14;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_ = org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum.SIDE_BUY;
       /**
        * <code>optional .SingleGeneralOrderHandling.SideEnum side = 14;</code>
@@ -30897,7 +30486,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 15;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -31006,7 +30594,7 @@ public final class SingleGeneralOrderHandling {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -31014,7 +30602,6 @@ public final class SingleGeneralOrderHandling {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 16;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -31123,7 +30710,7 @@ public final class SingleGeneralOrderHandling {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -31131,7 +30718,6 @@ public final class SingleGeneralOrderHandling {
         return standardTrailerBuilder_;
       }
 
-      // optional sfixed64 stop_px = 17;
       private long stopPx_ ;
       /**
        * <code>optional sfixed64 stop_px = 17;</code>
@@ -31164,7 +30750,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 stop_px_exponent = 18;
       private int stopPxExponent_ ;
       /**
        * <code>optional sfixed32 stop_px_exponent = 18;</code>
@@ -31197,7 +30782,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string text = 19;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 19;</code>
@@ -31211,9 +30795,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -31271,7 +30858,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 20;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum timeInForce_ = org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum.TIME_IN_FORCE_AT_THE_OPENING;
       /**
        * <code>optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 20;</code>
@@ -31307,7 +30893,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string ex_destination = 21;
       private java.lang.Object exDestination_ = "";
       /**
        * <code>optional string ex_destination = 21;</code>
@@ -31321,9 +30906,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getExDestination() {
         java.lang.Object ref = exDestination_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          exDestination_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            exDestination_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -31381,7 +30969,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_floor = 22;
       private long maxFloor_ ;
       /**
        * <code>optional sfixed64 max_floor = 22;</code>
@@ -31414,7 +31001,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 max_floor_exponent = 23;
       private int maxFloorExponent_ ;
       /**
        * <code>optional sfixed32 max_floor_exponent = 23;</code>
@@ -31447,7 +31033,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 min_qty = 24;
       private long minQty_ ;
       /**
        * <code>optional sfixed64 min_qty = 24;</code>
@@ -31480,7 +31065,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 min_qty_exponent = 25;
       private int minQtyExponent_ ;
       /**
        * <code>optional sfixed32 min_qty_exponent = 25;</code>
@@ -31513,7 +31097,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 expire_time = 26;
       private long expireTime_ ;
       /**
        * <code>optional sfixed64 expire_time = 26;</code>
@@ -31546,7 +31129,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool forex_req = 27;
       private boolean forexReq_ ;
       /**
        * <code>optional bool forex_req = 27;</code>
@@ -31579,7 +31161,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string settl_currency = 28;
       private java.lang.Object settlCurrency_ = "";
       /**
        * <code>optional string settl_currency = 28;</code>
@@ -31593,9 +31174,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSettlCurrency() {
         java.lang.Object ref = settlCurrency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          settlCurrency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            settlCurrency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -31653,7 +31237,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 29;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CoveredOrUncoveredEnum coveredOrUncovered_ = org.fixprotocol.components.SingleGeneralOrderHandling.CoveredOrUncoveredEnum.COVERED_OR_UNCOVERED_COVERED;
       /**
        * <code>optional .SingleGeneralOrderHandling.CoveredOrUncoveredEnum covered_or_uncovered = 29;</code>
@@ -31689,7 +31272,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool locate_reqd = 30;
       private boolean locateReqd_ ;
       /**
        * <code>optional bool locate_reqd = 30;</code>
@@ -31722,7 +31304,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_show = 31;
       private long maxShow_ ;
       /**
        * <code>optional sfixed64 max_show = 31;</code>
@@ -31755,7 +31336,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 max_show_exponent = 32;
       private int maxShowExponent_ ;
       /**
        * <code>optional sfixed32 max_show_exponent = 32;</code>
@@ -31788,7 +31368,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 order_qty2 = 33;
       private long orderQty2_ ;
       /**
        * <code>optional sfixed64 order_qty2 = 33;</code>
@@ -31821,7 +31400,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 order_qty2_exponent = 34;
       private int orderQty2Exponent_ ;
       /**
        * <code>optional sfixed32 order_qty2_exponent = 34;</code>
@@ -31854,7 +31432,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 35;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum positionEffect_ = org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum.POSITION_EFFECT_CLOSE;
       /**
        * <code>optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 35;</code>
@@ -31890,7 +31467,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 settl_date2 = 36;
       private int settlDate2_ ;
       /**
        * <code>optional sfixed32 settl_date2 = 36;</code>
@@ -31923,7 +31499,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string compliance_id = 37;
       private java.lang.Object complianceId_ = "";
       /**
        * <code>optional string compliance_id = 37;</code>
@@ -31937,9 +31512,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getComplianceId() {
         java.lang.Object ref = complianceId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          complianceId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            complianceId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -31997,7 +31575,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 effective_time = 38;
       private long effectiveTime_ ;
       /**
        * <code>optional sfixed64 effective_time = 38;</code>
@@ -32030,7 +31607,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bytes encoded_text = 39;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 39;</code>
@@ -32066,7 +31642,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 40;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 40;</code>
@@ -32099,7 +31674,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 expire_date = 41;
       private int expireDate_ ;
       /**
        * <code>optional sfixed32 expire_date = 41;</code>
@@ -32132,7 +31706,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 42;
       private org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum gtBookingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum.GT_BOOKING_INST_ACCUMULATE_UNTIL_FILLED_OR_EXPIRED;
       /**
        * <code>optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 42;</code>
@@ -32168,7 +31741,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool solicited_flag = 43;
       private boolean solicitedFlag_ ;
       /**
        * <code>optional bool solicited_flag = 43;</code>
@@ -32201,7 +31773,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 transact_time = 44;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 44;</code>
@@ -32234,7 +31805,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 45;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_ = org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum.ACCOUNT_TYPE_CARRIED_CUSTOMER_SIDE;
       /**
        * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 45;</code>
@@ -32270,7 +31840,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 46;
       private org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum bookingUnit_ = org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum.BOOKING_UNIT_AGGREGATE_EXECUTIONS_FOR_THIS_SYMBOL;
       /**
        * <code>optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 46;</code>
@@ -32306,7 +31875,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 47;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum cancellationRights_ = org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum.CANCELLATION_RIGHTS_NO_EXECUTION_ONLY;
       /**
        * <code>optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 47;</code>
@@ -32342,7 +31910,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 48;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum cashMargin_ = org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum.CASH_MARGIN_CASH;
       /**
        * <code>optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 48;</code>
@@ -32378,7 +31945,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_link_id = 49;
       private java.lang.Object clOrdLinkId_ = "";
       /**
        * <code>optional string cl_ord_link_id = 49;</code>
@@ -32392,9 +31958,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdLinkId() {
         java.lang.Object ref = clOrdLinkId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdLinkId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdLinkId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -32452,7 +32021,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 50;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearingFeeIndicator_ = org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum.CLEARING_FEE_INDICATOR_ALL_OTHER_OWNERSHIP_TYPES;
       /**
        * <code>optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 50;</code>
@@ -32488,7 +32056,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.CommissionData commission_data = 51;
       private org.fixprotocol.components.Common.CommissionData commissionData_ = org.fixprotocol.components.Common.CommissionData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.CommissionData, org.fixprotocol.components.Common.CommissionData.Builder, org.fixprotocol.components.Common.CommissionDataOrBuilder> commissionDataBuilder_;
@@ -32597,7 +32164,7 @@ public final class SingleGeneralOrderHandling {
         if (commissionDataBuilder_ == null) {
           commissionDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.CommissionData, org.fixprotocol.components.Common.CommissionData.Builder, org.fixprotocol.components.Common.CommissionDataOrBuilder>(
-                  commissionData_,
+                  getCommissionData(),
                   getParentForChildren(),
                   isClean());
           commissionData_ = null;
@@ -32605,7 +32172,6 @@ public final class SingleGeneralOrderHandling {
         return commissionDataBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 52;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum custOrderCapacity_ = org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum.CUST_ORDER_CAPACITY_ALL_OTHER;
       /**
        * <code>optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 52;</code>
@@ -32641,7 +32207,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 53;
       private org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum dayBookingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum.DAY_BOOKING_INST_AUTO;
       /**
        * <code>optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 53;</code>
@@ -32677,7 +32242,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string designation = 54;
       private java.lang.Object designation_ = "";
       /**
        * <code>optional string designation = 54;</code>
@@ -32691,9 +32255,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getDesignation() {
         java.lang.Object ref = designation_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          designation_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            designation_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -32751,7 +32318,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 55;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -32860,7 +32426,7 @@ public final class SingleGeneralOrderHandling {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -32868,7 +32434,6 @@ public final class SingleGeneralOrderHandling {
         return instrumentBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 56;
       private org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum moneyLaunderingStatus_ = org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum.MONEY_LAUNDERING_STATUS_EXEMPT_AUTHORISED;
       /**
        * <code>optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 56;</code>
@@ -32904,7 +32469,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 57;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum orderCapacity_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum.ORDER_CAPACITY_AGENCY;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 57;</code>
@@ -32940,7 +32504,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.OrderQtyData order_qty_data = 58;
       private org.fixprotocol.components.Common.OrderQtyData orderQtyData_ = org.fixprotocol.components.Common.OrderQtyData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder> orderQtyDataBuilder_;
@@ -33049,7 +32612,7 @@ public final class SingleGeneralOrderHandling {
         if (orderQtyDataBuilder_ == null) {
           orderQtyDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder>(
-                  orderQtyData_,
+                  getOrderQtyData(),
                   getParentForChildren(),
                   isClean());
           orderQtyData_ = null;
@@ -33057,7 +32620,6 @@ public final class SingleGeneralOrderHandling {
         return orderQtyDataBuilder_;
       }
 
-      // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 59 [packed = true];
       private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> orderRestrictions_ =
         java.util.Collections.emptyList();
       private void ensureOrderRestrictionsIsMutable() {
@@ -33115,7 +32677,8 @@ public final class SingleGeneralOrderHandling {
       public Builder addAllOrderRestrictions(
           java.lang.Iterable<? extends org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> values) {
         ensureOrderRestrictionsIsMutable();
-        super.addAll(values, orderRestrictions_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, orderRestrictions_);
         onChanged();
         return this;
       }
@@ -33129,7 +32692,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 orig_ord_mod_time = 60;
       private long origOrdModTime_ ;
       /**
        * <code>optional sfixed64 orig_ord_mod_time = 60;</code>
@@ -33162,7 +32724,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.Parties parties = 61;
       private java.util.List<org.fixprotocol.components.Common.Parties> parties_ =
         java.util.Collections.emptyList();
       private void ensurePartiesIsMutable() {
@@ -33304,7 +32865,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Parties> values) {
         if (partiesBuilder_ == null) {
           ensurePartiesIsMutable();
-          super.addAll(values, parties_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parties_);
           onChanged();
         } else {
           partiesBuilder_.addAllMessages(values);
@@ -33402,7 +32964,6 @@ public final class SingleGeneralOrderHandling {
         return partiesBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 62;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum preallocMethod_ = org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum.PREALLOC_METHOD_DO_NOT_PRO_RATA;
       /**
        * <code>optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 62;</code>
@@ -33438,7 +32999,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 price2 = 63;
       private long price2_ ;
       /**
        * <code>optional sfixed64 price2 = 63;</code>
@@ -33471,7 +33031,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 price2_exponent = 64;
       private int price2Exponent_ ;
       /**
        * <code>optional sfixed32 price2_exponent = 64;</code>
@@ -33504,7 +33063,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 65;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum priceType_ = org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum.PRICE_TYPE_FIXED_AMOUNT;
       /**
        * <code>optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 65;</code>
@@ -33540,7 +33098,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string regist_id = 66;
       private java.lang.Object registId_ = "";
       /**
        * <code>optional string regist_id = 66;</code>
@@ -33554,9 +33111,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getRegistId() {
         java.lang.Object ref = registId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          registId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            registId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -33614,7 +33174,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string secondary_cl_ord_id = 67;
       private java.lang.Object secondaryClOrdId_ = "";
       /**
        * <code>optional string secondary_cl_ord_id = 67;</code>
@@ -33628,9 +33187,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryClOrdId() {
         java.lang.Object ref = secondaryClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -33688,7 +33250,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 68;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -33797,7 +33358,7 @@ public final class SingleGeneralOrderHandling {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -33805,7 +33366,6 @@ public final class SingleGeneralOrderHandling {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // optional sfixed32 trade_origination_date = 69;
       private int tradeOriginationDate_ ;
       /**
        * <code>optional sfixed32 trade_origination_date = 69;</code>
@@ -33838,7 +33398,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.YieldData yield_data = 70;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -33947,7 +33506,7 @@ public final class SingleGeneralOrderHandling {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -33955,7 +33514,6 @@ public final class SingleGeneralOrderHandling {
         return yieldDataBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 71;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum.ACCT_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 71;</code>
@@ -33991,7 +33549,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string alloc_id = 72;
       private java.lang.Object allocId_ = "";
       /**
        * <code>optional string alloc_id = 72;</code>
@@ -34005,9 +33562,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAllocId() {
         java.lang.Object ref = allocId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          allocId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            allocId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -34065,7 +33625,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 73;
       private org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum bookingType_ = org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum.BOOKING_TYPE_CFD;
       /**
        * <code>optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 73;</code>
@@ -34101,7 +33660,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool cust_directed_order = 74;
       private boolean custDirectedOrder_ ;
       /**
        * <code>optional bool cust_directed_order = 74;</code>
@@ -34134,7 +33692,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 75;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum custOrderHandlingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum.CUST_ORDER_HANDLING_INST_ADD_ON_ORDER;
       /**
        * <code>optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 75;</code>
@@ -34170,7 +33727,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.DiscretionInstructions discretion_instructions = 76;
       private org.fixprotocol.components.Common.DiscretionInstructions discretionInstructions_ = org.fixprotocol.components.Common.DiscretionInstructions.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.DiscretionInstructions, org.fixprotocol.components.Common.DiscretionInstructions.Builder, org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder> discretionInstructionsBuilder_;
@@ -34279,7 +33835,7 @@ public final class SingleGeneralOrderHandling {
         if (discretionInstructionsBuilder_ == null) {
           discretionInstructionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.DiscretionInstructions, org.fixprotocol.components.Common.DiscretionInstructions.Builder, org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder>(
-                  discretionInstructions_,
+                  getDiscretionInstructions(),
                   getParentForChildren(),
                   isClean());
           discretionInstructions_ = null;
@@ -34287,7 +33843,6 @@ public final class SingleGeneralOrderHandling {
         return discretionInstructionsBuilder_;
       }
 
-      // optional .Common.DisplayInstruction display_instruction = 77;
       private org.fixprotocol.components.Common.DisplayInstruction displayInstruction_ = org.fixprotocol.components.Common.DisplayInstruction.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.DisplayInstruction, org.fixprotocol.components.Common.DisplayInstruction.Builder, org.fixprotocol.components.Common.DisplayInstructionOrBuilder> displayInstructionBuilder_;
@@ -34396,7 +33951,7 @@ public final class SingleGeneralOrderHandling {
         if (displayInstructionBuilder_ == null) {
           displayInstructionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.DisplayInstruction, org.fixprotocol.components.Common.DisplayInstruction.Builder, org.fixprotocol.components.Common.DisplayInstructionOrBuilder>(
-                  displayInstruction_,
+                  getDisplayInstruction(),
                   getParentForChildren(),
                   isClean());
           displayInstruction_ = null;
@@ -34404,7 +33959,6 @@ public final class SingleGeneralOrderHandling {
         return displayInstructionBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 78;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ExDestinationIdSourceEnum exDestinationIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.ExDestinationIdSourceEnum.EX_DESTINATION_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.ExDestinationIdSourceEnum ex_destination_id_source = 78;</code>
@@ -34440,7 +33994,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.FinancingDetails financing_details = 79;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -34549,7 +34102,7 @@ public final class SingleGeneralOrderHandling {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -34557,7 +34110,6 @@ public final class SingleGeneralOrderHandling {
         return financingDetailsBuilder_;
       }
 
-      // optional bool manual_order_indicator = 80;
       private boolean manualOrderIndicator_ ;
       /**
        * <code>optional bool manual_order_indicator = 80;</code>
@@ -34590,7 +34142,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 match_increment = 81;
       private long matchIncrement_ ;
       /**
        * <code>optional sfixed64 match_increment = 81;</code>
@@ -34623,7 +34174,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 match_increment_exponent = 82;
       private int matchIncrementExponent_ ;
       /**
        * <code>optional sfixed32 match_increment_exponent = 82;</code>
@@ -34656,7 +34206,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_price_levels = 83;
       private long maxPriceLevels_ ;
       /**
        * <code>optional sfixed64 max_price_levels = 83;</code>
@@ -34689,7 +34238,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 84;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum orderHandlingInstSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum.ORDER_HANDLING_INST_SOURCE_NASDOATS;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 84;</code>
@@ -34725,7 +34273,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 participation_rate = 85;
       private long participationRate_ ;
       /**
        * <code>optional sfixed64 participation_rate = 85;</code>
@@ -34758,7 +34305,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 participation_rate_exponent = 86;
       private int participationRateExponent_ ;
       /**
        * <code>optional sfixed32 participation_rate_exponent = 86;</code>
@@ -34791,7 +34337,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.PegInstructions peg_instructions = 87;
       private org.fixprotocol.components.Common.PegInstructions pegInstructions_ = org.fixprotocol.components.Common.PegInstructions.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.PegInstructions, org.fixprotocol.components.Common.PegInstructions.Builder, org.fixprotocol.components.Common.PegInstructionsOrBuilder> pegInstructionsBuilder_;
@@ -34900,7 +34445,7 @@ public final class SingleGeneralOrderHandling {
         if (pegInstructionsBuilder_ == null) {
           pegInstructionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.PegInstructions, org.fixprotocol.components.Common.PegInstructions.Builder, org.fixprotocol.components.Common.PegInstructionsOrBuilder>(
-                  pegInstructions_,
+                  getPegInstructions(),
                   getParentForChildren(),
                   isClean());
           pegInstructions_ = null;
@@ -34908,7 +34453,6 @@ public final class SingleGeneralOrderHandling {
         return pegInstructionsBuilder_;
       }
 
-      // repeated .Common.PreAllocGrp pre_alloc_grp = 88;
       private java.util.List<org.fixprotocol.components.Common.PreAllocGrp> preAllocGrp_ =
         java.util.Collections.emptyList();
       private void ensurePreAllocGrpIsMutable() {
@@ -35050,7 +34594,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.PreAllocGrp> values) {
         if (preAllocGrpBuilder_ == null) {
           ensurePreAllocGrpIsMutable();
-          super.addAll(values, preAllocGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, preAllocGrp_);
           onChanged();
         } else {
           preAllocGrpBuilder_.addAllMessages(values);
@@ -35148,7 +34693,6 @@ public final class SingleGeneralOrderHandling {
         return preAllocGrpBuilder_;
       }
 
-      // optional bool pre_trade_anonymity = 89;
       private boolean preTradeAnonymity_ ;
       /**
        * <code>optional bool pre_trade_anonymity = 89;</code>
@@ -35181,7 +34725,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 90;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum priceProtectionScope_ = org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum.PRICE_PROTECTION_SCOPE_GLOBAL;
       /**
        * <code>optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 90;</code>
@@ -35217,7 +34760,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 91;
       private org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum qtyType_ = org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum.QTY_TYPE_CONTRACTS;
       /**
        * <code>optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 91;</code>
@@ -35253,7 +34795,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string received_dept_id = 92;
       private java.lang.Object receivedDeptId_ = "";
       /**
        * <code>optional string received_dept_id = 92;</code>
@@ -35267,9 +34808,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getReceivedDeptId() {
         java.lang.Object ref = receivedDeptId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          receivedDeptId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            receivedDeptId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -35327,7 +34871,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 93;
       private java.util.List<org.fixprotocol.components.Common.StrategyParametersGrp> strategyParametersGrp_ =
         java.util.Collections.emptyList();
       private void ensureStrategyParametersGrpIsMutable() {
@@ -35469,7 +35012,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.StrategyParametersGrp> values) {
         if (strategyParametersGrpBuilder_ == null) {
           ensureStrategyParametersGrpIsMutable();
-          super.addAll(values, strategyParametersGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, strategyParametersGrp_);
           onChanged();
         } else {
           strategyParametersGrpBuilder_.addAllMessages(values);
@@ -35567,7 +35111,6 @@ public final class SingleGeneralOrderHandling {
         return strategyParametersGrpBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 94;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum targetStrategy_ = org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum.TARGET_STRATEGY_MININIZE_MARKET_IMPACT;
       /**
        * <code>optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 94;</code>
@@ -35603,7 +35146,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string target_strategy_parameters = 95;
       private java.lang.Object targetStrategyParameters_ = "";
       /**
        * <code>optional string target_strategy_parameters = 95;</code>
@@ -35617,9 +35159,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getTargetStrategyParameters() {
         java.lang.Object ref = targetStrategyParameters_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          targetStrategyParameters_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            targetStrategyParameters_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -35677,7 +35222,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 trade_date = 96;
       private int tradeDate_ ;
       /**
        * <code>optional sfixed32 trade_date = 96;</code>
@@ -35710,7 +35254,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 97;
       private java.util.List<org.fixprotocol.components.Common.TrdRegTimestamps> trdRegTimestamps_ =
         java.util.Collections.emptyList();
       private void ensureTrdRegTimestampsIsMutable() {
@@ -35852,7 +35395,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.TrdRegTimestamps> values) {
         if (trdRegTimestampsBuilder_ == null) {
           ensureTrdRegTimestampsIsMutable();
-          super.addAll(values, trdRegTimestamps_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trdRegTimestamps_);
           onChanged();
         } else {
           trdRegTimestampsBuilder_.addAllMessages(values);
@@ -35950,7 +35494,6 @@ public final class SingleGeneralOrderHandling {
         return trdRegTimestampsBuilder_;
       }
 
-      // repeated .Common.TrdgSesGrp trdg_ses_grp = 98;
       private java.util.List<org.fixprotocol.components.Common.TrdgSesGrp> trdgSesGrp_ =
         java.util.Collections.emptyList();
       private void ensureTrdgSesGrpIsMutable() {
@@ -36092,7 +35635,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.TrdgSesGrp> values) {
         if (trdgSesGrpBuilder_ == null) {
           ensureTrdgSesGrpIsMutable();
-          super.addAll(values, trdgSesGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trdgSesGrp_);
           onChanged();
         } else {
           trdgSesGrpBuilder_.addAllMessages(values);
@@ -36190,7 +35734,6 @@ public final class SingleGeneralOrderHandling {
         return trdgSesGrpBuilder_;
       }
 
-      // optional .Common.TriggeringInstruction triggering_instruction = 99;
       private org.fixprotocol.components.Common.TriggeringInstruction triggeringInstruction_ = org.fixprotocol.components.Common.TriggeringInstruction.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.TriggeringInstruction, org.fixprotocol.components.Common.TriggeringInstruction.Builder, org.fixprotocol.components.Common.TriggeringInstructionOrBuilder> triggeringInstructionBuilder_;
@@ -36299,7 +35842,7 @@ public final class SingleGeneralOrderHandling {
         if (triggeringInstructionBuilder_ == null) {
           triggeringInstructionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.TriggeringInstruction, org.fixprotocol.components.Common.TriggeringInstruction.Builder, org.fixprotocol.components.Common.TriggeringInstructionOrBuilder>(
-                  triggeringInstruction_,
+                  getTriggeringInstruction(),
                   getParentForChildren(),
                   isClean());
           triggeringInstruction_ = null;
@@ -36307,7 +35850,6 @@ public final class SingleGeneralOrderHandling {
         return triggeringInstructionBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 100;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -36449,7 +35991,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -36558,10 +36101,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.OrderCancelReplaceRequest)
   }
 
-  public interface OrderCancelRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface OrderCancelRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.OrderCancelRequest)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string cl_ord_id = 1;
     /**
      * <code>optional string cl_ord_id = 1;</code>
      */
@@ -36576,7 +36119,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdIdBytes();
 
-    // optional string list_id = 2;
     /**
      * <code>optional string list_id = 2;</code>
      */
@@ -36591,7 +36133,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getListIdBytes();
 
-    // optional string order_id = 3;
     /**
      * <code>optional string order_id = 3;</code>
      */
@@ -36606,7 +36147,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrderIdBytes();
 
-    // optional string orig_cl_ord_id = 4;
     /**
      * <code>optional string orig_cl_ord_id = 4;</code>
      */
@@ -36621,7 +36161,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrigClOrdIdBytes();
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 5;
     /**
      * <code>optional .SingleGeneralOrderHandling.SideEnum side = 5;</code>
      */
@@ -36631,7 +36170,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum getSide();
 
-    // optional .Session.StandardHeader standard_header = 6;
     /**
      * <code>optional .Session.StandardHeader standard_header = 6;</code>
      */
@@ -36645,7 +36183,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 7;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 7;</code>
      */
@@ -36659,7 +36196,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 8;
     /**
      * <code>optional string text = 8;</code>
      */
@@ -36674,7 +36210,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional string account = 9;
     /**
      * <code>optional string account = 9;</code>
      */
@@ -36689,7 +36224,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAccountBytes();
 
-    // optional string compliance_id = 10;
     /**
      * <code>optional string compliance_id = 10;</code>
      */
@@ -36704,7 +36238,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getComplianceIdBytes();
 
-    // optional bytes encoded_text = 11;
     /**
      * <code>optional bytes encoded_text = 11;</code>
      */
@@ -36714,7 +36247,6 @@ public final class SingleGeneralOrderHandling {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 12;
     /**
      * <code>optional fixed32 encoded_text_len = 12;</code>
      */
@@ -36724,7 +36256,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEncodedTextLen();
 
-    // optional sfixed64 transact_time = 13;
     /**
      * <code>optional sfixed64 transact_time = 13;</code>
      */
@@ -36734,7 +36265,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTransactTime();
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 14;
     /**
      * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 14;</code>
      */
@@ -36744,7 +36274,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum getAccountType();
 
-    // optional string cl_ord_link_id = 15;
     /**
      * <code>optional string cl_ord_link_id = 15;</code>
      */
@@ -36759,7 +36288,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdLinkIdBytes();
 
-    // optional .Common.Instrument instrument = 16;
     /**
      * <code>optional .Common.Instrument instrument = 16;</code>
      */
@@ -36773,7 +36301,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .Common.OrderQtyData order_qty_data = 17;
     /**
      * <code>optional .Common.OrderQtyData order_qty_data = 17;</code>
      */
@@ -36787,7 +36314,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.OrderQtyDataOrBuilder getOrderQtyDataOrBuilder();
 
-    // optional sfixed64 orig_ord_mod_time = 18;
     /**
      * <code>optional sfixed64 orig_ord_mod_time = 18;</code>
      */
@@ -36797,7 +36323,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getOrigOrdModTime();
 
-    // repeated .Common.Parties parties = 19;
     /**
      * <code>repeated .Common.Parties parties = 19;</code>
      */
@@ -36822,7 +36347,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.PartiesOrBuilder getPartiesOrBuilder(
         int index);
 
-    // optional string secondary_cl_ord_id = 20;
     /**
      * <code>optional string secondary_cl_ord_id = 20;</code>
      */
@@ -36837,7 +36361,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryClOrdIdBytes();
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 21;
     /**
      * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 21;</code>
      */
@@ -36847,7 +36370,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum getAcctIdSource();
 
-    // optional .Common.FinancingDetails financing_details = 22;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 22;</code>
      */
@@ -36861,7 +36383,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 23;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 23;</code>
      */
@@ -36890,8 +36411,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.OrderCancelRequest}
    */
   public static final class OrderCancelRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements OrderCancelRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.OrderCancelRequest)
+      OrderCancelRequestOrBuilder {
     // Use OrderCancelRequest.newBuilder() to construct.
     private OrderCancelRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -36938,23 +36460,27 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              clOrdId_ = input.readBytes();
+              clOrdId_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              listId_ = input.readBytes();
+              listId_ = bs;
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              orderId_ = input.readBytes();
+              orderId_ = bs;
               break;
             }
             case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              origClOrdId_ = input.readBytes();
+              origClOrdId_ = bs;
               break;
             }
             case 40: {
@@ -36995,18 +36521,21 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 66: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000100;
-              account_ = input.readBytes();
+              account_ = bs;
               break;
             }
             case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000200;
-              complianceId_ = input.readBytes();
+              complianceId_ = bs;
               break;
             }
             case 90: {
@@ -37036,8 +36565,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 122: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00004000;
-              clOrdLinkId_ = input.readBytes();
+              clOrdLinkId_ = bs;
               break;
             }
             case 130: {
@@ -37080,8 +36610,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 162: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00040000;
-              secondaryClOrdId_ = input.readBytes();
+              secondaryClOrdId_ = bs;
               break;
             }
             case 168: {
@@ -37162,7 +36693,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional string cl_ord_id = 1;
     public static final int CL_ORD_ID_FIELD_NUMBER = 1;
     private java.lang.Object clOrdId_;
     /**
@@ -37205,7 +36735,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string list_id = 2;
     public static final int LIST_ID_FIELD_NUMBER = 2;
     private java.lang.Object listId_;
     /**
@@ -37248,7 +36777,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string order_id = 3;
     public static final int ORDER_ID_FIELD_NUMBER = 3;
     private java.lang.Object orderId_;
     /**
@@ -37291,7 +36819,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string orig_cl_ord_id = 4;
     public static final int ORIG_CL_ORD_ID_FIELD_NUMBER = 4;
     private java.lang.Object origClOrdId_;
     /**
@@ -37334,7 +36861,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 5;
     public static final int SIDE_FIELD_NUMBER = 5;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_;
     /**
@@ -37350,7 +36876,6 @@ public final class SingleGeneralOrderHandling {
       return side_;
     }
 
-    // optional .Session.StandardHeader standard_header = 6;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 6;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -37372,7 +36897,6 @@ public final class SingleGeneralOrderHandling {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 7;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 7;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -37394,7 +36918,6 @@ public final class SingleGeneralOrderHandling {
       return standardTrailer_;
     }
 
-    // optional string text = 8;
     public static final int TEXT_FIELD_NUMBER = 8;
     private java.lang.Object text_;
     /**
@@ -37437,7 +36960,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string account = 9;
     public static final int ACCOUNT_FIELD_NUMBER = 9;
     private java.lang.Object account_;
     /**
@@ -37480,7 +37002,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string compliance_id = 10;
     public static final int COMPLIANCE_ID_FIELD_NUMBER = 10;
     private java.lang.Object complianceId_;
     /**
@@ -37523,7 +37044,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional bytes encoded_text = 11;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 11;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -37539,7 +37059,6 @@ public final class SingleGeneralOrderHandling {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 12;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 12;
     private int encodedTextLen_;
     /**
@@ -37555,7 +37074,6 @@ public final class SingleGeneralOrderHandling {
       return encodedTextLen_;
     }
 
-    // optional sfixed64 transact_time = 13;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 13;
     private long transactTime_;
     /**
@@ -37571,7 +37089,6 @@ public final class SingleGeneralOrderHandling {
       return transactTime_;
     }
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 14;
     public static final int ACCOUNT_TYPE_FIELD_NUMBER = 14;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_;
     /**
@@ -37587,7 +37104,6 @@ public final class SingleGeneralOrderHandling {
       return accountType_;
     }
 
-    // optional string cl_ord_link_id = 15;
     public static final int CL_ORD_LINK_ID_FIELD_NUMBER = 15;
     private java.lang.Object clOrdLinkId_;
     /**
@@ -37630,7 +37146,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.Instrument instrument = 16;
     public static final int INSTRUMENT_FIELD_NUMBER = 16;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -37652,7 +37167,6 @@ public final class SingleGeneralOrderHandling {
       return instrument_;
     }
 
-    // optional .Common.OrderQtyData order_qty_data = 17;
     public static final int ORDER_QTY_DATA_FIELD_NUMBER = 17;
     private org.fixprotocol.components.Common.OrderQtyData orderQtyData_;
     /**
@@ -37674,7 +37188,6 @@ public final class SingleGeneralOrderHandling {
       return orderQtyData_;
     }
 
-    // optional sfixed64 orig_ord_mod_time = 18;
     public static final int ORIG_ORD_MOD_TIME_FIELD_NUMBER = 18;
     private long origOrdModTime_;
     /**
@@ -37690,7 +37203,6 @@ public final class SingleGeneralOrderHandling {
       return origOrdModTime_;
     }
 
-    // repeated .Common.Parties parties = 19;
     public static final int PARTIES_FIELD_NUMBER = 19;
     private java.util.List<org.fixprotocol.components.Common.Parties> parties_;
     /**
@@ -37726,7 +37238,6 @@ public final class SingleGeneralOrderHandling {
       return parties_.get(index);
     }
 
-    // optional string secondary_cl_ord_id = 20;
     public static final int SECONDARY_CL_ORD_ID_FIELD_NUMBER = 20;
     private java.lang.Object secondaryClOrdId_;
     /**
@@ -37769,7 +37280,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 21;
     public static final int ACCT_ID_SOURCE_FIELD_NUMBER = 21;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_;
     /**
@@ -37785,7 +37295,6 @@ public final class SingleGeneralOrderHandling {
       return acctIdSource_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 22;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 22;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -37807,7 +37316,6 @@ public final class SingleGeneralOrderHandling {
       return financingDetails_;
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 23;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 23;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -37871,7 +37379,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -38132,8 +37641,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.OrderCancelRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.OrderCancelRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.OrderCancelRequest)
+        org.fixprotocol.components.SingleGeneralOrderHandling.OrderCancelRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_OrderCancelRequest_descriptor;
@@ -38573,7 +38083,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional string cl_ord_id = 1;
       private java.lang.Object clOrdId_ = "";
       /**
        * <code>optional string cl_ord_id = 1;</code>
@@ -38587,9 +38096,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdId() {
         java.lang.Object ref = clOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -38647,7 +38159,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string list_id = 2;
       private java.lang.Object listId_ = "";
       /**
        * <code>optional string list_id = 2;</code>
@@ -38661,9 +38172,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getListId() {
         java.lang.Object ref = listId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          listId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            listId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -38721,7 +38235,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string order_id = 3;
       private java.lang.Object orderId_ = "";
       /**
        * <code>optional string order_id = 3;</code>
@@ -38735,9 +38248,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrderId() {
         java.lang.Object ref = orderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            orderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -38795,7 +38311,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string orig_cl_ord_id = 4;
       private java.lang.Object origClOrdId_ = "";
       /**
        * <code>optional string orig_cl_ord_id = 4;</code>
@@ -38809,9 +38324,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrigClOrdId() {
         java.lang.Object ref = origClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          origClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            origClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -38869,7 +38387,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SideEnum side = 5;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_ = org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum.SIDE_BUY;
       /**
        * <code>optional .SingleGeneralOrderHandling.SideEnum side = 5;</code>
@@ -38905,7 +38422,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 6;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -39014,7 +38530,7 @@ public final class SingleGeneralOrderHandling {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -39022,7 +38538,6 @@ public final class SingleGeneralOrderHandling {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 7;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -39131,7 +38646,7 @@ public final class SingleGeneralOrderHandling {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -39139,7 +38654,6 @@ public final class SingleGeneralOrderHandling {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 8;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 8;</code>
@@ -39153,9 +38667,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -39213,7 +38730,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string account = 9;
       private java.lang.Object account_ = "";
       /**
        * <code>optional string account = 9;</code>
@@ -39227,9 +38743,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAccount() {
         java.lang.Object ref = account_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          account_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            account_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -39287,7 +38806,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string compliance_id = 10;
       private java.lang.Object complianceId_ = "";
       /**
        * <code>optional string compliance_id = 10;</code>
@@ -39301,9 +38819,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getComplianceId() {
         java.lang.Object ref = complianceId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          complianceId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            complianceId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -39361,7 +38882,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bytes encoded_text = 11;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 11;</code>
@@ -39397,7 +38917,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 12;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 12;</code>
@@ -39430,7 +38949,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 transact_time = 13;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 13;</code>
@@ -39463,7 +38981,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 14;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_ = org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum.ACCOUNT_TYPE_CARRIED_CUSTOMER_SIDE;
       /**
        * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 14;</code>
@@ -39499,7 +39016,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_link_id = 15;
       private java.lang.Object clOrdLinkId_ = "";
       /**
        * <code>optional string cl_ord_link_id = 15;</code>
@@ -39513,9 +39029,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdLinkId() {
         java.lang.Object ref = clOrdLinkId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdLinkId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdLinkId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -39573,7 +39092,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 16;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -39682,7 +39200,7 @@ public final class SingleGeneralOrderHandling {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -39690,7 +39208,6 @@ public final class SingleGeneralOrderHandling {
         return instrumentBuilder_;
       }
 
-      // optional .Common.OrderQtyData order_qty_data = 17;
       private org.fixprotocol.components.Common.OrderQtyData orderQtyData_ = org.fixprotocol.components.Common.OrderQtyData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder> orderQtyDataBuilder_;
@@ -39799,7 +39316,7 @@ public final class SingleGeneralOrderHandling {
         if (orderQtyDataBuilder_ == null) {
           orderQtyDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder>(
-                  orderQtyData_,
+                  getOrderQtyData(),
                   getParentForChildren(),
                   isClean());
           orderQtyData_ = null;
@@ -39807,7 +39324,6 @@ public final class SingleGeneralOrderHandling {
         return orderQtyDataBuilder_;
       }
 
-      // optional sfixed64 orig_ord_mod_time = 18;
       private long origOrdModTime_ ;
       /**
        * <code>optional sfixed64 orig_ord_mod_time = 18;</code>
@@ -39840,7 +39356,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.Parties parties = 19;
       private java.util.List<org.fixprotocol.components.Common.Parties> parties_ =
         java.util.Collections.emptyList();
       private void ensurePartiesIsMutable() {
@@ -39982,7 +39497,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Parties> values) {
         if (partiesBuilder_ == null) {
           ensurePartiesIsMutable();
-          super.addAll(values, parties_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parties_);
           onChanged();
         } else {
           partiesBuilder_.addAllMessages(values);
@@ -40080,7 +39596,6 @@ public final class SingleGeneralOrderHandling {
         return partiesBuilder_;
       }
 
-      // optional string secondary_cl_ord_id = 20;
       private java.lang.Object secondaryClOrdId_ = "";
       /**
        * <code>optional string secondary_cl_ord_id = 20;</code>
@@ -40094,9 +39609,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryClOrdId() {
         java.lang.Object ref = secondaryClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -40154,7 +39672,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 21;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum.ACCT_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 21;</code>
@@ -40190,7 +39707,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.FinancingDetails financing_details = 22;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -40299,7 +39815,7 @@ public final class SingleGeneralOrderHandling {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -40307,7 +39823,6 @@ public final class SingleGeneralOrderHandling {
         return financingDetailsBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 23;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -40449,7 +39964,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -40558,10 +40074,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.OrderCancelRequest)
   }
 
-  public interface CxlRejReasonUnionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface CxlRejReasonUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.CxlRejReasonUnion)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 1;
     /**
      * <code>optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 1;</code>
      */
@@ -40571,7 +40087,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonEnum getCxlRejReason();
 
-    // optional sfixed64 cxl_rej_reason_sfixed64 = 2;
     /**
      * <code>optional sfixed64 cxl_rej_reason_sfixed64 = 2;</code>
      */
@@ -40585,8 +40100,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.CxlRejReasonUnion}
    */
   public static final class CxlRejReasonUnion extends
-      com.google.protobuf.GeneratedMessage
-      implements CxlRejReasonUnionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.CxlRejReasonUnion)
+      CxlRejReasonUnionOrBuilder {
     // Use CxlRejReasonUnion.newBuilder() to construct.
     private CxlRejReasonUnion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -40688,7 +40204,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 1;
     public static final int CXL_REJ_REASON_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonEnum cxlRejReason_;
     /**
@@ -40704,7 +40219,6 @@ public final class SingleGeneralOrderHandling {
       return cxlRejReason_;
     }
 
-    // optional sfixed64 cxl_rej_reason_sfixed64 = 2;
     public static final int CXL_REJ_REASON_SFIXED64_FIELD_NUMBER = 2;
     private long cxlRejReasonSfixed64_;
     /**
@@ -40727,7 +40241,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -40841,8 +40356,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.CxlRejReasonUnion}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonUnionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.CxlRejReasonUnion)
+        org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonUnionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_descriptor;
@@ -40964,7 +40480,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 1;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonEnum cxlRejReason_ = org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonEnum.CXL_REJ_REASON_TOO_LATE_TO_CANCEL;
       /**
        * <code>optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 1;</code>
@@ -41000,7 +40515,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 cxl_rej_reason_sfixed64 = 2;
       private long cxlRejReasonSfixed64_ ;
       /**
        * <code>optional sfixed64 cxl_rej_reason_sfixed64 = 2;</code>
@@ -41044,10 +40558,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.CxlRejReasonUnion)
   }
 
-  public interface OrderCancelRejectOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface OrderCancelRejectOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.OrderCancelReject)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string cl_ord_id = 1;
     /**
      * <code>optional string cl_ord_id = 1;</code>
      */
@@ -41062,7 +40576,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdIdBytes();
 
-    // optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 2;
     /**
      * <code>optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 2;</code>
      */
@@ -41072,7 +40585,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonEnum getCxlRejReason();
 
-    // optional string list_id = 3;
     /**
      * <code>optional string list_id = 3;</code>
      */
@@ -41087,7 +40599,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getListIdBytes();
 
-    // optional string order_id = 4;
     /**
      * <code>optional string order_id = 4;</code>
      */
@@ -41102,7 +40613,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrderIdBytes();
 
-    // optional .Session.StandardHeader standard_header = 5;
     /**
      * <code>optional .Session.StandardHeader standard_header = 5;</code>
      */
@@ -41116,7 +40626,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 6;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 6;</code>
      */
@@ -41130,7 +40639,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 7;
     /**
      * <code>optional string text = 7;</code>
      */
@@ -41145,7 +40653,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 8;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 8;</code>
      */
@@ -41155,7 +40662,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrdStatusEnum getOrdStatus();
 
-    // optional string orig_cl_ord_id = 9;
     /**
      * <code>optional string orig_cl_ord_id = 9;</code>
      */
@@ -41170,7 +40676,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrigClOrdIdBytes();
 
-    // optional string secondary_order_id = 10;
     /**
      * <code>optional string secondary_order_id = 10;</code>
      */
@@ -41185,7 +40690,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryOrderIdBytes();
 
-    // optional string account = 11;
     /**
      * <code>optional string account = 11;</code>
      */
@@ -41200,7 +40704,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAccountBytes();
 
-    // optional .SingleGeneralOrderHandling.CxlRejResponseToEnum cxl_rej_response_to = 12;
     /**
      * <code>optional .SingleGeneralOrderHandling.CxlRejResponseToEnum cxl_rej_response_to = 12;</code>
      */
@@ -41210,7 +40713,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejResponseToEnum getCxlRejResponseTo();
 
-    // optional bytes encoded_text = 13;
     /**
      * <code>optional bytes encoded_text = 13;</code>
      */
@@ -41220,7 +40722,6 @@ public final class SingleGeneralOrderHandling {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 14;
     /**
      * <code>optional fixed32 encoded_text_len = 14;</code>
      */
@@ -41230,7 +40731,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEncodedTextLen();
 
-    // optional sfixed64 transact_time = 15;
     /**
      * <code>optional sfixed64 transact_time = 15;</code>
      */
@@ -41240,7 +40740,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTransactTime();
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 16;
     /**
      * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 16;</code>
      */
@@ -41250,7 +40749,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum getAccountType();
 
-    // optional string cl_ord_link_id = 17;
     /**
      * <code>optional string cl_ord_link_id = 17;</code>
      */
@@ -41265,7 +40763,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdLinkIdBytes();
 
-    // optional sfixed64 orig_ord_mod_time = 18;
     /**
      * <code>optional sfixed64 orig_ord_mod_time = 18;</code>
      */
@@ -41275,7 +40772,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getOrigOrdModTime();
 
-    // optional string secondary_cl_ord_id = 19;
     /**
      * <code>optional string secondary_cl_ord_id = 19;</code>
      */
@@ -41290,7 +40786,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryClOrdIdBytes();
 
-    // optional sfixed32 trade_origination_date = 20;
     /**
      * <code>optional sfixed32 trade_origination_date = 20;</code>
      */
@@ -41300,7 +40795,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getTradeOriginationDate();
 
-    // optional bool working_indicator = 21;
     /**
      * <code>optional bool working_indicator = 21;</code>
      */
@@ -41310,7 +40804,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getWorkingIndicator();
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 22;
     /**
      * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 22;</code>
      */
@@ -41320,7 +40813,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum getAcctIdSource();
 
-    // optional sfixed32 trade_date = 23;
     /**
      * <code>optional sfixed32 trade_date = 23;</code>
      */
@@ -41334,8 +40826,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.OrderCancelReject}
    */
   public static final class OrderCancelReject extends
-      com.google.protobuf.GeneratedMessage
-      implements OrderCancelRejectOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.OrderCancelReject)
+      OrderCancelRejectOrBuilder {
     // Use OrderCancelReject.newBuilder() to construct.
     private OrderCancelReject(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -41382,8 +40875,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              clOrdId_ = input.readBytes();
+              clOrdId_ = bs;
               break;
             }
             case 16: {
@@ -41398,13 +40892,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              listId_ = input.readBytes();
+              listId_ = bs;
               break;
             }
             case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              orderId_ = input.readBytes();
+              orderId_ = bs;
               break;
             }
             case 42: {
@@ -41434,8 +40930,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000040;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 64: {
@@ -41450,18 +40947,21 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000100;
-              origClOrdId_ = input.readBytes();
+              origClOrdId_ = bs;
               break;
             }
             case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000200;
-              secondaryOrderId_ = input.readBytes();
+              secondaryOrderId_ = bs;
               break;
             }
             case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000400;
-              account_ = input.readBytes();
+              account_ = bs;
               break;
             }
             case 96: {
@@ -41502,8 +41002,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
-              clOrdLinkId_ = input.readBytes();
+              clOrdLinkId_ = bs;
               break;
             }
             case 145: {
@@ -41512,8 +41013,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 154: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00040000;
-              secondaryClOrdId_ = input.readBytes();
+              secondaryClOrdId_ = bs;
               break;
             }
             case 165: {
@@ -41582,7 +41084,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional string cl_ord_id = 1;
     public static final int CL_ORD_ID_FIELD_NUMBER = 1;
     private java.lang.Object clOrdId_;
     /**
@@ -41625,7 +41126,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 2;
     public static final int CXL_REJ_REASON_FIELD_NUMBER = 2;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonEnum cxlRejReason_;
     /**
@@ -41641,7 +41141,6 @@ public final class SingleGeneralOrderHandling {
       return cxlRejReason_;
     }
 
-    // optional string list_id = 3;
     public static final int LIST_ID_FIELD_NUMBER = 3;
     private java.lang.Object listId_;
     /**
@@ -41684,7 +41183,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string order_id = 4;
     public static final int ORDER_ID_FIELD_NUMBER = 4;
     private java.lang.Object orderId_;
     /**
@@ -41727,7 +41225,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Session.StandardHeader standard_header = 5;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 5;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -41749,7 +41246,6 @@ public final class SingleGeneralOrderHandling {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 6;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 6;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -41771,7 +41267,6 @@ public final class SingleGeneralOrderHandling {
       return standardTrailer_;
     }
 
-    // optional string text = 7;
     public static final int TEXT_FIELD_NUMBER = 7;
     private java.lang.Object text_;
     /**
@@ -41814,7 +41309,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 8;
     public static final int ORD_STATUS_FIELD_NUMBER = 8;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrdStatusEnum ordStatus_;
     /**
@@ -41830,7 +41324,6 @@ public final class SingleGeneralOrderHandling {
       return ordStatus_;
     }
 
-    // optional string orig_cl_ord_id = 9;
     public static final int ORIG_CL_ORD_ID_FIELD_NUMBER = 9;
     private java.lang.Object origClOrdId_;
     /**
@@ -41873,7 +41366,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string secondary_order_id = 10;
     public static final int SECONDARY_ORDER_ID_FIELD_NUMBER = 10;
     private java.lang.Object secondaryOrderId_;
     /**
@@ -41916,7 +41408,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string account = 11;
     public static final int ACCOUNT_FIELD_NUMBER = 11;
     private java.lang.Object account_;
     /**
@@ -41959,7 +41450,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.CxlRejResponseToEnum cxl_rej_response_to = 12;
     public static final int CXL_REJ_RESPONSE_TO_FIELD_NUMBER = 12;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejResponseToEnum cxlRejResponseTo_;
     /**
@@ -41975,7 +41465,6 @@ public final class SingleGeneralOrderHandling {
       return cxlRejResponseTo_;
     }
 
-    // optional bytes encoded_text = 13;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 13;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -41991,7 +41480,6 @@ public final class SingleGeneralOrderHandling {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 14;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 14;
     private int encodedTextLen_;
     /**
@@ -42007,7 +41495,6 @@ public final class SingleGeneralOrderHandling {
       return encodedTextLen_;
     }
 
-    // optional sfixed64 transact_time = 15;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 15;
     private long transactTime_;
     /**
@@ -42023,7 +41510,6 @@ public final class SingleGeneralOrderHandling {
       return transactTime_;
     }
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 16;
     public static final int ACCOUNT_TYPE_FIELD_NUMBER = 16;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_;
     /**
@@ -42039,7 +41525,6 @@ public final class SingleGeneralOrderHandling {
       return accountType_;
     }
 
-    // optional string cl_ord_link_id = 17;
     public static final int CL_ORD_LINK_ID_FIELD_NUMBER = 17;
     private java.lang.Object clOrdLinkId_;
     /**
@@ -42082,7 +41567,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 orig_ord_mod_time = 18;
     public static final int ORIG_ORD_MOD_TIME_FIELD_NUMBER = 18;
     private long origOrdModTime_;
     /**
@@ -42098,7 +41582,6 @@ public final class SingleGeneralOrderHandling {
       return origOrdModTime_;
     }
 
-    // optional string secondary_cl_ord_id = 19;
     public static final int SECONDARY_CL_ORD_ID_FIELD_NUMBER = 19;
     private java.lang.Object secondaryClOrdId_;
     /**
@@ -42141,7 +41624,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed32 trade_origination_date = 20;
     public static final int TRADE_ORIGINATION_DATE_FIELD_NUMBER = 20;
     private int tradeOriginationDate_;
     /**
@@ -42157,7 +41639,6 @@ public final class SingleGeneralOrderHandling {
       return tradeOriginationDate_;
     }
 
-    // optional bool working_indicator = 21;
     public static final int WORKING_INDICATOR_FIELD_NUMBER = 21;
     private boolean workingIndicator_;
     /**
@@ -42173,7 +41654,6 @@ public final class SingleGeneralOrderHandling {
       return workingIndicator_;
     }
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 22;
     public static final int ACCT_ID_SOURCE_FIELD_NUMBER = 22;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_;
     /**
@@ -42189,7 +41669,6 @@ public final class SingleGeneralOrderHandling {
       return acctIdSource_;
     }
 
-    // optional sfixed32 trade_date = 23;
     public static final int TRADE_DATE_FIELD_NUMBER = 23;
     private int tradeDate_;
     /**
@@ -42233,7 +41712,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -42494,8 +41974,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.OrderCancelReject}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.OrderCancelRejectOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.OrderCancelReject)
+        org.fixprotocol.components.SingleGeneralOrderHandling.OrderCancelRejectOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_OrderCancelReject_descriptor;
@@ -42842,7 +42323,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional string cl_ord_id = 1;
       private java.lang.Object clOrdId_ = "";
       /**
        * <code>optional string cl_ord_id = 1;</code>
@@ -42856,9 +42336,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdId() {
         java.lang.Object ref = clOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -42916,7 +42399,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 2;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonEnum cxlRejReason_ = org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejReasonEnum.CXL_REJ_REASON_TOO_LATE_TO_CANCEL;
       /**
        * <code>optional .SingleGeneralOrderHandling.CxlRejReasonEnum cxl_rej_reason = 2;</code>
@@ -42952,7 +42434,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string list_id = 3;
       private java.lang.Object listId_ = "";
       /**
        * <code>optional string list_id = 3;</code>
@@ -42966,9 +42447,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getListId() {
         java.lang.Object ref = listId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          listId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            listId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -43026,7 +42510,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string order_id = 4;
       private java.lang.Object orderId_ = "";
       /**
        * <code>optional string order_id = 4;</code>
@@ -43040,9 +42523,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrderId() {
         java.lang.Object ref = orderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            orderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -43100,7 +42586,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 5;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -43209,7 +42694,7 @@ public final class SingleGeneralOrderHandling {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -43217,7 +42702,6 @@ public final class SingleGeneralOrderHandling {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 6;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -43326,7 +42810,7 @@ public final class SingleGeneralOrderHandling {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -43334,7 +42818,6 @@ public final class SingleGeneralOrderHandling {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 7;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 7;</code>
@@ -43348,9 +42831,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -43408,7 +42894,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 8;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrdStatusEnum ordStatus_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrdStatusEnum.ORD_STATUS_CANCELED;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 8;</code>
@@ -43444,7 +42929,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string orig_cl_ord_id = 9;
       private java.lang.Object origClOrdId_ = "";
       /**
        * <code>optional string orig_cl_ord_id = 9;</code>
@@ -43458,9 +42942,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrigClOrdId() {
         java.lang.Object ref = origClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          origClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            origClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -43518,7 +43005,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string secondary_order_id = 10;
       private java.lang.Object secondaryOrderId_ = "";
       /**
        * <code>optional string secondary_order_id = 10;</code>
@@ -43532,9 +43018,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryOrderId() {
         java.lang.Object ref = secondaryOrderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryOrderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryOrderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -43592,7 +43081,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string account = 11;
       private java.lang.Object account_ = "";
       /**
        * <code>optional string account = 11;</code>
@@ -43606,9 +43094,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAccount() {
         java.lang.Object ref = account_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          account_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            account_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -43666,7 +43157,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CxlRejResponseToEnum cxl_rej_response_to = 12;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejResponseToEnum cxlRejResponseTo_ = org.fixprotocol.components.SingleGeneralOrderHandling.CxlRejResponseToEnum.CXL_REJ_RESPONSE_TO_ORDER_CANCEL;
       /**
        * <code>optional .SingleGeneralOrderHandling.CxlRejResponseToEnum cxl_rej_response_to = 12;</code>
@@ -43702,7 +43192,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bytes encoded_text = 13;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 13;</code>
@@ -43738,7 +43227,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 14;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 14;</code>
@@ -43771,7 +43259,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 transact_time = 15;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 15;</code>
@@ -43804,7 +43291,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 16;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_ = org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum.ACCOUNT_TYPE_CARRIED_CUSTOMER_SIDE;
       /**
        * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 16;</code>
@@ -43840,7 +43326,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_link_id = 17;
       private java.lang.Object clOrdLinkId_ = "";
       /**
        * <code>optional string cl_ord_link_id = 17;</code>
@@ -43854,9 +43339,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdLinkId() {
         java.lang.Object ref = clOrdLinkId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdLinkId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdLinkId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -43914,7 +43402,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 orig_ord_mod_time = 18;
       private long origOrdModTime_ ;
       /**
        * <code>optional sfixed64 orig_ord_mod_time = 18;</code>
@@ -43947,7 +43434,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string secondary_cl_ord_id = 19;
       private java.lang.Object secondaryClOrdId_ = "";
       /**
        * <code>optional string secondary_cl_ord_id = 19;</code>
@@ -43961,9 +43447,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryClOrdId() {
         java.lang.Object ref = secondaryClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -44021,7 +43510,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 trade_origination_date = 20;
       private int tradeOriginationDate_ ;
       /**
        * <code>optional sfixed32 trade_origination_date = 20;</code>
@@ -44054,7 +43542,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool working_indicator = 21;
       private boolean workingIndicator_ ;
       /**
        * <code>optional bool working_indicator = 21;</code>
@@ -44087,7 +43574,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 22;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum.ACCT_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 22;</code>
@@ -44123,7 +43609,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 trade_date = 23;
       private int tradeDate_ ;
       /**
        * <code>optional sfixed32 trade_date = 23;</code>
@@ -44167,10 +43652,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.OrderCancelReject)
   }
 
-  public interface FillsGrpOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface FillsGrpOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.FillsGrp)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string fill_exec_id = 1;
     /**
      * <code>optional string fill_exec_id = 1;</code>
      */
@@ -44185,7 +43670,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getFillExecIdBytes();
 
-    // optional sfixed64 fill_px = 2;
     /**
      * <code>optional sfixed64 fill_px = 2;</code>
      */
@@ -44195,7 +43679,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getFillPx();
 
-    // optional sfixed32 fill_px_exponent = 3;
     /**
      * <code>optional sfixed32 fill_px_exponent = 3;</code>
      */
@@ -44205,7 +43688,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getFillPxExponent();
 
-    // optional sfixed64 fill_qty = 4;
     /**
      * <code>optional sfixed64 fill_qty = 4;</code>
      */
@@ -44215,7 +43697,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getFillQty();
 
-    // optional sfixed32 fill_qty_exponent = 5;
     /**
      * <code>optional sfixed32 fill_qty_exponent = 5;</code>
      */
@@ -44225,7 +43706,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getFillQtyExponent();
 
-    // repeated .Common.NestedParties4 nested_parties4 = 6;
     /**
      * <code>repeated .Common.NestedParties4 nested_parties4 = 6;</code>
      */
@@ -44250,7 +43730,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.NestedParties4OrBuilder getNestedParties4OrBuilder(
         int index);
 
-    // optional sfixed64 fill_liquidity_ind = 7;
     /**
      * <code>optional sfixed64 fill_liquidity_ind = 7;</code>
      */
@@ -44264,8 +43743,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.FillsGrp}
    */
   public static final class FillsGrp extends
-      com.google.protobuf.GeneratedMessage
-      implements FillsGrpOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.FillsGrp)
+      FillsGrpOrBuilder {
     // Use FillsGrp.newBuilder() to construct.
     private FillsGrp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -44312,8 +43792,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              fillExecId_ = input.readBytes();
+              fillExecId_ = bs;
               break;
             }
             case 17: {
@@ -44392,7 +43873,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional string fill_exec_id = 1;
     public static final int FILL_EXEC_ID_FIELD_NUMBER = 1;
     private java.lang.Object fillExecId_;
     /**
@@ -44435,7 +43915,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 fill_px = 2;
     public static final int FILL_PX_FIELD_NUMBER = 2;
     private long fillPx_;
     /**
@@ -44451,7 +43930,6 @@ public final class SingleGeneralOrderHandling {
       return fillPx_;
     }
 
-    // optional sfixed32 fill_px_exponent = 3;
     public static final int FILL_PX_EXPONENT_FIELD_NUMBER = 3;
     private int fillPxExponent_;
     /**
@@ -44467,7 +43945,6 @@ public final class SingleGeneralOrderHandling {
       return fillPxExponent_;
     }
 
-    // optional sfixed64 fill_qty = 4;
     public static final int FILL_QTY_FIELD_NUMBER = 4;
     private long fillQty_;
     /**
@@ -44483,7 +43960,6 @@ public final class SingleGeneralOrderHandling {
       return fillQty_;
     }
 
-    // optional sfixed32 fill_qty_exponent = 5;
     public static final int FILL_QTY_EXPONENT_FIELD_NUMBER = 5;
     private int fillQtyExponent_;
     /**
@@ -44499,7 +43975,6 @@ public final class SingleGeneralOrderHandling {
       return fillQtyExponent_;
     }
 
-    // repeated .Common.NestedParties4 nested_parties4 = 6;
     public static final int NESTED_PARTIES4_FIELD_NUMBER = 6;
     private java.util.List<org.fixprotocol.components.Common.NestedParties4> nestedParties4_;
     /**
@@ -44535,7 +44010,6 @@ public final class SingleGeneralOrderHandling {
       return nestedParties4_.get(index);
     }
 
-    // optional sfixed64 fill_liquidity_ind = 7;
     public static final int FILL_LIQUIDITY_IND_FIELD_NUMBER = 7;
     private long fillLiquidityInd_;
     /**
@@ -44563,7 +44037,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -44712,8 +44187,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.FillsGrp}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.FillsGrpOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.FillsGrp)
+        org.fixprotocol.components.SingleGeneralOrderHandling.FillsGrpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_FillsGrp_descriptor;
@@ -44915,7 +44391,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional string fill_exec_id = 1;
       private java.lang.Object fillExecId_ = "";
       /**
        * <code>optional string fill_exec_id = 1;</code>
@@ -44929,9 +44404,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getFillExecId() {
         java.lang.Object ref = fillExecId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          fillExecId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fillExecId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -44989,7 +44467,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 fill_px = 2;
       private long fillPx_ ;
       /**
        * <code>optional sfixed64 fill_px = 2;</code>
@@ -45022,7 +44499,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 fill_px_exponent = 3;
       private int fillPxExponent_ ;
       /**
        * <code>optional sfixed32 fill_px_exponent = 3;</code>
@@ -45055,7 +44531,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 fill_qty = 4;
       private long fillQty_ ;
       /**
        * <code>optional sfixed64 fill_qty = 4;</code>
@@ -45088,7 +44563,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 fill_qty_exponent = 5;
       private int fillQtyExponent_ ;
       /**
        * <code>optional sfixed32 fill_qty_exponent = 5;</code>
@@ -45121,7 +44595,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.NestedParties4 nested_parties4 = 6;
       private java.util.List<org.fixprotocol.components.Common.NestedParties4> nestedParties4_ =
         java.util.Collections.emptyList();
       private void ensureNestedParties4IsMutable() {
@@ -45263,7 +44736,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.NestedParties4> values) {
         if (nestedParties4Builder_ == null) {
           ensureNestedParties4IsMutable();
-          super.addAll(values, nestedParties4_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, nestedParties4_);
           onChanged();
         } else {
           nestedParties4Builder_.addAllMessages(values);
@@ -45361,7 +44835,6 @@ public final class SingleGeneralOrderHandling {
         return nestedParties4Builder_;
       }
 
-      // optional sfixed64 fill_liquidity_ind = 7;
       private long fillLiquidityInd_ ;
       /**
        * <code>optional sfixed64 fill_liquidity_ind = 7;</code>
@@ -45405,10 +44878,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.FillsGrp)
   }
 
-  public interface OrdRejReasonUnionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface OrdRejReasonUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.OrdRejReasonUnion)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 1;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 1;</code>
      */
@@ -45418,7 +44891,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonEnum getOrdRejReason();
 
-    // optional sfixed64 ord_rej_reason_sfixed64 = 2;
     /**
      * <code>optional sfixed64 ord_rej_reason_sfixed64 = 2;</code>
      */
@@ -45432,8 +44904,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.OrdRejReasonUnion}
    */
   public static final class OrdRejReasonUnion extends
-      com.google.protobuf.GeneratedMessage
-      implements OrdRejReasonUnionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.OrdRejReasonUnion)
+      OrdRejReasonUnionOrBuilder {
     // Use OrdRejReasonUnion.newBuilder() to construct.
     private OrdRejReasonUnion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -45535,7 +45008,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 1;
     public static final int ORD_REJ_REASON_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonEnum ordRejReason_;
     /**
@@ -45551,7 +45023,6 @@ public final class SingleGeneralOrderHandling {
       return ordRejReason_;
     }
 
-    // optional sfixed64 ord_rej_reason_sfixed64 = 2;
     public static final int ORD_REJ_REASON_SFIXED64_FIELD_NUMBER = 2;
     private long ordRejReasonSfixed64_;
     /**
@@ -45574,7 +45045,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -45688,8 +45160,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.OrdRejReasonUnion}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonUnionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.OrdRejReasonUnion)
+        org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonUnionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_descriptor;
@@ -45811,7 +45284,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 1;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonEnum ordRejReason_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonEnum.ORD_REJ_REASON_BROKER_CREDIT;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 1;</code>
@@ -45847,7 +45319,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 ord_rej_reason_sfixed64 = 2;
       private long ordRejReasonSfixed64_ ;
       /**
        * <code>optional sfixed64 ord_rej_reason_sfixed64 = 2;</code>
@@ -45891,10 +45362,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.OrdRejReasonUnion)
   }
 
-  public interface ExecRestatementReasonUnionOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ExecRestatementReasonUnionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.ExecRestatementReasonUnion)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 1;
     /**
      * <code>optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 1;</code>
      */
@@ -45904,7 +45375,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonEnum getExecRestatementReason();
 
-    // optional sfixed64 exec_restatement_reason_sfixed64 = 2;
     /**
      * <code>optional sfixed64 exec_restatement_reason_sfixed64 = 2;</code>
      */
@@ -45918,8 +45388,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.ExecRestatementReasonUnion}
    */
   public static final class ExecRestatementReasonUnion extends
-      com.google.protobuf.GeneratedMessage
-      implements ExecRestatementReasonUnionOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.ExecRestatementReasonUnion)
+      ExecRestatementReasonUnionOrBuilder {
     // Use ExecRestatementReasonUnion.newBuilder() to construct.
     private ExecRestatementReasonUnion(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -46021,7 +45492,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 1;
     public static final int EXEC_RESTATEMENT_REASON_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonEnum execRestatementReason_;
     /**
@@ -46037,7 +45507,6 @@ public final class SingleGeneralOrderHandling {
       return execRestatementReason_;
     }
 
-    // optional sfixed64 exec_restatement_reason_sfixed64 = 2;
     public static final int EXEC_RESTATEMENT_REASON_SFIXED64_FIELD_NUMBER = 2;
     private long execRestatementReasonSfixed64_;
     /**
@@ -46060,7 +45529,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -46174,8 +45644,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.ExecRestatementReasonUnion}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonUnionOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.ExecRestatementReasonUnion)
+        org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonUnionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_descriptor;
@@ -46297,7 +45768,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 1;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonEnum execRestatementReason_ = org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonEnum.EXEC_RESTATEMENT_REASON_BROKER_OPTION;
       /**
        * <code>optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 1;</code>
@@ -46333,7 +45803,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 exec_restatement_reason_sfixed64 = 2;
       private long execRestatementReasonSfixed64_ ;
       /**
        * <code>optional sfixed64 exec_restatement_reason_sfixed64 = 2;</code>
@@ -46377,10 +45846,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.ExecRestatementReasonUnion)
   }
 
-  public interface ExecutionReportOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ExecutionReportOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.ExecutionReport)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string account = 1;
     /**
      * <code>optional string account = 1;</code>
      */
@@ -46395,7 +45864,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAccountBytes();
 
-    // optional sfixed64 avg_px = 2;
     /**
      * <code>optional sfixed64 avg_px = 2;</code>
      */
@@ -46405,7 +45873,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getAvgPx();
 
-    // optional string cl_ord_id = 3;
     /**
      * <code>optional string cl_ord_id = 3;</code>
      */
@@ -46420,7 +45887,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdIdBytes();
 
-    // optional sfixed64 cum_qty = 4;
     /**
      * <code>optional sfixed64 cum_qty = 4;</code>
      */
@@ -46430,7 +45896,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getCumQty();
 
-    // optional sfixed32 cum_qty_exponent = 5;
     /**
      * <code>optional sfixed32 cum_qty_exponent = 5;</code>
      */
@@ -46440,7 +45905,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getCumQtyExponent();
 
-    // optional string currency = 6;
     /**
      * <code>optional string currency = 6;</code>
      */
@@ -46455,7 +45919,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional string exec_id = 7;
     /**
      * <code>optional string exec_id = 7;</code>
      */
@@ -46470,7 +45933,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getExecIdBytes();
 
-    // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 8 [packed = true];
     /**
      * <code>repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 8 [packed = true];</code>
      */
@@ -46484,7 +45946,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum getExecInst(int index);
 
-    // optional string exec_ref_id = 9;
     /**
      * <code>optional string exec_ref_id = 9;</code>
      */
@@ -46499,7 +45960,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getExecRefIdBytes();
 
-    // optional .SingleGeneralOrderHandling.LastCapacityEnum last_capacity = 10;
     /**
      * <code>optional .SingleGeneralOrderHandling.LastCapacityEnum last_capacity = 10;</code>
      */
@@ -46509,7 +45969,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.LastCapacityEnum getLastCapacity();
 
-    // optional string last_mkt = 11;
     /**
      * <code>optional string last_mkt = 11;</code>
      */
@@ -46524,7 +45983,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getLastMktBytes();
 
-    // optional double last_px = 12;
     /**
      * <code>optional double last_px = 12;</code>
      */
@@ -46534,7 +45992,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getLastPx();
 
-    // optional sfixed64 last_qty = 13;
     /**
      * <code>optional sfixed64 last_qty = 13;</code>
      */
@@ -46544,7 +46001,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastQty();
 
-    // optional sfixed32 last_qty_exponent = 14;
     /**
      * <code>optional sfixed32 last_qty_exponent = 14;</code>
      */
@@ -46554,7 +46010,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastQtyExponent();
 
-    // optional string list_id = 15;
     /**
      * <code>optional string list_id = 15;</code>
      */
@@ -46569,7 +46024,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getListIdBytes();
 
-    // optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 16;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 16;</code>
      */
@@ -46579,7 +46033,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonEnum getOrdRejReason();
 
-    // optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 17;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 17;</code>
      */
@@ -46589,7 +46042,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrdStatusEnum getOrdStatus();
 
-    // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 18;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 18;</code>
      */
@@ -46599,7 +46051,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum getOrdType();
 
-    // optional string order_id = 19;
     /**
      * <code>optional string order_id = 19;</code>
      */
@@ -46614,7 +46065,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrderIdBytes();
 
-    // optional sfixed64 price = 20;
     /**
      * <code>optional sfixed64 price = 20;</code>
      */
@@ -46624,7 +46074,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPrice();
 
-    // optional sfixed32 price_exponent = 21;
     /**
      * <code>optional sfixed32 price_exponent = 21;</code>
      */
@@ -46634,7 +46083,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPriceExponent();
 
-    // optional sfixed32 settl_date = 22;
     /**
      * <code>optional sfixed32 settl_date = 22;</code>
      */
@@ -46644,7 +46092,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getSettlDate();
 
-    // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 23;
     /**
      * <code>optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 23;</code>
      */
@@ -46654,7 +46101,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum getSettlType();
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 24;
     /**
      * <code>optional .SingleGeneralOrderHandling.SideEnum side = 24;</code>
      */
@@ -46664,7 +46110,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum getSide();
 
-    // optional .Session.StandardHeader standard_header = 25;
     /**
      * <code>optional .Session.StandardHeader standard_header = 25;</code>
      */
@@ -46678,7 +46123,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 26;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 26;</code>
      */
@@ -46692,7 +46136,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional sfixed64 stop_px = 27;
     /**
      * <code>optional sfixed64 stop_px = 27;</code>
      */
@@ -46702,7 +46145,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getStopPx();
 
-    // optional sfixed32 stop_px_exponent = 28;
     /**
      * <code>optional sfixed32 stop_px_exponent = 28;</code>
      */
@@ -46712,7 +46154,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getStopPxExponent();
 
-    // optional string text = 29;
     /**
      * <code>optional string text = 29;</code>
      */
@@ -46727,7 +46168,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 30;
     /**
      * <code>optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 30;</code>
      */
@@ -46737,7 +46177,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum getTimeInForce();
 
-    // optional sfixed32 trade_date = 31;
     /**
      * <code>optional sfixed32 trade_date = 31;</code>
      */
@@ -46747,7 +46186,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getTradeDate();
 
-    // optional sfixed64 transact_time = 32;
     /**
      * <code>optional sfixed64 transact_time = 32;</code>
      */
@@ -46757,7 +46195,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTransactTime();
 
-    // optional bool report_to_exch = 33;
     /**
      * <code>optional bool report_to_exch = 33;</code>
      */
@@ -46767,7 +46204,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getReportToExch();
 
-    // optional sfixed64 expire_time = 34;
     /**
      * <code>optional sfixed64 expire_time = 34;</code>
      */
@@ -46777,7 +46213,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getExpireTime();
 
-    // optional sfixed64 net_money = 35;
     /**
      * <code>optional sfixed64 net_money = 35;</code>
      */
@@ -46787,7 +46222,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getNetMoney();
 
-    // optional sfixed32 net_money_exponent = 36;
     /**
      * <code>optional sfixed32 net_money_exponent = 36;</code>
      */
@@ -46797,7 +46231,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getNetMoneyExponent();
 
-    // optional sfixed64 settl_curr_amt = 37;
     /**
      * <code>optional sfixed64 settl_curr_amt = 37;</code>
      */
@@ -46807,7 +46240,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getSettlCurrAmt();
 
-    // optional sfixed32 settl_curr_amt_exponent = 38;
     /**
      * <code>optional sfixed32 settl_curr_amt_exponent = 38;</code>
      */
@@ -46817,7 +46249,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getSettlCurrAmtExponent();
 
-    // optional string settl_currency = 39;
     /**
      * <code>optional string settl_currency = 39;</code>
      */
@@ -46832,7 +46263,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSettlCurrencyBytes();
 
-    // optional .SingleGeneralOrderHandling.ExecTypeEnum exec_type = 40;
     /**
      * <code>optional .SingleGeneralOrderHandling.ExecTypeEnum exec_type = 40;</code>
      */
@@ -46842,7 +46272,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExecTypeEnum getExecType();
 
-    // optional sfixed64 last_forward_points = 41;
     /**
      * <code>optional sfixed64 last_forward_points = 41;</code>
      */
@@ -46852,7 +46281,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastForwardPoints();
 
-    // optional sfixed32 last_forward_points_exponent = 42;
     /**
      * <code>optional sfixed32 last_forward_points_exponent = 42;</code>
      */
@@ -46862,7 +46290,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastForwardPointsExponent();
 
-    // optional sfixed64 last_spot_rate = 43;
     /**
      * <code>optional sfixed64 last_spot_rate = 43;</code>
      */
@@ -46872,7 +46299,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastSpotRate();
 
-    // optional sfixed32 last_spot_rate_exponent = 44;
     /**
      * <code>optional sfixed32 last_spot_rate_exponent = 44;</code>
      */
@@ -46882,7 +46308,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastSpotRateExponent();
 
-    // optional sfixed64 leaves_qty = 45;
     /**
      * <code>optional sfixed64 leaves_qty = 45;</code>
      */
@@ -46892,7 +46317,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLeavesQty();
 
-    // optional sfixed32 leaves_qty_exponent = 46;
     /**
      * <code>optional sfixed32 leaves_qty_exponent = 46;</code>
      */
@@ -46902,7 +46326,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLeavesQtyExponent();
 
-    // optional string orig_cl_ord_id = 47;
     /**
      * <code>optional string orig_cl_ord_id = 47;</code>
      */
@@ -46917,7 +46340,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrigClOrdIdBytes();
 
-    // optional string secondary_order_id = 48;
     /**
      * <code>optional string secondary_order_id = 48;</code>
      */
@@ -46932,7 +46354,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryOrderIdBytes();
 
-    // optional double settl_curr_fx_rate = 49;
     /**
      * <code>optional double settl_curr_fx_rate = 49;</code>
      */
@@ -46942,7 +46363,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getSettlCurrFxRate();
 
-    // optional .SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum settl_curr_fx_rate_calc = 50;
     /**
      * <code>optional .SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum settl_curr_fx_rate_calc = 50;</code>
      */
@@ -46952,7 +46372,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum getSettlCurrFxRateCalc();
 
-    // optional string compliance_id = 51;
     /**
      * <code>optional string compliance_id = 51;</code>
      */
@@ -46967,7 +46386,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getComplianceIdBytes();
 
-    // optional sfixed64 day_avg_px = 52;
     /**
      * <code>optional sfixed64 day_avg_px = 52;</code>
      */
@@ -46977,7 +46395,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getDayAvgPx();
 
-    // optional sfixed32 day_avg_px_exponent = 53;
     /**
      * <code>optional sfixed32 day_avg_px_exponent = 53;</code>
      */
@@ -46987,7 +46404,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getDayAvgPxExponent();
 
-    // optional sfixed64 day_cum_qty = 54;
     /**
      * <code>optional sfixed64 day_cum_qty = 54;</code>
      */
@@ -46997,7 +46413,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getDayCumQty();
 
-    // optional sfixed32 day_cum_qty_exponent = 55;
     /**
      * <code>optional sfixed32 day_cum_qty_exponent = 55;</code>
      */
@@ -47007,7 +46422,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getDayCumQtyExponent();
 
-    // optional sfixed64 day_order_qty = 56;
     /**
      * <code>optional sfixed64 day_order_qty = 56;</code>
      */
@@ -47017,7 +46431,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getDayOrderQty();
 
-    // optional sfixed32 day_order_qty_exponent = 57;
     /**
      * <code>optional sfixed32 day_order_qty_exponent = 57;</code>
      */
@@ -47027,7 +46440,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getDayOrderQtyExponent();
 
-    // optional sfixed64 effective_time = 58;
     /**
      * <code>optional sfixed64 effective_time = 58;</code>
      */
@@ -47037,7 +46449,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getEffectiveTime();
 
-    // optional bytes encoded_text = 59;
     /**
      * <code>optional bytes encoded_text = 59;</code>
      */
@@ -47047,7 +46458,6 @@ public final class SingleGeneralOrderHandling {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 60;
     /**
      * <code>optional fixed32 encoded_text_len = 60;</code>
      */
@@ -47057,7 +46467,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEncodedTextLen();
 
-    // optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 61;
     /**
      * <code>optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 61;</code>
      */
@@ -47067,7 +46476,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonEnum getExecRestatementReason();
 
-    // optional sfixed32 expire_date = 62;
     /**
      * <code>optional sfixed32 expire_date = 62;</code>
      */
@@ -47077,7 +46485,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getExpireDate();
 
-    // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 63;
     /**
      * <code>optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 63;</code>
      */
@@ -47087,7 +46494,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum getGtBookingInst();
 
-    // optional sfixed64 gross_trade_amt = 64;
     /**
      * <code>optional sfixed64 gross_trade_amt = 64;</code>
      */
@@ -47097,7 +46503,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getGrossTradeAmt();
 
-    // optional sfixed32 gross_trade_amt_exponent = 65;
     /**
      * <code>optional sfixed32 gross_trade_amt_exponent = 65;</code>
      */
@@ -47107,7 +46512,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getGrossTradeAmtExponent();
 
-    // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 66;
     /**
      * <code>optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 66;</code>
      */
@@ -47117,7 +46521,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum getHandlInst();
 
-    // optional sfixed64 max_floor = 67;
     /**
      * <code>optional sfixed64 max_floor = 67;</code>
      */
@@ -47127,7 +46530,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxFloor();
 
-    // optional sfixed32 max_floor_exponent = 68;
     /**
      * <code>optional sfixed32 max_floor_exponent = 68;</code>
      */
@@ -47137,7 +46539,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMaxFloorExponent();
 
-    // optional sfixed64 max_show = 69;
     /**
      * <code>optional sfixed64 max_show = 69;</code>
      */
@@ -47147,7 +46548,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxShow();
 
-    // optional sfixed32 max_show_exponent = 70;
     /**
      * <code>optional sfixed32 max_show_exponent = 70;</code>
      */
@@ -47157,7 +46557,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMaxShowExponent();
 
-    // optional sfixed64 min_qty = 71;
     /**
      * <code>optional sfixed64 min_qty = 71;</code>
      */
@@ -47167,7 +46566,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMinQty();
 
-    // optional sfixed32 min_qty_exponent = 72;
     /**
      * <code>optional sfixed32 min_qty_exponent = 72;</code>
      */
@@ -47177,7 +46575,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMinQtyExponent();
 
-    // optional .SingleGeneralOrderHandling.MultiLegReportingTypeEnum multi_leg_reporting_type = 73;
     /**
      * <code>optional .SingleGeneralOrderHandling.MultiLegReportingTypeEnum multi_leg_reporting_type = 73;</code>
      */
@@ -47187,7 +46584,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.MultiLegReportingTypeEnum getMultiLegReportingType();
 
-    // optional sfixed64 order_qty2 = 74;
     /**
      * <code>optional sfixed64 order_qty2 = 74;</code>
      */
@@ -47197,7 +46593,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getOrderQty2();
 
-    // optional sfixed32 order_qty2_exponent = 75;
     /**
      * <code>optional sfixed32 order_qty2_exponent = 75;</code>
      */
@@ -47207,7 +46602,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getOrderQty2Exponent();
 
-    // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 76;
     /**
      * <code>optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 76;</code>
      */
@@ -47217,7 +46611,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum getPositionEffect();
 
-    // optional sfixed32 settl_date2 = 77;
     /**
      * <code>optional sfixed32 settl_date2 = 77;</code>
      */
@@ -47227,7 +46620,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getSettlDate2();
 
-    // optional bool solicited_flag = 78;
     /**
      * <code>optional bool solicited_flag = 78;</code>
      */
@@ -47237,7 +46629,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getSolicitedFlag();
 
-    // optional .SingleGeneralOrderHandling.TradingSessionIdEnum trading_session_id = 79;
     /**
      * <code>optional .SingleGeneralOrderHandling.TradingSessionIdEnum trading_session_id = 79;</code>
      */
@@ -47247,7 +46638,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TradingSessionIdEnum getTradingSessionId();
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 80;
     /**
      * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 80;</code>
      */
@@ -47257,7 +46647,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum getAccountType();
 
-    // optional sfixed64 accrued_interest_amt = 81;
     /**
      * <code>optional sfixed64 accrued_interest_amt = 81;</code>
      */
@@ -47267,7 +46656,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getAccruedInterestAmt();
 
-    // optional sfixed32 accrued_interest_amt_exponent = 82;
     /**
      * <code>optional sfixed32 accrued_interest_amt_exponent = 82;</code>
      */
@@ -47277,7 +46665,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getAccruedInterestAmtExponent();
 
-    // optional sfixed64 accrued_interest_rate = 83;
     /**
      * <code>optional sfixed64 accrued_interest_rate = 83;</code>
      */
@@ -47287,7 +46674,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getAccruedInterestRate();
 
-    // optional sfixed32 accrued_interest_rate_exponent = 84;
     /**
      * <code>optional sfixed32 accrued_interest_rate_exponent = 84;</code>
      */
@@ -47297,7 +46683,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getAccruedInterestRateExponent();
 
-    // optional sfixed32 basis_feature_date = 85;
     /**
      * <code>optional sfixed32 basis_feature_date = 85;</code>
      */
@@ -47307,7 +46692,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getBasisFeatureDate();
 
-    // optional sfixed64 basis_feature_price = 86;
     /**
      * <code>optional sfixed64 basis_feature_price = 86;</code>
      */
@@ -47317,7 +46701,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getBasisFeaturePrice();
 
-    // optional sfixed32 basis_feature_price_exponent = 87;
     /**
      * <code>optional sfixed32 basis_feature_price_exponent = 87;</code>
      */
@@ -47327,7 +46710,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getBasisFeaturePriceExponent();
 
-    // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 88;
     /**
      * <code>optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 88;</code>
      */
@@ -47337,7 +46719,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum getBookingUnit();
 
-    // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 89;
     /**
      * <code>optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 89;</code>
      */
@@ -47347,7 +46728,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum getCancellationRights();
 
-    // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 90;
     /**
      * <code>optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 90;</code>
      */
@@ -47357,7 +46737,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum getCashMargin();
 
-    // optional string cl_ord_link_id = 91;
     /**
      * <code>optional string cl_ord_link_id = 91;</code>
      */
@@ -47372,7 +46751,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdLinkIdBytes();
 
-    // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 92;
     /**
      * <code>optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 92;</code>
      */
@@ -47382,7 +46760,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum getClearingFeeIndicator();
 
-    // optional .Common.CommissionData commission_data = 93;
     /**
      * <code>optional .Common.CommissionData commission_data = 93;</code>
      */
@@ -47396,7 +46773,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.CommissionDataOrBuilder getCommissionDataOrBuilder();
 
-    // optional sfixed64 concession = 94;
     /**
      * <code>optional sfixed64 concession = 94;</code>
      */
@@ -47406,7 +46782,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getConcession();
 
-    // optional sfixed32 concession_exponent = 95;
     /**
      * <code>optional sfixed32 concession_exponent = 95;</code>
      */
@@ -47416,7 +46791,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getConcessionExponent();
 
-    // optional string cross_id = 96;
     /**
      * <code>optional string cross_id = 96;</code>
      */
@@ -47431,7 +46805,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getCrossIdBytes();
 
-    // optional .SingleGeneralOrderHandling.CrossTypeEnum cross_type = 97;
     /**
      * <code>optional .SingleGeneralOrderHandling.CrossTypeEnum cross_type = 97;</code>
      */
@@ -47441,7 +46814,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CrossTypeEnum getCrossType();
 
-    // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 98;
     /**
      * <code>optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 98;</code>
      */
@@ -47451,7 +46823,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum getCustOrderCapacity();
 
-    // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 99;
     /**
      * <code>optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 99;</code>
      */
@@ -47461,7 +46832,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum getDayBookingInst();
 
-    // optional string designation = 100;
     /**
      * <code>optional string designation = 100;</code>
      */
@@ -47476,7 +46846,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getDesignationBytes();
 
-    // optional sfixed32 ex_date = 101;
     /**
      * <code>optional sfixed32 ex_date = 101;</code>
      */
@@ -47486,7 +46855,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getExDate();
 
-    // optional double exec_price_adjustment = 102;
     /**
      * <code>optional double exec_price_adjustment = 102;</code>
      */
@@ -47496,7 +46864,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getExecPriceAdjustment();
 
-    // optional .SingleGeneralOrderHandling.ExecPriceTypeEnum exec_price_type = 103;
     /**
      * <code>optional .SingleGeneralOrderHandling.ExecPriceTypeEnum exec_price_type = 103;</code>
      */
@@ -47506,7 +46873,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExecPriceTypeEnum getExecPriceType();
 
-    // optional sfixed64 exec_valuation_point = 104;
     /**
      * <code>optional sfixed64 exec_valuation_point = 104;</code>
      */
@@ -47516,7 +46882,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getExecValuationPoint();
 
-    // optional .Common.Instrument instrument = 105;
     /**
      * <code>optional .Common.Instrument instrument = 105;</code>
      */
@@ -47530,7 +46895,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional sfixed64 last_forward_points2 = 106;
     /**
      * <code>optional sfixed64 last_forward_points2 = 106;</code>
      */
@@ -47540,7 +46904,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastForwardPoints2();
 
-    // optional sfixed32 last_forward_points2_exponent = 107;
     /**
      * <code>optional sfixed32 last_forward_points2_exponent = 107;</code>
      */
@@ -47550,7 +46913,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastForwardPoints2Exponent();
 
-    // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 108;
     /**
      * <code>optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 108;</code>
      */
@@ -47560,7 +46922,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum getMoneyLaunderingStatus();
 
-    // optional sfixed64 num_days_interest = 109;
     /**
      * <code>optional sfixed64 num_days_interest = 109;</code>
      */
@@ -47570,7 +46931,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getNumDaysInterest();
 
-    // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 110;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 110;</code>
      */
@@ -47580,7 +46940,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum getOrderCapacity();
 
-    // optional .Common.OrderQtyData order_qty_data = 111;
     /**
      * <code>optional .Common.OrderQtyData order_qty_data = 111;</code>
      */
@@ -47594,7 +46953,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.OrderQtyDataOrBuilder getOrderQtyDataOrBuilder();
 
-    // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 112 [packed = true];
     /**
      * <code>repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 112 [packed = true];</code>
      */
@@ -47608,7 +46966,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum getOrderRestrictions(int index);
 
-    // optional string orig_cross_id = 113;
     /**
      * <code>optional string orig_cross_id = 113;</code>
      */
@@ -47623,7 +46980,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrigCrossIdBytes();
 
-    // repeated .Common.Parties parties = 114;
     /**
      * <code>repeated .Common.Parties parties = 114;</code>
      */
@@ -47648,7 +47004,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.PartiesOrBuilder getPartiesOrBuilder(
         int index);
 
-    // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 115;
     /**
      * <code>optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 115;</code>
      */
@@ -47658,7 +47013,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum getPreallocMethod();
 
-    // optional sfixed64 price_improvement = 116;
     /**
      * <code>optional sfixed64 price_improvement = 116;</code>
      */
@@ -47668,7 +47022,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPriceImprovement();
 
-    // optional sfixed32 price_improvement_exponent = 117;
     /**
      * <code>optional sfixed32 price_improvement_exponent = 117;</code>
      */
@@ -47678,7 +47031,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPriceImprovementExponent();
 
-    // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 118;
     /**
      * <code>optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 118;</code>
      */
@@ -47688,7 +47040,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum getPriceType();
 
-    // optional .SingleGeneralOrderHandling.PriorityIndicatorEnum priority_indicator = 119;
     /**
      * <code>optional .SingleGeneralOrderHandling.PriorityIndicatorEnum priority_indicator = 119;</code>
      */
@@ -47698,7 +47049,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PriorityIndicatorEnum getPriorityIndicator();
 
-    // optional string regist_id = 120;
     /**
      * <code>optional string regist_id = 120;</code>
      */
@@ -47713,7 +47063,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getRegistIdBytes();
 
-    // optional string secondary_cl_ord_id = 121;
     /**
      * <code>optional string secondary_cl_ord_id = 121;</code>
      */
@@ -47728,7 +47077,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryClOrdIdBytes();
 
-    // optional string secondary_exec_id = 122;
     /**
      * <code>optional string secondary_exec_id = 122;</code>
      */
@@ -47743,7 +47091,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryExecIdBytes();
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 123;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 123;</code>
      */
@@ -47757,7 +47104,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // repeated .Common.Stipulations stipulations = 124;
     /**
      * <code>repeated .Common.Stipulations stipulations = 124;</code>
      */
@@ -47782,7 +47128,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.StipulationsOrBuilder getStipulationsOrBuilder(
         int index);
 
-    // optional sfixed64 total_takedown = 125;
     /**
      * <code>optional sfixed64 total_takedown = 125;</code>
      */
@@ -47792,7 +47137,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTotalTakedown();
 
-    // optional sfixed32 total_takedown_exponent = 126;
     /**
      * <code>optional sfixed32 total_takedown_exponent = 126;</code>
      */
@@ -47802,7 +47146,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getTotalTakedownExponent();
 
-    // optional sfixed32 trade_origination_date = 127;
     /**
      * <code>optional sfixed32 trade_origination_date = 127;</code>
      */
@@ -47812,7 +47155,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getTradeOriginationDate();
 
-    // optional bool traded_flat_switch = 128;
     /**
      * <code>optional bool traded_flat_switch = 128;</code>
      */
@@ -47822,7 +47164,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getTradedFlatSwitch();
 
-    // optional .SingleGeneralOrderHandling.TradingSessionSubIdEnum trading_session_sub_id = 129;
     /**
      * <code>optional .SingleGeneralOrderHandling.TradingSessionSubIdEnum trading_session_sub_id = 129;</code>
      */
@@ -47832,7 +47173,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TradingSessionSubIdEnum getTradingSessionSubId();
 
-    // optional sfixed64 trans_bkd_time = 130;
     /**
      * <code>optional sfixed64 trans_bkd_time = 130;</code>
      */
@@ -47842,7 +47182,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTransBkdTime();
 
-    // optional sfixed64 underlying_last_px = 131;
     /**
      * <code>optional sfixed64 underlying_last_px = 131;</code>
      */
@@ -47852,7 +47191,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getUnderlyingLastPx();
 
-    // optional sfixed32 underlying_last_px_exponent = 132;
     /**
      * <code>optional sfixed32 underlying_last_px_exponent = 132;</code>
      */
@@ -47862,7 +47200,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getUnderlyingLastPxExponent();
 
-    // optional sfixed64 underlying_last_qty = 133;
     /**
      * <code>optional sfixed64 underlying_last_qty = 133;</code>
      */
@@ -47872,7 +47209,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getUnderlyingLastQty();
 
-    // optional sfixed32 underlying_last_qty_exponent = 134;
     /**
      * <code>optional sfixed32 underlying_last_qty_exponent = 134;</code>
      */
@@ -47882,7 +47218,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getUnderlyingLastQtyExponent();
 
-    // optional bool working_indicator = 135;
     /**
      * <code>optional bool working_indicator = 135;</code>
      */
@@ -47892,7 +47227,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getWorkingIndicator();
 
-    // optional .Common.YieldData yield_data = 136;
     /**
      * <code>optional .Common.YieldData yield_data = 136;</code>
      */
@@ -47906,7 +47240,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.YieldDataOrBuilder getYieldDataOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 137;
     /**
      * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 137;</code>
      */
@@ -47916,7 +47249,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum getAcctIdSource();
 
-    // optional bool aggressor_indicator = 138;
     /**
      * <code>optional bool aggressor_indicator = 138;</code>
      */
@@ -47926,7 +47258,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getAggressorIndicator();
 
-    // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 139;
     /**
      * <code>optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 139;</code>
      */
@@ -47936,7 +47267,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum getBookingType();
 
-    // optional sfixed64 calculated_ccy_last_qty = 140;
     /**
      * <code>optional sfixed64 calculated_ccy_last_qty = 140;</code>
      */
@@ -47946,7 +47276,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getCalculatedCcyLastQty();
 
-    // optional sfixed32 calculated_ccy_last_qty_exponent = 141;
     /**
      * <code>optional sfixed32 calculated_ccy_last_qty_exponent = 141;</code>
      */
@@ -47956,7 +47285,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getCalculatedCcyLastQtyExponent();
 
-    // repeated .Common.ContAmtGrp cont_amt_grp = 142;
     /**
      * <code>repeated .Common.ContAmtGrp cont_amt_grp = 142;</code>
      */
@@ -47981,7 +47309,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.ContAmtGrpOrBuilder getContAmtGrpOrBuilder(
         int index);
 
-    // repeated .Common.ContraGrp contra_grp = 143;
     /**
      * <code>repeated .Common.ContraGrp contra_grp = 143;</code>
      */
@@ -48006,7 +47333,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.ContraGrpOrBuilder getContraGrpOrBuilder(
         int index);
 
-    // optional bool copy_msg_indicator = 144;
     /**
      * <code>optional bool copy_msg_indicator = 144;</code>
      */
@@ -48016,7 +47342,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getCopyMsgIndicator();
 
-    // optional bool cust_directed_order = 145;
     /**
      * <code>optional bool cust_directed_order = 145;</code>
      */
@@ -48026,7 +47351,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getCustDirectedOrder();
 
-    // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 146;
     /**
      * <code>optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 146;</code>
      */
@@ -48036,7 +47360,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum getCustOrderHandlingInst();
 
-    // optional .Common.DiscretionInstructions discretion_instructions = 147;
     /**
      * <code>optional .Common.DiscretionInstructions discretion_instructions = 147;</code>
      */
@@ -48050,7 +47373,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder getDiscretionInstructionsOrBuilder();
 
-    // optional sfixed64 discretion_price = 148;
     /**
      * <code>optional sfixed64 discretion_price = 148;</code>
      */
@@ -48060,7 +47382,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getDiscretionPrice();
 
-    // optional sfixed32 discretion_price_exponent = 149;
     /**
      * <code>optional sfixed32 discretion_price_exponent = 149;</code>
      */
@@ -48070,7 +47391,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getDiscretionPriceExponent();
 
-    // optional .Common.DisplayInstruction display_instruction = 150;
     /**
      * <code>optional .Common.DisplayInstruction display_instruction = 150;</code>
      */
@@ -48084,7 +47404,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.DisplayInstructionOrBuilder getDisplayInstructionOrBuilder();
 
-    // optional sfixed64 end_accrued_interest_amt = 151;
     /**
      * <code>optional sfixed64 end_accrued_interest_amt = 151;</code>
      */
@@ -48094,7 +47413,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getEndAccruedInterestAmt();
 
-    // optional sfixed32 end_accrued_interest_amt_exponent = 152;
     /**
      * <code>optional sfixed32 end_accrued_interest_amt_exponent = 152;</code>
      */
@@ -48104,7 +47422,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEndAccruedInterestAmtExponent();
 
-    // optional sfixed64 end_cash = 153;
     /**
      * <code>optional sfixed64 end_cash = 153;</code>
      */
@@ -48114,7 +47431,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getEndCash();
 
-    // optional sfixed32 end_cash_exponent = 154;
     /**
      * <code>optional sfixed32 end_cash_exponent = 154;</code>
      */
@@ -48124,7 +47440,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEndCashExponent();
 
-    // optional .Common.FinancingDetails financing_details = 155;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 155;</code>
      */
@@ -48138,7 +47453,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // optional string host_cross_id = 156;
     /**
      * <code>optional string host_cross_id = 156;</code>
      */
@@ -48153,7 +47467,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getHostCrossIdBytes();
 
-    // repeated .Common.InstrmtLegExecGrp instrmt_leg_exec_grp = 157;
     /**
      * <code>repeated .Common.InstrmtLegExecGrp instrmt_leg_exec_grp = 157;</code>
      */
@@ -48178,7 +47491,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.InstrmtLegExecGrpOrBuilder getInstrmtLegExecGrpOrBuilder(
         int index);
 
-    // optional sfixed64 interest_at_maturity = 158;
     /**
      * <code>optional sfixed64 interest_at_maturity = 158;</code>
      */
@@ -48188,7 +47500,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getInterestAtMaturity();
 
-    // optional sfixed32 interest_at_maturity_exponent = 159;
     /**
      * <code>optional sfixed32 interest_at_maturity_exponent = 159;</code>
      */
@@ -48198,7 +47509,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getInterestAtMaturityExponent();
 
-    // optional .SingleGeneralOrderHandling.LastLiquidityIndEnum last_liquidity_ind = 160;
     /**
      * <code>optional .SingleGeneralOrderHandling.LastLiquidityIndEnum last_liquidity_ind = 160;</code>
      */
@@ -48208,7 +47518,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.LastLiquidityIndEnum getLastLiquidityInd();
 
-    // optional sfixed64 last_par_px = 161;
     /**
      * <code>optional sfixed64 last_par_px = 161;</code>
      */
@@ -48218,7 +47527,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastParPx();
 
-    // optional sfixed32 last_par_px_exponent = 162;
     /**
      * <code>optional sfixed32 last_par_px_exponent = 162;</code>
      */
@@ -48228,7 +47536,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastParPxExponent();
 
-    // optional bool last_rpt_requested = 163;
     /**
      * <code>optional bool last_rpt_requested = 163;</code>
      */
@@ -48238,7 +47545,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getLastRptRequested();
 
-    // optional sfixed64 last_swap_points = 164;
     /**
      * <code>optional sfixed64 last_swap_points = 164;</code>
      */
@@ -48248,7 +47554,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastSwapPoints();
 
-    // optional sfixed32 last_swap_points_exponent = 165;
     /**
      * <code>optional sfixed32 last_swap_points_exponent = 165;</code>
      */
@@ -48258,7 +47563,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastSwapPointsExponent();
 
-    // optional .SingleGeneralOrderHandling.LotTypeEnum lot_type = 166;
     /**
      * <code>optional .SingleGeneralOrderHandling.LotTypeEnum lot_type = 166;</code>
      */
@@ -48268,7 +47572,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.LotTypeEnum getLotType();
 
-    // optional bool manual_order_indicator = 167;
     /**
      * <code>optional bool manual_order_indicator = 167;</code>
      */
@@ -48278,7 +47581,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getManualOrderIndicator();
 
-    // optional string mass_status_req_id = 168;
     /**
      * <code>optional string mass_status_req_id = 168;</code>
      */
@@ -48293,7 +47595,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getMassStatusReqIdBytes();
 
-    // optional sfixed64 match_increment = 169;
     /**
      * <code>optional sfixed64 match_increment = 169;</code>
      */
@@ -48303,7 +47604,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMatchIncrement();
 
-    // optional sfixed32 match_increment_exponent = 170;
     /**
      * <code>optional sfixed32 match_increment_exponent = 170;</code>
      */
@@ -48313,7 +47613,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getMatchIncrementExponent();
 
-    // optional .SingleGeneralOrderHandling.MatchTypeEnum match_type = 171;
     /**
      * <code>optional .SingleGeneralOrderHandling.MatchTypeEnum match_type = 171;</code>
      */
@@ -48323,7 +47622,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.MatchTypeEnum getMatchType();
 
-    // optional sfixed64 max_price_levels = 172;
     /**
      * <code>optional sfixed64 max_price_levels = 172;</code>
      */
@@ -48333,7 +47631,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getMaxPriceLevels();
 
-    // repeated .Common.MiscFeesGrp misc_fees_grp = 173;
     /**
      * <code>repeated .Common.MiscFeesGrp misc_fees_grp = 173;</code>
      */
@@ -48358,7 +47655,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.MiscFeesGrpOrBuilder getMiscFeesGrpOrBuilder(
         int index);
 
-    // optional string ord_status_req_id = 174;
     /**
      * <code>optional string ord_status_req_id = 174;</code>
      */
@@ -48373,7 +47669,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrdStatusReqIdBytes();
 
-    // optional .SingleGeneralOrderHandling.OrderCategoryEnum order_category = 175;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrderCategoryEnum order_category = 175;</code>
      */
@@ -48383,7 +47678,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderCategoryEnum getOrderCategory();
 
-    // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 176;
     /**
      * <code>optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 176;</code>
      */
@@ -48393,7 +47687,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum getOrderHandlingInstSource();
 
-    // optional sfixed64 participation_rate = 177;
     /**
      * <code>optional sfixed64 participation_rate = 177;</code>
      */
@@ -48403,7 +47696,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getParticipationRate();
 
-    // optional sfixed32 participation_rate_exponent = 178;
     /**
      * <code>optional sfixed32 participation_rate_exponent = 178;</code>
      */
@@ -48413,7 +47705,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getParticipationRateExponent();
 
-    // optional .Common.PegInstructions peg_instructions = 179;
     /**
      * <code>optional .Common.PegInstructions peg_instructions = 179;</code>
      */
@@ -48427,7 +47718,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.PegInstructionsOrBuilder getPegInstructionsOrBuilder();
 
-    // optional sfixed64 pegged_price = 180;
     /**
      * <code>optional sfixed64 pegged_price = 180;</code>
      */
@@ -48437,7 +47727,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPeggedPrice();
 
-    // optional sfixed32 pegged_price_exponent = 181;
     /**
      * <code>optional sfixed32 pegged_price_exponent = 181;</code>
      */
@@ -48447,7 +47736,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPeggedPriceExponent();
 
-    // optional sfixed64 pegged_ref_price = 182;
     /**
      * <code>optional sfixed64 pegged_ref_price = 182;</code>
      */
@@ -48457,7 +47745,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getPeggedRefPrice();
 
-    // optional sfixed32 pegged_ref_price_exponent = 183;
     /**
      * <code>optional sfixed32 pegged_ref_price_exponent = 183;</code>
      */
@@ -48467,7 +47754,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getPeggedRefPriceExponent();
 
-    // optional bool pre_trade_anonymity = 184;
     /**
      * <code>optional bool pre_trade_anonymity = 184;</code>
      */
@@ -48477,7 +47763,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getPreTradeAnonymity();
 
-    // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 185;
     /**
      * <code>optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 185;</code>
      */
@@ -48487,7 +47772,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum getPriceProtectionScope();
 
-    // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 186;
     /**
      * <code>optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 186;</code>
      */
@@ -48497,7 +47781,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum getQtyType();
 
-    // optional string quote_resp_id = 187;
     /**
      * <code>optional string quote_resp_id = 187;</code>
      */
@@ -48512,7 +47795,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getQuoteRespIdBytes();
 
-    // optional string received_dept_id = 188;
     /**
      * <code>optional string received_dept_id = 188;</code>
      */
@@ -48527,7 +47809,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getReceivedDeptIdBytes();
 
-    // optional sfixed64 start_cash = 189;
     /**
      * <code>optional sfixed64 start_cash = 189;</code>
      */
@@ -48537,7 +47818,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getStartCash();
 
-    // optional sfixed32 start_cash_exponent = 190;
     /**
      * <code>optional sfixed32 start_cash_exponent = 190;</code>
      */
@@ -48547,7 +47827,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getStartCashExponent();
 
-    // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 191;
     /**
      * <code>repeated .Common.StrategyParametersGrp strategy_parameters_grp = 191;</code>
      */
@@ -48572,7 +47851,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.StrategyParametersGrpOrBuilder getStrategyParametersGrpOrBuilder(
         int index);
 
-    // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 192;
     /**
      * <code>optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 192;</code>
      */
@@ -48582,7 +47860,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum getTargetStrategy();
 
-    // optional string target_strategy_parameters = 193;
     /**
      * <code>optional string target_strategy_parameters = 193;</code>
      */
@@ -48597,7 +47874,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTargetStrategyParametersBytes();
 
-    // optional double target_strategy_performance = 194;
     /**
      * <code>optional double target_strategy_performance = 194;</code>
      */
@@ -48607,7 +47883,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getTargetStrategyPerformance();
 
-    // optional string time_bracket = 195;
     /**
      * <code>optional string time_bracket = 195;</code>
      */
@@ -48622,7 +47897,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTimeBracketBytes();
 
-    // optional sfixed64 tot_num_reports = 196;
     /**
      * <code>optional sfixed64 tot_num_reports = 196;</code>
      */
@@ -48632,7 +47906,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTotNumReports();
 
-    // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 197;
     /**
      * <code>repeated .Common.TrdRegTimestamps trd_reg_timestamps = 197;</code>
      */
@@ -48657,7 +47930,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.TrdRegTimestampsOrBuilder getTrdRegTimestampsOrBuilder(
         int index);
 
-    // optional .Common.TriggeringInstruction triggering_instruction = 198;
     /**
      * <code>optional .Common.TriggeringInstruction triggering_instruction = 198;</code>
      */
@@ -48671,7 +47943,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.TriggeringInstructionOrBuilder getTriggeringInstructionOrBuilder();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 199;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 199;</code>
      */
@@ -48696,7 +47967,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.UndInstrmtGrpOrBuilder getUndInstrmtGrpOrBuilder(
         int index);
 
-    // optional string alloc_id = 200;
     /**
      * <code>optional string alloc_id = 200;</code>
      */
@@ -48711,7 +47981,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAllocIdBytes();
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 201;
     /**
      * <code>optional .Common.ApplicationSequenceControl application_sequence_control = 201;</code>
      */
@@ -48725,7 +47994,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder getApplicationSequenceControlOrBuilder();
 
-    // optional sfixed64 dividend_yield = 202;
     /**
      * <code>optional sfixed64 dividend_yield = 202;</code>
      */
@@ -48735,7 +48003,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getDividendYield();
 
-    // optional sfixed32 dividend_yield_exponent = 203;
     /**
      * <code>optional sfixed32 dividend_yield_exponent = 203;</code>
      */
@@ -48745,7 +48012,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getDividendYieldExponent();
 
-    // repeated .SingleGeneralOrderHandling.FillsGrp fills_grp = 204;
     /**
      * <code>repeated .SingleGeneralOrderHandling.FillsGrp fills_grp = 204;</code>
      */
@@ -48770,7 +48036,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.SingleGeneralOrderHandling.FillsGrpOrBuilder getFillsGrpOrBuilder(
         int index);
 
-    // optional bool last_fragment = 205;
     /**
      * <code>optional bool last_fragment = 205;</code>
      */
@@ -48780,7 +48045,6 @@ public final class SingleGeneralOrderHandling {
      */
     boolean getLastFragment();
 
-    // repeated .Common.PreAllocGrp pre_alloc_grp = 206;
     /**
      * <code>repeated .Common.PreAllocGrp pre_alloc_grp = 206;</code>
      */
@@ -48805,7 +48069,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.PreAllocGrpOrBuilder getPreAllocGrpOrBuilder(
         int index);
 
-    // optional double price_delta = 207;
     /**
      * <code>optional double price_delta = 207;</code>
      */
@@ -48815,7 +48078,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getPriceDelta();
 
-    // optional double risk_free_rate = 208;
     /**
      * <code>optional double risk_free_rate = 208;</code>
      */
@@ -48825,7 +48087,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getRiskFreeRate();
 
-    // optional double time_to_expiration = 209;
     /**
      * <code>optional double time_to_expiration = 209;</code>
      */
@@ -48835,7 +48096,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getTimeToExpiration();
 
-    // optional sfixed64 tot_no_fills = 210;
     /**
      * <code>optional sfixed64 tot_no_fills = 210;</code>
      */
@@ -48845,7 +48105,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getTotNoFills();
 
-    // optional string trd_match_id = 211;
     /**
      * <code>optional string trd_match_id = 211;</code>
      */
@@ -48860,7 +48119,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTrdMatchIdBytes();
 
-    // optional double volatility = 212;
     /**
      * <code>optional double volatility = 212;</code>
      */
@@ -48870,7 +48128,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getVolatility();
 
-    // repeated .Common.RateSource rate_source = 213;
     /**
      * <code>repeated .Common.RateSource rate_source = 213;</code>
      */
@@ -48899,8 +48156,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.ExecutionReport}
    */
   public static final class ExecutionReport extends
-      com.google.protobuf.GeneratedMessage
-      implements ExecutionReportOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.ExecutionReport)
+      ExecutionReportOrBuilder {
     // Use ExecutionReport.newBuilder() to construct.
     private ExecutionReport(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -48953,8 +48211,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              account_ = input.readBytes();
+              account_ = bs;
               break;
             }
             case 17: {
@@ -48963,8 +48222,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              clOrdId_ = input.readBytes();
+              clOrdId_ = bs;
               break;
             }
             case 33: {
@@ -48978,13 +48238,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000040;
-              execId_ = input.readBytes();
+              execId_ = bs;
               break;
             }
             case 64: {
@@ -48992,7 +48254,7 @@ public final class SingleGeneralOrderHandling {
               org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(8, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                   execInst_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum>();
                   mutable_bitField0_ |= 0x00000080;
@@ -49009,7 +48271,7 @@ public final class SingleGeneralOrderHandling {
                 org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(8, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                     execInst_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum>();
                     mutable_bitField0_ |= 0x00000080;
@@ -49021,8 +48283,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000080;
-              execRefId_ = input.readBytes();
+              execRefId_ = bs;
               break;
             }
             case 80: {
@@ -49037,8 +48300,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000200;
-              lastMkt_ = input.readBytes();
+              lastMkt_ = bs;
               break;
             }
             case 97: {
@@ -49057,8 +48321,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 122: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00002000;
-              listId_ = input.readBytes();
+              listId_ = bs;
               break;
             }
             case 128: {
@@ -49095,8 +48360,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 154: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00020000;
-              orderId_ = input.readBytes();
+              orderId_ = bs;
               break;
             }
             case 161: {
@@ -49173,8 +48439,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 234: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x08000000;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 240: {
@@ -49229,8 +48496,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 314: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00000020;
-              settlCurrency_ = input.readBytes();
+              settlCurrency_ = bs;
               break;
             }
             case 320: {
@@ -49275,13 +48543,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 378: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00002000;
-              origClOrdId_ = input.readBytes();
+              origClOrdId_ = bs;
               break;
             }
             case 386: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00004000;
-              secondaryOrderId_ = input.readBytes();
+              secondaryOrderId_ = bs;
               break;
             }
             case 393: {
@@ -49301,8 +48571,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 410: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField1_ |= 0x00020000;
-              complianceId_ = input.readBytes();
+              complianceId_ = bs;
               break;
             }
             case 417: {
@@ -49561,8 +48832,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 730: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x02000000;
-              clOrdLinkId_ = input.readBytes();
+              clOrdLinkId_ = bs;
               break;
             }
             case 736: {
@@ -49600,8 +48872,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 770: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField2_ |= 0x40000000;
-              crossId_ = input.readBytes();
+              crossId_ = bs;
               break;
             }
             case 776: {
@@ -49638,8 +48911,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 802: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField3_ |= 0x00000004;
-              designation_ = input.readBytes();
+              designation_ = bs;
               break;
             }
             case 813: {
@@ -49736,7 +49010,7 @@ public final class SingleGeneralOrderHandling {
               org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(112, rawValue);
-              } else {
+                } else {
                 if (!((mutable_bitField3_ & 0x00008000) == 0x00008000)) {
                   orderRestrictions_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum>();
                   mutable_bitField3_ |= 0x00008000;
@@ -49753,7 +49027,7 @@ public final class SingleGeneralOrderHandling {
                 org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum value = org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum.valueOf(rawValue);
                 if (value == null) {
                   unknownFields.mergeVarintField(112, rawValue);
-                } else {
+                  } else {
                   if (!((mutable_bitField3_ & 0x00008000) == 0x00008000)) {
                     orderRestrictions_ = new java.util.ArrayList<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum>();
                     mutable_bitField3_ |= 0x00008000;
@@ -49765,8 +49039,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 906: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField3_ |= 0x00004000;
-              origCrossId_ = input.readBytes();
+              origCrossId_ = bs;
               break;
             }
             case 914: {
@@ -49821,18 +49096,21 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 962: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField3_ |= 0x00100000;
-              registId_ = input.readBytes();
+              registId_ = bs;
               break;
             }
             case 970: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField3_ |= 0x00200000;
-              secondaryClOrdId_ = input.readBytes();
+              secondaryClOrdId_ = bs;
               break;
             }
             case 978: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField3_ |= 0x00400000;
-              secondaryExecId_ = input.readBytes();
+              secondaryExecId_ = bs;
               break;
             }
             case 986: {
@@ -50074,8 +49352,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 1250: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField4_ |= 0x00200000;
-              hostCrossId_ = input.readBytes();
+              hostCrossId_ = bs;
               break;
             }
             case 1258: {
@@ -50149,8 +49428,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 1346: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField5_ |= 0x00000001;
-              massStatusReqId_ = input.readBytes();
+              massStatusReqId_ = bs;
               break;
             }
             case 1353: {
@@ -50188,8 +49468,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 1394: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField5_ |= 0x00000020;
-              ordStatusReqId_ = input.readBytes();
+              ordStatusReqId_ = bs;
               break;
             }
             case 1400: {
@@ -50285,13 +49566,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 1498: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField5_ |= 0x00040000;
-              quoteRespId_ = input.readBytes();
+              quoteRespId_ = bs;
               break;
             }
             case 1506: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField5_ |= 0x00080000;
-              receivedDeptId_ = input.readBytes();
+              receivedDeptId_ = bs;
               break;
             }
             case 1513: {
@@ -50324,8 +49607,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 1546: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField5_ |= 0x00800000;
-              targetStrategyParameters_ = input.readBytes();
+              targetStrategyParameters_ = bs;
               break;
             }
             case 1553: {
@@ -50334,8 +49618,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 1562: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField5_ |= 0x02000000;
-              timeBracket_ = input.readBytes();
+              timeBracket_ = bs;
               break;
             }
             case 1569: {
@@ -50373,8 +49658,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 1602: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField5_ |= 0x10000000;
-              allocId_ = input.readBytes();
+              allocId_ = bs;
               break;
             }
             case 1610: {
@@ -50442,8 +49728,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 1690: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField6_ |= 0x00000020;
-              trdMatchId_ = input.readBytes();
+              trdMatchId_ = bs;
               break;
             }
             case 1697: {
@@ -50547,7 +49834,6 @@ public final class SingleGeneralOrderHandling {
     private int bitField4_;
     private int bitField5_;
     private int bitField6_;
-    // optional string account = 1;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
     private java.lang.Object account_;
     /**
@@ -50590,7 +49876,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 avg_px = 2;
     public static final int AVG_PX_FIELD_NUMBER = 2;
     private long avgPx_;
     /**
@@ -50606,7 +49891,6 @@ public final class SingleGeneralOrderHandling {
       return avgPx_;
     }
 
-    // optional string cl_ord_id = 3;
     public static final int CL_ORD_ID_FIELD_NUMBER = 3;
     private java.lang.Object clOrdId_;
     /**
@@ -50649,7 +49933,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 cum_qty = 4;
     public static final int CUM_QTY_FIELD_NUMBER = 4;
     private long cumQty_;
     /**
@@ -50665,7 +49948,6 @@ public final class SingleGeneralOrderHandling {
       return cumQty_;
     }
 
-    // optional sfixed32 cum_qty_exponent = 5;
     public static final int CUM_QTY_EXPONENT_FIELD_NUMBER = 5;
     private int cumQtyExponent_;
     /**
@@ -50681,7 +49963,6 @@ public final class SingleGeneralOrderHandling {
       return cumQtyExponent_;
     }
 
-    // optional string currency = 6;
     public static final int CURRENCY_FIELD_NUMBER = 6;
     private java.lang.Object currency_;
     /**
@@ -50724,7 +50005,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string exec_id = 7;
     public static final int EXEC_ID_FIELD_NUMBER = 7;
     private java.lang.Object execId_;
     /**
@@ -50767,7 +50047,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 8 [packed = true];
     public static final int EXEC_INST_FIELD_NUMBER = 8;
     private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> execInst_;
     /**
@@ -50790,7 +50069,6 @@ public final class SingleGeneralOrderHandling {
     }
     private int execInstMemoizedSerializedSize;
 
-    // optional string exec_ref_id = 9;
     public static final int EXEC_REF_ID_FIELD_NUMBER = 9;
     private java.lang.Object execRefId_;
     /**
@@ -50833,7 +50111,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.LastCapacityEnum last_capacity = 10;
     public static final int LAST_CAPACITY_FIELD_NUMBER = 10;
     private org.fixprotocol.components.SingleGeneralOrderHandling.LastCapacityEnum lastCapacity_;
     /**
@@ -50849,7 +50126,6 @@ public final class SingleGeneralOrderHandling {
       return lastCapacity_;
     }
 
-    // optional string last_mkt = 11;
     public static final int LAST_MKT_FIELD_NUMBER = 11;
     private java.lang.Object lastMkt_;
     /**
@@ -50892,7 +50168,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional double last_px = 12;
     public static final int LAST_PX_FIELD_NUMBER = 12;
     private double lastPx_;
     /**
@@ -50908,7 +50183,6 @@ public final class SingleGeneralOrderHandling {
       return lastPx_;
     }
 
-    // optional sfixed64 last_qty = 13;
     public static final int LAST_QTY_FIELD_NUMBER = 13;
     private long lastQty_;
     /**
@@ -50924,7 +50198,6 @@ public final class SingleGeneralOrderHandling {
       return lastQty_;
     }
 
-    // optional sfixed32 last_qty_exponent = 14;
     public static final int LAST_QTY_EXPONENT_FIELD_NUMBER = 14;
     private int lastQtyExponent_;
     /**
@@ -50940,7 +50213,6 @@ public final class SingleGeneralOrderHandling {
       return lastQtyExponent_;
     }
 
-    // optional string list_id = 15;
     public static final int LIST_ID_FIELD_NUMBER = 15;
     private java.lang.Object listId_;
     /**
@@ -50983,7 +50255,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 16;
     public static final int ORD_REJ_REASON_FIELD_NUMBER = 16;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonEnum ordRejReason_;
     /**
@@ -50999,7 +50270,6 @@ public final class SingleGeneralOrderHandling {
       return ordRejReason_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 17;
     public static final int ORD_STATUS_FIELD_NUMBER = 17;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrdStatusEnum ordStatus_;
     /**
@@ -51015,7 +50285,6 @@ public final class SingleGeneralOrderHandling {
       return ordStatus_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 18;
     public static final int ORD_TYPE_FIELD_NUMBER = 18;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum ordType_;
     /**
@@ -51031,7 +50300,6 @@ public final class SingleGeneralOrderHandling {
       return ordType_;
     }
 
-    // optional string order_id = 19;
     public static final int ORDER_ID_FIELD_NUMBER = 19;
     private java.lang.Object orderId_;
     /**
@@ -51074,7 +50342,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 price = 20;
     public static final int PRICE_FIELD_NUMBER = 20;
     private long price_;
     /**
@@ -51090,7 +50357,6 @@ public final class SingleGeneralOrderHandling {
       return price_;
     }
 
-    // optional sfixed32 price_exponent = 21;
     public static final int PRICE_EXPONENT_FIELD_NUMBER = 21;
     private int priceExponent_;
     /**
@@ -51106,7 +50372,6 @@ public final class SingleGeneralOrderHandling {
       return priceExponent_;
     }
 
-    // optional sfixed32 settl_date = 22;
     public static final int SETTL_DATE_FIELD_NUMBER = 22;
     private int settlDate_;
     /**
@@ -51122,7 +50387,6 @@ public final class SingleGeneralOrderHandling {
       return settlDate_;
     }
 
-    // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 23;
     public static final int SETTL_TYPE_FIELD_NUMBER = 23;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum settlType_;
     /**
@@ -51138,7 +50402,6 @@ public final class SingleGeneralOrderHandling {
       return settlType_;
     }
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 24;
     public static final int SIDE_FIELD_NUMBER = 24;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_;
     /**
@@ -51154,7 +50417,6 @@ public final class SingleGeneralOrderHandling {
       return side_;
     }
 
-    // optional .Session.StandardHeader standard_header = 25;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 25;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -51176,7 +50438,6 @@ public final class SingleGeneralOrderHandling {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 26;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 26;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -51198,7 +50459,6 @@ public final class SingleGeneralOrderHandling {
       return standardTrailer_;
     }
 
-    // optional sfixed64 stop_px = 27;
     public static final int STOP_PX_FIELD_NUMBER = 27;
     private long stopPx_;
     /**
@@ -51214,7 +50474,6 @@ public final class SingleGeneralOrderHandling {
       return stopPx_;
     }
 
-    // optional sfixed32 stop_px_exponent = 28;
     public static final int STOP_PX_EXPONENT_FIELD_NUMBER = 28;
     private int stopPxExponent_;
     /**
@@ -51230,7 +50489,6 @@ public final class SingleGeneralOrderHandling {
       return stopPxExponent_;
     }
 
-    // optional string text = 29;
     public static final int TEXT_FIELD_NUMBER = 29;
     private java.lang.Object text_;
     /**
@@ -51273,7 +50531,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 30;
     public static final int TIME_IN_FORCE_FIELD_NUMBER = 30;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum timeInForce_;
     /**
@@ -51289,7 +50546,6 @@ public final class SingleGeneralOrderHandling {
       return timeInForce_;
     }
 
-    // optional sfixed32 trade_date = 31;
     public static final int TRADE_DATE_FIELD_NUMBER = 31;
     private int tradeDate_;
     /**
@@ -51305,7 +50561,6 @@ public final class SingleGeneralOrderHandling {
       return tradeDate_;
     }
 
-    // optional sfixed64 transact_time = 32;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 32;
     private long transactTime_;
     /**
@@ -51321,7 +50576,6 @@ public final class SingleGeneralOrderHandling {
       return transactTime_;
     }
 
-    // optional bool report_to_exch = 33;
     public static final int REPORT_TO_EXCH_FIELD_NUMBER = 33;
     private boolean reportToExch_;
     /**
@@ -51337,7 +50591,6 @@ public final class SingleGeneralOrderHandling {
       return reportToExch_;
     }
 
-    // optional sfixed64 expire_time = 34;
     public static final int EXPIRE_TIME_FIELD_NUMBER = 34;
     private long expireTime_;
     /**
@@ -51353,7 +50606,6 @@ public final class SingleGeneralOrderHandling {
       return expireTime_;
     }
 
-    // optional sfixed64 net_money = 35;
     public static final int NET_MONEY_FIELD_NUMBER = 35;
     private long netMoney_;
     /**
@@ -51369,7 +50621,6 @@ public final class SingleGeneralOrderHandling {
       return netMoney_;
     }
 
-    // optional sfixed32 net_money_exponent = 36;
     public static final int NET_MONEY_EXPONENT_FIELD_NUMBER = 36;
     private int netMoneyExponent_;
     /**
@@ -51385,7 +50636,6 @@ public final class SingleGeneralOrderHandling {
       return netMoneyExponent_;
     }
 
-    // optional sfixed64 settl_curr_amt = 37;
     public static final int SETTL_CURR_AMT_FIELD_NUMBER = 37;
     private long settlCurrAmt_;
     /**
@@ -51401,7 +50651,6 @@ public final class SingleGeneralOrderHandling {
       return settlCurrAmt_;
     }
 
-    // optional sfixed32 settl_curr_amt_exponent = 38;
     public static final int SETTL_CURR_AMT_EXPONENT_FIELD_NUMBER = 38;
     private int settlCurrAmtExponent_;
     /**
@@ -51417,7 +50666,6 @@ public final class SingleGeneralOrderHandling {
       return settlCurrAmtExponent_;
     }
 
-    // optional string settl_currency = 39;
     public static final int SETTL_CURRENCY_FIELD_NUMBER = 39;
     private java.lang.Object settlCurrency_;
     /**
@@ -51460,7 +50708,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.ExecTypeEnum exec_type = 40;
     public static final int EXEC_TYPE_FIELD_NUMBER = 40;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ExecTypeEnum execType_;
     /**
@@ -51476,7 +50723,6 @@ public final class SingleGeneralOrderHandling {
       return execType_;
     }
 
-    // optional sfixed64 last_forward_points = 41;
     public static final int LAST_FORWARD_POINTS_FIELD_NUMBER = 41;
     private long lastForwardPoints_;
     /**
@@ -51492,7 +50738,6 @@ public final class SingleGeneralOrderHandling {
       return lastForwardPoints_;
     }
 
-    // optional sfixed32 last_forward_points_exponent = 42;
     public static final int LAST_FORWARD_POINTS_EXPONENT_FIELD_NUMBER = 42;
     private int lastForwardPointsExponent_;
     /**
@@ -51508,7 +50753,6 @@ public final class SingleGeneralOrderHandling {
       return lastForwardPointsExponent_;
     }
 
-    // optional sfixed64 last_spot_rate = 43;
     public static final int LAST_SPOT_RATE_FIELD_NUMBER = 43;
     private long lastSpotRate_;
     /**
@@ -51524,7 +50768,6 @@ public final class SingleGeneralOrderHandling {
       return lastSpotRate_;
     }
 
-    // optional sfixed32 last_spot_rate_exponent = 44;
     public static final int LAST_SPOT_RATE_EXPONENT_FIELD_NUMBER = 44;
     private int lastSpotRateExponent_;
     /**
@@ -51540,7 +50783,6 @@ public final class SingleGeneralOrderHandling {
       return lastSpotRateExponent_;
     }
 
-    // optional sfixed64 leaves_qty = 45;
     public static final int LEAVES_QTY_FIELD_NUMBER = 45;
     private long leavesQty_;
     /**
@@ -51556,7 +50798,6 @@ public final class SingleGeneralOrderHandling {
       return leavesQty_;
     }
 
-    // optional sfixed32 leaves_qty_exponent = 46;
     public static final int LEAVES_QTY_EXPONENT_FIELD_NUMBER = 46;
     private int leavesQtyExponent_;
     /**
@@ -51572,7 +50813,6 @@ public final class SingleGeneralOrderHandling {
       return leavesQtyExponent_;
     }
 
-    // optional string orig_cl_ord_id = 47;
     public static final int ORIG_CL_ORD_ID_FIELD_NUMBER = 47;
     private java.lang.Object origClOrdId_;
     /**
@@ -51615,7 +50855,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string secondary_order_id = 48;
     public static final int SECONDARY_ORDER_ID_FIELD_NUMBER = 48;
     private java.lang.Object secondaryOrderId_;
     /**
@@ -51658,7 +50897,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional double settl_curr_fx_rate = 49;
     public static final int SETTL_CURR_FX_RATE_FIELD_NUMBER = 49;
     private double settlCurrFxRate_;
     /**
@@ -51674,7 +50912,6 @@ public final class SingleGeneralOrderHandling {
       return settlCurrFxRate_;
     }
 
-    // optional .SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum settl_curr_fx_rate_calc = 50;
     public static final int SETTL_CURR_FX_RATE_CALC_FIELD_NUMBER = 50;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum settlCurrFxRateCalc_;
     /**
@@ -51690,7 +50927,6 @@ public final class SingleGeneralOrderHandling {
       return settlCurrFxRateCalc_;
     }
 
-    // optional string compliance_id = 51;
     public static final int COMPLIANCE_ID_FIELD_NUMBER = 51;
     private java.lang.Object complianceId_;
     /**
@@ -51733,7 +50969,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 day_avg_px = 52;
     public static final int DAY_AVG_PX_FIELD_NUMBER = 52;
     private long dayAvgPx_;
     /**
@@ -51749,7 +50984,6 @@ public final class SingleGeneralOrderHandling {
       return dayAvgPx_;
     }
 
-    // optional sfixed32 day_avg_px_exponent = 53;
     public static final int DAY_AVG_PX_EXPONENT_FIELD_NUMBER = 53;
     private int dayAvgPxExponent_;
     /**
@@ -51765,7 +50999,6 @@ public final class SingleGeneralOrderHandling {
       return dayAvgPxExponent_;
     }
 
-    // optional sfixed64 day_cum_qty = 54;
     public static final int DAY_CUM_QTY_FIELD_NUMBER = 54;
     private long dayCumQty_;
     /**
@@ -51781,7 +51014,6 @@ public final class SingleGeneralOrderHandling {
       return dayCumQty_;
     }
 
-    // optional sfixed32 day_cum_qty_exponent = 55;
     public static final int DAY_CUM_QTY_EXPONENT_FIELD_NUMBER = 55;
     private int dayCumQtyExponent_;
     /**
@@ -51797,7 +51029,6 @@ public final class SingleGeneralOrderHandling {
       return dayCumQtyExponent_;
     }
 
-    // optional sfixed64 day_order_qty = 56;
     public static final int DAY_ORDER_QTY_FIELD_NUMBER = 56;
     private long dayOrderQty_;
     /**
@@ -51813,7 +51044,6 @@ public final class SingleGeneralOrderHandling {
       return dayOrderQty_;
     }
 
-    // optional sfixed32 day_order_qty_exponent = 57;
     public static final int DAY_ORDER_QTY_EXPONENT_FIELD_NUMBER = 57;
     private int dayOrderQtyExponent_;
     /**
@@ -51829,7 +51059,6 @@ public final class SingleGeneralOrderHandling {
       return dayOrderQtyExponent_;
     }
 
-    // optional sfixed64 effective_time = 58;
     public static final int EFFECTIVE_TIME_FIELD_NUMBER = 58;
     private long effectiveTime_;
     /**
@@ -51845,7 +51074,6 @@ public final class SingleGeneralOrderHandling {
       return effectiveTime_;
     }
 
-    // optional bytes encoded_text = 59;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 59;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -51861,7 +51089,6 @@ public final class SingleGeneralOrderHandling {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 60;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 60;
     private int encodedTextLen_;
     /**
@@ -51877,7 +51104,6 @@ public final class SingleGeneralOrderHandling {
       return encodedTextLen_;
     }
 
-    // optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 61;
     public static final int EXEC_RESTATEMENT_REASON_FIELD_NUMBER = 61;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonEnum execRestatementReason_;
     /**
@@ -51893,7 +51119,6 @@ public final class SingleGeneralOrderHandling {
       return execRestatementReason_;
     }
 
-    // optional sfixed32 expire_date = 62;
     public static final int EXPIRE_DATE_FIELD_NUMBER = 62;
     private int expireDate_;
     /**
@@ -51909,7 +51134,6 @@ public final class SingleGeneralOrderHandling {
       return expireDate_;
     }
 
-    // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 63;
     public static final int GT_BOOKING_INST_FIELD_NUMBER = 63;
     private org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum gtBookingInst_;
     /**
@@ -51925,7 +51149,6 @@ public final class SingleGeneralOrderHandling {
       return gtBookingInst_;
     }
 
-    // optional sfixed64 gross_trade_amt = 64;
     public static final int GROSS_TRADE_AMT_FIELD_NUMBER = 64;
     private long grossTradeAmt_;
     /**
@@ -51941,7 +51164,6 @@ public final class SingleGeneralOrderHandling {
       return grossTradeAmt_;
     }
 
-    // optional sfixed32 gross_trade_amt_exponent = 65;
     public static final int GROSS_TRADE_AMT_EXPONENT_FIELD_NUMBER = 65;
     private int grossTradeAmtExponent_;
     /**
@@ -51957,7 +51179,6 @@ public final class SingleGeneralOrderHandling {
       return grossTradeAmtExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 66;
     public static final int HANDL_INST_FIELD_NUMBER = 66;
     private org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum handlInst_;
     /**
@@ -51973,7 +51194,6 @@ public final class SingleGeneralOrderHandling {
       return handlInst_;
     }
 
-    // optional sfixed64 max_floor = 67;
     public static final int MAX_FLOOR_FIELD_NUMBER = 67;
     private long maxFloor_;
     /**
@@ -51989,7 +51209,6 @@ public final class SingleGeneralOrderHandling {
       return maxFloor_;
     }
 
-    // optional sfixed32 max_floor_exponent = 68;
     public static final int MAX_FLOOR_EXPONENT_FIELD_NUMBER = 68;
     private int maxFloorExponent_;
     /**
@@ -52005,7 +51224,6 @@ public final class SingleGeneralOrderHandling {
       return maxFloorExponent_;
     }
 
-    // optional sfixed64 max_show = 69;
     public static final int MAX_SHOW_FIELD_NUMBER = 69;
     private long maxShow_;
     /**
@@ -52021,7 +51239,6 @@ public final class SingleGeneralOrderHandling {
       return maxShow_;
     }
 
-    // optional sfixed32 max_show_exponent = 70;
     public static final int MAX_SHOW_EXPONENT_FIELD_NUMBER = 70;
     private int maxShowExponent_;
     /**
@@ -52037,7 +51254,6 @@ public final class SingleGeneralOrderHandling {
       return maxShowExponent_;
     }
 
-    // optional sfixed64 min_qty = 71;
     public static final int MIN_QTY_FIELD_NUMBER = 71;
     private long minQty_;
     /**
@@ -52053,7 +51269,6 @@ public final class SingleGeneralOrderHandling {
       return minQty_;
     }
 
-    // optional sfixed32 min_qty_exponent = 72;
     public static final int MIN_QTY_EXPONENT_FIELD_NUMBER = 72;
     private int minQtyExponent_;
     /**
@@ -52069,7 +51284,6 @@ public final class SingleGeneralOrderHandling {
       return minQtyExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.MultiLegReportingTypeEnum multi_leg_reporting_type = 73;
     public static final int MULTI_LEG_REPORTING_TYPE_FIELD_NUMBER = 73;
     private org.fixprotocol.components.SingleGeneralOrderHandling.MultiLegReportingTypeEnum multiLegReportingType_;
     /**
@@ -52085,7 +51299,6 @@ public final class SingleGeneralOrderHandling {
       return multiLegReportingType_;
     }
 
-    // optional sfixed64 order_qty2 = 74;
     public static final int ORDER_QTY2_FIELD_NUMBER = 74;
     private long orderQty2_;
     /**
@@ -52101,7 +51314,6 @@ public final class SingleGeneralOrderHandling {
       return orderQty2_;
     }
 
-    // optional sfixed32 order_qty2_exponent = 75;
     public static final int ORDER_QTY2_EXPONENT_FIELD_NUMBER = 75;
     private int orderQty2Exponent_;
     /**
@@ -52117,7 +51329,6 @@ public final class SingleGeneralOrderHandling {
       return orderQty2Exponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 76;
     public static final int POSITION_EFFECT_FIELD_NUMBER = 76;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum positionEffect_;
     /**
@@ -52133,7 +51344,6 @@ public final class SingleGeneralOrderHandling {
       return positionEffect_;
     }
 
-    // optional sfixed32 settl_date2 = 77;
     public static final int SETTL_DATE2_FIELD_NUMBER = 77;
     private int settlDate2_;
     /**
@@ -52149,7 +51359,6 @@ public final class SingleGeneralOrderHandling {
       return settlDate2_;
     }
 
-    // optional bool solicited_flag = 78;
     public static final int SOLICITED_FLAG_FIELD_NUMBER = 78;
     private boolean solicitedFlag_;
     /**
@@ -52165,7 +51374,6 @@ public final class SingleGeneralOrderHandling {
       return solicitedFlag_;
     }
 
-    // optional .SingleGeneralOrderHandling.TradingSessionIdEnum trading_session_id = 79;
     public static final int TRADING_SESSION_ID_FIELD_NUMBER = 79;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TradingSessionIdEnum tradingSessionId_;
     /**
@@ -52181,7 +51389,6 @@ public final class SingleGeneralOrderHandling {
       return tradingSessionId_;
     }
 
-    // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 80;
     public static final int ACCOUNT_TYPE_FIELD_NUMBER = 80;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_;
     /**
@@ -52197,7 +51404,6 @@ public final class SingleGeneralOrderHandling {
       return accountType_;
     }
 
-    // optional sfixed64 accrued_interest_amt = 81;
     public static final int ACCRUED_INTEREST_AMT_FIELD_NUMBER = 81;
     private long accruedInterestAmt_;
     /**
@@ -52213,7 +51419,6 @@ public final class SingleGeneralOrderHandling {
       return accruedInterestAmt_;
     }
 
-    // optional sfixed32 accrued_interest_amt_exponent = 82;
     public static final int ACCRUED_INTEREST_AMT_EXPONENT_FIELD_NUMBER = 82;
     private int accruedInterestAmtExponent_;
     /**
@@ -52229,7 +51434,6 @@ public final class SingleGeneralOrderHandling {
       return accruedInterestAmtExponent_;
     }
 
-    // optional sfixed64 accrued_interest_rate = 83;
     public static final int ACCRUED_INTEREST_RATE_FIELD_NUMBER = 83;
     private long accruedInterestRate_;
     /**
@@ -52245,7 +51449,6 @@ public final class SingleGeneralOrderHandling {
       return accruedInterestRate_;
     }
 
-    // optional sfixed32 accrued_interest_rate_exponent = 84;
     public static final int ACCRUED_INTEREST_RATE_EXPONENT_FIELD_NUMBER = 84;
     private int accruedInterestRateExponent_;
     /**
@@ -52261,7 +51464,6 @@ public final class SingleGeneralOrderHandling {
       return accruedInterestRateExponent_;
     }
 
-    // optional sfixed32 basis_feature_date = 85;
     public static final int BASIS_FEATURE_DATE_FIELD_NUMBER = 85;
     private int basisFeatureDate_;
     /**
@@ -52277,7 +51479,6 @@ public final class SingleGeneralOrderHandling {
       return basisFeatureDate_;
     }
 
-    // optional sfixed64 basis_feature_price = 86;
     public static final int BASIS_FEATURE_PRICE_FIELD_NUMBER = 86;
     private long basisFeaturePrice_;
     /**
@@ -52293,7 +51494,6 @@ public final class SingleGeneralOrderHandling {
       return basisFeaturePrice_;
     }
 
-    // optional sfixed32 basis_feature_price_exponent = 87;
     public static final int BASIS_FEATURE_PRICE_EXPONENT_FIELD_NUMBER = 87;
     private int basisFeaturePriceExponent_;
     /**
@@ -52309,7 +51509,6 @@ public final class SingleGeneralOrderHandling {
       return basisFeaturePriceExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 88;
     public static final int BOOKING_UNIT_FIELD_NUMBER = 88;
     private org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum bookingUnit_;
     /**
@@ -52325,7 +51524,6 @@ public final class SingleGeneralOrderHandling {
       return bookingUnit_;
     }
 
-    // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 89;
     public static final int CANCELLATION_RIGHTS_FIELD_NUMBER = 89;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum cancellationRights_;
     /**
@@ -52341,7 +51539,6 @@ public final class SingleGeneralOrderHandling {
       return cancellationRights_;
     }
 
-    // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 90;
     public static final int CASH_MARGIN_FIELD_NUMBER = 90;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum cashMargin_;
     /**
@@ -52357,7 +51554,6 @@ public final class SingleGeneralOrderHandling {
       return cashMargin_;
     }
 
-    // optional string cl_ord_link_id = 91;
     public static final int CL_ORD_LINK_ID_FIELD_NUMBER = 91;
     private java.lang.Object clOrdLinkId_;
     /**
@@ -52400,7 +51596,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 92;
     public static final int CLEARING_FEE_INDICATOR_FIELD_NUMBER = 92;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearingFeeIndicator_;
     /**
@@ -52416,7 +51611,6 @@ public final class SingleGeneralOrderHandling {
       return clearingFeeIndicator_;
     }
 
-    // optional .Common.CommissionData commission_data = 93;
     public static final int COMMISSION_DATA_FIELD_NUMBER = 93;
     private org.fixprotocol.components.Common.CommissionData commissionData_;
     /**
@@ -52438,7 +51632,6 @@ public final class SingleGeneralOrderHandling {
       return commissionData_;
     }
 
-    // optional sfixed64 concession = 94;
     public static final int CONCESSION_FIELD_NUMBER = 94;
     private long concession_;
     /**
@@ -52454,7 +51647,6 @@ public final class SingleGeneralOrderHandling {
       return concession_;
     }
 
-    // optional sfixed32 concession_exponent = 95;
     public static final int CONCESSION_EXPONENT_FIELD_NUMBER = 95;
     private int concessionExponent_;
     /**
@@ -52470,7 +51662,6 @@ public final class SingleGeneralOrderHandling {
       return concessionExponent_;
     }
 
-    // optional string cross_id = 96;
     public static final int CROSS_ID_FIELD_NUMBER = 96;
     private java.lang.Object crossId_;
     /**
@@ -52513,7 +51704,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.CrossTypeEnum cross_type = 97;
     public static final int CROSS_TYPE_FIELD_NUMBER = 97;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CrossTypeEnum crossType_;
     /**
@@ -52529,7 +51719,6 @@ public final class SingleGeneralOrderHandling {
       return crossType_;
     }
 
-    // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 98;
     public static final int CUST_ORDER_CAPACITY_FIELD_NUMBER = 98;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum custOrderCapacity_;
     /**
@@ -52545,7 +51734,6 @@ public final class SingleGeneralOrderHandling {
       return custOrderCapacity_;
     }
 
-    // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 99;
     public static final int DAY_BOOKING_INST_FIELD_NUMBER = 99;
     private org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum dayBookingInst_;
     /**
@@ -52561,7 +51749,6 @@ public final class SingleGeneralOrderHandling {
       return dayBookingInst_;
     }
 
-    // optional string designation = 100;
     public static final int DESIGNATION_FIELD_NUMBER = 100;
     private java.lang.Object designation_;
     /**
@@ -52604,7 +51791,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed32 ex_date = 101;
     public static final int EX_DATE_FIELD_NUMBER = 101;
     private int exDate_;
     /**
@@ -52620,7 +51806,6 @@ public final class SingleGeneralOrderHandling {
       return exDate_;
     }
 
-    // optional double exec_price_adjustment = 102;
     public static final int EXEC_PRICE_ADJUSTMENT_FIELD_NUMBER = 102;
     private double execPriceAdjustment_;
     /**
@@ -52636,7 +51821,6 @@ public final class SingleGeneralOrderHandling {
       return execPriceAdjustment_;
     }
 
-    // optional .SingleGeneralOrderHandling.ExecPriceTypeEnum exec_price_type = 103;
     public static final int EXEC_PRICE_TYPE_FIELD_NUMBER = 103;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ExecPriceTypeEnum execPriceType_;
     /**
@@ -52652,7 +51836,6 @@ public final class SingleGeneralOrderHandling {
       return execPriceType_;
     }
 
-    // optional sfixed64 exec_valuation_point = 104;
     public static final int EXEC_VALUATION_POINT_FIELD_NUMBER = 104;
     private long execValuationPoint_;
     /**
@@ -52668,7 +51851,6 @@ public final class SingleGeneralOrderHandling {
       return execValuationPoint_;
     }
 
-    // optional .Common.Instrument instrument = 105;
     public static final int INSTRUMENT_FIELD_NUMBER = 105;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -52690,7 +51872,6 @@ public final class SingleGeneralOrderHandling {
       return instrument_;
     }
 
-    // optional sfixed64 last_forward_points2 = 106;
     public static final int LAST_FORWARD_POINTS2_FIELD_NUMBER = 106;
     private long lastForwardPoints2_;
     /**
@@ -52706,7 +51887,6 @@ public final class SingleGeneralOrderHandling {
       return lastForwardPoints2_;
     }
 
-    // optional sfixed32 last_forward_points2_exponent = 107;
     public static final int LAST_FORWARD_POINTS2_EXPONENT_FIELD_NUMBER = 107;
     private int lastForwardPoints2Exponent_;
     /**
@@ -52722,7 +51902,6 @@ public final class SingleGeneralOrderHandling {
       return lastForwardPoints2Exponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 108;
     public static final int MONEY_LAUNDERING_STATUS_FIELD_NUMBER = 108;
     private org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum moneyLaunderingStatus_;
     /**
@@ -52738,7 +51917,6 @@ public final class SingleGeneralOrderHandling {
       return moneyLaunderingStatus_;
     }
 
-    // optional sfixed64 num_days_interest = 109;
     public static final int NUM_DAYS_INTEREST_FIELD_NUMBER = 109;
     private long numDaysInterest_;
     /**
@@ -52754,7 +51932,6 @@ public final class SingleGeneralOrderHandling {
       return numDaysInterest_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 110;
     public static final int ORDER_CAPACITY_FIELD_NUMBER = 110;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum orderCapacity_;
     /**
@@ -52770,7 +51947,6 @@ public final class SingleGeneralOrderHandling {
       return orderCapacity_;
     }
 
-    // optional .Common.OrderQtyData order_qty_data = 111;
     public static final int ORDER_QTY_DATA_FIELD_NUMBER = 111;
     private org.fixprotocol.components.Common.OrderQtyData orderQtyData_;
     /**
@@ -52792,7 +51968,6 @@ public final class SingleGeneralOrderHandling {
       return orderQtyData_;
     }
 
-    // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 112 [packed = true];
     public static final int ORDER_RESTRICTIONS_FIELD_NUMBER = 112;
     private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> orderRestrictions_;
     /**
@@ -52815,7 +51990,6 @@ public final class SingleGeneralOrderHandling {
     }
     private int orderRestrictionsMemoizedSerializedSize;
 
-    // optional string orig_cross_id = 113;
     public static final int ORIG_CROSS_ID_FIELD_NUMBER = 113;
     private java.lang.Object origCrossId_;
     /**
@@ -52858,7 +52032,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .Common.Parties parties = 114;
     public static final int PARTIES_FIELD_NUMBER = 114;
     private java.util.List<org.fixprotocol.components.Common.Parties> parties_;
     /**
@@ -52894,7 +52067,6 @@ public final class SingleGeneralOrderHandling {
       return parties_.get(index);
     }
 
-    // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 115;
     public static final int PREALLOC_METHOD_FIELD_NUMBER = 115;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum preallocMethod_;
     /**
@@ -52910,7 +52082,6 @@ public final class SingleGeneralOrderHandling {
       return preallocMethod_;
     }
 
-    // optional sfixed64 price_improvement = 116;
     public static final int PRICE_IMPROVEMENT_FIELD_NUMBER = 116;
     private long priceImprovement_;
     /**
@@ -52926,7 +52097,6 @@ public final class SingleGeneralOrderHandling {
       return priceImprovement_;
     }
 
-    // optional sfixed32 price_improvement_exponent = 117;
     public static final int PRICE_IMPROVEMENT_EXPONENT_FIELD_NUMBER = 117;
     private int priceImprovementExponent_;
     /**
@@ -52942,7 +52112,6 @@ public final class SingleGeneralOrderHandling {
       return priceImprovementExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 118;
     public static final int PRICE_TYPE_FIELD_NUMBER = 118;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum priceType_;
     /**
@@ -52958,7 +52127,6 @@ public final class SingleGeneralOrderHandling {
       return priceType_;
     }
 
-    // optional .SingleGeneralOrderHandling.PriorityIndicatorEnum priority_indicator = 119;
     public static final int PRIORITY_INDICATOR_FIELD_NUMBER = 119;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PriorityIndicatorEnum priorityIndicator_;
     /**
@@ -52974,7 +52142,6 @@ public final class SingleGeneralOrderHandling {
       return priorityIndicator_;
     }
 
-    // optional string regist_id = 120;
     public static final int REGIST_ID_FIELD_NUMBER = 120;
     private java.lang.Object registId_;
     /**
@@ -53017,7 +52184,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string secondary_cl_ord_id = 121;
     public static final int SECONDARY_CL_ORD_ID_FIELD_NUMBER = 121;
     private java.lang.Object secondaryClOrdId_;
     /**
@@ -53060,7 +52226,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string secondary_exec_id = 122;
     public static final int SECONDARY_EXEC_ID_FIELD_NUMBER = 122;
     private java.lang.Object secondaryExecId_;
     /**
@@ -53103,7 +52268,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 123;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 123;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -53125,7 +52289,6 @@ public final class SingleGeneralOrderHandling {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // repeated .Common.Stipulations stipulations = 124;
     public static final int STIPULATIONS_FIELD_NUMBER = 124;
     private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_;
     /**
@@ -53161,7 +52324,6 @@ public final class SingleGeneralOrderHandling {
       return stipulations_.get(index);
     }
 
-    // optional sfixed64 total_takedown = 125;
     public static final int TOTAL_TAKEDOWN_FIELD_NUMBER = 125;
     private long totalTakedown_;
     /**
@@ -53177,7 +52339,6 @@ public final class SingleGeneralOrderHandling {
       return totalTakedown_;
     }
 
-    // optional sfixed32 total_takedown_exponent = 126;
     public static final int TOTAL_TAKEDOWN_EXPONENT_FIELD_NUMBER = 126;
     private int totalTakedownExponent_;
     /**
@@ -53193,7 +52354,6 @@ public final class SingleGeneralOrderHandling {
       return totalTakedownExponent_;
     }
 
-    // optional sfixed32 trade_origination_date = 127;
     public static final int TRADE_ORIGINATION_DATE_FIELD_NUMBER = 127;
     private int tradeOriginationDate_;
     /**
@@ -53209,7 +52369,6 @@ public final class SingleGeneralOrderHandling {
       return tradeOriginationDate_;
     }
 
-    // optional bool traded_flat_switch = 128;
     public static final int TRADED_FLAT_SWITCH_FIELD_NUMBER = 128;
     private boolean tradedFlatSwitch_;
     /**
@@ -53225,7 +52384,6 @@ public final class SingleGeneralOrderHandling {
       return tradedFlatSwitch_;
     }
 
-    // optional .SingleGeneralOrderHandling.TradingSessionSubIdEnum trading_session_sub_id = 129;
     public static final int TRADING_SESSION_SUB_ID_FIELD_NUMBER = 129;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TradingSessionSubIdEnum tradingSessionSubId_;
     /**
@@ -53241,7 +52399,6 @@ public final class SingleGeneralOrderHandling {
       return tradingSessionSubId_;
     }
 
-    // optional sfixed64 trans_bkd_time = 130;
     public static final int TRANS_BKD_TIME_FIELD_NUMBER = 130;
     private long transBkdTime_;
     /**
@@ -53257,7 +52414,6 @@ public final class SingleGeneralOrderHandling {
       return transBkdTime_;
     }
 
-    // optional sfixed64 underlying_last_px = 131;
     public static final int UNDERLYING_LAST_PX_FIELD_NUMBER = 131;
     private long underlyingLastPx_;
     /**
@@ -53273,7 +52429,6 @@ public final class SingleGeneralOrderHandling {
       return underlyingLastPx_;
     }
 
-    // optional sfixed32 underlying_last_px_exponent = 132;
     public static final int UNDERLYING_LAST_PX_EXPONENT_FIELD_NUMBER = 132;
     private int underlyingLastPxExponent_;
     /**
@@ -53289,7 +52444,6 @@ public final class SingleGeneralOrderHandling {
       return underlyingLastPxExponent_;
     }
 
-    // optional sfixed64 underlying_last_qty = 133;
     public static final int UNDERLYING_LAST_QTY_FIELD_NUMBER = 133;
     private long underlyingLastQty_;
     /**
@@ -53305,7 +52459,6 @@ public final class SingleGeneralOrderHandling {
       return underlyingLastQty_;
     }
 
-    // optional sfixed32 underlying_last_qty_exponent = 134;
     public static final int UNDERLYING_LAST_QTY_EXPONENT_FIELD_NUMBER = 134;
     private int underlyingLastQtyExponent_;
     /**
@@ -53321,7 +52474,6 @@ public final class SingleGeneralOrderHandling {
       return underlyingLastQtyExponent_;
     }
 
-    // optional bool working_indicator = 135;
     public static final int WORKING_INDICATOR_FIELD_NUMBER = 135;
     private boolean workingIndicator_;
     /**
@@ -53337,7 +52489,6 @@ public final class SingleGeneralOrderHandling {
       return workingIndicator_;
     }
 
-    // optional .Common.YieldData yield_data = 136;
     public static final int YIELD_DATA_FIELD_NUMBER = 136;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -53359,7 +52510,6 @@ public final class SingleGeneralOrderHandling {
       return yieldData_;
     }
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 137;
     public static final int ACCT_ID_SOURCE_FIELD_NUMBER = 137;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_;
     /**
@@ -53375,7 +52525,6 @@ public final class SingleGeneralOrderHandling {
       return acctIdSource_;
     }
 
-    // optional bool aggressor_indicator = 138;
     public static final int AGGRESSOR_INDICATOR_FIELD_NUMBER = 138;
     private boolean aggressorIndicator_;
     /**
@@ -53391,7 +52540,6 @@ public final class SingleGeneralOrderHandling {
       return aggressorIndicator_;
     }
 
-    // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 139;
     public static final int BOOKING_TYPE_FIELD_NUMBER = 139;
     private org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum bookingType_;
     /**
@@ -53407,7 +52555,6 @@ public final class SingleGeneralOrderHandling {
       return bookingType_;
     }
 
-    // optional sfixed64 calculated_ccy_last_qty = 140;
     public static final int CALCULATED_CCY_LAST_QTY_FIELD_NUMBER = 140;
     private long calculatedCcyLastQty_;
     /**
@@ -53423,7 +52570,6 @@ public final class SingleGeneralOrderHandling {
       return calculatedCcyLastQty_;
     }
 
-    // optional sfixed32 calculated_ccy_last_qty_exponent = 141;
     public static final int CALCULATED_CCY_LAST_QTY_EXPONENT_FIELD_NUMBER = 141;
     private int calculatedCcyLastQtyExponent_;
     /**
@@ -53439,7 +52585,6 @@ public final class SingleGeneralOrderHandling {
       return calculatedCcyLastQtyExponent_;
     }
 
-    // repeated .Common.ContAmtGrp cont_amt_grp = 142;
     public static final int CONT_AMT_GRP_FIELD_NUMBER = 142;
     private java.util.List<org.fixprotocol.components.Common.ContAmtGrp> contAmtGrp_;
     /**
@@ -53475,7 +52620,6 @@ public final class SingleGeneralOrderHandling {
       return contAmtGrp_.get(index);
     }
 
-    // repeated .Common.ContraGrp contra_grp = 143;
     public static final int CONTRA_GRP_FIELD_NUMBER = 143;
     private java.util.List<org.fixprotocol.components.Common.ContraGrp> contraGrp_;
     /**
@@ -53511,7 +52655,6 @@ public final class SingleGeneralOrderHandling {
       return contraGrp_.get(index);
     }
 
-    // optional bool copy_msg_indicator = 144;
     public static final int COPY_MSG_INDICATOR_FIELD_NUMBER = 144;
     private boolean copyMsgIndicator_;
     /**
@@ -53527,7 +52670,6 @@ public final class SingleGeneralOrderHandling {
       return copyMsgIndicator_;
     }
 
-    // optional bool cust_directed_order = 145;
     public static final int CUST_DIRECTED_ORDER_FIELD_NUMBER = 145;
     private boolean custDirectedOrder_;
     /**
@@ -53543,7 +52685,6 @@ public final class SingleGeneralOrderHandling {
       return custDirectedOrder_;
     }
 
-    // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 146;
     public static final int CUST_ORDER_HANDLING_INST_FIELD_NUMBER = 146;
     private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum custOrderHandlingInst_;
     /**
@@ -53559,7 +52700,6 @@ public final class SingleGeneralOrderHandling {
       return custOrderHandlingInst_;
     }
 
-    // optional .Common.DiscretionInstructions discretion_instructions = 147;
     public static final int DISCRETION_INSTRUCTIONS_FIELD_NUMBER = 147;
     private org.fixprotocol.components.Common.DiscretionInstructions discretionInstructions_;
     /**
@@ -53581,7 +52721,6 @@ public final class SingleGeneralOrderHandling {
       return discretionInstructions_;
     }
 
-    // optional sfixed64 discretion_price = 148;
     public static final int DISCRETION_PRICE_FIELD_NUMBER = 148;
     private long discretionPrice_;
     /**
@@ -53597,7 +52736,6 @@ public final class SingleGeneralOrderHandling {
       return discretionPrice_;
     }
 
-    // optional sfixed32 discretion_price_exponent = 149;
     public static final int DISCRETION_PRICE_EXPONENT_FIELD_NUMBER = 149;
     private int discretionPriceExponent_;
     /**
@@ -53613,7 +52751,6 @@ public final class SingleGeneralOrderHandling {
       return discretionPriceExponent_;
     }
 
-    // optional .Common.DisplayInstruction display_instruction = 150;
     public static final int DISPLAY_INSTRUCTION_FIELD_NUMBER = 150;
     private org.fixprotocol.components.Common.DisplayInstruction displayInstruction_;
     /**
@@ -53635,7 +52772,6 @@ public final class SingleGeneralOrderHandling {
       return displayInstruction_;
     }
 
-    // optional sfixed64 end_accrued_interest_amt = 151;
     public static final int END_ACCRUED_INTEREST_AMT_FIELD_NUMBER = 151;
     private long endAccruedInterestAmt_;
     /**
@@ -53651,7 +52787,6 @@ public final class SingleGeneralOrderHandling {
       return endAccruedInterestAmt_;
     }
 
-    // optional sfixed32 end_accrued_interest_amt_exponent = 152;
     public static final int END_ACCRUED_INTEREST_AMT_EXPONENT_FIELD_NUMBER = 152;
     private int endAccruedInterestAmtExponent_;
     /**
@@ -53667,7 +52802,6 @@ public final class SingleGeneralOrderHandling {
       return endAccruedInterestAmtExponent_;
     }
 
-    // optional sfixed64 end_cash = 153;
     public static final int END_CASH_FIELD_NUMBER = 153;
     private long endCash_;
     /**
@@ -53683,7 +52817,6 @@ public final class SingleGeneralOrderHandling {
       return endCash_;
     }
 
-    // optional sfixed32 end_cash_exponent = 154;
     public static final int END_CASH_EXPONENT_FIELD_NUMBER = 154;
     private int endCashExponent_;
     /**
@@ -53699,7 +52832,6 @@ public final class SingleGeneralOrderHandling {
       return endCashExponent_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 155;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 155;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -53721,7 +52853,6 @@ public final class SingleGeneralOrderHandling {
       return financingDetails_;
     }
 
-    // optional string host_cross_id = 156;
     public static final int HOST_CROSS_ID_FIELD_NUMBER = 156;
     private java.lang.Object hostCrossId_;
     /**
@@ -53764,7 +52895,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .Common.InstrmtLegExecGrp instrmt_leg_exec_grp = 157;
     public static final int INSTRMT_LEG_EXEC_GRP_FIELD_NUMBER = 157;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegExecGrp> instrmtLegExecGrp_;
     /**
@@ -53800,7 +52930,6 @@ public final class SingleGeneralOrderHandling {
       return instrmtLegExecGrp_.get(index);
     }
 
-    // optional sfixed64 interest_at_maturity = 158;
     public static final int INTEREST_AT_MATURITY_FIELD_NUMBER = 158;
     private long interestAtMaturity_;
     /**
@@ -53816,7 +52945,6 @@ public final class SingleGeneralOrderHandling {
       return interestAtMaturity_;
     }
 
-    // optional sfixed32 interest_at_maturity_exponent = 159;
     public static final int INTEREST_AT_MATURITY_EXPONENT_FIELD_NUMBER = 159;
     private int interestAtMaturityExponent_;
     /**
@@ -53832,7 +52960,6 @@ public final class SingleGeneralOrderHandling {
       return interestAtMaturityExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.LastLiquidityIndEnum last_liquidity_ind = 160;
     public static final int LAST_LIQUIDITY_IND_FIELD_NUMBER = 160;
     private org.fixprotocol.components.SingleGeneralOrderHandling.LastLiquidityIndEnum lastLiquidityInd_;
     /**
@@ -53848,7 +52975,6 @@ public final class SingleGeneralOrderHandling {
       return lastLiquidityInd_;
     }
 
-    // optional sfixed64 last_par_px = 161;
     public static final int LAST_PAR_PX_FIELD_NUMBER = 161;
     private long lastParPx_;
     /**
@@ -53864,7 +52990,6 @@ public final class SingleGeneralOrderHandling {
       return lastParPx_;
     }
 
-    // optional sfixed32 last_par_px_exponent = 162;
     public static final int LAST_PAR_PX_EXPONENT_FIELD_NUMBER = 162;
     private int lastParPxExponent_;
     /**
@@ -53880,7 +53005,6 @@ public final class SingleGeneralOrderHandling {
       return lastParPxExponent_;
     }
 
-    // optional bool last_rpt_requested = 163;
     public static final int LAST_RPT_REQUESTED_FIELD_NUMBER = 163;
     private boolean lastRptRequested_;
     /**
@@ -53896,7 +53020,6 @@ public final class SingleGeneralOrderHandling {
       return lastRptRequested_;
     }
 
-    // optional sfixed64 last_swap_points = 164;
     public static final int LAST_SWAP_POINTS_FIELD_NUMBER = 164;
     private long lastSwapPoints_;
     /**
@@ -53912,7 +53035,6 @@ public final class SingleGeneralOrderHandling {
       return lastSwapPoints_;
     }
 
-    // optional sfixed32 last_swap_points_exponent = 165;
     public static final int LAST_SWAP_POINTS_EXPONENT_FIELD_NUMBER = 165;
     private int lastSwapPointsExponent_;
     /**
@@ -53928,7 +53050,6 @@ public final class SingleGeneralOrderHandling {
       return lastSwapPointsExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.LotTypeEnum lot_type = 166;
     public static final int LOT_TYPE_FIELD_NUMBER = 166;
     private org.fixprotocol.components.SingleGeneralOrderHandling.LotTypeEnum lotType_;
     /**
@@ -53944,7 +53065,6 @@ public final class SingleGeneralOrderHandling {
       return lotType_;
     }
 
-    // optional bool manual_order_indicator = 167;
     public static final int MANUAL_ORDER_INDICATOR_FIELD_NUMBER = 167;
     private boolean manualOrderIndicator_;
     /**
@@ -53960,7 +53080,6 @@ public final class SingleGeneralOrderHandling {
       return manualOrderIndicator_;
     }
 
-    // optional string mass_status_req_id = 168;
     public static final int MASS_STATUS_REQ_ID_FIELD_NUMBER = 168;
     private java.lang.Object massStatusReqId_;
     /**
@@ -54003,7 +53122,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 match_increment = 169;
     public static final int MATCH_INCREMENT_FIELD_NUMBER = 169;
     private long matchIncrement_;
     /**
@@ -54019,7 +53137,6 @@ public final class SingleGeneralOrderHandling {
       return matchIncrement_;
     }
 
-    // optional sfixed32 match_increment_exponent = 170;
     public static final int MATCH_INCREMENT_EXPONENT_FIELD_NUMBER = 170;
     private int matchIncrementExponent_;
     /**
@@ -54035,7 +53152,6 @@ public final class SingleGeneralOrderHandling {
       return matchIncrementExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.MatchTypeEnum match_type = 171;
     public static final int MATCH_TYPE_FIELD_NUMBER = 171;
     private org.fixprotocol.components.SingleGeneralOrderHandling.MatchTypeEnum matchType_;
     /**
@@ -54051,7 +53167,6 @@ public final class SingleGeneralOrderHandling {
       return matchType_;
     }
 
-    // optional sfixed64 max_price_levels = 172;
     public static final int MAX_PRICE_LEVELS_FIELD_NUMBER = 172;
     private long maxPriceLevels_;
     /**
@@ -54067,7 +53182,6 @@ public final class SingleGeneralOrderHandling {
       return maxPriceLevels_;
     }
 
-    // repeated .Common.MiscFeesGrp misc_fees_grp = 173;
     public static final int MISC_FEES_GRP_FIELD_NUMBER = 173;
     private java.util.List<org.fixprotocol.components.Common.MiscFeesGrp> miscFeesGrp_;
     /**
@@ -54103,7 +53217,6 @@ public final class SingleGeneralOrderHandling {
       return miscFeesGrp_.get(index);
     }
 
-    // optional string ord_status_req_id = 174;
     public static final int ORD_STATUS_REQ_ID_FIELD_NUMBER = 174;
     private java.lang.Object ordStatusReqId_;
     /**
@@ -54146,7 +53259,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.OrderCategoryEnum order_category = 175;
     public static final int ORDER_CATEGORY_FIELD_NUMBER = 175;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrderCategoryEnum orderCategory_;
     /**
@@ -54162,7 +53274,6 @@ public final class SingleGeneralOrderHandling {
       return orderCategory_;
     }
 
-    // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 176;
     public static final int ORDER_HANDLING_INST_SOURCE_FIELD_NUMBER = 176;
     private org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum orderHandlingInstSource_;
     /**
@@ -54178,7 +53289,6 @@ public final class SingleGeneralOrderHandling {
       return orderHandlingInstSource_;
     }
 
-    // optional sfixed64 participation_rate = 177;
     public static final int PARTICIPATION_RATE_FIELD_NUMBER = 177;
     private long participationRate_;
     /**
@@ -54194,7 +53304,6 @@ public final class SingleGeneralOrderHandling {
       return participationRate_;
     }
 
-    // optional sfixed32 participation_rate_exponent = 178;
     public static final int PARTICIPATION_RATE_EXPONENT_FIELD_NUMBER = 178;
     private int participationRateExponent_;
     /**
@@ -54210,7 +53319,6 @@ public final class SingleGeneralOrderHandling {
       return participationRateExponent_;
     }
 
-    // optional .Common.PegInstructions peg_instructions = 179;
     public static final int PEG_INSTRUCTIONS_FIELD_NUMBER = 179;
     private org.fixprotocol.components.Common.PegInstructions pegInstructions_;
     /**
@@ -54232,7 +53340,6 @@ public final class SingleGeneralOrderHandling {
       return pegInstructions_;
     }
 
-    // optional sfixed64 pegged_price = 180;
     public static final int PEGGED_PRICE_FIELD_NUMBER = 180;
     private long peggedPrice_;
     /**
@@ -54248,7 +53355,6 @@ public final class SingleGeneralOrderHandling {
       return peggedPrice_;
     }
 
-    // optional sfixed32 pegged_price_exponent = 181;
     public static final int PEGGED_PRICE_EXPONENT_FIELD_NUMBER = 181;
     private int peggedPriceExponent_;
     /**
@@ -54264,7 +53370,6 @@ public final class SingleGeneralOrderHandling {
       return peggedPriceExponent_;
     }
 
-    // optional sfixed64 pegged_ref_price = 182;
     public static final int PEGGED_REF_PRICE_FIELD_NUMBER = 182;
     private long peggedRefPrice_;
     /**
@@ -54280,7 +53385,6 @@ public final class SingleGeneralOrderHandling {
       return peggedRefPrice_;
     }
 
-    // optional sfixed32 pegged_ref_price_exponent = 183;
     public static final int PEGGED_REF_PRICE_EXPONENT_FIELD_NUMBER = 183;
     private int peggedRefPriceExponent_;
     /**
@@ -54296,7 +53400,6 @@ public final class SingleGeneralOrderHandling {
       return peggedRefPriceExponent_;
     }
 
-    // optional bool pre_trade_anonymity = 184;
     public static final int PRE_TRADE_ANONYMITY_FIELD_NUMBER = 184;
     private boolean preTradeAnonymity_;
     /**
@@ -54312,7 +53415,6 @@ public final class SingleGeneralOrderHandling {
       return preTradeAnonymity_;
     }
 
-    // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 185;
     public static final int PRICE_PROTECTION_SCOPE_FIELD_NUMBER = 185;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum priceProtectionScope_;
     /**
@@ -54328,7 +53430,6 @@ public final class SingleGeneralOrderHandling {
       return priceProtectionScope_;
     }
 
-    // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 186;
     public static final int QTY_TYPE_FIELD_NUMBER = 186;
     private org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum qtyType_;
     /**
@@ -54344,7 +53445,6 @@ public final class SingleGeneralOrderHandling {
       return qtyType_;
     }
 
-    // optional string quote_resp_id = 187;
     public static final int QUOTE_RESP_ID_FIELD_NUMBER = 187;
     private java.lang.Object quoteRespId_;
     /**
@@ -54387,7 +53487,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string received_dept_id = 188;
     public static final int RECEIVED_DEPT_ID_FIELD_NUMBER = 188;
     private java.lang.Object receivedDeptId_;
     /**
@@ -54430,7 +53529,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 start_cash = 189;
     public static final int START_CASH_FIELD_NUMBER = 189;
     private long startCash_;
     /**
@@ -54446,7 +53544,6 @@ public final class SingleGeneralOrderHandling {
       return startCash_;
     }
 
-    // optional sfixed32 start_cash_exponent = 190;
     public static final int START_CASH_EXPONENT_FIELD_NUMBER = 190;
     private int startCashExponent_;
     /**
@@ -54462,7 +53559,6 @@ public final class SingleGeneralOrderHandling {
       return startCashExponent_;
     }
 
-    // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 191;
     public static final int STRATEGY_PARAMETERS_GRP_FIELD_NUMBER = 191;
     private java.util.List<org.fixprotocol.components.Common.StrategyParametersGrp> strategyParametersGrp_;
     /**
@@ -54498,7 +53594,6 @@ public final class SingleGeneralOrderHandling {
       return strategyParametersGrp_.get(index);
     }
 
-    // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 192;
     public static final int TARGET_STRATEGY_FIELD_NUMBER = 192;
     private org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum targetStrategy_;
     /**
@@ -54514,7 +53609,6 @@ public final class SingleGeneralOrderHandling {
       return targetStrategy_;
     }
 
-    // optional string target_strategy_parameters = 193;
     public static final int TARGET_STRATEGY_PARAMETERS_FIELD_NUMBER = 193;
     private java.lang.Object targetStrategyParameters_;
     /**
@@ -54557,7 +53651,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional double target_strategy_performance = 194;
     public static final int TARGET_STRATEGY_PERFORMANCE_FIELD_NUMBER = 194;
     private double targetStrategyPerformance_;
     /**
@@ -54573,7 +53666,6 @@ public final class SingleGeneralOrderHandling {
       return targetStrategyPerformance_;
     }
 
-    // optional string time_bracket = 195;
     public static final int TIME_BRACKET_FIELD_NUMBER = 195;
     private java.lang.Object timeBracket_;
     /**
@@ -54616,7 +53708,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 tot_num_reports = 196;
     public static final int TOT_NUM_REPORTS_FIELD_NUMBER = 196;
     private long totNumReports_;
     /**
@@ -54632,7 +53723,6 @@ public final class SingleGeneralOrderHandling {
       return totNumReports_;
     }
 
-    // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 197;
     public static final int TRD_REG_TIMESTAMPS_FIELD_NUMBER = 197;
     private java.util.List<org.fixprotocol.components.Common.TrdRegTimestamps> trdRegTimestamps_;
     /**
@@ -54668,7 +53758,6 @@ public final class SingleGeneralOrderHandling {
       return trdRegTimestamps_.get(index);
     }
 
-    // optional .Common.TriggeringInstruction triggering_instruction = 198;
     public static final int TRIGGERING_INSTRUCTION_FIELD_NUMBER = 198;
     private org.fixprotocol.components.Common.TriggeringInstruction triggeringInstruction_;
     /**
@@ -54690,7 +53779,6 @@ public final class SingleGeneralOrderHandling {
       return triggeringInstruction_;
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 199;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 199;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -54726,7 +53814,6 @@ public final class SingleGeneralOrderHandling {
       return undInstrmtGrp_.get(index);
     }
 
-    // optional string alloc_id = 200;
     public static final int ALLOC_ID_FIELD_NUMBER = 200;
     private java.lang.Object allocId_;
     /**
@@ -54769,7 +53856,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 201;
     public static final int APPLICATION_SEQUENCE_CONTROL_FIELD_NUMBER = 201;
     private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_;
     /**
@@ -54791,7 +53877,6 @@ public final class SingleGeneralOrderHandling {
       return applicationSequenceControl_;
     }
 
-    // optional sfixed64 dividend_yield = 202;
     public static final int DIVIDEND_YIELD_FIELD_NUMBER = 202;
     private long dividendYield_;
     /**
@@ -54807,7 +53892,6 @@ public final class SingleGeneralOrderHandling {
       return dividendYield_;
     }
 
-    // optional sfixed32 dividend_yield_exponent = 203;
     public static final int DIVIDEND_YIELD_EXPONENT_FIELD_NUMBER = 203;
     private int dividendYieldExponent_;
     /**
@@ -54823,7 +53907,6 @@ public final class SingleGeneralOrderHandling {
       return dividendYieldExponent_;
     }
 
-    // repeated .SingleGeneralOrderHandling.FillsGrp fills_grp = 204;
     public static final int FILLS_GRP_FIELD_NUMBER = 204;
     private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.FillsGrp> fillsGrp_;
     /**
@@ -54859,7 +53942,6 @@ public final class SingleGeneralOrderHandling {
       return fillsGrp_.get(index);
     }
 
-    // optional bool last_fragment = 205;
     public static final int LAST_FRAGMENT_FIELD_NUMBER = 205;
     private boolean lastFragment_;
     /**
@@ -54875,7 +53957,6 @@ public final class SingleGeneralOrderHandling {
       return lastFragment_;
     }
 
-    // repeated .Common.PreAllocGrp pre_alloc_grp = 206;
     public static final int PRE_ALLOC_GRP_FIELD_NUMBER = 206;
     private java.util.List<org.fixprotocol.components.Common.PreAllocGrp> preAllocGrp_;
     /**
@@ -54911,7 +53992,6 @@ public final class SingleGeneralOrderHandling {
       return preAllocGrp_.get(index);
     }
 
-    // optional double price_delta = 207;
     public static final int PRICE_DELTA_FIELD_NUMBER = 207;
     private double priceDelta_;
     /**
@@ -54927,7 +54007,6 @@ public final class SingleGeneralOrderHandling {
       return priceDelta_;
     }
 
-    // optional double risk_free_rate = 208;
     public static final int RISK_FREE_RATE_FIELD_NUMBER = 208;
     private double riskFreeRate_;
     /**
@@ -54943,7 +54022,6 @@ public final class SingleGeneralOrderHandling {
       return riskFreeRate_;
     }
 
-    // optional double time_to_expiration = 209;
     public static final int TIME_TO_EXPIRATION_FIELD_NUMBER = 209;
     private double timeToExpiration_;
     /**
@@ -54959,7 +54037,6 @@ public final class SingleGeneralOrderHandling {
       return timeToExpiration_;
     }
 
-    // optional sfixed64 tot_no_fills = 210;
     public static final int TOT_NO_FILLS_FIELD_NUMBER = 210;
     private long totNoFills_;
     /**
@@ -54975,7 +54052,6 @@ public final class SingleGeneralOrderHandling {
       return totNoFills_;
     }
 
-    // optional string trd_match_id = 211;
     public static final int TRD_MATCH_ID_FIELD_NUMBER = 211;
     private java.lang.Object trdMatchId_;
     /**
@@ -55018,7 +54094,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional double volatility = 212;
     public static final int VOLATILITY_FIELD_NUMBER = 212;
     private double volatility_;
     /**
@@ -55034,7 +54109,6 @@ public final class SingleGeneralOrderHandling {
       return volatility_;
     }
 
-    // repeated .Common.RateSource rate_source = 213;
     public static final int RATE_SOURCE_FIELD_NUMBER = 213;
     private java.util.List<org.fixprotocol.components.Common.RateSource> rateSource_;
     /**
@@ -55288,7 +54362,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -56903,8 +55978,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.ExecutionReport}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.ExecutionReportOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.ExecutionReport)
+        org.fixprotocol.components.SingleGeneralOrderHandling.ExecutionReportOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_ExecutionReport_descriptor;
@@ -59536,7 +58612,6 @@ public final class SingleGeneralOrderHandling {
       private int bitField5_;
       private int bitField6_;
 
-      // optional string account = 1;
       private java.lang.Object account_ = "";
       /**
        * <code>optional string account = 1;</code>
@@ -59550,9 +58625,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAccount() {
         java.lang.Object ref = account_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          account_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            account_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -59610,7 +58688,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 avg_px = 2;
       private long avgPx_ ;
       /**
        * <code>optional sfixed64 avg_px = 2;</code>
@@ -59643,7 +58720,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_id = 3;
       private java.lang.Object clOrdId_ = "";
       /**
        * <code>optional string cl_ord_id = 3;</code>
@@ -59657,9 +58733,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdId() {
         java.lang.Object ref = clOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -59717,7 +58796,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 cum_qty = 4;
       private long cumQty_ ;
       /**
        * <code>optional sfixed64 cum_qty = 4;</code>
@@ -59750,7 +58828,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 cum_qty_exponent = 5;
       private int cumQtyExponent_ ;
       /**
        * <code>optional sfixed32 cum_qty_exponent = 5;</code>
@@ -59783,7 +58860,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string currency = 6;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 6;</code>
@@ -59797,9 +58873,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -59857,7 +58936,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string exec_id = 7;
       private java.lang.Object execId_ = "";
       /**
        * <code>optional string exec_id = 7;</code>
@@ -59871,9 +58949,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getExecId() {
         java.lang.Object ref = execId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          execId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            execId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -59931,7 +59012,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .SingleGeneralOrderHandling.ExecInstEnum exec_inst = 8 [packed = true];
       private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> execInst_ =
         java.util.Collections.emptyList();
       private void ensureExecInstIsMutable() {
@@ -59989,7 +59069,8 @@ public final class SingleGeneralOrderHandling {
       public Builder addAllExecInst(
           java.lang.Iterable<? extends org.fixprotocol.components.SingleGeneralOrderHandling.ExecInstEnum> values) {
         ensureExecInstIsMutable();
-        super.addAll(values, execInst_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, execInst_);
         onChanged();
         return this;
       }
@@ -60003,7 +59084,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string exec_ref_id = 9;
       private java.lang.Object execRefId_ = "";
       /**
        * <code>optional string exec_ref_id = 9;</code>
@@ -60017,9 +59097,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getExecRefId() {
         java.lang.Object ref = execRefId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          execRefId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            execRefId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -60077,7 +59160,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.LastCapacityEnum last_capacity = 10;
       private org.fixprotocol.components.SingleGeneralOrderHandling.LastCapacityEnum lastCapacity_ = org.fixprotocol.components.SingleGeneralOrderHandling.LastCapacityEnum.LAST_CAPACITY_AGENT;
       /**
        * <code>optional .SingleGeneralOrderHandling.LastCapacityEnum last_capacity = 10;</code>
@@ -60113,7 +59195,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string last_mkt = 11;
       private java.lang.Object lastMkt_ = "";
       /**
        * <code>optional string last_mkt = 11;</code>
@@ -60127,9 +59208,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getLastMkt() {
         java.lang.Object ref = lastMkt_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          lastMkt_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            lastMkt_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -60187,7 +59271,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double last_px = 12;
       private double lastPx_ ;
       /**
        * <code>optional double last_px = 12;</code>
@@ -60220,7 +59303,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 last_qty = 13;
       private long lastQty_ ;
       /**
        * <code>optional sfixed64 last_qty = 13;</code>
@@ -60253,7 +59335,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_qty_exponent = 14;
       private int lastQtyExponent_ ;
       /**
        * <code>optional sfixed32 last_qty_exponent = 14;</code>
@@ -60286,7 +59367,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string list_id = 15;
       private java.lang.Object listId_ = "";
       /**
        * <code>optional string list_id = 15;</code>
@@ -60300,9 +59380,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getListId() {
         java.lang.Object ref = listId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          listId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            listId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -60360,7 +59443,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 16;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonEnum ordRejReason_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrdRejReasonEnum.ORD_REJ_REASON_BROKER_CREDIT;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrdRejReasonEnum ord_rej_reason = 16;</code>
@@ -60396,7 +59478,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 17;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrdStatusEnum ordStatus_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrdStatusEnum.ORD_STATUS_CANCELED;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrdStatusEnum ord_status = 17;</code>
@@ -60432,7 +59513,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 18;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum ordType_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrdTypeEnum.ORD_TYPE_LIMIT;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrdTypeEnum ord_type = 18;</code>
@@ -60468,7 +59548,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string order_id = 19;
       private java.lang.Object orderId_ = "";
       /**
        * <code>optional string order_id = 19;</code>
@@ -60482,9 +59561,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrderId() {
         java.lang.Object ref = orderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            orderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -60542,7 +59624,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 price = 20;
       private long price_ ;
       /**
        * <code>optional sfixed64 price = 20;</code>
@@ -60575,7 +59656,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 price_exponent = 21;
       private int priceExponent_ ;
       /**
        * <code>optional sfixed32 price_exponent = 21;</code>
@@ -60608,7 +59688,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 settl_date = 22;
       private int settlDate_ ;
       /**
        * <code>optional sfixed32 settl_date = 22;</code>
@@ -60641,7 +59720,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 23;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum settlType_ = org.fixprotocol.components.SingleGeneralOrderHandling.SettlTypeEnum.SETTL_TYPE_CASH;
       /**
        * <code>optional .SingleGeneralOrderHandling.SettlTypeEnum settl_type = 23;</code>
@@ -60677,7 +59755,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SideEnum side = 24;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_ = org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum.SIDE_BUY;
       /**
        * <code>optional .SingleGeneralOrderHandling.SideEnum side = 24;</code>
@@ -60713,7 +59790,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 25;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -60822,7 +59898,7 @@ public final class SingleGeneralOrderHandling {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -60830,7 +59906,6 @@ public final class SingleGeneralOrderHandling {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 26;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -60939,7 +60014,7 @@ public final class SingleGeneralOrderHandling {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -60947,7 +60022,6 @@ public final class SingleGeneralOrderHandling {
         return standardTrailerBuilder_;
       }
 
-      // optional sfixed64 stop_px = 27;
       private long stopPx_ ;
       /**
        * <code>optional sfixed64 stop_px = 27;</code>
@@ -60980,7 +60054,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 stop_px_exponent = 28;
       private int stopPxExponent_ ;
       /**
        * <code>optional sfixed32 stop_px_exponent = 28;</code>
@@ -61013,7 +60086,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string text = 29;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 29;</code>
@@ -61027,9 +60099,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -61087,7 +60162,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 30;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum timeInForce_ = org.fixprotocol.components.SingleGeneralOrderHandling.TimeInForceEnum.TIME_IN_FORCE_AT_THE_OPENING;
       /**
        * <code>optional .SingleGeneralOrderHandling.TimeInForceEnum time_in_force = 30;</code>
@@ -61123,7 +60197,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 trade_date = 31;
       private int tradeDate_ ;
       /**
        * <code>optional sfixed32 trade_date = 31;</code>
@@ -61156,7 +60229,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 transact_time = 32;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 32;</code>
@@ -61189,7 +60261,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool report_to_exch = 33;
       private boolean reportToExch_ ;
       /**
        * <code>optional bool report_to_exch = 33;</code>
@@ -61222,7 +60293,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 expire_time = 34;
       private long expireTime_ ;
       /**
        * <code>optional sfixed64 expire_time = 34;</code>
@@ -61255,7 +60325,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 net_money = 35;
       private long netMoney_ ;
       /**
        * <code>optional sfixed64 net_money = 35;</code>
@@ -61288,7 +60357,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 net_money_exponent = 36;
       private int netMoneyExponent_ ;
       /**
        * <code>optional sfixed32 net_money_exponent = 36;</code>
@@ -61321,7 +60389,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 settl_curr_amt = 37;
       private long settlCurrAmt_ ;
       /**
        * <code>optional sfixed64 settl_curr_amt = 37;</code>
@@ -61354,7 +60421,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 settl_curr_amt_exponent = 38;
       private int settlCurrAmtExponent_ ;
       /**
        * <code>optional sfixed32 settl_curr_amt_exponent = 38;</code>
@@ -61387,7 +60453,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string settl_currency = 39;
       private java.lang.Object settlCurrency_ = "";
       /**
        * <code>optional string settl_currency = 39;</code>
@@ -61401,9 +60466,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSettlCurrency() {
         java.lang.Object ref = settlCurrency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          settlCurrency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            settlCurrency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -61461,7 +60529,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.ExecTypeEnum exec_type = 40;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ExecTypeEnum execType_ = org.fixprotocol.components.SingleGeneralOrderHandling.ExecTypeEnum.EXEC_TYPE_CALCULATED;
       /**
        * <code>optional .SingleGeneralOrderHandling.ExecTypeEnum exec_type = 40;</code>
@@ -61497,7 +60564,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 last_forward_points = 41;
       private long lastForwardPoints_ ;
       /**
        * <code>optional sfixed64 last_forward_points = 41;</code>
@@ -61530,7 +60596,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_forward_points_exponent = 42;
       private int lastForwardPointsExponent_ ;
       /**
        * <code>optional sfixed32 last_forward_points_exponent = 42;</code>
@@ -61563,7 +60628,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 last_spot_rate = 43;
       private long lastSpotRate_ ;
       /**
        * <code>optional sfixed64 last_spot_rate = 43;</code>
@@ -61596,7 +60660,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_spot_rate_exponent = 44;
       private int lastSpotRateExponent_ ;
       /**
        * <code>optional sfixed32 last_spot_rate_exponent = 44;</code>
@@ -61629,7 +60692,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 leaves_qty = 45;
       private long leavesQty_ ;
       /**
        * <code>optional sfixed64 leaves_qty = 45;</code>
@@ -61662,7 +60724,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 leaves_qty_exponent = 46;
       private int leavesQtyExponent_ ;
       /**
        * <code>optional sfixed32 leaves_qty_exponent = 46;</code>
@@ -61695,7 +60756,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string orig_cl_ord_id = 47;
       private java.lang.Object origClOrdId_ = "";
       /**
        * <code>optional string orig_cl_ord_id = 47;</code>
@@ -61709,9 +60769,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrigClOrdId() {
         java.lang.Object ref = origClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          origClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            origClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -61769,7 +60832,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string secondary_order_id = 48;
       private java.lang.Object secondaryOrderId_ = "";
       /**
        * <code>optional string secondary_order_id = 48;</code>
@@ -61783,9 +60845,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryOrderId() {
         java.lang.Object ref = secondaryOrderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryOrderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryOrderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -61843,7 +60908,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double settl_curr_fx_rate = 49;
       private double settlCurrFxRate_ ;
       /**
        * <code>optional double settl_curr_fx_rate = 49;</code>
@@ -61876,7 +60940,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum settl_curr_fx_rate_calc = 50;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum settlCurrFxRateCalc_ = org.fixprotocol.components.SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum.SETTL_CURR_FX_RATE_CALC_DIVIDE;
       /**
        * <code>optional .SingleGeneralOrderHandling.SettlCurrFxRateCalcEnum settl_curr_fx_rate_calc = 50;</code>
@@ -61912,7 +60975,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string compliance_id = 51;
       private java.lang.Object complianceId_ = "";
       /**
        * <code>optional string compliance_id = 51;</code>
@@ -61926,9 +60988,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getComplianceId() {
         java.lang.Object ref = complianceId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          complianceId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            complianceId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -61986,7 +61051,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 day_avg_px = 52;
       private long dayAvgPx_ ;
       /**
        * <code>optional sfixed64 day_avg_px = 52;</code>
@@ -62019,7 +61083,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 day_avg_px_exponent = 53;
       private int dayAvgPxExponent_ ;
       /**
        * <code>optional sfixed32 day_avg_px_exponent = 53;</code>
@@ -62052,7 +61115,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 day_cum_qty = 54;
       private long dayCumQty_ ;
       /**
        * <code>optional sfixed64 day_cum_qty = 54;</code>
@@ -62085,7 +61147,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 day_cum_qty_exponent = 55;
       private int dayCumQtyExponent_ ;
       /**
        * <code>optional sfixed32 day_cum_qty_exponent = 55;</code>
@@ -62118,7 +61179,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 day_order_qty = 56;
       private long dayOrderQty_ ;
       /**
        * <code>optional sfixed64 day_order_qty = 56;</code>
@@ -62151,7 +61211,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 day_order_qty_exponent = 57;
       private int dayOrderQtyExponent_ ;
       /**
        * <code>optional sfixed32 day_order_qty_exponent = 57;</code>
@@ -62184,7 +61243,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 effective_time = 58;
       private long effectiveTime_ ;
       /**
        * <code>optional sfixed64 effective_time = 58;</code>
@@ -62217,7 +61275,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bytes encoded_text = 59;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 59;</code>
@@ -62253,7 +61310,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 60;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 60;</code>
@@ -62286,7 +61342,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 61;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonEnum execRestatementReason_ = org.fixprotocol.components.SingleGeneralOrderHandling.ExecRestatementReasonEnum.EXEC_RESTATEMENT_REASON_BROKER_OPTION;
       /**
        * <code>optional .SingleGeneralOrderHandling.ExecRestatementReasonEnum exec_restatement_reason = 61;</code>
@@ -62322,7 +61377,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 expire_date = 62;
       private int expireDate_ ;
       /**
        * <code>optional sfixed32 expire_date = 62;</code>
@@ -62355,7 +61409,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 63;
       private org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum gtBookingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.GtBookingInstEnum.GT_BOOKING_INST_ACCUMULATE_UNTIL_FILLED_OR_EXPIRED;
       /**
        * <code>optional .SingleGeneralOrderHandling.GtBookingInstEnum gt_booking_inst = 63;</code>
@@ -62391,7 +61444,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 gross_trade_amt = 64;
       private long grossTradeAmt_ ;
       /**
        * <code>optional sfixed64 gross_trade_amt = 64;</code>
@@ -62424,7 +61476,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 gross_trade_amt_exponent = 65;
       private int grossTradeAmtExponent_ ;
       /**
        * <code>optional sfixed32 gross_trade_amt_exponent = 65;</code>
@@ -62457,7 +61508,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 66;
       private org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum handlInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.HandlInstEnum.HANDL_INST_AUTOMATED_EXECUTION_INTERVENTION_OK;
       /**
        * <code>optional .SingleGeneralOrderHandling.HandlInstEnum handl_inst = 66;</code>
@@ -62493,7 +61543,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_floor = 67;
       private long maxFloor_ ;
       /**
        * <code>optional sfixed64 max_floor = 67;</code>
@@ -62526,7 +61575,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 max_floor_exponent = 68;
       private int maxFloorExponent_ ;
       /**
        * <code>optional sfixed32 max_floor_exponent = 68;</code>
@@ -62559,7 +61607,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_show = 69;
       private long maxShow_ ;
       /**
        * <code>optional sfixed64 max_show = 69;</code>
@@ -62592,7 +61639,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 max_show_exponent = 70;
       private int maxShowExponent_ ;
       /**
        * <code>optional sfixed32 max_show_exponent = 70;</code>
@@ -62625,7 +61671,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 min_qty = 71;
       private long minQty_ ;
       /**
        * <code>optional sfixed64 min_qty = 71;</code>
@@ -62658,7 +61703,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 min_qty_exponent = 72;
       private int minQtyExponent_ ;
       /**
        * <code>optional sfixed32 min_qty_exponent = 72;</code>
@@ -62691,7 +61735,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.MultiLegReportingTypeEnum multi_leg_reporting_type = 73;
       private org.fixprotocol.components.SingleGeneralOrderHandling.MultiLegReportingTypeEnum multiLegReportingType_ = org.fixprotocol.components.SingleGeneralOrderHandling.MultiLegReportingTypeEnum.MULTI_LEG_REPORTING_TYPE_INDIVIDUAL_LEG_OF_AMULTI_LEG_SECURITY;
       /**
        * <code>optional .SingleGeneralOrderHandling.MultiLegReportingTypeEnum multi_leg_reporting_type = 73;</code>
@@ -62727,7 +61770,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 order_qty2 = 74;
       private long orderQty2_ ;
       /**
        * <code>optional sfixed64 order_qty2 = 74;</code>
@@ -62760,7 +61802,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 order_qty2_exponent = 75;
       private int orderQty2Exponent_ ;
       /**
        * <code>optional sfixed32 order_qty2_exponent = 75;</code>
@@ -62793,7 +61834,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 76;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum positionEffect_ = org.fixprotocol.components.SingleGeneralOrderHandling.PositionEffectEnum.POSITION_EFFECT_CLOSE;
       /**
        * <code>optional .SingleGeneralOrderHandling.PositionEffectEnum position_effect = 76;</code>
@@ -62829,7 +61869,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 settl_date2 = 77;
       private int settlDate2_ ;
       /**
        * <code>optional sfixed32 settl_date2 = 77;</code>
@@ -62862,7 +61901,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool solicited_flag = 78;
       private boolean solicitedFlag_ ;
       /**
        * <code>optional bool solicited_flag = 78;</code>
@@ -62895,7 +61933,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.TradingSessionIdEnum trading_session_id = 79;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TradingSessionIdEnum tradingSessionId_ = org.fixprotocol.components.SingleGeneralOrderHandling.TradingSessionIdEnum.TRADING_SESSION_ID_AFTER_HOURS;
       /**
        * <code>optional .SingleGeneralOrderHandling.TradingSessionIdEnum trading_session_id = 79;</code>
@@ -62931,7 +61968,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 80;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum accountType_ = org.fixprotocol.components.SingleGeneralOrderHandling.AccountTypeEnum.ACCOUNT_TYPE_CARRIED_CUSTOMER_SIDE;
       /**
        * <code>optional .SingleGeneralOrderHandling.AccountTypeEnum account_type = 80;</code>
@@ -62967,7 +62003,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 accrued_interest_amt = 81;
       private long accruedInterestAmt_ ;
       /**
        * <code>optional sfixed64 accrued_interest_amt = 81;</code>
@@ -63000,7 +62035,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 accrued_interest_amt_exponent = 82;
       private int accruedInterestAmtExponent_ ;
       /**
        * <code>optional sfixed32 accrued_interest_amt_exponent = 82;</code>
@@ -63033,7 +62067,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 accrued_interest_rate = 83;
       private long accruedInterestRate_ ;
       /**
        * <code>optional sfixed64 accrued_interest_rate = 83;</code>
@@ -63066,7 +62099,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 accrued_interest_rate_exponent = 84;
       private int accruedInterestRateExponent_ ;
       /**
        * <code>optional sfixed32 accrued_interest_rate_exponent = 84;</code>
@@ -63099,7 +62131,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 basis_feature_date = 85;
       private int basisFeatureDate_ ;
       /**
        * <code>optional sfixed32 basis_feature_date = 85;</code>
@@ -63132,7 +62163,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 basis_feature_price = 86;
       private long basisFeaturePrice_ ;
       /**
        * <code>optional sfixed64 basis_feature_price = 86;</code>
@@ -63165,7 +62195,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 basis_feature_price_exponent = 87;
       private int basisFeaturePriceExponent_ ;
       /**
        * <code>optional sfixed32 basis_feature_price_exponent = 87;</code>
@@ -63198,7 +62227,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 88;
       private org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum bookingUnit_ = org.fixprotocol.components.SingleGeneralOrderHandling.BookingUnitEnum.BOOKING_UNIT_AGGREGATE_EXECUTIONS_FOR_THIS_SYMBOL;
       /**
        * <code>optional .SingleGeneralOrderHandling.BookingUnitEnum booking_unit = 88;</code>
@@ -63234,7 +62262,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 89;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum cancellationRights_ = org.fixprotocol.components.SingleGeneralOrderHandling.CancellationRightsEnum.CANCELLATION_RIGHTS_NO_EXECUTION_ONLY;
       /**
        * <code>optional .SingleGeneralOrderHandling.CancellationRightsEnum cancellation_rights = 89;</code>
@@ -63270,7 +62297,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 90;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum cashMargin_ = org.fixprotocol.components.SingleGeneralOrderHandling.CashMarginEnum.CASH_MARGIN_CASH;
       /**
        * <code>optional .SingleGeneralOrderHandling.CashMarginEnum cash_margin = 90;</code>
@@ -63306,7 +62332,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_link_id = 91;
       private java.lang.Object clOrdLinkId_ = "";
       /**
        * <code>optional string cl_ord_link_id = 91;</code>
@@ -63320,9 +62345,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdLinkId() {
         java.lang.Object ref = clOrdLinkId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdLinkId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdLinkId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -63380,7 +62408,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 92;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearingFeeIndicator_ = org.fixprotocol.components.SingleGeneralOrderHandling.ClearingFeeIndicatorEnum.CLEARING_FEE_INDICATOR_ALL_OTHER_OWNERSHIP_TYPES;
       /**
        * <code>optional .SingleGeneralOrderHandling.ClearingFeeIndicatorEnum clearing_fee_indicator = 92;</code>
@@ -63416,7 +62443,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.CommissionData commission_data = 93;
       private org.fixprotocol.components.Common.CommissionData commissionData_ = org.fixprotocol.components.Common.CommissionData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.CommissionData, org.fixprotocol.components.Common.CommissionData.Builder, org.fixprotocol.components.Common.CommissionDataOrBuilder> commissionDataBuilder_;
@@ -63525,7 +62551,7 @@ public final class SingleGeneralOrderHandling {
         if (commissionDataBuilder_ == null) {
           commissionDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.CommissionData, org.fixprotocol.components.Common.CommissionData.Builder, org.fixprotocol.components.Common.CommissionDataOrBuilder>(
-                  commissionData_,
+                  getCommissionData(),
                   getParentForChildren(),
                   isClean());
           commissionData_ = null;
@@ -63533,7 +62559,6 @@ public final class SingleGeneralOrderHandling {
         return commissionDataBuilder_;
       }
 
-      // optional sfixed64 concession = 94;
       private long concession_ ;
       /**
        * <code>optional sfixed64 concession = 94;</code>
@@ -63566,7 +62591,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 concession_exponent = 95;
       private int concessionExponent_ ;
       /**
        * <code>optional sfixed32 concession_exponent = 95;</code>
@@ -63599,7 +62623,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cross_id = 96;
       private java.lang.Object crossId_ = "";
       /**
        * <code>optional string cross_id = 96;</code>
@@ -63613,9 +62636,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getCrossId() {
         java.lang.Object ref = crossId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          crossId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            crossId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -63673,7 +62699,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CrossTypeEnum cross_type = 97;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CrossTypeEnum crossType_ = org.fixprotocol.components.SingleGeneralOrderHandling.CrossTypeEnum.CROSS_TYPE_CROSS_AON;
       /**
        * <code>optional .SingleGeneralOrderHandling.CrossTypeEnum cross_type = 97;</code>
@@ -63709,7 +62734,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 98;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum custOrderCapacity_ = org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderCapacityEnum.CUST_ORDER_CAPACITY_ALL_OTHER;
       /**
        * <code>optional .SingleGeneralOrderHandling.CustOrderCapacityEnum cust_order_capacity = 98;</code>
@@ -63745,7 +62769,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 99;
       private org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum dayBookingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.DayBookingInstEnum.DAY_BOOKING_INST_AUTO;
       /**
        * <code>optional .SingleGeneralOrderHandling.DayBookingInstEnum day_booking_inst = 99;</code>
@@ -63781,7 +62804,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string designation = 100;
       private java.lang.Object designation_ = "";
       /**
        * <code>optional string designation = 100;</code>
@@ -63795,9 +62817,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getDesignation() {
         java.lang.Object ref = designation_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          designation_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            designation_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -63855,7 +62880,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 ex_date = 101;
       private int exDate_ ;
       /**
        * <code>optional sfixed32 ex_date = 101;</code>
@@ -63888,7 +62912,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double exec_price_adjustment = 102;
       private double execPriceAdjustment_ ;
       /**
        * <code>optional double exec_price_adjustment = 102;</code>
@@ -63921,7 +62944,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.ExecPriceTypeEnum exec_price_type = 103;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ExecPriceTypeEnum execPriceType_ = org.fixprotocol.components.SingleGeneralOrderHandling.ExecPriceTypeEnum.EXEC_PRICE_TYPE_BID_PRICE;
       /**
        * <code>optional .SingleGeneralOrderHandling.ExecPriceTypeEnum exec_price_type = 103;</code>
@@ -63957,7 +62979,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 exec_valuation_point = 104;
       private long execValuationPoint_ ;
       /**
        * <code>optional sfixed64 exec_valuation_point = 104;</code>
@@ -63990,7 +63011,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 105;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -64099,7 +63119,7 @@ public final class SingleGeneralOrderHandling {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -64107,7 +63127,6 @@ public final class SingleGeneralOrderHandling {
         return instrumentBuilder_;
       }
 
-      // optional sfixed64 last_forward_points2 = 106;
       private long lastForwardPoints2_ ;
       /**
        * <code>optional sfixed64 last_forward_points2 = 106;</code>
@@ -64140,7 +63159,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_forward_points2_exponent = 107;
       private int lastForwardPoints2Exponent_ ;
       /**
        * <code>optional sfixed32 last_forward_points2_exponent = 107;</code>
@@ -64173,7 +63191,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 108;
       private org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum moneyLaunderingStatus_ = org.fixprotocol.components.SingleGeneralOrderHandling.MoneyLaunderingStatusEnum.MONEY_LAUNDERING_STATUS_EXEMPT_AUTHORISED;
       /**
        * <code>optional .SingleGeneralOrderHandling.MoneyLaunderingStatusEnum money_laundering_status = 108;</code>
@@ -64209,7 +63226,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 num_days_interest = 109;
       private long numDaysInterest_ ;
       /**
        * <code>optional sfixed64 num_days_interest = 109;</code>
@@ -64242,7 +63258,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 110;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum orderCapacity_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrderCapacityEnum.ORDER_CAPACITY_AGENCY;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrderCapacityEnum order_capacity = 110;</code>
@@ -64278,7 +63293,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.OrderQtyData order_qty_data = 111;
       private org.fixprotocol.components.Common.OrderQtyData orderQtyData_ = org.fixprotocol.components.Common.OrderQtyData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder> orderQtyDataBuilder_;
@@ -64387,7 +63401,7 @@ public final class SingleGeneralOrderHandling {
         if (orderQtyDataBuilder_ == null) {
           orderQtyDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder>(
-                  orderQtyData_,
+                  getOrderQtyData(),
                   getParentForChildren(),
                   isClean());
           orderQtyData_ = null;
@@ -64395,7 +63409,6 @@ public final class SingleGeneralOrderHandling {
         return orderQtyDataBuilder_;
       }
 
-      // repeated .SingleGeneralOrderHandling.OrderRestrictionsEnum order_restrictions = 112 [packed = true];
       private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> orderRestrictions_ =
         java.util.Collections.emptyList();
       private void ensureOrderRestrictionsIsMutable() {
@@ -64453,7 +63466,8 @@ public final class SingleGeneralOrderHandling {
       public Builder addAllOrderRestrictions(
           java.lang.Iterable<? extends org.fixprotocol.components.SingleGeneralOrderHandling.OrderRestrictionsEnum> values) {
         ensureOrderRestrictionsIsMutable();
-        super.addAll(values, orderRestrictions_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, orderRestrictions_);
         onChanged();
         return this;
       }
@@ -64467,7 +63481,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string orig_cross_id = 113;
       private java.lang.Object origCrossId_ = "";
       /**
        * <code>optional string orig_cross_id = 113;</code>
@@ -64481,9 +63494,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrigCrossId() {
         java.lang.Object ref = origCrossId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          origCrossId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            origCrossId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -64541,7 +63557,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.Parties parties = 114;
       private java.util.List<org.fixprotocol.components.Common.Parties> parties_ =
         java.util.Collections.emptyList();
       private void ensurePartiesIsMutable() {
@@ -64683,7 +63698,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Parties> values) {
         if (partiesBuilder_ == null) {
           ensurePartiesIsMutable();
-          super.addAll(values, parties_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parties_);
           onChanged();
         } else {
           partiesBuilder_.addAllMessages(values);
@@ -64781,7 +63797,6 @@ public final class SingleGeneralOrderHandling {
         return partiesBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 115;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum preallocMethod_ = org.fixprotocol.components.SingleGeneralOrderHandling.PreallocMethodEnum.PREALLOC_METHOD_DO_NOT_PRO_RATA;
       /**
        * <code>optional .SingleGeneralOrderHandling.PreallocMethodEnum prealloc_method = 115;</code>
@@ -64817,7 +63832,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 price_improvement = 116;
       private long priceImprovement_ ;
       /**
        * <code>optional sfixed64 price_improvement = 116;</code>
@@ -64850,7 +63864,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 price_improvement_exponent = 117;
       private int priceImprovementExponent_ ;
       /**
        * <code>optional sfixed32 price_improvement_exponent = 117;</code>
@@ -64883,7 +63896,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 118;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum priceType_ = org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum.PRICE_TYPE_FIXED_AMOUNT;
       /**
        * <code>optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 118;</code>
@@ -64919,7 +63931,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PriorityIndicatorEnum priority_indicator = 119;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PriorityIndicatorEnum priorityIndicator_ = org.fixprotocol.components.SingleGeneralOrderHandling.PriorityIndicatorEnum.PRIORITY_INDICATOR_LOST_PRIORITY_AS_RESULT_OF_ORDER_CHANGE;
       /**
        * <code>optional .SingleGeneralOrderHandling.PriorityIndicatorEnum priority_indicator = 119;</code>
@@ -64955,7 +63966,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string regist_id = 120;
       private java.lang.Object registId_ = "";
       /**
        * <code>optional string regist_id = 120;</code>
@@ -64969,9 +63979,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getRegistId() {
         java.lang.Object ref = registId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          registId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            registId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -65029,7 +64042,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string secondary_cl_ord_id = 121;
       private java.lang.Object secondaryClOrdId_ = "";
       /**
        * <code>optional string secondary_cl_ord_id = 121;</code>
@@ -65043,9 +64055,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryClOrdId() {
         java.lang.Object ref = secondaryClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -65103,7 +64118,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string secondary_exec_id = 122;
       private java.lang.Object secondaryExecId_ = "";
       /**
        * <code>optional string secondary_exec_id = 122;</code>
@@ -65117,9 +64131,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryExecId() {
         java.lang.Object ref = secondaryExecId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryExecId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryExecId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -65177,7 +64194,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 123;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -65286,7 +64302,7 @@ public final class SingleGeneralOrderHandling {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -65294,7 +64310,6 @@ public final class SingleGeneralOrderHandling {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // repeated .Common.Stipulations stipulations = 124;
       private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_ =
         java.util.Collections.emptyList();
       private void ensureStipulationsIsMutable() {
@@ -65436,7 +64451,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Stipulations> values) {
         if (stipulationsBuilder_ == null) {
           ensureStipulationsIsMutable();
-          super.addAll(values, stipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stipulations_);
           onChanged();
         } else {
           stipulationsBuilder_.addAllMessages(values);
@@ -65534,7 +64550,6 @@ public final class SingleGeneralOrderHandling {
         return stipulationsBuilder_;
       }
 
-      // optional sfixed64 total_takedown = 125;
       private long totalTakedown_ ;
       /**
        * <code>optional sfixed64 total_takedown = 125;</code>
@@ -65567,7 +64582,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 total_takedown_exponent = 126;
       private int totalTakedownExponent_ ;
       /**
        * <code>optional sfixed32 total_takedown_exponent = 126;</code>
@@ -65600,7 +64614,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 trade_origination_date = 127;
       private int tradeOriginationDate_ ;
       /**
        * <code>optional sfixed32 trade_origination_date = 127;</code>
@@ -65633,7 +64646,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool traded_flat_switch = 128;
       private boolean tradedFlatSwitch_ ;
       /**
        * <code>optional bool traded_flat_switch = 128;</code>
@@ -65666,7 +64678,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.TradingSessionSubIdEnum trading_session_sub_id = 129;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TradingSessionSubIdEnum tradingSessionSubId_ = org.fixprotocol.components.SingleGeneralOrderHandling.TradingSessionSubIdEnum.TRADING_SESSION_SUB_ID_CLOSING_OR_CLOSING_AUCTION;
       /**
        * <code>optional .SingleGeneralOrderHandling.TradingSessionSubIdEnum trading_session_sub_id = 129;</code>
@@ -65702,7 +64713,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 trans_bkd_time = 130;
       private long transBkdTime_ ;
       /**
        * <code>optional sfixed64 trans_bkd_time = 130;</code>
@@ -65735,7 +64745,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 underlying_last_px = 131;
       private long underlyingLastPx_ ;
       /**
        * <code>optional sfixed64 underlying_last_px = 131;</code>
@@ -65768,7 +64777,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 underlying_last_px_exponent = 132;
       private int underlyingLastPxExponent_ ;
       /**
        * <code>optional sfixed32 underlying_last_px_exponent = 132;</code>
@@ -65801,7 +64809,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 underlying_last_qty = 133;
       private long underlyingLastQty_ ;
       /**
        * <code>optional sfixed64 underlying_last_qty = 133;</code>
@@ -65834,7 +64841,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 underlying_last_qty_exponent = 134;
       private int underlyingLastQtyExponent_ ;
       /**
        * <code>optional sfixed32 underlying_last_qty_exponent = 134;</code>
@@ -65867,7 +64873,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool working_indicator = 135;
       private boolean workingIndicator_ ;
       /**
        * <code>optional bool working_indicator = 135;</code>
@@ -65900,7 +64905,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.YieldData yield_data = 136;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -66009,7 +65013,7 @@ public final class SingleGeneralOrderHandling {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -66017,7 +65021,6 @@ public final class SingleGeneralOrderHandling {
         return yieldDataBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 137;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum.ACCT_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 137;</code>
@@ -66053,7 +65056,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool aggressor_indicator = 138;
       private boolean aggressorIndicator_ ;
       /**
        * <code>optional bool aggressor_indicator = 138;</code>
@@ -66086,7 +65088,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 139;
       private org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum bookingType_ = org.fixprotocol.components.SingleGeneralOrderHandling.BookingTypeEnum.BOOKING_TYPE_CFD;
       /**
        * <code>optional .SingleGeneralOrderHandling.BookingTypeEnum booking_type = 139;</code>
@@ -66122,7 +65123,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 calculated_ccy_last_qty = 140;
       private long calculatedCcyLastQty_ ;
       /**
        * <code>optional sfixed64 calculated_ccy_last_qty = 140;</code>
@@ -66155,7 +65155,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 calculated_ccy_last_qty_exponent = 141;
       private int calculatedCcyLastQtyExponent_ ;
       /**
        * <code>optional sfixed32 calculated_ccy_last_qty_exponent = 141;</code>
@@ -66188,7 +65187,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.ContAmtGrp cont_amt_grp = 142;
       private java.util.List<org.fixprotocol.components.Common.ContAmtGrp> contAmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureContAmtGrpIsMutable() {
@@ -66330,7 +65328,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.ContAmtGrp> values) {
         if (contAmtGrpBuilder_ == null) {
           ensureContAmtGrpIsMutable();
-          super.addAll(values, contAmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contAmtGrp_);
           onChanged();
         } else {
           contAmtGrpBuilder_.addAllMessages(values);
@@ -66428,7 +65427,6 @@ public final class SingleGeneralOrderHandling {
         return contAmtGrpBuilder_;
       }
 
-      // repeated .Common.ContraGrp contra_grp = 143;
       private java.util.List<org.fixprotocol.components.Common.ContraGrp> contraGrp_ =
         java.util.Collections.emptyList();
       private void ensureContraGrpIsMutable() {
@@ -66570,7 +65568,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.ContraGrp> values) {
         if (contraGrpBuilder_ == null) {
           ensureContraGrpIsMutable();
-          super.addAll(values, contraGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contraGrp_);
           onChanged();
         } else {
           contraGrpBuilder_.addAllMessages(values);
@@ -66668,7 +65667,6 @@ public final class SingleGeneralOrderHandling {
         return contraGrpBuilder_;
       }
 
-      // optional bool copy_msg_indicator = 144;
       private boolean copyMsgIndicator_ ;
       /**
        * <code>optional bool copy_msg_indicator = 144;</code>
@@ -66701,7 +65699,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool cust_directed_order = 145;
       private boolean custDirectedOrder_ ;
       /**
        * <code>optional bool cust_directed_order = 145;</code>
@@ -66734,7 +65731,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 146;
       private org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum custOrderHandlingInst_ = org.fixprotocol.components.SingleGeneralOrderHandling.CustOrderHandlingInstEnum.CUST_ORDER_HANDLING_INST_ADD_ON_ORDER;
       /**
        * <code>optional .SingleGeneralOrderHandling.CustOrderHandlingInstEnum cust_order_handling_inst = 146;</code>
@@ -66770,7 +65766,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.DiscretionInstructions discretion_instructions = 147;
       private org.fixprotocol.components.Common.DiscretionInstructions discretionInstructions_ = org.fixprotocol.components.Common.DiscretionInstructions.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.DiscretionInstructions, org.fixprotocol.components.Common.DiscretionInstructions.Builder, org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder> discretionInstructionsBuilder_;
@@ -66879,7 +65874,7 @@ public final class SingleGeneralOrderHandling {
         if (discretionInstructionsBuilder_ == null) {
           discretionInstructionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.DiscretionInstructions, org.fixprotocol.components.Common.DiscretionInstructions.Builder, org.fixprotocol.components.Common.DiscretionInstructionsOrBuilder>(
-                  discretionInstructions_,
+                  getDiscretionInstructions(),
                   getParentForChildren(),
                   isClean());
           discretionInstructions_ = null;
@@ -66887,7 +65882,6 @@ public final class SingleGeneralOrderHandling {
         return discretionInstructionsBuilder_;
       }
 
-      // optional sfixed64 discretion_price = 148;
       private long discretionPrice_ ;
       /**
        * <code>optional sfixed64 discretion_price = 148;</code>
@@ -66920,7 +65914,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 discretion_price_exponent = 149;
       private int discretionPriceExponent_ ;
       /**
        * <code>optional sfixed32 discretion_price_exponent = 149;</code>
@@ -66953,7 +65946,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.DisplayInstruction display_instruction = 150;
       private org.fixprotocol.components.Common.DisplayInstruction displayInstruction_ = org.fixprotocol.components.Common.DisplayInstruction.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.DisplayInstruction, org.fixprotocol.components.Common.DisplayInstruction.Builder, org.fixprotocol.components.Common.DisplayInstructionOrBuilder> displayInstructionBuilder_;
@@ -67062,7 +66054,7 @@ public final class SingleGeneralOrderHandling {
         if (displayInstructionBuilder_ == null) {
           displayInstructionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.DisplayInstruction, org.fixprotocol.components.Common.DisplayInstruction.Builder, org.fixprotocol.components.Common.DisplayInstructionOrBuilder>(
-                  displayInstruction_,
+                  getDisplayInstruction(),
                   getParentForChildren(),
                   isClean());
           displayInstruction_ = null;
@@ -67070,7 +66062,6 @@ public final class SingleGeneralOrderHandling {
         return displayInstructionBuilder_;
       }
 
-      // optional sfixed64 end_accrued_interest_amt = 151;
       private long endAccruedInterestAmt_ ;
       /**
        * <code>optional sfixed64 end_accrued_interest_amt = 151;</code>
@@ -67103,7 +66094,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 end_accrued_interest_amt_exponent = 152;
       private int endAccruedInterestAmtExponent_ ;
       /**
        * <code>optional sfixed32 end_accrued_interest_amt_exponent = 152;</code>
@@ -67136,7 +66126,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 end_cash = 153;
       private long endCash_ ;
       /**
        * <code>optional sfixed64 end_cash = 153;</code>
@@ -67169,7 +66158,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 end_cash_exponent = 154;
       private int endCashExponent_ ;
       /**
        * <code>optional sfixed32 end_cash_exponent = 154;</code>
@@ -67202,7 +66190,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.FinancingDetails financing_details = 155;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -67311,7 +66298,7 @@ public final class SingleGeneralOrderHandling {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -67319,7 +66306,6 @@ public final class SingleGeneralOrderHandling {
         return financingDetailsBuilder_;
       }
 
-      // optional string host_cross_id = 156;
       private java.lang.Object hostCrossId_ = "";
       /**
        * <code>optional string host_cross_id = 156;</code>
@@ -67333,9 +66319,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getHostCrossId() {
         java.lang.Object ref = hostCrossId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          hostCrossId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            hostCrossId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -67393,7 +66382,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.InstrmtLegExecGrp instrmt_leg_exec_grp = 157;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegExecGrp> instrmtLegExecGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegExecGrpIsMutable() {
@@ -67535,7 +66523,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegExecGrp> values) {
         if (instrmtLegExecGrpBuilder_ == null) {
           ensureInstrmtLegExecGrpIsMutable();
-          super.addAll(values, instrmtLegExecGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegExecGrp_);
           onChanged();
         } else {
           instrmtLegExecGrpBuilder_.addAllMessages(values);
@@ -67633,7 +66622,6 @@ public final class SingleGeneralOrderHandling {
         return instrmtLegExecGrpBuilder_;
       }
 
-      // optional sfixed64 interest_at_maturity = 158;
       private long interestAtMaturity_ ;
       /**
        * <code>optional sfixed64 interest_at_maturity = 158;</code>
@@ -67666,7 +66654,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 interest_at_maturity_exponent = 159;
       private int interestAtMaturityExponent_ ;
       /**
        * <code>optional sfixed32 interest_at_maturity_exponent = 159;</code>
@@ -67699,7 +66686,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.LastLiquidityIndEnum last_liquidity_ind = 160;
       private org.fixprotocol.components.SingleGeneralOrderHandling.LastLiquidityIndEnum lastLiquidityInd_ = org.fixprotocol.components.SingleGeneralOrderHandling.LastLiquidityIndEnum.LAST_LIQUIDITY_IND_ADDED_LIQUIDITY;
       /**
        * <code>optional .SingleGeneralOrderHandling.LastLiquidityIndEnum last_liquidity_ind = 160;</code>
@@ -67735,7 +66721,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 last_par_px = 161;
       private long lastParPx_ ;
       /**
        * <code>optional sfixed64 last_par_px = 161;</code>
@@ -67768,7 +66753,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_par_px_exponent = 162;
       private int lastParPxExponent_ ;
       /**
        * <code>optional sfixed32 last_par_px_exponent = 162;</code>
@@ -67801,7 +66785,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool last_rpt_requested = 163;
       private boolean lastRptRequested_ ;
       /**
        * <code>optional bool last_rpt_requested = 163;</code>
@@ -67834,7 +66817,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 last_swap_points = 164;
       private long lastSwapPoints_ ;
       /**
        * <code>optional sfixed64 last_swap_points = 164;</code>
@@ -67867,7 +66849,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_swap_points_exponent = 165;
       private int lastSwapPointsExponent_ ;
       /**
        * <code>optional sfixed32 last_swap_points_exponent = 165;</code>
@@ -67900,7 +66881,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.LotTypeEnum lot_type = 166;
       private org.fixprotocol.components.SingleGeneralOrderHandling.LotTypeEnum lotType_ = org.fixprotocol.components.SingleGeneralOrderHandling.LotTypeEnum.LOT_TYPE_BLOCK_LOT;
       /**
        * <code>optional .SingleGeneralOrderHandling.LotTypeEnum lot_type = 166;</code>
@@ -67936,7 +66916,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool manual_order_indicator = 167;
       private boolean manualOrderIndicator_ ;
       /**
        * <code>optional bool manual_order_indicator = 167;</code>
@@ -67969,7 +66948,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string mass_status_req_id = 168;
       private java.lang.Object massStatusReqId_ = "";
       /**
        * <code>optional string mass_status_req_id = 168;</code>
@@ -67983,9 +66961,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getMassStatusReqId() {
         java.lang.Object ref = massStatusReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          massStatusReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            massStatusReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -68043,7 +67024,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 match_increment = 169;
       private long matchIncrement_ ;
       /**
        * <code>optional sfixed64 match_increment = 169;</code>
@@ -68076,7 +67056,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 match_increment_exponent = 170;
       private int matchIncrementExponent_ ;
       /**
        * <code>optional sfixed32 match_increment_exponent = 170;</code>
@@ -68109,7 +67088,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.MatchTypeEnum match_type = 171;
       private org.fixprotocol.components.SingleGeneralOrderHandling.MatchTypeEnum matchType_ = org.fixprotocol.components.SingleGeneralOrderHandling.MatchTypeEnum.MATCH_TYPE_A1EXACT_MATCH_SUMMARIZED_QUANTITY;
       /**
        * <code>optional .SingleGeneralOrderHandling.MatchTypeEnum match_type = 171;</code>
@@ -68145,7 +67123,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 max_price_levels = 172;
       private long maxPriceLevels_ ;
       /**
        * <code>optional sfixed64 max_price_levels = 172;</code>
@@ -68178,7 +67155,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.MiscFeesGrp misc_fees_grp = 173;
       private java.util.List<org.fixprotocol.components.Common.MiscFeesGrp> miscFeesGrp_ =
         java.util.Collections.emptyList();
       private void ensureMiscFeesGrpIsMutable() {
@@ -68320,7 +67296,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.MiscFeesGrp> values) {
         if (miscFeesGrpBuilder_ == null) {
           ensureMiscFeesGrpIsMutable();
-          super.addAll(values, miscFeesGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, miscFeesGrp_);
           onChanged();
         } else {
           miscFeesGrpBuilder_.addAllMessages(values);
@@ -68418,7 +67395,6 @@ public final class SingleGeneralOrderHandling {
         return miscFeesGrpBuilder_;
       }
 
-      // optional string ord_status_req_id = 174;
       private java.lang.Object ordStatusReqId_ = "";
       /**
        * <code>optional string ord_status_req_id = 174;</code>
@@ -68432,9 +67408,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrdStatusReqId() {
         java.lang.Object ref = ordStatusReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          ordStatusReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ordStatusReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -68492,7 +67471,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrderCategoryEnum order_category = 175;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrderCategoryEnum orderCategory_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrderCategoryEnum.ORDER_CATEGORY_CROSS_ORDER;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrderCategoryEnum order_category = 175;</code>
@@ -68528,7 +67506,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 176;
       private org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum orderHandlingInstSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.OrderHandlingInstSourceEnum.ORDER_HANDLING_INST_SOURCE_NASDOATS;
       /**
        * <code>optional .SingleGeneralOrderHandling.OrderHandlingInstSourceEnum order_handling_inst_source = 176;</code>
@@ -68564,7 +67541,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 participation_rate = 177;
       private long participationRate_ ;
       /**
        * <code>optional sfixed64 participation_rate = 177;</code>
@@ -68597,7 +67573,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 participation_rate_exponent = 178;
       private int participationRateExponent_ ;
       /**
        * <code>optional sfixed32 participation_rate_exponent = 178;</code>
@@ -68630,7 +67605,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.PegInstructions peg_instructions = 179;
       private org.fixprotocol.components.Common.PegInstructions pegInstructions_ = org.fixprotocol.components.Common.PegInstructions.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.PegInstructions, org.fixprotocol.components.Common.PegInstructions.Builder, org.fixprotocol.components.Common.PegInstructionsOrBuilder> pegInstructionsBuilder_;
@@ -68739,7 +67713,7 @@ public final class SingleGeneralOrderHandling {
         if (pegInstructionsBuilder_ == null) {
           pegInstructionsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.PegInstructions, org.fixprotocol.components.Common.PegInstructions.Builder, org.fixprotocol.components.Common.PegInstructionsOrBuilder>(
-                  pegInstructions_,
+                  getPegInstructions(),
                   getParentForChildren(),
                   isClean());
           pegInstructions_ = null;
@@ -68747,7 +67721,6 @@ public final class SingleGeneralOrderHandling {
         return pegInstructionsBuilder_;
       }
 
-      // optional sfixed64 pegged_price = 180;
       private long peggedPrice_ ;
       /**
        * <code>optional sfixed64 pegged_price = 180;</code>
@@ -68780,7 +67753,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 pegged_price_exponent = 181;
       private int peggedPriceExponent_ ;
       /**
        * <code>optional sfixed32 pegged_price_exponent = 181;</code>
@@ -68813,7 +67785,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 pegged_ref_price = 182;
       private long peggedRefPrice_ ;
       /**
        * <code>optional sfixed64 pegged_ref_price = 182;</code>
@@ -68846,7 +67817,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 pegged_ref_price_exponent = 183;
       private int peggedRefPriceExponent_ ;
       /**
        * <code>optional sfixed32 pegged_ref_price_exponent = 183;</code>
@@ -68879,7 +67849,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bool pre_trade_anonymity = 184;
       private boolean preTradeAnonymity_ ;
       /**
        * <code>optional bool pre_trade_anonymity = 184;</code>
@@ -68912,7 +67881,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 185;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum priceProtectionScope_ = org.fixprotocol.components.SingleGeneralOrderHandling.PriceProtectionScopeEnum.PRICE_PROTECTION_SCOPE_GLOBAL;
       /**
        * <code>optional .SingleGeneralOrderHandling.PriceProtectionScopeEnum price_protection_scope = 185;</code>
@@ -68948,7 +67916,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 186;
       private org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum qtyType_ = org.fixprotocol.components.SingleGeneralOrderHandling.QtyTypeEnum.QTY_TYPE_CONTRACTS;
       /**
        * <code>optional .SingleGeneralOrderHandling.QtyTypeEnum qty_type = 186;</code>
@@ -68984,7 +67951,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string quote_resp_id = 187;
       private java.lang.Object quoteRespId_ = "";
       /**
        * <code>optional string quote_resp_id = 187;</code>
@@ -68998,9 +67964,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getQuoteRespId() {
         java.lang.Object ref = quoteRespId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          quoteRespId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            quoteRespId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -69058,7 +68027,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string received_dept_id = 188;
       private java.lang.Object receivedDeptId_ = "";
       /**
        * <code>optional string received_dept_id = 188;</code>
@@ -69072,9 +68040,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getReceivedDeptId() {
         java.lang.Object ref = receivedDeptId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          receivedDeptId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            receivedDeptId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -69132,7 +68103,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 start_cash = 189;
       private long startCash_ ;
       /**
        * <code>optional sfixed64 start_cash = 189;</code>
@@ -69165,7 +68135,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 start_cash_exponent = 190;
       private int startCashExponent_ ;
       /**
        * <code>optional sfixed32 start_cash_exponent = 190;</code>
@@ -69198,7 +68167,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.StrategyParametersGrp strategy_parameters_grp = 191;
       private java.util.List<org.fixprotocol.components.Common.StrategyParametersGrp> strategyParametersGrp_ =
         java.util.Collections.emptyList();
       private void ensureStrategyParametersGrpIsMutable() {
@@ -69340,7 +68308,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.StrategyParametersGrp> values) {
         if (strategyParametersGrpBuilder_ == null) {
           ensureStrategyParametersGrpIsMutable();
-          super.addAll(values, strategyParametersGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, strategyParametersGrp_);
           onChanged();
         } else {
           strategyParametersGrpBuilder_.addAllMessages(values);
@@ -69438,7 +68407,6 @@ public final class SingleGeneralOrderHandling {
         return strategyParametersGrpBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 192;
       private org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum targetStrategy_ = org.fixprotocol.components.SingleGeneralOrderHandling.TargetStrategyEnum.TARGET_STRATEGY_MININIZE_MARKET_IMPACT;
       /**
        * <code>optional .SingleGeneralOrderHandling.TargetStrategyEnum target_strategy = 192;</code>
@@ -69474,7 +68442,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string target_strategy_parameters = 193;
       private java.lang.Object targetStrategyParameters_ = "";
       /**
        * <code>optional string target_strategy_parameters = 193;</code>
@@ -69488,9 +68455,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getTargetStrategyParameters() {
         java.lang.Object ref = targetStrategyParameters_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          targetStrategyParameters_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            targetStrategyParameters_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -69548,7 +68518,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double target_strategy_performance = 194;
       private double targetStrategyPerformance_ ;
       /**
        * <code>optional double target_strategy_performance = 194;</code>
@@ -69581,7 +68550,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string time_bracket = 195;
       private java.lang.Object timeBracket_ = "";
       /**
        * <code>optional string time_bracket = 195;</code>
@@ -69595,9 +68563,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getTimeBracket() {
         java.lang.Object ref = timeBracket_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          timeBracket_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            timeBracket_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -69655,7 +68626,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 tot_num_reports = 196;
       private long totNumReports_ ;
       /**
        * <code>optional sfixed64 tot_num_reports = 196;</code>
@@ -69688,7 +68658,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.TrdRegTimestamps trd_reg_timestamps = 197;
       private java.util.List<org.fixprotocol.components.Common.TrdRegTimestamps> trdRegTimestamps_ =
         java.util.Collections.emptyList();
       private void ensureTrdRegTimestampsIsMutable() {
@@ -69830,7 +68799,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.TrdRegTimestamps> values) {
         if (trdRegTimestampsBuilder_ == null) {
           ensureTrdRegTimestampsIsMutable();
-          super.addAll(values, trdRegTimestamps_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trdRegTimestamps_);
           onChanged();
         } else {
           trdRegTimestampsBuilder_.addAllMessages(values);
@@ -69928,7 +68898,6 @@ public final class SingleGeneralOrderHandling {
         return trdRegTimestampsBuilder_;
       }
 
-      // optional .Common.TriggeringInstruction triggering_instruction = 198;
       private org.fixprotocol.components.Common.TriggeringInstruction triggeringInstruction_ = org.fixprotocol.components.Common.TriggeringInstruction.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.TriggeringInstruction, org.fixprotocol.components.Common.TriggeringInstruction.Builder, org.fixprotocol.components.Common.TriggeringInstructionOrBuilder> triggeringInstructionBuilder_;
@@ -70037,7 +69006,7 @@ public final class SingleGeneralOrderHandling {
         if (triggeringInstructionBuilder_ == null) {
           triggeringInstructionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.TriggeringInstruction, org.fixprotocol.components.Common.TriggeringInstruction.Builder, org.fixprotocol.components.Common.TriggeringInstructionOrBuilder>(
-                  triggeringInstruction_,
+                  getTriggeringInstruction(),
                   getParentForChildren(),
                   isClean());
           triggeringInstruction_ = null;
@@ -70045,7 +69014,6 @@ public final class SingleGeneralOrderHandling {
         return triggeringInstructionBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 199;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -70187,7 +69155,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -70285,7 +69254,6 @@ public final class SingleGeneralOrderHandling {
         return undInstrmtGrpBuilder_;
       }
 
-      // optional string alloc_id = 200;
       private java.lang.Object allocId_ = "";
       /**
        * <code>optional string alloc_id = 200;</code>
@@ -70299,9 +69267,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAllocId() {
         java.lang.Object ref = allocId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          allocId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            allocId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -70359,7 +69330,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.ApplicationSequenceControl application_sequence_control = 201;
       private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_ = org.fixprotocol.components.Common.ApplicationSequenceControl.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder> applicationSequenceControlBuilder_;
@@ -70468,7 +69438,7 @@ public final class SingleGeneralOrderHandling {
         if (applicationSequenceControlBuilder_ == null) {
           applicationSequenceControlBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder>(
-                  applicationSequenceControl_,
+                  getApplicationSequenceControl(),
                   getParentForChildren(),
                   isClean());
           applicationSequenceControl_ = null;
@@ -70476,7 +69446,6 @@ public final class SingleGeneralOrderHandling {
         return applicationSequenceControlBuilder_;
       }
 
-      // optional sfixed64 dividend_yield = 202;
       private long dividendYield_ ;
       /**
        * <code>optional sfixed64 dividend_yield = 202;</code>
@@ -70509,7 +69478,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 dividend_yield_exponent = 203;
       private int dividendYieldExponent_ ;
       /**
        * <code>optional sfixed32 dividend_yield_exponent = 203;</code>
@@ -70542,7 +69510,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .SingleGeneralOrderHandling.FillsGrp fills_grp = 204;
       private java.util.List<org.fixprotocol.components.SingleGeneralOrderHandling.FillsGrp> fillsGrp_ =
         java.util.Collections.emptyList();
       private void ensureFillsGrpIsMutable() {
@@ -70684,7 +69651,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.SingleGeneralOrderHandling.FillsGrp> values) {
         if (fillsGrpBuilder_ == null) {
           ensureFillsGrpIsMutable();
-          super.addAll(values, fillsGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fillsGrp_);
           onChanged();
         } else {
           fillsGrpBuilder_.addAllMessages(values);
@@ -70782,7 +69750,6 @@ public final class SingleGeneralOrderHandling {
         return fillsGrpBuilder_;
       }
 
-      // optional bool last_fragment = 205;
       private boolean lastFragment_ ;
       /**
        * <code>optional bool last_fragment = 205;</code>
@@ -70815,7 +69782,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.PreAllocGrp pre_alloc_grp = 206;
       private java.util.List<org.fixprotocol.components.Common.PreAllocGrp> preAllocGrp_ =
         java.util.Collections.emptyList();
       private void ensurePreAllocGrpIsMutable() {
@@ -70957,7 +69923,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.PreAllocGrp> values) {
         if (preAllocGrpBuilder_ == null) {
           ensurePreAllocGrpIsMutable();
-          super.addAll(values, preAllocGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, preAllocGrp_);
           onChanged();
         } else {
           preAllocGrpBuilder_.addAllMessages(values);
@@ -71055,7 +70022,6 @@ public final class SingleGeneralOrderHandling {
         return preAllocGrpBuilder_;
       }
 
-      // optional double price_delta = 207;
       private double priceDelta_ ;
       /**
        * <code>optional double price_delta = 207;</code>
@@ -71088,7 +70054,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double risk_free_rate = 208;
       private double riskFreeRate_ ;
       /**
        * <code>optional double risk_free_rate = 208;</code>
@@ -71121,7 +70086,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double time_to_expiration = 209;
       private double timeToExpiration_ ;
       /**
        * <code>optional double time_to_expiration = 209;</code>
@@ -71154,7 +70118,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 tot_no_fills = 210;
       private long totNoFills_ ;
       /**
        * <code>optional sfixed64 tot_no_fills = 210;</code>
@@ -71187,7 +70150,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string trd_match_id = 211;
       private java.lang.Object trdMatchId_ = "";
       /**
        * <code>optional string trd_match_id = 211;</code>
@@ -71201,9 +70163,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getTrdMatchId() {
         java.lang.Object ref = trdMatchId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          trdMatchId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            trdMatchId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -71261,7 +70226,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double volatility = 212;
       private double volatility_ ;
       /**
        * <code>optional double volatility = 212;</code>
@@ -71294,7 +70258,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.RateSource rate_source = 213;
       private java.util.List<org.fixprotocol.components.Common.RateSource> rateSource_ =
         java.util.Collections.emptyList();
       private void ensureRateSourceIsMutable() {
@@ -71436,7 +70399,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.RateSource> values) {
         if (rateSourceBuilder_ == null) {
           ensureRateSourceIsMutable();
-          super.addAll(values, rateSource_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rateSource_);
           onChanged();
         } else {
           rateSourceBuilder_.addAllMessages(values);
@@ -71545,10 +70509,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.ExecutionReport)
   }
 
-  public interface OrderStatusRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface OrderStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.OrderStatusRequest)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string cl_ord_id = 1;
     /**
      * <code>optional string cl_ord_id = 1;</code>
      */
@@ -71563,7 +70527,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdIdBytes();
 
-    // optional string order_id = 2;
     /**
      * <code>optional string order_id = 2;</code>
      */
@@ -71578,7 +70541,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrderIdBytes();
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 3;
     /**
      * <code>optional .SingleGeneralOrderHandling.SideEnum side = 3;</code>
      */
@@ -71588,7 +70550,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum getSide();
 
-    // optional .Session.StandardHeader standard_header = 4;
     /**
      * <code>optional .Session.StandardHeader standard_header = 4;</code>
      */
@@ -71602,7 +70563,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 5;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 5;</code>
      */
@@ -71616,7 +70576,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string account = 6;
     /**
      * <code>optional string account = 6;</code>
      */
@@ -71631,7 +70590,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getAccountBytes();
 
-    // optional string cl_ord_link_id = 7;
     /**
      * <code>optional string cl_ord_link_id = 7;</code>
      */
@@ -71646,7 +70604,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdLinkIdBytes();
 
-    // optional .Common.Instrument instrument = 8;
     /**
      * <code>optional .Common.Instrument instrument = 8;</code>
      */
@@ -71660,7 +70617,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // repeated .Common.Parties parties = 9;
     /**
      * <code>repeated .Common.Parties parties = 9;</code>
      */
@@ -71685,7 +70641,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.PartiesOrBuilder getPartiesOrBuilder(
         int index);
 
-    // optional string secondary_cl_ord_id = 10;
     /**
      * <code>optional string secondary_cl_ord_id = 10;</code>
      */
@@ -71700,7 +70655,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryClOrdIdBytes();
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 11;
     /**
      * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 11;</code>
      */
@@ -71710,7 +70664,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum getAcctIdSource();
 
-    // optional .Common.FinancingDetails financing_details = 12;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 12;</code>
      */
@@ -71724,7 +70677,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // optional string ord_status_req_id = 13;
     /**
      * <code>optional string ord_status_req_id = 13;</code>
      */
@@ -71739,7 +70691,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrdStatusReqIdBytes();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 14;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 14;</code>
      */
@@ -71768,8 +70719,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.OrderStatusRequest}
    */
   public static final class OrderStatusRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements OrderStatusRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.OrderStatusRequest)
+      OrderStatusRequestOrBuilder {
     // Use OrderStatusRequest.newBuilder() to construct.
     private OrderStatusRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -71816,13 +70768,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              clOrdId_ = input.readBytes();
+              clOrdId_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              orderId_ = input.readBytes();
+              orderId_ = bs;
               break;
             }
             case 24: {
@@ -71863,13 +70817,15 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              account_ = input.readBytes();
+              account_ = bs;
               break;
             }
             case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000040;
-              clOrdLinkId_ = input.readBytes();
+              clOrdLinkId_ = bs;
               break;
             }
             case 66: {
@@ -71894,8 +70850,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000100;
-              secondaryClOrdId_ = input.readBytes();
+              secondaryClOrdId_ = bs;
               break;
             }
             case 88: {
@@ -71923,8 +70880,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 106: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000800;
-              ordStatusReqId_ = input.readBytes();
+              ordStatusReqId_ = bs;
               break;
             }
             case 114: {
@@ -71981,7 +70939,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional string cl_ord_id = 1;
     public static final int CL_ORD_ID_FIELD_NUMBER = 1;
     private java.lang.Object clOrdId_;
     /**
@@ -72024,7 +70981,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string order_id = 2;
     public static final int ORDER_ID_FIELD_NUMBER = 2;
     private java.lang.Object orderId_;
     /**
@@ -72067,7 +71023,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 3;
     public static final int SIDE_FIELD_NUMBER = 3;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_;
     /**
@@ -72083,7 +71038,6 @@ public final class SingleGeneralOrderHandling {
       return side_;
     }
 
-    // optional .Session.StandardHeader standard_header = 4;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 4;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -72105,7 +71059,6 @@ public final class SingleGeneralOrderHandling {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 5;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 5;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -72127,7 +71080,6 @@ public final class SingleGeneralOrderHandling {
       return standardTrailer_;
     }
 
-    // optional string account = 6;
     public static final int ACCOUNT_FIELD_NUMBER = 6;
     private java.lang.Object account_;
     /**
@@ -72170,7 +71122,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional string cl_ord_link_id = 7;
     public static final int CL_ORD_LINK_ID_FIELD_NUMBER = 7;
     private java.lang.Object clOrdLinkId_;
     /**
@@ -72213,7 +71164,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.Instrument instrument = 8;
     public static final int INSTRUMENT_FIELD_NUMBER = 8;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -72235,7 +71185,6 @@ public final class SingleGeneralOrderHandling {
       return instrument_;
     }
 
-    // repeated .Common.Parties parties = 9;
     public static final int PARTIES_FIELD_NUMBER = 9;
     private java.util.List<org.fixprotocol.components.Common.Parties> parties_;
     /**
@@ -72271,7 +71220,6 @@ public final class SingleGeneralOrderHandling {
       return parties_.get(index);
     }
 
-    // optional string secondary_cl_ord_id = 10;
     public static final int SECONDARY_CL_ORD_ID_FIELD_NUMBER = 10;
     private java.lang.Object secondaryClOrdId_;
     /**
@@ -72314,7 +71262,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 11;
     public static final int ACCT_ID_SOURCE_FIELD_NUMBER = 11;
     private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_;
     /**
@@ -72330,7 +71277,6 @@ public final class SingleGeneralOrderHandling {
       return acctIdSource_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 12;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 12;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -72352,7 +71298,6 @@ public final class SingleGeneralOrderHandling {
       return financingDetails_;
     }
 
-    // optional string ord_status_req_id = 13;
     public static final int ORD_STATUS_REQ_ID_FIELD_NUMBER = 13;
     private java.lang.Object ordStatusReqId_;
     /**
@@ -72395,7 +71340,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 14;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 14;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -72450,7 +71394,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -72648,8 +71593,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.OrderStatusRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.OrderStatusRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.OrderStatusRequest)
+        org.fixprotocol.components.SingleGeneralOrderHandling.OrderStatusRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_OrderStatusRequest_descriptor;
@@ -72993,7 +71939,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional string cl_ord_id = 1;
       private java.lang.Object clOrdId_ = "";
       /**
        * <code>optional string cl_ord_id = 1;</code>
@@ -73007,9 +71952,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdId() {
         java.lang.Object ref = clOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -73067,7 +72015,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string order_id = 2;
       private java.lang.Object orderId_ = "";
       /**
        * <code>optional string order_id = 2;</code>
@@ -73081,9 +72028,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrderId() {
         java.lang.Object ref = orderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            orderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -73141,7 +72091,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SideEnum side = 3;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_ = org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum.SIDE_BUY;
       /**
        * <code>optional .SingleGeneralOrderHandling.SideEnum side = 3;</code>
@@ -73177,7 +72126,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 4;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -73286,7 +72234,7 @@ public final class SingleGeneralOrderHandling {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -73294,7 +72242,6 @@ public final class SingleGeneralOrderHandling {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 5;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -73403,7 +72350,7 @@ public final class SingleGeneralOrderHandling {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -73411,7 +72358,6 @@ public final class SingleGeneralOrderHandling {
         return standardTrailerBuilder_;
       }
 
-      // optional string account = 6;
       private java.lang.Object account_ = "";
       /**
        * <code>optional string account = 6;</code>
@@ -73425,9 +72371,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getAccount() {
         java.lang.Object ref = account_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          account_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            account_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -73485,7 +72434,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_link_id = 7;
       private java.lang.Object clOrdLinkId_ = "";
       /**
        * <code>optional string cl_ord_link_id = 7;</code>
@@ -73499,9 +72447,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdLinkId() {
         java.lang.Object ref = clOrdLinkId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdLinkId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdLinkId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -73559,7 +72510,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 8;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -73668,7 +72618,7 @@ public final class SingleGeneralOrderHandling {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -73676,7 +72626,6 @@ public final class SingleGeneralOrderHandling {
         return instrumentBuilder_;
       }
 
-      // repeated .Common.Parties parties = 9;
       private java.util.List<org.fixprotocol.components.Common.Parties> parties_ =
         java.util.Collections.emptyList();
       private void ensurePartiesIsMutable() {
@@ -73818,7 +72767,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Parties> values) {
         if (partiesBuilder_ == null) {
           ensurePartiesIsMutable();
-          super.addAll(values, parties_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parties_);
           onChanged();
         } else {
           partiesBuilder_.addAllMessages(values);
@@ -73916,7 +72866,6 @@ public final class SingleGeneralOrderHandling {
         return partiesBuilder_;
       }
 
-      // optional string secondary_cl_ord_id = 10;
       private java.lang.Object secondaryClOrdId_ = "";
       /**
        * <code>optional string secondary_cl_ord_id = 10;</code>
@@ -73930,9 +72879,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryClOrdId() {
         java.lang.Object ref = secondaryClOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryClOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryClOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -73990,7 +72942,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 11;
       private org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum acctIdSource_ = org.fixprotocol.components.SingleGeneralOrderHandling.AcctIdSourceEnum.ACCT_ID_SOURCE_BIC;
       /**
        * <code>optional .SingleGeneralOrderHandling.AcctIdSourceEnum acct_id_source = 11;</code>
@@ -74026,7 +72977,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.FinancingDetails financing_details = 12;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -74135,7 +73085,7 @@ public final class SingleGeneralOrderHandling {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -74143,7 +73093,6 @@ public final class SingleGeneralOrderHandling {
         return financingDetailsBuilder_;
       }
 
-      // optional string ord_status_req_id = 13;
       private java.lang.Object ordStatusReqId_ = "";
       /**
        * <code>optional string ord_status_req_id = 13;</code>
@@ -74157,9 +73106,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrdStatusReqId() {
         java.lang.Object ref = ordStatusReqId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          ordStatusReqId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ordStatusReqId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -74217,7 +73169,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 14;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -74359,7 +73310,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -74468,10 +73420,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.OrderStatusRequest)
   }
 
-  public interface ExecutionAcknowledgementOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ExecutionAcknowledgementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.ExecutionAcknowledgement)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional sfixed64 avg_px = 1;
     /**
      * <code>optional sfixed64 avg_px = 1;</code>
      */
@@ -74481,7 +73433,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getAvgPx();
 
-    // optional string cl_ord_id = 2;
     /**
      * <code>optional string cl_ord_id = 2;</code>
      */
@@ -74496,7 +73447,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getClOrdIdBytes();
 
-    // optional sfixed64 cum_qty = 3;
     /**
      * <code>optional sfixed64 cum_qty = 3;</code>
      */
@@ -74506,7 +73456,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getCumQty();
 
-    // optional sfixed32 cum_qty_exponent = 4;
     /**
      * <code>optional sfixed32 cum_qty_exponent = 4;</code>
      */
@@ -74516,7 +73465,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getCumQtyExponent();
 
-    // optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 5;
     /**
      * <code>optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 5;</code>
      */
@@ -74526,7 +73474,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.DKReasonEnum getDkreason();
 
-    // optional bytes encoded_text = 6;
     /**
      * <code>optional bytes encoded_text = 6;</code>
      */
@@ -74536,7 +73483,6 @@ public final class SingleGeneralOrderHandling {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 7;
     /**
      * <code>optional fixed32 encoded_text_len = 7;</code>
      */
@@ -74546,7 +73492,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEncodedTextLen();
 
-    // optional .SingleGeneralOrderHandling.ExecAckStatusEnum exec_ack_status = 8;
     /**
      * <code>optional .SingleGeneralOrderHandling.ExecAckStatusEnum exec_ack_status = 8;</code>
      */
@@ -74556,7 +73501,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.ExecAckStatusEnum getExecAckStatus();
 
-    // optional string exec_id = 9;
     /**
      * <code>optional string exec_id = 9;</code>
      */
@@ -74571,7 +73515,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getExecIdBytes();
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 10;
     /**
      * <code>repeated .Common.InstrmtLegGrp instrmt_leg_grp = 10;</code>
      */
@@ -74596,7 +73539,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.InstrmtLegGrpOrBuilder getInstrmtLegGrpOrBuilder(
         int index);
 
-    // optional .Common.Instrument instrument = 11;
     /**
      * <code>optional .Common.Instrument instrument = 11;</code>
      */
@@ -74610,7 +73552,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional sfixed64 last_par_px = 12;
     /**
      * <code>optional sfixed64 last_par_px = 12;</code>
      */
@@ -74620,7 +73561,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastParPx();
 
-    // optional sfixed32 last_par_px_exponent = 13;
     /**
      * <code>optional sfixed32 last_par_px_exponent = 13;</code>
      */
@@ -74630,7 +73570,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastParPxExponent();
 
-    // optional double last_px = 14;
     /**
      * <code>optional double last_px = 14;</code>
      */
@@ -74640,7 +73579,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getLastPx();
 
-    // optional sfixed64 last_qty = 15;
     /**
      * <code>optional sfixed64 last_qty = 15;</code>
      */
@@ -74650,7 +73588,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastQty();
 
-    // optional sfixed32 last_qty_exponent = 16;
     /**
      * <code>optional sfixed32 last_qty_exponent = 16;</code>
      */
@@ -74660,7 +73597,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastQtyExponent();
 
-    // optional string order_id = 17;
     /**
      * <code>optional string order_id = 17;</code>
      */
@@ -74675,7 +73611,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrderIdBytes();
 
-    // optional .Common.OrderQtyData order_qty_data = 18;
     /**
      * <code>optional .Common.OrderQtyData order_qty_data = 18;</code>
      */
@@ -74689,7 +73624,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.OrderQtyDataOrBuilder getOrderQtyDataOrBuilder();
 
-    // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 19;
     /**
      * <code>optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 19;</code>
      */
@@ -74699,7 +73633,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum getPriceType();
 
-    // optional string secondary_order_id = 20;
     /**
      * <code>optional string secondary_order_id = 20;</code>
      */
@@ -74714,7 +73647,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryOrderIdBytes();
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 21;
     /**
      * <code>optional .SingleGeneralOrderHandling.SideEnum side = 21;</code>
      */
@@ -74724,7 +73656,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum getSide();
 
-    // optional .Session.StandardHeader standard_header = 22;
     /**
      * <code>optional .Session.StandardHeader standard_header = 22;</code>
      */
@@ -74738,7 +73669,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 23;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 23;</code>
      */
@@ -74752,7 +73682,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 24;
     /**
      * <code>optional string text = 24;</code>
      */
@@ -74767,7 +73696,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 25;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 25;</code>
      */
@@ -74796,8 +73724,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.ExecutionAcknowledgement}
    */
   public static final class ExecutionAcknowledgement extends
-      com.google.protobuf.GeneratedMessage
-      implements ExecutionAcknowledgementOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.ExecutionAcknowledgement)
+      ExecutionAcknowledgementOrBuilder {
     // Use ExecutionAcknowledgement.newBuilder() to construct.
     private ExecutionAcknowledgement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -74849,8 +73778,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              clOrdId_ = input.readBytes();
+              clOrdId_ = bs;
               break;
             }
             case 25: {
@@ -74896,8 +73826,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 74: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000100;
-              execId_ = input.readBytes();
+              execId_ = bs;
               break;
             }
             case 82: {
@@ -74947,8 +73878,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
-              orderId_ = input.readBytes();
+              orderId_ = bs;
               break;
             }
             case 146: {
@@ -74976,8 +73908,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 162: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00040000;
-              secondaryOrderId_ = input.readBytes();
+              secondaryOrderId_ = bs;
               break;
             }
             case 168: {
@@ -75018,8 +73951,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 194: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00400000;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 202: {
@@ -75076,7 +74010,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional sfixed64 avg_px = 1;
     public static final int AVG_PX_FIELD_NUMBER = 1;
     private long avgPx_;
     /**
@@ -75092,7 +74025,6 @@ public final class SingleGeneralOrderHandling {
       return avgPx_;
     }
 
-    // optional string cl_ord_id = 2;
     public static final int CL_ORD_ID_FIELD_NUMBER = 2;
     private java.lang.Object clOrdId_;
     /**
@@ -75135,7 +74067,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional sfixed64 cum_qty = 3;
     public static final int CUM_QTY_FIELD_NUMBER = 3;
     private long cumQty_;
     /**
@@ -75151,7 +74082,6 @@ public final class SingleGeneralOrderHandling {
       return cumQty_;
     }
 
-    // optional sfixed32 cum_qty_exponent = 4;
     public static final int CUM_QTY_EXPONENT_FIELD_NUMBER = 4;
     private int cumQtyExponent_;
     /**
@@ -75167,7 +74097,6 @@ public final class SingleGeneralOrderHandling {
       return cumQtyExponent_;
     }
 
-    // optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 5;
     public static final int DKREASON_FIELD_NUMBER = 5;
     private org.fixprotocol.components.SingleGeneralOrderHandling.DKReasonEnum dkreason_;
     /**
@@ -75183,7 +74112,6 @@ public final class SingleGeneralOrderHandling {
       return dkreason_;
     }
 
-    // optional bytes encoded_text = 6;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 6;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -75199,7 +74127,6 @@ public final class SingleGeneralOrderHandling {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 7;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 7;
     private int encodedTextLen_;
     /**
@@ -75215,7 +74142,6 @@ public final class SingleGeneralOrderHandling {
       return encodedTextLen_;
     }
 
-    // optional .SingleGeneralOrderHandling.ExecAckStatusEnum exec_ack_status = 8;
     public static final int EXEC_ACK_STATUS_FIELD_NUMBER = 8;
     private org.fixprotocol.components.SingleGeneralOrderHandling.ExecAckStatusEnum execAckStatus_;
     /**
@@ -75231,7 +74157,6 @@ public final class SingleGeneralOrderHandling {
       return execAckStatus_;
     }
 
-    // optional string exec_id = 9;
     public static final int EXEC_ID_FIELD_NUMBER = 9;
     private java.lang.Object execId_;
     /**
@@ -75274,7 +74199,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 10;
     public static final int INSTRMT_LEG_GRP_FIELD_NUMBER = 10;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_;
     /**
@@ -75310,7 +74234,6 @@ public final class SingleGeneralOrderHandling {
       return instrmtLegGrp_.get(index);
     }
 
-    // optional .Common.Instrument instrument = 11;
     public static final int INSTRUMENT_FIELD_NUMBER = 11;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -75332,7 +74255,6 @@ public final class SingleGeneralOrderHandling {
       return instrument_;
     }
 
-    // optional sfixed64 last_par_px = 12;
     public static final int LAST_PAR_PX_FIELD_NUMBER = 12;
     private long lastParPx_;
     /**
@@ -75348,7 +74270,6 @@ public final class SingleGeneralOrderHandling {
       return lastParPx_;
     }
 
-    // optional sfixed32 last_par_px_exponent = 13;
     public static final int LAST_PAR_PX_EXPONENT_FIELD_NUMBER = 13;
     private int lastParPxExponent_;
     /**
@@ -75364,7 +74285,6 @@ public final class SingleGeneralOrderHandling {
       return lastParPxExponent_;
     }
 
-    // optional double last_px = 14;
     public static final int LAST_PX_FIELD_NUMBER = 14;
     private double lastPx_;
     /**
@@ -75380,7 +74300,6 @@ public final class SingleGeneralOrderHandling {
       return lastPx_;
     }
 
-    // optional sfixed64 last_qty = 15;
     public static final int LAST_QTY_FIELD_NUMBER = 15;
     private long lastQty_;
     /**
@@ -75396,7 +74315,6 @@ public final class SingleGeneralOrderHandling {
       return lastQty_;
     }
 
-    // optional sfixed32 last_qty_exponent = 16;
     public static final int LAST_QTY_EXPONENT_FIELD_NUMBER = 16;
     private int lastQtyExponent_;
     /**
@@ -75412,7 +74330,6 @@ public final class SingleGeneralOrderHandling {
       return lastQtyExponent_;
     }
 
-    // optional string order_id = 17;
     public static final int ORDER_ID_FIELD_NUMBER = 17;
     private java.lang.Object orderId_;
     /**
@@ -75455,7 +74372,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .Common.OrderQtyData order_qty_data = 18;
     public static final int ORDER_QTY_DATA_FIELD_NUMBER = 18;
     private org.fixprotocol.components.Common.OrderQtyData orderQtyData_;
     /**
@@ -75477,7 +74393,6 @@ public final class SingleGeneralOrderHandling {
       return orderQtyData_;
     }
 
-    // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 19;
     public static final int PRICE_TYPE_FIELD_NUMBER = 19;
     private org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum priceType_;
     /**
@@ -75493,7 +74408,6 @@ public final class SingleGeneralOrderHandling {
       return priceType_;
     }
 
-    // optional string secondary_order_id = 20;
     public static final int SECONDARY_ORDER_ID_FIELD_NUMBER = 20;
     private java.lang.Object secondaryOrderId_;
     /**
@@ -75536,7 +74450,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 21;
     public static final int SIDE_FIELD_NUMBER = 21;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_;
     /**
@@ -75552,7 +74465,6 @@ public final class SingleGeneralOrderHandling {
       return side_;
     }
 
-    // optional .Session.StandardHeader standard_header = 22;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 22;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -75574,7 +74486,6 @@ public final class SingleGeneralOrderHandling {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 23;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 23;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -75596,7 +74507,6 @@ public final class SingleGeneralOrderHandling {
       return standardTrailer_;
     }
 
-    // optional string text = 24;
     public static final int TEXT_FIELD_NUMBER = 24;
     private java.lang.Object text_;
     /**
@@ -75639,7 +74549,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 25;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 25;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -75705,7 +74614,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -75980,8 +74890,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.ExecutionAcknowledgement}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.ExecutionAcknowledgementOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.ExecutionAcknowledgement)
+        org.fixprotocol.components.SingleGeneralOrderHandling.ExecutionAcknowledgementOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_descriptor;
@@ -76422,7 +75333,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional sfixed64 avg_px = 1;
       private long avgPx_ ;
       /**
        * <code>optional sfixed64 avg_px = 1;</code>
@@ -76455,7 +75365,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string cl_ord_id = 2;
       private java.lang.Object clOrdId_ = "";
       /**
        * <code>optional string cl_ord_id = 2;</code>
@@ -76469,9 +75378,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getClOrdId() {
         java.lang.Object ref = clOrdId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          clOrdId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            clOrdId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -76529,7 +75441,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 cum_qty = 3;
       private long cumQty_ ;
       /**
        * <code>optional sfixed64 cum_qty = 3;</code>
@@ -76562,7 +75473,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 cum_qty_exponent = 4;
       private int cumQtyExponent_ ;
       /**
        * <code>optional sfixed32 cum_qty_exponent = 4;</code>
@@ -76595,7 +75505,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 5;
       private org.fixprotocol.components.SingleGeneralOrderHandling.DKReasonEnum dkreason_ = org.fixprotocol.components.SingleGeneralOrderHandling.DKReasonEnum.DKREASON_NO_MATCHING_ORDER;
       /**
        * <code>optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 5;</code>
@@ -76631,7 +75540,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bytes encoded_text = 6;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 6;</code>
@@ -76667,7 +75575,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 7;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 7;</code>
@@ -76700,7 +75607,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.ExecAckStatusEnum exec_ack_status = 8;
       private org.fixprotocol.components.SingleGeneralOrderHandling.ExecAckStatusEnum execAckStatus_ = org.fixprotocol.components.SingleGeneralOrderHandling.ExecAckStatusEnum.EXEC_ACK_STATUS_ACCEPTED;
       /**
        * <code>optional .SingleGeneralOrderHandling.ExecAckStatusEnum exec_ack_status = 8;</code>
@@ -76736,7 +75642,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string exec_id = 9;
       private java.lang.Object execId_ = "";
       /**
        * <code>optional string exec_id = 9;</code>
@@ -76750,9 +75655,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getExecId() {
         java.lang.Object ref = execId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          execId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            execId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -76810,7 +75718,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 10;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegGrpIsMutable() {
@@ -76952,7 +75859,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegGrp> values) {
         if (instrmtLegGrpBuilder_ == null) {
           ensureInstrmtLegGrpIsMutable();
-          super.addAll(values, instrmtLegGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegGrp_);
           onChanged();
         } else {
           instrmtLegGrpBuilder_.addAllMessages(values);
@@ -77050,7 +75958,6 @@ public final class SingleGeneralOrderHandling {
         return instrmtLegGrpBuilder_;
       }
 
-      // optional .Common.Instrument instrument = 11;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -77159,7 +76066,7 @@ public final class SingleGeneralOrderHandling {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -77167,7 +76074,6 @@ public final class SingleGeneralOrderHandling {
         return instrumentBuilder_;
       }
 
-      // optional sfixed64 last_par_px = 12;
       private long lastParPx_ ;
       /**
        * <code>optional sfixed64 last_par_px = 12;</code>
@@ -77200,7 +76106,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_par_px_exponent = 13;
       private int lastParPxExponent_ ;
       /**
        * <code>optional sfixed32 last_par_px_exponent = 13;</code>
@@ -77233,7 +76138,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double last_px = 14;
       private double lastPx_ ;
       /**
        * <code>optional double last_px = 14;</code>
@@ -77266,7 +76170,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 last_qty = 15;
       private long lastQty_ ;
       /**
        * <code>optional sfixed64 last_qty = 15;</code>
@@ -77299,7 +76202,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_qty_exponent = 16;
       private int lastQtyExponent_ ;
       /**
        * <code>optional sfixed32 last_qty_exponent = 16;</code>
@@ -77332,7 +76234,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string order_id = 17;
       private java.lang.Object orderId_ = "";
       /**
        * <code>optional string order_id = 17;</code>
@@ -77346,9 +76247,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrderId() {
         java.lang.Object ref = orderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            orderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -77406,7 +76310,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.OrderQtyData order_qty_data = 18;
       private org.fixprotocol.components.Common.OrderQtyData orderQtyData_ = org.fixprotocol.components.Common.OrderQtyData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder> orderQtyDataBuilder_;
@@ -77515,7 +76418,7 @@ public final class SingleGeneralOrderHandling {
         if (orderQtyDataBuilder_ == null) {
           orderQtyDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder>(
-                  orderQtyData_,
+                  getOrderQtyData(),
                   getParentForChildren(),
                   isClean());
           orderQtyData_ = null;
@@ -77523,7 +76426,6 @@ public final class SingleGeneralOrderHandling {
         return orderQtyDataBuilder_;
       }
 
-      // optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 19;
       private org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum priceType_ = org.fixprotocol.components.SingleGeneralOrderHandling.PriceTypeEnum.PRICE_TYPE_FIXED_AMOUNT;
       /**
        * <code>optional .SingleGeneralOrderHandling.PriceTypeEnum price_type = 19;</code>
@@ -77559,7 +76461,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string secondary_order_id = 20;
       private java.lang.Object secondaryOrderId_ = "";
       /**
        * <code>optional string secondary_order_id = 20;</code>
@@ -77573,9 +76474,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryOrderId() {
         java.lang.Object ref = secondaryOrderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryOrderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryOrderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -77633,7 +76537,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SideEnum side = 21;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_ = org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum.SIDE_BUY;
       /**
        * <code>optional .SingleGeneralOrderHandling.SideEnum side = 21;</code>
@@ -77669,7 +76572,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 22;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -77778,7 +76680,7 @@ public final class SingleGeneralOrderHandling {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -77786,7 +76688,6 @@ public final class SingleGeneralOrderHandling {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 23;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -77895,7 +76796,7 @@ public final class SingleGeneralOrderHandling {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -77903,7 +76804,6 @@ public final class SingleGeneralOrderHandling {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 24;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 24;</code>
@@ -77917,9 +76817,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -77977,7 +76880,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 25;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -78119,7 +77021,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -78228,10 +77131,10 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.ExecutionAcknowledgement)
   }
 
-  public interface DontKnowTradeOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface DontKnowTradeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SingleGeneralOrderHandling.DontKnowTrade)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 1;
     /**
      * <code>optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 1;</code>
      */
@@ -78241,7 +77144,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.DKReasonEnum getDkreason();
 
-    // optional string exec_id = 2;
     /**
      * <code>optional string exec_id = 2;</code>
      */
@@ -78256,7 +77158,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getExecIdBytes();
 
-    // optional double last_px = 3;
     /**
      * <code>optional double last_px = 3;</code>
      */
@@ -78266,7 +77167,6 @@ public final class SingleGeneralOrderHandling {
      */
     double getLastPx();
 
-    // optional sfixed64 last_qty = 4;
     /**
      * <code>optional sfixed64 last_qty = 4;</code>
      */
@@ -78276,7 +77176,6 @@ public final class SingleGeneralOrderHandling {
      */
     long getLastQty();
 
-    // optional sfixed32 last_qty_exponent = 5;
     /**
      * <code>optional sfixed32 last_qty_exponent = 5;</code>
      */
@@ -78286,7 +77185,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getLastQtyExponent();
 
-    // optional string order_id = 6;
     /**
      * <code>optional string order_id = 6;</code>
      */
@@ -78301,7 +77199,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getOrderIdBytes();
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 7;
     /**
      * <code>optional .SingleGeneralOrderHandling.SideEnum side = 7;</code>
      */
@@ -78311,7 +77208,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum getSide();
 
-    // optional .Session.StandardHeader standard_header = 8;
     /**
      * <code>optional .Session.StandardHeader standard_header = 8;</code>
      */
@@ -78325,7 +77221,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 9;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 9;</code>
      */
@@ -78339,7 +77234,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 10;
     /**
      * <code>optional string text = 10;</code>
      */
@@ -78354,7 +77248,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional bytes encoded_text = 11;
     /**
      * <code>optional bytes encoded_text = 11;</code>
      */
@@ -78364,7 +77257,6 @@ public final class SingleGeneralOrderHandling {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 12;
     /**
      * <code>optional fixed32 encoded_text_len = 12;</code>
      */
@@ -78374,7 +77266,6 @@ public final class SingleGeneralOrderHandling {
      */
     int getEncodedTextLen();
 
-    // optional .Common.Instrument instrument = 13;
     /**
      * <code>optional .Common.Instrument instrument = 13;</code>
      */
@@ -78388,7 +77279,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .Common.OrderQtyData order_qty_data = 14;
     /**
      * <code>optional .Common.OrderQtyData order_qty_data = 14;</code>
      */
@@ -78402,7 +77292,6 @@ public final class SingleGeneralOrderHandling {
      */
     org.fixprotocol.components.Common.OrderQtyDataOrBuilder getOrderQtyDataOrBuilder();
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 15;
     /**
      * <code>repeated .Common.InstrmtLegGrp instrmt_leg_grp = 15;</code>
      */
@@ -78427,7 +77316,6 @@ public final class SingleGeneralOrderHandling {
     org.fixprotocol.components.Common.InstrmtLegGrpOrBuilder getInstrmtLegGrpOrBuilder(
         int index);
 
-    // optional string secondary_order_id = 16;
     /**
      * <code>optional string secondary_order_id = 16;</code>
      */
@@ -78442,7 +77330,6 @@ public final class SingleGeneralOrderHandling {
     com.google.protobuf.ByteString
         getSecondaryOrderIdBytes();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 17;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 17;</code>
      */
@@ -78471,8 +77358,9 @@ public final class SingleGeneralOrderHandling {
    * Protobuf type {@code SingleGeneralOrderHandling.DontKnowTrade}
    */
   public static final class DontKnowTrade extends
-      com.google.protobuf.GeneratedMessage
-      implements DontKnowTradeOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:SingleGeneralOrderHandling.DontKnowTrade)
+      DontKnowTradeOrBuilder {
     // Use DontKnowTrade.newBuilder() to construct.
     private DontKnowTrade(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -78530,8 +77418,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              execId_ = input.readBytes();
+              execId_ = bs;
               break;
             }
             case 25: {
@@ -78550,8 +77439,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
-              orderId_ = input.readBytes();
+              orderId_ = bs;
               break;
             }
             case 56: {
@@ -78592,8 +77482,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 82: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000200;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 90: {
@@ -78641,8 +77532,9 @@ public final class SingleGeneralOrderHandling {
               break;
             }
             case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00004000;
-              secondaryOrderId_ = input.readBytes();
+              secondaryOrderId_ = bs;
               break;
             }
             case 138: {
@@ -78699,7 +77591,6 @@ public final class SingleGeneralOrderHandling {
     }
 
     private int bitField0_;
-    // optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 1;
     public static final int DKREASON_FIELD_NUMBER = 1;
     private org.fixprotocol.components.SingleGeneralOrderHandling.DKReasonEnum dkreason_;
     /**
@@ -78715,7 +77606,6 @@ public final class SingleGeneralOrderHandling {
       return dkreason_;
     }
 
-    // optional string exec_id = 2;
     public static final int EXEC_ID_FIELD_NUMBER = 2;
     private java.lang.Object execId_;
     /**
@@ -78758,7 +77648,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional double last_px = 3;
     public static final int LAST_PX_FIELD_NUMBER = 3;
     private double lastPx_;
     /**
@@ -78774,7 +77663,6 @@ public final class SingleGeneralOrderHandling {
       return lastPx_;
     }
 
-    // optional sfixed64 last_qty = 4;
     public static final int LAST_QTY_FIELD_NUMBER = 4;
     private long lastQty_;
     /**
@@ -78790,7 +77678,6 @@ public final class SingleGeneralOrderHandling {
       return lastQty_;
     }
 
-    // optional sfixed32 last_qty_exponent = 5;
     public static final int LAST_QTY_EXPONENT_FIELD_NUMBER = 5;
     private int lastQtyExponent_;
     /**
@@ -78806,7 +77693,6 @@ public final class SingleGeneralOrderHandling {
       return lastQtyExponent_;
     }
 
-    // optional string order_id = 6;
     public static final int ORDER_ID_FIELD_NUMBER = 6;
     private java.lang.Object orderId_;
     /**
@@ -78849,7 +77735,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional .SingleGeneralOrderHandling.SideEnum side = 7;
     public static final int SIDE_FIELD_NUMBER = 7;
     private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_;
     /**
@@ -78865,7 +77750,6 @@ public final class SingleGeneralOrderHandling {
       return side_;
     }
 
-    // optional .Session.StandardHeader standard_header = 8;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 8;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -78887,7 +77771,6 @@ public final class SingleGeneralOrderHandling {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 9;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 9;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -78909,7 +77792,6 @@ public final class SingleGeneralOrderHandling {
       return standardTrailer_;
     }
 
-    // optional string text = 10;
     public static final int TEXT_FIELD_NUMBER = 10;
     private java.lang.Object text_;
     /**
@@ -78952,7 +77834,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // optional bytes encoded_text = 11;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 11;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -78968,7 +77849,6 @@ public final class SingleGeneralOrderHandling {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 12;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 12;
     private int encodedTextLen_;
     /**
@@ -78984,7 +77864,6 @@ public final class SingleGeneralOrderHandling {
       return encodedTextLen_;
     }
 
-    // optional .Common.Instrument instrument = 13;
     public static final int INSTRUMENT_FIELD_NUMBER = 13;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -79006,7 +77885,6 @@ public final class SingleGeneralOrderHandling {
       return instrument_;
     }
 
-    // optional .Common.OrderQtyData order_qty_data = 14;
     public static final int ORDER_QTY_DATA_FIELD_NUMBER = 14;
     private org.fixprotocol.components.Common.OrderQtyData orderQtyData_;
     /**
@@ -79028,7 +77906,6 @@ public final class SingleGeneralOrderHandling {
       return orderQtyData_;
     }
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 15;
     public static final int INSTRMT_LEG_GRP_FIELD_NUMBER = 15;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_;
     /**
@@ -79064,7 +77941,6 @@ public final class SingleGeneralOrderHandling {
       return instrmtLegGrp_.get(index);
     }
 
-    // optional string secondary_order_id = 16;
     public static final int SECONDARY_ORDER_ID_FIELD_NUMBER = 16;
     private java.lang.Object secondaryOrderId_;
     /**
@@ -79107,7 +77983,6 @@ public final class SingleGeneralOrderHandling {
       }
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 17;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 17;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -79165,7 +78040,8 @@ public final class SingleGeneralOrderHandling {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -79384,8 +78260,9 @@ public final class SingleGeneralOrderHandling {
      * Protobuf type {@code SingleGeneralOrderHandling.DontKnowTrade}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.SingleGeneralOrderHandling.DontKnowTradeOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SingleGeneralOrderHandling.DontKnowTrade)
+        org.fixprotocol.components.SingleGeneralOrderHandling.DontKnowTradeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.SingleGeneralOrderHandling.internal_static_SingleGeneralOrderHandling_DontKnowTrade_descriptor;
@@ -79752,7 +78629,6 @@ public final class SingleGeneralOrderHandling {
       }
       private int bitField0_;
 
-      // optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 1;
       private org.fixprotocol.components.SingleGeneralOrderHandling.DKReasonEnum dkreason_ = org.fixprotocol.components.SingleGeneralOrderHandling.DKReasonEnum.DKREASON_NO_MATCHING_ORDER;
       /**
        * <code>optional .SingleGeneralOrderHandling.DKReasonEnum dkreason = 1;</code>
@@ -79788,7 +78664,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string exec_id = 2;
       private java.lang.Object execId_ = "";
       /**
        * <code>optional string exec_id = 2;</code>
@@ -79802,9 +78677,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getExecId() {
         java.lang.Object ref = execId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          execId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            execId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -79862,7 +78740,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional double last_px = 3;
       private double lastPx_ ;
       /**
        * <code>optional double last_px = 3;</code>
@@ -79895,7 +78772,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed64 last_qty = 4;
       private long lastQty_ ;
       /**
        * <code>optional sfixed64 last_qty = 4;</code>
@@ -79928,7 +78804,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional sfixed32 last_qty_exponent = 5;
       private int lastQtyExponent_ ;
       /**
        * <code>optional sfixed32 last_qty_exponent = 5;</code>
@@ -79961,7 +78836,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional string order_id = 6;
       private java.lang.Object orderId_ = "";
       /**
        * <code>optional string order_id = 6;</code>
@@ -79975,9 +78849,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getOrderId() {
         java.lang.Object ref = orderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          orderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            orderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -80035,7 +78912,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .SingleGeneralOrderHandling.SideEnum side = 7;
       private org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum side_ = org.fixprotocol.components.SingleGeneralOrderHandling.SideEnum.SIDE_BUY;
       /**
        * <code>optional .SingleGeneralOrderHandling.SideEnum side = 7;</code>
@@ -80071,7 +78947,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 8;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -80180,7 +79055,7 @@ public final class SingleGeneralOrderHandling {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -80188,7 +79063,6 @@ public final class SingleGeneralOrderHandling {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 9;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -80297,7 +79171,7 @@ public final class SingleGeneralOrderHandling {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -80305,7 +79179,6 @@ public final class SingleGeneralOrderHandling {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 10;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 10;</code>
@@ -80319,9 +79192,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -80379,7 +79255,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional bytes encoded_text = 11;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 11;</code>
@@ -80415,7 +79290,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 12;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 12;</code>
@@ -80448,7 +79322,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 13;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -80557,7 +79430,7 @@ public final class SingleGeneralOrderHandling {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -80565,7 +79438,6 @@ public final class SingleGeneralOrderHandling {
         return instrumentBuilder_;
       }
 
-      // optional .Common.OrderQtyData order_qty_data = 14;
       private org.fixprotocol.components.Common.OrderQtyData orderQtyData_ = org.fixprotocol.components.Common.OrderQtyData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder> orderQtyDataBuilder_;
@@ -80674,7 +79546,7 @@ public final class SingleGeneralOrderHandling {
         if (orderQtyDataBuilder_ == null) {
           orderQtyDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder>(
-                  orderQtyData_,
+                  getOrderQtyData(),
                   getParentForChildren(),
                   isClean());
           orderQtyData_ = null;
@@ -80682,7 +79554,6 @@ public final class SingleGeneralOrderHandling {
         return orderQtyDataBuilder_;
       }
 
-      // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 15;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegGrpIsMutable() {
@@ -80824,7 +79695,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegGrp> values) {
         if (instrmtLegGrpBuilder_ == null) {
           ensureInstrmtLegGrpIsMutable();
-          super.addAll(values, instrmtLegGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegGrp_);
           onChanged();
         } else {
           instrmtLegGrpBuilder_.addAllMessages(values);
@@ -80922,7 +79794,6 @@ public final class SingleGeneralOrderHandling {
         return instrmtLegGrpBuilder_;
       }
 
-      // optional string secondary_order_id = 16;
       private java.lang.Object secondaryOrderId_ = "";
       /**
        * <code>optional string secondary_order_id = 16;</code>
@@ -80936,9 +79807,12 @@ public final class SingleGeneralOrderHandling {
       public java.lang.String getSecondaryOrderId() {
         java.lang.Object ref = secondaryOrderId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          secondaryOrderId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondaryOrderId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -80996,7 +79870,6 @@ public final class SingleGeneralOrderHandling {
         return this;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 17;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -81138,7 +80011,8 @@ public final class SingleGeneralOrderHandling {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -81247,77 +80121,77 @@ public final class SingleGeneralOrderHandling {
     // @@protoc_insertion_point(class_scope:SingleGeneralOrderHandling.DontKnowTrade)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_SettlTypeUnion_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_SettlTypeUnion_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_NewOrderSingle_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_NewOrderSingle_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_OrderCancelRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_OrderCancelRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_OrderCancelReject_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_OrderCancelReject_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_FillsGrp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_FillsGrp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_ExecutionReport_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_ExecutionReport_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_OrderStatusRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_OrderStatusRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_SingleGeneralOrderHandling_DontKnowTrade_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -82567,1451 +81441,13 @@ public final class SingleGeneralOrderHandling {
       "lOrderHandling"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_descriptor,
-              new java.lang.String[] { "AcctIdSource", "AcctIdSourceSfixed64", });
-          internal_static_SingleGeneralOrderHandling_SettlTypeUnion_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_SingleGeneralOrderHandling_SettlTypeUnion_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_SettlTypeUnion_descriptor,
-              new java.lang.String[] { "SettlType", "SettlTypeTenor", });
-          internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_descriptor,
-              new java.lang.String[] { "TargetStrategy", "TargetStrategySfixed64", });
-          internal_static_SingleGeneralOrderHandling_NewOrderSingle_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_SingleGeneralOrderHandling_NewOrderSingle_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_NewOrderSingle_descriptor,
-              new java.lang.String[] { "Account", "ClOrdId", "Currency", "ExDestination", "ExecInst", "HandlInst", "IoiId", "MaxFloor", "MaxFloorExponent", "MinQty", "MinQtyExponent", "OrdType", "Price", "PriceExponent", "ProcessCode", "SettlDate", "SettlType", "Side", "StandardHeader", "StandardTrailer", "StopPx", "StopPxExponent", "Text", "TimeInForce", "ExpireTime", "ForexReq", "LocateReqd", "PrevClosePx", "PrevClosePxExponent", "QuoteId", "SettlCurrency", "CoveredOrUncovered", "MaxShow", "MaxShowExponent", "OrderQty2", "OrderQty2Exponent", "PositionEffect", "SettlDate2", "ComplianceId", "EffectiveTime", "EncodedText", "EncodedTextLen", "ExpireDate", "GtBookingInst", "SolicitedFlag", "TransactTime", "AccountType", "BookingUnit", "CancellationRights", "CashMargin", "ClOrdLinkId", "ClearingFeeIndicator", "CommissionData", "CustOrderCapacity", "DayBookingInst", "Designation", "Instrument", "MoneyLaunderingStatus", "OrderCapacity", "OrderQtyData", "OrderRestrictions", "Parties", "PreallocMethod", "Price2", "Price2Exponent", "PriceType", "RegistId", "SecondaryClOrdId", "SpreadOrBenchmarkCurveData", "Stipulations", "TradeOriginationDate", "YieldData", "AcctIdSource", "AllocId", "BookingType", "CustDirectedOrder", "CustOrderHandlingInst", "DiscretionInstructions", "DisplayInstruction", "ExDestinationIdSource", "FinancingDetails", "ManualOrderIndicator", "MatchIncrement", "MatchIncrementExponent", "MaxPriceLevels", "OrderHandlingInstSource", "ParticipationRate", "ParticipationRateExponent", "PegInstructions", "PreAllocGrp", "PreTradeAnonymity", "PriceProtectionScope", "QtyType", "ReceivedDeptId", "RefOrderId", "RefOrderIdSource", "StrategyParametersGrp", "TargetStrategy", "TargetStrategyParameters", "TradeDate", "TrdRegTimestamps", "TrdgSesGrp", "TriggeringInstruction", "UndInstrmtGrp", });
-          internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_descriptor,
-              new java.lang.String[] { "Account", "ClOrdId", "Currency", "ExecInst", "HandlInst", "ListId", "OrdType", "OrderId", "OrigClOrdId", "Price", "PriceExponent", "SettlDate", "SettlType", "Side", "StandardHeader", "StandardTrailer", "StopPx", "StopPxExponent", "Text", "TimeInForce", "ExDestination", "MaxFloor", "MaxFloorExponent", "MinQty", "MinQtyExponent", "ExpireTime", "ForexReq", "SettlCurrency", "CoveredOrUncovered", "LocateReqd", "MaxShow", "MaxShowExponent", "OrderQty2", "OrderQty2Exponent", "PositionEffect", "SettlDate2", "ComplianceId", "EffectiveTime", "EncodedText", "EncodedTextLen", "ExpireDate", "GtBookingInst", "SolicitedFlag", "TransactTime", "AccountType", "BookingUnit", "CancellationRights", "CashMargin", "ClOrdLinkId", "ClearingFeeIndicator", "CommissionData", "CustOrderCapacity", "DayBookingInst", "Designation", "Instrument", "MoneyLaunderingStatus", "OrderCapacity", "OrderQtyData", "OrderRestrictions", "OrigOrdModTime", "Parties", "PreallocMethod", "Price2", "Price2Exponent", "PriceType", "RegistId", "SecondaryClOrdId", "SpreadOrBenchmarkCurveData", "TradeOriginationDate", "YieldData", "AcctIdSource", "AllocId", "BookingType", "CustDirectedOrder", "CustOrderHandlingInst", "DiscretionInstructions", "DisplayInstruction", "ExDestinationIdSource", "FinancingDetails", "ManualOrderIndicator", "MatchIncrement", "MatchIncrementExponent", "MaxPriceLevels", "OrderHandlingInstSource", "ParticipationRate", "ParticipationRateExponent", "PegInstructions", "PreAllocGrp", "PreTradeAnonymity", "PriceProtectionScope", "QtyType", "ReceivedDeptId", "StrategyParametersGrp", "TargetStrategy", "TargetStrategyParameters", "TradeDate", "TrdRegTimestamps", "TrdgSesGrp", "TriggeringInstruction", "UndInstrmtGrp", });
-          internal_static_SingleGeneralOrderHandling_OrderCancelRequest_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_SingleGeneralOrderHandling_OrderCancelRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_OrderCancelRequest_descriptor,
-              new java.lang.String[] { "ClOrdId", "ListId", "OrderId", "OrigClOrdId", "Side", "StandardHeader", "StandardTrailer", "Text", "Account", "ComplianceId", "EncodedText", "EncodedTextLen", "TransactTime", "AccountType", "ClOrdLinkId", "Instrument", "OrderQtyData", "OrigOrdModTime", "Parties", "SecondaryClOrdId", "AcctIdSource", "FinancingDetails", "UndInstrmtGrp", });
-          internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_descriptor =
-            getDescriptor().getMessageTypes().get(6);
-          internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_descriptor,
-              new java.lang.String[] { "CxlRejReason", "CxlRejReasonSfixed64", });
-          internal_static_SingleGeneralOrderHandling_OrderCancelReject_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_SingleGeneralOrderHandling_OrderCancelReject_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_OrderCancelReject_descriptor,
-              new java.lang.String[] { "ClOrdId", "CxlRejReason", "ListId", "OrderId", "StandardHeader", "StandardTrailer", "Text", "OrdStatus", "OrigClOrdId", "SecondaryOrderId", "Account", "CxlRejResponseTo", "EncodedText", "EncodedTextLen", "TransactTime", "AccountType", "ClOrdLinkId", "OrigOrdModTime", "SecondaryClOrdId", "TradeOriginationDate", "WorkingIndicator", "AcctIdSource", "TradeDate", });
-          internal_static_SingleGeneralOrderHandling_FillsGrp_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_SingleGeneralOrderHandling_FillsGrp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_FillsGrp_descriptor,
-              new java.lang.String[] { "FillExecId", "FillPx", "FillPxExponent", "FillQty", "FillQtyExponent", "NestedParties4", "FillLiquidityInd", });
-          internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_descriptor =
-            getDescriptor().getMessageTypes().get(9);
-          internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_descriptor,
-              new java.lang.String[] { "OrdRejReason", "OrdRejReasonSfixed64", });
-          internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_descriptor =
-            getDescriptor().getMessageTypes().get(10);
-          internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_descriptor,
-              new java.lang.String[] { "ExecRestatementReason", "ExecRestatementReasonSfixed64", });
-          internal_static_SingleGeneralOrderHandling_ExecutionReport_descriptor =
-            getDescriptor().getMessageTypes().get(11);
-          internal_static_SingleGeneralOrderHandling_ExecutionReport_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_ExecutionReport_descriptor,
-              new java.lang.String[] { "Account", "AvgPx", "ClOrdId", "CumQty", "CumQtyExponent", "Currency", "ExecId", "ExecInst", "ExecRefId", "LastCapacity", "LastMkt", "LastPx", "LastQty", "LastQtyExponent", "ListId", "OrdRejReason", "OrdStatus", "OrdType", "OrderId", "Price", "PriceExponent", "SettlDate", "SettlType", "Side", "StandardHeader", "StandardTrailer", "StopPx", "StopPxExponent", "Text", "TimeInForce", "TradeDate", "TransactTime", "ReportToExch", "ExpireTime", "NetMoney", "NetMoneyExponent", "SettlCurrAmt", "SettlCurrAmtExponent", "SettlCurrency", "ExecType", "LastForwardPoints", "LastForwardPointsExponent", "LastSpotRate", "LastSpotRateExponent", "LeavesQty", "LeavesQtyExponent", "OrigClOrdId", "SecondaryOrderId", "SettlCurrFxRate", "SettlCurrFxRateCalc", "ComplianceId", "DayAvgPx", "DayAvgPxExponent", "DayCumQty", "DayCumQtyExponent", "DayOrderQty", "DayOrderQtyExponent", "EffectiveTime", "EncodedText", "EncodedTextLen", "ExecRestatementReason", "ExpireDate", "GtBookingInst", "GrossTradeAmt", "GrossTradeAmtExponent", "HandlInst", "MaxFloor", "MaxFloorExponent", "MaxShow", "MaxShowExponent", "MinQty", "MinQtyExponent", "MultiLegReportingType", "OrderQty2", "OrderQty2Exponent", "PositionEffect", "SettlDate2", "SolicitedFlag", "TradingSessionId", "AccountType", "AccruedInterestAmt", "AccruedInterestAmtExponent", "AccruedInterestRate", "AccruedInterestRateExponent", "BasisFeatureDate", "BasisFeaturePrice", "BasisFeaturePriceExponent", "BookingUnit", "CancellationRights", "CashMargin", "ClOrdLinkId", "ClearingFeeIndicator", "CommissionData", "Concession", "ConcessionExponent", "CrossId", "CrossType", "CustOrderCapacity", "DayBookingInst", "Designation", "ExDate", "ExecPriceAdjustment", "ExecPriceType", "ExecValuationPoint", "Instrument", "LastForwardPoints2", "LastForwardPoints2Exponent", "MoneyLaunderingStatus", "NumDaysInterest", "OrderCapacity", "OrderQtyData", "OrderRestrictions", "OrigCrossId", "Parties", "PreallocMethod", "PriceImprovement", "PriceImprovementExponent", "PriceType", "PriorityIndicator", "RegistId", "SecondaryClOrdId", "SecondaryExecId", "SpreadOrBenchmarkCurveData", "Stipulations", "TotalTakedown", "TotalTakedownExponent", "TradeOriginationDate", "TradedFlatSwitch", "TradingSessionSubId", "TransBkdTime", "UnderlyingLastPx", "UnderlyingLastPxExponent", "UnderlyingLastQty", "UnderlyingLastQtyExponent", "WorkingIndicator", "YieldData", "AcctIdSource", "AggressorIndicator", "BookingType", "CalculatedCcyLastQty", "CalculatedCcyLastQtyExponent", "ContAmtGrp", "ContraGrp", "CopyMsgIndicator", "CustDirectedOrder", "CustOrderHandlingInst", "DiscretionInstructions", "DiscretionPrice", "DiscretionPriceExponent", "DisplayInstruction", "EndAccruedInterestAmt", "EndAccruedInterestAmtExponent", "EndCash", "EndCashExponent", "FinancingDetails", "HostCrossId", "InstrmtLegExecGrp", "InterestAtMaturity", "InterestAtMaturityExponent", "LastLiquidityInd", "LastParPx", "LastParPxExponent", "LastRptRequested", "LastSwapPoints", "LastSwapPointsExponent", "LotType", "ManualOrderIndicator", "MassStatusReqId", "MatchIncrement", "MatchIncrementExponent", "MatchType", "MaxPriceLevels", "MiscFeesGrp", "OrdStatusReqId", "OrderCategory", "OrderHandlingInstSource", "ParticipationRate", "ParticipationRateExponent", "PegInstructions", "PeggedPrice", "PeggedPriceExponent", "PeggedRefPrice", "PeggedRefPriceExponent", "PreTradeAnonymity", "PriceProtectionScope", "QtyType", "QuoteRespId", "ReceivedDeptId", "StartCash", "StartCashExponent", "StrategyParametersGrp", "TargetStrategy", "TargetStrategyParameters", "TargetStrategyPerformance", "TimeBracket", "TotNumReports", "TrdRegTimestamps", "TriggeringInstruction", "UndInstrmtGrp", "AllocId", "ApplicationSequenceControl", "DividendYield", "DividendYieldExponent", "FillsGrp", "LastFragment", "PreAllocGrp", "PriceDelta", "RiskFreeRate", "TimeToExpiration", "TotNoFills", "TrdMatchId", "Volatility", "RateSource", });
-          internal_static_SingleGeneralOrderHandling_OrderStatusRequest_descriptor =
-            getDescriptor().getMessageTypes().get(12);
-          internal_static_SingleGeneralOrderHandling_OrderStatusRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_OrderStatusRequest_descriptor,
-              new java.lang.String[] { "ClOrdId", "OrderId", "Side", "StandardHeader", "StandardTrailer", "Account", "ClOrdLinkId", "Instrument", "Parties", "SecondaryClOrdId", "AcctIdSource", "FinancingDetails", "OrdStatusReqId", "UndInstrmtGrp", });
-          internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_descriptor =
-            getDescriptor().getMessageTypes().get(13);
-          internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_descriptor,
-              new java.lang.String[] { "AvgPx", "ClOrdId", "CumQty", "CumQtyExponent", "Dkreason", "EncodedText", "EncodedTextLen", "ExecAckStatus", "ExecId", "InstrmtLegGrp", "Instrument", "LastParPx", "LastParPxExponent", "LastPx", "LastQty", "LastQtyExponent", "OrderId", "OrderQtyData", "PriceType", "SecondaryOrderId", "Side", "StandardHeader", "StandardTrailer", "Text", "UndInstrmtGrp", });
-          internal_static_SingleGeneralOrderHandling_DontKnowTrade_descriptor =
-            getDescriptor().getMessageTypes().get(14);
-          internal_static_SingleGeneralOrderHandling_DontKnowTrade_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_SingleGeneralOrderHandling_DontKnowTrade_descriptor,
-              new java.lang.String[] { "Dkreason", "ExecId", "LastPx", "LastQty", "LastQtyExponent", "OrderId", "Side", "StandardHeader", "StandardTrailer", "Text", "EncodedText", "EncodedTextLen", "Instrument", "OrderQtyData", "InstrmtLegGrp", "SecondaryOrderId", "UndInstrmtGrp", });
-          com.google.protobuf.ExtensionRegistry registry =
-            com.google.protobuf.ExtensionRegistry.newInstance();
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Meta.exponent);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Meta.exponent);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumDeprecated);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          return registry;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
@@ -84020,6 +81456,1450 @@ public final class SingleGeneralOrderHandling {
           org.fixprotocol.components.Session.getDescriptor(),
           org.fixprotocol.components.Common.getDescriptor(),
         }, assigner);
+    internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_AcctIdSourceUnion_descriptor,
+        new java.lang.String[] { "AcctIdSource", "AcctIdSourceSfixed64", });
+    internal_static_SingleGeneralOrderHandling_SettlTypeUnion_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_SingleGeneralOrderHandling_SettlTypeUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_SettlTypeUnion_descriptor,
+        new java.lang.String[] { "SettlType", "SettlTypeTenor", });
+    internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_TargetStrategyUnion_descriptor,
+        new java.lang.String[] { "TargetStrategy", "TargetStrategySfixed64", });
+    internal_static_SingleGeneralOrderHandling_NewOrderSingle_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_SingleGeneralOrderHandling_NewOrderSingle_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_NewOrderSingle_descriptor,
+        new java.lang.String[] { "Account", "ClOrdId", "Currency", "ExDestination", "ExecInst", "HandlInst", "IoiId", "MaxFloor", "MaxFloorExponent", "MinQty", "MinQtyExponent", "OrdType", "Price", "PriceExponent", "ProcessCode", "SettlDate", "SettlType", "Side", "StandardHeader", "StandardTrailer", "StopPx", "StopPxExponent", "Text", "TimeInForce", "ExpireTime", "ForexReq", "LocateReqd", "PrevClosePx", "PrevClosePxExponent", "QuoteId", "SettlCurrency", "CoveredOrUncovered", "MaxShow", "MaxShowExponent", "OrderQty2", "OrderQty2Exponent", "PositionEffect", "SettlDate2", "ComplianceId", "EffectiveTime", "EncodedText", "EncodedTextLen", "ExpireDate", "GtBookingInst", "SolicitedFlag", "TransactTime", "AccountType", "BookingUnit", "CancellationRights", "CashMargin", "ClOrdLinkId", "ClearingFeeIndicator", "CommissionData", "CustOrderCapacity", "DayBookingInst", "Designation", "Instrument", "MoneyLaunderingStatus", "OrderCapacity", "OrderQtyData", "OrderRestrictions", "Parties", "PreallocMethod", "Price2", "Price2Exponent", "PriceType", "RegistId", "SecondaryClOrdId", "SpreadOrBenchmarkCurveData", "Stipulations", "TradeOriginationDate", "YieldData", "AcctIdSource", "AllocId", "BookingType", "CustDirectedOrder", "CustOrderHandlingInst", "DiscretionInstructions", "DisplayInstruction", "ExDestinationIdSource", "FinancingDetails", "ManualOrderIndicator", "MatchIncrement", "MatchIncrementExponent", "MaxPriceLevels", "OrderHandlingInstSource", "ParticipationRate", "ParticipationRateExponent", "PegInstructions", "PreAllocGrp", "PreTradeAnonymity", "PriceProtectionScope", "QtyType", "ReceivedDeptId", "RefOrderId", "RefOrderIdSource", "StrategyParametersGrp", "TargetStrategy", "TargetStrategyParameters", "TradeDate", "TrdRegTimestamps", "TrdgSesGrp", "TriggeringInstruction", "UndInstrmtGrp", });
+    internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_OrderCancelReplaceRequest_descriptor,
+        new java.lang.String[] { "Account", "ClOrdId", "Currency", "ExecInst", "HandlInst", "ListId", "OrdType", "OrderId", "OrigClOrdId", "Price", "PriceExponent", "SettlDate", "SettlType", "Side", "StandardHeader", "StandardTrailer", "StopPx", "StopPxExponent", "Text", "TimeInForce", "ExDestination", "MaxFloor", "MaxFloorExponent", "MinQty", "MinQtyExponent", "ExpireTime", "ForexReq", "SettlCurrency", "CoveredOrUncovered", "LocateReqd", "MaxShow", "MaxShowExponent", "OrderQty2", "OrderQty2Exponent", "PositionEffect", "SettlDate2", "ComplianceId", "EffectiveTime", "EncodedText", "EncodedTextLen", "ExpireDate", "GtBookingInst", "SolicitedFlag", "TransactTime", "AccountType", "BookingUnit", "CancellationRights", "CashMargin", "ClOrdLinkId", "ClearingFeeIndicator", "CommissionData", "CustOrderCapacity", "DayBookingInst", "Designation", "Instrument", "MoneyLaunderingStatus", "OrderCapacity", "OrderQtyData", "OrderRestrictions", "OrigOrdModTime", "Parties", "PreallocMethod", "Price2", "Price2Exponent", "PriceType", "RegistId", "SecondaryClOrdId", "SpreadOrBenchmarkCurveData", "TradeOriginationDate", "YieldData", "AcctIdSource", "AllocId", "BookingType", "CustDirectedOrder", "CustOrderHandlingInst", "DiscretionInstructions", "DisplayInstruction", "ExDestinationIdSource", "FinancingDetails", "ManualOrderIndicator", "MatchIncrement", "MatchIncrementExponent", "MaxPriceLevels", "OrderHandlingInstSource", "ParticipationRate", "ParticipationRateExponent", "PegInstructions", "PreAllocGrp", "PreTradeAnonymity", "PriceProtectionScope", "QtyType", "ReceivedDeptId", "StrategyParametersGrp", "TargetStrategy", "TargetStrategyParameters", "TradeDate", "TrdRegTimestamps", "TrdgSesGrp", "TriggeringInstruction", "UndInstrmtGrp", });
+    internal_static_SingleGeneralOrderHandling_OrderCancelRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_SingleGeneralOrderHandling_OrderCancelRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_OrderCancelRequest_descriptor,
+        new java.lang.String[] { "ClOrdId", "ListId", "OrderId", "OrigClOrdId", "Side", "StandardHeader", "StandardTrailer", "Text", "Account", "ComplianceId", "EncodedText", "EncodedTextLen", "TransactTime", "AccountType", "ClOrdLinkId", "Instrument", "OrderQtyData", "OrigOrdModTime", "Parties", "SecondaryClOrdId", "AcctIdSource", "FinancingDetails", "UndInstrmtGrp", });
+    internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_CxlRejReasonUnion_descriptor,
+        new java.lang.String[] { "CxlRejReason", "CxlRejReasonSfixed64", });
+    internal_static_SingleGeneralOrderHandling_OrderCancelReject_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_SingleGeneralOrderHandling_OrderCancelReject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_OrderCancelReject_descriptor,
+        new java.lang.String[] { "ClOrdId", "CxlRejReason", "ListId", "OrderId", "StandardHeader", "StandardTrailer", "Text", "OrdStatus", "OrigClOrdId", "SecondaryOrderId", "Account", "CxlRejResponseTo", "EncodedText", "EncodedTextLen", "TransactTime", "AccountType", "ClOrdLinkId", "OrigOrdModTime", "SecondaryClOrdId", "TradeOriginationDate", "WorkingIndicator", "AcctIdSource", "TradeDate", });
+    internal_static_SingleGeneralOrderHandling_FillsGrp_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_SingleGeneralOrderHandling_FillsGrp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_FillsGrp_descriptor,
+        new java.lang.String[] { "FillExecId", "FillPx", "FillPxExponent", "FillQty", "FillQtyExponent", "NestedParties4", "FillLiquidityInd", });
+    internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_OrdRejReasonUnion_descriptor,
+        new java.lang.String[] { "OrdRejReason", "OrdRejReasonSfixed64", });
+    internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_ExecRestatementReasonUnion_descriptor,
+        new java.lang.String[] { "ExecRestatementReason", "ExecRestatementReasonSfixed64", });
+    internal_static_SingleGeneralOrderHandling_ExecutionReport_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_SingleGeneralOrderHandling_ExecutionReport_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_ExecutionReport_descriptor,
+        new java.lang.String[] { "Account", "AvgPx", "ClOrdId", "CumQty", "CumQtyExponent", "Currency", "ExecId", "ExecInst", "ExecRefId", "LastCapacity", "LastMkt", "LastPx", "LastQty", "LastQtyExponent", "ListId", "OrdRejReason", "OrdStatus", "OrdType", "OrderId", "Price", "PriceExponent", "SettlDate", "SettlType", "Side", "StandardHeader", "StandardTrailer", "StopPx", "StopPxExponent", "Text", "TimeInForce", "TradeDate", "TransactTime", "ReportToExch", "ExpireTime", "NetMoney", "NetMoneyExponent", "SettlCurrAmt", "SettlCurrAmtExponent", "SettlCurrency", "ExecType", "LastForwardPoints", "LastForwardPointsExponent", "LastSpotRate", "LastSpotRateExponent", "LeavesQty", "LeavesQtyExponent", "OrigClOrdId", "SecondaryOrderId", "SettlCurrFxRate", "SettlCurrFxRateCalc", "ComplianceId", "DayAvgPx", "DayAvgPxExponent", "DayCumQty", "DayCumQtyExponent", "DayOrderQty", "DayOrderQtyExponent", "EffectiveTime", "EncodedText", "EncodedTextLen", "ExecRestatementReason", "ExpireDate", "GtBookingInst", "GrossTradeAmt", "GrossTradeAmtExponent", "HandlInst", "MaxFloor", "MaxFloorExponent", "MaxShow", "MaxShowExponent", "MinQty", "MinQtyExponent", "MultiLegReportingType", "OrderQty2", "OrderQty2Exponent", "PositionEffect", "SettlDate2", "SolicitedFlag", "TradingSessionId", "AccountType", "AccruedInterestAmt", "AccruedInterestAmtExponent", "AccruedInterestRate", "AccruedInterestRateExponent", "BasisFeatureDate", "BasisFeaturePrice", "BasisFeaturePriceExponent", "BookingUnit", "CancellationRights", "CashMargin", "ClOrdLinkId", "ClearingFeeIndicator", "CommissionData", "Concession", "ConcessionExponent", "CrossId", "CrossType", "CustOrderCapacity", "DayBookingInst", "Designation", "ExDate", "ExecPriceAdjustment", "ExecPriceType", "ExecValuationPoint", "Instrument", "LastForwardPoints2", "LastForwardPoints2Exponent", "MoneyLaunderingStatus", "NumDaysInterest", "OrderCapacity", "OrderQtyData", "OrderRestrictions", "OrigCrossId", "Parties", "PreallocMethod", "PriceImprovement", "PriceImprovementExponent", "PriceType", "PriorityIndicator", "RegistId", "SecondaryClOrdId", "SecondaryExecId", "SpreadOrBenchmarkCurveData", "Stipulations", "TotalTakedown", "TotalTakedownExponent", "TradeOriginationDate", "TradedFlatSwitch", "TradingSessionSubId", "TransBkdTime", "UnderlyingLastPx", "UnderlyingLastPxExponent", "UnderlyingLastQty", "UnderlyingLastQtyExponent", "WorkingIndicator", "YieldData", "AcctIdSource", "AggressorIndicator", "BookingType", "CalculatedCcyLastQty", "CalculatedCcyLastQtyExponent", "ContAmtGrp", "ContraGrp", "CopyMsgIndicator", "CustDirectedOrder", "CustOrderHandlingInst", "DiscretionInstructions", "DiscretionPrice", "DiscretionPriceExponent", "DisplayInstruction", "EndAccruedInterestAmt", "EndAccruedInterestAmtExponent", "EndCash", "EndCashExponent", "FinancingDetails", "HostCrossId", "InstrmtLegExecGrp", "InterestAtMaturity", "InterestAtMaturityExponent", "LastLiquidityInd", "LastParPx", "LastParPxExponent", "LastRptRequested", "LastSwapPoints", "LastSwapPointsExponent", "LotType", "ManualOrderIndicator", "MassStatusReqId", "MatchIncrement", "MatchIncrementExponent", "MatchType", "MaxPriceLevels", "MiscFeesGrp", "OrdStatusReqId", "OrderCategory", "OrderHandlingInstSource", "ParticipationRate", "ParticipationRateExponent", "PegInstructions", "PeggedPrice", "PeggedPriceExponent", "PeggedRefPrice", "PeggedRefPriceExponent", "PreTradeAnonymity", "PriceProtectionScope", "QtyType", "QuoteRespId", "ReceivedDeptId", "StartCash", "StartCashExponent", "StrategyParametersGrp", "TargetStrategy", "TargetStrategyParameters", "TargetStrategyPerformance", "TimeBracket", "TotNumReports", "TrdRegTimestamps", "TriggeringInstruction", "UndInstrmtGrp", "AllocId", "ApplicationSequenceControl", "DividendYield", "DividendYieldExponent", "FillsGrp", "LastFragment", "PreAllocGrp", "PriceDelta", "RiskFreeRate", "TimeToExpiration", "TotNoFills", "TrdMatchId", "Volatility", "RateSource", });
+    internal_static_SingleGeneralOrderHandling_OrderStatusRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_SingleGeneralOrderHandling_OrderStatusRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_OrderStatusRequest_descriptor,
+        new java.lang.String[] { "ClOrdId", "OrderId", "Side", "StandardHeader", "StandardTrailer", "Account", "ClOrdLinkId", "Instrument", "Parties", "SecondaryClOrdId", "AcctIdSource", "FinancingDetails", "OrdStatusReqId", "UndInstrmtGrp", });
+    internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_ExecutionAcknowledgement_descriptor,
+        new java.lang.String[] { "AvgPx", "ClOrdId", "CumQty", "CumQtyExponent", "Dkreason", "EncodedText", "EncodedTextLen", "ExecAckStatus", "ExecId", "InstrmtLegGrp", "Instrument", "LastParPx", "LastParPxExponent", "LastPx", "LastQty", "LastQtyExponent", "OrderId", "OrderQtyData", "PriceType", "SecondaryOrderId", "Side", "StandardHeader", "StandardTrailer", "Text", "UndInstrmtGrp", });
+    internal_static_SingleGeneralOrderHandling_DontKnowTrade_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_SingleGeneralOrderHandling_DontKnowTrade_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_SingleGeneralOrderHandling_DontKnowTrade_descriptor,
+        new java.lang.String[] { "Dkreason", "ExecId", "LastPx", "LastQty", "LastQtyExponent", "OrderId", "Side", "StandardHeader", "StandardTrailer", "Text", "EncodedText", "EncodedTextLen", "Instrument", "OrderQtyData", "InstrmtLegGrp", "SecondaryOrderId", "UndInstrmtGrp", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Meta.exponent);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldDeprecated);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Meta.exponent);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumDeprecated);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    org.fixprotocol.components.Meta.getDescriptor();
+    org.fixprotocol.components.Fix.getDescriptor();
+    org.fixprotocol.components.Session.getDescriptor();
+    org.fixprotocol.components.Common.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

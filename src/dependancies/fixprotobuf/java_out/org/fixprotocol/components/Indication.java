@@ -1559,10 +1559,10 @@ public final class Indication {
     // @@protoc_insertion_point(enum_scope:Indication.IoiNaturalFlagEnum)
   }
 
-  public interface AdvertisementOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AdvertisementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Indication.Advertisement)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string adv_id = 1;
     /**
      * <code>optional string adv_id = 1;</code>
      */
@@ -1577,7 +1577,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getAdvIdBytes();
 
-    // optional string adv_ref_id = 2;
     /**
      * <code>optional string adv_ref_id = 2;</code>
      */
@@ -1592,7 +1591,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getAdvRefIdBytes();
 
-    // optional .Indication.AdvSideEnum adv_side = 3;
     /**
      * <code>optional .Indication.AdvSideEnum adv_side = 3;</code>
      */
@@ -1602,7 +1600,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.AdvSideEnum getAdvSide();
 
-    // optional .Indication.AdvTransTypeEnum adv_trans_type = 4;
     /**
      * <code>optional .Indication.AdvTransTypeEnum adv_trans_type = 4;</code>
      */
@@ -1612,7 +1609,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.AdvTransTypeEnum getAdvTransType();
 
-    // optional string currency = 5;
     /**
      * <code>optional string currency = 5;</code>
      */
@@ -1627,7 +1623,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional sfixed64 price = 6;
     /**
      * <code>optional sfixed64 price = 6;</code>
      */
@@ -1637,7 +1632,6 @@ public final class Indication {
      */
     long getPrice();
 
-    // optional sfixed32 price_exponent = 7;
     /**
      * <code>optional sfixed32 price_exponent = 7;</code>
      */
@@ -1647,7 +1641,6 @@ public final class Indication {
      */
     int getPriceExponent();
 
-    // optional sfixed64 quantity = 8;
     /**
      * <code>optional sfixed64 quantity = 8;</code>
      */
@@ -1657,7 +1650,6 @@ public final class Indication {
      */
     long getQuantity();
 
-    // optional sfixed32 quantity_exponent = 9;
     /**
      * <code>optional sfixed32 quantity_exponent = 9;</code>
      */
@@ -1667,7 +1659,6 @@ public final class Indication {
      */
     int getQuantityExponent();
 
-    // optional .Session.StandardHeader standard_header = 10;
     /**
      * <code>optional .Session.StandardHeader standard_header = 10;</code>
      */
@@ -1681,7 +1672,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 11;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 11;</code>
      */
@@ -1695,7 +1685,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 12;
     /**
      * <code>optional string text = 12;</code>
      */
@@ -1710,7 +1699,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional sfixed64 transact_time = 13;
     /**
      * <code>optional sfixed64 transact_time = 13;</code>
      */
@@ -1720,7 +1708,6 @@ public final class Indication {
      */
     long getTransactTime();
 
-    // optional string last_mkt = 14;
     /**
      * <code>optional string last_mkt = 14;</code>
      */
@@ -1735,7 +1722,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getLastMktBytes();
 
-    // optional sfixed32 trade_date = 15;
     /**
      * <code>optional sfixed32 trade_date = 15;</code>
      */
@@ -1745,7 +1731,6 @@ public final class Indication {
      */
     int getTradeDate();
 
-    // optional string urllink = 16;
     /**
      * <code>optional string urllink = 16;</code>
      */
@@ -1760,7 +1745,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getUrllinkBytes();
 
-    // optional bytes encoded_text = 17;
     /**
      * <code>optional bytes encoded_text = 17;</code>
      */
@@ -1770,7 +1754,6 @@ public final class Indication {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 18;
     /**
      * <code>optional fixed32 encoded_text_len = 18;</code>
      */
@@ -1780,7 +1763,6 @@ public final class Indication {
      */
     int getEncodedTextLen();
 
-    // optional .Indication.TradingSessionIdEnum trading_session_id = 19;
     /**
      * <code>optional .Indication.TradingSessionIdEnum trading_session_id = 19;</code>
      */
@@ -1790,7 +1772,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.TradingSessionIdEnum getTradingSessionId();
 
-    // optional .Common.Instrument instrument = 20;
     /**
      * <code>optional .Common.Instrument instrument = 20;</code>
      */
@@ -1804,7 +1785,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .Indication.TradingSessionSubIdEnum trading_session_sub_id = 21;
     /**
      * <code>optional .Indication.TradingSessionSubIdEnum trading_session_sub_id = 21;</code>
      */
@@ -1814,7 +1794,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.TradingSessionSubIdEnum getTradingSessionSubId();
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 22;
     /**
      * <code>repeated .Common.InstrmtLegGrp instrmt_leg_grp = 22;</code>
      */
@@ -1839,7 +1818,6 @@ public final class Indication {
     org.fixprotocol.components.Common.InstrmtLegGrpOrBuilder getInstrmtLegGrpOrBuilder(
         int index);
 
-    // optional .Indication.QtyTypeEnum qty_type = 23;
     /**
      * <code>optional .Indication.QtyTypeEnum qty_type = 23;</code>
      */
@@ -1849,7 +1827,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.QtyTypeEnum getQtyType();
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 24;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 24;</code>
      */
@@ -1878,8 +1855,9 @@ public final class Indication {
    * Protobuf type {@code Indication.Advertisement}
    */
   public static final class Advertisement extends
-      com.google.protobuf.GeneratedMessage
-      implements AdvertisementOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Indication.Advertisement)
+      AdvertisementOrBuilder {
     // Use Advertisement.newBuilder() to construct.
     private Advertisement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -1926,13 +1904,15 @@ public final class Indication {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              advId_ = input.readBytes();
+              advId_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              advRefId_ = input.readBytes();
+              advRefId_ = bs;
               break;
             }
             case 24: {
@@ -1958,8 +1938,9 @@ public final class Indication {
               break;
             }
             case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 49: {
@@ -2009,8 +1990,9 @@ public final class Indication {
               break;
             }
             case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000800;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 105: {
@@ -2019,8 +2001,9 @@ public final class Indication {
               break;
             }
             case 114: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00002000;
-              lastMkt_ = input.readBytes();
+              lastMkt_ = bs;
               break;
             }
             case 125: {
@@ -2029,8 +2012,9 @@ public final class Indication {
               break;
             }
             case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
-              urllink_ = input.readBytes();
+              urllink_ = bs;
               break;
             }
             case 138: {
@@ -2151,7 +2135,6 @@ public final class Indication {
     }
 
     private int bitField0_;
-    // optional string adv_id = 1;
     public static final int ADV_ID_FIELD_NUMBER = 1;
     private java.lang.Object advId_;
     /**
@@ -2194,7 +2177,6 @@ public final class Indication {
       }
     }
 
-    // optional string adv_ref_id = 2;
     public static final int ADV_REF_ID_FIELD_NUMBER = 2;
     private java.lang.Object advRefId_;
     /**
@@ -2237,7 +2219,6 @@ public final class Indication {
       }
     }
 
-    // optional .Indication.AdvSideEnum adv_side = 3;
     public static final int ADV_SIDE_FIELD_NUMBER = 3;
     private org.fixprotocol.components.Indication.AdvSideEnum advSide_;
     /**
@@ -2253,7 +2234,6 @@ public final class Indication {
       return advSide_;
     }
 
-    // optional .Indication.AdvTransTypeEnum adv_trans_type = 4;
     public static final int ADV_TRANS_TYPE_FIELD_NUMBER = 4;
     private org.fixprotocol.components.Indication.AdvTransTypeEnum advTransType_;
     /**
@@ -2269,7 +2249,6 @@ public final class Indication {
       return advTransType_;
     }
 
-    // optional string currency = 5;
     public static final int CURRENCY_FIELD_NUMBER = 5;
     private java.lang.Object currency_;
     /**
@@ -2312,7 +2291,6 @@ public final class Indication {
       }
     }
 
-    // optional sfixed64 price = 6;
     public static final int PRICE_FIELD_NUMBER = 6;
     private long price_;
     /**
@@ -2328,7 +2306,6 @@ public final class Indication {
       return price_;
     }
 
-    // optional sfixed32 price_exponent = 7;
     public static final int PRICE_EXPONENT_FIELD_NUMBER = 7;
     private int priceExponent_;
     /**
@@ -2344,7 +2321,6 @@ public final class Indication {
       return priceExponent_;
     }
 
-    // optional sfixed64 quantity = 8;
     public static final int QUANTITY_FIELD_NUMBER = 8;
     private long quantity_;
     /**
@@ -2360,7 +2336,6 @@ public final class Indication {
       return quantity_;
     }
 
-    // optional sfixed32 quantity_exponent = 9;
     public static final int QUANTITY_EXPONENT_FIELD_NUMBER = 9;
     private int quantityExponent_;
     /**
@@ -2376,7 +2351,6 @@ public final class Indication {
       return quantityExponent_;
     }
 
-    // optional .Session.StandardHeader standard_header = 10;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 10;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -2398,7 +2372,6 @@ public final class Indication {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 11;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 11;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -2420,7 +2393,6 @@ public final class Indication {
       return standardTrailer_;
     }
 
-    // optional string text = 12;
     public static final int TEXT_FIELD_NUMBER = 12;
     private java.lang.Object text_;
     /**
@@ -2463,7 +2435,6 @@ public final class Indication {
       }
     }
 
-    // optional sfixed64 transact_time = 13;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 13;
     private long transactTime_;
     /**
@@ -2479,7 +2450,6 @@ public final class Indication {
       return transactTime_;
     }
 
-    // optional string last_mkt = 14;
     public static final int LAST_MKT_FIELD_NUMBER = 14;
     private java.lang.Object lastMkt_;
     /**
@@ -2522,7 +2492,6 @@ public final class Indication {
       }
     }
 
-    // optional sfixed32 trade_date = 15;
     public static final int TRADE_DATE_FIELD_NUMBER = 15;
     private int tradeDate_;
     /**
@@ -2538,7 +2507,6 @@ public final class Indication {
       return tradeDate_;
     }
 
-    // optional string urllink = 16;
     public static final int URLLINK_FIELD_NUMBER = 16;
     private java.lang.Object urllink_;
     /**
@@ -2581,7 +2549,6 @@ public final class Indication {
       }
     }
 
-    // optional bytes encoded_text = 17;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 17;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -2597,7 +2564,6 @@ public final class Indication {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 18;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 18;
     private int encodedTextLen_;
     /**
@@ -2613,7 +2579,6 @@ public final class Indication {
       return encodedTextLen_;
     }
 
-    // optional .Indication.TradingSessionIdEnum trading_session_id = 19;
     public static final int TRADING_SESSION_ID_FIELD_NUMBER = 19;
     private org.fixprotocol.components.Indication.TradingSessionIdEnum tradingSessionId_;
     /**
@@ -2629,7 +2594,6 @@ public final class Indication {
       return tradingSessionId_;
     }
 
-    // optional .Common.Instrument instrument = 20;
     public static final int INSTRUMENT_FIELD_NUMBER = 20;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -2651,7 +2615,6 @@ public final class Indication {
       return instrument_;
     }
 
-    // optional .Indication.TradingSessionSubIdEnum trading_session_sub_id = 21;
     public static final int TRADING_SESSION_SUB_ID_FIELD_NUMBER = 21;
     private org.fixprotocol.components.Indication.TradingSessionSubIdEnum tradingSessionSubId_;
     /**
@@ -2667,7 +2630,6 @@ public final class Indication {
       return tradingSessionSubId_;
     }
 
-    // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 22;
     public static final int INSTRMT_LEG_GRP_FIELD_NUMBER = 22;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_;
     /**
@@ -2703,7 +2665,6 @@ public final class Indication {
       return instrmtLegGrp_.get(index);
     }
 
-    // optional .Indication.QtyTypeEnum qty_type = 23;
     public static final int QTY_TYPE_FIELD_NUMBER = 23;
     private org.fixprotocol.components.Indication.QtyTypeEnum qtyType_;
     /**
@@ -2719,7 +2680,6 @@ public final class Indication {
       return qtyType_;
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 24;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 24;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -2784,7 +2744,8 @@ public final class Indication {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -3052,8 +3013,9 @@ public final class Indication {
      * Protobuf type {@code Indication.Advertisement}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.Indication.AdvertisementOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Indication.Advertisement)
+        org.fixprotocol.components.Indication.AdvertisementOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.Indication.internal_static_Indication_Advertisement_descriptor;
@@ -3478,7 +3440,6 @@ public final class Indication {
       }
       private int bitField0_;
 
-      // optional string adv_id = 1;
       private java.lang.Object advId_ = "";
       /**
        * <code>optional string adv_id = 1;</code>
@@ -3492,9 +3453,12 @@ public final class Indication {
       public java.lang.String getAdvId() {
         java.lang.Object ref = advId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          advId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            advId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3552,7 +3516,6 @@ public final class Indication {
         return this;
       }
 
-      // optional string adv_ref_id = 2;
       private java.lang.Object advRefId_ = "";
       /**
        * <code>optional string adv_ref_id = 2;</code>
@@ -3566,9 +3529,12 @@ public final class Indication {
       public java.lang.String getAdvRefId() {
         java.lang.Object ref = advRefId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          advRefId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            advRefId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3626,7 +3592,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Indication.AdvSideEnum adv_side = 3;
       private org.fixprotocol.components.Indication.AdvSideEnum advSide_ = org.fixprotocol.components.Indication.AdvSideEnum.ADV_SIDE_BUY;
       /**
        * <code>optional .Indication.AdvSideEnum adv_side = 3;</code>
@@ -3662,7 +3627,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Indication.AdvTransTypeEnum adv_trans_type = 4;
       private org.fixprotocol.components.Indication.AdvTransTypeEnum advTransType_ = org.fixprotocol.components.Indication.AdvTransTypeEnum.ADV_TRANS_TYPE_CANCEL;
       /**
        * <code>optional .Indication.AdvTransTypeEnum adv_trans_type = 4;</code>
@@ -3698,7 +3662,6 @@ public final class Indication {
         return this;
       }
 
-      // optional string currency = 5;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 5;</code>
@@ -3712,9 +3675,12 @@ public final class Indication {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -3772,7 +3738,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed64 price = 6;
       private long price_ ;
       /**
        * <code>optional sfixed64 price = 6;</code>
@@ -3805,7 +3770,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed32 price_exponent = 7;
       private int priceExponent_ ;
       /**
        * <code>optional sfixed32 price_exponent = 7;</code>
@@ -3838,7 +3802,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed64 quantity = 8;
       private long quantity_ ;
       /**
        * <code>optional sfixed64 quantity = 8;</code>
@@ -3871,7 +3834,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed32 quantity_exponent = 9;
       private int quantityExponent_ ;
       /**
        * <code>optional sfixed32 quantity_exponent = 9;</code>
@@ -3904,7 +3866,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 10;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -4013,7 +3974,7 @@ public final class Indication {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -4021,7 +3982,6 @@ public final class Indication {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 11;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -4130,7 +4090,7 @@ public final class Indication {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -4138,7 +4098,6 @@ public final class Indication {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 12;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 12;</code>
@@ -4152,9 +4111,12 @@ public final class Indication {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4212,7 +4174,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed64 transact_time = 13;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 13;</code>
@@ -4245,7 +4206,6 @@ public final class Indication {
         return this;
       }
 
-      // optional string last_mkt = 14;
       private java.lang.Object lastMkt_ = "";
       /**
        * <code>optional string last_mkt = 14;</code>
@@ -4259,9 +4219,12 @@ public final class Indication {
       public java.lang.String getLastMkt() {
         java.lang.Object ref = lastMkt_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          lastMkt_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            lastMkt_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4319,7 +4282,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed32 trade_date = 15;
       private int tradeDate_ ;
       /**
        * <code>optional sfixed32 trade_date = 15;</code>
@@ -4352,7 +4314,6 @@ public final class Indication {
         return this;
       }
 
-      // optional string urllink = 16;
       private java.lang.Object urllink_ = "";
       /**
        * <code>optional string urllink = 16;</code>
@@ -4366,9 +4327,12 @@ public final class Indication {
       public java.lang.String getUrllink() {
         java.lang.Object ref = urllink_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          urllink_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            urllink_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -4426,7 +4390,6 @@ public final class Indication {
         return this;
       }
 
-      // optional bytes encoded_text = 17;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 17;</code>
@@ -4462,7 +4425,6 @@ public final class Indication {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 18;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 18;</code>
@@ -4495,7 +4457,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Indication.TradingSessionIdEnum trading_session_id = 19;
       private org.fixprotocol.components.Indication.TradingSessionIdEnum tradingSessionId_ = org.fixprotocol.components.Indication.TradingSessionIdEnum.TRADING_SESSION_ID_AFTER_HOURS;
       /**
        * <code>optional .Indication.TradingSessionIdEnum trading_session_id = 19;</code>
@@ -4531,7 +4492,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 20;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -4640,7 +4600,7 @@ public final class Indication {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -4648,7 +4608,6 @@ public final class Indication {
         return instrumentBuilder_;
       }
 
-      // optional .Indication.TradingSessionSubIdEnum trading_session_sub_id = 21;
       private org.fixprotocol.components.Indication.TradingSessionSubIdEnum tradingSessionSubId_ = org.fixprotocol.components.Indication.TradingSessionSubIdEnum.TRADING_SESSION_SUB_ID_CLOSING_OR_CLOSING_AUCTION;
       /**
        * <code>optional .Indication.TradingSessionSubIdEnum trading_session_sub_id = 21;</code>
@@ -4684,7 +4643,6 @@ public final class Indication {
         return this;
       }
 
-      // repeated .Common.InstrmtLegGrp instrmt_leg_grp = 22;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegGrp> instrmtLegGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegGrpIsMutable() {
@@ -4826,7 +4784,8 @@ public final class Indication {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegGrp> values) {
         if (instrmtLegGrpBuilder_ == null) {
           ensureInstrmtLegGrpIsMutable();
-          super.addAll(values, instrmtLegGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegGrp_);
           onChanged();
         } else {
           instrmtLegGrpBuilder_.addAllMessages(values);
@@ -4924,7 +4883,6 @@ public final class Indication {
         return instrmtLegGrpBuilder_;
       }
 
-      // optional .Indication.QtyTypeEnum qty_type = 23;
       private org.fixprotocol.components.Indication.QtyTypeEnum qtyType_ = org.fixprotocol.components.Indication.QtyTypeEnum.QTY_TYPE_CONTRACTS;
       /**
        * <code>optional .Indication.QtyTypeEnum qty_type = 23;</code>
@@ -4960,7 +4918,6 @@ public final class Indication {
         return this;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 24;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -5102,7 +5059,8 @@ public final class Indication {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -5211,10 +5169,10 @@ public final class Indication {
     // @@protoc_insertion_point(class_scope:Indication.Advertisement)
   }
 
-  public interface IoiQualGrpOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface IoiQualGrpOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Indication.IoiQualGrp)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .Indication.IoiQualifierEnum ioi_qualifier = 1;
     /**
      * <code>optional .Indication.IoiQualifierEnum ioi_qualifier = 1;</code>
      */
@@ -5228,8 +5186,9 @@ public final class Indication {
    * Protobuf type {@code Indication.IoiQualGrp}
    */
   public static final class IoiQualGrp extends
-      com.google.protobuf.GeneratedMessage
-      implements IoiQualGrpOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Indication.IoiQualGrp)
+      IoiQualGrpOrBuilder {
     // Use IoiQualGrp.newBuilder() to construct.
     private IoiQualGrp(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -5326,7 +5285,6 @@ public final class Indication {
     }
 
     private int bitField0_;
-    // optional .Indication.IoiQualifierEnum ioi_qualifier = 1;
     public static final int IOI_QUALIFIER_FIELD_NUMBER = 1;
     private org.fixprotocol.components.Indication.IoiQualifierEnum ioiQualifier_;
     /**
@@ -5348,7 +5306,8 @@ public final class Indication {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -5455,8 +5414,9 @@ public final class Indication {
      * Protobuf type {@code Indication.IoiQualGrp}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.Indication.IoiQualGrpOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Indication.IoiQualGrp)
+        org.fixprotocol.components.Indication.IoiQualGrpOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.Indication.internal_static_Indication_IoiQualGrp_descriptor;
@@ -5569,7 +5529,6 @@ public final class Indication {
       }
       private int bitField0_;
 
-      // optional .Indication.IoiQualifierEnum ioi_qualifier = 1;
       private org.fixprotocol.components.Indication.IoiQualifierEnum ioiQualifier_ = org.fixprotocol.components.Indication.IoiQualifierEnum.IOI_QUALIFIER_ALL_OR_NONE;
       /**
        * <code>optional .Indication.IoiQualifierEnum ioi_qualifier = 1;</code>
@@ -5616,10 +5575,10 @@ public final class Indication {
     // @@protoc_insertion_point(class_scope:Indication.IoiQualGrp)
   }
 
-  public interface IoiOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface IoiOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Indication.Ioi)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string currency = 1;
     /**
      * <code>optional string currency = 1;</code>
      */
@@ -5634,7 +5593,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getCurrencyBytes();
 
-    // optional string ioi_id = 2;
     /**
      * <code>optional string ioi_id = 2;</code>
      */
@@ -5649,7 +5607,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getIoiIdBytes();
 
-    // optional .Indication.IoiQltyIndEnum ioi_qlty_ind = 3;
     /**
      * <code>optional .Indication.IoiQltyIndEnum ioi_qlty_ind = 3;</code>
      */
@@ -5659,7 +5616,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.IoiQltyIndEnum getIoiQltyInd();
 
-    // optional .Indication.IoiQtyEnum ioi_qty = 4;
     /**
      * <code>optional .Indication.IoiQtyEnum ioi_qty = 4;</code>
      */
@@ -5669,7 +5625,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.IoiQtyEnum getIoiQty();
 
-    // optional string ioi_ref_id = 5;
     /**
      * <code>optional string ioi_ref_id = 5;</code>
      */
@@ -5684,7 +5639,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getIoiRefIdBytes();
 
-    // optional .Indication.IoiTransTypeEnum ioi_trans_type = 6;
     /**
      * <code>optional .Indication.IoiTransTypeEnum ioi_trans_type = 6;</code>
      */
@@ -5694,7 +5648,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.IoiTransTypeEnum getIoiTransType();
 
-    // optional sfixed64 price = 7;
     /**
      * <code>optional sfixed64 price = 7;</code>
      */
@@ -5704,7 +5657,6 @@ public final class Indication {
      */
     long getPrice();
 
-    // optional sfixed32 price_exponent = 8;
     /**
      * <code>optional sfixed32 price_exponent = 8;</code>
      */
@@ -5714,7 +5666,6 @@ public final class Indication {
      */
     int getPriceExponent();
 
-    // optional .Indication.SideEnum side = 9;
     /**
      * <code>optional .Indication.SideEnum side = 9;</code>
      */
@@ -5724,7 +5675,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.SideEnum getSide();
 
-    // optional .Session.StandardHeader standard_header = 10;
     /**
      * <code>optional .Session.StandardHeader standard_header = 10;</code>
      */
@@ -5738,7 +5688,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Session.StandardHeaderOrBuilder getStandardHeaderOrBuilder();
 
-    // optional .Session.StandardTrailer standard_trailer = 11;
     /**
      * <code>optional .Session.StandardTrailer standard_trailer = 11;</code>
      */
@@ -5752,7 +5701,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Session.StandardTrailerOrBuilder getStandardTrailerOrBuilder();
 
-    // optional string text = 12;
     /**
      * <code>optional string text = 12;</code>
      */
@@ -5767,7 +5715,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getTextBytes();
 
-    // optional sfixed64 valid_until_time = 13;
     /**
      * <code>optional sfixed64 valid_until_time = 13;</code>
      */
@@ -5777,7 +5724,6 @@ public final class Indication {
      */
     long getValidUntilTime();
 
-    // optional bool ioi_natural_flag = 14;
     /**
      * <code>optional bool ioi_natural_flag = 14;</code>
      */
@@ -5787,7 +5733,6 @@ public final class Indication {
      */
     boolean getIoiNaturalFlag();
 
-    // optional sfixed64 transact_time = 15;
     /**
      * <code>optional sfixed64 transact_time = 15;</code>
      */
@@ -5797,7 +5742,6 @@ public final class Indication {
      */
     long getTransactTime();
 
-    // optional string urllink = 16;
     /**
      * <code>optional string urllink = 16;</code>
      */
@@ -5812,7 +5756,6 @@ public final class Indication {
     com.google.protobuf.ByteString
         getUrllinkBytes();
 
-    // optional bytes encoded_text = 17;
     /**
      * <code>optional bytes encoded_text = 17;</code>
      */
@@ -5822,7 +5765,6 @@ public final class Indication {
      */
     com.google.protobuf.ByteString getEncodedText();
 
-    // optional fixed32 encoded_text_len = 18;
     /**
      * <code>optional fixed32 encoded_text_len = 18;</code>
      */
@@ -5832,7 +5774,6 @@ public final class Indication {
      */
     int getEncodedTextLen();
 
-    // optional .Common.Instrument instrument = 19;
     /**
      * <code>optional .Common.Instrument instrument = 19;</code>
      */
@@ -5846,7 +5787,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Common.InstrumentOrBuilder getInstrumentOrBuilder();
 
-    // optional .Indication.PriceTypeEnum price_type = 20;
     /**
      * <code>optional .Indication.PriceTypeEnum price_type = 20;</code>
      */
@@ -5856,7 +5796,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.PriceTypeEnum getPriceType();
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 21;
     /**
      * <code>optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 21;</code>
      */
@@ -5870,7 +5809,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder getSpreadOrBenchmarkCurveDataOrBuilder();
 
-    // optional .Common.FinancingDetails financing_details = 22;
     /**
      * <code>optional .Common.FinancingDetails financing_details = 22;</code>
      */
@@ -5884,7 +5822,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Common.FinancingDetailsOrBuilder getFinancingDetailsOrBuilder();
 
-    // repeated .Indication.IoiQualGrp ioi_qual_grp = 23;
     /**
      * <code>repeated .Indication.IoiQualGrp ioi_qual_grp = 23;</code>
      */
@@ -5909,7 +5846,6 @@ public final class Indication {
     org.fixprotocol.components.Indication.IoiQualGrpOrBuilder getIoiQualGrpOrBuilder(
         int index);
 
-    // repeated .Common.InstrmtLegIoiGrp instrmt_leg_ioi_grp = 24;
     /**
      * <code>repeated .Common.InstrmtLegIoiGrp instrmt_leg_ioi_grp = 24;</code>
      */
@@ -5934,7 +5870,6 @@ public final class Indication {
     org.fixprotocol.components.Common.InstrmtLegIoiGrpOrBuilder getInstrmtLegIoiGrpOrBuilder(
         int index);
 
-    // optional .Common.OrderQtyData order_qty_data = 25;
     /**
      * <code>optional .Common.OrderQtyData order_qty_data = 25;</code>
      */
@@ -5948,7 +5883,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Common.OrderQtyDataOrBuilder getOrderQtyDataOrBuilder();
 
-    // repeated .Common.Parties parties = 26;
     /**
      * <code>repeated .Common.Parties parties = 26;</code>
      */
@@ -5973,7 +5907,6 @@ public final class Indication {
     org.fixprotocol.components.Common.PartiesOrBuilder getPartiesOrBuilder(
         int index);
 
-    // optional .Indication.QtyTypeEnum qty_type = 27;
     /**
      * <code>optional .Indication.QtyTypeEnum qty_type = 27;</code>
      */
@@ -5983,7 +5916,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Indication.QtyTypeEnum getQtyType();
 
-    // repeated .Common.RoutingGrp routing_grp = 28;
     /**
      * <code>repeated .Common.RoutingGrp routing_grp = 28;</code>
      */
@@ -6008,7 +5940,6 @@ public final class Indication {
     org.fixprotocol.components.Common.RoutingGrpOrBuilder getRoutingGrpOrBuilder(
         int index);
 
-    // repeated .Common.Stipulations stipulations = 29;
     /**
      * <code>repeated .Common.Stipulations stipulations = 29;</code>
      */
@@ -6033,7 +5964,6 @@ public final class Indication {
     org.fixprotocol.components.Common.StipulationsOrBuilder getStipulationsOrBuilder(
         int index);
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 30;
     /**
      * <code>repeated .Common.UndInstrmtGrp und_instrmt_grp = 30;</code>
      */
@@ -6058,7 +5988,6 @@ public final class Indication {
     org.fixprotocol.components.Common.UndInstrmtGrpOrBuilder getUndInstrmtGrpOrBuilder(
         int index);
 
-    // optional .Common.YieldData yield_data = 31;
     /**
      * <code>optional .Common.YieldData yield_data = 31;</code>
      */
@@ -6072,7 +6001,6 @@ public final class Indication {
      */
     org.fixprotocol.components.Common.YieldDataOrBuilder getYieldDataOrBuilder();
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 32;
     /**
      * <code>optional .Common.ApplicationSequenceControl application_sequence_control = 32;</code>
      */
@@ -6090,8 +6018,9 @@ public final class Indication {
    * Protobuf type {@code Indication.Ioi}
    */
   public static final class Ioi extends
-      com.google.protobuf.GeneratedMessage
-      implements IoiOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:Indication.Ioi)
+      IoiOrBuilder {
     // Use Ioi.newBuilder() to construct.
     private Ioi(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -6138,13 +6067,15 @@ public final class Indication {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              currency_ = input.readBytes();
+              currency_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              ioiId_ = input.readBytes();
+              ioiId_ = bs;
               break;
             }
             case 24: {
@@ -6170,8 +6101,9 @@ public final class Indication {
               break;
             }
             case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
-              ioiRefId_ = input.readBytes();
+              ioiRefId_ = bs;
               break;
             }
             case 48: {
@@ -6233,8 +6165,9 @@ public final class Indication {
               break;
             }
             case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000800;
-              text_ = input.readBytes();
+              text_ = bs;
               break;
             }
             case 105: {
@@ -6253,8 +6186,9 @@ public final class Indication {
               break;
             }
             case 130: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
-              urllink_ = input.readBytes();
+              urllink_ = bs;
               break;
             }
             case 138: {
@@ -6473,7 +6407,6 @@ public final class Indication {
     }
 
     private int bitField0_;
-    // optional string currency = 1;
     public static final int CURRENCY_FIELD_NUMBER = 1;
     private java.lang.Object currency_;
     /**
@@ -6516,7 +6449,6 @@ public final class Indication {
       }
     }
 
-    // optional string ioi_id = 2;
     public static final int IOI_ID_FIELD_NUMBER = 2;
     private java.lang.Object ioiId_;
     /**
@@ -6559,7 +6491,6 @@ public final class Indication {
       }
     }
 
-    // optional .Indication.IoiQltyIndEnum ioi_qlty_ind = 3;
     public static final int IOI_QLTY_IND_FIELD_NUMBER = 3;
     private org.fixprotocol.components.Indication.IoiQltyIndEnum ioiQltyInd_;
     /**
@@ -6575,7 +6506,6 @@ public final class Indication {
       return ioiQltyInd_;
     }
 
-    // optional .Indication.IoiQtyEnum ioi_qty = 4;
     public static final int IOI_QTY_FIELD_NUMBER = 4;
     private org.fixprotocol.components.Indication.IoiQtyEnum ioiQty_;
     /**
@@ -6591,7 +6521,6 @@ public final class Indication {
       return ioiQty_;
     }
 
-    // optional string ioi_ref_id = 5;
     public static final int IOI_REF_ID_FIELD_NUMBER = 5;
     private java.lang.Object ioiRefId_;
     /**
@@ -6634,7 +6563,6 @@ public final class Indication {
       }
     }
 
-    // optional .Indication.IoiTransTypeEnum ioi_trans_type = 6;
     public static final int IOI_TRANS_TYPE_FIELD_NUMBER = 6;
     private org.fixprotocol.components.Indication.IoiTransTypeEnum ioiTransType_;
     /**
@@ -6650,7 +6578,6 @@ public final class Indication {
       return ioiTransType_;
     }
 
-    // optional sfixed64 price = 7;
     public static final int PRICE_FIELD_NUMBER = 7;
     private long price_;
     /**
@@ -6666,7 +6593,6 @@ public final class Indication {
       return price_;
     }
 
-    // optional sfixed32 price_exponent = 8;
     public static final int PRICE_EXPONENT_FIELD_NUMBER = 8;
     private int priceExponent_;
     /**
@@ -6682,7 +6608,6 @@ public final class Indication {
       return priceExponent_;
     }
 
-    // optional .Indication.SideEnum side = 9;
     public static final int SIDE_FIELD_NUMBER = 9;
     private org.fixprotocol.components.Indication.SideEnum side_;
     /**
@@ -6698,7 +6623,6 @@ public final class Indication {
       return side_;
     }
 
-    // optional .Session.StandardHeader standard_header = 10;
     public static final int STANDARD_HEADER_FIELD_NUMBER = 10;
     private org.fixprotocol.components.Session.StandardHeader standardHeader_;
     /**
@@ -6720,7 +6644,6 @@ public final class Indication {
       return standardHeader_;
     }
 
-    // optional .Session.StandardTrailer standard_trailer = 11;
     public static final int STANDARD_TRAILER_FIELD_NUMBER = 11;
     private org.fixprotocol.components.Session.StandardTrailer standardTrailer_;
     /**
@@ -6742,7 +6665,6 @@ public final class Indication {
       return standardTrailer_;
     }
 
-    // optional string text = 12;
     public static final int TEXT_FIELD_NUMBER = 12;
     private java.lang.Object text_;
     /**
@@ -6785,7 +6707,6 @@ public final class Indication {
       }
     }
 
-    // optional sfixed64 valid_until_time = 13;
     public static final int VALID_UNTIL_TIME_FIELD_NUMBER = 13;
     private long validUntilTime_;
     /**
@@ -6801,7 +6722,6 @@ public final class Indication {
       return validUntilTime_;
     }
 
-    // optional bool ioi_natural_flag = 14;
     public static final int IOI_NATURAL_FLAG_FIELD_NUMBER = 14;
     private boolean ioiNaturalFlag_;
     /**
@@ -6817,7 +6737,6 @@ public final class Indication {
       return ioiNaturalFlag_;
     }
 
-    // optional sfixed64 transact_time = 15;
     public static final int TRANSACT_TIME_FIELD_NUMBER = 15;
     private long transactTime_;
     /**
@@ -6833,7 +6752,6 @@ public final class Indication {
       return transactTime_;
     }
 
-    // optional string urllink = 16;
     public static final int URLLINK_FIELD_NUMBER = 16;
     private java.lang.Object urllink_;
     /**
@@ -6876,7 +6794,6 @@ public final class Indication {
       }
     }
 
-    // optional bytes encoded_text = 17;
     public static final int ENCODED_TEXT_FIELD_NUMBER = 17;
     private com.google.protobuf.ByteString encodedText_;
     /**
@@ -6892,7 +6809,6 @@ public final class Indication {
       return encodedText_;
     }
 
-    // optional fixed32 encoded_text_len = 18;
     public static final int ENCODED_TEXT_LEN_FIELD_NUMBER = 18;
     private int encodedTextLen_;
     /**
@@ -6908,7 +6824,6 @@ public final class Indication {
       return encodedTextLen_;
     }
 
-    // optional .Common.Instrument instrument = 19;
     public static final int INSTRUMENT_FIELD_NUMBER = 19;
     private org.fixprotocol.components.Common.Instrument instrument_;
     /**
@@ -6930,7 +6845,6 @@ public final class Indication {
       return instrument_;
     }
 
-    // optional .Indication.PriceTypeEnum price_type = 20;
     public static final int PRICE_TYPE_FIELD_NUMBER = 20;
     private org.fixprotocol.components.Indication.PriceTypeEnum priceType_;
     /**
@@ -6946,7 +6860,6 @@ public final class Indication {
       return priceType_;
     }
 
-    // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 21;
     public static final int SPREAD_OR_BENCHMARK_CURVE_DATA_FIELD_NUMBER = 21;
     private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_;
     /**
@@ -6968,7 +6881,6 @@ public final class Indication {
       return spreadOrBenchmarkCurveData_;
     }
 
-    // optional .Common.FinancingDetails financing_details = 22;
     public static final int FINANCING_DETAILS_FIELD_NUMBER = 22;
     private org.fixprotocol.components.Common.FinancingDetails financingDetails_;
     /**
@@ -6990,7 +6902,6 @@ public final class Indication {
       return financingDetails_;
     }
 
-    // repeated .Indication.IoiQualGrp ioi_qual_grp = 23;
     public static final int IOI_QUAL_GRP_FIELD_NUMBER = 23;
     private java.util.List<org.fixprotocol.components.Indication.IoiQualGrp> ioiQualGrp_;
     /**
@@ -7026,7 +6937,6 @@ public final class Indication {
       return ioiQualGrp_.get(index);
     }
 
-    // repeated .Common.InstrmtLegIoiGrp instrmt_leg_ioi_grp = 24;
     public static final int INSTRMT_LEG_IOI_GRP_FIELD_NUMBER = 24;
     private java.util.List<org.fixprotocol.components.Common.InstrmtLegIoiGrp> instrmtLegIoiGrp_;
     /**
@@ -7062,7 +6972,6 @@ public final class Indication {
       return instrmtLegIoiGrp_.get(index);
     }
 
-    // optional .Common.OrderQtyData order_qty_data = 25;
     public static final int ORDER_QTY_DATA_FIELD_NUMBER = 25;
     private org.fixprotocol.components.Common.OrderQtyData orderQtyData_;
     /**
@@ -7084,7 +6993,6 @@ public final class Indication {
       return orderQtyData_;
     }
 
-    // repeated .Common.Parties parties = 26;
     public static final int PARTIES_FIELD_NUMBER = 26;
     private java.util.List<org.fixprotocol.components.Common.Parties> parties_;
     /**
@@ -7120,7 +7028,6 @@ public final class Indication {
       return parties_.get(index);
     }
 
-    // optional .Indication.QtyTypeEnum qty_type = 27;
     public static final int QTY_TYPE_FIELD_NUMBER = 27;
     private org.fixprotocol.components.Indication.QtyTypeEnum qtyType_;
     /**
@@ -7136,7 +7043,6 @@ public final class Indication {
       return qtyType_;
     }
 
-    // repeated .Common.RoutingGrp routing_grp = 28;
     public static final int ROUTING_GRP_FIELD_NUMBER = 28;
     private java.util.List<org.fixprotocol.components.Common.RoutingGrp> routingGrp_;
     /**
@@ -7172,7 +7078,6 @@ public final class Indication {
       return routingGrp_.get(index);
     }
 
-    // repeated .Common.Stipulations stipulations = 29;
     public static final int STIPULATIONS_FIELD_NUMBER = 29;
     private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_;
     /**
@@ -7208,7 +7113,6 @@ public final class Indication {
       return stipulations_.get(index);
     }
 
-    // repeated .Common.UndInstrmtGrp und_instrmt_grp = 30;
     public static final int UND_INSTRMT_GRP_FIELD_NUMBER = 30;
     private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_;
     /**
@@ -7244,7 +7148,6 @@ public final class Indication {
       return undInstrmtGrp_.get(index);
     }
 
-    // optional .Common.YieldData yield_data = 31;
     public static final int YIELD_DATA_FIELD_NUMBER = 31;
     private org.fixprotocol.components.Common.YieldData yieldData_;
     /**
@@ -7266,7 +7169,6 @@ public final class Indication {
       return yieldData_;
     }
 
-    // optional .Common.ApplicationSequenceControl application_sequence_control = 32;
     public static final int APPLICATION_SEQUENCE_CONTROL_FIELD_NUMBER = 32;
     private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_;
     /**
@@ -7325,7 +7227,8 @@ public final class Indication {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -7649,8 +7552,9 @@ public final class Indication {
      * Protobuf type {@code Indication.Ioi}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.Indication.IoiOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Indication.Ioi)
+        org.fixprotocol.components.Indication.IoiOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.Indication.internal_static_Indication_Ioi_descriptor;
@@ -8322,7 +8226,6 @@ public final class Indication {
       }
       private int bitField0_;
 
-      // optional string currency = 1;
       private java.lang.Object currency_ = "";
       /**
        * <code>optional string currency = 1;</code>
@@ -8336,9 +8239,12 @@ public final class Indication {
       public java.lang.String getCurrency() {
         java.lang.Object ref = currency_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          currency_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            currency_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8396,7 +8302,6 @@ public final class Indication {
         return this;
       }
 
-      // optional string ioi_id = 2;
       private java.lang.Object ioiId_ = "";
       /**
        * <code>optional string ioi_id = 2;</code>
@@ -8410,9 +8315,12 @@ public final class Indication {
       public java.lang.String getIoiId() {
         java.lang.Object ref = ioiId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          ioiId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ioiId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8470,7 +8378,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Indication.IoiQltyIndEnum ioi_qlty_ind = 3;
       private org.fixprotocol.components.Indication.IoiQltyIndEnum ioiQltyInd_ = org.fixprotocol.components.Indication.IoiQltyIndEnum.IOI_QLTY_IND_HIGH;
       /**
        * <code>optional .Indication.IoiQltyIndEnum ioi_qlty_ind = 3;</code>
@@ -8506,7 +8413,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Indication.IoiQtyEnum ioi_qty = 4;
       private org.fixprotocol.components.Indication.IoiQtyEnum ioiQty_ = org.fixprotocol.components.Indication.IoiQtyEnum.IOI_QTY_LARGE;
       /**
        * <code>optional .Indication.IoiQtyEnum ioi_qty = 4;</code>
@@ -8542,7 +8448,6 @@ public final class Indication {
         return this;
       }
 
-      // optional string ioi_ref_id = 5;
       private java.lang.Object ioiRefId_ = "";
       /**
        * <code>optional string ioi_ref_id = 5;</code>
@@ -8556,9 +8461,12 @@ public final class Indication {
       public java.lang.String getIoiRefId() {
         java.lang.Object ref = ioiRefId_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          ioiRefId_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            ioiRefId_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -8616,7 +8524,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Indication.IoiTransTypeEnum ioi_trans_type = 6;
       private org.fixprotocol.components.Indication.IoiTransTypeEnum ioiTransType_ = org.fixprotocol.components.Indication.IoiTransTypeEnum.IOI_TRANS_TYPE_CANCEL;
       /**
        * <code>optional .Indication.IoiTransTypeEnum ioi_trans_type = 6;</code>
@@ -8652,7 +8559,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed64 price = 7;
       private long price_ ;
       /**
        * <code>optional sfixed64 price = 7;</code>
@@ -8685,7 +8591,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed32 price_exponent = 8;
       private int priceExponent_ ;
       /**
        * <code>optional sfixed32 price_exponent = 8;</code>
@@ -8718,7 +8623,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Indication.SideEnum side = 9;
       private org.fixprotocol.components.Indication.SideEnum side_ = org.fixprotocol.components.Indication.SideEnum.SIDE_BUY;
       /**
        * <code>optional .Indication.SideEnum side = 9;</code>
@@ -8754,7 +8658,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Session.StandardHeader standard_header = 10;
       private org.fixprotocol.components.Session.StandardHeader standardHeader_ = org.fixprotocol.components.Session.StandardHeader.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder> standardHeaderBuilder_;
@@ -8863,7 +8766,7 @@ public final class Indication {
         if (standardHeaderBuilder_ == null) {
           standardHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardHeader, org.fixprotocol.components.Session.StandardHeader.Builder, org.fixprotocol.components.Session.StandardHeaderOrBuilder>(
-                  standardHeader_,
+                  getStandardHeader(),
                   getParentForChildren(),
                   isClean());
           standardHeader_ = null;
@@ -8871,7 +8774,6 @@ public final class Indication {
         return standardHeaderBuilder_;
       }
 
-      // optional .Session.StandardTrailer standard_trailer = 11;
       private org.fixprotocol.components.Session.StandardTrailer standardTrailer_ = org.fixprotocol.components.Session.StandardTrailer.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder> standardTrailerBuilder_;
@@ -8980,7 +8882,7 @@ public final class Indication {
         if (standardTrailerBuilder_ == null) {
           standardTrailerBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Session.StandardTrailer, org.fixprotocol.components.Session.StandardTrailer.Builder, org.fixprotocol.components.Session.StandardTrailerOrBuilder>(
-                  standardTrailer_,
+                  getStandardTrailer(),
                   getParentForChildren(),
                   isClean());
           standardTrailer_ = null;
@@ -8988,7 +8890,6 @@ public final class Indication {
         return standardTrailerBuilder_;
       }
 
-      // optional string text = 12;
       private java.lang.Object text_ = "";
       /**
        * <code>optional string text = 12;</code>
@@ -9002,9 +8903,12 @@ public final class Indication {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          text_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9062,7 +8966,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed64 valid_until_time = 13;
       private long validUntilTime_ ;
       /**
        * <code>optional sfixed64 valid_until_time = 13;</code>
@@ -9095,7 +8998,6 @@ public final class Indication {
         return this;
       }
 
-      // optional bool ioi_natural_flag = 14;
       private boolean ioiNaturalFlag_ ;
       /**
        * <code>optional bool ioi_natural_flag = 14;</code>
@@ -9128,7 +9030,6 @@ public final class Indication {
         return this;
       }
 
-      // optional sfixed64 transact_time = 15;
       private long transactTime_ ;
       /**
        * <code>optional sfixed64 transact_time = 15;</code>
@@ -9161,7 +9062,6 @@ public final class Indication {
         return this;
       }
 
-      // optional string urllink = 16;
       private java.lang.Object urllink_ = "";
       /**
        * <code>optional string urllink = 16;</code>
@@ -9175,9 +9075,12 @@ public final class Indication {
       public java.lang.String getUrllink() {
         java.lang.Object ref = urllink_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          urllink_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            urllink_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -9235,7 +9138,6 @@ public final class Indication {
         return this;
       }
 
-      // optional bytes encoded_text = 17;
       private com.google.protobuf.ByteString encodedText_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes encoded_text = 17;</code>
@@ -9271,7 +9173,6 @@ public final class Indication {
         return this;
       }
 
-      // optional fixed32 encoded_text_len = 18;
       private int encodedTextLen_ ;
       /**
        * <code>optional fixed32 encoded_text_len = 18;</code>
@@ -9304,7 +9205,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Common.Instrument instrument = 19;
       private org.fixprotocol.components.Common.Instrument instrument_ = org.fixprotocol.components.Common.Instrument.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder> instrumentBuilder_;
@@ -9413,7 +9313,7 @@ public final class Indication {
         if (instrumentBuilder_ == null) {
           instrumentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.Instrument, org.fixprotocol.components.Common.Instrument.Builder, org.fixprotocol.components.Common.InstrumentOrBuilder>(
-                  instrument_,
+                  getInstrument(),
                   getParentForChildren(),
                   isClean());
           instrument_ = null;
@@ -9421,7 +9321,6 @@ public final class Indication {
         return instrumentBuilder_;
       }
 
-      // optional .Indication.PriceTypeEnum price_type = 20;
       private org.fixprotocol.components.Indication.PriceTypeEnum priceType_ = org.fixprotocol.components.Indication.PriceTypeEnum.PRICE_TYPE_FIXED_AMOUNT;
       /**
        * <code>optional .Indication.PriceTypeEnum price_type = 20;</code>
@@ -9457,7 +9356,6 @@ public final class Indication {
         return this;
       }
 
-      // optional .Common.SpreadOrBenchmarkCurveData spread_or_benchmark_curve_data = 21;
       private org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData spreadOrBenchmarkCurveData_ = org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder> spreadOrBenchmarkCurveDataBuilder_;
@@ -9566,7 +9464,7 @@ public final class Indication {
         if (spreadOrBenchmarkCurveDataBuilder_ == null) {
           spreadOrBenchmarkCurveDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveData.Builder, org.fixprotocol.components.Common.SpreadOrBenchmarkCurveDataOrBuilder>(
-                  spreadOrBenchmarkCurveData_,
+                  getSpreadOrBenchmarkCurveData(),
                   getParentForChildren(),
                   isClean());
           spreadOrBenchmarkCurveData_ = null;
@@ -9574,7 +9472,6 @@ public final class Indication {
         return spreadOrBenchmarkCurveDataBuilder_;
       }
 
-      // optional .Common.FinancingDetails financing_details = 22;
       private org.fixprotocol.components.Common.FinancingDetails financingDetails_ = org.fixprotocol.components.Common.FinancingDetails.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder> financingDetailsBuilder_;
@@ -9683,7 +9580,7 @@ public final class Indication {
         if (financingDetailsBuilder_ == null) {
           financingDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.FinancingDetails, org.fixprotocol.components.Common.FinancingDetails.Builder, org.fixprotocol.components.Common.FinancingDetailsOrBuilder>(
-                  financingDetails_,
+                  getFinancingDetails(),
                   getParentForChildren(),
                   isClean());
           financingDetails_ = null;
@@ -9691,7 +9588,6 @@ public final class Indication {
         return financingDetailsBuilder_;
       }
 
-      // repeated .Indication.IoiQualGrp ioi_qual_grp = 23;
       private java.util.List<org.fixprotocol.components.Indication.IoiQualGrp> ioiQualGrp_ =
         java.util.Collections.emptyList();
       private void ensureIoiQualGrpIsMutable() {
@@ -9833,7 +9729,8 @@ public final class Indication {
           java.lang.Iterable<? extends org.fixprotocol.components.Indication.IoiQualGrp> values) {
         if (ioiQualGrpBuilder_ == null) {
           ensureIoiQualGrpIsMutable();
-          super.addAll(values, ioiQualGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ioiQualGrp_);
           onChanged();
         } else {
           ioiQualGrpBuilder_.addAllMessages(values);
@@ -9931,7 +9828,6 @@ public final class Indication {
         return ioiQualGrpBuilder_;
       }
 
-      // repeated .Common.InstrmtLegIoiGrp instrmt_leg_ioi_grp = 24;
       private java.util.List<org.fixprotocol.components.Common.InstrmtLegIoiGrp> instrmtLegIoiGrp_ =
         java.util.Collections.emptyList();
       private void ensureInstrmtLegIoiGrpIsMutable() {
@@ -10073,7 +9969,8 @@ public final class Indication {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.InstrmtLegIoiGrp> values) {
         if (instrmtLegIoiGrpBuilder_ == null) {
           ensureInstrmtLegIoiGrpIsMutable();
-          super.addAll(values, instrmtLegIoiGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, instrmtLegIoiGrp_);
           onChanged();
         } else {
           instrmtLegIoiGrpBuilder_.addAllMessages(values);
@@ -10171,7 +10068,6 @@ public final class Indication {
         return instrmtLegIoiGrpBuilder_;
       }
 
-      // optional .Common.OrderQtyData order_qty_data = 25;
       private org.fixprotocol.components.Common.OrderQtyData orderQtyData_ = org.fixprotocol.components.Common.OrderQtyData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder> orderQtyDataBuilder_;
@@ -10280,7 +10176,7 @@ public final class Indication {
         if (orderQtyDataBuilder_ == null) {
           orderQtyDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.OrderQtyData, org.fixprotocol.components.Common.OrderQtyData.Builder, org.fixprotocol.components.Common.OrderQtyDataOrBuilder>(
-                  orderQtyData_,
+                  getOrderQtyData(),
                   getParentForChildren(),
                   isClean());
           orderQtyData_ = null;
@@ -10288,7 +10184,6 @@ public final class Indication {
         return orderQtyDataBuilder_;
       }
 
-      // repeated .Common.Parties parties = 26;
       private java.util.List<org.fixprotocol.components.Common.Parties> parties_ =
         java.util.Collections.emptyList();
       private void ensurePartiesIsMutable() {
@@ -10430,7 +10325,8 @@ public final class Indication {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Parties> values) {
         if (partiesBuilder_ == null) {
           ensurePartiesIsMutable();
-          super.addAll(values, parties_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parties_);
           onChanged();
         } else {
           partiesBuilder_.addAllMessages(values);
@@ -10528,7 +10424,6 @@ public final class Indication {
         return partiesBuilder_;
       }
 
-      // optional .Indication.QtyTypeEnum qty_type = 27;
       private org.fixprotocol.components.Indication.QtyTypeEnum qtyType_ = org.fixprotocol.components.Indication.QtyTypeEnum.QTY_TYPE_CONTRACTS;
       /**
        * <code>optional .Indication.QtyTypeEnum qty_type = 27;</code>
@@ -10564,7 +10459,6 @@ public final class Indication {
         return this;
       }
 
-      // repeated .Common.RoutingGrp routing_grp = 28;
       private java.util.List<org.fixprotocol.components.Common.RoutingGrp> routingGrp_ =
         java.util.Collections.emptyList();
       private void ensureRoutingGrpIsMutable() {
@@ -10706,7 +10600,8 @@ public final class Indication {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.RoutingGrp> values) {
         if (routingGrpBuilder_ == null) {
           ensureRoutingGrpIsMutable();
-          super.addAll(values, routingGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, routingGrp_);
           onChanged();
         } else {
           routingGrpBuilder_.addAllMessages(values);
@@ -10804,7 +10699,6 @@ public final class Indication {
         return routingGrpBuilder_;
       }
 
-      // repeated .Common.Stipulations stipulations = 29;
       private java.util.List<org.fixprotocol.components.Common.Stipulations> stipulations_ =
         java.util.Collections.emptyList();
       private void ensureStipulationsIsMutable() {
@@ -10946,7 +10840,8 @@ public final class Indication {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.Stipulations> values) {
         if (stipulationsBuilder_ == null) {
           ensureStipulationsIsMutable();
-          super.addAll(values, stipulations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stipulations_);
           onChanged();
         } else {
           stipulationsBuilder_.addAllMessages(values);
@@ -11044,7 +10939,6 @@ public final class Indication {
         return stipulationsBuilder_;
       }
 
-      // repeated .Common.UndInstrmtGrp und_instrmt_grp = 30;
       private java.util.List<org.fixprotocol.components.Common.UndInstrmtGrp> undInstrmtGrp_ =
         java.util.Collections.emptyList();
       private void ensureUndInstrmtGrpIsMutable() {
@@ -11186,7 +11080,8 @@ public final class Indication {
           java.lang.Iterable<? extends org.fixprotocol.components.Common.UndInstrmtGrp> values) {
         if (undInstrmtGrpBuilder_ == null) {
           ensureUndInstrmtGrpIsMutable();
-          super.addAll(values, undInstrmtGrp_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, undInstrmtGrp_);
           onChanged();
         } else {
           undInstrmtGrpBuilder_.addAllMessages(values);
@@ -11284,7 +11179,6 @@ public final class Indication {
         return undInstrmtGrpBuilder_;
       }
 
-      // optional .Common.YieldData yield_data = 31;
       private org.fixprotocol.components.Common.YieldData yieldData_ = org.fixprotocol.components.Common.YieldData.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder> yieldDataBuilder_;
@@ -11393,7 +11287,7 @@ public final class Indication {
         if (yieldDataBuilder_ == null) {
           yieldDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.YieldData, org.fixprotocol.components.Common.YieldData.Builder, org.fixprotocol.components.Common.YieldDataOrBuilder>(
-                  yieldData_,
+                  getYieldData(),
                   getParentForChildren(),
                   isClean());
           yieldData_ = null;
@@ -11401,7 +11295,6 @@ public final class Indication {
         return yieldDataBuilder_;
       }
 
-      // optional .Common.ApplicationSequenceControl application_sequence_control = 32;
       private org.fixprotocol.components.Common.ApplicationSequenceControl applicationSequenceControl_ = org.fixprotocol.components.Common.ApplicationSequenceControl.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder> applicationSequenceControlBuilder_;
@@ -11510,7 +11403,7 @@ public final class Indication {
         if (applicationSequenceControlBuilder_ == null) {
           applicationSequenceControlBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.fixprotocol.components.Common.ApplicationSequenceControl, org.fixprotocol.components.Common.ApplicationSequenceControl.Builder, org.fixprotocol.components.Common.ApplicationSequenceControlOrBuilder>(
-                  applicationSequenceControl_,
+                  getApplicationSequenceControl(),
                   getParentForChildren(),
                   isClean());
           applicationSequenceControl_ = null;
@@ -11529,17 +11422,17 @@ public final class Indication {
     // @@protoc_insertion_point(class_scope:Indication.Ioi)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Indication_Advertisement_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Indication_Advertisement_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Indication_IoiQualGrp_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Indication_IoiQualGrp_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Indication_Ioi_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -11712,211 +11605,13 @@ public final class Indication {
       "tion"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_Indication_Advertisement_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_Indication_Advertisement_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Indication_Advertisement_descriptor,
-              new java.lang.String[] { "AdvId", "AdvRefId", "AdvSide", "AdvTransType", "Currency", "Price", "PriceExponent", "Quantity", "QuantityExponent", "StandardHeader", "StandardTrailer", "Text", "TransactTime", "LastMkt", "TradeDate", "Urllink", "EncodedText", "EncodedTextLen", "TradingSessionId", "Instrument", "TradingSessionSubId", "InstrmtLegGrp", "QtyType", "UndInstrmtGrp", });
-          internal_static_Indication_IoiQualGrp_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_Indication_IoiQualGrp_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Indication_IoiQualGrp_descriptor,
-              new java.lang.String[] { "IoiQualifier", });
-          internal_static_Indication_Ioi_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_Indication_Ioi_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Indication_Ioi_descriptor,
-              new java.lang.String[] { "Currency", "IoiId", "IoiQltyInd", "IoiQty", "IoiRefId", "IoiTransType", "Price", "PriceExponent", "Side", "StandardHeader", "StandardTrailer", "Text", "ValidUntilTime", "IoiNaturalFlag", "TransactTime", "Urllink", "EncodedText", "EncodedTextLen", "Instrument", "PriceType", "SpreadOrBenchmarkCurveData", "FinancingDetails", "IoiQualGrp", "InstrmtLegIoiGrp", "OrderQtyData", "Parties", "QtyType", "RoutingGrp", "Stipulations", "UndInstrmtGrp", "YieldData", "ApplicationSequenceControl", });
-          com.google.protobuf.ExtensionRegistry registry =
-            com.google.protobuf.ExtensionRegistry.newInstance();
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.type);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.tag);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.fieldAdded);
-          registry.add(org.fixprotocol.components.Fix.msgType);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          registry.add(org.fixprotocol.components.Fix.enumValue);
-          return registry;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
@@ -11925,6 +11620,210 @@ public final class Indication {
           org.fixprotocol.components.Session.getDescriptor(),
           org.fixprotocol.components.Common.getDescriptor(),
         }, assigner);
+    internal_static_Indication_Advertisement_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_Indication_Advertisement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Indication_Advertisement_descriptor,
+        new java.lang.String[] { "AdvId", "AdvRefId", "AdvSide", "AdvTransType", "Currency", "Price", "PriceExponent", "Quantity", "QuantityExponent", "StandardHeader", "StandardTrailer", "Text", "TransactTime", "LastMkt", "TradeDate", "Urllink", "EncodedText", "EncodedTextLen", "TradingSessionId", "Instrument", "TradingSessionSubId", "InstrmtLegGrp", "QtyType", "UndInstrmtGrp", });
+    internal_static_Indication_IoiQualGrp_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_Indication_IoiQualGrp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Indication_IoiQualGrp_descriptor,
+        new java.lang.String[] { "IoiQualifier", });
+    internal_static_Indication_Ioi_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_Indication_Ioi_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_Indication_Ioi_descriptor,
+        new java.lang.String[] { "Currency", "IoiId", "IoiQltyInd", "IoiQty", "IoiRefId", "IoiTransType", "Price", "PriceExponent", "Side", "StandardHeader", "StandardTrailer", "Text", "ValidUntilTime", "IoiNaturalFlag", "TransactTime", "Urllink", "EncodedText", "EncodedTextLen", "Instrument", "PriceType", "SpreadOrBenchmarkCurveData", "FinancingDetails", "IoiQualGrp", "InstrmtLegIoiGrp", "OrderQtyData", "Parties", "QtyType", "RoutingGrp", "Stipulations", "UndInstrmtGrp", "YieldData", "ApplicationSequenceControl", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.type);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.tag);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.fieldAdded);
+    registry.add(org.fixprotocol.components.Fix.msgType);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    registry.add(org.fixprotocol.components.Fix.enumValue);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    org.fixprotocol.components.Meta.getDescriptor();
+    org.fixprotocol.components.Fix.getDescriptor();
+    org.fixprotocol.components.Session.getDescriptor();
+    org.fixprotocol.components.Common.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -561,10 +561,10 @@ public final class Fix {
     // @@protoc_insertion_point(enum_scope:fix.Version)
   }
 
-  public interface TenorOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface TenorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:fix.Tenor)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional uint32 days = 1;
     /**
      * <code>optional uint32 days = 1;</code>
      */
@@ -574,7 +574,6 @@ public final class Fix {
      */
     int getDays();
 
-    // optional uint32 weeks = 2;
     /**
      * <code>optional uint32 weeks = 2;</code>
      */
@@ -584,7 +583,6 @@ public final class Fix {
      */
     int getWeeks();
 
-    // optional uint32 months = 3;
     /**
      * <code>optional uint32 months = 3;</code>
      */
@@ -594,7 +592,6 @@ public final class Fix {
      */
     int getMonths();
 
-    // optional uint32 years = 4;
     /**
      * <code>optional uint32 years = 4;</code>
      */
@@ -608,8 +605,9 @@ public final class Fix {
    * Protobuf type {@code fix.Tenor}
    */
   public static final class Tenor extends
-      com.google.protobuf.GeneratedMessage
-      implements TenorOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:fix.Tenor)
+      TenorOrBuilder {
     // Use Tenor.newBuilder() to construct.
     private Tenor(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -715,7 +713,6 @@ public final class Fix {
     }
 
     private int bitField0_;
-    // optional uint32 days = 1;
     public static final int DAYS_FIELD_NUMBER = 1;
     private int days_;
     /**
@@ -731,7 +728,6 @@ public final class Fix {
       return days_;
     }
 
-    // optional uint32 weeks = 2;
     public static final int WEEKS_FIELD_NUMBER = 2;
     private int weeks_;
     /**
@@ -747,7 +743,6 @@ public final class Fix {
       return weeks_;
     }
 
-    // optional uint32 months = 3;
     public static final int MONTHS_FIELD_NUMBER = 3;
     private int months_;
     /**
@@ -763,7 +758,6 @@ public final class Fix {
       return months_;
     }
 
-    // optional uint32 years = 4;
     public static final int YEARS_FIELD_NUMBER = 4;
     private int years_;
     /**
@@ -788,7 +782,8 @@ public final class Fix {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -916,8 +911,9 @@ public final class Fix {
      * Protobuf type {@code fix.Tenor}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements org.fixprotocol.components.Fix.TenorOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:fix.Tenor)
+        org.fixprotocol.components.Fix.TenorOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return org.fixprotocol.components.Fix.internal_static_fix_Tenor_descriptor;
@@ -1057,7 +1053,6 @@ public final class Fix {
       }
       private int bitField0_;
 
-      // optional uint32 days = 1;
       private int days_ ;
       /**
        * <code>optional uint32 days = 1;</code>
@@ -1090,7 +1085,6 @@ public final class Fix {
         return this;
       }
 
-      // optional uint32 weeks = 2;
       private int weeks_ ;
       /**
        * <code>optional uint32 weeks = 2;</code>
@@ -1123,7 +1117,6 @@ public final class Fix {
         return this;
       }
 
-      // optional uint32 months = 3;
       private int months_ ;
       /**
        * <code>optional uint32 months = 3;</code>
@@ -1156,7 +1149,6 @@ public final class Fix {
         return this;
       }
 
-      // optional uint32 years = 4;
       private int years_ ;
       /**
        * <code>optional uint32 years = 4;</code>
@@ -1321,7 +1313,7 @@ public final class Fix {
           .newFileScopedGeneratedExtension(
         org.fixprotocol.components.Fix.Version.class,
         null);
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_fix_Tenor_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -1382,73 +1374,76 @@ public final class Fix {
       "\003Fix"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_fix_Tenor_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_fix_Tenor_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_fix_Tenor_descriptor,
-              new java.lang.String[] { "Days", "Weeks", "Months", "Years", });
-          category.internalInit(descriptor.getExtensions().get(0));
-          msgType.internalInit(descriptor.getExtensions().get(1));
-          tag.internalInit(descriptor.getExtensions().get(2));
-          type.internalInit(descriptor.getExtensions().get(3));
-          fieldAdded.internalInit(descriptor.getExtensions().get(4));
-          fieldAddedEp.internalInit(descriptor.getExtensions().get(5));
-          fieldDeprecated.internalInit(descriptor.getExtensions().get(6));
-          enumValue.internalInit(descriptor.getExtensions().get(7));
-          enumAdded.internalInit(descriptor.getExtensions().get(8));
-          enumAddedEp.internalInit(descriptor.getExtensions().get(9));
-          enumDeprecated.internalInit(descriptor.getExtensions().get(10));
-          com.google.protobuf.ExtensionRegistry registry =
-            com.google.protobuf.ExtensionRegistry.newInstance();
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAdded);
-          registry.add(org.fixprotocol.components.Fix.enumAddedEp);
-          return registry;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
         }, assigner);
+    internal_static_fix_Tenor_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_fix_Tenor_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_fix_Tenor_descriptor,
+        new java.lang.String[] { "Days", "Weeks", "Months", "Years", });
+    category.internalInit(descriptor.getExtensions().get(0));
+    msgType.internalInit(descriptor.getExtensions().get(1));
+    tag.internalInit(descriptor.getExtensions().get(2));
+    type.internalInit(descriptor.getExtensions().get(3));
+    fieldAdded.internalInit(descriptor.getExtensions().get(4));
+    fieldAddedEp.internalInit(descriptor.getExtensions().get(5));
+    fieldDeprecated.internalInit(descriptor.getExtensions().get(6));
+    enumValue.internalInit(descriptor.getExtensions().get(7));
+    enumAdded.internalInit(descriptor.getExtensions().get(8));
+    enumAddedEp.internalInit(descriptor.getExtensions().get(9));
+    enumDeprecated.internalInit(descriptor.getExtensions().get(10));
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAdded);
+    registry.add(org.fixprotocol.components.Fix.enumAddedEp);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

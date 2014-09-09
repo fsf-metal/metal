@@ -1,3 +1,9 @@
+/**
+ *  This inbound session is collecting messages from QuickFIX and forwarding
+ *  them to "tradingAdapter" after transformation
+ *  Key functions is MyApplication::onMessage( NewOrderSingle)
+ */
+
 #include <iostream>
 #include "InboundFIXSession.h"
 #include "QuickFIXAdapter/QuickFIXMessageMapper.h"

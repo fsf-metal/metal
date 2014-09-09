@@ -8,13 +8,14 @@ class QuickFIXAdapter : public TradingAdapter {
 	public:
 		QuickFIXAdapter();
 		~QuickFIXAdapter();
-		void send( SingleGeneralOrderHandling::NewOrderSingle &nos);
+		void send( const SingleGeneralOrderHandling::NewOrderSingle &nos);
 		void start();
 		void stop();
-		void recv( SingleGeneralOrderHandling::ExecutionReport &er);
+		void recv( const SingleGeneralOrderHandling::ExecutionReport &er);
 
 	private:
-		FIX::SocketInitiator *initiator;
+        FIX::SocketInitiator *initiator;
+        FIX::Session *session;
 };
 
 #endif // __QUICKFIXADAPTER_H

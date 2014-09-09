@@ -8,10 +8,10 @@ class TradingAdapter : public Adapter {
 	public:
 		TradingAdapter();
 		~TradingAdapter();
-		virtual void send( SingleGeneralOrderHandling::NewOrderSingle &) = 0;
+		virtual void send( const SingleGeneralOrderHandling::NewOrderSingle &) = 0;
 		void start();
 		void stop();
-		virtual void recv( SingleGeneralOrderHandling::ExecutionReport &er) = 0;
+		virtual void recv( const SingleGeneralOrderHandling::ExecutionReport &er) = 0;
 };
 
 #endif //__TRADINGADAPTER_H

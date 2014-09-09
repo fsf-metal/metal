@@ -358,24 +358,25 @@ public final class Meta {
       "col.componentsB\004Meta"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          timeUnit.internalInit(descriptor.getExtensions().get(0));
-          exponent.internalInit(descriptor.getExtensions().get(1));
-          minLength.internalInit(descriptor.getExtensions().get(2));
-          maxLength.internalInit(descriptor.getExtensions().get(3));
-          minValue.internalInit(descriptor.getExtensions().get(4));
-          maxValue.internalInit(descriptor.getExtensions().get(5));
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
         }, assigner);
+    timeUnit.internalInit(descriptor.getExtensions().get(0));
+    exponent.internalInit(descriptor.getExtensions().get(1));
+    minLength.internalInit(descriptor.getExtensions().get(2));
+    maxLength.internalInit(descriptor.getExtensions().get(3));
+    minValue.internalInit(descriptor.getExtensions().get(4));
+    maxValue.internalInit(descriptor.getExtensions().get(5));
+    com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

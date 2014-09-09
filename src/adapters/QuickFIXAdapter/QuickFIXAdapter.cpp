@@ -11,6 +11,7 @@
 #include "quickfix/SessionSettings.h"
 #include "quickfix/Application.h"
 #include "quickfix/MessageCracker.h"
+#include "quickfix/fix42/NewOrderSingle.h"
 
 
 using namespace FIX;
@@ -64,7 +65,7 @@ QuickFIXAdapter::~QuickFIXAdapter() {
 /**
  * Tranform incomming NewOrderSingle into QuickFIX message and sendi it
  */
-void QuickFIXAdapter::send( SingleGeneralOrderHandling::NewOrderSingle &nos) {
+void QuickFIXAdapter::send( const SingleGeneralOrderHandling::NewOrderSingle &nos) {
 	std::cout << "QuickFIXAdapter: send NewOrderSingle" << std::endl;
 
 	FIX42::NewOrderSingle message;
@@ -72,7 +73,7 @@ void QuickFIXAdapter::send( SingleGeneralOrderHandling::NewOrderSingle &nos) {
 	this->session->sendToTarget( message);
 }
 
-void QuickFIXAdapter::recv( SingleGeneralOrderHandling::ExecutionReport &er) {
+void QuickFIXAdapter::recv( const SingleGeneralOrderHandling::ExecutionReport &er) {
 	std::cout << "QuickFIXAdapter: Execution Report received but not processed" << std::endl;
 }
 
@@ -95,6 +96,10 @@ void QuickFIXAdapter::start() {
 	this->initiator->start();
 
 	// memorize session
+    std::set<SessionID> sessions = settings->getSessions();
+    if( sessions.size() > 0) {
+        this->session  = FIX::Session::lookupSession( *sessions.begin());
+    }
 }
 
 void QuickFIXAdapter::stop() {
