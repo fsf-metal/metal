@@ -20,46 +20,38 @@
 #include <thread>
 
 #include "InboundFIXSession.h"
-#include "OutboundAdapter.h"
+//#include "OutboundAdapter.h"
+#include "QuickFIXAdapter/QuickFIXAdapter.h"
 
 using namespace std;
 
 // NewOrderSingle will flow in from client to adapter
 // ExecutionReports will take the opposite route
 InboundFIXSession client;
-OutboundAdapter adapter;
+//OutboundAdapter adapter;
+QuickFIXAdapter adapter;
+
+void installHandler();
+void handler(int s); 
 
 /**
- * This handler is used when Ctrl+C is caught
- * The intent is to close open sessions
+ * We start both connections and wait for Ctrl-C or 10 minutes
+ * Whichever happens first will close both connections
  */
-void handler(int s) {
-	cout << "Ctrl+C caught" << endl;
-	client.stop();
-	adapter.stop();
-	cout << "Cleanup done." << endl;
-
-	exit( 1);
-}
-
 int main( int argc, char *argv[]) {
 	try {
-		struct sigaction sigIntHandler;
 		chrono::minutes delay(10);
 
 		// make each party aware of each other for message translation
 		client.setTradingAdapter( &adapter);
 		// TODO set client session on adapter
 		
-		// Start both sides of the conversation
+		// Start both conversations
 		client.start();
 		adapter.start();
 
 		// install a signal handler to catch Ctrl+C
-		sigIntHandler.sa_handler = handler;
-		sigemptyset(&sigIntHandler.sa_mask);
-		sigIntHandler.sa_flags = 0;
-		sigaction(SIGINT, &sigIntHandler, NULL);
+		installHandler();
 
 		cout << "Press Ctrl+C to interrupt or wait for timeout" << endl;
 
@@ -76,5 +68,26 @@ int main( int argc, char *argv[]) {
 		cerr << "Exception" << endl;
 		return 1;
 	}
+}
+
+/**
+ * This handler is used when Ctrl+C is caught
+ * The intent is to close open sessions
+ */
+void handler(int s) {
+	cout << "Ctrl+C caught" << endl;
+	client.stop();
+	adapter.stop();
+	cout << "Cleanup done." << endl;
+
+	exit( 1);
+}
+
+void installHandler() {
+	struct sigaction sigIntHandler;
+	sigIntHandler.sa_handler = handler;
+	sigemptyset(&sigIntHandler.sa_mask);
+	sigIntHandler.sa_flags = 0;
+	sigaction(SIGINT, &sigIntHandler, NULL);
 }
 

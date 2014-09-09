@@ -1,6 +1,6 @@
 #include <iostream>
 #include "InboundFIXSession.h"
-#include "QuickFIXMessageMapper.h"
+#include "QuickFIXAdapter/QuickFIXMessageMapper.h"
 
 #include "quickfix/FileStore.h"
 #include "quickfix/FileLog.h"
@@ -20,7 +20,7 @@ class MyApplication:public Application,public MessageCracker {
 	public:
 		MyApplication() {
 			this->tradingAdapter = NULL;
-};
+		};
 		~MyApplication() {};
 		void onCreate( const SessionID& ) {};
 		void onLogon( const SessionID& ){
@@ -32,19 +32,18 @@ class MyApplication:public Application,public MessageCracker {
 		};
 		void toApp( Message&, const SessionID& )
 			throw( DoNotSend ) {
-			std::cout << "App sent" << std::endl;
-		};
+				std::cout << "App sent" << std::endl;
+			};
 		void fromAdmin( const Message&, const SessionID& )
 			throw( FieldNotFound, IncorrectDataFormat, IncorrectTagValue, RejectLogon ) {
-			std::cout << "Admin received" << std::endl;
-		};
+				std::cout << "Admin received" << std::endl;
+			};
 		void fromApp( const Message& message, const SessionID& sessionID) 
 			throw( FieldNotFound, IncorrectDataFormat, IncorrectTagValue, UnsupportedMessageType ) {
-			crack( message, sessionID);
-		};
+				crack( message, sessionID);
+			};
 
 		void onMessage( const FIX44::NewOrderSingle& message, const SessionID& ) {
-			std::cout << "MyApplication: FIX44 NewOrderSingle received" << std::endl;
 			// Transform and send the message
 			if( this->tradingAdapter != NULL) {
 				SingleGeneralOrderHandling::NewOrderSingle nos;
@@ -75,7 +74,7 @@ void InboundFIXSession::start() {
 	std::cout << "Starting inbound FIX session" << std::endl;
 
 	// Perform all QuickFIX initialisation
-	SessionSettings *settings = new SessionSettings("silverFIXConfig.txt");
+	SessionSettings *settings = new SessionSettings("silverFIXClient.cfg");
 
 	MyApplication *application = new MyApplication();
 	//application->adapter = this->adapter;
