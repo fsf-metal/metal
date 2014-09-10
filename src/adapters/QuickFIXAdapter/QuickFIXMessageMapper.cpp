@@ -1,8 +1,15 @@
 #include "QuickFIXMessageMapper.h"
 #include <google/protobuf/text_format.h>
 
+/**
+ * Translate FIX NewOrderSingle into fixprotobuf representation
+ */
 void QuickFIXMessageMapper::map( const FIX44::NewOrderSingle &message, 
                                  SingleGeneralOrderHandling::NewOrderSingle &nos){
+	FIX::ClOrdID clOrdID;
+	message.get( clOrdID);
+	nos.set_cl_ord_id( clOrdID);
+
 	std::cout << "QuickFIXMessageMapper: NewOrderSingle map invoked but not implemented" << std::endl;
 
 }

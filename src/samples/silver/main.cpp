@@ -53,7 +53,7 @@ int main( int argc, char *argv[]) {
 
 		cout << "Press Ctrl+C to interrupt or wait for timeout" << endl;
 
-		this_thread::sleep_for( delay);
+		std::this_thread::sleep_for( delay);
 		client.stop();
 		adapter.stop();
 		cout << "Normal timeout shutdown" << endl;

@@ -7,11 +7,12 @@
 class TradingAdapter : public Adapter {
 	public:
 		TradingAdapter();
-		~TradingAdapter();
 		virtual void send( const SingleGeneralOrderHandling::NewOrderSingle &) = 0;
 		void start();
 		void stop();
 		virtual void recv( const SingleGeneralOrderHandling::ExecutionReport &er) = 0;
+	protected:
+		~TradingAdapter();
 };
 
 #endif //__TRADINGADAPTER_H

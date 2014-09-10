@@ -57,13 +57,12 @@ class MyApplication: public Application,public MessageCracker {
 };
 
 QuickFIXAdapter::QuickFIXAdapter() {
-}
-
-QuickFIXAdapter::~QuickFIXAdapter() {
+	this->initiator = NULL;
+	this->session = NULL;
 }
 
 /**
- * Tranform incomming NewOrderSingle into QuickFIX message and sendi it
+ * Tranform incomming NewOrderSingle into QuickFIX message and send it
  */
 void QuickFIXAdapter::send( const SingleGeneralOrderHandling::NewOrderSingle &nos) {
 	std::cout << "QuickFIXAdapter: send NewOrderSingle" << std::endl;
@@ -92,11 +91,12 @@ void QuickFIXAdapter::start() {
 	FileLogFactory *logFactory = new FileLogFactory(*settings);
 	this->initiator = new SocketInitiator( *application, *storeFactory, *settings, *logFactory /*optional*/);
 
-	std::cout << "QuickFIXAdapter: starting initiator" << std::endl;
+	//std::cout << "QuickFIXAdapter: starting initiator" << std::endl;
 	this->initiator->start();
 
 	// memorize session
     std::set<SessionID> sessions = settings->getSessions();
+	std::cout << "QuickFIXAdapter: adapter started with" << sessions.size() << " session(s)" << std::endl;
     if( sessions.size() > 0) {
         this->session  = FIX::Session::lookupSession( *sessions.begin());
     }
