@@ -46,7 +46,7 @@ class MyApplication: public Application,public MessageCracker {
 
 		void onMessage( const FIX42::ExecutionReport& message, const SessionID& ) {
 				if( this->adapter != NULL && false) {
-					SingleGeneralOrderHandling::ExecutionReport er;
+					ExecutionReport er;
 					QuickFIXMessageMapper::map( message, er);
 					this->adapter->recv( er);
 				}
@@ -64,7 +64,7 @@ QuickFIXAdapter::QuickFIXAdapter() {
 /**
  * Tranform incomming NewOrderSingle into QuickFIX message and send it
  */
-void QuickFIXAdapter::send( const SingleGeneralOrderHandling::NewOrderSingle &nos) {
+void QuickFIXAdapter::send( const NewOrderSingle &nos) {
 	std::cout << "QuickFIXAdapter: send NewOrderSingle" << std::endl;
 
 	FIX42::NewOrderSingle message;
@@ -72,7 +72,7 @@ void QuickFIXAdapter::send( const SingleGeneralOrderHandling::NewOrderSingle &no
 	this->session->sendToTarget( message);
 }
 
-void QuickFIXAdapter::recv( const SingleGeneralOrderHandling::ExecutionReport &er) {
+void QuickFIXAdapter::recv( const ExecutionReport &er) {
 	std::cout << "QuickFIXAdapter: Execution Report received but not processed" << std::endl;
 }
 

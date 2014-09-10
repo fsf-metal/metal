@@ -9,8 +9,8 @@ class QuickFIXAdapter : public TradingAdapter {
 		QuickFIXAdapter();
 
 		// messaging
-		void send( const SingleGeneralOrderHandling::NewOrderSingle &nos);
-		void recv( const SingleGeneralOrderHandling::ExecutionReport &er);
+		void send( const NewOrderSingle &nos);
+		void recv( const ExecutionReport &er);
 
 		// life cycle
 		void start();
