@@ -1,18 +1,19 @@
-#ifndef __TRADINGADAPTER_H
-#define __TRADINGADAPTER_H
+#ifndef __METAL_TRADINGADAPTER_H
+#define __METAL_TRADINGADAPTER_H
 
 #include "Adapter.h"
 #include "metal.h"
 
+namespace Metal {
 class TradingAdapter : public Adapter {
 	public:
 		TradingAdapter();
 		virtual void send( const NewOrderSingle &) = 0;
-		void start();
-		void stop();
 		virtual void recv( const ExecutionReport &er) = 0;
 	protected:
 		~TradingAdapter();
 };
 
-#endif //__TRADINGADAPTER_H
+} // namespace Metal
+
+#endif //__METAL_TRADINGADAPTER_H

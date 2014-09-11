@@ -1,11 +1,9 @@
 #include <iostream>
 #include "TradingAdapter.h"
 
+namespace Metal {
+
 TradingAdapter::TradingAdapter() {};
 TradingAdapter::~TradingAdapter() {};
 
-void TradingAdapter::start() {
-	Adapter::start();
-	std::cout << "TradingAdapter: start() invoked but not implemented" << std::endl;
 }
-

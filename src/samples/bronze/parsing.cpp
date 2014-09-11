@@ -32,7 +32,7 @@ std::vector<std::string> &split(const std::string &s, char delim, std::vector<st
  * This is where the action goes.
  * We are tuning a string into NewOrderSingle
  */
-void parseNOS( const std::string &cmd, NewOrderSingle &nos) {
+void parseNOS( const std::string &cmd, Metal::NewOrderSingle &nos) {
 	// Perform split and basic validation
 	std::vector<std::string> tokens;
 	split( cmd, ' ', tokens);

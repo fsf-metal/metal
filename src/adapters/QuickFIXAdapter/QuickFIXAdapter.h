@@ -1,8 +1,10 @@
-#ifndef __QUICKFIXADAPTER_H
-#define __QUICKFIXADAPTER_H
+#ifndef __METAL_QUICKFIXADAPTER_H
+#define __METAL_QUICKFIXADAPTER_H
 
 #include "../TradingAdapter.h"
 #include "quickfix/SocketInitiator.h"
+
+namespace Metal {
 
 class QuickFIXAdapter : public TradingAdapter {
 	public:
@@ -24,6 +26,8 @@ class QuickFIXAdapter : public TradingAdapter {
         FIX::Session *session;
 };
 
-#endif // __QUICKFIXADAPTER_H
+} // namespace Metal
+
+#endif // __METAL_QUICKFIXADAPTER_H
 
 

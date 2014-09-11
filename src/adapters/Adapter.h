@@ -1,13 +1,18 @@
-#ifndef __ADAPTER_H
-#define __ADAPTER_H
+#ifndef __METAL_ADAPTER_H
+#define __METAL_ADAPTER_H
 
+namespace Metal {
 class Adapter {
 	public:
-		Adapter();
-		~Adapter();
+		Adapter(){};
 
-		void start();
-		void stop();
+		virtual void start() = 0;
+		virtual void stop() = 0;
+
+	protected:
+		~Adapter(){};
+
 };
+}
 
-#endif // __ADAPTER_H
+#endif // __METAL_ADAPTER_H

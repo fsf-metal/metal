@@ -1,7 +1,7 @@
 #ifndef __PARSING_H
 #define __PARSING_H
 
-void parseNOS( const std::string& cmd, NewOrderSingle &);
+void parseNOS( const std::string& cmd, Metal::NewOrderSingle &);
 
 class ParsingException: public std::exception {
 private:

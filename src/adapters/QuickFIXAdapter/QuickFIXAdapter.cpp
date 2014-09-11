@@ -11,14 +11,14 @@
 #include "quickfix/SessionSettings.h"
 #include "quickfix/Application.h"
 #include "quickfix/MessageCracker.h"
-#include "quickfix/fix42/NewOrderSingle.h"
+#include "quickfix/fix50sp2/NewOrderSingle.h"
 
 
 using namespace FIX;
 
 class MyApplication: public Application,public MessageCracker {
 	public:
-		MyApplication( QuickFIXAdapter *pqfa) {
+		MyApplication( Metal::QuickFIXAdapter *pqfa) {
 			this->adapter = pqfa;
 		};
 		~MyApplication() {};
@@ -28,15 +28,12 @@ class MyApplication: public Application,public MessageCracker {
 		};
 		void onLogout( const SessionID& ) {};
 		void toAdmin( Message&, const SessionID& ) {
-			std::cout << "Admin sent" << std::endl;
 		};
 		void toApp( Message&, const SessionID& )
 			throw( DoNotSend ) {
-				std::cout << "App sent" << std::endl;
 			};
 		void fromAdmin( const Message&, const SessionID& )
 			throw( FieldNotFound, IncorrectDataFormat, IncorrectTagValue, RejectLogon ) {
-				std::cout << "Admin received" << std::endl;
 			};
 		void fromApp( const Message& message, const SessionID& sessionID)
 			throw( FieldNotFound, IncorrectDataFormat, IncorrectTagValue, UnsupportedMessageType ) {
@@ -46,15 +43,27 @@ class MyApplication: public Application,public MessageCracker {
 
 		void onMessage( const FIX42::ExecutionReport& message, const SessionID& ) {
 				if( this->adapter != NULL && false) {
-					ExecutionReport er;
-					QuickFIXMessageMapper::map( message, er);
+//					std::cout << "QuickFIXAdapter: FIX42 ExecutionReport Received" << std::endl;
+					Metal::ExecutionReport er;
+//					QuickFIXMessageMapper::map( message, er);
+					this->adapter->recv( er);
+				}
+        };
+
+		void onMessage( const FIX44::ExecutionReport& message, const SessionID& ) {
+				if( this->adapter != NULL && false) {
+//					std::cout << "QuickFIXAdapter: FIX44 ExecutionReport Received" << std::endl;
+					Metal::ExecutionReport er;
+//					QuickFIXMessageMapper::map( message, er);
 					this->adapter->recv( er);
 				}
         };
 	private:
-		QuickFIXAdapter *adapter;
+		Metal::QuickFIXAdapter *adapter;
 
 };
+
+namespace Metal {
 
 QuickFIXAdapter::QuickFIXAdapter() {
 	this->initiator = NULL;
@@ -67,9 +76,12 @@ QuickFIXAdapter::QuickFIXAdapter() {
 void QuickFIXAdapter::send( const NewOrderSingle &nos) {
 	std::cout << "QuickFIXAdapter: send NewOrderSingle" << std::endl;
 
-	FIX42::NewOrderSingle message;
-	QuickFIXMessageMapper::map( nos, message);
-	this->session->sendToTarget( message);
+	// TODO : Read protocol version from session properties
+	// For the moment, we assume the output is FIX44
+
+	FIX44::NewOrderSingle nosTo;
+	QuickFIXMessageMapper::map( nos, (FIX::Message &)nosTo);
+	this->session->send( nosTo);
 }
 
 void QuickFIXAdapter::recv( const ExecutionReport &er) {
@@ -78,7 +90,6 @@ void QuickFIXAdapter::recv( const ExecutionReport &er) {
 
 void QuickFIXAdapter::start() {
 	//std::cout << "QuickFIXAdapter: start()" << std::endl;
-	TradingAdapter::start();
 
 	// Perform all QuickFIX initialisation
 	std::string settingsFileName = "QuickFIXAdapter.cfg";
@@ -96,7 +107,7 @@ void QuickFIXAdapter::start() {
 
 	// memorize session
     std::set<SessionID> sessions = settings->getSessions();
-	std::cout << "QuickFIXAdapter: adapter started with" << sessions.size() << " session(s)" << std::endl;
+	std::cout << "QuickFIXAdapter: adapter started with " << sessions.size() << " session(s)" << std::endl;
     if( sessions.size() > 0) {
         this->session  = FIX::Session::lookupSession( *sessions.begin());
     }
@@ -109,4 +120,6 @@ void QuickFIXAdapter::stop() {
 		delete this->initiator;
 		this->initiator = NULL;
 	}
+}
+
 }

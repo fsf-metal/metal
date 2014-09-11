@@ -14,7 +14,7 @@
 // Where the data models are defined
 #include "metal.h"
 // This is our custom Implementation of some adapter
-#include "Output.h"
+#include "Adapter.h"
 // and petty parsing
 #include "parsing.h"
 
@@ -35,19 +35,20 @@ int main( int argc, char *argv[]) {
 	std::cout << "---------------------------------------------------------------" << std::endl;
 
 	std::string command;
-	NewOrderSingle nos;
-	Output output;
+	Metal::NewOrderSingle nos;
+	Adapter adapter;
 
-	output.start();
+	adapter.start();
 
 	while( true) {
 		std::cout << "> "; // Mighty prompt
 		getline( std::cin, command);
 		if( command == "exit") break;
-		std::cout << "Processing \"" << command << "\"" << std::endl;
+//		std::cout << "Processing \"" << command << "\"" << std::endl;
 		try {
 			parseNOS( command, nos);
-			output.send( nos);
+			adapter.send( nos);
+			std::cout << "Order sent " << nos.toString() << std::endl;
 		} catch( ParsingException &e) {
 			std::cerr << "Parsing failed: " << e.what() << std::endl;
 		} catch( std::exception &e) {
@@ -55,7 +56,7 @@ int main( int argc, char *argv[]) {
 		}
 	}
 
-	output.stop();
+	adapter.stop();
 
 	std::cout << "Good Bye!" << std::endl;
 
