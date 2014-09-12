@@ -43,7 +43,6 @@ examples/ordermatch/test/.libs/
 examples/ordermatch/test/ordermatch_ut
 examples/tradeclient/.libs/
 examples/tradeclient/tradeclient
-include/
 lib/libquickfix.dylib
 lib/libquickfix.la
 lib/libquickfix.so
