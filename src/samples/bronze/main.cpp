@@ -48,7 +48,7 @@ int main( int argc, char *argv[]) {
 		try {
 			parseNOS( command, nos);
 			adapter.send( nos);
-			std::cout << "Order sent " << nos.toString() << std::endl;
+			std::cout << "Order sent " << nos.getField(11) << std::endl;
 		} catch( ParsingException &e) {
 			std::cerr << "Parsing failed: " << e.what() << std::endl;
 		} catch( std::exception &e) {

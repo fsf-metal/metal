@@ -3,6 +3,7 @@
  *
  *  Created on: Sep 10, 2014
  *      Author: jc
+ *     Purpose: This class is meant to extend whatever Metal Adapter should be used
  */
 
 #ifndef ADAPTER_H_
@@ -13,6 +14,8 @@
 class Adapter: public Metal::QuickFIXAdapter {
 public:
 	Adapter();
+	void recv( const Metal::ExecutionReport &er);
+
 	virtual ~Adapter();
 };
 

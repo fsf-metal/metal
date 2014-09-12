@@ -13,9 +13,51 @@ void QuickFIXMessageMapper::map( const FIX44::NewOrderSingle &message,
 /**
  * Execution Report FIX -> MeTAL
  */
-void QuickFIXMessageMapper::map( const FIX42::ExecutionReport &, 
-                                 ExecutionReport &){
-	std::cout << "QuickFIXMessageMapper: ExecutionReport map invoked but not implemented" << std::endl;
+void QuickFIXMessageMapper::map( const FIX44::ExecutionReport &message,
+                                 ExecutionReport &er){
+	std::vector<int> fields = { 6, // AvgPx
+			                    11, // ClOrdID
+			                    14, // CumQty
+			                    17, // ExecID
+			                    31, // LastPx
+			                    32, // LastQty
+			                    37, // OrderID
+			                    39, // OrdStatus
+			                    54, // Side
+			                    150, // ExecType
+			                    151}; // LeavesQty
+
+	for( std::vector<int>::iterator fieldIterator = fields.begin(); fieldIterator != fields.end(); ++fieldIterator) {
+		er.setField( *fieldIterator, message.getField( *fieldIterator));
+	}
+/*
+	FIX::AvgPx avgPx;
+	er.setField( message.getField( avgPx));
+
+	FIX::ClOrdID clOrdID;
+	er.setField( message.getField( clOrdID));
+
+	FIX::CumQty cumQty;
+	er.setField( message.getField( cumQty));
+
+	FIX::ExecID execID;
+	er.setField( message.getField( execID));
+
+	FIX::LastPx lastPx;
+	er.setField( message.getField( lastPx));
+
+	FIX::LastQty lastQty;
+	er.setField( message.getField( lastQty));
+
+	FIX::OrderID orderID;
+	er.setField( message.getField( orderID));
+
+	FIX::OrdStatus ordStatus;
+	er.setField( message.getField( ordStatus));
+
+	FIX::Side side;
+	er.setField();
+	*/
 }
 
 /**
