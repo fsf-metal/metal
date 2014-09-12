@@ -18,8 +18,10 @@ class QuickFIXAdapter : public TradingAdapter {
 		void start();
 		void stop();
 
-	protected:
-		~QuickFIXAdapter(){};
+		// for benchmarking
+		MessageMapper* getMessageMapper();
+
+		virtual ~QuickFIXAdapter(){};
 
 	private:
         FIX::SocketInitiator *initiator;

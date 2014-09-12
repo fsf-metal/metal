@@ -71,6 +71,10 @@ QuickFIXAdapter::QuickFIXAdapter() {
 	this->session = NULL;
 }
 
+MessageMapper* QuickFIXAdapter::getMessageMapper() {
+	return new QuickFIXMessageMapper();
+}
+
 /**
  * Tranform incomming NewOrderSingle into QuickFIX message and send it
  */

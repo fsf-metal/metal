@@ -1,5 +1,5 @@
 #Object('main.cpp')
-src_files = 'TradingAdapter.cpp Translator.cpp'
+src_files = 'TradingAdapter.cpp Translator.cpp MessageMapper.cpp'
 lib_files = 'pthread xml2 z'
 include_path = '../quickfix/include'
 output_file = 'Metal.so'

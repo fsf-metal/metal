@@ -27,37 +27,11 @@ void QuickFIXMessageMapper::map( const FIX44::ExecutionReport &message,
 			                    150, // ExecType
 			                    151}; // LeavesQty
 
+	// Copy all fields
 	for( std::vector<int>::iterator fieldIterator = fields.begin(); fieldIterator != fields.end(); ++fieldIterator) {
+		std::cout << "Mapping:" << *fieldIterator << std::endl;
 		er.setField( *fieldIterator, message.getField( *fieldIterator));
 	}
-/*
-	FIX::AvgPx avgPx;
-	er.setField( message.getField( avgPx));
-
-	FIX::ClOrdID clOrdID;
-	er.setField( message.getField( clOrdID));
-
-	FIX::CumQty cumQty;
-	er.setField( message.getField( cumQty));
-
-	FIX::ExecID execID;
-	er.setField( message.getField( execID));
-
-	FIX::LastPx lastPx;
-	er.setField( message.getField( lastPx));
-
-	FIX::LastQty lastQty;
-	er.setField( message.getField( lastQty));
-
-	FIX::OrderID orderID;
-	er.setField( message.getField( orderID));
-
-	FIX::OrdStatus ordStatus;
-	er.setField( message.getField( ordStatus));
-
-	FIX::Side side;
-	er.setField();
-	*/
 }
 
 /**
@@ -97,6 +71,18 @@ void QuickFIXMessageMapper::map( const NewOrderSingle &nos,
 		message.setField( nos.getField( price), true);
 	}
 
+}
+
+/**
+ * This is just a dumb loop that maps all incoming NewOrderSingle.
+ * It has no other function than measuring mapping speed
+ */
+void QuickFIXMessageMapper::benchmark( std::vector<NewOrderSingle> &allOrders) {
+	FIX44::NewOrderSingle nos44;
+
+	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
+		map( *iter, nos44);
+	}
 }
 
 

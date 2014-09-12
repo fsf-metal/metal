@@ -3,6 +3,7 @@
 
 #include "Adapter.h"
 #include "metal.h"
+#include "MessageMapper.h"
 
 namespace Metal {
 class TradingAdapter : public Adapter {
@@ -10,6 +11,8 @@ class TradingAdapter : public Adapter {
 		TradingAdapter();
 		virtual void send( const NewOrderSingle &) = 0;
 		virtual void recv( const ExecutionReport &er) = 0;
+		virtual MessageMapper* getMessageMapper() = 0;
+
 	protected:
 		~TradingAdapter();
 };
