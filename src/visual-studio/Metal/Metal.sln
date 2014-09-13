@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "adapters", "adapters\adapters.vcxproj", "{B2FDF49F-919C-4673-8B21-44E345C1354A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "benckmark", "benckmark\benckmark.vcxproj", "{BAA82315-A89A-4866-ACBA-B0A8EBFABD7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2FDF49F-919C-4673-8B21-44E345C1354A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B2FDF49F-919C-4673-8B21-44E345C1354A}.Debug|Win32.Build.0 = Debug|Win32
+		{B2FDF49F-919C-4673-8B21-44E345C1354A}.Release|Win32.ActiveCfg = Release|Win32
+		{B2FDF49F-919C-4673-8B21-44E345C1354A}.Release|Win32.Build.0 = Release|Win32
+		{BAA82315-A89A-4866-ACBA-B0A8EBFABD7F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BAA82315-A89A-4866-ACBA-B0A8EBFABD7F}.Debug|Win32.Build.0 = Debug|Win32
+		{BAA82315-A89A-4866-ACBA-B0A8EBFABD7F}.Release|Win32.ActiveCfg = Release|Win32
+		{BAA82315-A89A-4866-ACBA-B0A8EBFABD7F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

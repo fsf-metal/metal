@@ -29,7 +29,6 @@ void QuickFIXMessageMapper::map( const FIX44::ExecutionReport &message,
 
 	// Copy all fields
 	for( std::vector<int>::iterator fieldIterator = fields.begin(); fieldIterator != fields.end(); ++fieldIterator) {
-		std::cout << "Mapping:" << *fieldIterator << std::endl;
 		er.setField( *fieldIterator, message.getField( *fieldIterator));
 	}
 }
@@ -39,37 +38,23 @@ void QuickFIXMessageMapper::map( const FIX44::ExecutionReport &message,
  */
 void QuickFIXMessageMapper::map( const NewOrderSingle &nos, 
                                  FIX::Message &message) {
-	// Client Order ID
-	FIX::ClOrdID clOrdID;
-	nos.getField( clOrdID);
-	message.setField( clOrdID);
+	int fields[6] = { 
+		FIX::FIELD::ClOrdID,
+		55, // Symbol
+		54, // Side
+		60, // TransactTime
+		38, // OrdQty
+		40 }; // OrdType
 
-	// Symbol
-	FIX::Symbol symbol;
-	nos.getField( symbol);
-	message.setField( symbol);
-
-	// Side
-	FIX::Side side;
-	message.setField( nos.getField( side), true);
-
-	// Transaction Time
-	FIX::TransactTime transactTime;
-	message.setField( nos.getField( transactTime), true);
-
-	// Order Quantity
-	FIX::OrderQty ordQty;
-	message.setField( nos.getField( ordQty), true);
-
-	// Order Type
-	FIX::OrdType ordType;
-	message.setField( nos.getField( ordType), true);
+	for (int index = 0; index < 6; ++index) {
+		int field = fields[index];
+		message.setField( field, nos.getField( field));
+	}
 
 	// Price if needed
-	if( ordType == FIX::OrdType_LIMIT) {
-		FIX::Price price;
-		message.setField( nos.getField( price), true);
-	}
+	try {
+		message.setField(FIX::FIELD::Price, nos.getField(FIX::FIELD::Price));
+	} catch (FIX::FieldNotFound &) { }
 
 }
 
