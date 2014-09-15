@@ -38,7 +38,7 @@ int main( int argc, char* argv[]) {
 		pNos->setField(FIX::ClOrdID( clOrdID));
         char symbol[6];
         randomString( symbol, 6);
-		pNos->setField(FIX::Symbol("APOOI"));
+		pNos->setField(FIX::Symbol( symbol));
         FIX::Side side = rand() >=0/5 ? FIX::Side_BUY : FIX::Side_SELL;
 		pNos->setField(FIX::Side(side));
 		pNos->setField(FIX::TransactTime(time(NULL)));

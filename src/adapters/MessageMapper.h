@@ -10,6 +10,7 @@
 
 #include <vector>
 #include "metal.h"
+#include "MappingException.h"
 
 namespace Metal {
 
