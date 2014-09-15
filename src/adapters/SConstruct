@@ -4,7 +4,7 @@ lib_files = 'pthread xml2 z'
 include_path = '../quickfix/include'
 output_file = 'Metal.so'
 #output_file = 'bronze'
-cpp_flags='-Wall -std=c++11 -fPIC -fexceptions -finline-functions'
+cpp_flags='-Wall -std=c++11 -fPIC -fexceptions -O3'
 
 env = Environment()
 env.Append( CPPPATH=Split( include_path))

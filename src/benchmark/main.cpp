@@ -20,6 +20,9 @@
 
 using namespace Metal;
 
+// Fills a string with random characters
+void randomString(char *s, const int len);
+
 int main( int argc, char* argv[]) {
 
 	// step 1 create a bunch of NewOrderSingle
@@ -30,13 +33,18 @@ int main( int argc, char* argv[]) {
 	for( int index = 0; index < BATCH_SIZE; index++) {
 		NewOrderSingle * pNos = new NewOrderSingle();
 
-		pNos->setField(FIX::ClOrdID("LKdq23"));
+        char clOrdID[16];
+        randomString( clOrdID, 15);
+		pNos->setField(FIX::ClOrdID( clOrdID));
+        char symbol[6];
+        randomString( symbol, 6);
 		pNos->setField(FIX::Symbol("APOOI"));
-		pNos->setField(FIX::Side(FIX::Side_BUY));
-		pNos->setField(FIX::TransactTime(FIX::Side_BUY));
-		pNos->setField(FIX::OrderQty(100));
+        FIX::Side side = rand() >=0/5 ? FIX::Side_BUY : FIX::Side_SELL;
+		pNos->setField(FIX::Side(side));
+		pNos->setField(FIX::TransactTime(time(NULL)));
+		pNos->setField(FIX::OrderQty((int)(rand()*100)));
 		pNos->setField(FIX::OrdType( FIX::OrdType_LIMIT));
-		pNos->setField(FIX::Price(10.5));
+		pNos->setField(FIX::Price(rand()*1000));
 
 		allOrders.push_back( *pNos);
 	}
@@ -67,5 +75,16 @@ int main( int argc, char* argv[]) {
 	return 0;
 }
 
+void randomString(char *s, const int len) {
+    static const char alphanum[] =
+        "0123456789"
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz";
 
+    for (int i = 0; i < len; ++i) {
+        s[i] = alphanum[rand() % (sizeof(alphanum) - 1)];
+    }
+
+    s[len] = 0;
+}
 
