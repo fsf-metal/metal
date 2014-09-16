@@ -65,7 +65,31 @@ void LSEMessageMapper::map( const NewOrderSingle &nos,
     	&message[53] = LSE::TimeInForce_DAY;
     }
 
-    // expire date @54 L4
+    // Expire date @54 L4
+    // TODO implement for Good Till Date
+
+    // Side &58 L1
+    FIX::Side side;
+    nos.getField( side);
+    switch( side) {
+		case FIX::Side_BUY: &message[58] = LSE::Side_BUY; break;
+		case FIX::Side_SELL: &message[58] = LSE::Side_SELL; break;
+		default: throw MappingException( "Unknown value for Side " << side);
+    }
+
+    // Order Qty @59 L4
+    FIX::OrderQty ordQty;
+    nos.getField( ordQty);
+    encodeInt32( (int)ordQty, message, 59);
+
+    // Display Qty @63 L4
+    if( nos.isSetField( FIX::FIELD::DisplayQty)) {
+    	FIX::DisplayQty displayQty;
+    	nos.getField( displayQty);
+    	encodeInt32( (int)displayQty, message, 63);
+    }
+
+    // Limit Price @67 L8
 }
 
 /**
@@ -78,6 +102,13 @@ void LSEMessageMapper::benchmark( std::vector<NewOrderSingle> &allOrders) {
 	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
 		map( *iter, nosLSE);
 	}
+}
+
+inline void LSEMessageMapper::encodeInt32( const int value, char *message, int position) {
+	message[position  ] = ( value & 0xFF000000) >> 24;
+	message[position+1] = ( value & 0x00FF0000) >> 16;
+	message[position+2] = ( value & 0x0000FF00) >> 8;
+	message[position+3] = value & 0x000000FF;
 }
 
 
