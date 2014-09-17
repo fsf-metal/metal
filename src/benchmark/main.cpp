@@ -49,7 +49,7 @@ int main( int argc, char* argv[]) {
 		allOrders.push_back( *pNos);
 	}
 
-	std::cout << "Allocated " << allOrders.size() << " NewOrderSingle" << std::endl;
+	std::cout << "Allocated " << allOrders.size() << " random NewOrderSingle" << std::endl;
 
 	// Find out which message mapper will be used
 	// This is where custom adapter should go
@@ -64,11 +64,12 @@ int main( int argc, char* argv[]) {
 		auto stop = std::chrono::system_clock::now();
 		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 
-		std::cout << "Mapped " << BATCH_SIZE << " orders in " << duration.count() << "ms" << std::endl;
+		std::cout << "Mapped and Encoded " << BATCH_SIZE << " New Orders in " << duration.count() << "ms" << std::endl;
 		totalDuration += duration.count();
 	}
 
 	std::cout << "Average speed " << (LOOPS * BATCH_SIZE * 1000 / totalDuration) << " nos/sec over " << LOOPS << " loops" << std::endl;
+	std::cout << "That is " << ((totalDuration * 1000000) / ( LOOPS * BATCH_SIZE )) << " nanosecond/nos" << std::endl;
 
 	delete mapper;
 

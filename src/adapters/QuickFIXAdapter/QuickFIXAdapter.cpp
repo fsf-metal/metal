@@ -83,10 +83,10 @@ void QuickFIXAdapter::send( const NewOrderSingle &nos) {
 
 	// TODO : Read protocol version from session properties
 	// For the moment, we assume the output is FIX44
-	FIX44::NewOrderSingle nosTo;
-	QuickFIXMessageMapper::map( nos, (FIX::Message &)nosTo);
+	FIX44::NewOrderSingle nosFIX44;
+	QuickFIXMessageMapper::map( nos, (FIX::Message &)nosFIX44);
 
-	this->session->send( nosTo);
+	this->session->send( nosFIX44);
 }
 
 void QuickFIXAdapter::recv( const ExecutionReport &er) {

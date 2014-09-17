@@ -18,6 +18,7 @@ class MessageMapper {
 public:
 	MessageMapper();
 	virtual ~MessageMapper();
+	// This method should invoke mapping and encoding for all NewOrderSingle
 	virtual void benchmark( std::vector<NewOrderSingle> &) = 0;
 };
 

@@ -61,12 +61,15 @@ void QuickFIXMessageMapper::map( const NewOrderSingle &nos,
 /**
  * This is just a dumb loop that maps all incoming NewOrderSingle.
  * It has no other function than measuring mapping speed
+ * It will perform mapping and encoding (toString in the case of QuickFIX)
  */
 void QuickFIXMessageMapper::benchmark( std::vector<NewOrderSingle> &allOrders) {
 	FIX44::NewOrderSingle nos44;
+	std::string messageString;
 
 	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
 		map( *iter, nos44);
+		nos44.toString( messageString);
 	}
 }
 
