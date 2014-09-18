@@ -3,7 +3,7 @@
 
 namespace Metal {
 
-TradingAdapter::TradingAdapter() {};
+
 TradingAdapter::~TradingAdapter() {};
 
 }

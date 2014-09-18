@@ -9,6 +9,7 @@
 #define __METALMAPPINGEXCEPTION_H_
 
 #include <exception>
+#include <string>
 
 namespace Metal {
 

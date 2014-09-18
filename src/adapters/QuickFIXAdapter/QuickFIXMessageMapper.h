@@ -17,8 +17,6 @@ class QuickFIXMessageMapper : public MessageMapper {
 		static void map( const FIX44::ExecutionReport&, ExecutionReport&);
         // MeTAL to FIX
 		static void map( const NewOrderSingle&, FIX::Message&);
-
-		void benchmark( std::vector<NewOrderSingle> &);
 };
 
 }

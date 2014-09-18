@@ -4,6 +4,7 @@
 #include "../TradingAdapter.h"
 
 namespace Metal {
+namespace LSE {
 
 class LSETradingAdapter : public TradingAdapter {
 	public:
@@ -17,13 +18,13 @@ class LSETradingAdapter : public TradingAdapter {
 		void start();
 		void stop();
 
-		// for benchmarking
-		MessageMapper* getMessageMapper();
+		void benchmark( std::vector<NewOrderSingle> &);
 
 		virtual ~LSETradingAdapter(){};
 
 };
 
+} // LSE
 } // namespace Metal
 
 #endif // __METAL_LSETRADINGADAPTER_H

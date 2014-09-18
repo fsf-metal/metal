@@ -14,6 +14,7 @@
 #include "metal.h"
 #include "MessageMapper.h"
 #include "QuickFIXAdapter/QuickFIXAdapter.h"
+#include "LSETradingAdapter/LSETradingAdapter.h"
 
 #define BATCH_SIZE 50000L
 #define LOOPS      3L
@@ -53,25 +54,30 @@ int main( int argc, char* argv[]) {
 
 	// Find out which message mapper will be used
 	// This is where custom adapter should go
-	QuickFIXAdapter adapter;
-	MessageMapper *mapper = adapter.getMessageMapper();
+	std::vector<TradingAdapter*> allAdapters;
+	allAdapters.push_back( new QuickFIXAdapter());
+	allAdapters.push_back( new LSE::LSETradingAdapter());
 
-	long totalDuration = 0;
-	for (int count = 0; count < LOOPS; ++count) {
+	for( std::vector<TradingAdapter*>::iterator iter = allAdapters.begin(); iter != allAdapters.end(); ++iter) {
+		long totalDuration = 0;
+		std::cout << "----------------------------------------------------------" << std::endl;
+		std::cout << "Benchmarking : " << (*iter)->getName() << std::endl;
+		for (int count = 0; count < LOOPS; ++count) {
 
-		auto start = std::chrono::system_clock::now();
-		mapper->benchmark( allOrders);
-		auto stop = std::chrono::system_clock::now();
-		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+			auto start = std::chrono::system_clock::now();
+			(*iter)->benchmark( allOrders);
+			auto stop = std::chrono::system_clock::now();
+			auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 
-		std::cout << "Mapped and Encoded " << BATCH_SIZE << " New Orders in " << duration.count() << "ms" << std::endl;
-		totalDuration += duration.count();
+			std::cout << "Mapped and Encoded " << BATCH_SIZE << " New Orders in " << duration.count() << "ms" << std::endl;
+			totalDuration += duration.count();
+		}
+
+		std::cout << "Average speed " << (LOOPS * BATCH_SIZE * 1000 / totalDuration) << " nos/sec over " << LOOPS << " loops" << std::endl;
+		std::cout << "That is " << ((totalDuration * 1000000) / ( LOOPS * BATCH_SIZE )) << " nanosecond/nos" << std::endl;
+
 	}
 
-	std::cout << "Average speed " << (LOOPS * BATCH_SIZE * 1000 / totalDuration) << " nos/sec over " << LOOPS << " loops" << std::endl;
-	std::cout << "That is " << ((totalDuration * 1000000) / ( LOOPS * BATCH_SIZE )) << " nanosecond/nos" << std::endl;
-
-	delete mapper;
 
 	return 0;
 }

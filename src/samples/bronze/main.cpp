@@ -14,7 +14,7 @@
 // Where the data models are defined
 #include "metal.h"
 // This is our custom Implementation of some adapter
-#include "Adapter.h"
+#include "MyAdapter.h"
 // and petty parsing
 #include "parsing.h"
 
@@ -36,7 +36,7 @@ int main( int argc, char *argv[]) {
 
 	std::string command;
 	Metal::NewOrderSingle nos;
-	Adapter adapter;
+	MyAdapter adapter;
 
 	adapter.start();
 
@@ -46,6 +46,7 @@ int main( int argc, char *argv[]) {
 		if( command == "exit") break;
 //		std::cout << "Processing \"" << command << "\"" << std::endl;
 		try {
+			// Transform command into NewOrderSingle (implemented in parsing.cpp)
 			parseNOS( command, nos);
 			adapter.send( nos);
 			std::cout << "Order sent " << nos.getField(11) << std::endl;

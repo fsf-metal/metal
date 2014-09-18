@@ -1,8 +1,8 @@
 #Object('main.cpp')
-src_files = 'LSETradingAdapter.cpp LSEMessageMapper.cpp'
+src_files = 'LSETradingAdapter.cpp LSEMessageMapper.cpp NewOrder.cpp'
 lib_files = 'Metal pthread xml2 z'
 include_path = '../../quickfix/include'
-output_file = 'AdapterLSE.so'
+output_file = 'AdapterLSETrading.so'
 #output_file = 'bronze'
 cpp_flags='-Wall -std=c++11 -fPIC -fexceptions -O3'
 

@@ -1,6 +1,6 @@
 #Object('main.cpp')
 src_files = 'main.cpp'
-lib_files = 'AdapterQuickFIX Metal quickfix  pthread xml2 z'
+lib_files = 'AdapterQuickFIX AdapterLSETrading Metal quickfix  pthread xml2 z'
 include_path = '../adapters'
 output_file = 'bench'
 #output_file = 'bronze'

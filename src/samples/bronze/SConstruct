@@ -1,5 +1,5 @@
 #Object('main.cpp')
-src_files = 'main.cpp parsing.cpp Adapter.cpp'
+src_files = 'main.cpp parsing.cpp MyAdapter.cpp'
 lib_files = 'AdapterQuickFIX Metal quickfix pthread xml2 z'
 include_path = '../../adapters ../../quickfix/include'
 output_file = 'bronze'

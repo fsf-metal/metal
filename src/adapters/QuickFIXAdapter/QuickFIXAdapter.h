@@ -19,7 +19,7 @@ class QuickFIXAdapter : public TradingAdapter {
 		void stop();
 
 		// for benchmarking
-		MessageMapper* getMessageMapper();
+		void benchmark( std::vector<NewOrderSingle> &);
 
 		virtual ~QuickFIXAdapter(){};
 

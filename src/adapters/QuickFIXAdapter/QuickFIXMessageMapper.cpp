@@ -36,40 +36,19 @@ void QuickFIXMessageMapper::map( const FIX44::ExecutionReport &message,
 /**
  * NewOrderSingle MeTAL -> FIX50sp2
  */
-void QuickFIXMessageMapper::map( const NewOrderSingle &nos, 
+void QuickFIXMessageMapper::map( const NewOrderSingle &nos,
                                  FIX::Message &message) {
-	int fields[6] = { 
-		FIX::FIELD::ClOrdID,
-		55, // Symbol
-		54, // Side
-		60, // TransactTime
-		38, // OrdQty
-		40 }; // OrdType
+	message.setField( FIX::FIELD::ClOrdID, nos.getField( FIX::FIELD::ClOrdID));
+	message.setField( FIX::FIELD::Symbol, nos.getField( FIX::FIELD::Symbol));
+	message.setField( FIX::FIELD::Side, nos.getField( FIX::FIELD::Side));
+	message.setField( FIX::FIELD::TransactTime, nos.getField( FIX::FIELD::TransactTime));
+	message.setField( FIX::FIELD::OrderQty, nos.getField( FIX::FIELD::OrderQty));
+	FIX::OrdType ordType;
+	message.setField( nos.getField( ordType));
 
-	for (int index = 0; index < 6; ++index) {
-		int field = fields[index];
-		message.setField( field, nos.getField( field));
-	}
-
-	// Price if needed
-	try {
+	// Price if Limit order
+	if( ordType == FIX::OrdType_LIMIT || ordType == FIX::OrdType_STOP_LIMIT) {
 		message.setField(FIX::FIELD::Price, nos.getField(FIX::FIELD::Price));
-	} catch (FIX::FieldNotFound &) { }
-
-}
-
-/**
- * This is just a dumb loop that maps all incoming NewOrderSingle.
- * It has no other function than measuring mapping speed
- * It will perform mapping and encoding (toString in the case of QuickFIX)
- */
-void QuickFIXMessageMapper::benchmark( std::vector<NewOrderSingle> &allOrders) {
-	FIX44::NewOrderSingle nos44;
-	std::string messageString;
-
-	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
-		map( *iter, nos44);
-		nos44.toString( messageString);
 	}
 }
 

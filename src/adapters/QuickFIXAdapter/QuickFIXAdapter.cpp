@@ -66,14 +66,28 @@ class MyApplication: public Application,public MessageCracker {
 
 namespace Metal {
 
-QuickFIXAdapter::QuickFIXAdapter() {
+/**
+ * Default Constructor
+ */
+QuickFIXAdapter::QuickFIXAdapter():TradingAdapter("QuickFIX") {
 	this->initiator = NULL;
 	this->session = NULL;
 }
 
-MessageMapper* QuickFIXAdapter::getMessageMapper() {
-	return new QuickFIXMessageMapper();
+/**
+ * This (dumb) loop maps and encodes all incoming NewOrderSingle.
+ * In the case of QuickFIX, encoding simply means calling toString()
+ */
+void QuickFIXAdapter::benchmark( std::vector<NewOrderSingle> &allOrders) {
+	FIX44::NewOrderSingle nos44;
+	std::string messageString;
+
+	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
+		QuickFIXMessageMapper::map( *iter, nos44);
+		nos44.toString( messageString);
+	}
 }
+
 
 /**
  * Tranform incomming NewOrderSingle into QuickFIX message and send it
