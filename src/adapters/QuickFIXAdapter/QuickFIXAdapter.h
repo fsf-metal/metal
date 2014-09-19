@@ -5,6 +5,7 @@
 #include "quickfix/SocketInitiator.h"
 
 namespace Metal {
+namespace QuickFIX {
 
 class QuickFIXAdapter : public TradingAdapter {
 	public:
@@ -28,6 +29,7 @@ class QuickFIXAdapter : public TradingAdapter {
         FIX::Session *session;
 };
 
+} // namespace QuickFIX
 } // namespace Metal
 
 #endif // __METAL_QUICKFIXADAPTER_H

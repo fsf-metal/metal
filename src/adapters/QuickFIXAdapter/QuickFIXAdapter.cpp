@@ -16,9 +16,13 @@
 
 using namespace FIX;
 
+namespace Metal {
+namespace QuickFIX {
+
+
 class MyApplication: public Application,public MessageCracker {
 	public:
-		MyApplication( Metal::QuickFIXAdapter *pqfa) {
+		MyApplication( QuickFIXAdapter *pqfa) {
 			this->adapter = pqfa;
 		};
 		~MyApplication() {};
@@ -60,11 +64,9 @@ class MyApplication: public Application,public MessageCracker {
 				}
         };
 	private:
-		Metal::QuickFIXAdapter *adapter;
+		QuickFIXAdapter *adapter;
 
 };
-
-namespace Metal {
 
 /**
  * Default Constructor
@@ -141,4 +143,6 @@ void QuickFIXAdapter::stop() {
 	}
 }
 
-}
+} // namespace QuickFIX
+} // namespace Metal
+

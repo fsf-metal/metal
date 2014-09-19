@@ -9,12 +9,29 @@
 namespace Metal {
 class TradingAdapter : public Adapter {
 	public:
+		/**
+		 * @param name Whatever should be used to identify this adapter.
+		 * Subclasses will perform mapping, encoding then write to the active session
+		 */
 		TradingAdapter( const std::string& name) : Adapter( name){};
+		/**
+		 * This method will be called by users to send new orders<br>
+		 * Subclasses will perform mapping, encoding then write to the active session<br>
+		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
+		 */
 		virtual void send( const NewOrderSingle &) = 0;
+
+		/**
+		 * This method will invoked upon receiving an execution report<br>
+		 * Subclasses will perform mapping, encoding then write to the active session<br>
+		 * @param ExecutionReport incomming execution report
+		 */
 		virtual void recv( const ExecutionReport &er) = 0;
 
-		// The following set of methods should be implemented by all adapters
-		// The purpose is to measure Mapping and Encoding speed
+		/**
+		 * The purpose is to measure Mapping and Encoding speed
+		 * Subclasses should make sure to execute both as opposed to just mapping
+		 */
 		virtual void benchmark( std::vector<NewOrderSingle> &) = 0;
 //		virtual void benchmark( std::vector<OrderCancelRequest> &) = 0;
 
