@@ -9,9 +9,9 @@
 #ifndef MYADAPTER_H_
 #define MYADAPTER_H_
 
-#include "QuickFIXAdapter/QuickFIXAdapter.h"
+#include <metal/adapters/QuickFIXAdapter/QuickFIXAdapter.h>
 
-class MyAdapter: public Metal::QuickFIXAdapter {
+class MyAdapter: public Metal::QuickFIX::QuickFIXAdapter {
 public:
 	MyAdapter();
 	void recv( const Metal::ExecutionReport &er);

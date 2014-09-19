@@ -5,8 +5,8 @@
  *      Author: jc
  */
 
+#include <metal/Translator.h>
 #include "MyAdapter.h"
-#include "Translator.h"
 
 MyAdapter::MyAdapter() {
 	// TODO Auto-generated constructor stub

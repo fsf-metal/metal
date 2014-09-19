@@ -12,7 +12,7 @@
 #include <string>
 
 // Where the data models are defined
-#include "metal.h"
+#include <metal/metal.h>
 // This is our custom Implementation of some adapter
 #include "MyAdapter.h"
 // and petty parsing

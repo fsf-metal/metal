@@ -12,7 +12,7 @@
 #include <string>
 
 // Where the data models are defined
-#include "metal.h"
+#include <metal/metal.h>
 // and petty parsing
 #include "parsing.h"
 
