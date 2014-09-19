@@ -10,11 +10,11 @@ if not (mymode in ['debug', 'release']):
 #tell the user what we're doing
 print '**** Compiling in ' + mymode + ' mode...'
 
-ccflags = '-src=c++11 -fexceptions '
+ccflags = '-std=c++11 -fexceptions -Wall -fPIC '
 #extra compile flags for debug
-debugcflags = ccflags + '-Wall -GX -EHsc -D_DEBUG /MDd'
+debugcflags = ccflags + '-D_DEBUG '
 #extra compile flags for release
-releasecflags = ccflags + '-O3 -EHsc -DNDEBUG /MD'
+releasecflags = ccflags + '-O3 -DNDEBUG'
 
 env = Environment()
 
@@ -24,16 +24,9 @@ Export('env', 'mymode', 'debugcflags', 'releasecflags')
 #put all .sconsign files in one place
 env.SConsignFile()
 
-#specify the sconscript for metal
-project = 'adapters'
-SConscript(project + '/sconscript', exports=['project'])
+# Compile core
+SConscript( 'sconscript')
+# Compile all adapters
+SConscript( 'adapters/QuickFIXAdapter/sconscript')
+SConscript( 'adapters/LSETradingAdapter/sconscript')
 
-#specify the sconscript for benchmark
-#project = 'benchmark'
-#SConscript(project + '/sconscript', exports=['project'])
-
-#specify the sconscript for samples
-#project = 'bronze'
-#SConscript( 'samples/' + project + '/sconscript', exports=['project'])
-#project = 'silver'
-#SConscript( 'samples/' + project + '/sconscript', exports=['project'])

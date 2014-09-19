@@ -1,5 +1,7 @@
 lib/
 bin/
 docs/
+store/
+logs/
 *.o
 *.so

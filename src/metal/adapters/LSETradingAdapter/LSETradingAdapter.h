@@ -1,7 +1,7 @@
 #ifndef __METAL_LSETRADINGADAPTER_H
 #define __METAL_LSETRADINGADAPTER_H
 
-#include "../TradingAdapter.h"
+#include <metal/TradingAdapter.h>
 
 namespace Metal {
 namespace LSE {

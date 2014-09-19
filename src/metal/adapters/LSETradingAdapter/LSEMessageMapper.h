@@ -1,8 +1,8 @@
 #ifndef __LSEMESSAGEMAPPER_H
 #define __LSEMESSAGEMAPPER_H
 
-#include "../metal.h"
-#include "../MessageMapper.h"
+#include <metal/metal.h>
+#include <metal/MessageMapper.h>
 #include "NewOrder.h"
 
 namespace Metal {

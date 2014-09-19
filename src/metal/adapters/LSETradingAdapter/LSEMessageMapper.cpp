@@ -1,7 +1,7 @@
+#include <quickfix/FieldNumbers.h>
+#include <metal/MappingException.h>
 #include "LSEMessageMapper.h"
-#include "quickfix/FieldNumbers.h"
 #include "LSEValues.h"
-#include "../MappingException.h"
 
 namespace Metal {
 namespace LSE {

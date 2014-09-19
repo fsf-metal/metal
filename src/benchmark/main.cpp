@@ -11,10 +11,10 @@
 #include <vector>
 #include <chrono>
 
-#include "metal.h"
-#include "MessageMapper.h"
-#include "QuickFIXAdapter/QuickFIXAdapter.h"
-#include "LSETradingAdapter/LSETradingAdapter.h"
+#include <metal/metal.h>
+#include <metal/MessageMapper.h>
+#include <metal/adapters/QuickFIXAdapter/QuickFIXAdapter.h>
+#include <metal/adapters/LSETradingAdapter/LSETradingAdapter.h>
 
 #define BATCH_SIZE 50000L
 #define LOOPS      3L
@@ -55,7 +55,7 @@ int main( int argc, char* argv[]) {
 	// Find out which message mapper will be used
 	// This is where custom adapter should go
 	std::vector<TradingAdapter*> allAdapters;
-	allAdapters.push_back( new QuickFIXAdapter());
+	allAdapters.push_back( new QuickFIX::QuickFIXAdapter());
 	allAdapters.push_back( new LSE::LSETradingAdapter());
 
 	for( std::vector<TradingAdapter*>::iterator iter = allAdapters.begin(); iter != allAdapters.end(); ++iter) {
@@ -75,7 +75,6 @@ int main( int argc, char* argv[]) {
 
 		std::cout << "Average speed " << (LOOPS * BATCH_SIZE * 1000 / totalDuration) << " nos/sec over " << LOOPS << " loops" << std::endl;
 		std::cout << "That is " << ((totalDuration * 1000000) / ( LOOPS * BATCH_SIZE )) << " nanosecond/nos" << std::endl;
-
 	}
 
 

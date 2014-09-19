@@ -1,8 +1,8 @@
 #ifndef __METAL_QUICKFIXADAPTER_H
 #define __METAL_QUICKFIXADAPTER_H
 
-#include "../TradingAdapter.h"
-#include "quickfix/SocketInitiator.h"
+#include <metal/TradingAdapter.h>
+#include <quickfix/SocketInitiator.h>
 
 namespace Metal {
 namespace QuickFIX {
