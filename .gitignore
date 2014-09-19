@@ -5,3 +5,4 @@ store/
 logs/
 *.o
 *.so
+.sconsign.dblite
