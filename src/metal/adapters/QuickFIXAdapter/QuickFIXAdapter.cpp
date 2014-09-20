@@ -77,7 +77,7 @@ QuickFIXAdapter::QuickFIXAdapter():TradingAdapter("QuickFIX") {
 }
 
 /**
- * This (dumb) loop maps and encodes all incoming NewOrderSingle.
+ * This (dumb) loop maps and encodes all incoming NewOrderSingle.<br>
  * In the case of QuickFIX, encoding simply means calling toString()
  */
 void QuickFIXAdapter::benchmark( std::vector<NewOrderSingle> &allOrders) {
@@ -90,6 +90,15 @@ void QuickFIXAdapter::benchmark( std::vector<NewOrderSingle> &allOrders) {
 	}
 }
 
+void QuickFIXAdapter::benchmark(std::vector<OrderCancelRequest> &allCancels) {
+	FIX44::OrderCancelRequest ocr44;
+	std::string messageString;
+
+	for (std::vector<OrderCancelRequest>::iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
+		QuickFIXMessageMapper::map(*iter, ocr44);
+		ocr44.toString(messageString);
+	}
+}
 
 /**
  * Tranform incomming NewOrderSingle into QuickFIX message and send it

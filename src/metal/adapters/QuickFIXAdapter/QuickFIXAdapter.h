@@ -19,8 +19,15 @@ class QuickFIXAdapter : public TradingAdapter {
 		void start();
 		void stop();
 
-		// for benchmarking
-		void benchmark( std::vector<NewOrderSingle> &);
+		/**
+		* @see TradingAdapter#benchmark
+		*/
+		void benchmark(std::vector<NewOrderSingle> &);
+
+		/**
+		* @see TradingAdapter#benchmark
+		*/
+		void benchmark(std::vector<OrderCancelRequest> &);
 
 		virtual ~QuickFIXAdapter(){};
 

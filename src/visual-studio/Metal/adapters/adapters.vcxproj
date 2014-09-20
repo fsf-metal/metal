@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetExt>.dll</TargetExt>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -53,7 +53,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ADAPTERS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../quickfix/include;../../../adapters;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../quickfix/include;../../../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -71,7 +71,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ADAPTERS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../quickfix/include;../../../adapters;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../quickfix/include;../../../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -83,26 +83,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\adapters\MessageMapper.cpp" />
-    <ClCompile Include="..\..\..\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp" />
-    <ClCompile Include="..\..\..\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp" />
-    <ClCompile Include="..\..\..\adapters\TradingAdapter.cpp" />
-    <ClCompile Include="..\..\..\adapters\Translator.cpp" />
-    <ClCompile Include="dllmain.cpp">
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
-      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\LSEMessageMapper.cpp" />
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\LSETradingAdapter.cpp" />
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp" />
+    <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp" />
+    <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp" />
+    <ClCompile Include="..\..\..\metal\MappingException.cpp" />
+    <ClCompile Include="..\..\..\metal\MessageMapper.cpp" />
+    <ClCompile Include="..\..\..\metal\TradingAdapter.cpp" />
+    <ClCompile Include="..\..\..\metal\Translator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

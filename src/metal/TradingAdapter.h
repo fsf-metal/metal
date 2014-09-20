@@ -29,11 +29,16 @@ class TradingAdapter : public Adapter {
 		virtual void recv( const ExecutionReport &er) = 0;
 
 		/**
-		 * The purpose is to measure Mapping and Encoding speed
+		 * The purpose is to measure Mapping and Encoding speed for NewOrderSingle<br>
 		 * Subclasses should make sure to execute both as opposed to just mapping
 		 */
 		virtual void benchmark( std::vector<NewOrderSingle> &) = 0;
-//		virtual void benchmark( std::vector<OrderCancelRequest> &) = 0;
+
+		/**
+		* The purpose is to measure Mapping and Encoding speed for OrderCancelRequest<br>
+		* Subclasses should make sure to execute both as opposed to just mapping
+		*/
+		virtual void benchmark(std::vector<OrderCancelRequest> &) = 0;
 
 	protected:
 		~TradingAdapter();

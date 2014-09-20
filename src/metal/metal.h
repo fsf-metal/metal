@@ -8,9 +8,8 @@
 
 namespace Metal {
 class NewOrderSingle : public FIX50SP2::NewOrderSingle {};
-//typedef FIX50SP2::NewOrderSingle NewOrderSingle;
+class OrderCancelRequest : public FIX50SP2::OrderCancelRequest {};
 typedef FIX50SP2::ExecutionReport ExecutionReport;
-typedef FIX50SP2::OrderCancelRequest OrderCancelRequest;
 }
 
 #endif // __METAL_H

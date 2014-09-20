@@ -28,7 +28,9 @@ int main( int argc, char* argv[]) {
 
 	// step 1 create a bunch of NewOrderSingle
 	std::vector<NewOrderSingle> allOrders;
+	std::vector<OrderCancelRequest> allCancels;
 	allOrders.reserve(BATCH_SIZE);
+	allCancels.reserve(BATCH_SIZE);
 
 
 	for( int index = 0; index < BATCH_SIZE; index++) {
@@ -43,14 +45,26 @@ int main( int argc, char* argv[]) {
         FIX::Side side = rand() >=0/5 ? FIX::Side_BUY : FIX::Side_SELL;
 		pNos->setField(FIX::Side(side));
 		pNos->setField(FIX::TransactTime(time(NULL)));
-		pNos->setField(FIX::OrderQty((int)(rand()*100)));
+		int qty = (int)(rand() * 100);
+		pNos->setField(FIX::OrderQty(qty));
 		pNos->setField(FIX::OrdType( FIX::OrdType_LIMIT));
 		pNos->setField(FIX::Price(rand()*1000));
 
 		allOrders.push_back( *pNos);
+
+		OrderCancelRequest * pOcr = new OrderCancelRequest();
+
+		pOcr->setField(FIX::ClOrdID(clOrdID));
+		pOcr->setField(FIX::Symbol(symbol));
+		pOcr->setField(FIX::Side(side));
+		pOcr->setField(FIX::TransactTime(time(NULL)));
+		pOcr->setField(FIX::OrderQty(qty));
+
+		allCancels.push_back(*pOcr);
+
 	}
 
-	std::cout << "Allocated " << allOrders.size() << " random NewOrderSingle" << std::endl;
+	std::cout << "Allocated " << BATCH_SIZE << " random NewOrderSingle and OrderCancelRequest" << std::endl;
 
 	// Find out which message mapper will be used
 	// This is where custom adapter should go
@@ -59,9 +73,11 @@ int main( int argc, char* argv[]) {
 	allAdapters.push_back( new LSE::LSETradingAdapter());
 
 	for( std::vector<TradingAdapter*>::iterator iter = allAdapters.begin(); iter != allAdapters.end(); ++iter) {
-		long totalDuration = 0;
-		std::cout << "----------------------------------------------------------" << std::endl;
+		long totalDurationNOS = 0;
+		long totalDurationOCR = 0;
+		std::cout << "------------------------------------------------------------" << std::endl;
 		std::cout << "Benchmarking : " << (*iter)->getName() << std::endl;
+		std::cout << "New Order Single:" << std::endl;
 		for (int count = 0; count < LOOPS; ++count) {
 
 			auto start = std::chrono::system_clock::now();
@@ -69,14 +85,29 @@ int main( int argc, char* argv[]) {
 			auto stop = std::chrono::system_clock::now();
 			auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
 
-			std::cout << "Mapped and Encoded " << BATCH_SIZE << " New Orders in " << duration.count() << "ms" << std::endl;
-			totalDuration += duration.count();
+			std::cout << "  Mapped and Encoded " << BATCH_SIZE << " New Orders in " << duration.count() << "ms" << std::endl;
+			totalDurationNOS += (long)duration.count();
 		}
 
-		std::cout << "Average speed " << (LOOPS * BATCH_SIZE * 1000 / totalDuration) << " nos/sec over " << LOOPS << " loops" << std::endl;
-		std::cout << "That is " << ((totalDuration * 1000000) / ( LOOPS * BATCH_SIZE )) << " nanosecond/nos" << std::endl;
-	}
+		std::cout << "Average speed " << (LOOPS * BATCH_SIZE * 1000 / totalDurationNOS) << " nos/sec over " << LOOPS << " loops" << std::endl;
+		std::cout << "That is " << ((totalDurationNOS * 1000000) / ( LOOPS * BATCH_SIZE )) << " nanosecond/nos" << std::endl;
 
+		std::cout << "Order Cancel Requests:" << std::endl;
+		for (int count = 0; count < LOOPS; ++count) {
+
+			auto start = std::chrono::system_clock::now();
+			(*iter)->benchmark(allCancels);
+			auto stop = std::chrono::system_clock::now();
+			auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+
+			std::cout << "  Mapped and Encoded " << BATCH_SIZE << " Order Cancel Request in " << duration.count() << "ms" << std::endl;
+			totalDurationOCR += (long)duration.count();
+		}
+
+		std::string ocr_sec = (totalDurationOCR == 0) ? "n/a" : std::to_string( LOOPS * BATCH_SIZE * 1000 / totalDurationOCR);
+		std::cout << "Average speed " << ocr_sec << " ocr/sec over " << LOOPS << " loops" << std::endl;
+		std::cout << "That is " << ((totalDurationOCR * 1000000) / (LOOPS * BATCH_SIZE)) << " nanosecond/ocr" << std::endl;
+	}
 
 	return 0;
 }

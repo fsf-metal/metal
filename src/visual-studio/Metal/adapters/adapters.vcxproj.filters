@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -26,22 +23,31 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="..\..\..\metal\MappingException.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\adapters\MessageMapper.cpp">
+    <ClCompile Include="..\..\..\metal\MessageMapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\adapters\TradingAdapter.cpp">
+    <ClCompile Include="..\..\..\metal\TradingAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\adapters\Translator.cpp">
+    <ClCompile Include="..\..\..\metal\Translator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp">
+    <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
+    <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\LSEMessageMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\LSETradingAdapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

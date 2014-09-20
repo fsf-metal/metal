@@ -18,7 +18,15 @@ class LSETradingAdapter : public TradingAdapter {
 		void start();
 		void stop();
 
+		/**
+		 * @see TradingAdapter#benchmark
+		 */
 		void benchmark( std::vector<NewOrderSingle> &);
+
+		/**
+		* @see TradingAdapter#benchmark
+		*/
+		void benchmark(std::vector<OrderCancelRequest> &);
 
 		virtual ~LSETradingAdapter(){};
 

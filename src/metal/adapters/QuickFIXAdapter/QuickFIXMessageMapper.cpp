@@ -34,7 +34,7 @@ void QuickFIXMessageMapper::map( const FIX44::ExecutionReport &message,
 }
 
 /**
- * NewOrderSingle MeTAL -> FIX50sp2
+ * NewOrderSingle MeTAL -> FIX44
  */
 void QuickFIXMessageMapper::map( const NewOrderSingle &nos,
                                  FIX::Message &message) {
@@ -52,5 +52,13 @@ void QuickFIXMessageMapper::map( const NewOrderSingle &nos,
 	}
 }
 
+void QuickFIXMessageMapper::map(const OrderCancelRequest & ocr, FIX::Message &message) {
+	message.setField(FIX::FIELD::ClOrdID, ocr.getField(FIX::FIELD::ClOrdID));
+	message.setField(FIX::FIELD::Symbol, ocr.getField(FIX::FIELD::Symbol));
+	message.setField(FIX::FIELD::Side, ocr.getField(FIX::FIELD::Side));
+	message.setField(FIX::FIELD::TransactTime, ocr.getField(FIX::FIELD::TransactTime));
+	message.setField(FIX::FIELD::OrderQty, ocr.getField(FIX::FIELD::OrderQty));
+
+}
 
 }

@@ -21,11 +21,16 @@ void LSETradingAdapter::benchmark( std::vector<NewOrderSingle> &allOrders) {
 
 	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
 		LSEMessageMapper::map( *iter, newOrder);
+		// TODO add encoding
 	}
 
 }
 
-void LSETradingAdapter::recv( const ExecutionReport &er) {
+void LSETradingAdapter::benchmark(std::vector<OrderCancelRequest> &allCancels) {
+	// TODO : do something
+}
+
+void LSETradingAdapter::recv(const ExecutionReport &er) {
 	std::cout << "LSETradingAdapter: Execution Report received but not processed" << std::endl;
 }
 
