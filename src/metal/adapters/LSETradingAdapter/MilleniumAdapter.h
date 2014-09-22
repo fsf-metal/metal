@@ -2,13 +2,15 @@
 #define __METAL_LSETRADINGADAPTER_H
 
 #include <metal/TradingAdapter.h>
+#include "NewOrder.h"
+#include "OrderCancelRequest.h"
 
 namespace Metal {
 namespace LSE {
 
-class LSETradingAdapter : public TradingAdapter {
+class MilleniumAdapter : public TradingAdapter {
 	public:
-		LSETradingAdapter();
+		MilleniumAdapter();
 
 		// messaging
 		void send( const NewOrderSingle &nos);
@@ -21,14 +23,14 @@ class LSETradingAdapter : public TradingAdapter {
 		/**
 		 * @see TradingAdapter#benchmark
 		 */
-		void benchmark( std::vector<NewOrderSingle> &);
+		void benchmark( std::vector<Metal::NewOrderSingle> &);
 
 		/**
 		* @see TradingAdapter#benchmark
 		*/
-		void benchmark(std::vector<OrderCancelRequest> &);
+		void benchmark(std::vector<Metal::OrderCancelRequest> &);
 
-		virtual ~LSETradingAdapter(){};
+		virtual ~MilleniumAdapter(){};
 
 };
 

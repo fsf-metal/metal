@@ -1,6 +1,6 @@
 import glob
 
-src_files = 'LSETradingAdapter.cpp LSEMessageMapper.cpp NewOrder.cpp'
+src_files = 'MilleniumAdapter.cpp LSEMessageMapper.cpp NewOrder.cpp OrderCancelRequest.cpp'
 lib_files = 'pthread xml2 z'
 include_path = '../../../quickfix/include ../../../'
 lib_path = '../../../lib'

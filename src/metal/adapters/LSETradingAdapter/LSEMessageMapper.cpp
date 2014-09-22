@@ -16,9 +16,9 @@ void LSEMessageMapper::map( const NewOrder& message,
 
 /**
  * NewOrderSingle MeTAL -> LSE
- * May throw field not found
+ * @throws FIX::FieldNotFound
  */
-void LSEMessageMapper::map( const NewOrderSingle &nos, NewOrder &newOrder) {
+void LSEMessageMapper::map( const Metal::NewOrderSingle &nos, Metal::LSE::NewOrder &newOrder) {
 	// Client Order ID @4 L20
 	FIX::ClOrdID clOrdID;
 	nos.getField( clOrdID);
@@ -88,14 +88,7 @@ void LSEMessageMapper::map( const NewOrderSingle &nos, NewOrder &newOrder) {
     // Side &58 L1
     FIX::Side side;
     nos.getField( side);
-    switch( side) {
-		case FIX::Side_BUY: newOrder.side = LSE::Side_BUY; break;
-		case FIX::Side_SELL: newOrder.side = LSE::Side_SELL; break;
-		default:
-			std::stringstream message( "Unknown value for Side ");
-			message << side;
-			throw MappingException( message.str());
-    }
+    map( side, newOrder.side);
 
     // Order Qty @59 L4
     FIX::OrderQty ordQty;
@@ -124,6 +117,52 @@ void LSEMessageMapper::map( const NewOrderSingle &nos, NewOrder &newOrder) {
     // Passive Only Order @87 L1
     // Reservered Field @88L 9
 }
+
+/**
+ * OrderCancel Request Metal -> LSE
+ */
+void LSEMessageMapper::map( const Metal::OrderCancelRequest &ocrFrom, Metal::LSE::OrderCancelRequest &ocrTo) {
+	// Client Order ID
+	FIX::ClOrdID clOrdID;
+	ocrFrom.getField( clOrdID);
+	ocrTo.clientOrderID = clOrdID;
+
+	// Original Client Order ID
+	if( ocrFrom.isSetField( FIX::FIELD::OrigClOrdID)) {
+		FIX::OrigClOrdID origClOrdId;
+		ocrFrom.getField( origClOrdId);
+		ocrTo.originalClientOrderId = origClOrdId;
+	}
+
+	// Order ID
+	FIX::OrderID orderId;
+
+	// Instrument ID
+	FIX::Symbol symbol;
+	ocrFrom.getField( symbol);
+	ocrTo.symbol = symbol;
+
+	// Side
+	FIX::Side sideFrom;
+	ocrFrom.getField( sideFrom);
+	map( sideFrom, ocrTo.side);
+}
+
+/**
+ * Side Metal -> LSE
+ */
+void LSEMessageMapper::map( const FIX::Side &sideFrom, Metal::LSE::Side &sideTo) {
+
+    switch( sideFrom) {
+		case FIX::Side_BUY: sideTo = LSE::Side_BUY; break;
+		case FIX::Side_SELL: sideTo = LSE::Side_SELL; break;
+		default:
+			std::stringstream message( "Unknown value for Side ");
+			message << sideTo;
+			throw MappingException( message.str());
+    }
+}
+
 
 /**
  * This is just a dumb loop that maps all incoming NewOrderSingle.

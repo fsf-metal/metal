@@ -14,7 +14,7 @@
 #include <metal/metal.h>
 #include <metal/MessageMapper.h>
 #include <metal/adapters/QuickFIXAdapter/QuickFIXAdapter.h>
-#include <metal/adapters/LSETradingAdapter/LSETradingAdapter.h>
+#include <metal/adapters/LSETradingAdapter/MilleniumAdapter.h>
 
 #define BATCH_SIZE 50000L
 #define LOOPS      3L
@@ -70,7 +70,7 @@ int main( int argc, char* argv[]) {
 	// This is where custom adapter should go
 	std::vector<TradingAdapter*> allAdapters;
 	allAdapters.push_back( new QuickFIX::QuickFIXAdapter());
-	allAdapters.push_back( new LSE::LSETradingAdapter());
+	allAdapters.push_back( new LSE::MilleniumAdapter());
 
 	for( std::vector<TradingAdapter*>::iterator iter = allAdapters.begin(); iter != allAdapters.end(); ++iter) {
 		long totalDurationNOS = 0;
