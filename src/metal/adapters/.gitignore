@@ -1,0 +1,11 @@
+.cproject
+.project
+.pydevproject
+.sconsign.dblite
+QuickFIXAdapter/.cproject
+QuickFIXAdapter/.project
+QuickFIXAdapter/.pydevproject
+QuickFIXAdapter/.sconsign.dblite
+QuickFIXAdapter/libAdapterQuickFIX.so
+libMetal.so
+
