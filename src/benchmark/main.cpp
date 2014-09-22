@@ -91,7 +91,7 @@ int main( int argc, char* argv[]) {
 
 	for( std::vector<TradingAdapter*>::iterator iter = allAdapters.begin(); iter != allAdapters.end(); ++iter) {
 		std::cout << SEP1 << std::endl;
-		std::cout << "Benchmarking : " << (*iter)->getName() << std::flush;
+		std::cout << "Benchmarking : " << (*iter)->getName() << " ..." << std::flush;
 
 		long durationNOS = measureNOS( *iter, allOrders, false);
 		std::cout << "4..." << std::flush;

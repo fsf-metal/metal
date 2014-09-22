@@ -3,7 +3,7 @@
 #ifdef _WIN32
 #	include <Windows.h>
 #else
-// do something for linux
+#	include <fstream>
 #endif
 
 CPU::CPU()
@@ -42,7 +42,16 @@ void CPU::getDetails(std::string &str) {
 	std::string strVal(strValueOfProcessorName.begin(), strValueOfProcessorName.end());
 	str = strVal;
 #elif __linux
-	str = "For Linux This needs to be read from /proc/cpuinfo";
+	std::ifstream file("/proc/cpuinfo");
+	std::string line;
+	str = "Not found in /proc/cpuinfo";
+	while( std::getline( file, line)) {
+		if( line.find( "model name") != std::string::npos) {
+			size_t semiColonPos = line.find( ":");
+			str = line.substr( semiColonPos + 2, line.length() - semiColonPos - 2);
+			break;
+		}
+	}
 #else
 	str = "Information not available for this OS";
 #endif

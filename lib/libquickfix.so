@@ -1,1 +1,1 @@
-../src/quickfix/lib/libquickfix.so
+../../quickfix/src/C++/.libs/libquickfix.so
