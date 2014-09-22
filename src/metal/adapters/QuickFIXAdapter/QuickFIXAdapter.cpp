@@ -80,23 +80,35 @@ QuickFIXAdapter::QuickFIXAdapter():TradingAdapter("QuickFIX") {
  * This (dumb) loop maps and encodes all incoming NewOrderSingle.<br>
  * In the case of QuickFIX, encoding simply means calling toString()
  */
-void QuickFIXAdapter::benchmark( std::vector<NewOrderSingle> &allOrders) {
+void QuickFIXAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders, bool mappingOnly) {
 	FIX44::NewOrderSingle nos44;
 	std::string messageString;
 
-	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
-		QuickFIXMessageMapper::map( *iter, nos44);
-		nos44.toString( messageString);
+	if( mappingOnly) {
+		for( std::vector<NewOrderSingle>::const_iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
+			QuickFIXMessageMapper::map( *iter, nos44);
+		}
+	} else {
+		for( std::vector<NewOrderSingle>::const_iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
+			QuickFIXMessageMapper::map( *iter, nos44);
+			nos44.toString( messageString);
+		}
 	}
 }
 
-void QuickFIXAdapter::benchmark(std::vector<OrderCancelRequest> &allCancels) {
+void QuickFIXAdapter::benchmark( const std::vector<OrderCancelRequest> &allCancels, bool mappingOnly) {
 	FIX44::OrderCancelRequest ocr44;
 	std::string messageString;
 
-	for (std::vector<OrderCancelRequest>::iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
-		QuickFIXMessageMapper::map(*iter, ocr44);
-		ocr44.toString(messageString);
+	if( mappingOnly) {
+		for (std::vector<OrderCancelRequest>::const_iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
+			QuickFIXMessageMapper::map(*iter, ocr44);
+		}
+	} else {
+		for (std::vector<OrderCancelRequest>::const_iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
+			QuickFIXMessageMapper::map(*iter, ocr44);
+			ocr44.toString(messageString);
+		}
 	}
 }
 

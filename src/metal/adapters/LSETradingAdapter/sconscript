@@ -1,7 +1,7 @@
 import glob
 
-src_files = 'MilleniumAdapter.cpp LSEMessageMapper.cpp NewOrder.cpp OrderCancelRequest.cpp'
-lib_files = 'pthread xml2 z'
+src_files = 'MilleniumAdapter.cpp MilleniumMapper.cpp MilleniumEncoder.cpp NewOrder.cpp OrderCancelRequest.cpp'
+lib_files = 'Metal pthread xml2 z'
 include_path = '../../../quickfix/include ../../../'
 lib_path = '../../../lib'
 output_file = 'AdapterLSETrading.so'

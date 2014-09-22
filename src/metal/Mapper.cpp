@@ -5,16 +5,16 @@
  *      Author: jc
  */
 
-#include "MessageMapper.h"
+#include "Mapper.h"
 
 namespace Metal {
 
-MessageMapper::MessageMapper() {
+Mapper::Mapper() {
 	// TODO Auto-generated constructor stub
 
 }
 
-MessageMapper::~MessageMapper() {
+Mapper::~Mapper() {
 	// TODO Auto-generated destructor stub
 }
 

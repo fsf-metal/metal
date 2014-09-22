@@ -19,7 +19,7 @@ namespace LSE {
 	typedef std::string ClientOrderID;
 	typedef std::string OrderID;
 	typedef std::string OriginalClientOrderID;
-	typedef std::string Symbol;
+	typedef int32_t InstrumentID;
 
 } // namespace LSE
 } // namespace Metal

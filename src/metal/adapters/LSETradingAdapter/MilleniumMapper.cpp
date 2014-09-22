@@ -1,6 +1,6 @@
 #include <quickfix/FieldNumbers.h>
 #include <metal/MappingException.h>
-#include "LSEMessageMapper.h"
+#include "MilleniumMapper.h"
 #include "LSEValues.h"
 
 namespace Metal {
@@ -8,7 +8,7 @@ namespace LSE {
 /**
  * Translate LSE NewOrder into Metal representation
  */
-void LSEMessageMapper::map( const NewOrder& message,
+void MilleniumMapper::map( const NewOrder& message,
                                  NewOrderSingle &nos){
 	std::cout << "LSEMessageMapper: NewOrderSingle map invoked (LSE->MeTAL) but not implemented" << std::endl;
 
@@ -18,7 +18,7 @@ void LSEMessageMapper::map( const NewOrder& message,
  * NewOrderSingle MeTAL -> LSE
  * @throws FIX::FieldNotFound
  */
-void LSEMessageMapper::map( const Metal::NewOrderSingle &nos, Metal::LSE::NewOrder &newOrder) {
+void MilleniumMapper::map( const Metal::NewOrderSingle &nos, Metal::LSE::NewOrder &newOrder) {
 	// Client Order ID @4 L20
 	FIX::ClOrdID clOrdID;
 	nos.getField( clOrdID);
@@ -121,7 +121,7 @@ void LSEMessageMapper::map( const Metal::NewOrderSingle &nos, Metal::LSE::NewOrd
 /**
  * OrderCancel Request Metal -> LSE
  */
-void LSEMessageMapper::map( const Metal::OrderCancelRequest &ocrFrom, Metal::LSE::OrderCancelRequest &ocrTo) {
+void MilleniumMapper::map( const Metal::OrderCancelRequest &ocrFrom, Metal::LSE::OrderCancelRequest &ocrTo) {
 	// Client Order ID
 	FIX::ClOrdID clOrdID;
 	ocrFrom.getField( clOrdID);
@@ -140,7 +140,8 @@ void LSEMessageMapper::map( const Metal::OrderCancelRequest &ocrFrom, Metal::LSE
 	// Instrument ID
 	FIX::Symbol symbol;
 	ocrFrom.getField( symbol);
-	ocrTo.symbol = symbol;
+	// TODO : perform mapping from symbol to ID
+	ocrTo.instrumentID = 1;
 
 	// Side
 	FIX::Side sideFrom;
@@ -151,7 +152,7 @@ void LSEMessageMapper::map( const Metal::OrderCancelRequest &ocrFrom, Metal::LSE
 /**
  * Side Metal -> LSE
  */
-void LSEMessageMapper::map( const FIX::Side &sideFrom, Metal::LSE::Side &sideTo) {
+void MilleniumMapper::map( const FIX::Side &sideFrom, Metal::LSE::Side &sideTo) {
 
     switch( sideFrom) {
 		case FIX::Side_BUY: sideTo = LSE::Side_BUY; break;
@@ -168,7 +169,7 @@ void LSEMessageMapper::map( const FIX::Side &sideFrom, Metal::LSE::Side &sideTo)
  * This is just a dumb loop that maps all incoming NewOrderSingle.
  * It has no other function than measuring mapping speed
  */
-void LSEMessageMapper::benchmark( std::vector<NewOrderSingle> &allOrders) {
+void MilleniumMapper::benchmark( std::vector<NewOrderSingle> &allOrders) {
 	NewOrder nosLSE;
 
 	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {

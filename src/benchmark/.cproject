@@ -33,7 +33,7 @@
 									<listOptionValue builtIn="false" value="/usr/include/c++/4.8/backward"/>
 									<listOptionValue builtIn="false" value="/usr/include/c++/4.8"/>
 									<listOptionValue builtIn="false" value="/usr/include/x86_64-linux-gnu/c++/4.8/."/>
-									<listOptionValue builtIn="false" value="../../adapters"/>
+									<listOptionValue builtIn="false" value="../../"/>
 								</option>
 								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1763818224" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__FLOAT_WORD_ORDER__=__ORDER_LITTLE_ENDIAN__"/>

@@ -2,14 +2,14 @@
 #define __LSEMESSAGEMAPPER_H
 
 #include <metal/metal.h>
-#include <metal/MessageMapper.h>
+#include <metal/Mapper.h>
 #include "NewOrder.h"
 #include "OrderCancelRequest.h"
 
 namespace Metal {
 namespace LSE {
 
-class LSEMessageMapper : public MessageMapper {
+class MilleniumMapper : public Mapper {
 	public:
         // LSE to MeTAL
 		static void map( const NewOrder&, NewOrderSingle&);

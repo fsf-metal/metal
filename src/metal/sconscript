@@ -1,6 +1,6 @@
 import glob
 
-src_files = 'TradingAdapter.cpp Translator.cpp MessageMapper.cpp MappingException.cpp'
+src_files = 'TradingAdapter.cpp Translator.cpp Mapper.cpp Message.cpp MappingException.cpp'
 lib_files = 'pthread xml2 z'
 include_path = '../quickfix/include'
 output_file = 'Metal.so'

@@ -22,7 +22,7 @@ public:
 	Side side;
 	OrderID orderId;
 	OriginalClientOrderID originalClientOrderId;
-	Symbol symbol;
+	InstrumentID instrumentID;
 };
 
 } /* namespace LSE */

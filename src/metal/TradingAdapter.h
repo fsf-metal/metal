@@ -4,7 +4,7 @@
 #include <string>
 #include "Adapter.h"
 #include "metal.h"
-#include "MessageMapper.h"
+#include "Mapper.h"
 
 namespace Metal {
 class TradingAdapter : public Adapter {
@@ -31,14 +31,18 @@ class TradingAdapter : public Adapter {
 		/**
 		 * The purpose is to measure Mapping and Encoding speed for NewOrderSingle<br>
 		 * Subclasses should make sure to execute both as opposed to just mapping
+		 * @param list A list of NewOrderSingle better if randomly generated
+		 * @param mappingOnly Defines whether we should test only mapping or mapping end encoding
 		 */
-		virtual void benchmark( std::vector<NewOrderSingle> &) = 0;
+		virtual void benchmark( const std::vector<NewOrderSingle> &list, bool mappingOnly) = 0;
 
 		/**
 		* The purpose is to measure Mapping and Encoding speed for OrderCancelRequest<br>
 		* Subclasses should make sure to execute both as opposed to just mapping
+		 * @param list A list of NewOrderSingle better if randomly generated
+		 * @param mappingOnly Defines whether we should test only mapping or mapping end encoding
 		*/
-		virtual void benchmark(std::vector<OrderCancelRequest> &) = 0;
+		virtual void benchmark( const std::vector<OrderCancelRequest> &list, bool mappingOnly) = 0;
 
 	protected:
 		~TradingAdapter();

@@ -6,7 +6,8 @@
  */
 
 #include "MilleniumAdapter.h"
-#include "LSEMessageMapper.h"
+#include "MilleniumMapper.h"
+#include "MilleniumEncoder.h"
 
 namespace Metal {
 namespace LSE {
@@ -15,22 +16,36 @@ MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading") {
 
 }
 
-void MilleniumAdapter::benchmark( std::vector<NewOrderSingle> &allOrders) {
+void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders, bool mappingOnly) {
 	NewOrder newOrder;
 
-	for( std::vector<NewOrderSingle>::iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
-		LSEMessageMapper::map( *iter, newOrder);
-		// TODO add encoding
+	if( mappingOnly) {
+		for( std::vector<NewOrderSingle>::const_iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
+			MilleniumMapper::map( *iter, newOrder);
+			// TODO add encoding
+		}
+	} else {
+		for( std::vector<NewOrderSingle>::const_iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
+			MilleniumMapper::map( *iter, newOrder);
+			// TODO add encoding
+		}
 	}
 
 }
 
-void MilleniumAdapter::benchmark(std::vector<Metal::OrderCancelRequest> &allCancels) {
+void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &allCancels, bool mappingOnly) {
 	Metal::LSE::OrderCancelRequest ocr;
+	Metal::Message msg;
 
-	for( std::vector<Metal::OrderCancelRequest>::iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
-		LSEMessageMapper::map( *iter, ocr);
-		// TODO add encoding
+	if( mappingOnly) {
+		for( std::vector<Metal::OrderCancelRequest>::const_iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
+			MilleniumMapper::map( *iter, ocr);
+		}
+	} else { // perform mapping and encoding
+		for( std::vector<Metal::OrderCancelRequest>::const_iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
+			MilleniumMapper::map( *iter, ocr);
+			MilleniumEncoder::encode( ocr, msg);
+		}
 	}
 }
 

@@ -5,8 +5,8 @@
  *      Author: jc
  */
 
-#ifndef __METAL_MESSAGEMAPPER_H_
-#define __METAL_MESSAGEMAPPER_H_
+#ifndef METAL_MAPPER_H_
+#define METAL_MAPPER_H_
 
 #include <vector>
 #include "metal.h"
@@ -14,11 +14,11 @@
 
 namespace Metal {
 
-class MessageMapper {
+class Mapper {
 public:
-	MessageMapper();
-	virtual ~MessageMapper();
+	Mapper();
+	virtual ~Mapper();
 };
 
 } /* namespace Metal */
-#endif /* __METAL_MESSAGEMAPPER_H_ */
+#endif /* METAL_MAPPER_H_ */

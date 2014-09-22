@@ -26,6 +26,8 @@ namespace LSE {
 	const char ClearingAccount_CLIENT = 1;
 	const char ClearingAccount_HOUSE = 3;
 
+	const char MessageType_ORDER_CANCEL_REQUEST = 'F';
+
 	const char OrderSubType_ORDER = 0;
 	const char OrderSubType_PEGGED_ORDER = 5;
 	const char OrderSubType_RANDOM_PEEK_SIZE = 51;
@@ -42,8 +44,8 @@ namespace LSE {
 	const char PassiveOnlyOrder_IF_AT_BBO_OR_WITHIN_ONE_PRICE_POINT = 2;
 	const char PassiveOnlyOrder_IF_AT_BBO_OR_WITHIN_TWO_PRICE_POINTS = 3;
 
-	Side Side_BUY = 1;
-	Side Side_SELL = 2;
+	const char Side_BUY = 1;
+	const char Side_SELL = 2;
 
 	const char TimeInForce_DAY = 0;
 	const char TimeInForce_IMMEDIATE_OR_CANCEL = 3;

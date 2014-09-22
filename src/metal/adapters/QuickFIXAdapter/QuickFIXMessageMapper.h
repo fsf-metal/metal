@@ -2,14 +2,14 @@
 #define __QUICKFIXMESSAGEMAPPER_H
 
 #include <metal/metal.h>
-#include <metal/MessageMapper.h>
+#include <metal/Mapper.h>
 #include <quickfix/fix44/NewOrderSingle.h>
 #include <quickfix/fix44/ExecutionReport.h>
 #include <quickfix/fix44/OrderCancelRequest.h>
 
 namespace Metal {
 
-class QuickFIXMessageMapper : public MessageMapper {
+class QuickFIXMessageMapper : public Mapper {
 	public:
         // FIX to MeTAL
 		static void map( const FIX44::NewOrderSingle&, NewOrderSingle&);

@@ -23,12 +23,12 @@ class MilleniumAdapter : public TradingAdapter {
 		/**
 		 * @see TradingAdapter#benchmark
 		 */
-		void benchmark( std::vector<Metal::NewOrderSingle> &);
+		void benchmark( const std::vector<Metal::NewOrderSingle> &, bool mappingOnly);
 
 		/**
 		* @see TradingAdapter#benchmark
 		*/
-		void benchmark(std::vector<Metal::OrderCancelRequest> &);
+		void benchmark( const std::vector<Metal::OrderCancelRequest> &, bool mappingOnly);
 
 		virtual ~MilleniumAdapter(){};
 
