@@ -26,9 +26,6 @@
     <ClCompile Include="..\..\..\metal\MappingException.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\MessageMapper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\metal\TradingAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -41,13 +38,22 @@
     <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\LSEMessageMapper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\LSETradingAdapter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\OrderCancelRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\metal\Message.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

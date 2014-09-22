@@ -9,6 +9,7 @@
 #define METAL_LSE_LSETYPES_H_
 
 #include <string>
+#include <cstdint>
 
 namespace Metal {
 namespace LSE {

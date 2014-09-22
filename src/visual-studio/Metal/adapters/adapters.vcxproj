@@ -51,7 +51,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ADAPTERS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ADAPTERS_EXPORTS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../../../quickfix/include;../../../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -69,7 +69,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ADAPTERS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ADAPTERS_EXPORTS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../../../quickfix/include;../../../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -87,13 +87,15 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\LSEMessageMapper.cpp" />
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\LSETradingAdapter.cpp" />
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp" />
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumEncoder.cpp" />
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumMapper.cpp" />
     <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp" />
+    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\OrderCancelRequest.cpp" />
     <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp" />
     <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp" />
     <ClCompile Include="..\..\..\metal\MappingException.cpp" />
-    <ClCompile Include="..\..\..\metal\MessageMapper.cpp" />
+    <ClCompile Include="..\..\..\metal\Message.cpp" />
     <ClCompile Include="..\..\..\metal\TradingAdapter.cpp" />
     <ClCompile Include="..\..\..\metal\Translator.cpp" />
   </ItemGroup>

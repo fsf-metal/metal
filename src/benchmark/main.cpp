@@ -16,7 +16,9 @@
 #include <metal/adapters/QuickFIXAdapter/QuickFIXAdapter.h>
 #include <metal/adapters/LSETradingAdapter/MilleniumAdapter.h>
 
-#define BATCH_SIZE 50000L
+#include "CPU.h"
+
+#define BATCH_SIZE 100000L
 #define LOOPS      5L
 #define SEP1 "============================================================"
 #define SEP2 "------------------------------------------------------------"
@@ -76,6 +78,10 @@ int main( int argc, char* argv[]) {
 
 	std::cout << "Allocated " << BATCH_SIZE << " random NewOrderSingle and OrderCancelRequest" << std::endl;
 	std::cout << "Results will be averaged over " << LOOPS << " loops" << std::endl;
+	std::string cpuDetails;
+	CPU::getDetails(cpuDetails);
+	std::cout << "CPU: " << cpuDetails << std::endl;
+
 
 	// Find out which message mapper will be used
 	// This is where custom adapter should go
@@ -85,7 +91,7 @@ int main( int argc, char* argv[]) {
 
 	for( std::vector<TradingAdapter*>::iterator iter = allAdapters.begin(); iter != allAdapters.end(); ++iter) {
 		std::cout << SEP1 << std::endl;
-		std::cout << "Benchmarking : " << (*iter)->getName() << std::endl;
+		std::cout << "Benchmarking : " << (*iter)->getName() << std::flush;
 
 		long durationNOS = measureNOS( *iter, allOrders, false);
 		std::cout << "4..." << std::flush;
