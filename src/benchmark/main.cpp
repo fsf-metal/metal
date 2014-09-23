@@ -52,7 +52,7 @@ int main( int argc, char* argv[]) {
 		pNos->setField(FIX::Symbol( symbol));
         FIX::Side side = rand() >=0/5 ? FIX::Side_BUY : FIX::Side_SELL;
 		pNos->setField(FIX::Side(side));
-		pNos->setField(FIX::TransactTime(time(NULL)));
+		pNos->setField(FIX::TransactTime(time( (time_t *)NULL)));
 		int qty = (int)(rand() * 100);
 		pNos->setField(FIX::OrderQty(qty));
 		pNos->setField(FIX::OrdType( FIX::OrdType_LIMIT));
@@ -87,7 +87,7 @@ int main( int argc, char* argv[]) {
 
 	for( std::vector<TradingAdapter*>::iterator iter = allAdapters.begin(); iter != allAdapters.end(); ++iter) {
 		std::cout << SEP1 << std::endl;
-		std::cout << "Benchmarking : " << (*iter)->getName() << " ..." << std::flush;
+		std::cout << "Benchmarking : " << (*iter)->getName() << " " << std::flush;
 
 		int index = 2 * LOOPS;
 		std::chrono::milliseconds durationMapping, durationEncoding;
@@ -96,17 +96,17 @@ int main( int argc, char* argv[]) {
 		std::chrono::milliseconds durationOCRMapping;
 		std::chrono::milliseconds durationOCREncoding;
 		for( int loop = 0; loop < LOOPS; ++loop) {
-			std::cout << std::to_string(index--) << "..." << std::flush;
-			(*iter)->benchmark( allOrders, durationMapping, durationEncoding);
+			std::cout << std::to_string(index--) << ".." << std::flush;
+			(*iter)->benchmark(allOrders, durationMapping, durationEncoding);
 			durationNOSMapping += durationMapping;
 			durationNOSEncoding += durationEncoding;
 
-			std::cout << std::to_string(index--) << "..." << std::flush;
-			(*iter)->benchmark( allCancels, durationMapping, durationEncoding);
+			std::cout << std::to_string(index--) << ".." << std::flush;
+			(*iter)->benchmark(allCancels, durationMapping, durationEncoding);
 			durationOCRMapping += durationMapping;
 			durationOCREncoding += durationEncoding;
 		}
-		std::cout << "1..." << std::endl;
+		std::cout << std::endl;
 
 		displayResult( "NewOrderSingle", durationNOSMapping, durationNOSEncoding);
 		displayResult( "OrderCancelRequest", durationOCRMapping, durationOCREncoding);
@@ -133,16 +133,29 @@ void displayResult( std::string title, std::chrono::milliseconds durationMapping
 	using namespace std;
 	string title2 = "Mapping";
 	string title3 = "Encoding";
+	string title4 = "Combined";
+
 	cout << SEP2 << endl;
-	cout << title << " : " << title2 << " : " << title3 << endl;
+	cout << title << " : " << title2 << " : " << title3 << " : " << title4 << endl;
 
 	int width1 = title.length();
 	int width2 = title2.length();
 	int width3 = title3.length();
+	int width4 = title4.length();
 
-	string speedMapping = durationMapping.count() == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000 / durationMapping.count());
-	string speedEncoding = durationEncoding.count() == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000 / durationEncoding.count());
+	string speedMapping = durationMapping.count() == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000L / durationMapping.count());
+	string speedEncoding = durationEncoding.count() == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000L / durationEncoding.count());
+	long totalDuration = (long)( durationMapping.count() + durationEncoding.count());
+	string speedTotal = totalDuration == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000L / totalDuration);
 
-	cout << setw(width1) << "Messages/sec" << " : " << setw(width2) << speedMapping << " : " << setw(width3) << speedEncoding << endl;
-	cout << setw(width1) << "Nanos/Msg" << " : " << setw(width2) << ((durationMapping.count() * 1000000) / ( LOOPS * BATCH_SIZE )) << " : " << setw(width3) << ((durationEncoding.count() * 1000000) / ( LOOPS * BATCH_SIZE )) << endl;
+	cout << setw(width1) << "Messages/sec" << " : ";
+	cout << setw(width2) << speedMapping << " : ";
+	cout << setw(width3) << speedEncoding << " : ";
+	cout << setw(width4) << speedTotal;
+	cout << endl;
+	cout << setw(width1) << "Nanos/Msg" << " : ";
+	cout << setw(width2) << to_string((long)(((double)durationMapping.count() * 1000000.) / (double)(LOOPS * BATCH_SIZE))) << " : ";
+	cout << setw(width3) << to_string((long)(((double)durationEncoding.count() * 1000000.) / (double)(LOOPS * BATCH_SIZE))) << " : ";
+	cout << setw(width4) << to_string( (long)( ( ( double)totalDuration * 1000000.) / ( double)(LOOPS * BATCH_SIZE)));
+	cout << endl;
 }
