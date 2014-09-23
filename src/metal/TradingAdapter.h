@@ -2,6 +2,8 @@
 #define __METAL_TRADINGADAPTER_H
 
 #include <string>
+#include <chrono>
+
 #include "Adapter.h"
 #include "metal.h"
 #include "Mapper.h"
@@ -32,17 +34,23 @@ class TradingAdapter : public Adapter {
 		 * The purpose is to measure Mapping and Encoding speed for NewOrderSingle<br>
 		 * Subclasses should make sure to execute both as opposed to just mapping
 		 * @param list A list of NewOrderSingle better if randomly generated
-		 * @param mappingOnly Defines whether we should test only mapping or mapping end encoding
+		 * @param mappingDuration Time used to map messages
+		 * @param encodingDuration Time used to encode messages
 		 */
-		virtual void benchmark( const std::vector<NewOrderSingle> &list, bool mappingOnly) = 0;
+		virtual void benchmark( const std::vector<NewOrderSingle> &list,
+				std::chrono::milliseconds &mappingDuration,
+				std::chrono::milliseconds &encodingDuration) = 0;
 
 		/**
 		* The purpose is to measure Mapping and Encoding speed for OrderCancelRequest<br>
 		* Subclasses should make sure to execute both as opposed to just mapping
 		 * @param list A list of NewOrderSingle better if randomly generated
-		 * @param mappingOnly Defines whether we should test only mapping or mapping end encoding
+		 * @param mappingDuration Time used to map messages
+		 * @param encodingDuration Time used to encode messages
 		*/
-		virtual void benchmark( const std::vector<OrderCancelRequest> &list, bool mappingOnly) = 0;
+		virtual void benchmark( const std::vector<OrderCancelRequest> &list,
+				std::chrono::milliseconds &mappingDuration,
+				std::chrono::milliseconds &encodingDuration) = 0;
 
 	protected:
 		~TradingAdapter();

@@ -22,12 +22,12 @@ class QuickFIXAdapter : public TradingAdapter {
 		/**
 		* @see TradingAdapter#benchmark
 		*/
-		void benchmark( const std::vector<NewOrderSingle> &, bool);
+		void benchmark( const std::vector<NewOrderSingle> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
 
 		/**
 		* @see TradingAdapter#benchmark
 		*/
-		void benchmark( const std::vector<OrderCancelRequest> &, bool);
+		void benchmark( const std::vector<OrderCancelRequest> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
 
 		virtual ~QuickFIXAdapter(){};
 

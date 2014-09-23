@@ -9,6 +9,7 @@
 #define METAL_LSE_LSEMESSAGEENCODER_H_
 
 #include <metal/Message.h>
+#include "NewOrder.h"
 #include "OrderCancelRequest.h"
 
 namespace Metal {
@@ -20,6 +21,7 @@ public:
 	virtual ~MilleniumEncoder();
 
 	static void encode( const OrderCancelRequest &, Message &);
+	static void encode( const NewOrder &, Message &);
 
 	inline static void encodeHeader( Message &msg, int16_t length, char type);
 	inline static void encodeString( const std::string &str, Message &msg, int position, int length);

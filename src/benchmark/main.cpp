@@ -25,15 +25,11 @@
 
 using namespace Metal;
 
-// measure average duration for LOOPS loops
-long measureNOS( TradingAdapter * adapter, const std::vector<NewOrderSingle> &, bool );
-long measureOCR( TradingAdapter * adapter, const std::vector<OrderCancelRequest> &, bool );
-
 // Fills a string with random characters
 void randomString(char *s, const int len);
 
 // Output formatting
-void displayResult( std::string title, long durationAll, long durationMappingOnly);
+void displayResult( std::string title, std::chrono::milliseconds durationMapping, std::chrono::milliseconds durationEncoding);
 
 
 int main( int argc, char* argv[]) {
@@ -93,51 +89,31 @@ int main( int argc, char* argv[]) {
 		std::cout << SEP1 << std::endl;
 		std::cout << "Benchmarking : " << (*iter)->getName() << " ..." << std::flush;
 
-		long durationNOS = measureNOS( *iter, allOrders, false);
-		std::cout << "4..." << std::flush;
-		long durationNOSMappingOnly = measureNOS( *iter, allOrders, true);
-		std::cout << "3..." << std::flush;
-		long durationOCR = measureOCR( *iter, allCancels, false);
-		std::cout << "2..." << std::flush;
-		long durationOCRMappingOnly = measureOCR( *iter, allCancels, true);
+		int index = 2 * LOOPS;
+		std::chrono::milliseconds durationMapping, durationEncoding;
+		std::chrono::milliseconds durationNOSMapping;
+		std::chrono::milliseconds durationNOSEncoding;
+		std::chrono::milliseconds durationOCRMapping;
+		std::chrono::milliseconds durationOCREncoding;
+		for( int loop = 0; loop < LOOPS; ++loop) {
+			std::cout << std::to_string(index--) << "..." << std::flush;
+			(*iter)->benchmark( allOrders, durationMapping, durationEncoding);
+			durationNOSMapping += durationMapping;
+			durationNOSEncoding += durationEncoding;
+
+			std::cout << std::to_string(index--) << "..." << std::flush;
+			(*iter)->benchmark( allCancels, durationMapping, durationEncoding);
+			durationOCRMapping += durationMapping;
+			durationOCREncoding += durationEncoding;
+		}
 		std::cout << "1..." << std::endl;
 
-		displayResult( "NewOrderSingle", durationNOS, durationNOSMappingOnly);
-		displayResult( "OrderCancelRequest", durationOCR, durationOCRMappingOnly);
+		displayResult( "NewOrderSingle", durationNOSMapping, durationNOSEncoding);
+		displayResult( "OrderCancelRequest", durationOCRMapping, durationOCREncoding);
 
 	}
 
 	return 0;
-}
-
-long measureNOS( TradingAdapter * adapter, const std::vector<NewOrderSingle> &allOrders, bool mappingOnly) {
-	long totalDuration = 0;
-	for (int count = 0; count < LOOPS; ++count) {
-
-		auto start = std::chrono::system_clock::now();
-		adapter->benchmark( allOrders, mappingOnly);
-		auto stop = std::chrono::system_clock::now();
-		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
-
-		totalDuration += (long)duration.count();
-	}
-
-	return totalDuration;
-}
-
-long measureOCR( TradingAdapter * adapter, const std::vector<OrderCancelRequest> &allCancels, bool mappingOnly) {
-	long totalDuration = 0;
-	for (int count = 0; count < LOOPS; ++count) {
-
-		auto start = std::chrono::system_clock::now();
-		adapter->benchmark( allCancels, mappingOnly);
-		auto stop = std::chrono::system_clock::now();
-		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
-
-		totalDuration += (long)duration.count();
-	}
-
-	return totalDuration;
 }
 
 void randomString(char *s, const int len) {
@@ -153,10 +129,10 @@ void randomString(char *s, const int len) {
     s[len] = 0;
 }
 
-void displayResult( std::string title, long durationAll, long durationMappingOnly) {
+void displayResult( std::string title, std::chrono::milliseconds durationMapping, std::chrono::milliseconds durationEncoding) {
 	using namespace std;
-	string title2 = "Mapping+Encoding";
-	string title3 = "Mapping Only";
+	string title2 = "Mapping";
+	string title3 = "Encoding";
 	cout << SEP2 << endl;
 	cout << title << " : " << title2 << " : " << title3 << endl;
 
@@ -164,9 +140,9 @@ void displayResult( std::string title, long durationAll, long durationMappingOnl
 	int width2 = title2.length();
 	int width3 = title3.length();
 
-	string speedAll = durationAll == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000 / durationAll);
-	string speedMappingOnly = durationAll == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000 / durationMappingOnly);
+	string speedMapping = durationMapping.count() == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000 / durationMapping.count());
+	string speedEncoding = durationEncoding.count() == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000 / durationEncoding.count());
 
-	cout << setw(width1) << "Messages/sec" << " : " << setw(width2) << speedAll << " : " << setw(width3) << speedMappingOnly << endl;
-	cout << setw(width1) << "Nanos/Msg" << " : " << setw(width2) << ((durationAll * 1000000) / ( LOOPS * BATCH_SIZE )) << " : " << setw(width3) << ((durationMappingOnly * 1000000) / ( LOOPS * BATCH_SIZE )) << endl;
+	cout << setw(width1) << "Messages/sec" << " : " << setw(width2) << speedMapping << " : " << setw(width3) << speedEncoding << endl;
+	cout << setw(width1) << "Nanos/Msg" << " : " << setw(width2) << ((durationMapping.count() * 1000000) / ( LOOPS * BATCH_SIZE )) << " : " << setw(width3) << ((durationEncoding.count() * 1000000) / ( LOOPS * BATCH_SIZE )) << endl;
 }

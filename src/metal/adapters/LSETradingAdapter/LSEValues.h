@@ -26,6 +26,7 @@ namespace LSE {
 	const char ClearingAccount_CLIENT = 1;
 	const char ClearingAccount_HOUSE = 3;
 
+	const char MessageType_NEW_ORDER = 'D';
 	const char MessageType_ORDER_CANCEL_REQUEST = 'F';
 
 	const char OrderSubType_ORDER = 0;

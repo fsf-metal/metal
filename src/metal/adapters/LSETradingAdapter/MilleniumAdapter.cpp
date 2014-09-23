@@ -5,6 +5,7 @@
  *      Author: jc
  */
 
+#include <chrono>
 #include "MilleniumAdapter.h"
 #include "MilleniumMapper.h"
 #include "MilleniumEncoder.h"
@@ -16,37 +17,62 @@ MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading") {
 
 }
 
-void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders, bool mappingOnly) {
-	NewOrder newOrder;
-
-	if( mappingOnly) {
-		for( std::vector<NewOrderSingle>::const_iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
-			MilleniumMapper::map( *iter, newOrder);
-			// TODO add encoding
-		}
-	} else {
-		for( std::vector<NewOrderSingle>::const_iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
-			MilleniumMapper::map( *iter, newOrder);
-			// TODO add encoding
-		}
-	}
-
-}
-
-void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &allCancels, bool mappingOnly) {
-	Metal::LSE::OrderCancelRequest ocr;
+void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
+		std::chrono::milliseconds &mappingDuration,
+		std::chrono::milliseconds &encodingDuration) {
 	Metal::Message msg;
 
-	if( mappingOnly) {
-		for( std::vector<Metal::OrderCancelRequest>::const_iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
-			MilleniumMapper::map( *iter, ocr);
-		}
-	} else { // perform mapping and encoding
-		for( std::vector<Metal::OrderCancelRequest>::const_iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
-			MilleniumMapper::map( *iter, ocr);
-			MilleniumEncoder::encode( ocr, msg);
-		}
+	std::vector<NewOrder> mappedNewOrders;
+	int size = allOrders.size();
+	mappedNewOrders.reserve( size);
+
+	for( int index = 0; index < size; ++index) {
+        mappedNewOrders.at(index) = *(new NewOrder());
 	}
+	auto t0 = std::chrono::system_clock::now();
+	for( int index = 0; index < size; ++index) {
+		MilleniumMapper::map( allOrders.at( index), mappedNewOrders.at( index));
+	}
+	auto t1 = std::chrono::system_clock::now();
+	for( int index = 0; index < size; ++index) {
+		MilleniumEncoder::encode( mappedNewOrders.at( index), msg);
+	}
+	auto t2 = std::chrono::system_clock::now();
+
+	for( int index = 0; index < size; ++index) {
+        delete &mappedNewOrders.at(index);
+	}
+	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t1 - t0);
+	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
+}
+
+void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &allCancels,
+		std::chrono::milliseconds &mappingDuration,
+		std::chrono::milliseconds &encodingDuration) {
+	Metal::Message msg;
+
+	std::vector<OrderCancelRequest> mappedCancels;
+	int size = allCancels.size();
+	mappedCancels.reserve( size);
+
+	for( int index = 0; index < size; ++index) {
+        mappedCancels.at(index) = *(new OrderCancelRequest());
+	}
+	auto t0 = std::chrono::system_clock::now();
+	for( int index = 0; index < size; ++index) {
+		MilleniumMapper::map( allCancels.at( index), mappedCancels.at( index));
+	}
+	auto t1 = std::chrono::system_clock::now();
+	for( int index = 0; index < size; ++index) {
+		MilleniumEncoder::encode( mappedCancels.at( index), msg);
+	}
+	auto t2 = std::chrono::system_clock::now();
+
+	for( int index = 0; index < size; ++index) {
+        delete &mappedCancels.at(index);
+	}
+	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t1 - t0);
+	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
 }
 
 void MilleniumAdapter::recv(const ExecutionReport &er) {
