@@ -22,27 +22,31 @@ void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
 		std::chrono::milliseconds &encodingDuration) {
 	Metal::Message msg;
 
-	std::vector<NewOrder> mappedNewOrders;
+	std::vector<NewOrder *> mappedNewOrders;
 	int size = allOrders.size();
 	mappedNewOrders.reserve( size);
 
 	for( int index = 0; index < size; ++index) {
-        mappedNewOrders.at(index) = *(new NewOrder());
+        mappedNewOrders.push_back( new NewOrder());
 	}
+
 	auto t0 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		MilleniumMapper::map( allOrders.at( index), mappedNewOrders.at( index));
+		MilleniumMapper::map( allOrders.at( index), *mappedNewOrders.at( index));
 	}
 	auto t1 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		MilleniumEncoder::encode( mappedNewOrders.at( index), msg);
+		MilleniumEncoder::encode( *mappedNewOrders.at( index), msg);
 	}
 	auto t2 = std::chrono::system_clock::now();
 
-	for( int index = 0; index < size; ++index) {
-        delete &mappedNewOrders.at(index);
+	// free allocated memory
+	while (!mappedNewOrders.empty()) {
+		delete mappedNewOrders.back();
+		mappedNewOrders.pop_back();
 	}
-	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t1 - t0);
+
+	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0);
 	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
 }
 
@@ -51,27 +55,30 @@ void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &
 		std::chrono::milliseconds &encodingDuration) {
 	Metal::Message msg;
 
-	std::vector<OrderCancelRequest> mappedCancels;
+	std::vector<OrderCancelRequest *> mappedCancels;
 	int size = allCancels.size();
 	mappedCancels.reserve( size);
 
 	for( int index = 0; index < size; ++index) {
-        mappedCancels.at(index) = *(new OrderCancelRequest());
+        mappedCancels.push_back( new OrderCancelRequest());
 	}
 	auto t0 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		MilleniumMapper::map( allCancels.at( index), mappedCancels.at( index));
+		MilleniumMapper::map( allCancels.at( index), *mappedCancels.at( index));
 	}
 	auto t1 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		MilleniumEncoder::encode( mappedCancels.at( index), msg);
+		MilleniumEncoder::encode( *mappedCancels.at( index), msg);
 	}
 	auto t2 = std::chrono::system_clock::now();
 
-	for( int index = 0; index < size; ++index) {
-        delete &mappedCancels.at(index);
+	// free allocated memory
+	while (!mappedCancels.empty()) {
+		delete mappedCancels.back();
+		mappedCancels.pop_back();
 	}
-	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t1 - t0);
+
+	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0);
 	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
 }
 
