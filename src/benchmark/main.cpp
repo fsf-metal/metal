@@ -31,6 +31,8 @@ void randomString(char *s, const int len);
 // Output formatting
 void displayResult( std::string title, std::chrono::milliseconds durationMapping, std::chrono::milliseconds durationEncoding);
 
+using namespace std;
+
 
 int main( int argc, char* argv[]) {
 
@@ -78,14 +80,38 @@ int main( int argc, char* argv[]) {
 	CPU::getDetails(cpuDetails);
 	std::cout << "CPU: " << cpuDetails << std::endl;
 
-
-	// Find out which message mapper will be used
-	// This is where custom adapter should go
+	// what should be benchmarked?
 	std::vector<TradingAdapter*> allAdapters;
-	allAdapters.push_back( new QuickFIX::QuickFIXAdapter());
-	allAdapters.push_back( new LSE::MilleniumAdapter());
+	allAdapters.push_back(new QuickFIX::QuickFIXAdapter());
+	allAdapters.push_back(new LSE::MilleniumAdapter());
 
-	for( std::vector<TradingAdapter*>::iterator iter = allAdapters.begin(); iter != allAdapters.end(); ++iter) {
+	bool validSelection = false;
+	unsigned int selection;
+	while( true) {
+		std::cout << SEP1 << std::endl;
+		cout << "Please choose which adapter should be benchmarked: [0-" << to_string(allAdapters.size()) << "]" << endl;
+		cout << setw(4) << 0 << ". All" << endl;
+		for (unsigned int index = 0; index < allAdapters.size(); ++index) {
+			cout << setw(4) << to_string(index + 1) << ". " << (allAdapters.at(index))->getName() << endl;
+		}
+		cin >> selection;
+		if (selection <= allAdapters.size()) break;
+
+		cout << "Incorrect input, please pick a number between 0 and " << to_string(allAdapters.size()) << endl;
+		continue;
+	} 
+
+	// at this point, we should have a proper selection
+	// let's turn it into a vector of trading adapters
+	vector<TradingAdapter*> selectedAdapters;
+	if (selection == 0) {
+		selectedAdapters = allAdapters;
+	}
+	else {
+		selectedAdapters.push_back(allAdapters.at(selection - 1));
+	}
+
+	for( std::vector<TradingAdapter*>::iterator iter = selectedAdapters.begin(); iter != selectedAdapters.end(); ++iter) {
 		std::cout << SEP1 << std::endl;
 		std::cout << "Benchmarking : " << (*iter)->getName() << " " << std::flush;
 
@@ -95,8 +121,11 @@ int main( int argc, char* argv[]) {
 		std::chrono::milliseconds durationNOSEncoding;
 		std::chrono::milliseconds durationOCRMapping;
 		std::chrono::milliseconds durationOCREncoding;
+
+		// We are benchmarking several times to reduce anomalies
 		for( int loop = 0; loop < LOOPS; ++loop) {
 			std::cout << std::to_string(index--) << ".." << std::flush;
+			// this is the meat
 			(*iter)->benchmark(allOrders, durationMapping, durationEncoding);
 			durationNOSMapping += durationMapping;
 			durationNOSEncoding += durationEncoding;
