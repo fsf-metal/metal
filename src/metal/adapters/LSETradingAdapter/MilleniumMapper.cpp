@@ -38,7 +38,9 @@ void MilleniumMapper::map( const Metal::NewOrderSingle &nos, Metal::LSE::NewOrde
 	newOrder.clearingAccount = LSE::ClearingAccount_CLIENT;
 
     // Instrument ID @46 L4
-	newOrder.instrumentID = nos.getField( FIX::FIELD::Symbol);
+	// TODO => Perform actual mapping from string to ID
+	//nos.getField( FIX::FIELD::Symbol)
+	newOrder.instrumentID = 1;
 
     // OrderType @52 L1
     FIX::OrdType ordType;
@@ -93,20 +95,20 @@ void MilleniumMapper::map( const Metal::NewOrderSingle &nos, Metal::LSE::NewOrde
     // Order Qty @59 L4
     FIX::OrderQty ordQty;
     nos.getField( ordQty);
-    newOrder.quantity = (Quantity)ordQty;
+    newOrder.orderQty = (OrderQty)ordQty;
 
     // Display Qty @63 L4
     if( nos.isSetField( FIX::FIELD::DisplayQty)) {
     	FIX::DisplayQty displayQty;
     	nos.getField( displayQty);
-    	newOrder.displayQty = (Quantity) displayQty;
+    	newOrder.displayQty = (DisplayQty) displayQty;
     }
 
     // Limit Price @67 L8
     if( newOrder.orderType == LSE::OrderType_LIMIT || newOrder.orderType == LSE::OrderType_STOP_LIMIT) {
     	FIX::Price price;
     	nos.getField( price);
-    	newOrder.price = (Price)( price * 100000000);
+    	newOrder.limitPrice = (Price)( price * 100000000);
     }
 
     // Capacity @75 L1

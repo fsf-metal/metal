@@ -8,7 +8,7 @@
 #include <chrono>
 #include "MilleniumAdapter.h"
 #include "MilleniumMapper.h"
-#include "MilleniumEncoder.h"
+#include "MilleniumCodec.h"
 
 namespace Metal {
 namespace LSE {
@@ -36,7 +36,7 @@ void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
 	}
 	auto t1 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		MilleniumEncoder::encode( *mappedNewOrders.at( index), msg);
+		MilleniumCodec::encode( *mappedNewOrders.at( index), msg);
 	}
 	auto t2 = std::chrono::system_clock::now();
 
@@ -68,7 +68,7 @@ void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &
 	}
 	auto t1 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		MilleniumEncoder::encode( *mappedCancels.at( index), msg);
+		MilleniumCodec::encode( *mappedCancels.at( index), msg);
 	}
 	auto t2 = std::chrono::system_clock::now();
 
@@ -78,8 +78,9 @@ void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &
 		mappedCancels.pop_back();
 	}
 
-	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0);
-	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
+	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t1-t0);
+	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2-t1);
+
 }
 
 void MilleniumAdapter::recv(const ExecutionReport &er) {

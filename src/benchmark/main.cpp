@@ -24,23 +24,22 @@
 #define SEP2 "------------------------------------------------------------"
 
 using namespace Metal;
+using namespace std;
 
 // Fills a string with random characters
 void randomString(char *s, const int len);
 
 // Output formatting
-void displayResult( std::string title, std::chrono::milliseconds durationMapping, std::chrono::milliseconds durationEncoding);
-
-using namespace std;
+void displayResult( string title, chrono::milliseconds durationMapping, chrono::milliseconds durationEncoding);
 
 
 int main( int argc, char* argv[]) {
 
 	// step 1 create a bunch of NewOrderSingle
-	std::vector<NewOrderSingle> allOrders;
-	std::vector<OrderCancelRequest> allCancels;
-	allOrders.reserve( (size_t)BATCH_SIZE);
-	allCancels.reserve( (size_t)BATCH_SIZE);
+	vector<NewOrderSingle> allOrders;
+	vector<OrderCancelRequest> allCancels;
+	allOrders.reserve( BATCH_SIZE);
+	allCancels.reserve( BATCH_SIZE);
 
 
 	for( int index = 0; index < BATCH_SIZE; index++) {
@@ -74,21 +73,20 @@ int main( int argc, char* argv[]) {
 
 	}
 
-	std::cout << "Allocated " << BATCH_SIZE << " random NewOrderSingle and OrderCancelRequest" << std::endl;
-	std::cout << "Results will be averaged over " << LOOPS << " loops" << std::endl;
-	std::string cpuDetails;
+	cout << "Allocated " << BATCH_SIZE << " random NewOrderSingle and OrderCancelRequest" << endl;
+	cout << "Results will be averaged over " << LOOPS << " loops" << endl;
+	string cpuDetails;
 	CPU::getDetails(cpuDetails);
-	std::cout << "CPU: " << cpuDetails << std::endl;
+	cout << "CPU: " << cpuDetails << endl;
 
 	// what should be benchmarked?
-	std::vector<TradingAdapter*> allAdapters;
+	vector<TradingAdapter*> allAdapters;
 	allAdapters.push_back(new QuickFIX::QuickFIXAdapter());
 	allAdapters.push_back(new LSE::MilleniumAdapter());
 
-	bool validSelection = false;
 	unsigned int selection;
 	while( true) {
-		std::cout << SEP1 << std::endl;
+		cout << SEP1 << endl;
 		cout << "Please choose which adapter should be benchmarked: [0-" << to_string(allAdapters.size()) << "]" << endl;
 		cout << setw(4) << 0 << ". All" << endl;
 		for (unsigned int index = 0; index < allAdapters.size(); ++index) {
@@ -111,31 +109,36 @@ int main( int argc, char* argv[]) {
 		selectedAdapters.push_back(allAdapters.at(selection - 1));
 	}
 
-	for( std::vector<TradingAdapter*>::iterator iter = selectedAdapters.begin(); iter != selectedAdapters.end(); ++iter) {
-		std::cout << SEP1 << std::endl;
-		std::cout << "Benchmarking : " << (*iter)->getName() << " " << std::flush;
+	for( vector<TradingAdapter*>::iterator iter = selectedAdapters.begin(); iter != selectedAdapters.end(); ++iter) {
+		cout << SEP1 << endl;
+		cout << "Benchmarking : " << (*iter)->getName() << " " << flush;
 
 		int index = 2 * LOOPS;
-		std::chrono::milliseconds durationMapping, durationEncoding;
-		std::chrono::milliseconds durationNOSMapping;
-		std::chrono::milliseconds durationNOSEncoding;
-		std::chrono::milliseconds durationOCRMapping;
-		std::chrono::milliseconds durationOCREncoding;
+		chrono::milliseconds durationMapping, durationEncoding;
+		chrono::milliseconds durationNOSMapping(0);
+		chrono::milliseconds durationNOSEncoding(0);
+		chrono::milliseconds durationOCRMapping(0);
+		chrono::milliseconds durationOCREncoding(0);
 
 		// We are benchmarking several times to reduce anomalies
 		for( int loop = 0; loop < LOOPS; ++loop) {
-			std::cout << std::to_string(index--) << ".." << std::flush;
-			// this is the meat
+			cout << to_string(index--) << ".." << flush;
+
+			// this is the actual benchmarking
 			(*iter)->benchmark(allOrders, durationMapping, durationEncoding);
+
 			durationNOSMapping += durationMapping;
 			durationNOSEncoding += durationEncoding;
 
-			std::cout << std::to_string(index--) << ".." << std::flush;
+			cout << to_string(index--) << ".." << flush;
+
+			// this is the actual benchmarking
 			(*iter)->benchmark(allCancels, durationMapping, durationEncoding);
+
 			durationOCRMapping += durationMapping;
 			durationOCREncoding += durationEncoding;
 		}
-		std::cout << std::endl;
+		cout << endl;
 
 		displayResult( "NewOrderSingle", durationNOSMapping, durationNOSEncoding);
 		displayResult( "OrderCancelRequest", durationOCRMapping, durationOCREncoding);
@@ -158,11 +161,13 @@ void randomString(char *s, const int len) {
     s[len] = 0;
 }
 
-void displayResult( std::string title, std::chrono::milliseconds durationMapping, std::chrono::milliseconds durationEncoding) {
+void displayResult( string title, chrono::milliseconds durationMapping, chrono::milliseconds durationEncoding) {
 	using namespace std;
 	string title2 = "Mapping";
 	string title3 = "Encoding";
 	string title4 = "Combined";
+
+	// cout << "displayResult durationMapping=" << to_string( durationMapping.count()) << " durationEncoding=" << to_string( durationEncoding.count()) << endl;
 
 	cout << SEP2 << endl;
 	cout << title << " : " << title2 << " : " << title3 << " : " << title4 << endl;
