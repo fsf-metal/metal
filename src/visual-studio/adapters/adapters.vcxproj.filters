@@ -23,37 +23,37 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\metal\MappingException.cpp">
+    <ClCompile Include="..\..\metal\MappingException.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\TradingAdapter.cpp">
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\Translator.cpp">
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumMapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp">
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\OrderCancelRequest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp">
+    <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp">
+    <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumEncoder.cpp">
+    <ClCompile Include="..\..\metal\TradingAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumMapper.cpp">
+    <ClCompile Include="..\..\metal\Translator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\OrderCancelRequest.cpp">
+    <ClCompile Include="..\..\metal\Message.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\metal\Message.cpp">
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumCodec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

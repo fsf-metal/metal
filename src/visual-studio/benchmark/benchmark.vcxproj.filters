@@ -29,10 +29,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\benchmark\main.cpp">
+    <ClCompile Include="..\..\benchmark\CPU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\benchmark\CPU.cpp">
+    <ClCompile Include="..\..\benchmark\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

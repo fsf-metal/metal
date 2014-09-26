@@ -53,7 +53,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ADAPTERS_EXPORTS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../quickfix/include;../../../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../quickfix/include;../../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -71,7 +71,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ADAPTERS_EXPORTS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../quickfix/include;../../../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../quickfix/include;../../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -87,17 +87,17 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp" />
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumEncoder.cpp" />
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\MilleniumMapper.cpp" />
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp" />
-    <ClCompile Include="..\..\..\metal\adapters\LSETradingAdapter\OrderCancelRequest.cpp" />
-    <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp" />
-    <ClCompile Include="..\..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp" />
-    <ClCompile Include="..\..\..\metal\MappingException.cpp" />
-    <ClCompile Include="..\..\..\metal\Message.cpp" />
-    <ClCompile Include="..\..\..\metal\TradingAdapter.cpp" />
-    <ClCompile Include="..\..\..\metal\Translator.cpp" />
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp" />
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumCodec.cpp" />
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumMapper.cpp" />
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp" />
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\OrderCancelRequest.cpp" />
+    <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp" />
+    <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp" />
+    <ClCompile Include="..\..\metal\MappingException.cpp" />
+    <ClCompile Include="..\..\metal\Message.cpp" />
+    <ClCompile Include="..\..\metal\TradingAdapter.cpp" />
+    <ClCompile Include="..\..\metal\Translator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
