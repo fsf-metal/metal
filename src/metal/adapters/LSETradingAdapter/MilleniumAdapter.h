@@ -16,6 +16,13 @@ class MilleniumAdapter : public TradingAdapter {
 		void send( const NewOrderSingle &nos);
 		virtual void recv( const ExecutionReport &er);
 
+		/**
+		 * Our identity<br>
+		 * @see Adapter#getUUID() for tips.
+		 */
+		virtual std::string getUUID() { return "acba8ab0-4564-11e4-916c-0800200c9a66";}
+
+
 		// life cycle
 		void start();
 		void stop();
