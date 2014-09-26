@@ -94,7 +94,7 @@ bool SocketGroup::listen(unsigned milisec, void* reference) {
         unsigned long long milisecLeft = finTime - getTime();
         struct timeval timeout;
 
-        timeout.tv_sec = milisecLeft / 1000;
+        timeout.tv_sec = (long)( milisecLeft / 1000);
         timeout.tv_usec = (milisecLeft % 1000) * 1000;
 
         int status = select(maxHandle + 1, &setSockets, NULL, NULL, &timeout);
