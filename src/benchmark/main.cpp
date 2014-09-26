@@ -44,6 +44,7 @@ int main( int argc, char* argv[]) {
 
 	for( int index = 0; index < BATCH_SIZE; index++) {
 		NewOrderSingle * pNos = new NewOrderSingle();
+		FIX::UTCTIMESTAMP now;
 
         char clOrdID[16];
         randomString( clOrdID, 15);
@@ -53,7 +54,7 @@ int main( int argc, char* argv[]) {
 		pNos->setField(FIX::Symbol( symbol));
         FIX::Side side = rand() >=0/5 ? FIX::Side_BUY : FIX::Side_SELL;
 		pNos->setField(FIX::Side(side));
-		pNos->setField(FIX::TransactTime(time( (time_t *)NULL)));
+		pNos->setField(FIX::TransactTime(now));
 		int qty = (int)(rand() * 100);
 		pNos->setField(FIX::OrderQty(qty));
 		pNos->setField(FIX::OrdType( FIX::OrdType_LIMIT));
@@ -66,7 +67,7 @@ int main( int argc, char* argv[]) {
 		pOcr->setField(FIX::ClOrdID(clOrdID));
 		pOcr->setField(FIX::Symbol(symbol));
 		pOcr->setField(FIX::Side(side));
-		pOcr->setField(FIX::TransactTime(time(NULL)));
+		pOcr->setField(FIX::TransactTime(now));
 		pOcr->setField(FIX::OrderQty(qty));
 
 		allCancels.push_back(*pOcr);
