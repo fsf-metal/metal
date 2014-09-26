@@ -13,7 +13,7 @@
 namespace Metal {
 namespace LSE {
 
-MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading") {
+MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading", "acba8ab0-4564-11e4-916c-0800200c9a66") {
 
 }
 

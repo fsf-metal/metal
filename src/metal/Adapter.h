@@ -6,17 +6,19 @@
 namespace Metal {
 class Adapter {
 	public:
-		Adapter( std::string nameParam):name( nameParam){};
+		/**
+		 * @param: uuid a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
+		 */
+		Adapter( const std::string& nameParam, const std::string& uuidParam):name( nameParam),uuid( uuidParam){};
 
 		const std::string & getName() { return this->name;};
 
 		/**
-		 * This UUID is the Adapter unique ID.<br>
-		 * You can use services such as http://www.famkruithof.net/uuid/uuidgen to create your own.<br>
+		 * Retrieve Unique ID
 		 * For example, this is used by benchmarking to report results<br>
 		 * This is also used on the web site to identify adapters.
 		 */
-		virtual std::string getUUID() = 0;
+		const std::string & getUUID() { return this->uuid; };
 
 		virtual void start() = 0;
 		virtual void stop() = 0;
@@ -24,6 +26,7 @@ class Adapter {
 	protected:
 		~Adapter(){};
 		std::string name;
+		std::string uuid;
 };
 }
 

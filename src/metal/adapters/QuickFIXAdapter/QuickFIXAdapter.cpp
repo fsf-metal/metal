@@ -71,7 +71,7 @@ class MyApplication: public Application,public MessageCracker {
 /**
  * Default Constructor
  */
-QuickFIXAdapter::QuickFIXAdapter():TradingAdapter("QuickFIX") {
+QuickFIXAdapter::QuickFIXAdapter() :TradingAdapter("QuickFIX", "e32cd5d0-4564-11e4-916c-0800200c9a66") {
 	this->initiator = NULL;
 	this->session = NULL;
 }
