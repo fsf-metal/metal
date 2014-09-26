@@ -3,6 +3,7 @@
 
 #include <string>
 #include <chrono>
+#include <netlink/socket.h>
 
 #include "Adapter.h"
 #include "metal.h"
@@ -15,7 +16,21 @@ class TradingAdapter : public Adapter {
 		 * @param name Whatever should be used to identify this adapter.
 		 * Subclasses will perform mapping, encoding then write to the active session
 		 */
-		TradingAdapter( const std::string& name) : Adapter( name){};
+		TradingAdapter( const std::string& name, const std::string& uuid);
+
+		/**
+		 * This method should be invoked before starting the adapter to set remote host properties
+		 * @param hostName name of the remote host
+		 * @param portNumber remote port number
+		 */
+		void setRemoteHost(const std::string &hostName, unsigned int portNumber);
+
+		/**
+		 * This function should be invoked to initiate physical connection<br>
+		 * It will create a new Thread for incomming messages
+		 */
+		void start();
+
 		/**
 		 * This method will be called by users to send new orders<br>
 		 * Subclasses will perform mapping, encoding then write to the active session<br>
@@ -54,6 +69,10 @@ class TradingAdapter : public Adapter {
 
 	protected:
 		~TradingAdapter();
+
+		std::string remoteHost;
+		unsigned int remotePort;
+		NL::Socket *socket;
 };
 
 } // namespace Metal
