@@ -2,6 +2,7 @@
 
 #ifdef _WIN32
 #	include <Windows.h>
+#	include <VersionHelpers.h>
 #else // linux?
 #	include <fstream>
 #	include <sys/utsname.h>
@@ -62,7 +63,19 @@ void Display::getCPUDescription(string &str) {
 
 void Display::getOSDescription( string &str) {
 #ifdef _WIN32
-	str = "Windows";
+	HKEY hKey;
+	LONG lRes = RegOpenKeyExW(HKEY_LOCAL_MACHINE, L"SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion", 0, KEY_READ, &hKey);
+	bool bExistsAndSuccess(lRes == ERROR_SUCCESS);
+
+	wstring strCurrentVersion;
+	GetStringRegKey(hKey, L"CurrentVersion", strCurrentVersion, L"Not Found");
+	string currentVersion(strCurrentVersion.begin(), strCurrentVersion.end());
+
+	wstring strProductName;
+	GetStringRegKey(hKey, L"ProductName", strCurrentVersion, L"Not Found");
+	string productName(strCurrentVersion.begin(), strCurrentVersion.end());
+
+	str = "Windows (" + currentVersion + ") " + productName;
 #elif __linux
 	struct utsname sysinfo;
 	if( uname( &sysinfo) < 0) {

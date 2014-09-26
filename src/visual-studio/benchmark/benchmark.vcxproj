@@ -94,7 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\benchmark\main.cpp" />
-    <ClCompile Include="..\..\benchmark\CPU.cpp" />
+    <ClCompile Include="..\..\benchmark\Display.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
