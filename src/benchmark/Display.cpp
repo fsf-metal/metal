@@ -1,22 +1,25 @@
-#include "CPU.h"
+#include "Display.h"
 
 #ifdef _WIN32
 #	include <Windows.h>
-#else
+#else // linux?
 #	include <fstream>
+#	include <sys/utsname.h>
 #endif
 
-CPU::CPU()
+using namespace std;
+
+Display::Display()
 {
 }
 
 
-CPU::~CPU()
+Display::~Display()
 {
 }
 
 #ifdef _WIN32
-LONG GetStringRegKey(HKEY hKey, const std::wstring &strValueName, std::wstring &strValue, const std::wstring &strDefaultValue)
+LONG GetStringRegKey(HKEY hKey, const wstring &strValueName, wstring &strValue, const wstring &strDefaultValue)
 {
 	strValue = strDefaultValue;
 	WCHAR szBuffer[512];
@@ -31,22 +34,22 @@ LONG GetStringRegKey(HKEY hKey, const std::wstring &strValueName, std::wstring &
 }
 #endif
 
-void CPU::getDetails(std::string &str) {
+void Display::getCPUDescription(string &str) {
 #ifdef _WIN32
 	HKEY hKey;
 	LONG lRes = RegOpenKeyExW(HKEY_LOCAL_MACHINE, L"HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0", 0, KEY_READ, &hKey);
 	bool bExistsAndSuccess (lRes == ERROR_SUCCESS);
 
-	std::wstring strValueOfProcessorName;
+	wstring strValueOfProcessorName;
 	GetStringRegKey(hKey, L"ProcessorNameString", strValueOfProcessorName, L"Not Found");
-	std::string strVal(strValueOfProcessorName.begin(), strValueOfProcessorName.end());
+	string strVal(strValueOfProcessorName.begin(), strValueOfProcessorName.end());
 	str = strVal;
 #elif __linux
-	std::ifstream file("/proc/cpuinfo");
-	std::string line;
+	ifstream file("/proc/cpuinfo");
+	string line;
 	str = "Not found in /proc/cpuinfo";
-	while( std::getline( file, line)) {
-		if( line.find( "model name") != std::string::npos) {
+	while( getline( file, line)) {
+		if( line.find( "model name") != string::npos) {
 			size_t semiColonPos = line.find( ":");
 			str = line.substr( semiColonPos + 2, line.length() - semiColonPos - 2);
 			break;
@@ -54,5 +57,22 @@ void CPU::getDetails(std::string &str) {
 	}
 #else
 	str = "Information not available for this OS";
+#endif
+}
+
+void Display::getOSDescription( string &str) {
+#ifdef _WIN32
+	str = "Windows";
+#elif __linux
+	struct utsname sysinfo;
+	if( uname( &sysinfo) < 0) {
+		str = "Cannot Determine Linux Version";
+	} else {
+		string sysname( sysinfo.sysname);
+		string sysrelease( sysinfo.release);
+		str = sysname + ' ' + sysrelease;
+	}
+#else
+	str = "Other Operating System";
 #endif
 }

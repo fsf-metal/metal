@@ -16,7 +16,7 @@
 #include <metal/adapters/QuickFIXAdapter/QuickFIXAdapter.h>
 #include <metal/adapters/LSETradingAdapter/MilleniumAdapter.h>
 
-#include "CPU.h"
+#include "Display.h"
 
 #define BATCH_SIZE 100000L
 #define LOOPS      5L
@@ -76,8 +76,11 @@ int main( int argc, char* argv[]) {
 	cout << "Allocated " << BATCH_SIZE << " random NewOrderSingle and OrderCancelRequest" << endl;
 	cout << "Results will be averaged over " << LOOPS << " loops" << endl;
 	string cpuDetails;
-	CPU::getDetails(cpuDetails);
-	cout << "CPU: " << cpuDetails << endl;
+	Display::getCPUDescription(cpuDetails);
+	cout << "CPU : " << cpuDetails << endl;
+	string osDescription;
+	Display::getOSDescription(osDescription);
+	cout << "OS  : " << osDescription << endl;
 
 	// what should be benchmarked?
 	vector<TradingAdapter*> allAdapters;
