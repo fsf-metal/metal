@@ -18,6 +18,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quickfix", "..\quickfix\src
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "netLink", "netLink\netLink.vcxproj", "{2B8C3B1B-999E-4AB1-9E9D-2638C90055E3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bronze", "bronze\bronze.vcxproj", "{4D9939E1-7B2D-44D8-B06F-14CB6FE7736F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2FDF49F-919C-4673-8B21-44E345C1354A} = {B2FDF49F-919C-4673-8B21-44E345C1354A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -40,6 +45,10 @@ Global
 		{2B8C3B1B-999E-4AB1-9E9D-2638C90055E3}.Debug|Win32.Build.0 = Debug|Win32
 		{2B8C3B1B-999E-4AB1-9E9D-2638C90055E3}.Release|Win32.ActiveCfg = Release|Win32
 		{2B8C3B1B-999E-4AB1-9E9D-2638C90055E3}.Release|Win32.Build.0 = Release|Win32
+		{4D9939E1-7B2D-44D8-B06F-14CB6FE7736F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4D9939E1-7B2D-44D8-B06F-14CB6FE7736F}.Debug|Win32.Build.0 = Debug|Win32
+		{4D9939E1-7B2D-44D8-B06F-14CB6FE7736F}.Release|Win32.ActiveCfg = Release|Win32
+		{4D9939E1-7B2D-44D8-B06F-14CB6FE7736F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
