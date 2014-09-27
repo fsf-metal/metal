@@ -21,10 +21,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="..\..\metal\Codec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -61,6 +58,9 @@
     </ClCompile>
     <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
       <Filter>Source Files\QuickFIXAdapter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\metal\Codec.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

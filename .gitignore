@@ -6,3 +6,5 @@ logs/
 *.o
 *.so
 .sconsign.dblite
+*.suo
+*.filters
