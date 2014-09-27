@@ -1,9 +1,9 @@
 import glob
 
-src_files = 'TradingAdapter.cpp Translator.cpp Mapper.cpp Message.cpp MappingException.cpp Codec.cpp'
+src_files = 'src/core.cc src/smart_buffer.cc src/socket.cc src/socket_group.cc src/util.cc'
 lib_files = 'pthread xml2 z'
-include_path = '../quickfix/include ../netLink/include ..'
-output_file = 'Metal.so'
+include_path = 'include/'
+output_file = 'NetLink.so'
 
 # Get all the build variables we need
 Import('env', 'mymode', 'debugcflags', 'releasecflags')
