@@ -56,6 +56,6 @@ public:
 	inline static void encodeHeader( Message &msg, int16_t length, char type);
 };
 
-} /* namespace Base */ // TODO: Replace with you own namespace
+} /* namespace */
 } /* namespace Metal */
-#endif /* METAL_E_LSEMESSAGEENCODER_H_ */ // TODO use your own name
+#endif /* prevent multiple includes */

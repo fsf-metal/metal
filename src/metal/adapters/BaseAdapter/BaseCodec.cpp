@@ -7,17 +7,17 @@
  */
 
 #include <cstring>
-#include "BaseCodece.h"
+#include "BaseCodec.h"
 
 namespace Metal {
 namespace Base { // TODO replace with your own name
 
-BaseCodec::MilleniumCodec() {
+BaseCodec::BaseCodec() {
 }
 
-BaseCodec::~MilleniumCodec() {
+BaseCodec::~BaseCodec() {
 }
 
 
-} /* namespace LSE */
+} /* namespace LSE TODO rename */
 } /* namespace Metal */

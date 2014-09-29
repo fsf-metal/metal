@@ -1,6 +1,6 @@
 import glob
 
-src_files = 'Adapter.cpp'
+src_files = 'Adapter.cpp Codec.cpp Login.cpp OrderAdd.cpp OrderCancel.cpp'
 lib_files = 'Metal pthread xml2 z'
 include_path = '../../../quickfix/include/ ../../../ ../../../netLink/include/'
 lib_path = '../../../lib'
