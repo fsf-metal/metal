@@ -17,6 +17,8 @@ class Translator {
 public:
 	Translator();
 	static const std::string field( const FIX::OrdStatus &);
+	static const std::string field(const FIX::ExecType &);
+	static const std::string field(const FIX::Side &);
 	virtual ~Translator();
 };
 
