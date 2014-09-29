@@ -1,0 +1,114 @@
+\hypertarget{core_8h}{}\section{/home/jc/metal/src/net\+Link/include/netlink/core.h File Reference}
+\label{core_8h}\index{/home/jc/metal/src/net\+Link/include/netlink/core.\+h@{/home/jc/metal/src/net\+Link/include/netlink/core.\+h}}
+{\ttfamily \#include \char`\"{}netlink/config.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\\*
+{\ttfamily \#include $<$sys/fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$sys/unistd.\+h$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+{\ttfamily \#include $<$netdb.\+h$>$}\\*
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}netlink/exception.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}netlink/release\+\_\+manager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}netlink/util.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{core_8h_abc19f1dd7f7e0c32a2dfc5157066db0a}{}\#define {\bfseries N\+L\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+N\+A\+M\+E}~N\+L\label{core_8h_abc19f1dd7f7e0c32a2dfc5157066db0a}
+
+\item 
+\hypertarget{core_8h_a534bbab9b8761b1ec5420d4b8a9bbd11}{}\#define {\bfseries N\+L\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E}~namespace N\+L\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+N\+A\+M\+E \{\label{core_8h_a534bbab9b8761b1ec5420d4b8a9bbd11}
+
+\item 
+\hypertarget{core_8h_ae1a7a99e2ba26685d2c01ce44709b9d7}{}\#define {\bfseries N\+L\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+E\+N\+D}~\};\label{core_8h_ae1a7a99e2ba26685d2c01ce44709b9d7}
+
+\item 
+\hypertarget{core_8h_a72e3e989b9baebd5f7c04922fae6e589}{}\#define {\bfseries N\+L\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+U\+S\+E}~using namespace N\+L\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+N\+A\+M\+E;\label{core_8h_a72e3e989b9baebd5f7c04922fae6e589}
+
+\item 
+\hypertarget{core_8h_ae273c7db78098028c7a6b6b230ac0503}{}\#define {\bfseries O\+S\+\_\+\+L\+I\+N\+U\+X}\label{core_8h_ae273c7db78098028c7a6b6b230ac0503}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{core_8h_aac39b55be6469395f55ff0292ad8184c}{Protocol} \{ \hyperlink{core_8h_aac39b55be6469395f55ff0292ad8184caa040cd7feeb588104634cdadf35abf1c}{T\+C\+P}, 
+\hyperlink{core_8h_aac39b55be6469395f55ff0292ad8184cadb542475cf9d0636e4225e216cee9ae6}{U\+D\+P}
+ \}
+\item 
+enum \hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3d}{I\+P\+Ver} \{ \hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3da7cecc0cd33e7aadefd2826553c9e634e}{I\+P4}, 
+\hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3dabf4c53a0c24e17362bbe8ecb0347e4e6}{I\+P6}, 
+\hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3daa00374190265e7b6447db44977a7dff1}{A\+N\+Y}
+ \}
+\item 
+enum \hyperlink{core_8h_aa78c7398fa81f7f62aa233159d4d8d97}{Socket\+Type} \{ \hyperlink{core_8h_aa78c7398fa81f7f62aa233159d4d8d97a48e4cb37544c8e69715d45e5a83b2109}{C\+L\+I\+E\+N\+T}, 
+\hyperlink{core_8h_aa78c7398fa81f7f62aa233159d4d8d97a67c96b24b23bcb408bae7626730a04b7}{S\+E\+R\+V\+E\+R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{core_8h_a9b878fee41d5996021dea123e7d071b4}{init} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Net\+Link core types and init 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{core_8h_a3afbe2755e4a6912bfce39e7069c2d3d}{}\index{core.\+h@{core.\+h}!I\+P\+Ver@{I\+P\+Ver}}
+\index{I\+P\+Ver@{I\+P\+Ver}!core.\+h@{core.\+h}}
+\subsubsection[{I\+P\+Ver}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I\+P\+Ver}}\label{core_8h_a3afbe2755e4a6912bfce39e7069c2d3d}
+Defines the version of I\+P. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\+P4@{I\+P4}!core.\+h@{core.\+h}}\index{core.\+h@{core.\+h}!I\+P4@{I\+P4}}\item[{\em 
+\hypertarget{core_8h_a3afbe2755e4a6912bfce39e7069c2d3da7cecc0cd33e7aadefd2826553c9e634e}{}I\+P4\label{core_8h_a3afbe2755e4a6912bfce39e7069c2d3da7cecc0cd33e7aadefd2826553c9e634e}
+}]I\+P version 4 \index{I\+P6@{I\+P6}!core.\+h@{core.\+h}}\index{core.\+h@{core.\+h}!I\+P6@{I\+P6}}\item[{\em 
+\hypertarget{core_8h_a3afbe2755e4a6912bfce39e7069c2d3dabf4c53a0c24e17362bbe8ecb0347e4e6}{}I\+P6\label{core_8h_a3afbe2755e4a6912bfce39e7069c2d3dabf4c53a0c24e17362bbe8ecb0347e4e6}
+}]I\+P version 6 \index{A\+N\+Y@{A\+N\+Y}!core.\+h@{core.\+h}}\index{core.\+h@{core.\+h}!A\+N\+Y@{A\+N\+Y}}\item[{\em 
+\hypertarget{core_8h_a3afbe2755e4a6912bfce39e7069c2d3daa00374190265e7b6447db44977a7dff1}{}A\+N\+Y\label{core_8h_a3afbe2755e4a6912bfce39e7069c2d3daa00374190265e7b6447db44977a7dff1}
+}]Any I\+P version \end{description}
+\end{Desc}
+\hypertarget{core_8h_aac39b55be6469395f55ff0292ad8184c}{}\index{core.\+h@{core.\+h}!Protocol@{Protocol}}
+\index{Protocol@{Protocol}!core.\+h@{core.\+h}}
+\subsubsection[{Protocol}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Protocol}}\label{core_8h_aac39b55be6469395f55ff0292ad8184c}
+Defines protocol type. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{T\+C\+P@{T\+C\+P}!core.\+h@{core.\+h}}\index{core.\+h@{core.\+h}!T\+C\+P@{T\+C\+P}}\item[{\em 
+\hypertarget{core_8h_aac39b55be6469395f55ff0292ad8184caa040cd7feeb588104634cdadf35abf1c}{}T\+C\+P\label{core_8h_aac39b55be6469395f55ff0292ad8184caa040cd7feeb588104634cdadf35abf1c}
+}]T\+C\+P Protocol \index{U\+D\+P@{U\+D\+P}!core.\+h@{core.\+h}}\index{core.\+h@{core.\+h}!U\+D\+P@{U\+D\+P}}\item[{\em 
+\hypertarget{core_8h_aac39b55be6469395f55ff0292ad8184cadb542475cf9d0636e4225e216cee9ae6}{}U\+D\+P\label{core_8h_aac39b55be6469395f55ff0292ad8184cadb542475cf9d0636e4225e216cee9ae6}
+}]U\+D\+P Protocol \end{description}
+\end{Desc}
+\hypertarget{core_8h_aa78c7398fa81f7f62aa233159d4d8d97}{}\index{core.\+h@{core.\+h}!Socket\+Type@{Socket\+Type}}
+\index{Socket\+Type@{Socket\+Type}!core.\+h@{core.\+h}}
+\subsubsection[{Socket\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Socket\+Type}}\label{core_8h_aa78c7398fa81f7f62aa233159d4d8d97}
+Defines the nature of the socket. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+L\+I\+E\+N\+T@{C\+L\+I\+E\+N\+T}!core.\+h@{core.\+h}}\index{core.\+h@{core.\+h}!C\+L\+I\+E\+N\+T@{C\+L\+I\+E\+N\+T}}\item[{\em 
+\hypertarget{core_8h_aa78c7398fa81f7f62aa233159d4d8d97a48e4cb37544c8e69715d45e5a83b2109}{}C\+L\+I\+E\+N\+T\label{core_8h_aa78c7398fa81f7f62aa233159d4d8d97a48e4cb37544c8e69715d45e5a83b2109}
+}]T\+C\+P or U\+D\+P socket connected or directed to a target host \index{S\+E\+R\+V\+E\+R@{S\+E\+R\+V\+E\+R}!core.\+h@{core.\+h}}\index{core.\+h@{core.\+h}!S\+E\+R\+V\+E\+R@{S\+E\+R\+V\+E\+R}}\item[{\em 
+\hypertarget{core_8h_aa78c7398fa81f7f62aa233159d4d8d97a67c96b24b23bcb408bae7626730a04b7}{}S\+E\+R\+V\+E\+R\label{core_8h_aa78c7398fa81f7f62aa233159d4d8d97a67c96b24b23bcb408bae7626730a04b7}
+}]T\+C\+P socket which listens for connections or U\+D\+P socket without target host \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{core_8h_a9b878fee41d5996021dea123e7d071b4}{}\index{core.\+h@{core.\+h}!init@{init}}
+\index{init@{init}!core.\+h@{core.\+h}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}N\+L\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+Evoid init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{core_8h_a9b878fee41d5996021dea123e7d071b4}
+Library initialization function
+
+\begin{DoxyWarning}{Warning}
+Must be called before using the library 
+\end{DoxyWarning}

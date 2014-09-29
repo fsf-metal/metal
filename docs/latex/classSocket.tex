@@ -1,0 +1,493 @@
+\hypertarget{classSocket}{}\section{Socket Class Reference}
+\label{classSocket}\index{Socket@{Socket}}
+
+
+{\ttfamily \#include $<$netlink/socket.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSocket_a91f9a0b4937702a38a29c01f401693eb}{Socket} (const string \&\hyperlink{classSocket_a29c3b32215592f8154975c87f63dcbfb}{host\+To}, unsigned \hyperlink{classSocket_aea64c4f67d903198cff5a6285a0f9a7e}{port\+To}, \hyperlink{core_8h_aac39b55be6469395f55ff0292ad8184c}{Protocol} \hyperlink{classSocket_a4e03da6ff0420bf0a2e123142ce11093}{protocol}=\hyperlink{core_8h_aac39b55be6469395f55ff0292ad8184caa040cd7feeb588104634cdadf35abf1c}{T\+C\+P}, \hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3d}{I\+P\+Ver} \hyperlink{classSocket_a00640e1194207685a9169d130dd31500}{ip\+Ver}=\hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3daa00374190265e7b6447db44977a7dff1}{A\+N\+Y})
+\item 
+\hyperlink{classSocket_a4ebb8b7ca2c5d3d9229a6c6f48a2399b}{Socket} (unsigned \hyperlink{classSocket_acea4e417eb685f5f9c8e743b918cd84e}{port\+From}, \hyperlink{core_8h_aac39b55be6469395f55ff0292ad8184c}{Protocol} \hyperlink{classSocket_a4e03da6ff0420bf0a2e123142ce11093}{protocol}=\hyperlink{core_8h_aac39b55be6469395f55ff0292ad8184caa040cd7feeb588104634cdadf35abf1c}{T\+C\+P}, \hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3d}{I\+P\+Ver} \hyperlink{classSocket_a00640e1194207685a9169d130dd31500}{ip\+Ver}=\hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3da7cecc0cd33e7aadefd2826553c9e634e}{I\+P4}, const string \&\hyperlink{classSocket_a12045edc739ce34fbe98e86909951ce1}{host\+From}=\char`\"{}\char`\"{}, unsigned \hyperlink{classSocket_af365c5326acff9571194897b55ae70e5}{listen\+Queue}=D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+Q\+U\+E\+U\+E)
+\item 
+\hyperlink{classSocket_a8edac8ee6f4e323e870234408e725125}{Socket} (const string \&\hyperlink{classSocket_a29c3b32215592f8154975c87f63dcbfb}{host\+To}, unsigned \hyperlink{classSocket_aea64c4f67d903198cff5a6285a0f9a7e}{port\+To}, unsigned \hyperlink{classSocket_acea4e417eb685f5f9c8e743b918cd84e}{port\+From}, \hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3d}{I\+P\+Ver} \hyperlink{classSocket_a00640e1194207685a9169d130dd31500}{ip\+Ver}=\hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3daa00374190265e7b6447db44977a7dff1}{A\+N\+Y})
+\item 
+\hyperlink{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{$\sim$\+Socket} ()
+\item 
+\hyperlink{classSocket}{Socket} $\ast$ \hyperlink{classSocket_ad5c1661c21238b91789869512a5436bd}{accept} ()
+\item 
+int \hyperlink{classSocket_a9321c801007be471daf2b6f3201776e4}{read} (void $\ast$buffer, size\+\_\+t buffer\+Size)
+\item 
+void \hyperlink{classSocket_a9d303166383fb1b85827dabd5d85dc4d}{send} (const void $\ast$buffer, size\+\_\+t size)
+\item 
+int \hyperlink{classSocket_a56afc7070c2f55da561c8f8aa81050b2}{read\+From} (void $\ast$buffer, size\+\_\+t buffer\+Size, string $\ast$Host\+From, unsigned $\ast$\hyperlink{classSocket_acea4e417eb685f5f9c8e743b918cd84e}{port\+From}=N\+U\+L\+L)
+\item 
+void \hyperlink{classSocket_ad59c21fcd55db58994851f98309ffdec}{send\+To} (const void $\ast$buffer, size\+\_\+t size, const string \&\hyperlink{classSocket_a29c3b32215592f8154975c87f63dcbfb}{host\+To}, unsigned \hyperlink{classSocket_aea64c4f67d903198cff5a6285a0f9a7e}{port\+To})
+\item 
+int \hyperlink{classSocket_ab64c5b08163dbb79810c48749e61409f}{next\+Read\+Size} () const 
+\item 
+void \hyperlink{classSocket_a0aed22a4e59d0492ee5ed6d5c89ef762}{disconnect} ()
+\item 
+const string \& \hyperlink{classSocket_a29c3b32215592f8154975c87f63dcbfb}{host\+To} () const 
+\item 
+const string \& \hyperlink{classSocket_a12045edc739ce34fbe98e86909951ce1}{host\+From} () const 
+\item 
+unsigned \hyperlink{classSocket_aea64c4f67d903198cff5a6285a0f9a7e}{port\+To} () const 
+\item 
+unsigned \hyperlink{classSocket_acea4e417eb685f5f9c8e743b918cd84e}{port\+From} () const 
+\item 
+\hyperlink{core_8h_aac39b55be6469395f55ff0292ad8184c}{Protocol} \hyperlink{classSocket_a4e03da6ff0420bf0a2e123142ce11093}{protocol} () const 
+\item 
+\hyperlink{core_8h_a3afbe2755e4a6912bfce39e7069c2d3d}{I\+P\+Ver} \hyperlink{classSocket_a00640e1194207685a9169d130dd31500}{ip\+Ver} () const 
+\item 
+\hyperlink{core_8h_aa78c7398fa81f7f62aa233159d4d8d97}{Socket\+Type} \hyperlink{classSocket_a4dadcac478a053c6fe6111dae36eb2b3}{type} () const 
+\item 
+bool \hyperlink{classSocket_ae3108b16d019c1c06cc94b6c5070a8c5}{blocking} () const 
+\item 
+unsigned \hyperlink{classSocket_af365c5326acff9571194897b55ae70e5}{listen\+Queue} () const 
+\item 
+int \hyperlink{classSocket_a4fc638fcdd0ea5cd9cb1d15d68899b34}{socket\+Handler} () const 
+\item 
+void \hyperlink{classSocket_a8bfe50531649139736b1ea42dffcda95}{blocking} (bool blocking)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classSocket}{Socket} class
+
+\begin{DoxyNote}{Note}
+The Exceptions with asterisk($\ast$) includes the native error code (\hyperlink{classException_ac63a198ea817835198c53825c5809b3f}{Exception\+::native\+Error\+Code()}) when thrown 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Remember to call \hyperlink{core_8h_a9b878fee41d5996021dea123e7d071b4}{init()} before using \hyperlink{classSocket}{Socket} 
+\end{DoxyWarning}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSocket_a91f9a0b4937702a38a29c01f401693eb}{}\index{Socket@{Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Socket@{Socket}}
+\subsubsection[{Socket}]{\setlength{\rightskip}{0pt plus 5cm}Socket\+::\+Socket (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{host\+To, }
+\item[{unsigned}]{port\+To, }
+\item[{{\bf Protocol}}]{protocol = {\ttfamily {\bf T\+C\+P}}, }
+\item[{{\bf I\+P\+Ver}}]{ip\+Ver = {\ttfamily {\bf A\+N\+Y}}}
+\end{DoxyParamCaption}
+)}\label{classSocket_a91f9a0b4937702a38a29c01f401693eb}
+C\+L\+I\+E\+N\+T \hyperlink{classSocket}{Socket} constructor
+
+Creates a socket, connect it (if T\+C\+P) and sets it ready to send to host\+To\+:port\+To. The local port of the socket is choosen by O\+S.
+
+
+\begin{DoxyParams}{Parameters}
+{\em host\+To} & the target/remote host \\
+\hline
+{\em port\+To} & the target/remote port \\
+\hline
+{\em protocol} & the protocol to be used (T\+C\+P or U\+D\+P). T\+C\+P by default. \\
+\hline
+{\em ip\+Ver} & the I\+P version to be used (I\+P4, I\+P6 or A\+N\+Y). A\+N\+Y by default. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & B\+A\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L, B\+A\+D\+\_\+\+I\+P\+\_\+\+V\+E\+R, E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+F\+O$\ast$, E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+E\+T$\ast$, E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+F\+O$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_a4ebb8b7ca2c5d3d9229a6c6f48a2399b}{}\index{Socket@{Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Socket@{Socket}}
+\subsubsection[{Socket}]{\setlength{\rightskip}{0pt plus 5cm}Socket\+::\+Socket (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{port\+From, }
+\item[{{\bf Protocol}}]{protocol = {\ttfamily {\bf T\+C\+P}}, }
+\item[{{\bf I\+P\+Ver}}]{ip\+Ver = {\ttfamily {\bf I\+P4}}, }
+\item[{const string \&}]{host\+From = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{unsigned}]{listen\+Queue = {\ttfamily DEFAULT\+\_\+LISTEN\+\_\+QUEUE}}
+\end{DoxyParamCaption}
+)}\label{classSocket_a4ebb8b7ca2c5d3d9229a6c6f48a2399b}
+S\+E\+R\+V\+E\+R \hyperlink{classSocket}{Socket} constructor
+
+Creates a socket, binds it to port\+From port and listens for connections (if T\+C\+P).
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+From} & the local port the socket will be bound to \\
+\hline
+{\em protocol} & the protocol to be used (T\+C\+P or U\+D\+P). T\+C\+P by default. \\
+\hline
+{\em ip\+Ver} & the I\+P version to be used (I\+P4, I\+P6 or A\+N\+Y). I\+P4 by default. \\
+\hline
+{\em host\+From} & the local address to be binded to (example\+: \char`\"{}localhost\char`\"{} or \char`\"{}127.\+0.\+0.\+1\char`\"{}). Empty (by default) or \char`\"{}$\ast$\char`\"{} means all avariable addresses. \\
+\hline
+{\em listen\+Queue} & the size of the internal buffer of the S\+E\+R\+V\+E\+R T\+C\+P socket where the connection requests are stored until accepted \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & B\+A\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L, B\+A\+D\+\_\+\+I\+P\+\_\+\+V\+E\+R, E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+F\+O$\ast$, E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+S\+O\+C\+K\+\_\+\+O\+P\+T$\ast$, E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+\_\+\+N\+O\+T\+\_\+\+L\+I\+S\+T\+E\+N$\ast$, E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+E\+T$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_a8edac8ee6f4e323e870234408e725125}{}\index{Socket@{Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Socket@{Socket}}
+\subsubsection[{Socket}]{\setlength{\rightskip}{0pt plus 5cm}Socket\+::\+Socket (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{host\+To, }
+\item[{unsigned}]{port\+To, }
+\item[{unsigned}]{port\+From, }
+\item[{{\bf I\+P\+Ver}}]{ip\+Ver = {\ttfamily {\bf A\+N\+Y}}}
+\end{DoxyParamCaption}
+)}\label{classSocket_a8edac8ee6f4e323e870234408e725125}
+U\+D\+P C\+L\+I\+E\+N\+T \hyperlink{classSocket}{Socket} Constructor
+
+This client constructor for U\+D\+P Sockets allows to expecify the local port the socket will be bound to. It sets the socket ready to send data to host\+To\+:port\+To.
+
+
+\begin{DoxyParams}{Parameters}
+{\em host\+To} & the target/remote host \\
+\hline
+{\em port\+To} & the target/remote port \\
+\hline
+{\em port\+From} & the local port the socket will be bound to \\
+\hline
+{\em ip\+Ver} & the I\+P version to be used (I\+P4, I\+P6 or A\+N\+Y). A\+N\+Y by default. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & B\+A\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L, B\+A\+D\+\_\+\+I\+P\+\_\+\+V\+E\+R, E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+F\+O$\ast$, E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+S\+O\+C\+K\+\_\+\+O\+P\+T$\ast$, E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+\_\+\+N\+O\+T\+\_\+\+L\+I\+S\+T\+E\+N$\ast$, E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+E\+T$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_aeac4eb6379a543d38ed88977d3b6630a}{}\index{Socket@{Socket}!````~Socket@{$\sim$\+Socket}}
+\index{````~Socket@{$\sim$\+Socket}!Socket@{Socket}}
+\subsubsection[{$\sim$\+Socket}]{\setlength{\rightskip}{0pt plus 5cm}Socket\+::$\sim$\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSocket_aeac4eb6379a543d38ed88977d3b6630a}
+\hyperlink{classSocket}{Socket} Destructor
+
+Closes (disconnects) the socket 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSocket_ad5c1661c21238b91789869512a5436bd}{}\index{Socket@{Socket}!accept@{accept}}
+\index{accept@{accept}!Socket@{Socket}}
+\subsubsection[{accept}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket} $\ast$ Socket\+::accept (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSocket_ad5c1661c21238b91789869512a5436bd}
+Accepts a new incoming connection (S\+E\+R\+V\+E\+R \hyperlink{classSocket}{Socket}).
+
+Creates a new C\+L\+I\+E\+N\+T socket to handle the communication (send/recieve data) of this accepted connection. Requires the socket to be a S\+E\+R\+V\+E\+R T\+C\+P socket. Throws an exception otherwise.
+
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classSocket}{Socket} must be S\+E\+R\+V\+E\+R 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+A C\+L\+I\+E\+N\+T socket that handles the new connection 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+T\+C\+P\+\_\+\+S\+O\+C\+K\+E\+T, E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+S\+O\+C\+K\+E\+T \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_ae3108b16d019c1c06cc94b6c5070a8c5}{}\index{Socket@{Socket}!blocking@{blocking}}
+\index{blocking@{blocking}!Socket@{Socket}}
+\subsubsection[{blocking}]{\setlength{\rightskip}{0pt plus 5cm}bool Socket\+::blocking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_ae3108b16d019c1c06cc94b6c5070a8c5}
+Returns whether the socket is blocking (true) or not (false)
+
+\begin{DoxyReturn}{Returns}
+socket blocking status 
+\end{DoxyReturn}
+\hypertarget{classSocket_a8bfe50531649139736b1ea42dffcda95}{}\index{Socket@{Socket}!blocking@{blocking}}
+\index{blocking@{blocking}!Socket@{Socket}}
+\subsubsection[{blocking}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+::blocking (
+\begin{DoxyParamCaption}
+\item[{bool}]{blocking}
+\end{DoxyParamCaption}
+)}\label{classSocket_a8bfe50531649139736b1ea42dffcda95}
+Sets the blocking nature of the \hyperlink{classSocket}{Socket}
+
+Sets the \hyperlink{classSocket}{Socket} as blocking (if blocking is true) or as non-\/blocking (otherwise)
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocking} & true to set the \hyperlink{classSocket}{Socket} as blocking; false to set the \hyperlink{classSocket}{Socket} as non-\/blocking \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+R\+R\+O\+R\+\_\+\+I\+O\+C\+T\+L$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_a0aed22a4e59d0492ee5ed6d5c89ef762}{}\index{Socket@{Socket}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Socket@{Socket}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+::disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSocket_a0aed22a4e59d0492ee5ed6d5c89ef762}
+Closes (disconnects) the socket. After this call the socket can not be used.
+
+\begin{DoxyWarning}{Warning}
+Any use of the \hyperlink{classSocket}{Socket} after disconnection leads to undefined behaviour. 
+\end{DoxyWarning}
+\hypertarget{classSocket_a12045edc739ce34fbe98e86909951ce1}{}\index{Socket@{Socket}!host\+From@{host\+From}}
+\index{host\+From@{host\+From}!Socket@{Socket}}
+\subsubsection[{host\+From}]{\setlength{\rightskip}{0pt plus 5cm}const string \& Socket\+::host\+From (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_a12045edc739ce34fbe98e86909951ce1}
+Returns the socket local address
+
+\begin{DoxyReturn}{Returns}
+socket local address 
+\end{DoxyReturn}
+\hypertarget{classSocket_a29c3b32215592f8154975c87f63dcbfb}{}\index{Socket@{Socket}!host\+To@{host\+To}}
+\index{host\+To@{host\+To}!Socket@{Socket}}
+\subsubsection[{host\+To}]{\setlength{\rightskip}{0pt plus 5cm}const string \& Socket\+::host\+To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_a29c3b32215592f8154975c87f63dcbfb}
+Returns the target host of the socket
+
+\begin{DoxyReturn}{Returns}
+the host this socket is connected to (in T\+C\+P case) or the host it sends data to (U\+D\+P case) 
+\end{DoxyReturn}
+\hypertarget{classSocket_a00640e1194207685a9169d130dd31500}{}\index{Socket@{Socket}!ip\+Ver@{ip\+Ver}}
+\index{ip\+Ver@{ip\+Ver}!Socket@{Socket}}
+\subsubsection[{ip\+Ver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+P\+Ver} Socket\+::ip\+Ver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_a00640e1194207685a9169d130dd31500}
+Returns the socket I\+P version \begin{DoxyReturn}{Returns}
+I\+P\+Ver 
+\end{DoxyReturn}
+\hypertarget{classSocket_af365c5326acff9571194897b55ae70e5}{}\index{Socket@{Socket}!listen\+Queue@{listen\+Queue}}
+\index{listen\+Queue@{listen\+Queue}!Socket@{Socket}}
+\subsubsection[{listen\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Socket\+::listen\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_af365c5326acff9571194897b55ae70e5}
+Returns the size of the listen queue.
+
+\begin{DoxyPrecond}{Precondition}
+The \hyperlink{classSocket}{Socket} must be S\+E\+R\+V\+E\+R, otherwise this call has no sense and returns 0 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+the size of the internal buffer of the S\+E\+R\+V\+E\+R T\+C\+P socket where the connection requests are stored until accepted 
+\end{DoxyReturn}
+\hypertarget{classSocket_ab64c5b08163dbb79810c48749e61409f}{}\index{Socket@{Socket}!next\+Read\+Size@{next\+Read\+Size}}
+\index{next\+Read\+Size@{next\+Read\+Size}!Socket@{Socket}}
+\subsubsection[{next\+Read\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+::next\+Read\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classSocket_ab64c5b08163dbb79810c48749e61409f}
+Get next \hyperlink{classSocket_a9321c801007be471daf2b6f3201776e4}{read()} data size
+
+Get the size of the data (bytes) a call to \hyperlink{classSocket_a9321c801007be471daf2b6f3201776e4}{read()} or \hyperlink{classSocket_a56afc7070c2f55da561c8f8aa81050b2}{read\+From()} can process
+
+\begin{DoxyReturn}{Returns}
+size of data the next call to read/read\+From will receive 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+R\+R\+O\+R\+\_\+\+I\+O\+C\+T\+L$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_acea4e417eb685f5f9c8e743b918cd84e}{}\index{Socket@{Socket}!port\+From@{port\+From}}
+\index{port\+From@{port\+From}!Socket@{Socket}}
+\subsubsection[{port\+From}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Socket\+::port\+From (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_acea4e417eb685f5f9c8e743b918cd84e}
+Returns the local port of the socket
+
+\begin{DoxyReturn}{Returns}
+local port 
+\end{DoxyReturn}
+\hypertarget{classSocket_aea64c4f67d903198cff5a6285a0f9a7e}{}\index{Socket@{Socket}!port\+To@{port\+To}}
+\index{port\+To@{port\+To}!Socket@{Socket}}
+\subsubsection[{port\+To}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Socket\+::port\+To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_aea64c4f67d903198cff5a6285a0f9a7e}
+Returns the port this socket is connected/sends to
+
+\begin{DoxyReturn}{Returns}
+target/remote port 
+\end{DoxyReturn}
+\hypertarget{classSocket_a4e03da6ff0420bf0a2e123142ce11093}{}\index{Socket@{Socket}!protocol@{protocol}}
+\index{protocol@{protocol}!Socket@{Socket}}
+\subsubsection[{protocol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Protocol} Socket\+::protocol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_a4e03da6ff0420bf0a2e123142ce11093}
+Returns the socket protocol \begin{DoxyReturn}{Returns}
+Protocol 
+\end{DoxyReturn}
+\hypertarget{classSocket_a9321c801007be471daf2b6f3201776e4}{}\index{Socket@{Socket}!read@{read}}
+\index{read@{read}!Socket@{Socket}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+::read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Size}
+\end{DoxyParamCaption}
+)}\label{classSocket_a9321c801007be471daf2b6f3201776e4}
+Receives data
+
+Receives data and stores it in buffer until buffer\+Size reached.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to a buffer where received data will be stored \\
+\hline
+{\em buffer\+Size} & Size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Size of received data or (-\/1) if \hyperlink{classSocket}{Socket} is non-\/blocking and there's no data received. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_a56afc7070c2f55da561c8f8aa81050b2}{}\index{Socket@{Socket}!read\+From@{read\+From}}
+\index{read\+From@{read\+From}!Socket@{Socket}}
+\subsubsection[{read\+From}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+::read\+From (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Size, }
+\item[{string $\ast$}]{host\+From, }
+\item[{unsigned $\ast$}]{port\+From = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\label{classSocket_a56afc7070c2f55da561c8f8aa81050b2}
+Receive data and get the source host and port
+
+Requires the socket to be U\+D\+P. Source host address and port are returned in host\+From and port\+From parameters. Data recieved is written in buffer address up to buffer\+Size.
+
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classSocket}{Socket} must be U\+D\+P 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em buffer} & Pointer to a buffer where received data will be stored \\
+\hline
+ & {\em buffer\+Size} & Size of the buffer \\
+\hline
+\mbox{\tt out}  & {\em host\+From} & Here the function will store the address of the remote host \\
+\hline
+\mbox{\tt out}  & {\em port\+From} & Here the function will store the remote port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the data recieved 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T, E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_a9d303166383fb1b85827dabd5d85dc4d}{}\index{Socket@{Socket}!send@{send}}
+\index{send@{send}!Socket@{Socket}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+::send (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\label{classSocket_a9d303166383fb1b85827dabd5d85dc4d}
+Sends data
+
+Sends the data contained in buffer. Requires the \hyperlink{classSocket}{Socket} to be a C\+L\+I\+E\+N\+T socket.
+
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classSocket}{Socket} must be C\+L\+I\+E\+N\+T 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to the data we want to send \\
+\hline
+{\em size} & Length of the data to be sent (bytes) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+S\+O\+C\+K\+E\+T, E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_ad59c21fcd55db58994851f98309ffdec}{}\index{Socket@{Socket}!send\+To@{send\+To}}
+\index{send\+To@{send\+To}!Socket@{Socket}}
+\subsubsection[{send\+To}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+::send\+To (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{size, }
+\item[{const string \&}]{host\+To, }
+\item[{unsigned}]{port\+To}
+\end{DoxyParamCaption}
+)}\label{classSocket_ad59c21fcd55db58994851f98309ffdec}
+Sends data to an expecific host\+:port
+
+Sends the data contained in buffer to a given host\+:port. Requires the socket to be an U\+D\+P socket, throws an exception otherwise.
+
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classSocket}{Socket} must be U\+D\+P 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to the data we want to send \\
+\hline
+{\em size} & Size of the data to send (bytes) \\
+\hline
+{\em host\+To} & Target/remote host \\
+\hline
+{\em port\+To} & Target/remote port \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T, B\+A\+D\+\_\+\+I\+P\+\_\+\+V\+E\+R, E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+F\+O$\ast$, E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocket_a4fc638fcdd0ea5cd9cb1d15d68899b34}{}\index{Socket@{Socket}!socket\+Handler@{socket\+Handler}}
+\index{socket\+Handler@{socket\+Handler}!Socket@{Socket}}
+\subsubsection[{socket\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}int Socket\+::socket\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_a4fc638fcdd0ea5cd9cb1d15d68899b34}
+Returns the socket handler (file/socket descriptor)
+
+\begin{DoxyReturn}{Returns}
+File descritor to handle the socket 
+\end{DoxyReturn}
+\hypertarget{classSocket_a4dadcac478a053c6fe6111dae36eb2b3}{}\index{Socket@{Socket}!type@{type}}
+\index{type@{type}!Socket@{Socket}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket\+Type} Socket\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocket_a4dadcac478a053c6fe6111dae36eb2b3}
+Returns the socket type \begin{DoxyReturn}{Returns}
+Socket\+Type (S\+E\+R\+V\+E\+R or C\+L\+I\+E\+N\+T) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/net\+Link/include/netlink/socket.\+h\item 
+/home/jc/metal/src/net\+Link/include/netlink/socket.\+inline.\+h\item 
+/home/jc/metal/src/net\+Link/src/socket.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{classMetal_1_1LSE_1_1MilleniumCodec}{}\section{Metal\+:\+:L\+S\+E\+:\+:Millenium\+Codec Class Reference}
+\label{classMetal_1_1LSE_1_1MilleniumCodec}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec@{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec}}
+Inheritance diagram for Metal\+:\+:L\+S\+E\+:\+:Millenium\+Codec\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMetal_1_1LSE_1_1MilleniumCodec}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classMetal_1_1LSE_1_1MilleniumCodec_a0db727988a60b489983d3650c2dbb5fd}{encode} (const \hyperlink{classMetal_1_1LSE_1_1OrderCancelRequest}{Order\+Cancel\+Request} \&ocr, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+static void \hyperlink{classMetal_1_1LSE_1_1MilleniumCodec_a90425eb0c5be795fb6c35fc28a88aac1}{encode} (const \hyperlink{classMetal_1_1LSE_1_1NewOrder}{New\+Order} \&no, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+static void \hyperlink{classMetal_1_1LSE_1_1MilleniumCodec_a2ae620b4b54cf5dc12df16b976af4d34}{encode} (const \hyperlink{classMetal_1_1LSE_1_1Logon}{Logon} \&logon, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+\hypertarget{classMetal_1_1LSE_1_1MilleniumCodec_a343c554002e86b3376c160ef5aa434d1}{}static void {\bfseries encode} (const int16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1LSE_1_1MilleniumCodec_a343c554002e86b3376c160ef5aa434d1}
+
+\item 
+\hypertarget{classMetal_1_1LSE_1_1MilleniumCodec_a7c950822487d09fde69d98224aa95442}{}static void {\bfseries encode} (const int32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1LSE_1_1MilleniumCodec_a7c950822487d09fde69d98224aa95442}
+
+\item 
+\hypertarget{classMetal_1_1LSE_1_1MilleniumCodec_a1b1d14237dd5a548b59a0a3773fbee79}{}static void {\bfseries encode} (const int64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1LSE_1_1MilleniumCodec_a1b1d14237dd5a548b59a0a3773fbee79}
+
+\item 
+\hypertarget{classMetal_1_1LSE_1_1MilleniumCodec_a3b494f4615faf56115c32db1c3fcf4c5}{}static void {\bfseries encode\+Header} (\hyperlink{classMetal_1_1Message}{Message} \&msg, int16\+\_\+t length, char type)\label{classMetal_1_1LSE_1_1MilleniumCodec_a3b494f4615faf56115c32db1c3fcf4c5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumCodec_a0db727988a60b489983d3650c2dbb5fd}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec@{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+L\+S\+E\+::\+Millenium\+Codec@{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Order\+Cancel\+Request} \&}]{ocr, }
+\item[{{\bf Metal\+::\+Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumCodec_a0db727988a60b489983d3650c2dbb5fd}
+Encode a cancel request 
+\begin{DoxyParams}{Parameters}
+{\em ocr} & The Order Cancel Request representation \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumCodec_a90425eb0c5be795fb6c35fc28a88aac1}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec@{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+L\+S\+E\+::\+Millenium\+Codec@{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf New\+Order} \&}]{no, }
+\item[{{\bf Metal\+::\+Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumCodec_a90425eb0c5be795fb6c35fc28a88aac1}
+Encode a new order 
+\begin{DoxyParams}{Parameters}
+{\em no} & The New Order representation \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumCodec_a2ae620b4b54cf5dc12df16b976af4d34}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec@{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+L\+S\+E\+::\+Millenium\+Codec@{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Logon} \&}]{logon, }
+\item[{{\bf Metal\+::\+Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumCodec_a2ae620b4b54cf5dc12df16b976af4d34}
+Encode a logon 
+\begin{DoxyParams}{Parameters}
+{\em logon} & \hyperlink{classMetal_1_1LSE_1_1Logon}{Logon} representation. Must be constructed with all values \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/metal/adapters/\+L\+S\+E\+Trading\+Adapter/Millenium\+Codec.\+h\item 
+/home/jc/metal/src/metal/adapters/\+L\+S\+E\+Trading\+Adapter/Millenium\+Codec.\+cpp\end{DoxyCompactItemize}

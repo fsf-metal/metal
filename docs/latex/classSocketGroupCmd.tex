@@ -1,0 +1,42 @@
+\hypertarget{classSocketGroupCmd}{}\section{Socket\+Group\+Cmd Class Reference}
+\label{classSocketGroupCmd}\index{Socket\+Group\+Cmd@{Socket\+Group\+Cmd}}
+
+
+{\ttfamily \#include $<$netlink/socket\+\_\+group.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classSocketGroupCmd_a30e9877d6831ab010e252c004707b87d}{exec} (\hyperlink{classSocket}{Socket} $\ast$socket, \hyperlink{classSocketGroup}{Socket\+Group} $\ast$group, void $\ast$reference)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to be used as base for \hyperlink{classSocketGroup}{Socket\+Group} callback function implementing classes 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSocketGroupCmd_a30e9877d6831ab010e252c004707b87d}{}\index{Socket\+Group\+Cmd@{Socket\+Group\+Cmd}!exec@{exec}}
+\index{exec@{exec}!Socket\+Group\+Cmd@{Socket\+Group\+Cmd}}
+\subsubsection[{exec}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Socket\+Group\+Cmd\+::exec (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket} $\ast$}]{socket, }
+\item[{{\bf Socket\+Group} $\ast$}]{group, }
+\item[{void $\ast$}]{reference}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classSocketGroupCmd_a30e9877d6831ab010e252c004707b87d}
+Function to be implemented for the callback. The parameters will be provided by the \hyperlink{classSocketGroup_a7991c19d8fd2e08e5deab0605917b47e}{Socket\+Group\+::listen()} function when calling
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & \hyperlink{classSocket}{Socket} which triggered the callback \\
+\hline
+{\em group} & \hyperlink{classSocketGroup}{Socket\+Group} which triggered the callback \\
+\hline
+{\em reference} & Pointer passed to listen function to be used here \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/net\+Link/include/netlink/socket\+\_\+group.\+h\end{DoxyCompactItemize}

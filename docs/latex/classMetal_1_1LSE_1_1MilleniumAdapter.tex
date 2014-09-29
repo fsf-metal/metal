@@ -1,0 +1,120 @@
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter}{}\section{Metal\+:\+:L\+S\+E\+:\+:Millenium\+Adapter Class Reference}
+\label{classMetal_1_1LSE_1_1MilleniumAdapter}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+Inheritance diagram for Metal\+:\+:L\+S\+E\+:\+:Millenium\+Adapter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMetal_1_1LSE_1_1MilleniumAdapter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_ab3da43142636043e0ade20b0881c9976}{send} (const \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&nos)
+\item 
+virtual void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_add4508b367a6383b42fb2fd1744946cd}{recv} (const Execution\+Report \&er)
+\item 
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a402c564b7a955fac6660e6bfeee66093}{}void {\bfseries start} ()\label{classMetal_1_1LSE_1_1MilleniumAdapter_a402c564b7a955fac6660e6bfeee66093}
+
+\item 
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_acb5018d36915f34612958d87ad8325af}{}void {\bfseries stop} ()\label{classMetal_1_1LSE_1_1MilleniumAdapter_acb5018d36915f34612958d87ad8325af}
+
+\item 
+void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}{send\+Logon} ()
+\item 
+void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a01a0796b972925d6a430e2f788eec5ee}{benchmark} (const std\+::vector$<$ \hyperlink{classMetal_1_1NewOrderSingle}{Metal\+::\+New\+Order\+Single} $>$ \&, std\+::chrono\+::milliseconds \&mapping\+Duration, std\+::chrono\+::milliseconds \&encoding\+Duration)
+\item 
+void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_acdfc9b84439e745de42c0f72a1e22a67}{benchmark} (const std\+::vector$<$ \hyperlink{classMetal_1_1OrderCancelRequest}{Metal\+::\+Order\+Cancel\+Request} $>$ \&, std\+::chrono\+::milliseconds \&, std\+::chrono\+::milliseconds \&)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a1c12122da30ec79f3907a82ac1847c33}{}std\+::string {\bfseries user\+Name}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a1c12122da30ec79f3907a82ac1847c33}
+
+\item 
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_aa8120f11aac5d4825a5766d86e53e5a2}{}std\+::string {\bfseries password}\label{classMetal_1_1LSE_1_1MilleniumAdapter_aa8120f11aac5d4825a5766d86e53e5a2}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a01a0796b972925d6a430e2f788eec5ee}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!benchmark@{benchmark}}
+\index{benchmark@{benchmark}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::benchmark (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Metal\+::\+New\+Order\+Single} $>$ \&}]{, }
+\item[{std\+::chrono\+::milliseconds \&}]{mapping\+Duration, }
+\item[{std\+::chrono\+::milliseconds \&}]{encoding\+Duration}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a01a0796b972925d6a430e2f788eec5ee}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{Trading\+Adapter\+::benchmark} 
+\end{DoxySeeAlso}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_acdfc9b84439e745de42c0f72a1e22a67}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!benchmark@{benchmark}}
+\index{benchmark@{benchmark}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::benchmark (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Metal\+::\+Order\+Cancel\+Request} $>$ \&}]{all\+Cancels, }
+\item[{std\+::chrono\+::milliseconds \&}]{mapping\+Duration, }
+\item[{std\+::chrono\+::milliseconds \&}]{encoding\+Duration}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1LSE_1_1MilleniumAdapter_acdfc9b84439e745de42c0f72a1e22a67}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{Trading\+Adapter\+::benchmark} 
+\end{DoxySeeAlso}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_add4508b367a6383b42fb2fd1744946cd}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!recv@{recv}}
+\index{recv@{recv}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::recv (
+\begin{DoxyParamCaption}
+\item[{const Execution\+Report \&}]{er}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_add4508b367a6383b42fb2fd1744946cd}
+This method will invoked upon receiving an execution report~\newline
+ Subclasses will perform mapping, encoding then write to the active session~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em Execution\+Report} & incomming execution report \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classMetal_1_1TradingAdapter_af0015d51815dedb1bc78258b3030d751}{Metal\+::\+Trading\+Adapter}.
+
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_ab3da43142636043e0ade20b0881c9976}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!send@{send}}
+\index{send@{send}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf New\+Order\+Single} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_ab3da43142636043e0ade20b0881c9976}
+This method will be called by users to send new orders~\newline
+ Subclasses will perform mapping, encoding then write to the active session~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single}} & Inbound order in unified format \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473f1c3}{Metal\+::\+Trading\+Adapter}.
+
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!send\+Logon@{send\+Logon}}
+\index{send\+Logon@{send\+Logon}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{send\+Logon}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::send\+Logon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}
+This pure virtual method should be implemented in each adapter. 
+
+Implements \hyperlink{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}{Metal\+::\+Trading\+Adapter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/metal/adapters/\+L\+S\+E\+Trading\+Adapter/Millenium\+Adapter.\+h\item 
+/home/jc/metal/src/metal/adapters/\+L\+S\+E\+Trading\+Adapter/Millenium\+Adapter.\+cpp\end{DoxyCompactItemize}

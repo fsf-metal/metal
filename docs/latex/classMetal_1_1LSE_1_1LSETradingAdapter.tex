@@ -1,0 +1,83 @@
+\hypertarget{classMetal_1_1LSE_1_1LSETradingAdapter}{}\section{Metal\+:\+:L\+S\+E\+:\+:L\+S\+E\+Trading\+Adapter Class Reference}
+\label{classMetal_1_1LSE_1_1LSETradingAdapter}\index{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter@{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter}}
+Inheritance diagram for Metal\+:\+:L\+S\+E\+:\+:L\+S\+E\+Trading\+Adapter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMetal_1_1LSE_1_1LSETradingAdapter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMetal_1_1LSE_1_1LSETradingAdapter_a1fa8ed02f7019bdef5d4b06f4d9b1880}{send} (const \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&nos)
+\item 
+virtual void \hyperlink{classMetal_1_1LSE_1_1LSETradingAdapter_a3b369e3202f0e18d04cd13dae6b83fd6}{recv} (const Execution\+Report \&er)
+\item 
+\hypertarget{classMetal_1_1LSE_1_1LSETradingAdapter_add687c5013bdab761a12409a1df1c5ab}{}void {\bfseries start} ()\label{classMetal_1_1LSE_1_1LSETradingAdapter_add687c5013bdab761a12409a1df1c5ab}
+
+\item 
+\hypertarget{classMetal_1_1LSE_1_1LSETradingAdapter_a608f5b9099d0c205c7ddbb588944fadb}{}void {\bfseries stop} ()\label{classMetal_1_1LSE_1_1LSETradingAdapter_a608f5b9099d0c205c7ddbb588944fadb}
+
+\item 
+void \hyperlink{classMetal_1_1LSE_1_1LSETradingAdapter_a3b68993cc83c390be7dcfa2fecd22d10}{benchmark} (std\+::vector$<$ \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} $>$ \&)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1LSE_1_1LSETradingAdapter_a3b68993cc83c390be7dcfa2fecd22d10}{}\index{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter@{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter}!benchmark@{benchmark}}
+\index{benchmark@{benchmark}!Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter@{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter}}
+\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter\+::benchmark (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf New\+Order\+Single} $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1LSETradingAdapter_a3b68993cc83c390be7dcfa2fecd22d10}
+The purpose is to measure Mapping and Encoding speed Subclasses should make sure to execute both as opposed to just mapping 
+
+Implements \hyperlink{classMetal_1_1TradingAdapter_ac7d288ea0000b08adf3064f7ad57d749}{Metal\+::\+Trading\+Adapter}.
+
+\hypertarget{classMetal_1_1LSE_1_1LSETradingAdapter_a3b369e3202f0e18d04cd13dae6b83fd6}{}\index{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter@{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter}!recv@{recv}}
+\index{recv@{recv}!Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter@{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter}}
+\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter\+::recv (
+\begin{DoxyParamCaption}
+\item[{const Execution\+Report \&}]{er}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1LSETradingAdapter_a3b369e3202f0e18d04cd13dae6b83fd6}
+This method will invoked upon receiving an execution report~\newline
+ Subclasses will perform mapping, encoding then write to the active session~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em Execution\+Report} & incomming execution report \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classMetal_1_1TradingAdapter_af0015d51815dedb1bc78258b3030d751}{Metal\+::\+Trading\+Adapter}.
+
+\hypertarget{classMetal_1_1LSE_1_1LSETradingAdapter_a1fa8ed02f7019bdef5d4b06f4d9b1880}{}\index{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter@{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter}!send@{send}}
+\index{send@{send}!Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter@{Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+L\+S\+E\+Trading\+Adapter\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf New\+Order\+Single} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1LSETradingAdapter_a1fa8ed02f7019bdef5d4b06f4d9b1880}
+This method will be called by users to send new orders~\newline
+ Subclasses will perform mapping, encoding then write to the active session~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single}} & Inbound order in unified format \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473f1c3}{Metal\+::\+Trading\+Adapter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/adapters/\+L\+S\+E\+Trading\+Adapter/L\+S\+E\+Trading\+Adapter.\+h\item 
+/home/jc/metal/src/adapters/\+L\+S\+E\+Trading\+Adapter/L\+S\+E\+Trading\+Adapter.\+cpp\end{DoxyCompactItemize}

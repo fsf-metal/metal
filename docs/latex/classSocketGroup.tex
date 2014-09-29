@@ -1,0 +1,214 @@
+\hypertarget{classSocketGroup}{}\section{Socket\+Group Class Reference}
+\label{classSocketGroup}\index{Socket\+Group@{Socket\+Group}}
+
+
+{\ttfamily \#include $<$netlink/socket\+\_\+group.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSocketGroup_a23c671bf0c253701cef0986b34291fe6}{Socket\+Group} ()
+\item 
+void \hyperlink{classSocketGroup_ad91d0c0cd4b6bcd1332601069606d4ae}{add} (\hyperlink{classSocket}{Socket} $\ast$socket)
+\item 
+\hyperlink{classSocket}{Socket} $\ast$ \hyperlink{classSocketGroup_ae7a3f085186b16704ed0164ac15c2b11}{get} (unsigned index) const 
+\item 
+void \hyperlink{classSocketGroup_a5bda6446d3e445074b6d7c51d09676fb}{remove} (unsigned index)
+\item 
+void \hyperlink{classSocketGroup_aa03841a8978bbaa6223f11b994f42d90}{remove} (\hyperlink{classSocket}{Socket} $\ast$socket)
+\item 
+size\+\_\+t \hyperlink{classSocketGroup_ac4ac6b4eb65b035c9ec4537addff280a}{size} () const 
+\item 
+void \hyperlink{classSocketGroup_ae7bcb82ccd1ec59b9ae085d766ca3517}{set\+Cmd\+On\+Accept} (\hyperlink{classSocketGroupCmd}{Socket\+Group\+Cmd} $\ast$cmd)
+\item 
+void \hyperlink{classSocketGroup_a59263bbbe8db11dd12874ce41766cd4a}{set\+Cmd\+On\+Read} (\hyperlink{classSocketGroupCmd}{Socket\+Group\+Cmd} $\ast$cmd)
+\item 
+void \hyperlink{classSocketGroup_a840d702bc1448f15c1d14a2e79137164}{set\+Cmd\+On\+Disconnect} (\hyperlink{classSocketGroupCmd}{Socket\+Group\+Cmd} $\ast$cmd)
+\item 
+bool \hyperlink{classSocketGroup_a7991c19d8fd2e08e5deab0605917b47e}{listen} (unsigned milisec=0, void $\ast$reference=N\+U\+L\+L)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+To manage sockets and connections 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSocketGroup_a23c671bf0c253701cef0986b34291fe6}{}\index{Socket\+Group@{Socket\+Group}!Socket\+Group@{Socket\+Group}}
+\index{Socket\+Group@{Socket\+Group}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{Socket\+Group}]{\setlength{\rightskip}{0pt plus 5cm}Socket\+Group\+::\+Socket\+Group (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSocketGroup_a23c671bf0c253701cef0986b34291fe6}
+\hyperlink{classSocketGroup}{Socket\+Group} constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSocketGroup_ad91d0c0cd4b6bcd1332601069606d4ae}{}\index{Socket\+Group@{Socket\+Group}!add@{add}}
+\index{add@{add}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+Group\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket} $\ast$}]{socket}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocketGroup_ad91d0c0cd4b6bcd1332601069606d4ae}
+Adds the \hyperlink{classSocket}{Socket} to the \hyperlink{classSocketGroup}{Socket\+Group}
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & \hyperlink{classSocket}{Socket} to be added \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSocketGroup_ae7a3f085186b16704ed0164ac15c2b11}{}\index{Socket\+Group@{Socket\+Group}!get@{get}}
+\index{get@{get}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket} $\ast$ Socket\+Group\+::get (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocketGroup_ae7a3f085186b16704ed0164ac15c2b11}
+Gets the pointer to the \hyperlink{classSocket}{Socket} of position index in the \hyperlink{classSocketGroup}{Socket\+Group}
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \hyperlink{classSocket}{Socket} position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \hyperlink{classSocket}{Socket}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocketGroup_a7991c19d8fd2e08e5deab0605917b47e}{}\index{Socket\+Group@{Socket\+Group}!listen@{listen}}
+\index{listen@{listen}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{listen}]{\setlength{\rightskip}{0pt plus 5cm}bool Socket\+Group\+::listen (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{milisec = {\ttfamily 0}, }
+\item[{void $\ast$}]{reference = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\label{classSocketGroup_a7991c19d8fd2e08e5deab0605917b47e}
+Listens for incoming data/connections
+
+Listens during milisecs time for incoming data/connections in any socket of the group calling the appropriate callback (Accept, Read or Disconnect) if assigned.
+
+\begin{DoxyNote}{Note}
+U\+D\+P sockets only uses Read callback as they don not establish connections (can not accept) nor they register disconnections
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em milisec} & minimum time spent listening. By defaul 0 \\
+\hline
+{\em reference} & A pointer which can be passed to the callback functions so they have a context. By default N\+U\+L\+L \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if there were no incoming data, true otherwise 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+R\+R\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocketGroup_a5bda6446d3e445074b6d7c51d09676fb}{}\index{Socket\+Group@{Socket\+Group}!remove@{remove}}
+\index{remove@{remove}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+Group\+::remove (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocketGroup_a5bda6446d3e445074b6d7c51d09676fb}
+Removes from the group the \hyperlink{classSocket}{Socket} of position index
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \hyperlink{classSocket}{Socket} position\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSocketGroup_aa03841a8978bbaa6223f11b994f42d90}{}\index{Socket\+Group@{Socket\+Group}!remove@{remove}}
+\index{remove@{remove}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+Group\+::remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket} $\ast$}]{socket}
+\end{DoxyParamCaption}
+)}\label{classSocketGroup_aa03841a8978bbaa6223f11b994f42d90}
+Removes a socket of the group
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket we want to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This removes only one reference to the socket\+: if the socket was added to the group more than once (you shouldn't) there will be references left 
+\end{DoxyWarning}
+\hypertarget{classSocketGroup_ae7bcb82ccd1ec59b9ae085d766ca3517}{}\index{Socket\+Group@{Socket\+Group}!set\+Cmd\+On\+Accept@{set\+Cmd\+On\+Accept}}
+\index{set\+Cmd\+On\+Accept@{set\+Cmd\+On\+Accept}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{set\+Cmd\+On\+Accept}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+Group\+::set\+Cmd\+On\+Accept (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+Group\+Cmd} $\ast$}]{cmd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocketGroup_ae7bcb82ccd1ec59b9ae085d766ca3517}
+Sets the on\+Accept\+Ready callback
+
+This callback will be call for any incoming connection waiting to be accepted 
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \hyperlink{classSocketGroupCmd}{Socket\+Group\+Cmd} implementing the desired callback in exec() function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Only used for T\+C\+P protocol S\+E\+R\+V\+E\+R sockets 
+\end{DoxyWarning}
+\hypertarget{classSocketGroup_a840d702bc1448f15c1d14a2e79137164}{}\index{Socket\+Group@{Socket\+Group}!set\+Cmd\+On\+Disconnect@{set\+Cmd\+On\+Disconnect}}
+\index{set\+Cmd\+On\+Disconnect@{set\+Cmd\+On\+Disconnect}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{set\+Cmd\+On\+Disconnect}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+Group\+::set\+Cmd\+On\+Disconnect (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+Group\+Cmd} $\ast$}]{cmd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocketGroup_a840d702bc1448f15c1d14a2e79137164}
+Sets the on\+Disconnect callback
+
+This callback will be call for any disconnection detected 
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \hyperlink{classSocketGroupCmd}{Socket\+Group\+Cmd} implementing the desired callback in exec() function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Only used for T\+C\+P protocol C\+L\+I\+E\+N\+T sockets 
+\end{DoxyWarning}
+\hypertarget{classSocketGroup_a59263bbbe8db11dd12874ce41766cd4a}{}\index{Socket\+Group@{Socket\+Group}!set\+Cmd\+On\+Read@{set\+Cmd\+On\+Read}}
+\index{set\+Cmd\+On\+Read@{set\+Cmd\+On\+Read}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{set\+Cmd\+On\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+Group\+::set\+Cmd\+On\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+Group\+Cmd} $\ast$}]{cmd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocketGroup_a59263bbbe8db11dd12874ce41766cd4a}
+Sets the on\+Read\+Ready callback
+
+This callback will be call for any incoming data waiting to be read 
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \hyperlink{classSocketGroupCmd}{Socket\+Group\+Cmd} implementing the desired callback in exec() function \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSocketGroup_ac4ac6b4eb65b035c9ec4537addff280a}{}\index{Socket\+Group@{Socket\+Group}!size@{size}}
+\index{size@{size}!Socket\+Group@{Socket\+Group}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Socket\+Group\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSocketGroup_ac4ac6b4eb65b035c9ec4537addff280a}
+Returns the size of the group
+
+\begin{DoxyReturn}{Returns}
+The number of Sockets contained in the \hyperlink{classSocketGroup}{Socket\+Group} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/net\+Link/include/netlink/socket\+\_\+group.\+h\item 
+/home/jc/metal/src/net\+Link/include/netlink/socket\+\_\+group.\+inline.\+h\item 
+/home/jc/metal/src/net\+Link/src/socket\+\_\+group.\+cc\end{DoxyCompactItemize}

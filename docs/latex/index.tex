@@ -1,0 +1,41 @@
+\begin{DoxyAuthor}{Author}
+Pedro Fco. Pareja Ruiz ( Pedro\+Pareja \mbox{[}at\mbox{]} Gmail.\+com ) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0-\/pre-\/6
+\end{DoxyVersion}
+This is a C++ socket library designed to enable easy and fast development of socket related functionality.
+
+\begin{DoxyWarning}{Warning}
+Do not forget to call N\+L\+::init() in first place for the library initialization. This is only necessary in windows, but in the others O\+S will not do any harm.
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+Since 1.\+0.\+0, Net\+Link Sockets C++ can be used in Windows X\+P (earlier versions require at least Windows Vista to be used in Windows O\+S)
+\end{DoxyNote}
+All the components of Net\+Link Sockets are in \hyperlink{namespaceNL}{N\+L} namespace.
+
+Download the latest version of the library at \href{http://sourceforge.net/projects/netlinksockets/}{\tt http\+://sourceforge.\+net/projects/netlinksockets/}
+
+\begin{DoxyParagraph}{Linking\+:}
+
+\end{DoxyParagraph}
+\begin{DoxyItemize}
+\item Linux and O\+S\+X\+: no need to link anything. \item Windows\+: Link against W\+S2\+\_\+32.\+lib (system lib) in Visual C++ or libws2\+\_\+32.\+a in Ming\+W.\end{DoxyItemize}
+~\newline
+\begin{DoxyParagraph}{C\+H\+A\+N\+G\+E\+L\+O\+G}
+
+
+
+\end{DoxyParagraph}
+1.\+0.\+0-\/pre-\/6 \begin{DoxyItemize}
+\item Fixed\+: get\+Time() return type changed to unsigned long long\end{DoxyItemize}
+1.\+0.\+0-\/pre-\/5 \begin{DoxyItemize}
+\item Compilers\+: now {\bfseries Min\+G\+W} compatible. \item Added copy constructor and copy operator to \hyperlink{classSmartBuffer}{Smart\+Buffer} class. \item Fixed\+: (remotely) possible memory leaks in N\+L\+::\+Socket\+::accept and N\+L\+::\+Smart\+Buffer\+::read\end{DoxyItemize}
+1.\+0.\+0-\/pre-\/4 \begin{DoxyItemize}
+\item Fixed\+: memory leak in N\+L\+::\+Socket\+::init\+Socket()\+: some blocks of addrinfo were not completely freed\end{DoxyItemize}
+1.\+0.\+0-\/pre-\/3 \begin{DoxyItemize}
+\item Fixed example\+: N\+L\+::init() was missing in udp\+Direct\+Chat.\+cc \item Added source\+Forge logo to documentation\end{DoxyItemize}
+1.\+0.\+0-\/pre-\/2 \begin{DoxyItemize}
+\item Added \hyperlink{classSmartBuffer}{Smart\+Buffer} class \item Added web\+Get.\+cc example \item Documentation improvements\end{DoxyItemize}
+1.\+0.\+0-\/pre-\/1 \begin{DoxyItemize}
+\item First v1 release \end{DoxyItemize}

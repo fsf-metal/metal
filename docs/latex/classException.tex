@@ -1,0 +1,91 @@
+\hypertarget{classException}{}\section{Exception Class Reference}
+\label{classException}\index{Exception@{Exception}}
+
+
+{\ttfamily \#include $<$netlink/exception.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classException_a99403a9d2a44da7f414a2f3d4f23eca2}{}enum {\bfseries C\+O\+D\+E} \label{classException_a99403a9d2a44da7f414a2f3d4f23eca2}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classException_aafcd1188d8e22205609c25b05d325ae0}{}{\bfseries Exception} (C\+O\+D\+E \hyperlink{classException_a3404e105d108beb97d9fb4b22d9fa04c}{code}, const string \&\hyperlink{classException_ad0b441605d8f410501d91d8e08ed7cfc}{msg}, int \hyperlink{classException_ac63a198ea817835198c53825c5809b3f}{native\+Error\+Code}=0)\label{classException_aafcd1188d8e22205609c25b05d325ae0}
+
+\item 
+C\+O\+D\+E \hyperlink{classException_a3404e105d108beb97d9fb4b22d9fa04c}{code} () const 
+\item 
+const string \& \hyperlink{classException_ad0b441605d8f410501d91d8e08ed7cfc}{msg} () const 
+\item 
+const char $\ast$ \hyperlink{classException_a45642915395d3b813fedc2593fbcb8bb}{what} () const 
+\item 
+int \hyperlink{classException_ac63a198ea817835198c53825c5809b3f}{native\+Error\+Code} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classException}{Exception} Class 
+
+\subsection{Member Function Documentation}
+\hypertarget{classException_a3404e105d108beb97d9fb4b22d9fa04c}{}\index{Exception@{Exception}!code@{code}}
+\index{code@{code}!Exception@{Exception}}
+\subsubsection[{code}]{\setlength{\rightskip}{0pt plus 5cm}C\+O\+D\+E Exception\+::code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classException_a3404e105d108beb97d9fb4b22d9fa04c}
+Returns the error code\+:  \begin{DoxyReturn}{Returns}
+Error code
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Defined Error Codes\+: \begin{DoxyItemize}
+\item B\+A\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L \item B\+A\+D\+\_\+\+I\+P\+\_\+\+V\+E\+R \item E\+R\+R\+O\+R\+\_\+\+I\+N\+I\+T \item E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+F\+O \item E\+R\+R\+O\+R\+\_\+\+G\+E\+T\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+F\+O \item E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+S\+O\+C\+K\+\_\+\+O\+P\+T \item E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+\_\+\+N\+O\+T\+\_\+\+L\+I\+S\+T\+E\+N \item E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+S\+O\+C\+K\+E\+T \item E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D \item E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D \item E\+R\+R\+O\+R\+\_\+\+I\+O\+C\+T\+L \item E\+R\+R\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T \item E\+R\+R\+O\+R\+\_\+\+A\+L\+L\+O\+C \item E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+T\+C\+P\+\_\+\+S\+O\+C\+K\+E\+T \item E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T \item E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+S\+O\+C\+K\+E\+T \item E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+S\+O\+C\+K\+E\+T \item E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+H\+O\+S\+T\+\_\+\+T\+O \item O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E \end{DoxyItemize}
+
+\end{DoxyNote}
+\hypertarget{classException_ad0b441605d8f410501d91d8e08ed7cfc}{}\index{Exception@{Exception}!msg@{msg}}
+\index{msg@{msg}!Exception@{Exception}}
+\subsubsection[{msg}]{\setlength{\rightskip}{0pt plus 5cm}const string\& Exception\+::msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classException_ad0b441605d8f410501d91d8e08ed7cfc}
+Returns the error text message
+
+\begin{DoxyReturn}{Returns}
+A string with a human readable error description 
+\end{DoxyReturn}
+\hypertarget{classException_ac63a198ea817835198c53825c5809b3f}{}\index{Exception@{Exception}!native\+Error\+Code@{native\+Error\+Code}}
+\index{native\+Error\+Code@{native\+Error\+Code}!Exception@{Exception}}
+\subsubsection[{native\+Error\+Code}]{\setlength{\rightskip}{0pt plus 5cm}int Exception\+::native\+Error\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classException_ac63a198ea817835198c53825c5809b3f}
+Returns the native error code received.
+
+\begin{DoxyReturn}{Returns}
+Native error code set by O\+S 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Native error codes differ depending of the O\+S 
+\end{DoxyWarning}
+\hypertarget{classException_a45642915395d3b813fedc2593fbcb8bb}{}\index{Exception@{Exception}!what@{what}}
+\index{what@{what}!Exception@{Exception}}
+\subsubsection[{what}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Exception\+::what (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classException_a45642915395d3b813fedc2593fbcb8bb}
+Returns the error text message
+
+\begin{DoxyReturn}{Returns}
+A C-\/string with a human readable error description 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/net\+Link/include/netlink/exception.\+h\end{DoxyCompactItemize}
