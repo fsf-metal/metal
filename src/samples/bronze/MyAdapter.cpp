@@ -18,44 +18,62 @@ MyAdapter::~MyAdapter() {
 }
 
 void MyAdapter::recv( const Metal::ExecutionReport &er) {
-	FIX::OrderID orderID;
-	er.getField(orderID);
+	std::cout << "\nExecution Report:";
+	if (er.isSetField(FIX::FIELD::ClOrdID)) {
+		FIX::ClOrdID clOrdID;
+		er.getField(clOrdID);
+		std::cout << " clOrdID=" << clOrdID;
+	}
 
-	FIX::ExecID execID;
-	er.getField(execID);
+	if (er.isSetField(FIX::FIELD::OrderID)) {
+		FIX::OrderID orderID;
+		er.getField(orderID);
+		std::cout << " orderID=" << orderID;
+	}
 
-	FIX::ExecType execType;
-	er.getField(execType);
+	if (er.isSetField(FIX::FIELD::ExecID)) {
+		FIX::ExecID execID;
+		er.getField(execID);
+		std::cout << " execID=" << execID;
+	}
 
-	FIX::ClOrdID clOrdID;
-	er.getField( clOrdID);
+	if (er.isSetField(FIX::FIELD::ExecID)) {
+		FIX::ExecType execType;
+		er.getField(execType);
+		std::cout << " execType=" << Metal::Translator::field(execType);
+	}
 
-	FIX::OrdStatus ordStatus;
-	er.getField( ordStatus);
+	if (er.isSetField(FIX::FIELD::OrdStatus)) {
+		FIX::OrdStatus ordStatus;
+		er.getField(ordStatus);
+		std::cout << " status=" << Metal::Translator::field(ordStatus);
+	}
 
-	FIX::Symbol symbol;
-	er.getField(symbol);
+	if (er.isSetField(FIX::FIELD::Symbol)) {
+		FIX::Symbol symbol;
+		er.getField(symbol);
+		std::cout << " symbol=" << symbol;
+	}
 
-	FIX::Side side;
-	er.getField(side);
+	if (er.isSetField(FIX::FIELD::Side)) {
+		FIX::Side side;
+		er.getField(side);
+		std::cout << " side=" << Metal::Translator::field( side);
+	}
 
-	FIX::LeavesQty leavesQty;
-	er.getField(leavesQty);
+	if (er.isSetField(FIX::FIELD::LeavesQty)) {
+		FIX::LeavesQty leavesQty;
+		er.getField(leavesQty);
+		std::cout << " leavesQty=" << leavesQty;
+	}
 
-	FIX::CumQty cumQty;
-	er.getField(cumQty);
+	if (er.isSetField(FIX::FIELD::CumQty)) {
+		FIX::CumQty cumQty;
+		er.getField(cumQty);
+		std::cout << " cumQty=" << cumQty;
+	}
 
-	// report and mimic prompt
-	std::cout << "\nExecution Report: clOrdID=" << clOrdID;
-	std::cout << " status=" << Metal::Translator::field(ordStatus);
-	std::cout << " orderID=" << orderID;
-	std::cout << " execID=" << execID;
-	std::cout << " execType=" << execType;
-	std::cout << " symbol=" << symbol;
-	std::cout << " side=" << side;
-	std::cout << " leavesQty=" << leavesQty;
-	std::cout << " cumQty=" << cumQty;
-
+	// mimic prompt
 	std::cout << "\n> " << std::flush;
 }
 
