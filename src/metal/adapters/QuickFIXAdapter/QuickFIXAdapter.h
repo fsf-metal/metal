@@ -11,12 +11,20 @@ class QuickFIXAdapter : public TradingAdapter {
 	public:
 		QuickFIXAdapter();
 
-		// messaging
+		//----------
+		// Messaging
+		//----------
+
+		/**
+		 * We override this method to leverage QuickFIX sending capacity
+		 */
 		void send( const NewOrderSingle &nos);
-		void sendLogon();
+
 		virtual void recv( const ExecutionReport &er);
 
+		//-----------
 		// life cycle
+		//-----------
 		void start();
 		void stop();
 

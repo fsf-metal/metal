@@ -4,9 +4,6 @@
 namespace Metal {
 namespace LSE {
 
-Logon::~Logon()
-{
-}
 
 } // namespace LSE
 } // namespace Metal

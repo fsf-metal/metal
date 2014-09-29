@@ -28,6 +28,12 @@ class MappingException : public MetalException {
 public:
 	MappingException(const std::string& message) : MetalException(message) {};
 };
+
+class MissingImplementationException : public MetalException {
+public:
+	MissingImplementationException(const std::string& message) : MetalException(message) {};
+};
+
 class SendMessageException : public MetalException {
 public:
 	SendMessageException(const std::string& message) : MetalException(message) {};

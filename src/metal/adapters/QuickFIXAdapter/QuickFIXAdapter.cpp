@@ -147,10 +147,6 @@ void QuickFIXAdapter::benchmark( const std::vector<OrderCancelRequest> &allCance
 	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
 }
 
-void QuickFIXAdapter::sendLogon() {
-// we do not provide custom logon because MyApplication takes care of everything
-}
-
 /**
  * Tranform incomming NewOrderSingle into QuickFIX message and send it
  */

@@ -9,12 +9,13 @@ class Logon
 {
 public:
 	Logon(std::string userNameParam, std::string passwordParam, std::string newPasswordParam) : userName(userNameParam), password(passwordParam), newPassword(newPasswordParam){};
-	~Logon();
+	~Logon(){};
 
-public:
 	std::string userName;
 	std::string password;
 	std::string newPassword;
+
+protected:
 
 };
 

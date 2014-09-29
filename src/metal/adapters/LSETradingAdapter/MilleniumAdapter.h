@@ -12,8 +12,11 @@ class MilleniumAdapter : public TradingAdapter {
 	public:
 		MilleniumAdapter();
 
-		// messaging
-		void send( const NewOrderSingle &nos);
+		/**
+		 * @see TradingAdapter#encode( const NewOrderSingle&, Message&)
+		 */
+		void encode( const NewOrderSingle& nos, Message &msg);
+
 		virtual void recv( const ExecutionReport &er);
 
 		// life cycle

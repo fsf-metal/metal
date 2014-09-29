@@ -15,6 +15,7 @@ class TradingAdapter : public Adapter {
 	public:
 		/**
 		 * @param name Whatever should be used to identify this adapter.
+		 * @param uuid a unique identifier. Check out http://www.famkruithof.net/uuid/uuidgen to create your own
 		 * Subclasses will perform mapping, encoding then write to the active session
 		 */
 		TradingAdapter( const std::string& name, const std::string& uuid);
@@ -28,7 +29,7 @@ class TradingAdapter : public Adapter {
 
 		/**
 		 * This function should be invoked to initiate physical connection<br>
-		 * It will create a new Thread for incomming messages
+		 * It will create a new Thread for incoming messages
 		 */
 		void start();
 
@@ -45,15 +46,24 @@ class TradingAdapter : public Adapter {
 
 		/**
 		 * This method will be called by users to send new orders<br>
-		 * Subclasses will perform mapping, encoding then write to the active session<br>
+		 * It will map and encode the message using @see encode(NewOrderSingle) then send it using send(Message&)<br>
+		 * You should override send() to leverage your own sending mechanism
 		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
 		 */
-		virtual void send( const NewOrderSingle &) = 0;
+		virtual void send( const NewOrderSingle &);
+		/**
+		 * Performs full conversion (mapping + encoding) on NewOrderSingle
+		 * @param nos order message to be encoding
+		 * @param msg resulting binary message
+		 */
+		virtual void encode( const NewOrderSingle &nos, Message &msg);
 
 		/**
-		* This pure virtual method should be implemented in each adapter.
+		* This method should be overriden by subclasses<br>
+		* We do not make it pure virtual to reduce constraints
+		* @param msg Where encoded Logon Message will be stored
 		*/
-		virtual void sendLogon() = 0;
+		virtual void encodeLogon( Message &msg);
 
 		/**
 		 * This method will invoked upon receiving an execution report<br>

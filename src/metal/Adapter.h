@@ -7,7 +7,7 @@ namespace Metal {
 class Adapter {
 	public:
 		/**
-		 * @param: uuid a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
+		 * @param uuid a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
 		 */
 		Adapter( const std::string& nameParam, const std::string& uuidParam):name( nameParam),uuid( uuidParam){};
 

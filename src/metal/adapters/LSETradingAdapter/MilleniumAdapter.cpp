@@ -88,8 +88,10 @@ void MilleniumAdapter::recv(const ExecutionReport &er) {
 	std::cout << "LSETradingAdapter: Execution Report received but not processed" << std::endl;
 }
 
-void MilleniumAdapter::send( const NewOrderSingle& nos) {
-	std::cout << "LSETradingAdapter: Send Order received but not implemented" << std::endl;
+void MilleniumAdapter::encode( const NewOrderSingle& nos, Message &msg) {
+	NewOrder no;
+	MilleniumMapper::map( nos, no);
+	MilleniumCodec::encode( no, msg);
 }
 
 

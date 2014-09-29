@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+
 #include <netlink/socket.h>
 
 #include "TradingAdapter.h"
@@ -17,11 +18,6 @@ TradingAdapter::~TradingAdapter() {
 	closeSocket();
 };
 
-void TradingAdapter::setRemoteHost(const std::string & hostName, unsigned int portNumber) {
-	this->remoteHost = hostName;
-	this->remotePort = portNumber;
-}
-
 void TradingAdapter::closeSocket( int delayMillis) {
 	if (this->socket != NULL) {
 		// should we wait?
@@ -35,8 +31,21 @@ void TradingAdapter::closeSocket( int delayMillis) {
 	}
 }
 
+/**
+ * This is a placeholder because bsubclasses have the choice between implementing encode() or send()
+ */
+void TradingAdapter::encode( const NewOrderSingle& nos, Message & msg) {
+	throw MissingImplementationException( "encode NewOrderSingle");
+}
+
+void TradingAdapter::encodeLogon( Message &msg) {
+	throw MissingImplementationException( "encodeLogon is invoked nut not implemented");
+}
+
 void TradingAdapter::onPhysicalConnection() {
-	this->sendLogon();
+	Message logon;
+	this->encodeLogon( logon);
+	this->send( logon);
 }
 
 void TradingAdapter::send( Message &msg) {
@@ -47,6 +56,17 @@ void TradingAdapter::send( Message &msg) {
 		SendMessageException sme( e.what());
 		throw sme;
 	}
+}
+
+void TradingAdapter::send( const NewOrderSingle& nos) {
+	Message msg;
+	encode( nos, msg);
+	send( msg);
+}
+
+void TradingAdapter::setRemoteHost(const std::string & hostName, unsigned int portNumber) {
+	this->remoteHost = hostName;
+	this->remotePort = portNumber;
 }
 
 void TradingAdapter::start() {
