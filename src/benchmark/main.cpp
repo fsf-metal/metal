@@ -91,11 +91,12 @@ int main( int argc, char* argv[]) {
 	unsigned int selection;
 	while( true) {
 		cout << SEP1 << endl;
-		cout << "Please choose which adapter should be benchmarked: [0-" << to_string(allAdapters.size()) << "]" << endl;
+		cout << "Please choose which adapter should be benchmarked:" << endl;
 		cout << setw(4) << 0 << ". All" << endl;
 		for (unsigned int index = 0; index < allAdapters.size(); ++index) {
 			cout << setw(4) << to_string(index + 1) << ". " << (allAdapters.at(index))->getName() << endl;
 		}
+		cout << "[0-" << to_string(allAdapters.size()) << "]: " << flush;
 		cin >> selection;
 		if (selection <= allAdapters.size()) break;
 

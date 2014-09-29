@@ -8,6 +8,7 @@
 #include "Adapter.h"
 #include "metal.h"
 #include "Mapper.h"
+#include "Message.h"
 
 namespace Metal {
 class TradingAdapter : public Adapter {
@@ -32,6 +33,17 @@ class TradingAdapter : public Adapter {
 		void start();
 
 		/**
+		* This method will close logical and physical connection<br>
+		* All created threads will be terminated
+		*/
+		void stop();
+
+		/**
+		 * This methods sends an message in native format.
+		 */
+		void send( Message& msg);
+
+		/**
 		 * This method will be called by users to send new orders<br>
 		 * Subclasses will perform mapping, encoding then write to the active session<br>
 		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
@@ -39,11 +51,22 @@ class TradingAdapter : public Adapter {
 		virtual void send( const NewOrderSingle &) = 0;
 
 		/**
+		* This pure virtual method should be implemented in each adapter.
+		*/
+		virtual void sendLogon() = 0;
+
+		/**
 		 * This method will invoked upon receiving an execution report<br>
 		 * Subclasses will perform mapping, encoding then write to the active session<br>
 		 * @param ExecutionReport incomming execution report
 		 */
 		virtual void recv( const ExecutionReport &er) = 0;
+
+		/**
+		 * This method is invoked once the socket is connected<br>
+		 * The default behavior is to send a Logon message. Which you may want to override.
+		 */
+		virtual void onPhysicalConnection();
 
 		/**
 		 * The purpose is to measure Mapping and Encoding speed for NewOrderSingle<br>
@@ -73,6 +96,12 @@ class TradingAdapter : public Adapter {
 		std::string remoteHost;
 		unsigned int remotePort;
 		NL::Socket *socket;
+
+		/**
+		 * This will terminate the physical connection if need be
+		 * @param delay in milliseconds if we should wait before closing
+		 */
+		void closeSocket( int delay = 0);
 };
 
 } // namespace Metal

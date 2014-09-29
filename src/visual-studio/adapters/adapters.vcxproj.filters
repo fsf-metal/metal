@@ -24,11 +24,11 @@
     <ClInclude Include="..\..\metal\Codec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\metal\adapters\LSETradingAdapter\Logon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\metal\MappingException.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\metal\TradingAdapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -61,6 +61,9 @@
     </ClCompile>
     <ClCompile Include="..\..\metal\Codec.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp">
+      <Filter>Source Files\LSETradingAdapter</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

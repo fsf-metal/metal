@@ -1,5 +1,5 @@
 #include <quickfix/FieldNumbers.h>
-#include <metal/MappingException.h>
+#include <metal/MetalExceptions.h>
 #include "MilleniumMapper.h"
 #include "LSEValues.h"
 

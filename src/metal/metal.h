@@ -10,6 +10,11 @@ namespace Metal {
 class NewOrderSingle : public FIX50SP2::NewOrderSingle {};
 class OrderCancelRequest : public FIX50SP2::OrderCancelRequest {};
 typedef FIX50SP2::ExecutionReport ExecutionReport;
+
+/**
+ * This is the base for all logon messages
+ */
+class Logon {};
 }
 
 #endif // __METAL_H

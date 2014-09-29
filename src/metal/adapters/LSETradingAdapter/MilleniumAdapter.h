@@ -20,6 +20,9 @@ class MilleniumAdapter : public TradingAdapter {
 		void start();
 		void stop();
 
+		// Send a logon message
+		void sendLogon();
+
 		/**
 		 * @see TradingAdapter#benchmark
 		 */
@@ -36,6 +39,9 @@ class MilleniumAdapter : public TradingAdapter {
 
 		virtual ~MilleniumAdapter(){};
 
+	protected:
+		std::string userName;
+		std::string password;
 };
 
 } // LSE

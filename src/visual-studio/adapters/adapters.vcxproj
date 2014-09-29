@@ -83,9 +83,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\metal\adapters\LSETradingAdapter\Logon.h" />
     <ClInclude Include="..\..\metal\Codec.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumCodec.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumMapper.cpp" />
@@ -93,7 +95,6 @@
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\OrderCancelRequest.cpp" />
     <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp" />
     <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp" />
-    <ClCompile Include="..\..\metal\MappingException.cpp" />
     <ClCompile Include="..\..\metal\Message.cpp" />
     <ClCompile Include="..\..\metal\TradingAdapter.cpp" />
     <ClCompile Include="..\..\metal\Translator.cpp" />

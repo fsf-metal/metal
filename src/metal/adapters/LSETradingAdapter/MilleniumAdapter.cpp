@@ -9,6 +9,7 @@
 #include "MilleniumAdapter.h"
 #include "MilleniumMapper.h"
 #include "MilleniumCodec.h"
+#include "Logon.h"
 
 namespace Metal {
 namespace LSE {
@@ -91,6 +92,17 @@ void MilleniumAdapter::send( const NewOrderSingle& nos) {
 	std::cout << "LSETradingAdapter: Send Order received but not implemented" << std::endl;
 }
 
+
+void MilleniumAdapter::sendLogon() {
+	// TODO remove
+	std::cout << "Millenium Adapter: Sending logon" << std::endl;
+	Message msg;
+	Logon logon( this->userName, this->password, "");
+	MilleniumCodec::encode(logon, msg);
+	TradingAdapter::send(msg);
+	// TODO remove
+	std::cout << "Millenium Adapter: Logon sent" << std::endl;
+}
 
 void MilleniumAdapter::start() {
 

@@ -31,6 +31,7 @@ namespace LSE {
 	typedef int8_t OrderSubType;
 	typedef int8_t Anonymity;
 	typedef int8_t PassiveOnlyOrder;
+	typedef int8_t MessageVersion;
 
 } // namespace LSE
 } // namespace Metal

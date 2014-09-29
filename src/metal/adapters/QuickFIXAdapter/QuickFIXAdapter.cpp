@@ -29,16 +29,16 @@ class MyApplication: public Application,public MessageCracker {
 		void onCreate( const SessionID& ) {};
 		void onLogon( const SessionID& ){};
 		void onLogout( const SessionID& ) {};
-		void toAdmin( Message&, const SessionID& ) {
+		void toAdmin( FIX::Message&, const SessionID& ) {
 		};
-		void toApp( Message&, const SessionID& )
+		void toApp( FIX::Message&, const SessionID& )
 			throw( DoNotSend ) {
 			};
-		void fromAdmin( const Message&, const SessionID& )
+		void fromAdmin( const FIX::Message&, const SessionID& )
 			throw( FieldNotFound, IncorrectDataFormat, IncorrectTagValue, RejectLogon ) {
 			};
 
-		void fromApp( const Message& message, const SessionID& sessionID)
+		void fromApp( const FIX::Message& message, const SessionID& sessionID)
 			throw( FieldNotFound, IncorrectDataFormat, IncorrectTagValue, UnsupportedMessageType ) {
 				// Header header = message.getHeader();
 //				std::cout << "Generic Message received" << std::endl;
@@ -145,6 +145,10 @@ void QuickFIXAdapter::benchmark( const std::vector<OrderCancelRequest> &allCance
 
 	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0);
 	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
+}
+
+void QuickFIXAdapter::sendLogon() {
+// we do not provide custom logon because MyApplication takes care of everything
 }
 
 /**

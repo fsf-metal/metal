@@ -20,6 +20,14 @@ MilleniumCodec::MilleniumCodec() {
 MilleniumCodec::~MilleniumCodec() {
 }
 
+void MilleniumCodec::encode(const Logon &logon, Metal::Message &msg) {
+	encodeHeader( msg, 80, MessageType_LOGON);
+	Codec::encode( logon.userName, msg, 4, 25);
+	Codec::encode( logon.password, msg, 29, 25);
+	Codec::encode( logon.newPassword, msg, 54, 25);
+	Codec::encode( (MessageVersion)1, msg, 79);
+}
+
 void MilleniumCodec::encode( const Metal::LSE::OrderCancelRequest &ocr, Metal::Message &msg) {
 	encodeHeader( msg, 73, MessageType_ORDER_CANCEL_REQUEST);
 	Codec::encode( ocr.clientOrderID, msg, 4, 20);
