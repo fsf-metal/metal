@@ -1,4 +1,5 @@
 #include "Display.h"
+#include <sstream>
 
 #ifdef _WIN32
 #	include <Windows.h>
@@ -17,6 +18,17 @@ Display::Display()
 
 Display::~Display()
 {
+}
+
+string Display::formatWithCommas(long value) {
+	string numWithCommas = to_string(value);
+	int insertPosition = numWithCommas.length() - 3;
+	while (insertPosition > 0) {
+	    numWithCommas.insert(insertPosition, ",");
+	    insertPosition-=3;
+	}
+
+	return numWithCommas;
 }
 
 #ifdef _WIN32

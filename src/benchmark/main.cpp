@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <chrono>
+#include <algorithm>
 
 #include <metal/metal.h>
 #include <metal/Mapper.h>
@@ -115,7 +116,7 @@ int main( int argc, char* argv[]) {
 	}
 
 	for( vector<TradingAdapter*>::iterator iter = selectedAdapters.begin(); iter != selectedAdapters.end(); ++iter) {
-		cout << SEP1 << endl;
+		cout << endl << SEP1 << endl;
 		cout << "Benchmarking : " << (*iter)->getName() << " " << flush;
 
 		int index = 2 * LOOPS;
@@ -172,20 +173,22 @@ void displayResult( string title, chrono::milliseconds durationMapping, chrono::
 	string title3 = "Encoding";
 	string title4 = "Combined";
 
-	// cout << "displayResult durationMapping=" << to_string( durationMapping.count()) << " durationEncoding=" << to_string( durationEncoding.count()) << endl;
-
-	cout << SEP2 << endl;
-	cout << title << " : " << title2 << " : " << title3 << " : " << title4 << endl;
-
 	int width1 = title.length();
 	int width2 = title2.length();
 	int width3 = title3.length();
 	int width4 = title4.length();
 
-	string speedMapping = durationMapping.count() == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000L / durationMapping.count());
-	string speedEncoding = durationEncoding.count() == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000L / durationEncoding.count());
+	string speedMapping = durationMapping.count() == 0 ? "n/a" : Display::formatWithCommas((long)(LOOPS * BATCH_SIZE * 1000L / durationMapping.count()));
+	string speedEncoding = durationEncoding.count() == 0 ? "n/a" : Display::formatWithCommas((long)(LOOPS * BATCH_SIZE * 1000L / durationEncoding.count()));
 	long totalDuration = (long)( durationMapping.count() + durationEncoding.count());
-	string speedTotal = totalDuration == 0 ? "n/a" : to_string(LOOPS * BATCH_SIZE * 1000L / totalDuration);
+	string speedTotal = totalDuration == 0 ? "n/a" : Display::formatWithCommas(LOOPS * BATCH_SIZE * 1000L / totalDuration);
+
+	width1 = max( width1, (int)speedMapping.length());
+	width2 = max( width2, (int)speedEncoding.length());
+	width3 = max( width3, (int)speedTotal.length());
+
+	cout << SEP2 << endl;
+	cout << setw(width1) << title << " : " << setw(width2) << title2 << " : " << setw(width3) << title3 << " : " << setw(width4) << title4 << endl;
 
 	cout << setw(width1) << "Messages/sec" << " : ";
 	cout << setw(width2) << speedMapping << " : ";
@@ -193,8 +196,8 @@ void displayResult( string title, chrono::milliseconds durationMapping, chrono::
 	cout << setw(width4) << speedTotal;
 	cout << endl;
 	cout << setw(width1) << "Nanos/Msg" << " : ";
-	cout << setw(width2) << to_string((long)(((double)durationMapping.count() * 1000000.) / (double)(LOOPS * BATCH_SIZE))) << " : ";
-	cout << setw(width3) << to_string((long)(((double)durationEncoding.count() * 1000000.) / (double)(LOOPS * BATCH_SIZE))) << " : ";
-	cout << setw(width4) << to_string( (long)( ( ( double)totalDuration * 1000000.) / ( double)(LOOPS * BATCH_SIZE)));
+	cout << setw(width2) << Display::formatWithCommas((long)(((double)durationMapping.count() * 1000000.) / (double)(LOOPS * BATCH_SIZE))) << " : ";
+	cout << setw(width3) << Display::formatWithCommas((long)(((double)durationEncoding.count() * 1000000.) / (double)(LOOPS * BATCH_SIZE))) << " : ";
+	cout << setw(width4) << Display::formatWithCommas( (long)( ( ( double)totalDuration * 1000000.) / ( double)(LOOPS * BATCH_SIZE)));
 	cout << endl;
 }
