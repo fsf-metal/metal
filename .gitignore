@@ -6,3 +6,4 @@ logs/
 .sconsign.dblite
 *.suo
 *.filters
+src/visual-studio/lib/quickfix.lib

@@ -183,9 +183,9 @@ void displayResult( string title, chrono::milliseconds durationMapping, chrono::
 	long totalDuration = (long)( durationMapping.count() + durationEncoding.count());
 	string speedTotal = totalDuration == 0 ? "n/a" : Display::formatWithCommas(LOOPS * BATCH_SIZE * 1000L / totalDuration);
 
-	width1 = max( width1, (int)speedMapping.length());
-	width2 = max( width2, (int)speedEncoding.length());
-	width3 = max( width3, (int)speedTotal.length());
+	width2 = max( width2, (int)speedMapping.length());
+	width3 = max( width3, (int)speedEncoding.length());
+	width4 = max( width4, (int)speedTotal.length());
 
 	cout << SEP2 << endl;
 	cout << setw(width1) << title << " : " << setw(width2) << title2 << " : " << setw(width3) << title3 << " : " << setw(width4) << title4 << endl;
