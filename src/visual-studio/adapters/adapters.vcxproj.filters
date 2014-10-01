@@ -19,6 +19,9 @@
     <Filter Include="Source Files\QuickFIXAdapter">
       <UniqueIdentifier>{2e26deb2-2d2a-4823-8dc9-133d05ebec26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Bootstrap">
+      <UniqueIdentifier>{b941d6ec-226d-41c4-a240-e2d0944f55b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\metal\Codec.h">
@@ -64,6 +67,15 @@
     </ClCompile>
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp">
       <Filter>Source Files\LSETradingAdapter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\metal\adapters\Bootstrap\__namespace__Adapter.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\metal\adapters\Bootstrap\__namespace__Codec.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\metal\adapters\Bootstrap\__namespace__Mapper.cpp">
+      <Filter>Source Files\Bootstrap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

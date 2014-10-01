@@ -87,6 +87,9 @@
     <ClInclude Include="..\..\metal\Codec.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\metal\adapters\Bootstrap\__namespace__Adapter.cpp" />
+    <ClCompile Include="..\..\metal\adapters\Bootstrap\__namespace__Codec.cpp" />
+    <ClCompile Include="..\..\metal\adapters\Bootstrap\__namespace__Mapper.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumCodec.cpp" />
