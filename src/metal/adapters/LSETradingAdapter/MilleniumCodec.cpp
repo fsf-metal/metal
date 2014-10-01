@@ -25,7 +25,7 @@ void MilleniumCodec::encode(const Logon &logon, Metal::Message &msg) {
 	Codec::encode( logon.userName, msg, 4, 25);
 	Codec::encode( logon.password, msg, 29, 25);
 	Codec::encode( logon.newPassword, msg, 54, 25);
-	Codec::encode( (MessageVersion)1, msg, 79);
+	encode( (MessageVersion)1, msg, 79);
 }
 
 void MilleniumCodec::encode( const Metal::LSE::OrderCancelRequest &ocr, Metal::Message &msg) {

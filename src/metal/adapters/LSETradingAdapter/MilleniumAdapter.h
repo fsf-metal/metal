@@ -4,6 +4,7 @@
 #include <metal/TradingAdapter.h>
 #include "NewOrder.h"
 #include "OrderCancelRequest.h"
+#include "MilleniumCodec.h"
 
 namespace Metal {
 namespace LSE {
@@ -43,6 +44,7 @@ class MilleniumAdapter : public TradingAdapter {
 		virtual ~MilleniumAdapter(){};
 
 	protected:
+		MilleniumCodec codec;
 		std::string userName;
 		std::string password;
 };

@@ -37,7 +37,7 @@ void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
 	}
 	auto t1 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		MilleniumCodec::encode( *mappedNewOrders.at( index), msg);
+		codec.encode( *mappedNewOrders.at( index), msg);
 	}
 	auto t2 = std::chrono::system_clock::now();
 
@@ -69,7 +69,7 @@ void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &
 	}
 	auto t1 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		MilleniumCodec::encode( *mappedCancels.at( index), msg);
+		this->codec.encode( *mappedCancels.at( index), msg);
 	}
 	auto t2 = std::chrono::system_clock::now();
 
@@ -91,7 +91,7 @@ void MilleniumAdapter::recv(const ExecutionReport &er) {
 void MilleniumAdapter::encode( const NewOrderSingle& nos, Message &msg) {
 	NewOrder no;
 	MilleniumMapper::map( nos, no);
-	MilleniumCodec::encode( no, msg);
+	this->codec.encode( no, msg);
 }
 
 
@@ -100,7 +100,7 @@ void MilleniumAdapter::sendLogon() {
 	std::cout << "Millenium Adapter: Sending logon" << std::endl;
 	Message msg;
 	Logon logon( this->userName, this->password, "");
-	MilleniumCodec::encode(logon, msg);
+	codec.encode(logon, msg);
 	TradingAdapter::send(msg);
 	// TODO remove
 	std::cout << "Millenium Adapter: Logon sent" << std::endl;

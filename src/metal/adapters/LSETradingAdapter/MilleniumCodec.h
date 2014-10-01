@@ -30,31 +30,31 @@ public:
 	 * @param ocr The Order Cancel Request representation
 	 * @param msg The destination message
 	 */
-	static void encode( const OrderCancelRequest & ocr, Message &msg);
+	void encode( const OrderCancelRequest & ocr, Message &msg);
 
 	/**
 	 * Encode a new order
 	 * @param no The New Order representation
 	 * @param msg The destination message
 	 */
-	static void encode(const NewOrder &no, Message &msg);
+	void encode(const NewOrder &no, Message &msg);
 
 	/**
 	 * Encode a logon
 	 * @param logon Logon representation. Must be constructed with all values
 	 * @param msg The destination message
 	 */
-	static void encode(const Logon &logon, Message &msg);
+	void encode(const Logon &logon, Message &msg);
 
 	//------------------------------------------------------------------------------------
 	// Fields
 	// We are relying on Codec:: little endian methods, just wrapping them for ease of use
 	//------------------------------------------------------------------------------------
-	inline static void encode(const int16_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
-	inline static void encode(const int32_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
-	inline static void encode(const int64_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
+	inline void encode(const int16_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
+	inline void encode(const int32_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
+	inline void encode(const int64_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
 
-	inline static void encodeHeader( Message &msg, int16_t length, char type);
+	inline void encodeHeader( Message &msg, int16_t length, char type);
 };
 
 } /* namespace LSE */

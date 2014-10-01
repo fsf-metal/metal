@@ -32,7 +32,7 @@ public:
 	 * @param seqNum the current sequence number
 	 * @param msg The destination message
 	 */
-	static void encode( const OrderCancel & oc, SeqNum seqNum, Message &msg);
+	void encode( const OrderCancel & oc, SeqNum seqNum, Message &msg);
 
 	/**
 	 * Encodes a new order
@@ -40,7 +40,7 @@ public:
 	 * @param seqNum the current sequence number
 	 * @param msg The destination message
 	 */
-	static void encode(const OrderAdd &oa, SeqNum seqNum, Message &msg);
+	void encode(const OrderAdd &oa, SeqNum seqNum, Message &msg);
 
 	/**
 	 * Encodes a login
@@ -48,15 +48,15 @@ public:
 	 * @param seqNum The sequence number
 	 * @param msg The destination message
 	 */
-	static void encode(const Login &login, SeqNum seqNum, Message &msg);
+	void encode(const Login &login, SeqNum seqNum, Message &msg);
 
 	//------------------------------------------------------------------------------------
 	// Fields
 	// We are relying on Codec:: little endian methods, just wrapping them for ease of use
 	//------------------------------------------------------------------------------------
-	inline static void encode(const uint16_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
-	inline static void encode(const uint32_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
-	inline static void encode(const uint64_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
+	inline void encode(const uint16_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
+	inline void encode(const uint32_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
+	inline void encode(const uint64_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
 
 	/**
 	 * Encode Aquis ATP Header
@@ -65,7 +65,7 @@ public:
 	 * @param type Message Type
 	 * @param msg the output message
 	 */
-	inline static void encodeHeader( MsgType type, uint16_t length, SeqNum seqNum, Message &msg);
+	inline void encodeHeader( MsgType type, uint16_t length, SeqNum seqNum, Message &msg);
 };
 
 } /* namespace Aquis */
