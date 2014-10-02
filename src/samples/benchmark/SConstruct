@@ -1,9 +1,9 @@
 #Object('main.cpp')
 src_files = 'main.cpp Display.cpp'
 lib_files = 'AdapterQuickFIX AdapterLSETrading Metal NetLink quickfix  pthread xml2 z'
-include_path = '../ ../quickfix/include ../netLink/include'
-output_file = 'bench'
-lib_path = '../../lib'
+include_path = '../../ ../../quickfix/include ../../netLink/include'
+output_file = 'benchmark'
+lib_path = '../../../lib'
 #output_file = 'bronze'
 cpp_flags='-Wall -std=c++11 -fexceptions -O3'
 
