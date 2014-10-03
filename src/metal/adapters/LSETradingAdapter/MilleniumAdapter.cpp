@@ -5,58 +5,106 @@
  *      Author: jc
  */
 
+#include <chrono>
 #include "MilleniumAdapter.h"
 #include "MilleniumMapper.h"
-#include "MilleniumEncoder.h"
+#include "MilleniumCodec.h"
+#include "Logon.h"
 
 namespace Metal {
 namespace LSE {
 
-MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading") {
+MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading", "acba8ab0-4564-11e4-916c-0800200c9a66") {
 
 }
 
-void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders, bool mappingOnly) {
-	NewOrder newOrder;
-
-	if( mappingOnly) {
-		for( std::vector<NewOrderSingle>::const_iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
-			MilleniumMapper::map( *iter, newOrder);
-			// TODO add encoding
-		}
-	} else {
-		for( std::vector<NewOrderSingle>::const_iterator iter = allOrders.begin(); iter != allOrders.end(); ++iter) {
-			MilleniumMapper::map( *iter, newOrder);
-			// TODO add encoding
-		}
-	}
-
-}
-
-void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &allCancels, bool mappingOnly) {
-	Metal::LSE::OrderCancelRequest ocr;
+void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
+		std::chrono::milliseconds &mappingDuration,
+		std::chrono::milliseconds &encodingDuration) {
 	Metal::Message msg;
 
-	if( mappingOnly) {
-		for( std::vector<Metal::OrderCancelRequest>::const_iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
-			MilleniumMapper::map( *iter, ocr);
-		}
-	} else { // perform mapping and encoding
-		for( std::vector<Metal::OrderCancelRequest>::const_iterator iter = allCancels.begin(); iter != allCancels.end(); ++iter) {
-			MilleniumMapper::map( *iter, ocr);
-			MilleniumEncoder::encode( ocr, msg);
-		}
+	std::vector<NewOrder *> mappedNewOrders;
+	int size = allOrders.size();
+	mappedNewOrders.reserve( size);
+
+	for( int index = 0; index < size; ++index) {
+        mappedNewOrders.push_back( new NewOrder());
 	}
+
+	auto t0 = std::chrono::system_clock::now();
+	for( int index = 0; index < size; ++index) {
+		MilleniumMapper::map( allOrders.at( index), *mappedNewOrders.at( index));
+	}
+	auto t1 = std::chrono::system_clock::now();
+	for( int index = 0; index < size; ++index) {
+		codec.encode( *mappedNewOrders.at( index), msg);
+	}
+	auto t2 = std::chrono::system_clock::now();
+
+	// free allocated memory
+	while (!mappedNewOrders.empty()) {
+		delete mappedNewOrders.back();
+		mappedNewOrders.pop_back();
+	}
+
+	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0);
+	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
+}
+
+void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &allCancels,
+		std::chrono::milliseconds &mappingDuration,
+		std::chrono::milliseconds &encodingDuration) {
+	Metal::Message msg;
+
+	std::vector<OrderCancelRequest *> mappedCancels;
+	int size = allCancels.size();
+	mappedCancels.reserve( size);
+
+	for( int index = 0; index < size; ++index) {
+        mappedCancels.push_back( new OrderCancelRequest());
+	}
+	auto t0 = std::chrono::system_clock::now();
+	for( int index = 0; index < size; ++index) {
+		MilleniumMapper::map( allCancels.at( index), *mappedCancels.at( index));
+	}
+	auto t1 = std::chrono::system_clock::now();
+	for( int index = 0; index < size; ++index) {
+		this->codec.encode( *mappedCancels.at( index), msg);
+	}
+	auto t2 = std::chrono::system_clock::now();
+
+	// free allocated memory
+	while (!mappedCancels.empty()) {
+		delete mappedCancels.back();
+		mappedCancels.pop_back();
+	}
+
+	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t1-t0);
+	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2-t1);
+
 }
 
 void MilleniumAdapter::recv(const ExecutionReport &er) {
 	std::cout << "LSETradingAdapter: Execution Report received but not processed" << std::endl;
 }
 
-void MilleniumAdapter::send( const NewOrderSingle& nos) {
-	std::cout << "LSETradingAdapter: Send Order received but not implemented" << std::endl;
+void MilleniumAdapter::encode( const NewOrderSingle& nos, Message &msg) {
+	NewOrder no;
+	MilleniumMapper::map( nos, no);
+	this->codec.encode( no, msg);
 }
 
+
+void MilleniumAdapter::sendLogon() {
+	// TODO remove
+	std::cout << "Millenium Adapter: Sending logon" << std::endl;
+	Message msg;
+	Logon logon( this->userName, this->password, "");
+	codec.encode(logon, msg);
+	TradingAdapter::send(msg);
+	// TODO remove
+	std::cout << "Millenium Adapter: Logon sent" << std::endl;
+}
 
 void MilleniumAdapter::start() {
 

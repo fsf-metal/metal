@@ -23,14 +23,21 @@ public:
 	std::string clientOrderID;
 	std::string traderID;
 	std::string account;
-	char clearingAccount;
-	std::string instrumentID;
-	char orderType;
-	char timeInForce;
-	long price;
+	ClearingAcount clearingAccount;
+	InstrumentID instrumentID;
+	OrderType orderType;
+	TimeInForce timeInForce;
+	ExpireDateTime expireDateTime;
 	Side side;
-	Quantity quantity;
-	Quantity displayQty;
+	OrderQty orderQty;
+	DisplayQty displayQty;
+	Price limitPrice;
+	Capacity capacity;
+	AutoCancel autoCancel;
+	OrderSubType orderSubType;
+	Anonymity anonymity;
+	Price stoppedPrice;
+	PassiveOnlyOrder passiveOnlyOrder;
 };
 
 } /* namespace LSE */

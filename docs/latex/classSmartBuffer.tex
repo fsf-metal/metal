@@ -1,0 +1,200 @@
+\hypertarget{classSmartBuffer}{}\section{Smart\+Buffer Class Reference}
+\label{classSmartBuffer}\index{Smart\+Buffer@{Smart\+Buffer}}
+
+
+{\ttfamily \#include $<$netlink/smart\+\_\+buffer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSmartBuffer_ae7b059bbd714dcda7386b11c7e00ee0d}{Smart\+Buffer} (size\+\_\+t alloc\+Size=D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+R\+T\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E, double realloc\+Ratio=D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+R\+T\+B\+U\+F\+F\+E\+R\+\_\+\+R\+E\+A\+L\+L\+O\+C\+\_\+\+R\+A\+T\+I\+O)
+\item 
+\hyperlink{classSmartBuffer_a9058e1103bf628a075415390b02bffc2}{Smart\+Buffer} (\hyperlink{classSmartBuffer}{Smart\+Buffer} \&s)
+\item 
+\hyperlink{classSmartBuffer_a4ee71a48ec838b2b5ef43a32c5de8126}{$\sim$\+Smart\+Buffer} ()
+\item 
+const void $\ast$ \hyperlink{classSmartBuffer_afc1dc164bd7107b515b2d0642fdc5d43}{operator$\ast$} () const 
+\item 
+const char $\ast$ \hyperlink{classSmartBuffer_a8e17ba4a6f2f8dfdbe368469201fc4ef}{operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t index) const 
+\item 
+const void $\ast$ \hyperlink{classSmartBuffer_a4a65be9a7a1e3c1914ffccf35a35f3f1}{buffer} () const 
+\item 
+size\+\_\+t \hyperlink{classSmartBuffer_aa2246cfac251b00cbaeb3763fa1aa11e}{size} () const 
+\item 
+void \hyperlink{classSmartBuffer_abb25b6f9ab458ee2eadde5f42c377f4e}{read} (\hyperlink{classSocket}{Socket} $\ast$socket)
+\item 
+void \hyperlink{classSmartBuffer_a6b1e284efe0d8c04bd964016a83340b3}{clear} ()
+\item 
+\hyperlink{classSmartBuffer}{Smart\+Buffer} \& \hyperlink{classSmartBuffer_aad00b9914962b562c6d59e2391b9deb3}{operator=} (\hyperlink{classSmartBuffer}{Smart\+Buffer} \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Smart Buffer Class
+
+Buffer class to retrieve data of unknown size easily from a \hyperlink{classSocket}{Socket} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSmartBuffer_ae7b059bbd714dcda7386b11c7e00ee0d}{}\index{Smart\+Buffer@{Smart\+Buffer}!Smart\+Buffer@{Smart\+Buffer}}
+\index{Smart\+Buffer@{Smart\+Buffer}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{Smart\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}Smart\+Buffer\+::\+Smart\+Buffer (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{alloc\+Size = {\ttfamily DEFAULT\+\_\+SMARTBUFFER\+\_\+SIZE}, }
+\item[{double}]{realloc\+Ratio = {\ttfamily DEFAULT\+\_\+SMARTBUFFER\+\_\+REALLOC\+\_\+RATIO}}
+\end{DoxyParamCaption}
+)}\label{classSmartBuffer_ae7b059bbd714dcda7386b11c7e00ee0d}
+\hyperlink{classSmartBuffer}{Smart\+Buffer} Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em alloc\+Size} & Size in bytes of the initial reserved memory. \\
+\hline
+{\em realloc\+Ratio} & Growing ratio for memory reallocs. For example 1.\+5 means that each time the buffer is out of memory it reserves the previous size 1.\+5 times (150\%).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+R\+R\+O\+R\+\_\+\+A\+L\+L\+O\+C \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSmartBuffer_a9058e1103bf628a075415390b02bffc2}{}\index{Smart\+Buffer@{Smart\+Buffer}!Smart\+Buffer@{Smart\+Buffer}}
+\index{Smart\+Buffer@{Smart\+Buffer}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{Smart\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}Smart\+Buffer\+::\+Smart\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf Smart\+Buffer} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classSmartBuffer_a9058e1103bf628a075415390b02bffc2}
+\hyperlink{classSmartBuffer}{Smart\+Buffer} Copy Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \hyperlink{classSmartBuffer}{Smart\+Buffer} source of data.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+R\+R\+O\+R\+\_\+\+A\+L\+L\+O\+C \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSmartBuffer_a4ee71a48ec838b2b5ef43a32c5de8126}{}\index{Smart\+Buffer@{Smart\+Buffer}!````~Smart\+Buffer@{$\sim$\+Smart\+Buffer}}
+\index{````~Smart\+Buffer@{$\sim$\+Smart\+Buffer}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{$\sim$\+Smart\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}Smart\+Buffer\+::$\sim$\+Smart\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSmartBuffer_a4ee71a48ec838b2b5ef43a32c5de8126}
+\hyperlink{classSmartBuffer}{Smart\+Buffer} Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSmartBuffer_a4a65be9a7a1e3c1914ffccf35a35f3f1}{}\index{Smart\+Buffer@{Smart\+Buffer}!buffer@{buffer}}
+\index{buffer@{buffer}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}const void $\ast$ Smart\+Buffer\+::buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSmartBuffer_a4a65be9a7a1e3c1914ffccf35a35f3f1}
+Returns the buffer data address. Same of \hyperlink{classSmartBuffer_afc1dc164bd7107b515b2d0642fdc5d43}{operator$\ast$()}
+
+\begin{DoxyReturn}{Returns}
+A pointer to data 
+\end{DoxyReturn}
+\hypertarget{classSmartBuffer_a6b1e284efe0d8c04bd964016a83340b3}{}\index{Smart\+Buffer@{Smart\+Buffer}!clear@{clear}}
+\index{clear@{clear}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Smart\+Buffer\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classSmartBuffer_a6b1e284efe0d8c04bd964016a83340b3}
+Clears the buffer.
+
+Resets the buffer erasing all its content. \hypertarget{classSmartBuffer_afc1dc164bd7107b515b2d0642fdc5d43}{}\index{Smart\+Buffer@{Smart\+Buffer}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}const void $\ast$ Smart\+Buffer\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSmartBuffer_afc1dc164bd7107b515b2d0642fdc5d43}
+Returns the buffer data address. Same of \hyperlink{classSmartBuffer_a4a65be9a7a1e3c1914ffccf35a35f3f1}{buffer()}.
+
+\begin{DoxyReturn}{Returns}
+A pointer to data 
+\end{DoxyReturn}
+\hypertarget{classSmartBuffer_aad00b9914962b562c6d59e2391b9deb3}{}\index{Smart\+Buffer@{Smart\+Buffer}!operator=@{operator=}}
+\index{operator=@{operator=}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Smart\+Buffer} \& Smart\+Buffer\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Smart\+Buffer} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classSmartBuffer_aad00b9914962b562c6d59e2391b9deb3}
+Copy Operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \hyperlink{classSmartBuffer}{Smart\+Buffer} source of data.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+R\+R\+O\+R\+\_\+\+A\+L\+L\+O\+C \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSmartBuffer_a8e17ba4a6f2f8dfdbe368469201fc4ef}{}\index{Smart\+Buffer@{Smart\+Buffer}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Smart\+Buffer\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSmartBuffer_a8e17ba4a6f2f8dfdbe368469201fc4ef}
+Returns the byte in position index of the buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position of the buffer we want to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Char with the content of the given position
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+G\+E \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSmartBuffer_abb25b6f9ab458ee2eadde5f42c377f4e}{}\index{Smart\+Buffer@{Smart\+Buffer}!read@{read}}
+\index{read@{read}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}void Smart\+Buffer\+::read (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket} $\ast$}]{socket}
+\end{DoxyParamCaption}
+)}\label{classSmartBuffer_abb25b6f9ab458ee2eadde5f42c377f4e}
+Inserts the data read from a socket in the buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & \hyperlink{classSocket}{Socket} to be used as source\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classException}{Exception}} & E\+R\+R\+O\+R\+\_\+\+A\+L\+L\+O\+C, E\+R\+R\+O\+R\+\_\+\+R\+E\+A\+D$\ast$ \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classSmartBuffer_aa2246cfac251b00cbaeb3763fa1aa11e}{}\index{Smart\+Buffer@{Smart\+Buffer}!size@{size}}
+\index{size@{size}!Smart\+Buffer@{Smart\+Buffer}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Smart\+Buffer\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classSmartBuffer_aa2246cfac251b00cbaeb3763fa1aa11e}
+Returns the amount of bytes of data stored in the buffer
+
+\begin{DoxyReturn}{Returns}
+Size of buffer data 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/net\+Link/include/netlink/smart\+\_\+buffer.\+h\item 
+/home/jc/metal/src/net\+Link/include/netlink/smart\+\_\+buffer.\+inline.\+h\item 
+/home/jc/metal/src/net\+Link/src/smart\+\_\+buffer.\+cc\end{DoxyCompactItemize}

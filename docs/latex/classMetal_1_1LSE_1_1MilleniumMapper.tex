@@ -1,0 +1,83 @@
+\hypertarget{classMetal_1_1LSE_1_1MilleniumMapper}{}\section{Metal\+:\+:L\+S\+E\+:\+:Millenium\+Mapper Class Reference}
+\label{classMetal_1_1LSE_1_1MilleniumMapper}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}}
+Inheritance diagram for Metal\+:\+:L\+S\+E\+:\+:Millenium\+Mapper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMetal_1_1LSE_1_1MilleniumMapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMetal_1_1LSE_1_1MilleniumMapper_a63d9848ac2d8eb7c5e76e50c2d365c79}{benchmark} (std\+::vector$<$ \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} $>$ \&)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classMetal_1_1LSE_1_1MilleniumMapper_a08f65c6357d8b450aff6335bf7dd4de8}{map} (const \hyperlink{classMetal_1_1LSE_1_1NewOrder}{New\+Order} \&, \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&)
+\item 
+static void \hyperlink{classMetal_1_1LSE_1_1MilleniumMapper_a83374c3bae042cd654f5f8b64d0584a2}{map} (const \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&, \hyperlink{classMetal_1_1LSE_1_1NewOrder}{New\+Order} \&)
+\item 
+static void \hyperlink{classMetal_1_1LSE_1_1MilleniumMapper_a21b4c1861b7c394ecae250baa685ab6d}{map} (const \hyperlink{classMetal_1_1OrderCancelRequest}{Metal\+::\+Order\+Cancel\+Request} \&, \hyperlink{classMetal_1_1LSE_1_1OrderCancelRequest}{Metal\+::\+L\+S\+E\+::\+Order\+Cancel\+Request} \&)
+\item 
+static void \hyperlink{classMetal_1_1LSE_1_1MilleniumMapper_a430f2f1f1f8dc53821e39ab90f6c78df}{map} (const F\+I\+X\+::\+Side \&, Metal\+::\+L\+S\+E\+::\+Side \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumMapper_a63d9848ac2d8eb7c5e76e50c2d365c79}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}!benchmark@{benchmark}}
+\index{benchmark@{benchmark}!Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}}
+\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper\+::benchmark (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf New\+Order\+Single} $>$ \&}]{all\+Orders}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1LSE_1_1MilleniumMapper_a63d9848ac2d8eb7c5e76e50c2d365c79}
+This is just a dumb loop that maps all incoming \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single}. It has no other function than measuring mapping speed \hypertarget{classMetal_1_1LSE_1_1MilleniumMapper_a08f65c6357d8b450aff6335bf7dd4de8}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}!map@{map}}
+\index{map@{map}!Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper\+::map (
+\begin{DoxyParamCaption}
+\item[{const {\bf New\+Order} \&}]{message, }
+\item[{{\bf New\+Order\+Single} \&}]{nos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumMapper_a08f65c6357d8b450aff6335bf7dd4de8}
+Translate L\+S\+E \hyperlink{classMetal_1_1LSE_1_1NewOrder}{New\+Order} into Metal representation \hypertarget{classMetal_1_1LSE_1_1MilleniumMapper_a83374c3bae042cd654f5f8b64d0584a2}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}!map@{map}}
+\index{map@{map}!Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper\+::map (
+\begin{DoxyParamCaption}
+\item[{const {\bf New\+Order\+Single} \&}]{nos, }
+\item[{{\bf New\+Order} \&}]{new\+Order}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumMapper_a83374c3bae042cd654f5f8b64d0584a2}
+Me\+T\+A\+L to L\+S\+E for \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single}
+
+\hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} Me\+T\+A\+L -\/$>$ L\+S\+E 
+\begin{DoxyExceptions}{Exceptions}
+{\em F\+I\+X\+::\+Field\+Not\+Found} & \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumMapper_a21b4c1861b7c394ecae250baa685ab6d}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}!map@{map}}
+\index{map@{map}!Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper\+::map (
+\begin{DoxyParamCaption}
+\item[{const {\bf Metal\+::\+Order\+Cancel\+Request} \&}]{ocr\+From, }
+\item[{{\bf Metal\+::\+L\+S\+E\+::\+Order\+Cancel\+Request} \&}]{ocr\+To}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumMapper_a21b4c1861b7c394ecae250baa685ab6d}
+Me\+T\+A\+L to L\+S\+E for \hyperlink{classMetal_1_1LSE_1_1OrderCancelRequest}{Order\+Cancel\+Request}
+
+Order\+Cancel Request Metal -\/$>$ L\+S\+E \hypertarget{classMetal_1_1LSE_1_1MilleniumMapper_a430f2f1f1f8dc53821e39ab90f6c78df}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}!map@{map}}
+\index{map@{map}!Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper@{Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Mapper\+::map (
+\begin{DoxyParamCaption}
+\item[{const F\+I\+X\+::\+Side \&}]{side\+From, }
+\item[{Metal\+::\+L\+S\+E\+::\+Side \&}]{side\+To}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumMapper_a430f2f1f1f8dc53821e39ab90f6c78df}
+Metal to L\+S\+E for Side
+
+Side Metal -\/$>$ L\+S\+E 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/src/metal/adapters/\+L\+S\+E\+Trading\+Adapter/Millenium\+Mapper.\+h\item 
+/home/jc/metal/src/metal/adapters/\+L\+S\+E\+Trading\+Adapter/Millenium\+Mapper.\+cpp\end{DoxyCompactItemize}

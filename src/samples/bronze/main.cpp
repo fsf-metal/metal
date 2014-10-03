@@ -18,6 +18,7 @@
 // and petty parsing
 #include "parsing.h"
 
+using namespace std;
 
 /**
  * Our main function is a loop for all commands
@@ -26,40 +27,45 @@
  */
 int main( int argc, char *argv[]) {
 
-	std::cout << "---------------------------------------------------------------" << std::endl;
-	std::cout << " Please type in your commands then \"exit\" when you are done" << std::endl;
-	std::cout << " Orders should be entered using {Side} {Qty} {Symbol} [Price]" << std::endl;
-	std::cout << " If price is omitted, \"market\" is assumed" << std::endl;
-	std::cout << " Example: \"buy 10 BA\" => Buys 10 Boeing @ Market" << std::endl;
-	std::cout << " Example: \"sell 20 INTC 35 \" => Sells 10 Intel @ 35.0" << std::endl;
-	std::cout << "---------------------------------------------------------------" << std::endl;
+	cout << "---------------------------------------------------------------" << endl;
+	cout << " Please type in your commands then \"exit\" when you are done" << endl;
+	cout << " Orders should be entered using {Side} {Qty} {Symbol} [Price]" << endl;
+	cout << " If price is omitted, \"market\" is assumed" << endl;
+	cout << " Example: \"buy 10 BA\" => Buys 10 Boeing @ Market" << endl;
+	cout << " Example: \"sell 20 INTC 35 \" => Sells 10 Intel @ 35.0" << endl;
+	cout << "---------------------------------------------------------------" << endl;
 
-	std::string command;
+	string command;
 	Metal::NewOrderSingle nos;
 	MyAdapter adapter;
 
-	adapter.start();
+	try {
+		adapter.start();
+	} catch (FIX::ConfigError &e) {
+		cout << "Configuration error " << e.what() << endl;
+		exit(2);
+	}
 
 	while( true) {
-		std::cout << "> "; // Mighty prompt
-		getline( std::cin, command);
+		cout << "> "; // Mighty prompt
+		getline( cin, command);
 		if( command == "exit") break;
-//		std::cout << "Processing \"" << command << "\"" << std::endl;
+//		cout << "Processing \"" << command << "\"" << endl;
 		try {
 			// Transform command into NewOrderSingle (implemented in parsing.cpp)
 			parseNOS( command, nos);
 			adapter.send( nos);
-			std::cout << "Order sent " << nos.getField(11) << std::endl;
+			cout << "Order sent " << nos.getField(11) << endl;
 		} catch( ParsingException &e) {
-			std::cerr << "Parsing failed: " << e.what() << std::endl;
-		} catch( std::exception &e) {
-			std::cerr << "Something failed: " << e.what() << std::endl;
+			cerr << "Parsing failed: " << e.what() << endl;
+		} catch( exception &e) {
+			cerr << "Something failed: " << e.what() << endl;
 		}
 	}
 
 	adapter.stop();
 
-	std::cout << "Good Bye!" << std::endl;
+	cout << "Good Bye!" << endl;
 
 	return 0;
 }

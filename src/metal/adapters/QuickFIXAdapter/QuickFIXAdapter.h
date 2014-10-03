@@ -11,23 +11,32 @@ class QuickFIXAdapter : public TradingAdapter {
 	public:
 		QuickFIXAdapter();
 
-		// messaging
+		//----------
+		// Messaging
+		//----------
+
+		/**
+		 * We override this method to leverage QuickFIX sending capacity
+		 */
 		void send( const NewOrderSingle &nos);
+
 		virtual void recv( const ExecutionReport &er);
 
+		//-----------
 		// life cycle
+		//-----------
 		void start();
 		void stop();
 
 		/**
 		* @see TradingAdapter#benchmark
 		*/
-		void benchmark( const std::vector<NewOrderSingle> &, bool);
+		void benchmark( const std::vector<NewOrderSingle> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
 
 		/**
 		* @see TradingAdapter#benchmark
 		*/
-		void benchmark( const std::vector<OrderCancelRequest> &, bool);
+		void benchmark( const std::vector<OrderCancelRequest> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
 
 		virtual ~QuickFIXAdapter(){};
 

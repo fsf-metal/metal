@@ -15,8 +15,8 @@ void QuickFIXMessageMapper::map( const FIX44::NewOrderSingle &message,
  */
 void QuickFIXMessageMapper::map( const FIX44::ExecutionReport &message,
                                  ExecutionReport &er){
-	std::vector<int> fields = { 6, // AvgPx
-			                    11, // ClOrdID
+	std::vector<int> fields = { FIX::FIELD::AvgPx, // AvgPx
+			                    FIX::FIELD::ClOrdID, // ClOrdID
 			                    14, // CumQty
 			                    17, // ExecID
 			                    31, // LastPx
@@ -24,12 +24,14 @@ void QuickFIXMessageMapper::map( const FIX44::ExecutionReport &message,
 			                    37, // OrderID
 			                    39, // OrdStatus
 			                    54, // Side
-			                    150, // ExecType
+								FIX::FIELD::Symbol,
+								150, // ExecType
 			                    151}; // LeavesQty
 
 	// Copy all fields
 	for( std::vector<int>::iterator fieldIterator = fields.begin(); fieldIterator != fields.end(); ++fieldIterator) {
-		er.setField( *fieldIterator, message.getField( *fieldIterator));
+		if (message.isSetField( *fieldIterator))
+			er.setField( *fieldIterator, message.getField( *fieldIterator));
 	}
 }
 

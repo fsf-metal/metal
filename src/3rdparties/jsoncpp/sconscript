@@ -1,0 +1,23 @@
+import glob
+
+src_files = 'json_reader.cpp json_value.cpp json_writer.cpp'
+lib_files = 'pthread xml2 z'
+include_path = '../../../include/'
+output_file = 'json.so'
+
+# Get all the build variables we need
+Import('env', 'mymode', 'debugcflags', 'releasecflags')
+localenv = env.Clone()
+
+# Append the user's additional compile flags
+# Assume debugcflags and releasecflags are defined
+if mymode == 'debug':
+    localenv.Append(CPPFLAGS=Split(debugcflags))
+else:
+    localenv.Append(CPPFLAGS=Split(releasecflags))
+
+localenv.Append(CPPPATH=Split( include_path))
+
+# Actually build the Library
+localenv.Library( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH='../../../lib')
+

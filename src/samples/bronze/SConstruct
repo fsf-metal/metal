@@ -1,7 +1,7 @@
 #Object('main.cpp')
 src_files = 'main.cpp parsing.cpp MyAdapter.cpp'
-lib_files = 'AdapterQuickFIX Metal quickfix pthread xml2 z'
-include_path = '../../ ../../quickfix/include'
+lib_files = 'AdapterQuickFIX Metal NetLink quickfix pthread xml2 z'
+include_path = '../../ ../../quickfix/include ../../netLink/include'
 output_file = 'bronze'
 #output_file = 'bronze'
 cpp_flags='-Wall -std=c++11 -fexceptions -finline-functions'

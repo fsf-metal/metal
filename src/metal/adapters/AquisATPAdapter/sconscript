@@ -1,0 +1,24 @@
+import glob
+
+src_files = 'Adapter.cpp Codec.cpp Login.cpp OrderAdd.cpp OrderCancel.cpp'
+lib_files = 'Metal pthread xml2 z'
+include_path = '../../../../include/'
+lib_path = '../../../lib'
+output_file = 'AdapterAquisATP.so'
+
+# Get all the build variables we need
+Import('env', 'mymode', 'debugcflags', 'releasecflags')
+localenv = env.Clone()
+
+# Append the user's additional compile flags
+# Assume debugcflags and releasecflags are defined
+if mymode == 'debug':
+    localenv.Append(CPPFLAGS=Split('-fPIC ' + debugcflags))
+else:
+    localenv.Append(CPPFLAGS=Split('-fPIC ' + releasecflags))
+
+localenv.Append(CPPPATH=Split( include_path))
+
+# Actually build the Library
+localenv.Library( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH=lib_path)
+

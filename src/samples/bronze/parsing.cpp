@@ -55,7 +55,8 @@ void parseNOS( const std::string &cmd, Metal::NewOrderSingle &nos) {
 	nos.setField( side);
 
 	// Transacttime : now
-	nos.setField( FIX::TransactTime( now));
+	FIX::UTCTIMESTAMP nowUTC;
+	nos.setField( FIX::TransactTime( nowUTC));
 
 	// Quantity, 2nd position
 	nos.setField( FIX::OrderQty(std::stoi( tokens[1])));
