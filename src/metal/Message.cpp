@@ -10,9 +10,7 @@
 
 namespace Metal {
 
-Message::Message() {
-	// TODO Auto-generated constructor stub
-
+Message::Message() : length(0) {
 }
 
 Message::~Message() {

@@ -3,7 +3,7 @@ import glob
 src_files = 'main.cpp'
 lib_files = 'json'
 include_path = '../../include/'
-output_file = 'bootstraper'
+output_file = 'bootstrapper'
 
 # Get all the build variables we need
 Import('env', 'mymode', 'debugcflags', 'releasecflags')
