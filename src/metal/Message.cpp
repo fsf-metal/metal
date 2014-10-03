@@ -6,7 +6,7 @@
  */
 
 #include <cstring>
-#include "Message.h"
+#include <metal/Message.h>
 
 namespace Metal {
 

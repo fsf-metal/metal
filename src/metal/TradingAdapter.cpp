@@ -3,8 +3,8 @@
 
 #include <netlink/socket.h>
 
-#include "TradingAdapter.h"
-#include "MetalExceptions.h"
+#include <metal/TradingAdapter.h>
+#include <metal/MetalExceptions.h>
 
 namespace Metal {
 

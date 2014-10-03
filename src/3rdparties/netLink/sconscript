@@ -1,9 +1,9 @@
 import glob
 
-src_files = 'TradingAdapter.cpp Translator.cpp Mapper.cpp Message.cpp Codec.cpp'
-lib_files = 'quickfix'
-include_path = '../../include ..'
-output_file = 'Metal.so'
+src_files = 'src/core.cc src/smart_buffer.cc src/socket.cc src/socket_group.cc src/util.cc'
+lib_files = 'pthread xml2 z'
+include_path = '../../../include/'
+output_file = 'NetLink.so'
 
 # Get all the build variables we need
 Import('env', 'mymode', 'debugcflags', 'releasecflags')
@@ -19,5 +19,5 @@ else:
 localenv.Append(CPPPATH=Split( include_path))
 
 # Actually build the Library
-localenv.Library( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH='../../lib')
+localenv.Library( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH='../../../lib')
 

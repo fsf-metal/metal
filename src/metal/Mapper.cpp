@@ -5,7 +5,7 @@
  *      Author: jc
  */
 
-#include "Mapper.h"
+#include <metal/Mapper.h>
 
 namespace Metal {
 

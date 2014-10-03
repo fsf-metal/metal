@@ -6,8 +6,8 @@
  */
 
 #include <string>
-#include "Translator.h"
-#include "quickfix/FixValues.h"
+#include <metal/Translator.h>
+#include <quickfix/FixValues.h>
 
 namespace Metal {
 
