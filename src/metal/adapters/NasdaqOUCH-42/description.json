@@ -6,7 +6,7 @@
         "uuid" : "ce8b7850-4acf-11e4-916c-0800200c9a66"
                },
     "constants": [{"name": "someName","value": "someValue"}],
-    "Messages": [{
+    "messages": [{
         "name": "EnterOrder",
         "nativeMessageType": "O",
         "fixMessage": "NewOrderSingle",

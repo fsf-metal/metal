@@ -2,7 +2,7 @@
  * __namespace__Adapter.cpp
  *
  *  Created on: __date__
- *      Author: Bootstraper
+ *      Author: Bootstrapper
  *
  */
 

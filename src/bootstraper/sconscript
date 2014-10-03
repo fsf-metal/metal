@@ -1,7 +1,7 @@
 import glob
 
 src_files = 'main.cpp'
-lib_files = 'pthread xml2 z'
+lib_files = 'json'
 include_path = '../../include/'
 output_file = 'bootstraper'
 
