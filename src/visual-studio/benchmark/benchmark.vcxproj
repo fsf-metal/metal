@@ -93,8 +93,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\benchmark\main.cpp" />
-    <ClCompile Include="..\..\benchmark\Display.cpp" />
+    <ClCompile Include="..\..\samples\benchmark\main.cpp" />
+    <ClCompile Include="..\..\samples\benchmark\Display.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

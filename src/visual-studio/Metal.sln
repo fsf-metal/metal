@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "adapters", "adapters\adapters.vcxproj", "{B2FDF49F-919C-4673-8B21-44E345C1354A}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -19,6 +19,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bronze", "bronze\bronze.vcx
 	ProjectSection(ProjectDependencies) = postProject
 		{B2FDF49F-919C-4673-8B21-44E345C1354A} = {B2FDF49F-919C-4673-8B21-44E345C1354A}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bootstrapper", "bootstrapper\bootstrapper.vcxproj", "{3B47F047-C9F6-4B0D-8477-FBAB0D586A7E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7E0A7774-6327-4969-AAEA-73E7FE3EA914} = {7E0A7774-6327-4969-AAEA-73E7FE3EA914}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsoncpp", "jsoncpp\jsoncpp.vcxproj", "{7E0A7774-6327-4969-AAEA-73E7FE3EA914}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +49,14 @@ Global
 		{4D9939E1-7B2D-44D8-B06F-14CB6FE7736F}.Debug|Win32.Build.0 = Debug|Win32
 		{4D9939E1-7B2D-44D8-B06F-14CB6FE7736F}.Release|Win32.ActiveCfg = Release|Win32
 		{4D9939E1-7B2D-44D8-B06F-14CB6FE7736F}.Release|Win32.Build.0 = Release|Win32
+		{3B47F047-C9F6-4B0D-8477-FBAB0D586A7E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3B47F047-C9F6-4B0D-8477-FBAB0D586A7E}.Debug|Win32.Build.0 = Debug|Win32
+		{3B47F047-C9F6-4B0D-8477-FBAB0D586A7E}.Release|Win32.ActiveCfg = Release|Win32
+		{3B47F047-C9F6-4B0D-8477-FBAB0D586A7E}.Release|Win32.Build.0 = Release|Win32
+		{7E0A7774-6327-4969-AAEA-73E7FE3EA914}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7E0A7774-6327-4969-AAEA-73E7FE3EA914}.Debug|Win32.Build.0 = Debug|Win32
+		{7E0A7774-6327-4969-AAEA-73E7FE3EA914}.Release|Win32.ActiveCfg = Release|Win32
+		{7E0A7774-6327-4969-AAEA-73E7FE3EA914}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
