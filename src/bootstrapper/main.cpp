@@ -32,7 +32,7 @@ int main( int argc, char *argv[]) {
 	cout << "Using : adapter=" << adapterDir << ", template=" << templateDir << endl;
 
     // Load source file into adapterSource
-    string adapterFilename = templateDir + "/__namespace__Adapter.cpp";
+    string adapterFilename = templateDir + "/Adapter.cpp";
     ifstream t(adapterFilename.c_str());
     string adapterSource((istreambuf_iterator<char>(t)), istreambuf_iterator<char>());
 
