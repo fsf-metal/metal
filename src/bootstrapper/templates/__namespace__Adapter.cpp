@@ -19,8 +19,7 @@ __namespace__Adapter::__namespace__Adapter() : TradingAdapter("__name__", "__uui
 }
 
 void __namespace__Adapter::encode( const NewOrderSingle& nos, Message &msg) {
-	std::cout << "__namespace__Adapter: encoding invoked but not implemented" << std::endl;
-	__nos-encoding__
+__nos-encoding__
 }
 
 void __namespace__Adapter::encodeLogon( Message &msg) {

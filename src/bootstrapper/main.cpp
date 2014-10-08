@@ -10,11 +10,14 @@
 
 #include <json/json.h>
 
+#include "Functions.h"
+#include "Field.h"
+
 using namespace std;
+using namespace Bootstrapper;
 
 void patternReplace( const string& pattern, const string& value, string &source);
 string & getFunctionParameter( const string &, int pos, string &output);
-void codeCopyFrom( const string &fixFieldName, const Json::Value &field, stringstream &sourceCode);
 
 int main( int argc, char *argv[]) {
     string adapterDir;
@@ -84,20 +87,26 @@ int main( int argc, char *argv[]) {
         if( fixMessage.isNull()) continue;
         if( fixNewOrderSingle.compare( fixMessage.asString()) == 0) {
 			for( int indexField = 0; indexField < (int)fields.size(); ++indexField) {
-				Json::Value field = fields[ indexField];
-				Json::Value value = field["value"];
-				if( value.isNull()) {
-					cout << "Field " << field["name"] << " has no value" << endl;
-					continue;
-				}
-				cout << "Field " << field["name"] << " value=" << value.asString() << endl;
+				try {
 
-				if( strncmp( value.asCString(), "copyFrom(", 9) == 0) {
-					cout << "copyFrom() found" << endl;
-					string fixFieldName;
-					getFunctionParameter(value.asString(), 1, fixFieldName);
-					cout << "fix field name=" << fixFieldName << endl;
-					codeCopyFrom( fixFieldName, field, nosEncoding);
+					Json::Value jsonField = fields[ indexField];
+					Field normalizedField(jsonField);
+					Json::Value value = jsonField["value"];
+					if( value.isNull()) {
+						cout << "Field " << jsonField["name"] << " has no value" << endl;
+						continue;
+					}
+					cout << "Field " << jsonField["name"] << " value=" << value.asString() << endl;
+
+					if( strncmp( value.asCString(), "copyFrom(", 9) == 0) {
+						cout << "copyFrom() found" << endl;
+						string fixFieldName;
+						getFunctionParameter(value.asString(), 1, fixFieldName);
+						cout << "fix field name=" << fixFieldName << endl;
+						Functions::copyFrom( fixFieldName, normalizedField, nosEncoding);
+					}
+				} catch (exception &e) {
+					cerr << "Could not process field at position " << indexField << " because " << e.what() << endl;
 				}
 			}
         }
@@ -119,24 +128,6 @@ void patternReplace( const string& pattern, const string& value, string &source)
     while( ( pos = source.find( pattern, pos)) != string::npos) {
         source.replace( pos, len, value);
     }
-}
-
-void codeCopyFrom( const string &fixFieldName, const Json::Value &field, stringstream &sourceCode) {
-	string varName = fixFieldName;
-	varName[0] = tolower( varName[0]);
-
-	// get field value
-	sourceCode << "\tstd::string " << varName << " = nos.getField(FIX::FIELD::" << fixFieldName << ");" << endl;
-
-	// store it
-	int position = field["position"].asInt();
-	if (strcmp("string", ( field["type"].asString()).c_str()) == 0) {
-		int maxLength = field["size"].asInt();
-		sourceCode << "\tCodec::encode(" << varName << ", msg, " << position << ", " << maxLength << ");" << endl;
-	}
-	else {
-		cout << " Field " << field["name"].asString() <<" type is not processed" << endl;
-	}
 }
 
 string & getFunctionParameter( const string &value, int index, string &output) {
