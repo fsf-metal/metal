@@ -2,14 +2,14 @@
  * __namespace__Adapter.cpp
  *
  *  Created on: __date__
- *      Author: Bootstrapper
+ *      Author: __author__
  *
  */
 
 #include <chrono>
-#include "__namespace__Adapter.h"
-#include "__namespace__Mapper.h"
-#include "__namespace__Codec.h"
+#include "Adapter.h"
+#include "Mapper.h"
+#include "Codec.h"
 
 namespace Metal {
 namespace __namespace__ {

@@ -50,4 +50,21 @@ Field::~Field()
 {
 }
 
+
+std::string Field::getTypeName( FieldType type) {
+	switch (type) {
+	case INT8: return "int8_t";
+	case INT16: return "int16_t";
+	case INT32: return "int32_t";
+	case INT64: return "int64_t";
+	case UINT8: return "uint8_t";
+	case UINT16: return "uint16_t";
+	case UINT32: return "uint32_t";
+	case UINT64: return "uint64_t";
+	case STRING: return "std::string";
+	default: return "?";
+	}
+}
+
+
 }

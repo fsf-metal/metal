@@ -16,8 +16,9 @@
 using namespace std;
 using namespace Bootstrapper;
 
+#define VERSION "Bootstrapper v0.1"
+
 void patternReplace( const string& pattern, const string& value, string &source);
-string & getFunctionParameter( const string &, int pos, string &output);
 
 int main( int argc, char *argv[]) {
     string adapterDir;
@@ -29,11 +30,16 @@ int main( int argc, char *argv[]) {
 		adapterDir = argv[1];
         templateDir = argv[2];
     }
-	cout << "Using : adapter=" << adapterDir << ", template=" << templateDir << endl;
+	cout << "Adapter Directory = " << adapterDir << endl;
+	cout << "Template Directory = " << templateDir << endl;
 
     // Load source file into adapterSource
     string adapterFilename = templateDir + "/Adapter.cpp";
     ifstream t(adapterFilename.c_str());
+	if (t.rdstate() & std::ifstream::failbit) {
+		cerr << "Could not open template file " << adapterFilename << endl;
+		exit(1);
+	}
     string adapterSource((istreambuf_iterator<char>(t)), istreambuf_iterator<char>());
 
 	// Format today's date
@@ -86,9 +92,9 @@ int main( int argc, char *argv[]) {
         cout << "Message " << message["name"].asString() << " has " << fields.size() << " fields. fixMessage=" << fixMessage.asString() << endl;
         if( fixMessage.isNull()) continue;
         if( fixNewOrderSingle.compare( fixMessage.asString()) == 0) {
+			// browse fields
 			for( int indexField = 0; indexField < (int)fields.size(); ++indexField) {
 				try {
-
 					Json::Value jsonField = fields[ indexField];
 					Field normalizedField(jsonField);
 					Json::Value value = jsonField["value"];
@@ -96,14 +102,26 @@ int main( int argc, char *argv[]) {
 						cout << "Field " << jsonField["name"] << " has no value" << endl;
 						continue;
 					}
-					cout << "Field " << jsonField["name"] << " value=" << value.asString() << endl;
+					string strValue = value.asString();
+					cout << "Field " << jsonField["name"] << " value=" << strValue << endl;
 
-					if( strncmp( value.asCString(), "copyFrom(", 9) == 0) {
-						cout << "copyFrom() found" << endl;
+					switch (Functions::getFunctionType(strValue)) {
+					case COPY_FROM: {
 						string fixFieldName;
-						getFunctionParameter(value.asString(), 1, fixFieldName);
-						cout << "fix field name=" << fixFieldName << endl;
-						Functions::copyFrom( fixFieldName, normalizedField, nosEncoding);
+						Functions::getParameter(value.asString(), 1, fixFieldName);
+						//cout << "fix field name=" << fixFieldName << endl;
+						Functions::copyFrom(fixFieldName, normalizedField, nosEncoding);
+
+					} break;
+					case MAPPING_FROM: {
+						string mappingTableName;
+						string fixFieldName;
+						Functions::getParameter(strValue, 1, mappingTableName);
+						Functions::getParameter(strValue, 2, fixFieldName);
+						Functions::mappingFrom( mappingTableName, fixFieldName, normalizedField, nosEncoding);
+					}	break;
+					case UNKNOWN:
+						throw std::runtime_error("unknonwn function type for " + strValue);
 					}
 				} catch (exception &e) {
 					cerr << "Could not process field at position " << indexField << " because " << e.what() << endl;
@@ -116,6 +134,7 @@ int main( int argc, char *argv[]) {
 	patternReplace("__namespace__", namespaceValue, adapterSource);
 	patternReplace("__date__", todayValue, adapterSource);
 	patternReplace("__nos-encoding__", nosEncoding.str(), adapterSource);
+	patternReplace("__author__", VERSION, adapterSource);
 
 	cout << adapterSource << endl;
 
@@ -130,15 +149,3 @@ void patternReplace( const string& pattern, const string& value, string &source)
     }
 }
 
-string & getFunctionParameter( const string &value, int index, string &output) {
-	string::size_type start_position;
-	string::size_type end_position = 0;
-	while( index-- > 0) {
-		start_position = value.find( "\'", ++end_position);
-		end_position = value.find( "\'", ++start_position);
-	}
-
-	output = value.substr(start_position, (end_position - start_position));
-
-	return output;
-}

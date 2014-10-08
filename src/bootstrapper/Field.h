@@ -1,6 +1,8 @@
 #ifndef __DESCRIPTION_FIELD_H
 #define __DESCRIPTION_FIELD_H
 
+#include <string>
+
 #include <json/json.h>
 
 namespace Bootstrapper {
@@ -12,6 +14,12 @@ class Field
 public:
 	Field( const Json::Value & field);
 	~Field();
+
+	/**
+	* @return the c++ representation of a FieldType
+	*/
+	static std::string getTypeName(FieldType type);
+
 	int position;
 	int size;
 	FieldType type;
