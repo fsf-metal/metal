@@ -12,6 +12,7 @@
 
 #include "Functions.h"
 #include "Field.h"
+#include "MappingTable.h"
 
 using namespace std;
 using namespace Bootstrapper;
@@ -63,14 +64,7 @@ int main( int argc, char *argv[]) {
     }
     cout << "Parsing successful" << endl;
 
-    const Json::Value messages = root["messages"];
-	if (messages.isNull()) {
-		cout << "Messages are missing from description" << endl;
-		exit(1);
-	}
-    cout << "I see " << messages.size() << " message(s)." << endl;
-
-	string namespaceValue;
+	// are there properties?
 	const Json::Value properties = root["properties"];
 	if (properties.isNull()) {
 		cout << "\"properties\" are missing from description" << endl;
@@ -79,9 +73,29 @@ int main( int argc, char *argv[]) {
 	if (properties["namespace"].isNull()) {
 		cout << "\"namespace\" is missing from \"properties\"" << endl;
 	}
+	string namespaceValue;
 	namespaceValue = properties["namespace"].asString();
 
-    string fixNewOrderSingle( "NewOrderSingle");
+	// Are there messages?
+	const Json::Value messages = root["messages"];
+	if (messages.isNull()) {
+		cout << "Messages are missing from description" << endl;
+		exit(1);
+	}
+	cout << "I see " << messages.size() << " message(s)." << endl;
+
+	// Are there mapping tables?
+	const Json::Value mappings = root["mappingTables"];
+	vector<MappingTable*> mappingTables;
+	if (!mappings.isNull()) {
+		mappingTables.reserve(mappings.size());
+		for (unsigned int index = 0; index < mappings.size(); ++index) {
+			Json::Value mapping = mappings[index];
+			mappingTables.push_back( new MappingTable( mapping));
+		}
+	}
+
+	string fixNewOrderSingle("NewOrderSingle");
 
 	stringstream nosEncoding;
 	for (unsigned int index = 0; index < messages.size(); ++index) {
@@ -118,7 +132,9 @@ int main( int argc, char *argv[]) {
 						string fixFieldName;
 						Functions::getParameter(strValue, 1, mappingTableName);
 						Functions::getParameter(strValue, 2, fixFieldName);
-						Functions::mappingFrom( mappingTableName, fixFieldName, normalizedField, nosEncoding);
+						MappingTable *mappingTable = getMappingTableByName(mappingTables, mappingTableName);
+						if (mappingTable == NULL) throw std::runtime_error("Unknown Mapping Table " + mappingTableName + " referenced by field " + strValue);
+						Functions::mappingFrom( mappingTable, fixFieldName, normalizedField, nosEncoding);
 					}	break;
 					case UNKNOWN:
 						throw std::runtime_error("unknonwn function type for " + strValue);
@@ -140,6 +156,19 @@ int main( int argc, char *argv[]) {
 
 }
 
+/**
+ * Locate a specific mapping table in the list of existing tables
+ * @param mappingTables list of all known mapping tables
+ * @param mappingTableName Name of the table we are looing for
+ * @return whatever has been found or NULL if this table does not exist
+ */
+MappingTable * getMappingTableByName(vector<MappingTable*>mappingTables, string mappingTableName) {
+	for (vector<MappingTable*>::iterator iter = mappingTables.begin(); iter != mappingTables.end(); ++iter) {
+		MappingTable *pMT = *iter;
+		if (!mappingTableName.compare(pMT->name)) return pMT;
+	}
+	return NULL;
+}
 
 void patternReplace( const string& pattern, const string& value, string &source) {
     ::size_t pos = 0;

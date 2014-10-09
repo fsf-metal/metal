@@ -19,35 +19,47 @@ Field::Field( const Json::Value & field) :size(0), position(0) {
 	if (name.isNull()) throw std::runtime_error("\"name\" is required and missing");
 	this->name = name.asString();
 
-	Json::Value type = field["type"];
-	if (type.isNull()) throw std::runtime_error("\"type\" is required and missing");
-	std::string strType = type.asString();
-	if ( !strType.compare( "string")) {
-		this->type = FieldType::STRING;
-	} else if( !strType.compare("int")){
-		switch (this->size) {
-		case 1: this->type = INT8; break;
-		case 2: this->type = INT16; break;
-		case 4: this->type = INT32; break;
-		case 8: this->type = INT64; break;
-		default: throw std::runtime_error("Invalid size for type \"int\" : " + this->size);
-		}
-	} else if (!strType.compare("uint")){
-		switch (this->size) {
-		case 1: this->type = UINT8; break;
-		case 2: this->type = UINT16; break;
-		case 4: this->type = UINT32; break;
-		case 8: this->type = UINT64; break;
-		default: throw std::runtime_error("Invalid size for type \"uint\" : " + this->size);
-		}
-	} else {
-		throw std::runtime_error("Provided \"type\" is unknown " + strType);
-	}
+	this->type = getType(field);
 }
 
 
 Field::~Field()
 {
+}
+
+FieldType Field::getType( const Json::Value &field) {
+	Json::Value type = field["type"];
+	if (type.isNull()) throw std::runtime_error("\"type\" is required and missing");
+
+	if (field["size"].isNull()) throw std::runtime_error("\"size\" is required and missing");
+	int size = field["size"].asInt();
+
+	std::string strType = type.asString();
+	if (!strType.compare("string")) {
+		return FieldType::STRING;
+	}
+	else if (!strType.compare("int")){
+		switch (size) {
+		case 1: return INT8;
+		case 2: return INT16; 
+		case 4: return INT32; 
+		case 8: return INT64; 
+		default: throw std::runtime_error("Invalid size for type \"int\" : " + size);
+		}
+	}
+	else if (!strType.compare("uint")){
+		switch (size) {
+		case 1: return UINT8; 
+		case 2: return UINT16;
+		case 4: return UINT32;
+		case 8: return UINT64;
+		default: throw std::runtime_error("Invalid size for type \"uint\" : " + size);
+		}
+	}
+	else {
+		throw std::runtime_error("Provided \"type\" is unknown " + strType);
+	}
+
 }
 
 

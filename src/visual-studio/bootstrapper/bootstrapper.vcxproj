@@ -86,10 +86,12 @@
     <ClCompile Include="..\..\bootstrapper\main.cpp" />
     <ClCompile Include="..\..\bootstrapper\Functions.cpp" />
     <ClCompile Include="..\..\bootstrapper\Field.cpp" />
+    <ClCompile Include="..\..\bootstrapper\MappingTable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\bootstrapper\Functions.h" />
     <ClInclude Include="..\..\bootstrapper\Field.h" />
+    <ClInclude Include="..\..\bootstrapper\MappingTable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

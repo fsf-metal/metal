@@ -16,6 +16,11 @@ public:
 	~Field();
 
 	/**
+	 * Get a field type from its Json representation
+	 */
+	static FieldType getType(const Json::Value &field);
+
+	/**
 	* @return the c++ representation of a FieldType
 	*/
 	static std::string getTypeName(FieldType type);
