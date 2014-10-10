@@ -23,7 +23,7 @@ MappingEntry::MappingEntry(Json::Value &entry) {
 	this->name = entry["name"].asString();
 
 	if (entry["native"].isNull()) throw std::runtime_error("MappingEntry: \"native\" is required and missing");
-	this->nativeValue = new NativeValue();
+//	this->nativeValue = new NativeValue();
 
 	if (entry["FIX"].isNull()) throw std::runtime_error("MappingEntry: \"FIX\" is required and missing");
 	this->fixValue = entry["FIX"].asString();
@@ -38,7 +38,7 @@ MappingTable::MappingTable( Json::Value source) {
 	// loop throgh values
 	Json::Value values = source["values"];
 	if (values.isNull()) throw std::runtime_error("MappingTable: \"values\" are requireed and missing");
-	for (int index = 0; index < values.size; ++index) {
+	for (int index = 0; index < values.size(); ++index) {
 		this->values.push_back(new MappingEntry( values[index]));
 	}
 }

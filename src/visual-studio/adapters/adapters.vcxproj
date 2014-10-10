@@ -85,6 +85,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\metal\adapters\LSETradingAdapter\Logon.h" />
     <ClInclude Include="..\..\metal\Codec.h" />
+    <ClInclude Include="HeartBeat.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp" />
@@ -99,6 +100,7 @@
     <ClCompile Include="..\..\metal\TradingAdapter.cpp" />
     <ClCompile Include="..\..\metal\Translator.cpp" />
     <ClCompile Include="..\..\metal\Codec.cpp" />
+    <ClCompile Include="..\..\metal\HeartBeat.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,9 +8,9 @@
 
 namespace Metal {
 
-TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid) : Adapter(name, uuid) {
+TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval) : Adapter(name, uuid),HeartBeater( heartBeatInterval) {
 	this->socket = NULL;
-	this->remoteHost = "Undefined";
+	this->remoteHost = "";
 	this->remotePort = 0;
 }
 
@@ -38,8 +38,19 @@ void TradingAdapter::encode( const NewOrderSingle& nos, Message & msg) {
 	throw MissingImplementationException( "encode NewOrderSingle");
 }
 
-void TradingAdapter::encodeLogon( Message &msg) {
-	throw MissingImplementationException( "encodeLogon is invoked nut not implemented");
+void TradingAdapter::encodeHeartBeat(Message &msg) {
+	throw MissingImplementationException("TradingAdapter: encodeHeartBeat is invoked but not implemented");
+}
+
+void TradingAdapter::encodeLogon(Message &msg) {
+	throw MissingImplementationException( "TradingAdapter: encodeLogon is invoked but not implemented");
+}
+
+
+void TradingAdapter::heartBeat() {
+	Message msg;
+	encodeHeartBeat( msg);
+	send(msg);
 }
 
 void TradingAdapter::onPhysicalConnection() {
@@ -72,19 +83,32 @@ void TradingAdapter::setRemoteHost(const std::string & hostName, unsigned int po
 void TradingAdapter::start() {
 	std::cout << "TradingAdapter: starting" << std::endl;
 
+	if (this->remoteHost.length() == 0 || this->remotePort == 0) {
+		std::cerr << "Remote host and port are required and missing [" << this->remoteHost << ":" << this->remotePort << "]" << std::endl;
+		return;
+	}
+
 	// open connection to remote host
-	this->socket = new NL::Socket( this->remoteHost, this->remotePort);
+	try {
+		this->socket = new NL::Socket(this->remoteHost, this->remotePort);
+//		this->onPhysicalConnection();
+		// Resume heartbeats
+		resumeHeartBeats();
+		std::cout << "TradingAdapter: started" << std::endl;
+	} catch (NL::Exception &e) {
+		std::cerr << "Could not connect to remote host because " << e.what() << std::endl;
+	}
 
-	this->onPhysicalConnection();
 
-	std::cout << "TradingAdapter: started" << std::endl;
 }
 
 void TradingAdapter::stop() {
-	std::cout << "TradingAdapter: Stopping" << std::endl;
+	//std::cout << "TradingAdapter: Stopping" << std::endl;
+	// Suspend heartbeats
+	suspendHeartBeats();
 	// TODO send logout
 	closeSocket( 1000);
-	std::cout << "TradingAdapter: Stopped" << std::endl;
+	//std::cout << "TradingAdapter: Stopped" << std::endl;
 }
 
 }

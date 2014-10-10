@@ -3,22 +3,30 @@
 
 #include <string>
 #include <chrono>
+#include <thread>
+
 #include <netlink/socket.h>
 
 #include "Adapter.h"
 #include "metal.h"
 #include "Mapper.h"
 #include "Message.h"
+#include "HeartBeat.h"
 
 namespace Metal {
-class TradingAdapter : public Adapter {
+
+/**
+ * This class is responsible for maintaining the session
+ */
+class TradingAdapter : public Adapter, public HeartBeater {
 	public:
 		/**
 		 * @param name Whatever should be used to identify this adapter.
 		 * @param uuid a unique identifier. Check out http://www.famkruithof.net/uuid/uuidgen to create your own
+		 * @param heartBeatInterval number of seconds between heartbeats. Defaults to 30 seconds.
 		 * Subclasses will perform mapping, encoding then write to the active session
 		 */
-		TradingAdapter( const std::string& name, const std::string& uuid);
+		TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval = 5);
 
 		/**
 		 * This method should be invoked before starting the adapter to set remote host properties
@@ -57,6 +65,11 @@ class TradingAdapter : public Adapter {
 		 * @param msg resulting binary message
 		 */
 		virtual void encode( const NewOrderSingle &nos, Message &msg);
+
+		/**
+		 * Should be implemented by subclasses to send heart beats
+		 */
+		void encodeHeartBeat(Message &msg);
 
 		/**
 		* This method should be overriden by subclasses<br>
@@ -112,6 +125,12 @@ class TradingAdapter : public Adapter {
 		 * @param delay in milliseconds if we should wait before closing
 		 */
 		void closeSocket( int delay = 0);
+
+		/**
+		 * Send a heartbeat to the remote party
+		 */
+		void TradingAdapter::heartBeat();
+
 };
 
 } // namespace Metal

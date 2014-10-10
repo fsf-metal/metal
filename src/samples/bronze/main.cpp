@@ -50,16 +50,23 @@ int main( int argc, char *argv[]) {
 		cout << "> "; // Mighty prompt
 		getline( cin, command);
 		if( command == "exit") break;
-//		cout << "Processing \"" << command << "\"" << endl;
-		try {
-			// Transform command into NewOrderSingle (implemented in parsing.cpp)
-			parseNOS( command, nos);
-			adapter.send( nos);
-			cout << "Order sent " << nos.getField(11) << endl;
-		} catch( ParsingException &e) {
-			cerr << "Parsing failed: " << e.what() << endl;
-		} catch( exception &e) {
-			cerr << "Something failed: " << e.what() << endl;
+		if (command == "stop") {
+			adapter.stop();
+		} else if (command == "start") {
+			adapter.start();
+		} else {
+
+	//		cout << "Processing \"" << command << "\"" << endl;
+			try {
+				// Transform command into NewOrderSingle (implemented in parsing.cpp)
+				parseNOS( command, nos);
+				adapter.send( nos);
+				cout << "Order sent " << nos.getField(11) << endl;
+			} catch( ParsingException &e) {
+				cerr << "Parsing failed: " << e.what() << endl;
+			} catch( exception &e) {
+				cerr << "Something failed: " << e.what() << endl;
+			}
 		}
 	}
 

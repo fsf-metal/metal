@@ -75,10 +75,10 @@ void Functions::encode( const string&strVarName, const string &fixFieldName, con
  * std::string strFieldName = nos.getField( FIX::FIELD::FieldName);
  * std::string mappedValue = mapper.sideFrom( strFieldName);
  */
-void Functions::mappingFrom(const string &tableName, const string &fixFieldName, const Field &field, stringstream &sourceCode) {
+void Functions::mappingFrom(const MappingTable &mappingTable, const string &fixFieldName, const Field &field, stringstream &sourceCode) {
 	string strFIXValueVarName = getFIXValue( fixFieldName, field, sourceCode);
-	string strMappedValueVarName = getMappedValue(tableName, strFIXValueVarName, field, sourceCode);
-	encode(strMappedValueVarName, fixFieldName, field, sourceCode);
+//	string strMappedValueVarName = getMappedValue(tableName, strFIXValueVarName, field, sourceCode);
+//	encode(strMappedValueVarName, fixFieldName, field, sourceCode);
 }
 
 

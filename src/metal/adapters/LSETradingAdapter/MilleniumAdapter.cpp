@@ -106,13 +106,5 @@ void MilleniumAdapter::sendLogon() {
 	std::cout << "Millenium Adapter: Logon sent" << std::endl;
 }
 
-void MilleniumAdapter::start() {
-
-}
-
-void MilleniumAdapter::stop() {
-
-}
-
 } // LSE::
 } // Metal::

@@ -132,9 +132,9 @@ int main( int argc, char *argv[]) {
 						string fixFieldName;
 						Functions::getParameter(strValue, 1, mappingTableName);
 						Functions::getParameter(strValue, 2, fixFieldName);
-						MappingTable *mappingTable = getMappingTableByName(mappingTables, mappingTableName);
-						if (mappingTable == NULL) throw std::runtime_error("Unknown Mapping Table " + mappingTableName + " referenced by field " + strValue);
-						Functions::mappingFrom( mappingTable, fixFieldName, normalizedField, nosEncoding);
+//						MappingTable *mappingTable = getMappingTableByName(mappingTables, mappingTableName);
+//						if (mappingTable == NULL) throw std::runtime_error("Unknown Mapping Table " + mappingTableName + " referenced by field " + strValue);
+//						Functions::mappingFrom( mappingTable, fixFieldName, normalizedField, nosEncoding);
 					}	break;
 					case UNKNOWN:
 						throw std::runtime_error("unknonwn function type for " + strValue);

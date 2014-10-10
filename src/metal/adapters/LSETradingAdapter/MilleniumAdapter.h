@@ -20,10 +20,6 @@ class MilleniumAdapter : public TradingAdapter {
 
 		virtual void recv( const ExecutionReport &er);
 
-		// life cycle
-		void start();
-		void stop();
-
 		// Send a logon message
 		void sendLogon();
 

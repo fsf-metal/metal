@@ -12,7 +12,7 @@ public:
 	MappingEntry( Json::Value &entry);
 
 	string name;
-	NativeValue nativeValue;
+//	NativeValue nativeValue;
 	string fixValue;
 };
 

@@ -7,6 +7,7 @@
 #include <json/json.h>
 
 #include "Field.h"
+#include "Mappingtable.h"
 
 enum FunctionType { COPY_FROM, MAPPING_FROM, UNKNOWN };
 
@@ -21,7 +22,7 @@ namespace Bootstrapper {
 		~Functions();
 
 		static void copyFrom(const string &fixFieldName, const Field &field, stringstream &sourceCode);
-		static void mappingFrom(const string &tableName, const string &fixFieldName, const Field &field, stringstream &sourceCode);
+		static void mappingFrom(const MappingTable &mappingTable, const string &fixFieldName, const Field &field, stringstream &sourceCode);
 
 		/**
 		* Find out the function type from it's text representation
