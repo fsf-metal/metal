@@ -3,6 +3,8 @@
 
 #include <json/json.h>
 
+#include "Field.h"
+
 namespace Bootstrapper {
 
 using namespace std;
@@ -26,8 +28,11 @@ public:
 	MappingTable( Json::Value source);
 	~MappingTable();
 
+	void addDeclaration(stringstream & ss);
+
 	std::string name;
 	std::vector<MappingEntry*> values;
+	FieldType fieldType;
 };
 
 }

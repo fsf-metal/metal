@@ -44,13 +44,13 @@ namespace Bootstrapper {
 
 		/**
 		* Produces the code to map a FIX value into native
-		* @param tableName name of the mapping table.
+		* @param mappingTable mapping table.
 		* @param strVarName variable holding the string representation of the FIX value
 		* @param field the native field representation
 		* @param sourceCode where code should be generated
 		* @return the variable that is storing the output. Could be of any type.
 		*/
-		static string getMappedValue(const string &tableName, const string &strVarName, const Field &field, stringstream &sourceCode);
+		static string getMappedValue(const MappingTable &mappingTable, const string &strVarName, const Field &field, stringstream &sourceCode);
 
 
 	};

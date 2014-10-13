@@ -1,10 +1,25 @@
+/**
+ * __namespace__Mapper.cpp
+ *
+ *  Created on: __date__
+ *      Author: __author__
+ *
+ */
+
 #include <quickfix/FieldNumbers.h>
 #include <metal/MetalExceptions.h>
-#include "MilleniumMapper.h"
-#include "LSEValues.h"
+#include "Mapper.h"
 
 namespace Metal {
-namespace LSE {
+namespace __namespace__ {
+
+/**
+ * Contructor
+ */
+Mapper::Mapper() : Metal::Mapper() {
+	__mapping_tables_initialization__
+}
+
 /**
  * Translate LSE NewOrder into Metal representation
  */
@@ -186,5 +201,5 @@ void MilleniumMapper::benchmark( std::vector<NewOrderSingle> &allOrders) {
 	message[position+3] = value & 0x000000FF;
 }*/
 
-} // namespace LSE
+} // namespace __namespace__
 } // namespace Metal

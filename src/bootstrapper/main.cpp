@@ -20,7 +20,12 @@ using namespace Bootstrapper;
 #define VERSION "Bootstrapper v0.1"
 
 void patternReplace( const string& pattern, const string& value, string &source);
+MappingTable * getMappingTableByName(vector<MappingTable*>mappingTables, string mappingTableName);
+string & loadFile(const string &templateDir, const string &fileName, string &sourceString);
 
+/**
+ * Main source 
+ */
 int main( int argc, char *argv[]) {
     string adapterDir;
     string templateDir;
@@ -35,13 +40,12 @@ int main( int argc, char *argv[]) {
 	cout << "Template Directory = " << templateDir << endl;
 
     // Load source file into adapterSource
-    string adapterFilename = templateDir + "/Adapter.cpp";
-    ifstream t(adapterFilename.c_str());
-	if (t.rdstate() & std::ifstream::failbit) {
-		cerr << "Could not open template file " << adapterFilename << endl;
-		exit(1);
-	}
-    string adapterSource((istreambuf_iterator<char>(t)), istreambuf_iterator<char>());
+	string adapterSource;
+	loadFile(templateDir, "Adapter.cpp", adapterSource);
+	string mapperSource;
+	loadFile(templateDir, "Mapper.cpp", mapperSource);
+	string mapperHeader;
+	loadFile(templateDir, "Mapper.h", mapperHeader);
 
 	// Format today's date
     std::time_t now = std::time(NULL);
@@ -87,13 +91,19 @@ int main( int argc, char *argv[]) {
 	// Are there mapping tables?
 	const Json::Value mappings = root["mappingTables"];
 	vector<MappingTable*> mappingTables;
+	stringstream mappingTablesDeclarations;
+
 	if (!mappings.isNull()) {
 		mappingTables.reserve(mappings.size());
 		for (unsigned int index = 0; index < mappings.size(); ++index) {
 			Json::Value mapping = mappings[index];
-			mappingTables.push_back( new MappingTable( mapping));
+			MappingTable *newMT = new MappingTable(mapping);
+			mappingTables.push_back( newMT);
+			newMT->addDeclaration( mappingTablesDeclarations);
 		}
 	}
+
+
 
 	string fixNewOrderSingle("NewOrderSingle");
 
@@ -132,9 +142,9 @@ int main( int argc, char *argv[]) {
 						string fixFieldName;
 						Functions::getParameter(strValue, 1, mappingTableName);
 						Functions::getParameter(strValue, 2, fixFieldName);
-//						MappingTable *mappingTable = getMappingTableByName(mappingTables, mappingTableName);
-//						if (mappingTable == NULL) throw std::runtime_error("Unknown Mapping Table " + mappingTableName + " referenced by field " + strValue);
-//						Functions::mappingFrom( mappingTable, fixFieldName, normalizedField, nosEncoding);
+						MappingTable *mappingTable = getMappingTableByName(mappingTables, mappingTableName);
+						if (mappingTable == NULL) throw std::runtime_error("Unknown Mapping Table " + mappingTableName + " referenced by field " + strValue);
+						Functions::mappingFrom( *mappingTable, fixFieldName, normalizedField, nosEncoding);
 					}	break;
 					case UNKNOWN:
 						throw std::runtime_error("unknonwn function type for " + strValue);
@@ -146,14 +156,21 @@ int main( int argc, char *argv[]) {
         }
     }
 
-	// replace patterns with second parameter
+	// replace patterns in adapter
 	patternReplace("__namespace__", namespaceValue, adapterSource);
 	patternReplace("__date__", todayValue, adapterSource);
 	patternReplace("__nos-encoding__", nosEncoding.str(), adapterSource);
 	patternReplace("__author__", VERSION, adapterSource);
 
-	cout << adapterSource << endl;
+	// replace patterns for mapper
+	patternReplace("__namespace__", namespaceValue, mapperSource);
 
+	// replace patterns for mapper header
+	patternReplace("__namespace__", namespaceValue, mapperHeader);
+	patternReplace("__mapping_tables_declaration__", mappingTablesDeclarations.str(), mapperHeader);
+
+	cout << adapterSource << endl;
+	cout << mapperHeader << endl;
 }
 
 /**
@@ -168,6 +185,21 @@ MappingTable * getMappingTableByName(vector<MappingTable*>mappingTables, string 
 		if (!mappingTableName.compare(pMT->name)) return pMT;
 	}
 	return NULL;
+}
+
+/**
+ * Loads file content into a string
+ */
+string & loadFile( const string &templateDir, const string &fileName, string &sourceString) {
+	string fullFileName = templateDir + "/" + fileName;
+	ifstream t(fullFileName.c_str());
+	if (t.rdstate() & std::ifstream::failbit) {
+		cerr << "Could not open template file " << fullFileName << endl;
+		exit(1);
+	}
+	sourceString = string((istreambuf_iterator<char>(t)), istreambuf_iterator<char>());
+
+	return sourceString;
 }
 
 void patternReplace( const string& pattern, const string& value, string &source) {

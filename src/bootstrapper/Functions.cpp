@@ -74,11 +74,12 @@ void Functions::encode( const string&strVarName, const string &fixFieldName, con
  * Sample code:
  * std::string strFieldName = nos.getField( FIX::FIELD::FieldName);
  * std::string mappedValue = mapper.sideFrom( strFieldName);
+ * Codec::encode( mappedValue, pos, size);
  */
 void Functions::mappingFrom(const MappingTable &mappingTable, const string &fixFieldName, const Field &field, stringstream &sourceCode) {
 	string strFIXValueVarName = getFIXValue( fixFieldName, field, sourceCode);
-//	string strMappedValueVarName = getMappedValue(tableName, strFIXValueVarName, field, sourceCode);
-//	encode(strMappedValueVarName, fixFieldName, field, sourceCode);
+	string strMappedValueVarName = getMappedValue( mappingTable, strFIXValueVarName, field, sourceCode);
+	encode(strMappedValueVarName, fixFieldName, field, sourceCode);
 }
 
 
@@ -103,10 +104,10 @@ FunctionType Functions::getFunctionType(std::string value) {
  * Source Code sample:<br>
  * int8_t mappedValue = mapper.sideFrom( strFIXValueVarName);
  */
-string Functions::getMappedValue( const string &tableName, const string &strVarName, const Field &field, stringstream &sourceCode) {
+string Functions::getMappedValue( const MappingTable &mappingTable, const string &strVarName, const Field &field, stringstream &sourceCode) {
 	string strOutputVarName = "native_" + strVarName;
 
-	sourceCode << "\t" << Field::getTypeName(field.type) << " " << strOutputVarName << " = mapper." << tableName << "From(" << strVarName << ");" << endl;
+	sourceCode << "\t" << Field::getTypeName(field.type) << " " << strOutputVarName << " = mapper." << mappingTable.name << "From.find(" << strVarName << ");" << endl;
 
 	return strOutputVarName;
 }

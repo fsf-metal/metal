@@ -1,4 +1,4 @@
-/*
+/**
  * __namespace__Adapter.cpp
  *
  *  Created on: __date__
