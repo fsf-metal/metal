@@ -23,8 +23,8 @@ __nos-encoding__
 }
 
 void __namespace__Adapter::encodeLogon( Message &msg) {
-	std::cout << "__namespace__Adapter: Sending logon invoked but not implemented" << std::endl;
-	__logon_encoding__
+	std::cout << "__namespace__Adapter: Logon encoding invoked but not implemented" << std::endl;
+	/*	__logon_encoding__ */
 }
 
 void __namespace__Adapter::recv(const ExecutionReport &er) {
