@@ -22,11 +22,13 @@ using namespace Bootstrapper;
 void patternReplace( const string& pattern, const string& value, string &source);
 MappingTable * getMappingTableByName(vector<MappingTable*>mappingTables, string mappingTableName);
 string & loadFile(const string &templateDir, const string &fileName, string &sourceString);
+void writeFile(const string& adapterDir, const string & fileName, const string& content);
 
 /**
  * Main source 
  */
 int main( int argc, char *argv[]) {
+	// Figure out directories
     string adapterDir;
     string templateDir;
     if( argc != 3) {
@@ -39,7 +41,7 @@ int main( int argc, char *argv[]) {
 	cout << "Adapter Directory = " << adapterDir << endl;
 	cout << "Template Directory = " << templateDir << endl;
 
-    // Load source file into adapterSource
+    // Load template files into strings
 	string adapterSource;
 	loadFile(templateDir, "Adapter.cpp", adapterSource);
 	string mapperSource;
@@ -52,7 +54,7 @@ int main( int argc, char *argv[]) {
     char todayValue[100];
     strftime( todayValue, (unsigned long)sizeof(todayValue), "%Y-%m-%d", std::localtime(&now));
 
-    // read description
+    // read description.json
     Json::Value root;
     Json::Reader reader;
 
@@ -92,6 +94,7 @@ int main( int argc, char *argv[]) {
 	const Json::Value mappings = root["mappingTables"];
 	vector<MappingTable*> mappingTables;
 	stringstream mappingTablesDeclarations;
+	stringstream mappingTablesInitializations;
 
 	if (!mappings.isNull()) {
 		mappingTables.reserve(mappings.size());
@@ -100,6 +103,7 @@ int main( int argc, char *argv[]) {
 			MappingTable *newMT = new MappingTable(mapping);
 			mappingTables.push_back( newMT);
 			newMT->addDeclaration( mappingTablesDeclarations);
+			newMT->addInitialization( mappingTablesInitializations);
 		}
 	}
 
@@ -161,16 +165,23 @@ int main( int argc, char *argv[]) {
 	patternReplace("__date__", todayValue, adapterSource);
 	patternReplace("__nos-encoding__", nosEncoding.str(), adapterSource);
 	patternReplace("__author__", VERSION, adapterSource);
+	writeFile(adapterDir, "Adapter.cpp", adapterSource);
+
 
 	// replace patterns for mapper
 	patternReplace("__namespace__", namespaceValue, mapperSource);
+	patternReplace("__mapping_tables_initialization__", mappingTablesInitializations.str(), mapperSource);
+	writeFile(adapterDir, "Mapper.cpp", mapperSource);
 
 	// replace patterns for mapper header
 	patternReplace("__namespace__", namespaceValue, mapperHeader);
 	patternReplace("__mapping_tables_declaration__", mappingTablesDeclarations.str(), mapperHeader);
+	writeFile(adapterDir, "Mapper.h", mapperHeader);
 
-	cout << adapterSource << endl;
-	cout << mapperHeader << endl;
+//	cout << adapterSource << endl;
+	cout << mapperSource << endl;
+//	cout << mapperHeader << endl;
+	cout << "Done";
 }
 
 /**
@@ -210,3 +221,8 @@ void patternReplace( const string& pattern, const string& value, string &source)
     }
 }
 
+void writeFile( const string& directory, const string &fileName, const string & content) {
+	ofstream out(directory + "/" + fileName);
+	out << content;
+	out.close();
+}

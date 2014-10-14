@@ -2,7 +2,7 @@
 #include <json/json.h>
 
 #include "Field.h"
-
+#include "NativeValues.h"
 
 namespace Bootstrapper {
 
@@ -74,6 +74,21 @@ std::string Field::getTypeName( FieldType type) {
 	case UINT32: return "uint32_t";
 	case UINT64: return "uint64_t";
 	case STRING: return "std::string";
+	default: return "?";
+	}
+}
+
+std::string Field::getValueCode(FieldType type, NativeValue &native) {
+	switch (type) {
+	case INT8: return std::to_string( native.i8);
+	case INT16: return std::to_string(native.i16);
+	case INT32: return std::to_string(native.i32);
+	case INT64: return std::to_string(native.i64);
+	case UINT8: return std::to_string(native.u8);
+	case UINT16: return std::to_string(native.u16);
+	case UINT32: return std::to_string(native.u32);
+	case UINT64: return std::to_string(native.u64);
+	case STRING: return std::string( "\"") + native.str + "\"";
 	default: return "?";
 	}
 }

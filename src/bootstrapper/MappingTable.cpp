@@ -3,21 +3,6 @@
 #include "MappingTable.h"
 #include "Field.h"
 
-/**
-"mappingTables": [
-{   "name": "side",
-"type": "string",
-"size": 1,
-"values": [
-{"name":"Buy", "native":"B", "FIX":"1"},
-{"name":"Sell", "native":"S", "FIX":"2"},
-{"name":"SellShort", "native":"T", "FIX":"5"},
-{"name":"SellShortExempt", "native":"E", "FIX":"6"}
-]
-}]
-
-*/
-
 namespace Bootstrapper {
 
 MappingEntry::MappingEntry(Json::Value &entry) {
@@ -25,7 +10,8 @@ MappingEntry::MappingEntry(Json::Value &entry) {
 	this->name = entry["name"].asString();
 
 	if (entry["native"].isNull()) throw std::runtime_error("MappingEntry: \"native\" is required and missing");
-//	this->nativeValue = new NativeValue();
+	if (entry["native"].isString()) strncpy(this->nativeValue.str, entry["native"].asCString(), sizeof(this->nativeValue.str));
+	else this->nativeValue.i16 = entry["native"].asInt();
 
 	if (entry["FIX"].isNull()) throw std::runtime_error("MappingEntry: \"FIX\" is required and missing");
 	this->fixValue = entry["FIX"].asString();
@@ -51,6 +37,21 @@ MappingTable::~MappingTable(){
 
 void MappingTable::addDeclaration(stringstream & ss) {
 	ss << "\tstd::map <std::string," << Field::getTypeName( this->fieldType) << "> " << this->name << "From;" << endl;
+}
+
+void MappingTable::addInitialization(stringstream &ss) {
+	ss << "\t// " << this->name << " from FIX" << endl;
+	for (vector<MappingEntry*>::iterator iter = this->values.begin(); iter != this->values.end(); ++iter) {
+		MappingEntry* pME = *iter;
+		ss << "\t" << this->name << "From[\"" << pME->fixValue << "\"] = " << Field::getValueCode( this->fieldType, pME->nativeValue) << ";" << endl;
+	}
+	ss << endl;
+	ss << "\t// " << this->name << " to FIX" << endl;
+	for (vector<MappingEntry*>::iterator iter = this->values.begin(); iter != this->values.end(); ++iter) {
+		MappingEntry* pME = *iter;
+		ss << "\t" << this->name << "To[" << Field::getValueCode(this->fieldType, pME->nativeValue) << "] = \"" << pME->fixValue << "\";" << endl;
+	}
+	ss << endl;
 }
 
 

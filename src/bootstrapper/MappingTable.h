@@ -1,9 +1,12 @@
 #ifndef __MAPPINGTABLE_H
 #define __MAPPINGTABLE_H
 
+#include <cstdint>
+
 #include <json/json.h>
 
 #include "Field.h"
+#include "NativeValues.h"
 
 namespace Bootstrapper {
 
@@ -14,7 +17,7 @@ public:
 	MappingEntry( Json::Value &entry);
 
 	string name;
-//	NativeValue nativeValue;
+	NativeValue nativeValue;
 	string fixValue;
 };
 
@@ -29,6 +32,11 @@ public:
 	~MappingTable();
 
 	void addDeclaration(stringstream & ss);
+	/**
+	 * Format initialization source code
+	 * @param ss output stringstream where source code will be appended
+	 */
+	void addInitialization(stringstream & ss);
 
 	std::string name;
 	std::vector<MappingEntry*> values;

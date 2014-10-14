@@ -2,8 +2,8 @@
 #define __DESCRIPTION_FIELD_H
 
 #include <string>
-
 #include <json/json.h>
+#include "NativeValues.h"
 
 namespace Bootstrapper {
 
@@ -24,6 +24,8 @@ public:
 	* @return the c++ representation of a FieldType
 	*/
 	static std::string getTypeName(FieldType type);
+
+	static std::string getValueCode( FieldType type, NativeValue &native);
 
 	int position;
 	int size;
