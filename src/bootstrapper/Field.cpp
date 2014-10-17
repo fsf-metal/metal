@@ -6,7 +6,9 @@
 
 namespace Bootstrapper {
 
-Field::Field( const Json::Value & field) :size(0), position(0) {
+Field::Field( const Json::Value & field) {
+    this->size = 0;
+    this->position = 0;
 	Json::Value size = field["size"];
 	if (size.isNull()) throw std::runtime_error("\"size\" is required and missing");
 	this->size = size.asInt();

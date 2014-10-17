@@ -1,9 +1,10 @@
 import glob
 
-src_files = 'main.cpp MappingTable.cpp Field.cpp Functions.cpp'
-lib_files = 'json'
-include_path = '../../include/'
-output_file = 'bootstrapper'
+src_files = 'test.cpp ../Field.cpp'
+lib_files = 'gtest pthread json'
+output_file = 'test'
+include_path = '../../../include/'
+lib_path = '../../../lib'
 
 # Get all the build variables we need
 Import('env', 'mymode', 'debugcflags', 'releasecflags')
@@ -18,6 +19,9 @@ else:
 
 localenv.Append(CPPPATH=Split( include_path))
 
-# Actually build Binaries
-localenv.Program( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH='../../lib')
+# Actually build the Library
+localenv.Program( output_file, \
+                Split(src_files), \
+                LIBS=Split(lib_files), \
+                LIBPATH=Split(lib_path))
 

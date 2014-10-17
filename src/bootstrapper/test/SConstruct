@@ -26,4 +26,3 @@ env.SConsignFile()
 
 # Compile core
 SConscript( 'sconscript')
-SConscript( 'test/sconscript')

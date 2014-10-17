@@ -7,7 +7,7 @@
 #include <json/json.h>
 
 #include "Field.h"
-#include "Mappingtable.h"
+#include "MappingTable.h"
 
 enum FunctionType { COPY_FROM, MAPPING_FROM, UNKNOWN };
 

@@ -113,7 +113,7 @@ string Functions::getMappedValue( const MappingTable &mappingTable, const string
 }
 
 string & Functions::getParameter(const string &value, int index, string &output) {
-	string::size_type start_position;
+	string::size_type start_position = 0;
 	string::size_type end_position = 0;
 	while (index-- > 0) {
 		start_position = value.find("\'", ++end_position);
