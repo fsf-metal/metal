@@ -19,6 +19,7 @@ public:
 
 	inline const char* getData() { return data; };
 	inline const size_t getLength() { return length; };
+	inline void setLength( size_t length) { this->length = length; };
 
 	/**
 	 * Write a single character at given position

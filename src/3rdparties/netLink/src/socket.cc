@@ -188,6 +188,8 @@ void Socket::initSocket() {
 
 		#ifndef _MSC_VER
 			errorMsg += gai_strerror(status);
+		#else
+			errorMsg += std::to_string( status);
 		#endif
 
         throw Exception(Exception::ERROR_SET_ADDR_INFO, errorMsg, getSocketErrorCode());

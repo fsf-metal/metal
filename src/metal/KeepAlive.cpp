@@ -25,9 +25,24 @@ KeepAlive::~KeepAlive() {
 }
 
 void KeepAlive::changeStatus( Status newStatus) {
+//	string statusName;
+//	cout << "KeepAlive: Changing status to " << getStatusName( newStatus, statusName).c_str() << endl;
+
 	this->statusMutex.lock();
 	this->status = newStatus;
 	this->statusMutex.unlock();
+}
+
+string KeepAlive::getStatusName( const Status &status, string &output) {
+	switch (status) {
+	case IDLE: output = "Idle"; break;
+	case HEARTBEATING: output = "HeartBeating"; break;
+	case RETRYING: output = "Retrying"; break;
+	case KILLED: output = "Killed"; break;
+	default: output = "?";
+	}
+
+	return output;
 }
 
 void KeepAlive::run() {
@@ -43,12 +58,16 @@ void KeepAlive::run() {
 		this_thread::sleep_for(this->granularity);
 
 		this->statusMutex.lock();
+		Status status = this->status;
+		this->statusMutex.unlock();
 		switch (this->status) {
 		case IDLE:
-			//cout << "HeartBeat: Suspended" << endl;
+			// Watchout, this can be quite verbose
+			// cout << "KeepAlive: Idle" << endl;
 			break;
 
 		case HEARTBEATING: { // send the heatbeat if the time is reight
+			// cout << "KeepAlive: Heartbeat" << endl;
 			clock_t now = clock();
 			if( float(now - lastBeat) >= maxClocksHeartBeat) {
 				heartBeat();
@@ -58,6 +77,7 @@ void KeepAlive::run() {
 			break;
 
 		case RETRYING: { // retry the connection if the timming is right
+			//cout << "KeepAlive: Retry" << endl;
 			clock_t now = clock();
 			if (float(now - lastRetry) >= maxClocksRetry) {
 				retryConnection();
@@ -67,11 +87,11 @@ void KeepAlive::run() {
 			break;
 
 		case KILLED:
+			cout << "KeepAlive: Killed" << endl;
 			loopHappily = false;
 			break;
 
 		}
-		this->statusMutex.unlock();
 	}
 //	cout << "HeartBeat: thread is stopping" << endl;
 

@@ -20,7 +20,7 @@ MilleniumCodec::MilleniumCodec() {
 MilleniumCodec::~MilleniumCodec() {
 }
 
-void MilleniumCodec::encode(const Logon &logon, Metal::Message &msg) {
+void MilleniumCodec::encode( const Logon &logon, Metal::Message &msg) {
 	encodeHeader( msg, 80, MessageType_LOGON);
 	Codec::encode( logon.userName, msg, 4, 25);
 	Codec::encode( logon.password, msg, 29, 25);
@@ -85,8 +85,12 @@ void MilleniumCodec::encodeHeader( Metal::Message &msg, int16_t length, char typ
 	msg.set( 0, (char)2);
 	encode( length, msg, length);
 	msg.set( 3, type);
+	msg.setLength(length);
 }
 
+void MilleniumCodec::encodeHeartBeat(Metal::Message &msg) {
+	encodeHeader( msg, 4, MessageType_HEARTBEAT);
+}
 
 } /* namespace LSE */
 } /* namespace Metal */

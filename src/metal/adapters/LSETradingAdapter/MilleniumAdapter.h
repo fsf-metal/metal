@@ -20,9 +20,6 @@ class MilleniumAdapter : public TradingAdapter {
 
 		virtual void recv( const ExecutionReport &er);
 
-		// Send a logon message
-		void sendLogon();
-
 		/**
 		 * @see TradingAdapter#benchmark
 		 */
@@ -36,6 +33,9 @@ class MilleniumAdapter : public TradingAdapter {
 		void benchmark( const std::vector<Metal::OrderCancelRequest> &,
 				std::chrono::milliseconds &,
 				std::chrono::milliseconds &);
+
+		void encodeHeartBeat( Message &msg);
+		void encodeLogon( Message &msg);
 
 		virtual ~MilleniumAdapter(){};
 

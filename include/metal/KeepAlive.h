@@ -33,6 +33,8 @@ public:
 	*/
 	void changeStatus( Status newStatus);
 
+	static std::string getStatusName(const Status &status, std::string &output);
+
 protected:
 
 	/**
@@ -44,6 +46,9 @@ protected:
 	* This function should be implemented by subclasses when a connection should be attempted
 	*/
 	virtual void retryConnection() = 0;
+
+	int getHeartBeatInterval() { return this->heartBeatIntervalInSeconds; };
+	int getRetryInterval() { return this->retryIntervalInSeconds; };
 
 private:
 	/**

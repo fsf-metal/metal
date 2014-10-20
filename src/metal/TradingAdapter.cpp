@@ -49,8 +49,9 @@ void TradingAdapter::encodeLogon(Message &msg) {
 }
 
 void TradingAdapter::heartBeat() {
+
 	Message msg;
-	encodeHeartBeat( msg);
+	this->encodeHeartBeat( msg);
 	send(msg);
 }
 
@@ -59,25 +60,32 @@ void TradingAdapter::heartBeat() {
  * We should send a long
  */
 void TradingAdapter::onPhysicalConnection() {
+//	std::cout << "TradingAdapter: Physical connection" << std::endl;
 	// Change status to IDLE to stop retries
 	changeStatus( IDLE);
 
-	Message logon;
-	this->encodeLogon( logon);
-	this->send( logon);
+	try {
+		Message logon;
+		this->encodeLogon(logon);
+		this->send(logon);
+		changeStatus(HEARTBEATING);
+	} catch ( std::exception &e) {
+		changeStatus(RETRYING);
+		std::cerr << "TradingAdapter: Could not send logon because " << e.what() << std::endl;
+	}
 }
 
 /**
  * Invoked by KeepAlive when you need to reconnect
  */
 void TradingAdapter::retryConnection() {
-	changeStatus( IDLE);
 	start();
 }
 
 void TradingAdapter::send( Message &msg) {
 	try {
 		this->socket->send(msg.getData(), msg.getLength());
+		std::cout << "TradingAdapter: sent " << msg.getLength() << " bytes" << std::endl;
 	} catch (std::exception &e) {
 		// change the status so we can retry a connection
 		changeStatus(KeepAlive::Status::RETRYING);
@@ -99,7 +107,7 @@ void TradingAdapter::setRemoteHost(const std::string & hostName, unsigned int po
 }
 
 void TradingAdapter::start() {
-	std::cout << "TradingAdapter: starting" << std::endl;
+//	std::cout << "TradingAdapter: starting. HBint=" << getHeartBeatInterval() << ", RetryInt=" << getRetryInterval() << std::endl;
 
 	if (this->remoteHost.length() == 0 || this->remotePort == 0) {
 		std::cerr << "Remote host and port are required and missing [" << this->remoteHost << ":" << this->remotePort << "]" << std::endl;
@@ -108,13 +116,14 @@ void TradingAdapter::start() {
 
 	// open connection to remote host
 	try {
-		std::cout << "connecting to " << this->remoteHost << ":" << this->remotePort << std::endl;
+		std::cout << "Connecting to " << this->remoteHost << ":" << this->remotePort << std::endl;
 		this->socket = new NL::Socket(this->remoteHost, this->remotePort);
 		this->onPhysicalConnection();
 
 		std::cout << "TradingAdapter: started" << std::endl;
 	} catch (NL::Exception &e) {
-		std::cerr << "Could not connect to remote host because " << e.what() << std::endl;
+		changeStatus(RETRYING);
+		std::cerr << "Could not connect to remote host because " << e.what() << e.nativeErrorCode() << std::endl;
 	}
 
 
