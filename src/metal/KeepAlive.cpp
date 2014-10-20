@@ -1,38 +1,39 @@
 #include <iostream>
 #include <algorithm>
 
-#include <metal/Session.h>
+#include <metal/KeepAlive.h>
 
 namespace Metal {
 
 using namespace std;
 
-Session::Session(int heartBeatInterval, int retryInterval) {
-	changeStatus(IDLE);
+KeepAlive::KeepAlive(int heartBeatInterval, int retryInterval) {
+	this->status = IDLE;
 	this->granularity = chrono::seconds( min( heartBeatInterval, retryInterval) / 2);
 
 	this->heartBeatIntervalInSeconds = heartBeatInterval;
 	this->retryIntervalInSeconds = retryInterval;
 
 	// envertually start the thread
-	this->hbThread = thread(&Session::run, this);
+	this->thread = std::thread(&KeepAlive::run, this);
 }
 
 
-Session::~Session() {
-	kill();
-	hbThread.join();
+KeepAlive::~KeepAlive() {
+	changeStatus(KILLED);
+	this->thread.join();
 }
 
-void Session::changeStatus(SessionStatus newStatus) {
+void KeepAlive::changeStatus( Status newStatus) {
 	this->statusMutex.lock();
 	this->status = newStatus;
 	this->statusMutex.unlock();
 }
 
-void Session::run() {
+void KeepAlive::run() {
 //	cout << "HeartBeat: thread is running" << endl;
 	clock_t lastBeat = 0;
+	clock_t lastRetry = 0;
 	float maxClocksHeartBeat = (float)( this->heartBeatIntervalInSeconds * CLOCKS_PER_SEC);
 	float maxClocksRetry = (float)( this->retryIntervalInSeconds * CLOCKS_PER_SEC);
 
@@ -46,33 +47,27 @@ void Session::run() {
 		case IDLE:
 			//cout << "HeartBeat: Suspended" << endl;
 			break;
-		case CONNECTING:
-			// Just wait for connection
-			break;
-		case CONNECTED:
-			onConnection();
-			// We should be sending a logon
-			changeStatus( LOGGING);
-			sendLogon();
-			break;
 
-		case LOGGED: { // send the heatbeat if the time is reight
+		case HEARTBEATING: { // send the heatbeat if the time is reight
 			clock_t now = clock();
-			if (float(now - lastBeat) >= maxClocks) {
+			if( float(now - lastBeat) >= maxClocksHeartBeat) {
 				heartBeat();
 				lastBeat = now;
 			}
 		}
 			break;
 
-		case KILLING:
-			loopHappily = false;
+		case RETRYING: { // retry the connection if the timming is right
+			clock_t now = clock();
+			if (float(now - lastRetry) >= maxClocksRetry) {
+				retryConnection();
+				lastRetry = now;
+			}
+		}
 			break;
 
-		case DISCONNECTED:
-			if( this->retryInterval > 0 && float( now - lastConnectionAttempt) >= maxClocksRetry) {
-				// TODO: Retry the connection
-			}
+		case KILLED:
+			loopHappily = false;
 			break;
 
 		}
@@ -80,18 +75,6 @@ void Session::run() {
 	}
 //	cout << "HeartBeat: thread is stopping" << endl;
 
-}
-
-void Session::start() {
-	changeStatus( CONNECTING);
-}
-
-void Session:stop() {
-	changeStatus( SUSPENDING);
-}
-
-void Session::kill() {
-	changeStatus( KILLING);
 }
 
 }

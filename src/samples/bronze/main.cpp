@@ -20,6 +20,8 @@
 
 using namespace std;
 
+vector<string> split(const string &s, char delim);
+
 /**
  * Our main function is a loop for all commands
  * We are expecting "exit" at some point
@@ -52,6 +54,9 @@ int main( int argc, char *argv[]) {
 		if( command == "exit") break;
 		if (command == "stop") {
 			adapter.stop();
+		} else if (command.substr( 0,4) == "host") {
+			vector<string> tokens =	split(command, ' ');
+			adapter.setRemoteHost( tokens.at(1), (unsigned int)atoi( tokens.at(2).c_str()) );
 		} else if (command == "start") {
 			adapter.start();
 		} else {
@@ -78,3 +83,15 @@ int main( int argc, char *argv[]) {
 }
 
 
+
+std::vector<std::string> split(const std::string &s, char delim) {
+	std::vector<std::string> elems;
+
+	std::stringstream ss(s);
+	std::string item;
+	while (std::getline(ss, item, delim)) {
+		elems.push_back(item);
+	}
+
+	return elems;
+}

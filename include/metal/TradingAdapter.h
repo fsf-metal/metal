@@ -11,22 +11,23 @@
 #include "metal.h"
 #include "Mapper.h"
 #include "Message.h"
-#include "Session.h"
+#include "KeepAlive.h"
 
 namespace Metal {
 
 /**
  * This class is responsible for maintaining the session
  */
-class TradingAdapter : public Adapter, public Session {
+class TradingAdapter : public Adapter, public KeepAlive {
 	public:
 		/**
 		 * @param name Whatever should be used to identify this adapter.
 		 * @param uuid a unique identifier. Check out http://www.famkruithof.net/uuid/uuidgen to create your own
 		 * @param heartBeatInterval number of seconds between heartbeats. Defaults to 30 seconds.
+		 * @param retryInterval number of seconds between retries when connection is lost. Defaults to 5 seconds.
 		 * Subclasses will perform mapping, encoding then write to the active session
 		 */
-		TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval = 5);
+		TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval = 30, int retryInterval = 5);
 
 		/**
 		 * This method should be invoked before starting the adapter to set remote host properties
@@ -84,6 +85,11 @@ class TradingAdapter : public Adapter, public Session {
 		 * @param ExecutionReport incomming execution report
 		 */
 		virtual void recv( const ExecutionReport &er) = 0;
+
+		/**
+		 * invokwed with the time is right to retry a connection 
+		 */
+		void retryConnection();
 
 		/**
 		 * This method is invoked once the socket is connected<br>

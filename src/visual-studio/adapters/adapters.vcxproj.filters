@@ -68,7 +68,7 @@
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp">
       <Filter>Source Files\LSETradingAdapter</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\HeartBeat.cpp">
+    <ClCompile Include="..\..\metal\KeepAlive.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

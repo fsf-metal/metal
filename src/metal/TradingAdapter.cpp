@@ -8,9 +8,9 @@
 
 namespace Metal {
 
-TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval) :
+TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval, int retryInterval) :
 		Adapter(name, uuid),
-		Session( heartBeatInterval, 0) {
+		KeepAlive( heartBeatInterval, retryInterval) {
 	this->socket = NULL;
 	this->remoteHost = "";
 	this->remotePort = 0;
@@ -54,17 +54,34 @@ void TradingAdapter::heartBeat() {
 	send(msg);
 }
 
+/**
+ * We just managed to connect physically<br>
+ * We should send a long
+ */
 void TradingAdapter::onPhysicalConnection() {
+	// Change status to IDLE to stop retries
+	changeStatus( IDLE);
+
 	Message logon;
 	this->encodeLogon( logon);
 	this->send( logon);
 }
 
+/**
+ * Invoked by KeepAlive when you need to reconnect
+ */
+void TradingAdapter::retryConnection() {
+	changeStatus( IDLE);
+	start();
+}
+
 void TradingAdapter::send( Message &msg) {
 	try {
 		this->socket->send(msg.getData(), msg.getLength());
-	}
-	catch (std::exception &e) {
+	} catch (std::exception &e) {
+		// change the status so we can retry a connection
+		changeStatus(KeepAlive::Status::RETRYING);
+
 		SendMessageException sme( e.what());
 		throw sme;
 	}
@@ -91,10 +108,10 @@ void TradingAdapter::start() {
 
 	// open connection to remote host
 	try {
+		std::cout << "connecting to " << this->remoteHost << ":" << this->remotePort << std::endl;
 		this->socket = new NL::Socket(this->remoteHost, this->remotePort);
-//		this->onPhysicalConnection();
-		// Resume heartbeats
-		resumeHeartBeats();
+		this->onPhysicalConnection();
+
 		std::cout << "TradingAdapter: started" << std::endl;
 	} catch (NL::Exception &e) {
 		std::cerr << "Could not connect to remote host because " << e.what() << std::endl;
@@ -106,7 +123,8 @@ void TradingAdapter::start() {
 void TradingAdapter::stop() {
 	//std::cout << "TradingAdapter: Stopping" << std::endl;
 	// Suspend heartbeats
-	suspendHeartBeats();
+	changeStatus(KeepAlive::Status::IDLE);
+
 	// TODO send logout
 	closeSocket( 1000);
 	//std::cout << "TradingAdapter: Stopped" << std::endl;
