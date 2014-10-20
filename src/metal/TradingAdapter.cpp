@@ -86,12 +86,15 @@ void TradingAdapter::send( Message &msg) {
 	try {
 		this->socket->send(msg.getData(), msg.getLength());
 		std::cout << "TradingAdapter: sent " << msg.getLength() << " bytes" << std::endl;
-	} catch (std::exception &e) {
-		// change the status so we can retry a connection
-		changeStatus(KeepAlive::Status::RETRYING);
+	}
+	catch (std::exception &e) {
 
-		SendMessageException sme( e.what());
-		throw sme;
+//		SendMessageException sme( e.what());
+//		throw sme;
+	} catch (...) {
+		std::cerr << "Could not send message" << std::endl;
+		// change the status so we can retry a connection
+		changeStatus(RETRYING);
 	}
 }
 
@@ -117,13 +120,16 @@ void TradingAdapter::start() {
 	// open connection to remote host
 	try {
 		std::cout << "Connecting to " << this->remoteHost << ":" << this->remotePort << std::endl;
+		changeStatus(CONNECTING);
 		this->socket = new NL::Socket(this->remoteHost, this->remotePort);
+		std::cout << "Connected." << std::endl;
 		this->onPhysicalConnection();
-
-		std::cout << "TradingAdapter: started" << std::endl;
 	} catch (NL::Exception &e) {
-		changeStatus(RETRYING);
+		// Connection failed. Do we still need to try?
 		std::cerr << "Could not connect to remote host because " << e.what() << e.nativeErrorCode() << std::endl;
+		if (CONNECTING == getStatus()){
+			changeStatus(RETRYING);
+		}
 	}
 
 
@@ -132,7 +138,7 @@ void TradingAdapter::start() {
 void TradingAdapter::stop() {
 	//std::cout << "TradingAdapter: Stopping" << std::endl;
 	// Suspend heartbeats
-	changeStatus(KeepAlive::Status::IDLE);
+	changeStatus(IDLE);
 
 	// TODO send logout
 	closeSocket( 1000);

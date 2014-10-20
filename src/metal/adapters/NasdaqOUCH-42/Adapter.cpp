@@ -1,7 +1,7 @@
 /**
  * NasdaqAdapter.cpp
  *
- *  Created on: 2014-10-14
+ *  Created on: 2014-10-20
  *      Author: Bootstrapper v0.1
  *
  */

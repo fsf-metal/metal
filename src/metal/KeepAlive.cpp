@@ -33,6 +33,15 @@ void KeepAlive::changeStatus( Status newStatus) {
 	this->statusMutex.unlock();
 }
 
+const KeepAlive::Status & KeepAlive::getStatus() {
+
+	this->statusMutex.lock();
+	Status output = this->status;
+	this->statusMutex.unlock();
+
+	return output;
+}
+
 string KeepAlive::getStatusName( const Status &status, string &output) {
 	switch (status) {
 	case IDLE: output = "Idle"; break;
@@ -57,10 +66,7 @@ void KeepAlive::run() {
 	while( loopHappily) {
 		this_thread::sleep_for(this->granularity);
 
-		this->statusMutex.lock();
-		Status status = this->status;
-		this->statusMutex.unlock();
-		switch (this->status) {
+		switch (getStatus()) {
 		case IDLE:
 			// Watchout, this can be quite verbose
 			// cout << "KeepAlive: Idle" << endl;

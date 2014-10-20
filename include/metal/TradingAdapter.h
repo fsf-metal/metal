@@ -70,7 +70,7 @@ class TradingAdapter : public Adapter, public KeepAlive {
 		/**
 		 * Should be implemented by subclasses to send heart beats
 		 */
-		void encodeHeartBeat(Message &msg);
+		virtual void encodeHeartBeat(Message &msg);
 
 		/**
 		* This method should be overriden by subclasses<br>

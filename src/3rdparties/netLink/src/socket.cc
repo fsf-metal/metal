@@ -261,7 +261,7 @@ void Socket::initSocket() {
     }
 
     if(!connected)
-        throw Exception(Exception::ERROR_CONNECT_SOCKET, "Socket::initSocket: error in socket connection/bind", getSocketErrorCode());
+        throw Exception(Exception::ERROR_CONNECT_SOCKET, "Connection failed", getSocketErrorCode());
 
 
     if(!_portFrom)

@@ -83,6 +83,8 @@ int main( int argc, char *argv[]) {
 			cerr << "Parsing failed: " << e.what() << endl;
 		} catch( exception &e) {
 			cerr << "Something failed: " << e.what() << endl;
+		} catch (...) {
+			cerr << "Something else failed" << endl;
 		}
 	}
 

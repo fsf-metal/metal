@@ -22,6 +22,7 @@ Mapper::Mapper() : Metal::Mapper() {
 	sideFrom["2"] = "S";
 	sideFrom["5"] = "T";
 	sideFrom["6"] = "E";
+
 	// side to FIX
 	sideTo["B"] = "1";
 	sideTo["S"] = "2";
