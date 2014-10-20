@@ -8,7 +8,9 @@
 
 namespace Metal {
 
-TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval) : Adapter(name, uuid),HeartBeater( heartBeatInterval) {
+TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval) :
+		Adapter(name, uuid),
+		Session( heartBeatInterval, 0) {
 	this->socket = NULL;
 	this->remoteHost = "";
 	this->remotePort = 0;
@@ -45,7 +47,6 @@ void TradingAdapter::encodeHeartBeat(Message &msg) {
 void TradingAdapter::encodeLogon(Message &msg) {
 	throw MissingImplementationException( "TradingAdapter: encodeLogon is invoked but not implemented");
 }
-
 
 void TradingAdapter::heartBeat() {
 	Message msg;

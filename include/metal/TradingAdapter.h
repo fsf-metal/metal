@@ -11,14 +11,14 @@
 #include "metal.h"
 #include "Mapper.h"
 #include "Message.h"
-#include "HeartBeat.h"
+#include "Session.h"
 
 namespace Metal {
 
 /**
  * This class is responsible for maintaining the session
  */
-class TradingAdapter : public Adapter, public HeartBeater {
+class TradingAdapter : public Adapter, public Session {
 	public:
 		/**
 		 * @param name Whatever should be used to identify this adapter.
@@ -129,7 +129,7 @@ class TradingAdapter : public Adapter, public HeartBeater {
 		/**
 		 * Send a heartbeat to the remote party
 		 */
-		void TradingAdapter::heartBeat();
+		void heartBeat();
 
 };
 
