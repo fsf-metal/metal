@@ -25,6 +25,12 @@
 #include <string.h>
 #include <stdio.h>
 
+#ifdef OS_WINDOWS
+#   define SEND_FLAGS 0
+#else
+#   define SEND_FLAGS MSG_NOSIGNAL 
+#endif
+
 
 NL_NAMESPACE
 
@@ -565,10 +571,10 @@ void Socket::send(const void* buffer, size_t size) {
 
     while (sentData < size) {
 
-        int status = ::send(_socketHandler, (const char*)buffer + sentData, size - sentData, 0);
+        int status = ::send(_socketHandler, (const char*)buffer + sentData, size - sentData, SEND_FLAGS);
 
         if(status == -1)
-            throw Exception(Exception::ERROR_SEND, "Error sending data", getSocketErrorCode());
+            throw Exception(Exception::ERROR_SEND, "Socket::send() failed", getSocketErrorCode());
 
         sentData += status;
     }

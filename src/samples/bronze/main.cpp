@@ -99,11 +99,6 @@ void OSSpecifics() {
 		cerr << "WSAStartup failed with error: " << err << endl;
 		return 1;
 	}
-#else // Linux
-    // For linux we ignore SIGPIPE which would terminate the program
-    // if we were writting to a closed socket
-    // for example heartbeats after connection was dropped remotely
-    signal(SIGPIPE, SIG_IGN);
 #endif
 }
 
