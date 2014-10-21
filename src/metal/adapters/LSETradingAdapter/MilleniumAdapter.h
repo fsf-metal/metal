@@ -18,7 +18,7 @@ class MilleniumAdapter : public TradingAdapter {
 		 */
 		void encode( const NewOrderSingle& nos, Message &msg);
 
-		virtual void recv( const ExecutionReport &er);
+		virtual void onMessage( const ExecutionReport &er);
 
 		/**
 		 * @see TradingAdapter#benchmark

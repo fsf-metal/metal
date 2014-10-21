@@ -25,9 +25,9 @@
 #include <string.h>
 #include <stdio.h>
 
-#ifdef OS_WINDOWS
+#ifdef _WIN32
 #   define SEND_FLAGS 0
-#else
+#else if __linux__
 #   define SEND_FLAGS MSG_NOSIGNAL 
 #endif
 

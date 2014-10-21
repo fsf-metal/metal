@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <chrono>
 #include <ctime>
+#include <string>
 
 #include <metal/KeepAlive.h>
 
@@ -19,7 +20,7 @@ KeepAlive::KeepAlive(int heartBeatInterval, int retryInterval) {
 	// envertually start the thread
 	this->thread = std::thread(&KeepAlive::run, this);
 
-	cout << "KeepAlive started with HBInt=" << to_string(heartBeatInterval) << ", RetryInt=" << to_string(retryInterval).c_str() << endl;
+	cout << "KeepAlive started with HBInt=" << to_string(heartBeatInterval) << ", RetryInt=" << to_string(retryInterval) << endl;
 }
 
 

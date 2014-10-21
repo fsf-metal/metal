@@ -20,7 +20,7 @@ class QuickFIXAdapter : public TradingAdapter {
 		 */
 		void send( const NewOrderSingle &nos);
 
-		virtual void recv( const ExecutionReport &er);
+		virtual void onMessage( const ExecutionReport &er);
 
 		//-----------
 		// life cycle

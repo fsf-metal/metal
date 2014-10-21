@@ -9,8 +9,6 @@
 #include "MilleniumCodec.h"
 #include "LSEValues.h"
 
-#define MIN(a,b) ( (a) > (b) ? (a) : (b))
-
 namespace Metal {
 namespace LSE {
 

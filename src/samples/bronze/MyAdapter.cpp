@@ -17,7 +17,7 @@ MyAdapter::~MyAdapter() {
 	// TODO Auto-generated destructor stub
 }
 
-void MyAdapter::recv( const Metal::ExecutionReport &er) {
+void MyAdapter::onMessage( const Metal::ExecutionReport &er) {
 	std::cout << "\nExecution Report:";
 	if (er.isSetField(FIX::FIELD::ClOrdID)) {
 		FIX::ClOrdID clOrdID;

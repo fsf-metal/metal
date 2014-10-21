@@ -93,7 +93,7 @@ void MilleniumAdapter::encodeLogon(Message &msg) {
 	codec.encode(logon, msg);
 }
 
-void MilleniumAdapter::recv(const ExecutionReport &er) {
+void MilleniumAdapter::onMessage(const ExecutionReport &er) {
 	std::cout << "LSETradingAdapter: Execution Report received but not processed" << std::endl;
 }
 

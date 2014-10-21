@@ -4,17 +4,23 @@
 #include <string>
 
 namespace Metal {
-class Adapter {
+	class Adapter {
 	public:
 		/**
-		 * @param uuid a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
+		 * Constructor
+		 * @param nameParam the actual adapter name in english
+		 * @param uuidParam a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
 		 */
-		Adapter( const std::string& nameParam, const std::string& uuidParam):name( nameParam),uuid( uuidParam){};
-
-		const std::string & getName() { return this->name;};
+		Adapter(const std::string& nameParam, const std::string& uuidParam) :name(name), uuid(uuidParam){};
 
 		/**
-		 * Retrieve Unique ID
+		 * Find out Adapter name
+		 * @return Current adapter name
+		 */
+		const std::string & getName() { return this->name; };
+
+		/**
+		 * Retrieve Adapter Unique ID
 		 * For example, this is used by benchmarking to report results<br>
 		 * This is also used on the web site to identify adapters.
 		 */
@@ -27,7 +33,9 @@ class Adapter {
 		~Adapter(){};
 		std::string name;
 		std::string uuid;
-};
+
+	private:
+	};
 }
 
 #endif // __METAL_ADAPTER_H

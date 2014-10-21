@@ -84,7 +84,7 @@ class TradingAdapter : public Adapter, public KeepAlive {
 		 * Subclasses will perform mapping, encoding then write to the active session<br>
 		 * @param ExecutionReport incomming execution report
 		 */
-		virtual void recv( const ExecutionReport &er) = 0;
+		virtual void onMessage( const ExecutionReport &er) = 0;
 
 		/**
 		 * invokwed with the time is right to retry a connection 
