@@ -1,5 +1,7 @@
 #include <iostream>
 #include <algorithm>
+#include <chrono>
+#include <ctime>
 
 #include <metal/KeepAlive.h>
 
@@ -16,6 +18,8 @@ KeepAlive::KeepAlive(int heartBeatInterval, int retryInterval) {
 
 	// envertually start the thread
 	this->thread = std::thread(&KeepAlive::run, this);
+
+	cout << "KeepAlive started with HBInt=" << to_string(heartBeatInterval) << ", RetryInt=" << to_string(retryInterval).c_str() << endl;
 }
 
 
@@ -25,15 +29,15 @@ KeepAlive::~KeepAlive() {
 }
 
 void KeepAlive::changeStatus( Status newStatus) {
-//	string statusName;
-//	cout << "KeepAlive: Changing status to " << getStatusName( newStatus, statusName).c_str() << endl;
+	string statusName;
+	cout << "KeepAlive: Changing status to " << getStatusName( newStatus, statusName).c_str() << endl;
 
 	this->statusMutex.lock();
 	this->status = newStatus;
 	this->statusMutex.unlock();
 }
 
-const KeepAlive::Status & KeepAlive::getStatus() {
+const KeepAlive::Status KeepAlive::getStatus() {
 
 	this->statusMutex.lock();
 	Status output = this->status;
@@ -56,26 +60,33 @@ string KeepAlive::getStatusName( const Status &status, string &output) {
 
 void KeepAlive::run() {
 //	cout << "HeartBeat: thread is running" << endl;
-	clock_t lastBeat = 0;
-	clock_t lastRetry = 0;
-	float maxClocksHeartBeat = (float)( this->heartBeatIntervalInSeconds * CLOCKS_PER_SEC);
-	float maxClocksRetry = (float)( this->retryIntervalInSeconds * CLOCKS_PER_SEC);
+	chrono::time_point<chrono::system_clock> lastBeat, lastRetry;
+	lastBeat = chrono::system_clock::now();
+	lastRetry = lastBeat;
 
 	bool loopHappily = true;
 
 	while( loopHappily) {
 		this_thread::sleep_for(this->granularity);
 
+		string output;
+		cout << "KeepAlive: " << getStatusName( getStatus(), output) << endl;
 		switch (getStatus()) {
 		case IDLE:
 			// Watchout, this can be quite verbose
 			// cout << "KeepAlive: Idle" << endl;
 			break;
 
+        case CONNECTING:    
+            // Just wait for connection
+            break;
+
 		case HEARTBEATING: { // send the heatbeat if the time is reight
 			// cout << "KeepAlive: Heartbeat" << endl;
-			clock_t now = clock();
-			if( float(now - lastBeat) >= maxClocksHeartBeat) {
+			using namespace chrono;
+			time_point<system_clock> now = system_clock::now();
+			duration<double> elapsed = now - lastBeat;
+			if( elapsed.count() > this->heartBeatIntervalInSeconds) {
 				heartBeat();
 				lastBeat = now;
 			}
@@ -84,8 +95,10 @@ void KeepAlive::run() {
 
 		case RETRYING: { // retry the connection if the timming is right
 			//cout << "KeepAlive: Retry" << endl;
-			clock_t now = clock();
-			if (float(now - lastRetry) >= maxClocksRetry) {
+			using namespace chrono;
+			time_point<system_clock> now = system_clock::now();
+			duration<double> elapsed = now - lastRetry;
+			if( elapsed.count() > this->retryIntervalInSeconds) {
 				retryConnection();
 				lastRetry = now;
 			}

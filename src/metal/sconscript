@@ -1,6 +1,6 @@
 import glob
 
-src_files = 'TradingAdapter.cpp Translator.cpp Mapper.cpp Message.cpp Codec.cpp Session.cpp'
+src_files = 'TradingAdapter.cpp Translator.cpp Mapper.cpp Message.cpp Codec.cpp KeepAlive.cpp'
 lib_files = 'quickfix'
 include_path = '../../include'
 output_file = 'Metal.so'

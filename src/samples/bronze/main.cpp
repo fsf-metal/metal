@@ -63,12 +63,13 @@ int main( int argc, char *argv[]) {
 		try {
 			cout << "> "; // Mighty prompt
 			getline(cin, command);
+			if( command == "") continue;
 			if (command == "exit") break;
 			if (command == "stop") {
 				adapter.stop();
 			} else if (command.substr( 0,4) == "host") {
 				vector<string> tokens =	split(command, ' ');
-				if (tokens.size() != 3) throw runtime_error( "Expecting at two arguments for \"host\"");
+				if (tokens.size() != 3) throw runtime_error( "Expecting two arguments for \"host\"");
 				adapter.setRemoteHost( tokens.at(1), (unsigned int)atoi( tokens.at(2).c_str()) );
 			} else if (command == "start") {
 				adapter.start();

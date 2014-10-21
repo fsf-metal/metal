@@ -26,7 +26,7 @@ public:
 	 * These are the possible statuses for keep alive.<br>
 	 * You can suspend operation using IDLE or terminate the thread using KILLED
 	 */
-	static enum Status { IDLE, CONNECTING, HEARTBEATING, RETRYING, KILLED };
+	enum Status { IDLE, CONNECTING, HEARTBEATING, RETRYING, KILLED };
 
 	/**
 	* Thread safe function to change status
@@ -36,7 +36,7 @@ public:
 	/**
 	 * Thread safe method to get current status
 	 */
-	const Status & getStatus();
+	const Status getStatus();
 
 	static std::string getStatusName(const Status &status, std::string &output);
 
