@@ -21,6 +21,7 @@
 using namespace std;
 
 vector<string> split(const string &s, char delim);
+void OSSpecifics(void);
 
 /**
  * Our main function is a loop for all commands
@@ -29,23 +30,7 @@ vector<string> split(const string &s, char delim);
  */
 int main( int argc, char *argv[]) {
 
-	// Windows requires a favor to start WinSock
-#ifdef _WIN32
-	WORD wVersionRequested;
-	WSADATA wsaData;
-	int err;
-
-	/* Use the MAKEWORD(lowbyte, highbyte) macro declared in Windef.h */
-	wVersionRequested = MAKEWORD(2, 2);
-
-	err = WSAStartup(wVersionRequested, &wsaData);
-	if (err != 0) {
-		/* Tell the user that we could not find a usable */
-		/* Winsock DLL.                                  */
-		cerr << "WSAStartup failed with error: " << err << endl;
-		return 1;
-	}
-#endif
+    OSSpecifics();
 
 	cout << "---------------------------------------------------------------" << endl;
 	cout << " Please type in your commands then \"exit\" when you are done" << endl;
@@ -96,7 +81,31 @@ int main( int argc, char *argv[]) {
 	return 0;
 }
 
+void OSSpecifics() {
+#ifdef OS_WINDOWS
+	// Windows requires a favor to start WinSock
+    // We need to invoke WSAStartup
+	WORD wVersionRequested;
+	WSADATA wsaData;
+	int err;
 
+	/* Use the MAKEWORD(lowbyte, highbyte) macro declared in Windef.h */
+	wVersionRequested = MAKEWORD(2, 2);
+
+	err = WSAStartup(wVersionRequested, &wsaData);
+	if (err != 0) {
+		/* Tell the user that we could not find a usable */
+		/* Winsock DLL.                                  */
+		cerr << "WSAStartup failed with error: " << err << endl;
+		return 1;
+	}
+#else // Linux
+    // For linux we ignore SIGPIPE which would terminate the program
+    // if we were writting to a closed socket
+    // for example heartbeats after connection was dropped remotely
+    signal(SIGPIPE, SIG_IGN);
+#endif
+}
 
 std::vector<std::string> split(const std::string &s, char delim) {
 	std::vector<std::string> elems;

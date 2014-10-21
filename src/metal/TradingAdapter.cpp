@@ -86,8 +86,9 @@ void TradingAdapter::send( Message &msg) {
 	try {
 		this->socket->send(msg.getData(), msg.getLength());
 		std::cout << "TradingAdapter: sent " << msg.getLength() << " bytes" << std::endl;
-	}
-	catch (std::exception &e) {
+	} catch (std::exception &e) {
+		std::cerr << "Could not send message: " << e.what() << std::endl;
+		changeStatus(RETRYING);
 
 //		SendMessageException sme( e.what());
 //		throw sme;
