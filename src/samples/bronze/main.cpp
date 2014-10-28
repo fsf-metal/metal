@@ -82,7 +82,7 @@ int main( int argc, char *argv[]) {
 }
 
 void OSSpecifics() {
-#ifdef OS_WINDOWS
+#ifdef _WIN32
 	// Windows requires a favor to start WinSock
     // We need to invoke WSAStartup
 	WORD wVersionRequested;
@@ -97,7 +97,6 @@ void OSSpecifics() {
 		/* Tell the user that we could not find a usable */
 		/* Winsock DLL.                                  */
 		cerr << "WSAStartup failed with error: " << err << endl;
-		return 1;
 	}
 #endif
 }

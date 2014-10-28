@@ -1,3 +1,24 @@
+/*
+    MeTAL: My Electronic Trading Adapters Library
+    Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)
+
+    This file is part of MeTAL.
+
+	MeTAL is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	MeTAL is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with MeTAL source code. If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 #include <iostream>
 #include <thread>
 
@@ -28,6 +49,7 @@ void TradingAdapter::closeSocket( int delayMillis) {
 			std::this_thread::sleep_for(dura);
 		}
 		this->socket->disconnect();
+
 		delete this->socket;
 		this->socket = NULL;
 	}
@@ -65,6 +87,7 @@ void TradingAdapter::onPhysicalConnection() {
 	changeStatus( IDLE);
 
 	try {
+		// 
 		Message logon;
 		this->encodeLogon(logon);
 		this->send(logon);
@@ -82,6 +105,9 @@ void TradingAdapter::retryConnection() {
 	start();
 }
 
+/**
+ * Write a message on the socket
+ */
 void TradingAdapter::send( Message &msg) {
 	try {
 		this->socket->send(msg.getData(), msg.getLength());
@@ -124,7 +150,12 @@ void TradingAdapter::start() {
 		changeStatus(CONNECTING);
 		this->socket = new NL::Socket(this->remoteHost, this->remotePort);
 		std::cout << "Connected." << std::endl;
+
+		// Start listenning
+		Adapter::start();
+
 		this->onPhysicalConnection();
+
 	} catch (NL::Exception &e) {
 		// Connection failed. Do we still need to try?
 		std::cerr << "Could not connect to remote host because " << e.what() << e.nativeErrorCode() << std::endl;
@@ -138,6 +169,9 @@ void TradingAdapter::start() {
 
 void TradingAdapter::stop() {
 	//std::cout << "TradingAdapter: Stopping" << std::endl;
+
+	Adapter::stop();
+
 	// Suspend heartbeats
 	changeStatus(IDLE);
 

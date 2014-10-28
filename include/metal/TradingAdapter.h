@@ -1,3 +1,23 @@
+/*
+    MeTAL: My Electronic Trading Adapters Library
+    Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)
+
+    This file is part of MeTAL.
+
+	MeTAL is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	MeTAL is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with MeTAL source code. If not, see <http://www.gnu.org/licenses/>.
+
+*/
 #ifndef __METAL_TRADINGADAPTER_H
 #define __METAL_TRADINGADAPTER_H
 
@@ -40,13 +60,13 @@ class TradingAdapter : public Adapter, public KeepAlive {
 		 * This function should be invoked to initiate physical connection<br>
 		 * It will create a new Thread for incoming messages
 		 */
-		void start();
+		virtual void start();
 
 		/**
 		* This method will close logical and physical connection<br>
 		* All created threads will be terminated
 		*/
-		void stop();
+		virtual void stop();
 
 		/**
 		 * This methods sends an message in native format.
@@ -124,7 +144,6 @@ class TradingAdapter : public Adapter, public KeepAlive {
 
 		std::string remoteHost;
 		unsigned int remotePort;
-		NL::Socket *socket;
 
 		/**
 		 * This will terminate the physical connection if need be

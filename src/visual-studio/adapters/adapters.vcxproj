@@ -88,6 +88,7 @@
     <ClInclude Include="HeartBeat.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\metal\adapters\Adapter.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp" />
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumCodec.cpp" />

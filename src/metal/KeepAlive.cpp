@@ -1,3 +1,24 @@
+/*
+    MeTAL: My Electronic Trading Adapters Library
+    Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)
+
+    This file is part of MeTAL.
+
+	MeTAL is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	MeTAL is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with MeTAL source code. If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 #include <iostream>
 #include <algorithm>
 #include <chrono>
@@ -82,7 +103,7 @@ void KeepAlive::run() {
             // Just wait for connection
             break;
 
-		case HEARTBEATING: { // send the heatbeat if the time is reight
+		case HEARTBEATING: { // send the heatbeat if we have waited long enough
 			// cout << "KeepAlive: Heartbeat" << endl;
 			using namespace chrono;
 			time_point<system_clock> now = system_clock::now();
@@ -94,7 +115,7 @@ void KeepAlive::run() {
 		}
 			break;
 
-		case RETRYING: { // retry the connection if the timming is right
+		case RETRYING: { // retry the connection if we have waited long enough
 			//cout << "KeepAlive: Retry" << endl;
 			using namespace chrono;
 			time_point<system_clock> now = system_clock::now();
