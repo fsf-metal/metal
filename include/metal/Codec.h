@@ -31,6 +31,12 @@ class Codec
 public:
 	Codec();
 
+	/**
+	 * Decode a message from its wire representation
+	 * @return Message length or 0 if no message was found in data
+	 */
+	virtual int decode(char* data, int size, Message &msg) = 0;
+
 	inline void encode(const std::string &str, Message &msg, int position, int maxLength){
 		msg.set(position, str, maxLength);
 	};

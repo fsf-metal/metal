@@ -36,25 +36,20 @@
 namespace Metal {
 
 /**
- * This class is responsible for maintaining the session
+ * TradingAdapter responsibility<br>
+ * 1) Send New Orders, Receive execution reports
  */
-class TradingAdapter : public Adapter, public KeepAlive {
+class TradingAdapter : public Adapter {
 	public:
 		/**
 		 * @param name Whatever should be used to identify this adapter.
 		 * @param uuid a unique identifier. Check out http://www.famkruithof.net/uuid/uuidgen to create your own
+		 * @param codec whatever codec should be used to crack messages
 		 * @param heartBeatInterval number of seconds between heartbeats. Defaults to 30 seconds.
 		 * @param retryInterval number of seconds between retries when connection is lost. Defaults to 5 seconds.
 		 * Subclasses will perform mapping, encoding then write to the active session
 		 */
-		TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval = 30, int retryInterval = 5);
-
-		/**
-		 * This method should be invoked before starting the adapter to set remote host properties
-		 * @param hostName name of the remote host
-		 * @param portNumber remote port number
-		 */
-		void setRemoteHost(const std::string &hostName, unsigned int portNumber);
+		TradingAdapter( const std::string& name, const std::string& uuid, Codec * codec, int heartBeatInterval = 30, int retryInterval = 5);
 
 		/**
 		 * This function should be invoked to initiate physical connection<br>
@@ -79,7 +74,8 @@ class TradingAdapter : public Adapter, public KeepAlive {
 		 * You should override send() to leverage your own sending mechanism
 		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
 		 */
-		virtual void send( const NewOrderSingle &);
+		virtual void send( const NewOrderSingle &) = 0;
+
 		/**
 		 * Performs full conversion (mapping + encoding) on NewOrderSingle
 		 * @param nos order message to be encoding
@@ -90,24 +86,23 @@ class TradingAdapter : public Adapter, public KeepAlive {
 		/**
 		 * Should be implemented by subclasses to send heart beats
 		 */
-		virtual void encodeHeartBeat(Message &msg);
+		virtual void encodeHeartBeat(Message &msg) = 0;
 
 		/**
 		* This method should be overriden by subclasses<br>
-		* We do not make it pure virtual to reduce constraints
 		* @param msg Where encoded Logon Message will be stored
 		*/
-		virtual void encodeLogon( Message &msg);
+		virtual void encodeLogon( Message &msg) = 0;
 
 		/**
 		 * This method will invoked upon receiving an execution report<br>
 		 * Subclasses will perform mapping, encoding then write to the active session<br>
 		 * @param ExecutionReport incomming execution report
 		 */
-		virtual void onMessage( const ExecutionReport &er) = 0;
+		virtual void onExecutionReport( const ExecutionReport &er) = 0;
 
 		/**
-		 * invokwed with the time is right to retry a connection 
+		 * invoked with the time is right to retry a connection 
 		 */
 		void retryConnection();
 
@@ -142,8 +137,6 @@ class TradingAdapter : public Adapter, public KeepAlive {
 	protected:
 		~TradingAdapter();
 
-		std::string remoteHost;
-		unsigned int remotePort;
 
 		/**
 		 * This will terminate the physical connection if need be

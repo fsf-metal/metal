@@ -33,6 +33,9 @@ public:
 	Side side;
 	OrderQty orderQty;
 	DisplayQty displayQty;
+	/**
+	 * Price is stored with 8 implied decimal places
+	 */
 	Price limitPrice;
 	Capacity capacity;
 	AutoCancel autoCancel;

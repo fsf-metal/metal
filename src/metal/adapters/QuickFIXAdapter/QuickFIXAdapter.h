@@ -38,6 +38,12 @@ class QuickFIXAdapter : public TradingAdapter {
 		*/
 		void benchmark( const std::vector<OrderCancelRequest> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
 
+		/**
+		 * We don't need to provide Logon Encoding because QuickFIX provides its own session management
+		 */
+		virtual void encodeLogon(Message &msg){};
+		virtual void encodeHeartBeat(Message &msg){};
+
 		virtual ~QuickFIXAdapter(){};
 
 	private:

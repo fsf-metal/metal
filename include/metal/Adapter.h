@@ -28,12 +28,16 @@
 
 #include <netlink/socket.h>
 #include <netlink/socket_group.h>
+#include <metal/Codec.h>
 
 namespace Metal {
 	using namespace std;
 
 	/**
-	 * This class is responsible for reading inbound data as well as storing basic information about the adapter<br>
+	 * <h1>Adapter class Responsibility<h1>
+	 * 1) Session Life Cycle: Physical connection, reconnections, logon and heartbeats
+	 * 2) grouping inbound data into messages<br>
+	 * It is also storing basic ID about the adapter<br>
 	 * Inbound data is read in a separate thread which entry point is Adapter#dataListenner()
 	 */
 	class Adapter {
@@ -43,7 +47,7 @@ namespace Metal {
 		 * @param nameParam the actual adapter name in english
 		 * @param uuidParam a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
 		 */
-		Adapter(const string& nameParam, const string& uuidParam);
+		Adapter(const string& nameParam, const string& uuidParam, Codec *codec);
 
 		/**
 		 * Find out Adapter name
@@ -57,6 +61,13 @@ namespace Metal {
 		 * This is also used on the web site to identify adapters.
 		 */
 		const string & getUUID() { return this->uuid; };
+
+		/**
+		 * This method should be invoked before starting the adapter to set remote host properties
+		 * @param hostName name of the remote host
+		 * @param portNumber remote port number
+		 */
+		void setRemoteHost(const std::string &hostName, unsigned int portNumber);
 
 		/**
 		 * Starts the listenner thread
@@ -74,9 +85,10 @@ namespace Metal {
 		string uuid;
 
 		/**
-		* This is the active socket
-		*/
+		 * This is the active socket
+		 */
 		NL::Socket *socket;
+		Codec *codec;
 
 	private:
 		/** This thread will read inbound data */
@@ -86,9 +98,15 @@ namespace Metal {
 		bool listenning;
 
 		/**
-		* This method is meant to be used at the thread entry point
-		*/
+		 * This method is meant to be used at the thread entry point
+		 */
 		void dataListenner();
+
+		/**
+		 * Remote party information
+		 */
+		std::string remoteHost;
+		unsigned int remotePort;
 
 		/**
 		 * Stops the listenner thread if running

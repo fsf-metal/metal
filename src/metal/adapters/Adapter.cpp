@@ -23,13 +23,15 @@
 #include <iostream>
 
 #include <metal/Adapter.h>
+#include <metal/Message.h>
 
 using namespace std;
 
 namespace Metal {
-	Adapter::Adapter(const std::string& nameParam, const std::string& uuidParam) :name(name), uuid(uuidParam) {
+	Adapter::Adapter(const std::string& nameParam, const std::string& uuidParam, Codec * codec) :name(name), uuid(uuidParam) {
 		this->listenning = true;
 		this->listennerThread = NULL;
+		this->codec = codec;
 	}
 
 	Adapter::~Adapter() {
@@ -41,22 +43,39 @@ namespace Metal {
 		char buffer[4096];
 		size_t size = sizeof(buffer);
 		int readSize = 0;
+		int offset = 0;
+		int msgLength = 0;
+		Message msg;
 
+		/**
+		 * The purpose of this loop is to transform network bytes into messages and detect connection problems
+		 */
 		while (this->listenning) {
 			try {
 				if (this->socket != NULL) {
-					readSize = this->socket->read(buffer, size);
+					readSize = this->socket->read( &buffer[offset], size - offset);
 					if (!readSize) {
 						cerr << "Adapter::dataListenner nothing left to read" << endl;
-					}
-					else {
-						cout << "Adapter::dataListenner received " << readSize << " bytes" << endl;
+					} else {
+						offset += readSize;
+						// do we have a complete message?
+						msgLength = this->codec->decode( buffer, offset, msg);
+						if ( msgLength == 0) continue;
+
+						offset -= msgLength;
+
+						// do we have leftovers?
+						if (offset > 0) { // if so move them at the beginning of the buffer
+							memcpy(buffer, &buffer[msgLength], offset);
+						}
+
+						// cout << "Adapter::dataListenner received " << readSize << " bytes" << endl;
 					}
 				}
 			} catch (NL::Exception e) {
 				cerr << "Adapter::dataListenner exception " << e.what() << endl;
 			}
-			cout << "Adapter::dataListenner is not doing much for now" << endl;
+			// cout << "Adapter::dataListenner is not doing much for now" << endl;
 			this_thread::sleep_for(granularity);
 		}
 
