@@ -32,6 +32,7 @@ namespace Metal {
 		this->listenning = true;
 		this->listennerThread = NULL;
 		this->codec = codec;
+		if (this->codec == NULL) throw std::runtime_error( "Adapter: codec may not be null");
 	}
 
 	Adapter::~Adapter() {
