@@ -68,9 +68,6 @@
     <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp">
       <Filter>Source Files\LSETradingAdapter</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\KeepAlive.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\metal\adapters\Adapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

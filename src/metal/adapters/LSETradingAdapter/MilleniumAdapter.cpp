@@ -14,8 +14,8 @@
 namespace Metal {
 namespace LSE {
 
-MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading", "acba8ab0-4564-11e4-916c-0800200c9a66", 3) {
-
+MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading", "acba8ab0-4564-11e4-916c-0800200c9a66", new MilleniumCodec(), 3) {
+	this->mCodec = (MilleniumCodec*) this->codec;
 }
 
 void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
@@ -37,7 +37,7 @@ void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
 	}
 	auto t1 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		codec.encode( *mappedNewOrders.at( index), msg);
+		this->mCodec->encode( *mappedNewOrders.at( index), msg);
 	}
 	auto t2 = std::chrono::system_clock::now();
 
@@ -69,7 +69,7 @@ void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &
 	}
 	auto t1 = std::chrono::system_clock::now();
 	for( int index = 0; index < size; ++index) {
-		this->codec.encode( *mappedCancels.at( index), msg);
+		this->mCodec->encode( *mappedCancels.at( index), msg);
 	}
 	auto t2 = std::chrono::system_clock::now();
 
@@ -84,13 +84,9 @@ void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &
 
 }
 
-void MilleniumAdapter::encodeHeartBeat(Message &msg) {
-	codec.encodeHeartBeat(msg);
-}
-
 void MilleniumAdapter::encodeLogon(Message &msg) {
 	Logon logon(this->userName, this->password, "");
-	codec.encode(logon, msg);
+	this->mCodec->encode(logon, msg);
 }
 
 void MilleniumAdapter::onMessage(const ExecutionReport &er) {
@@ -100,7 +96,7 @@ void MilleniumAdapter::onMessage(const ExecutionReport &er) {
 void MilleniumAdapter::encode( const NewOrderSingle& nos, Message &msg) {
 	NewOrder no;
 	MilleniumMapper::map( nos, no);
-	this->codec.encode( no, msg);
+	this->mCodec->encode( no, msg);
 }
 
 

@@ -38,7 +38,7 @@ namespace Metal {
 	 * 1) Session Life Cycle: Physical connection, reconnections, logon and heartbeats
 	 * 2) grouping inbound data into messages<br>
 	 * It is also storing basic ID about the adapter<br>
-	 * Inbound data is read in a separate thread which entry point is Adapter#dataListenner()
+	 * Inbound data is read in a separate thread which entry point is Adapter#listennerLoop()
 	 */
 	class Adapter {
 	public:
@@ -46,8 +46,21 @@ namespace Metal {
 		 * Constructor
 		 * @param nameParam the actual adapter name in english
 		 * @param uuidParam a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
+		 * @param codec
+		 * @param heartBeatInterval Number of seconds between heartbeats. Set to 0 to disable heartbeats
+		 * @param retryInterval Number of seconds between retries. Set to 0 to disable retries.
 		 */
-		Adapter(const string& nameParam, const string& uuidParam, Codec *codec);
+		Adapter(const string& nameParam, const string& uuidParam, Codec *codec = NULL, int heartBeatInterval = 0, int retryInterval = 0);
+
+		/**
+		 * These are the possible statuses for keep alive.<br>
+		 */
+		enum Status { IDLE, CONNECTING, HEARTBEATING, RETRYING };
+
+		/**
+		 * Thread safe function to change adapter status
+		 */
+		void changeStatus(Status newStatus);
 
 		/**
 		 * Find out Adapter name
@@ -56,11 +69,24 @@ namespace Metal {
 		const string & getName() { return this->name; };
 
 		/**
+		 * Thread safe method to get current status
+		 */
+		const Status getStatus();
+
+		/** utility */
+		static std::string getStatusName(const Status &status, std::string &output);
+
+		/**
 		 * Retrieve Adapter Unique ID
 		 * For example, this is used by benchmarking to report results<br>
 		 * This is also used on the web site to identify adapters.
 		 */
 		const string & getUUID() { return this->uuid; };
+
+		/**
+		* This methods sends an message in native format.
+		*/
+		void send(Message& msg);
 
 		/**
 		 * This method should be invoked before starting the adapter to set remote host properties
@@ -91,6 +117,20 @@ namespace Metal {
 		Codec *codec;
 
 	private:
+		/**
+		 * How often should we look at the watch. This will be set to the 
+		 */
+		std::chrono::seconds granularity;
+
+		/** how often should we send heartbeats */
+		int heartBeatIntervalInSeconds;
+
+		/** flag used to terminate keep alive thread */
+		bool keepAlive;
+
+		/** This threads will keep the session alive */
+		thread *keepAliveThread;
+
 		/** This thread will read inbound data */
 		thread *listennerThread;
 
@@ -98,15 +138,57 @@ namespace Metal {
 		bool listenning;
 
 		/**
-		 * This method is meant to be used at the thread entry point
-		 */
-		void dataListenner();
-
-		/**
-		 * Remote party information
+		 * Remote party address
 		 */
 		std::string remoteHost;
+		/**
+		 * Remote party port
+		 */
 		unsigned int remotePort;
+
+		/** how often should we retry to revive the connection */
+		int retryIntervalInSeconds;
+
+		/**
+		 * Stores the current status
+		 */
+		Status status;
+
+		/**
+		 * Used for status synchronization
+		 */
+		std::mutex statusMutex;
+
+		/**
+		 * This will terminate the physical connection if need be
+		 * @param delay in milliseconds if we should wait before closing
+		 */
+		void closeSocket(int delay = 0);
+
+		/**
+		 * This is the keep alive thread loop
+		 */
+		void keepAliveLoop();
+
+		/**
+		 * This method is meant to be used at the thread entry point
+		 */
+		void listennerLoop();
+
+		/**
+		 * Send a heartbeat to the remote party
+		 */
+		void heartBeat();
+
+		/**
+		 * Performs connection
+		 */
+		void openSocket();
+
+		/**
+		 * Stops the keep alive thread if running
+		 */
+		void stopKeepAlive();
 
 		/**
 		 * Stops the listenner thread if running

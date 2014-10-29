@@ -98,7 +98,6 @@
     <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp" />
     <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp" />
     <ClCompile Include="..\..\metal\Message.cpp" />
-    <ClCompile Include="..\..\metal\KeepAlive.cpp" />
     <ClCompile Include="..\..\metal\TradingAdapter.cpp" />
     <ClCompile Include="..\..\metal\Translator.cpp" />
     <ClCompile Include="..\..\metal\Codec.cpp" />

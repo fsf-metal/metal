@@ -138,6 +138,19 @@ public:
 		msg.set(++position, (char) (i & 0x00000000000000FF));
 	};
 
+	/**
+	 * This method should be overriden by subclasses<br>
+	 * @param msg Where encoded HeartBeat Message will be stored
+	 */
+	virtual void encodeHeartBeat(Message &msg){};
+
+	/**
+	 * This method should be overriden by subclasses<br>
+	 * @param msg Where encoded Logon Message will be stored
+	 */
+	virtual void encodeLogon(Message &msg){};
+
+
 	virtual ~Codec();
 };
 

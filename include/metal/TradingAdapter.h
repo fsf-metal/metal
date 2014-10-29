@@ -49,24 +49,7 @@ class TradingAdapter : public Adapter {
 		 * @param retryInterval number of seconds between retries when connection is lost. Defaults to 5 seconds.
 		 * Subclasses will perform mapping, encoding then write to the active session
 		 */
-		TradingAdapter( const std::string& name, const std::string& uuid, Codec * codec, int heartBeatInterval = 30, int retryInterval = 5);
-
-		/**
-		 * This function should be invoked to initiate physical connection<br>
-		 * It will create a new Thread for incoming messages
-		 */
-		virtual void start();
-
-		/**
-		* This method will close logical and physical connection<br>
-		* All created threads will be terminated
-		*/
-		virtual void stop();
-
-		/**
-		 * This methods sends an message in native format.
-		 */
-		void send( Message& msg);
+		TradingAdapter( const std::string& name, const std::string& uuid, Codec * codec = NULL, int heartBeatInterval = 30, int retryInterval = 5);
 
 		/**
 		 * This method will be called by users to send new orders<br>
@@ -83,16 +66,6 @@ class TradingAdapter : public Adapter {
 		 */
 		virtual void encode( const NewOrderSingle &nos, Message &msg);
 
-		/**
-		 * Should be implemented by subclasses to send heart beats
-		 */
-		virtual void encodeHeartBeat(Message &msg) = 0;
-
-		/**
-		* This method should be overriden by subclasses<br>
-		* @param msg Where encoded Logon Message will be stored
-		*/
-		virtual void encodeLogon( Message &msg) = 0;
 
 		/**
 		 * This method will invoked upon receiving an execution report<br>
@@ -100,11 +73,6 @@ class TradingAdapter : public Adapter {
 		 * @param ExecutionReport incomming execution report
 		 */
 		virtual void onExecutionReport( const ExecutionReport &er) = 0;
-
-		/**
-		 * invoked with the time is right to retry a connection 
-		 */
-		void retryConnection();
 
 		/**
 		 * This method is invoked once the socket is connected<br>
@@ -138,16 +106,7 @@ class TradingAdapter : public Adapter {
 		~TradingAdapter();
 
 
-		/**
-		 * This will terminate the physical connection if need be
-		 * @param delay in milliseconds if we should wait before closing
-		 */
-		void closeSocket( int delay = 0);
 
-		/**
-		 * Send a heartbeat to the remote party
-		 */
-		void heartBeat();
 
 };
 

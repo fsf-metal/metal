@@ -40,7 +40,7 @@ class MilleniumAdapter : public TradingAdapter {
 		virtual ~MilleniumAdapter(){};
 
 	protected:
-		MilleniumCodec codec;
+		MilleniumCodec *mCodec;
 		std::string userName;
 		std::string password;
 };
