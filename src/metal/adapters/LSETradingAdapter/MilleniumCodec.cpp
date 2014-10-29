@@ -36,7 +36,7 @@ void MilleniumCodec::encode( const Metal::LSE::OrderCancelRequest &ocr, Metal::M
 }
 
 void MilleniumCodec::encode( const NewOrder &no, Metal::Message &msg) {
-	encodeHeader( msg, 97, MessageType_NEW_ORDER);
+	encodeHeader( msg, NewOrder::SIZE, MessageType_NEW_ORDER);
 
 	// Client Order ID @4 L20
 	Codec::encode( no.clientOrderID, msg, 4, 20);

@@ -19,6 +19,8 @@ public:
 	NewOrder();
 	virtual ~NewOrder();
 
+	static const int SIZE = 97;
+
 	// TODO : Add Type safe members
 	std::string clientOrderID;
 	std::string traderID;

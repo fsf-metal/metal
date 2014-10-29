@@ -54,11 +54,12 @@ public:
 		msg.set(++position, ((i & 0xFF00) >> 8));
 	};
 
+	// revised
 	inline void encodeLittleEndian(const int32_t &i, Message &msg, int position) {
-		msg.set(  position, (char)((i & 0xFF000000) >> 24));
-		msg.set(++position, (char)((i & 0x00FF0000) >> 16));
+		msg.set(  position, (char)( i & 0x000000FF));
 		msg.set(++position, (char)((i & 0x0000FF00) >> 8));
-		msg.set(++position, (char) (i & 0x000000FF));
+		msg.set(++position, (char)((i & 0x00FF0000) >> 16));
+		msg.set(++position, (char)((i & 0xFF000000) >> 24));
 	};
 
 	inline void encodeLittleEndian(const uint32_t &i, Message &msg, int position) {
