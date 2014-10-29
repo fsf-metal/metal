@@ -1,7 +1,7 @@
 import glob
 
-src_files = 'test.cpp ../Field.cpp'
-lib_files = 'gtest pthread json'
+src_files = 'test.cpp'
+lib_files = 'gtest pthread Metal'
 output_file = 'test'
 include_path = '../../../include/'
 lib_path = '../../../lib'
