@@ -1,33 +1,119 @@
+/*
+    MeTAL: My Electronic Trading Adapters Library
+    Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)
+
+    This file is part of MeTAL.
+
+    MeTAL is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    MeTAL is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with MeTAL source code. If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 #ifndef __METAL_ADAPTER_H
 #define __METAL_ADAPTER_H
 
 #include <string>
+#include <thread>
+#include <mutex>
+
+#include <netlink/socket.h>
+#include <netlink/socket_group.h>
+#include <metal/Codec.h>
 
 namespace Metal {
-class Adapter {
+	using namespace std;
+
+	/**
+	 * <h1>Adapter class Responsibility<h1>
+	 * 1) Session Life Cycle: Physical connection, reconnections, logon and heartbeats
+	 * 2) grouping inbound data into messages<br>
+	 * It is also storing basic ID about the adapter<br>
+	 * Inbound data is read in a separate thread which entry point is Adapter#dataListenner()
+	 */
+	class Adapter {
 	public:
 		/**
-		 * @param uuid a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
+		 * Constructor
+		 * @param nameParam the actual adapter name in english
+		 * @param uuidParam a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
 		 */
-		Adapter( const std::string& nameParam, const std::string& uuidParam):name( nameParam),uuid( uuidParam){};
-
-		const std::string & getName() { return this->name;};
+		Adapter(const string& nameParam, const string& uuidParam, Codec *codec);
 
 		/**
-		 * Retrieve Unique ID
+		 * Find out Adapter name
+		 * @return Current adapter name
+		 */
+		const string & getName() { return this->name; };
+
+		/**
+		 * Retrieve Adapter Unique ID
 		 * For example, this is used by benchmarking to report results<br>
 		 * This is also used on the web site to identify adapters.
 		 */
-		const std::string & getUUID() { return this->uuid; };
+		const string & getUUID() { return this->uuid; };
 
-		virtual void start() = 0;
-		virtual void stop() = 0;
+		/**
+		 * This method should be invoked before starting the adapter to set remote host properties
+		 * @param hostName name of the remote host
+		 * @param portNumber remote port number
+		 */
+		void setRemoteHost(const std::string &hostName, unsigned int portNumber);
+
+		/**
+		 * Starts the listenner thread
+		 */
+		virtual void start();
+
+		/**
+		 * Stops the listenner thread
+		 */
+		virtual void stop();
 
 	protected:
-		~Adapter(){};
-		std::string name;
-		std::string uuid;
-};
+		~Adapter();
+		string name;
+		string uuid;
+
+		/**
+		 * This is the active socket
+		 */
+		NL::Socket *socket;
+		Codec *codec;
+
+	private:
+		/** This thread will read inbound data */
+		thread *listennerThread;
+
+		/** Flag used to terminate the listenning thread */
+		bool listenning;
+
+		/**
+		 * This method is meant to be used at the thread entry point
+		 */
+		void dataListenner();
+
+		/**
+		 * Remote party information
+		 */
+		std::string remoteHost;
+		unsigned int remotePort;
+
+		/**
+		 * Stops the listenner thread if running
+		 */
+		void stopListenner();
+
+	};
 }
 
 #endif // __METAL_ADAPTER_H

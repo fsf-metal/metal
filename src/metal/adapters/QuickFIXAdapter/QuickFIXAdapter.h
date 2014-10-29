@@ -20,7 +20,7 @@ class QuickFIXAdapter : public TradingAdapter {
 		 */
 		void send( const NewOrderSingle &nos);
 
-		virtual void recv( const ExecutionReport &er);
+		virtual void onMessage( const ExecutionReport &er);
 
 		//-----------
 		// life cycle
@@ -37,6 +37,12 @@ class QuickFIXAdapter : public TradingAdapter {
 		* @see TradingAdapter#benchmark
 		*/
 		void benchmark( const std::vector<OrderCancelRequest> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
+
+		/**
+		 * We don't need to provide Logon Encoding because QuickFIX provides its own session management
+		 */
+		virtual void encodeLogon(Message &msg){};
+		virtual void encodeHeartBeat(Message &msg){};
 
 		virtual ~QuickFIXAdapter(){};
 

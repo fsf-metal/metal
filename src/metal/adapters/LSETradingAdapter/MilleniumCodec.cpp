@@ -9,8 +9,6 @@
 #include "MilleniumCodec.h"
 #include "LSEValues.h"
 
-#define MIN(a,b) ( (a) > (b) ? (a) : (b))
-
 namespace Metal {
 namespace LSE {
 
@@ -20,7 +18,7 @@ MilleniumCodec::MilleniumCodec() {
 MilleniumCodec::~MilleniumCodec() {
 }
 
-void MilleniumCodec::encode(const Logon &logon, Metal::Message &msg) {
+void MilleniumCodec::encode( const Logon &logon, Metal::Message &msg) {
 	encodeHeader( msg, 80, MessageType_LOGON);
 	Codec::encode( logon.userName, msg, 4, 25);
 	Codec::encode( logon.password, msg, 29, 25);
@@ -38,7 +36,7 @@ void MilleniumCodec::encode( const Metal::LSE::OrderCancelRequest &ocr, Metal::M
 }
 
 void MilleniumCodec::encode( const NewOrder &no, Metal::Message &msg) {
-	encodeHeader( msg, 97, MessageType_NEW_ORDER);
+	encodeHeader( msg, NewOrder::SIZE, MessageType_NEW_ORDER);
 
 	// Client Order ID @4 L20
 	Codec::encode( no.clientOrderID, msg, 4, 20);
@@ -83,10 +81,16 @@ void MilleniumCodec::encode( const NewOrder &no, Metal::Message &msg) {
 
 void MilleniumCodec::encodeHeader( Metal::Message &msg, int16_t length, char type) {
 	msg.set( 0, (char)2);
-	encode( length, msg, length);
+	encode( length, msg, 1);
 	msg.set( 3, type);
+
+	// this is not really encoding, we are memorizing length
+	msg.setLength(length);
 }
 
+void MilleniumCodec::encodeHeartBeat(Metal::Message &msg) {
+	encodeHeader( msg, 4, MessageType_HEARTBEAT);
+}
 
 } /* namespace LSE */
 } /* namespace Metal */

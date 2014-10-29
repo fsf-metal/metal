@@ -19,6 +19,8 @@ public:
 	NewOrder();
 	virtual ~NewOrder();
 
+	static const int SIZE = 97;
+
 	// TODO : Add Type safe members
 	std::string clientOrderID;
 	std::string traderID;
@@ -31,6 +33,9 @@ public:
 	Side side;
 	OrderQty orderQty;
 	DisplayQty displayQty;
+	/**
+	 * Price is stored with 8 implied decimal places
+	 */
 	Price limitPrice;
 	Capacity capacity;
 	AutoCancel autoCancel;

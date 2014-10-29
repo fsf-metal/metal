@@ -1,43 +1,67 @@
+/*
+    MeTAL: My Electronic Trading Adapters Library
+    Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)
+
+    This file is part of MeTAL.
+
+	MeTAL is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	MeTAL is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with MeTAL source code. If not, see <http://www.gnu.org/licenses/>.
+
+*/
 #ifndef __METAL_TRADINGADAPTER_H
 #define __METAL_TRADINGADAPTER_H
 
 #include <string>
 #include <chrono>
+#include <thread>
+
 #include <netlink/socket.h>
 
 #include "Adapter.h"
 #include "metal.h"
 #include "Mapper.h"
 #include "Message.h"
+#include "KeepAlive.h"
 
 namespace Metal {
+
+/**
+ * TradingAdapter responsibility<br>
+ * 1) Send New Orders, Receive execution reports
+ */
 class TradingAdapter : public Adapter {
 	public:
 		/**
 		 * @param name Whatever should be used to identify this adapter.
 		 * @param uuid a unique identifier. Check out http://www.famkruithof.net/uuid/uuidgen to create your own
+		 * @param codec whatever codec should be used to crack messages
+		 * @param heartBeatInterval number of seconds between heartbeats. Defaults to 30 seconds.
+		 * @param retryInterval number of seconds between retries when connection is lost. Defaults to 5 seconds.
 		 * Subclasses will perform mapping, encoding then write to the active session
 		 */
-		TradingAdapter( const std::string& name, const std::string& uuid);
-
-		/**
-		 * This method should be invoked before starting the adapter to set remote host properties
-		 * @param hostName name of the remote host
-		 * @param portNumber remote port number
-		 */
-		void setRemoteHost(const std::string &hostName, unsigned int portNumber);
+		TradingAdapter( const std::string& name, const std::string& uuid, Codec * codec, int heartBeatInterval = 30, int retryInterval = 5);
 
 		/**
 		 * This function should be invoked to initiate physical connection<br>
 		 * It will create a new Thread for incoming messages
 		 */
-		void start();
+		virtual void start();
 
 		/**
 		* This method will close logical and physical connection<br>
 		* All created threads will be terminated
 		*/
-		void stop();
+		virtual void stop();
 
 		/**
 		 * This methods sends an message in native format.
@@ -50,7 +74,8 @@ class TradingAdapter : public Adapter {
 		 * You should override send() to leverage your own sending mechanism
 		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
 		 */
-		virtual void send( const NewOrderSingle &);
+		virtual void send( const NewOrderSingle &) = 0;
+
 		/**
 		 * Performs full conversion (mapping + encoding) on NewOrderSingle
 		 * @param nos order message to be encoding
@@ -59,18 +84,27 @@ class TradingAdapter : public Adapter {
 		virtual void encode( const NewOrderSingle &nos, Message &msg);
 
 		/**
+		 * Should be implemented by subclasses to send heart beats
+		 */
+		virtual void encodeHeartBeat(Message &msg) = 0;
+
+		/**
 		* This method should be overriden by subclasses<br>
-		* We do not make it pure virtual to reduce constraints
 		* @param msg Where encoded Logon Message will be stored
 		*/
-		virtual void encodeLogon( Message &msg);
+		virtual void encodeLogon( Message &msg) = 0;
 
 		/**
 		 * This method will invoked upon receiving an execution report<br>
 		 * Subclasses will perform mapping, encoding then write to the active session<br>
 		 * @param ExecutionReport incomming execution report
 		 */
-		virtual void recv( const ExecutionReport &er) = 0;
+		virtual void onExecutionReport( const ExecutionReport &er) = 0;
+
+		/**
+		 * invoked with the time is right to retry a connection 
+		 */
+		void retryConnection();
 
 		/**
 		 * This method is invoked once the socket is connected<br>
@@ -103,15 +137,18 @@ class TradingAdapter : public Adapter {
 	protected:
 		~TradingAdapter();
 
-		std::string remoteHost;
-		unsigned int remotePort;
-		NL::Socket *socket;
 
 		/**
 		 * This will terminate the physical connection if need be
 		 * @param delay in milliseconds if we should wait before closing
 		 */
 		void closeSocket( int delay = 0);
+
+		/**
+		 * Send a heartbeat to the remote party
+		 */
+		void heartBeat();
+
 };
 
 } // namespace Metal

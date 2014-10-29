@@ -18,19 +18,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\netLink\src\core.cc">
+    <ClCompile Include="..\..\3rdparties\netLink\src\core.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\netLink\src\smart_buffer.cc">
+    <ClCompile Include="..\..\3rdparties\netLink\src\smart_buffer.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\netLink\src\socket.cc">
+    <ClCompile Include="..\..\3rdparties\netLink\src\socket.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\netLink\src\socket_group.cc">
+    <ClCompile Include="..\..\3rdparties\netLink\src\socket_group.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\netLink\src\util.cc">
+    <ClCompile Include="..\..\3rdparties\netLink\src\util.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

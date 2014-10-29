@@ -18,14 +18,7 @@ class MilleniumAdapter : public TradingAdapter {
 		 */
 		void encode( const NewOrderSingle& nos, Message &msg);
 
-		virtual void recv( const ExecutionReport &er);
-
-		// life cycle
-		void start();
-		void stop();
-
-		// Send a logon message
-		void sendLogon();
+		virtual void onMessage( const ExecutionReport &er);
 
 		/**
 		 * @see TradingAdapter#benchmark
@@ -40,6 +33,9 @@ class MilleniumAdapter : public TradingAdapter {
 		void benchmark( const std::vector<Metal::OrderCancelRequest> &,
 				std::chrono::milliseconds &,
 				std::chrono::milliseconds &);
+
+		void encodeHeartBeat( Message &msg);
+		void encodeLogon( Message &msg);
 
 		virtual ~MilleniumAdapter(){};
 

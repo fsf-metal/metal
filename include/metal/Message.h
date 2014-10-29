@@ -9,6 +9,7 @@
 #define METAL_MESSAGE_H_
 
 #include <iostream>
+#include <string.h>
 
 namespace Metal {
 
@@ -19,10 +20,17 @@ public:
 
 	inline const char* getData() { return data; };
 	inline const size_t getLength() { return length; };
+	inline void setLength( size_t length) { this->length = length; };
+
+    /**
+     * Read character at given position. Position must be valid
+     * @param position A valid position (< length)
+     */
+    inline char get(int position) { return this->data[position]; }
 
 	/**
-	 * Write a single character at given position
-	 * @param position Where the character should be writted
+	 * Write a single character at given position.
+	 * @param position Where the character should be written. Must be valid (<length)
 	 * @param value Value to be written
 	 */
 	inline void set( int position, char value) { this->data[position] = value;};
@@ -36,7 +44,7 @@ public:
 	inline void set(int position, std::string str, int maxLength) {
 		int remainder = str.length();
 		if( maxLength < remainder) remainder = maxLength;
-		std::strncpy( &this->data[position], str.c_str(), remainder);
+		strncpy( &this->data[position], str.c_str(), remainder);
 	};
 
 private:

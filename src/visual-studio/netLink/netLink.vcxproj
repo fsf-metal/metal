@@ -47,7 +47,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../netLink/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -63,7 +63,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../netLink/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -76,11 +76,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\netLink\src\core.cc" />
-    <ClCompile Include="..\..\netLink\src\smart_buffer.cc" />
-    <ClCompile Include="..\..\netLink\src\socket.cc" />
-    <ClCompile Include="..\..\netLink\src\socket_group.cc" />
-    <ClCompile Include="..\..\netLink\src\util.cc" />
+    <ClCompile Include="..\..\3rdparties\netLink\src\core.cc" />
+    <ClCompile Include="..\..\3rdparties\netLink\src\smart_buffer.cc" />
+    <ClCompile Include="..\..\3rdparties\netLink\src\socket.cc" />
+    <ClCompile Include="..\..\3rdparties\netLink\src\socket_group.cc" />
+    <ClCompile Include="..\..\3rdparties\netLink\src\util.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

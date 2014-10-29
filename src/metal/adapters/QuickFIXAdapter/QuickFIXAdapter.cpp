@@ -50,7 +50,7 @@ class MyApplication: public Application,public MessageCracker {
 //					std::cout << "QuickFIXAdapter: FIX42 ExecutionReport Received" << std::endl;
 					Metal::ExecutionReport er;
 //					QuickFIXMessageMapper::map( message, er);
-					this->adapter->recv( er);
+					this->adapter->onMessage( er);
 				}
         };
 
@@ -60,7 +60,7 @@ class MyApplication: public Application,public MessageCracker {
 					Metal::ExecutionReport er;
 					Metal::QuickFIXMessageMapper::map( message, er);
 
-					this->adapter->recv( er);
+					this->adapter->onMessage( er);
 				}
         };
 	private:
@@ -161,7 +161,7 @@ void QuickFIXAdapter::send( const NewOrderSingle &nos) {
 	this->session->send( nosFIX44);
 }
 
-void QuickFIXAdapter::recv( const ExecutionReport &er) {
+void QuickFIXAdapter::onMessage( const ExecutionReport &er) {
 	std::cout << "QuickFIXAdapter: Execution Report received but not processed" << std::endl;
 }
 

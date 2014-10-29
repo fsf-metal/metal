@@ -1,3 +1,24 @@
+/*
+    MeTAL: My Electronic Trading Adapters Library
+    Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)
+
+    This file is part of MeTAL.
+
+	MeTAL is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	MeTAL is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with MeTAL source code. If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 #include <iostream>
 #include <thread>
 
@@ -8,9 +29,11 @@
 
 namespace Metal {
 
-TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid) : Adapter(name, uuid) {
+TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid, Codec * codec, int heartBeatInterval, int retryInterval) :
+		Adapter(name, uuid, codec, heartBeatInterval, retryInterval),
+		KeepAlive( heartBeatInterval, retryInterval) {
 	this->socket = NULL;
-	this->remoteHost = "Undefined";
+	this->remoteHost = "";
 	this->remotePort = 0;
 }
 
@@ -26,6 +49,7 @@ void TradingAdapter::closeSocket( int delayMillis) {
 			std::this_thread::sleep_for(dura);
 		}
 		this->socket->disconnect();
+
 		delete this->socket;
 		this->socket = NULL;
 	}
@@ -38,23 +62,66 @@ void TradingAdapter::encode( const NewOrderSingle& nos, Message & msg) {
 	throw MissingImplementationException( "encode NewOrderSingle");
 }
 
-void TradingAdapter::encodeLogon( Message &msg) {
-	throw MissingImplementationException( "encodeLogon is invoked nut not implemented");
+/*void TradingAdapter::encodeHeartBeat(Message &msg) {
+	throw MissingImplementationException("TradingAdapter: encodeHeartBeat is invoked but not implemented");
 }
 
+void TradingAdapter::encodeLogon(Message &msg) {
+	throw MissingImplementationException( "TradingAdapter: encodeLogon is invoked but not implemented");
+}*/
+
+void TradingAdapter::heartBeat() {
+
+	Message msg;
+	this->encodeHeartBeat( msg);
+	send(msg);
+}
+
+/**
+ * We just managed to connect physically<br>
+ * We should send a long
+ */
 void TradingAdapter::onPhysicalConnection() {
-	Message logon;
-	this->encodeLogon( logon);
-	this->send( logon);
+//	std::cout << "TradingAdapter: Physical connection" << std::endl;
+	// Change status to IDLE to stop retries
+	changeStatus( IDLE);
+
+	try {
+		// 
+		Message logon;
+		this->encodeLogon(logon);
+		this->send(logon);
+		changeStatus(HEARTBEATING);
+	} catch ( std::exception &e) {
+		changeStatus(RETRYING);
+		std::cerr << "TradingAdapter: Could not send logon because " << e.what() << std::endl;
+	}
 }
 
+/**
+ * Invoked by KeepAlive when you need to reconnect
+ */
+void TradingAdapter::retryConnection() {
+	start();
+}
+
+/**
+ * Write a message on the socket
+ */
 void TradingAdapter::send( Message &msg) {
 	try {
 		this->socket->send(msg.getData(), msg.getLength());
-	}
-	catch (std::exception &e) {
-		SendMessageException sme( e.what());
-		throw sme;
+		std::cout << "TradingAdapter: sent " << msg.getLength() << " bytes" << std::endl;
+	} catch (std::exception &e) {
+		std::cerr << "Could not send message: " << e.what() << std::endl;
+		changeStatus(RETRYING);
+
+//		SendMessageException sme( e.what());
+//		throw sme;
+	} catch (...) {
+		std::cerr << "Could not send message" << std::endl;
+		// change the status so we can retry a connection
+		changeStatus(RETRYING);
 	}
 }
 
@@ -70,21 +137,47 @@ void TradingAdapter::setRemoteHost(const std::string & hostName, unsigned int po
 }
 
 void TradingAdapter::start() {
-	std::cout << "TradingAdapter: starting" << std::endl;
+//	std::cout << "TradingAdapter: starting. HBint=" << getHeartBeatInterval() << ", RetryInt=" << getRetryInterval() << std::endl;
+
+	if (this->remoteHost.length() == 0 || this->remotePort == 0) {
+		std::cerr << "Remote host and port are required and missing [" << this->remoteHost << ":" << this->remotePort << "]" << std::endl;
+		return;
+	}
 
 	// open connection to remote host
-	this->socket = new NL::Socket( this->remoteHost, this->remotePort);
+	try {
+		std::cout << "Connecting to " << this->remoteHost << ":" << this->remotePort << std::endl;
+		changeStatus(CONNECTING);
+		this->socket = new NL::Socket(this->remoteHost, this->remotePort);
+		std::cout << "Connected." << std::endl;
 
-	this->onPhysicalConnection();
+		// Start listenning
+		Adapter::start();
 
-	std::cout << "TradingAdapter: started" << std::endl;
+		this->onPhysicalConnection();
+
+	} catch (NL::Exception &e) {
+		// Connection failed. Do we still need to try?
+		std::cerr << "Could not connect to remote host because " << e.what() << e.nativeErrorCode() << std::endl;
+		if (CONNECTING == getStatus()){
+			changeStatus(RETRYING);
+		}
+	}
+
+
 }
 
 void TradingAdapter::stop() {
-	std::cout << "TradingAdapter: Stopping" << std::endl;
+	//std::cout << "TradingAdapter: Stopping" << std::endl;
+
+	Adapter::stop();
+
+	// Suspend heartbeats
+	changeStatus(IDLE);
+
 	// TODO send logout
 	closeSocket( 1000);
-	std::cout << "TradingAdapter: Stopped" << std::endl;
+	//std::cout << "TradingAdapter: Stopped" << std::endl;
 }
 
 }

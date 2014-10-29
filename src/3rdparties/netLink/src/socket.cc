@@ -25,6 +25,12 @@
 #include <string.h>
 #include <stdio.h>
 
+#ifdef _WIN32
+#   define SEND_FLAGS 0
+#else if __linux__
+#   define SEND_FLAGS MSG_NOSIGNAL 
+#endif
+
 
 NL_NAMESPACE
 
@@ -188,6 +194,8 @@ void Socket::initSocket() {
 
 		#ifndef _MSC_VER
 			errorMsg += gai_strerror(status);
+		#else
+			errorMsg += std::to_string( status);
 		#endif
 
         throw Exception(Exception::ERROR_SET_ADDR_INFO, errorMsg, getSocketErrorCode());
@@ -259,7 +267,7 @@ void Socket::initSocket() {
     }
 
     if(!connected)
-        throw Exception(Exception::ERROR_CONNECT_SOCKET, "Socket::initSocket: error in socket connection/bind", getSocketErrorCode());
+        throw Exception(Exception::ERROR_CONNECT_SOCKET, "Connection failed", getSocketErrorCode());
 
 
     if(!_portFrom)
@@ -563,10 +571,10 @@ void Socket::send(const void* buffer, size_t size) {
 
     while (sentData < size) {
 
-        int status = ::send(_socketHandler, (const char*)buffer + sentData, size - sentData, 0);
+        int status = ::send(_socketHandler, (const char*)buffer + sentData, size - sentData, SEND_FLAGS);
 
         if(status == -1)
-            throw Exception(Exception::ERROR_SEND, "Error sending data", getSocketErrorCode());
+            throw Exception(Exception::ERROR_SEND, "Socket::send() failed", getSocketErrorCode());
 
         sentData += status;
     }

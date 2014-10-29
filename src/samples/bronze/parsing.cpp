@@ -36,7 +36,7 @@ void parseNOS( const std::string &cmd, Metal::NewOrderSingle &nos) {
 	// Perform split and basic validation
 	std::vector<std::string> tokens;
 	split( cmd, ' ', tokens);
-	if( tokens.size() < 3 || tokens.size() > 4) throw ParsingException("Invalid command length. Should we 3 or 4 words.");
+	if( tokens.size() < 3 || tokens.size() > 4) throw ParsingException("Invalid command length. Should be 3 or 4 words.");
 
 	// Client Order ID : Generated from current time
 	std::stringstream ss;

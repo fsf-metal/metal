@@ -1,0 +1,43 @@
+{ "properties":{
+    "endianness": "little|big",
+        "name": "Nasdaq OUCH",
+        "specVersion": "O*U*C*H* 4.2 Feb 25th 2013",
+        "namespace": "Nasdaq",
+        "uuid" : "ce8b7850-4acf-11e4-916c-0800200c9a66"
+               },
+    "constants": [{"name": "someName","value": "someValue"}],
+    "messages": [{
+        "name": "EnterOrder",
+        "nativeMessageType": "O",
+        "fixMessage": "NewOrderSingle",
+        "fields":[{
+            "name":"OrderToken",
+            "pos": 1,
+            "type": "string",
+            "size" : 14,
+            "value":"copyFrom('ClOrdID')"}
+        ,{  "name":"BuySellIndicator",
+            "pos": 15,
+            "type": "string",
+            "size" : 1,
+            "value":"mappingFrom('side','Side')"}
+        ,{  "name":"Shares",
+            "pos": 16,
+            "type": "int",
+            "size" : 4,
+            "value":"copyFrom('OrderQty')"}
+        ]}
+],
+    "mappingTables": [
+    {   "name": "side",
+        "type": "string",
+        "size": 1,
+        "values": [
+        {"name":"Buy", "native":"B", "FIX":"1"},
+        {"name":"Sell", "native":"S", "FIX":"2"},
+        {"name":"SellShort", "native":"T", "FIX":"5"},
+        {"name":"SellShortExempt", "native":"E", "FIX":"6"}
+        ]
+    }]
+}
+

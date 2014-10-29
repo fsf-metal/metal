@@ -14,7 +14,7 @@
 namespace Metal {
 namespace LSE {
 
-MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading", "acba8ab0-4564-11e4-916c-0800200c9a66") {
+MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading", "acba8ab0-4564-11e4-916c-0800200c9a66", 3) {
 
 }
 
@@ -84,7 +84,16 @@ void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &
 
 }
 
-void MilleniumAdapter::recv(const ExecutionReport &er) {
+void MilleniumAdapter::encodeHeartBeat(Message &msg) {
+	codec.encodeHeartBeat(msg);
+}
+
+void MilleniumAdapter::encodeLogon(Message &msg) {
+	Logon logon(this->userName, this->password, "");
+	codec.encode(logon, msg);
+}
+
+void MilleniumAdapter::onMessage(const ExecutionReport &er) {
 	std::cout << "LSETradingAdapter: Execution Report received but not processed" << std::endl;
 }
 
@@ -94,25 +103,6 @@ void MilleniumAdapter::encode( const NewOrderSingle& nos, Message &msg) {
 	this->codec.encode( no, msg);
 }
 
-
-void MilleniumAdapter::sendLogon() {
-	// TODO remove
-	std::cout << "Millenium Adapter: Sending logon" << std::endl;
-	Message msg;
-	Logon logon( this->userName, this->password, "");
-	codec.encode(logon, msg);
-	TradingAdapter::send(msg);
-	// TODO remove
-	std::cout << "Millenium Adapter: Logon sent" << std::endl;
-}
-
-void MilleniumAdapter::start() {
-
-}
-
-void MilleniumAdapter::stop() {
-
-}
 
 } // LSE::
 } // Metal::

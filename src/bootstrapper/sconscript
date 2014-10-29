@@ -1,0 +1,23 @@
+import glob
+
+src_files = 'main.cpp MappingTable.cpp Field.cpp Functions.cpp'
+lib_files = 'json'
+include_path = '../../include/'
+output_file = 'bootstrapper'
+
+# Get all the build variables we need
+Import('env', 'mymode', 'debugcflags', 'releasecflags')
+localenv = env.Clone()
+
+# Append the user's additional compile flags
+# Assume debugcflags and releasecflags are defined
+if mymode == 'debug':
+    localenv.Append(CPPFLAGS=Split(debugcflags))
+else:
+    localenv.Append(CPPFLAGS=Split(releasecflags))
+
+localenv.Append(CPPPATH=Split( include_path))
+
+# Actually build Binaries
+localenv.Program( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH='../../lib')
+
