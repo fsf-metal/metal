@@ -81,8 +81,10 @@ void MilleniumCodec::encode( const NewOrder &no, Metal::Message &msg) {
 
 void MilleniumCodec::encodeHeader( Metal::Message &msg, int16_t length, char type) {
 	msg.set( 0, (char)2);
-	encode( length, msg, length);
+	encode( length, msg, 1);
 	msg.set( 3, type);
+
+	// this is not really encoding, we are memorizing length
 	msg.setLength(length);
 }
 

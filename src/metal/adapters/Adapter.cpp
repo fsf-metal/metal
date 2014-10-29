@@ -56,7 +56,7 @@ namespace Metal {
 			} catch (NL::Exception e) {
 				cerr << "Adapter::dataListenner exception " << e.what() << endl;
 			}
-			cout << "Adapter::runListenner is not doing much for now" << endl;
+			cout << "Adapter::dataListenner is not doing much for now" << endl;
 			this_thread::sleep_for(granularity);
 		}
 
