@@ -15,10 +15,11 @@
 //class MyAdapter: public Metal::QuickFIX::QuickFIXAdapter {
 class MyAdapter : public Metal::LSE::MilleniumAdapter {
 	public:
-	MyAdapter();
-	void onMessage( const Metal::ExecutionReport &er);
+		MyAdapter();
+		virtual ~MyAdapter();
 
-	virtual ~MyAdapter();
+		virtual void onMessage( const Metal::ExecutionReport &er);
+
 };
 
 #endif /* MYADAPTER_H_ */

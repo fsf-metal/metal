@@ -18,10 +18,11 @@ namespace Metal {
  */
 class Message {
 public:
+	static const int MAX_LENGTH = 4096;
 	Message();
 	virtual ~Message();
 
-	inline const char* getData() { return data; };
+	inline char* getData() { return data; };
 	inline const size_t getLength() { return length; };
 	inline void setLength( size_t length) { this->length = length; };
 
@@ -51,7 +52,7 @@ public:
 	};
 
 private:
-	char data[2048];
+	char data[ MAX_LENGTH];
 	unsigned int length;
 };
 

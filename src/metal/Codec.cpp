@@ -22,6 +22,8 @@
 #include <cstring>
 #include <metal/Codec.h>
 
+using namespace std;
+
 namespace Metal {
 
 Codec::Codec()
@@ -31,6 +33,17 @@ Codec::Codec()
 
 Codec::~Codec()
 {
+}
+
+
+std::string Codec::formatHex(char * data, int length) {
+	std::stringstream ss;
+
+	for (int index = 0; index < length; ++index) {
+		ss << uppercase << setfill('0') << setw(2) << hex << (data[index] & 0xFF) << " ";
+		if (index % 16 == 15) ss << endl;
+	}
+	return ss.str();
 }
 
 

@@ -17,6 +17,9 @@ MyAdapter::~MyAdapter() {
 	// TODO Auto-generated destructor stub
 }
 
+/**
+ * Display whatever can be displayed
+ */
 void MyAdapter::onMessage( const Metal::ExecutionReport &er) {
 	std::cout << "\nExecution Report:";
 	if (er.isSetField(FIX::FIELD::ClOrdID)) {
