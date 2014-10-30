@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bootstrapper", "bootstrappe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsoncpp", "jsoncpp\jsoncpp.vcxproj", "{7E0A7774-6327-4969-AAEA-73E7FE3EA914}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{2A6CECE7-5426-422A-AB28-39B0626E0771}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -57,6 +59,10 @@ Global
 		{7E0A7774-6327-4969-AAEA-73E7FE3EA914}.Debug|Win32.Build.0 = Debug|Win32
 		{7E0A7774-6327-4969-AAEA-73E7FE3EA914}.Release|Win32.ActiveCfg = Release|Win32
 		{7E0A7774-6327-4969-AAEA-73E7FE3EA914}.Release|Win32.Build.0 = Release|Win32
+		{2A6CECE7-5426-422A-AB28-39B0626E0771}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2A6CECE7-5426-422A-AB28-39B0626E0771}.Debug|Win32.Build.0 = Debug|Win32
+		{2A6CECE7-5426-422A-AB28-39B0626E0771}.Release|Win32.ActiveCfg = Release|Win32
+		{2A6CECE7-5426-422A-AB28-39B0626E0771}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

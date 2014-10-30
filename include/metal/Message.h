@@ -32,6 +32,8 @@ public:
      */
     inline char get(int position) { return this->data[position]; }
 
+	void reset();
+
 	/**
 	 * Write a single character at given position.
 	 * @param position Where the character should be written. Must be valid (<length)
@@ -46,9 +48,13 @@ public:
 	 * @param maxLength maximum length to be copied from the string
 	 */
 	inline void set(int position, std::string str, int maxLength) {
-		int remainder = str.length();
-		if( maxLength < remainder) remainder = maxLength;
-		strncpy( &this->data[position], str.c_str(), remainder);
+		int remainder = maxLength - str.length();
+		if ( remainder <= 0) {
+			strncpy(&this->data[position], str.c_str(), maxLength);
+		} else {
+			strcpy(&this->data[position], str.c_str());
+			memset(&this->data[position + str.length()], 0, remainder);
+		}
 	};
 
 private:

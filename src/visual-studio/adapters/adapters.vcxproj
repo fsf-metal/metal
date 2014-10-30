@@ -14,6 +14,7 @@
     <ProjectGuid>{B2FDF49F-919C-4673-8B21-44E345C1354A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>adapters</RootNamespace>
+    <ProjectName>metal</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

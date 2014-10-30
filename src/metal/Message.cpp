@@ -30,6 +30,10 @@ Message::~Message() {
 	// TODO Auto-generated destructor stub
 }
 
+void Message::reset() {
+	memset(this->data, 0, Message::MAX_LENGTH);
+}
+
 /*
 void Message::set( int position, char value) {
 	this->data[position] = value;

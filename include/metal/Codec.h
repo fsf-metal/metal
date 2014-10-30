@@ -40,7 +40,7 @@ public:
 	 * @param size Number of bytes in array
 	 * @return Message length or 0 if no message was found in data
 	 */
-	virtual int getMessageLength(char* data, int size) = 0;
+	virtual int getMessageLength(char* data, int size){ return 0; };
 
 	/**
 	 * Decodes a 8 bits integer from a message
@@ -57,67 +57,131 @@ public:
 	}
 
 	/**
+	 * Decodes a 16 bits integer from a message in big endian format
+	 */
+	inline void decodeBE( const char * data, int position, int16_t &output) {
+		output = ((int16_t)(data[position] & 0xFF)) << 8;
+		output += (int16_t)(data[position+1] & 0xFF);
+	}
+
+	/**
+	 * Decodes an unsigned 16 bits integer from a message in big endian format
+	 */
+	inline void decodeBE(const char * data, int position, uint16_t &output) {
+		output  = ((uint16_t)(data[position] & 0xFF)) << 8;
+		output +=  (uint16_t)(data[position + 1] & 0xFF);
+	}
+
+	/**
+	 * Decodes a 32 bits integer from a message in big endian format
+	 */
+	inline void decodeBE( const char * data, int position, int32_t &output) {
+		output  = ((int32_t)(data[position] & 0xFF)) << 24;
+		output += ((int32_t)(data[position + 1] & 0xFF)) << 16;
+		output += ((int32_t)(data[position + 2] & 0xFF)) << 8;
+		output += ((int32_t)(data[position + 3] & 0xFF));
+	}
+
+	/**
+	 * Decodes an unsigned 32 bits integer from a message in big endian format
+	 */
+	inline void decodeBE(const char * data, int position, uint32_t &output) {
+		output  = ((uint32_t)(data[position] & 0xFF)) << 24;
+		output += ((uint32_t)(data[position + 1] & 0xFF)) << 16;
+		output += ((uint32_t)(data[position + 2] & 0xFF)) << 8;
+		output += ((uint32_t)(data[position + 3] & 0xFF));
+	}
+
+	/**
+	 * Decodes a 64 bits integer from a message in big endian format
+	 */
+	inline void decodeBE( const char * data, int position, int64_t &output) {
+		output  = ((int64_t)(data[position] & 0xFF)) << 56;
+		output += ((int64_t)(data[position + 1] & 0xFF)) << 48;
+		output += ((int64_t)(data[position + 2] & 0xFF)) << 40;
+		output += ((int64_t)(data[position + 3] & 0xFF)) << 32;
+		output += ((int64_t)(data[position + 4] & 0xFF)) << 24;
+		output += ((int64_t)(data[position + 5] & 0xFF)) << 16;
+		output += ((int64_t)(data[position + 6] & 0xFF)) << 8;
+		output += ((int64_t)(data[position + 7] & 0xFF));
+	}
+
+	/**
+	 * Decodes a 64 bits integer from a message in big endian format
+	 */
+	inline void decodeBE( const char * data, int position, uint64_t &output) {
+		output  = ((uint64_t)(data[position] & 0xFF)) << 56;
+		output += ((uint64_t)(data[position + 1] & 0xFF)) << 48;
+		output += ((uint64_t)(data[position + 2] & 0xFF)) << 40;
+		output += ((uint64_t)(data[position + 3] & 0xFF)) << 32;
+		output += ((uint64_t)(data[position + 4] & 0xFF)) << 24;
+		output += ((uint64_t)(data[position + 5] & 0xFF)) << 16;
+		output += ((uint64_t)(data[position + 6] & 0xFF)) << 8;
+		output += ((uint64_t)(data[position + 7] & 0xFF));
+	}
+
+	/**
 	 * Decodes a 16 bits integer from a message in little endian format
 	 */
 	inline void decodeLE( const char * data, int position, int16_t &output) {
-		output  = (int16_t)( data[position] & 0xFF);
+		output  =  (int16_t)( data[position] & 0xFF);
 		output += ((int16_t)( data[position + 1] & 0xFF)) << 8;
 	}
 
 	/**
 	 * Decodes a 16 bits integer from a message in little endian format
 	 */
-	inline void decodeLE(char * data, int position, uint16_t &output) {
-		output = (uint16_t)data[position];
-		output += ((uint16_t)(data[position + 1])) << 8;
+	inline void decodeLE(const char * data, int position, uint16_t &output) {
+		output  =  (uint16_t)(data[position] & 0xFF);
+		output += ((uint16_t)(data[position + 1] & 0xFF)) << 8;
 	}
 
 	/**
 	 * Decodes a 32 bits integer from a message in little endian format
 	 */
 	inline void decodeLE(const char * data, int position, int32_t &output) {
-		output  =  (int32_t)data[position];
-		output += ((int32_t)(data[position + 1])) << 8;
-		output += ((int32_t)(data[position + 2])) << 16;
-		output += ((int32_t)(data[position + 3])) << 24;
+		output  =  (int32_t)(data[position] & 0xFF);
+		output += ((int32_t)(data[position + 1] & 0xFF)) << 8;
+		output += ((int32_t)(data[position + 2] & 0xFF)) << 16;
+		output += ((int32_t)(data[position + 3] & 0xFF)) << 24;
 	}
 
 	/**
 	 * Decodes an unsigned 32 bits integer from a message in little endian format
 	 */
 	inline void decodeLE(const char * data, int position, uint32_t &output) {
-		output  =  (uint32_t)data[position];
-		output += ((uint32_t)(data[position + 1])) << 8;
-		output += ((uint32_t)(data[position + 2])) << 16;
-		output += ((uint32_t)(data[position + 3])) << 24;
+		output  =  (uint32_t)(data[position] & 0xFF);
+		output += ((uint32_t)(data[position + 1] & 0xFF)) << 8;
+		output += ((uint32_t)(data[position + 2] & 0xFF)) << 16;
+		output += ((uint32_t)(data[position + 3] & 0xFF)) << 24;
 	}
 
 	/**
 	 * Decodes a 64 bits integer from a message in little endian format
 	 */
 	inline void decodeLE(const char * data, int position, int64_t &output) {
-		output  =  (int64_t)data[position];
-		output += ((int64_t)(data[position + 1])) << 8;
-		output += ((int64_t)(data[position + 2])) << 16;
-		output += ((int64_t)(data[position + 3])) << 24;
-		output += ((int64_t)(data[position + 4])) << 32;
-		output += ((int64_t)(data[position + 5])) << 40;
-		output += ((int64_t)(data[position + 6])) << 48;
-		output += ((int64_t)(data[position + 7])) << 56;
+		output  =  (int64_t)(data[position] & 0xFF);
+		output += ((int64_t)(data[position + 1] & 0xFF)) << 8;
+		output += ((int64_t)(data[position + 2] & 0xFF)) << 16;
+		output += ((int64_t)(data[position + 3] & 0xFF)) << 24;
+		output += ((int64_t)(data[position + 4] & 0xFF)) << 32;
+		output += ((int64_t)(data[position + 5] & 0xFF)) << 40;
+		output += ((int64_t)(data[position + 6] & 0xFF)) << 48;
+		output += ((int64_t)(data[position + 7] & 0xFF)) << 56;
 	}
 
 	/**
 	 * Decodes an unsigned 64 bits integer from a message in little endian format
 	 */
 	inline void decodeLE(const char * data, int position, uint64_t &output) {
-		output  =  (uint64_t)data[position];
-		output += ((uint64_t)(data[position + 1])) << 8;
-		output += ((uint64_t)(data[position + 2])) << 16;
-		output += ((uint64_t)(data[position + 3])) << 24;
-		output += ((uint64_t)(data[position + 4])) << 32;
-		output += ((uint64_t)(data[position + 5])) << 40;
-		output += ((uint64_t)(data[position + 6])) << 48;
-		output += ((uint64_t)(data[position + 7])) << 56;
+		output  =  (uint64_t)(data[position]) & 0xFF;
+		output += ((uint64_t)(data[position + 1] & 0xFF)) << 8;
+		output += ((uint64_t)(data[position + 2] & 0xFF)) << 16;
+		output += ((uint64_t)(data[position + 3] & 0xFF)) << 24;
+		output += ((uint64_t)(data[position + 4] & 0xFF)) << 32;
+		output += ((uint64_t)(data[position + 5] & 0xFF)) << 40;
+		output += ((uint64_t)(data[position + 6] & 0xFF)) << 48;
+		output += ((uint64_t)(data[position + 7] & 0xFF)) << 56;
 	}
 
 	/**
