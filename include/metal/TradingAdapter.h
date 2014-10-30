@@ -53,26 +53,17 @@ class TradingAdapter : public Adapter {
 
 		/**
 		 * This method will be called by users to send new orders<br>
-		 * It will map and encode the message using @see encode(NewOrderSingle) then send it using send(Message&)<br>
-		 * You should override send() to leverage your own sending mechanism
+		 * It should map from generic to specific format then encode and send<br>
 		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
 		 */
 		virtual void send( const NewOrderSingle &) = 0;
 
 		/**
-		 * Performs full conversion (mapping + encoding) on NewOrderSingle
-		 * @param nos order message to be encoding
-		 * @param msg resulting binary message
-		 */
-		virtual void encode( const NewOrderSingle &nos, Message &msg);
-
-
-		/**
 		 * This method will invoked upon receiving an execution report<br>
-		 * Subclasses will perform mapping, encoding then write to the active session<br>
+		 * Subclasses should override this method to capture execution reports in generic format<br>
 		 * @param ExecutionReport incomming execution report
 		 */
-		virtual void onExecutionReport( const ExecutionReport &er) = 0;
+		virtual void onExecutionReport(const ExecutionReport &er){};
 
 		/**
 		 * This method is invoked once the socket is connected<br>

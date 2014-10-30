@@ -79,6 +79,8 @@ void MilleniumCodec::encode( const NewOrder &no, Metal::Message &msg) {
     // Reserved Field @88L 9
 }
 
+
+
 void MilleniumCodec::encodeHeader( Metal::Message &msg, int16_t length, char type) {
 	msg.set( 0, (char)2);
 	encode( length, msg, 1);
@@ -91,6 +93,17 @@ void MilleniumCodec::encodeHeader( Metal::Message &msg, int16_t length, char typ
 void MilleniumCodec::encodeHeartBeat(Metal::Message &msg) {
 	encodeHeader( msg, 4, MessageType_HEARTBEAT);
 }
+
+int MilleniumCodec::getMessageLength(char * data, int size) {
+	if (size < HEADER_LENGTH) return 0;
+	int16_t msgLength = decodeInt16_LE(data, 1);
+
+	// do we have enough data available?
+	if (size < msgLength) return 0;
+
+	return msgLength;
+}
+
 
 } /* namespace LSE */
 } /* namespace Metal */

@@ -93,10 +93,14 @@ void MilleniumAdapter::onMessage(const ExecutionReport &er) {
 	std::cout << "LSETradingAdapter: Execution Report received but not processed" << std::endl;
 }
 
-void MilleniumAdapter::encode( const NewOrderSingle& nos, Message &msg) {
+void MilleniumAdapter::send( const NewOrderSingle& nos) {
 	NewOrder no;
 	MilleniumMapper::map( nos, no);
+
+	Message msg;
 	this->mCodec->encode( no, msg);
+
+	Adapter::send( msg);
 }
 
 

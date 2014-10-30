@@ -17,13 +17,28 @@
 namespace Metal {
 namespace LSE {
 
+	/**
+	 * This class knows all about LSE specific format.<br>
+	 * It is used to code/decode LSE Messages representation into/from their wire format.<br>
+	 * It is worth noticing that it does not know how to process generic messages.
+	 */
 	class MilleniumCodec : public Codec {
 	public:
 		MilleniumCodec();
 		virtual ~MilleniumCodec();
 
+		/**
+		 * Minimum message length to retreive header
+		 */
+		static const int HEADER_LENGTH = 4;
+
+		/**
+		 * Local implementation to Codec#getMessageLength
+		 */
+		int getMessageLength(char* data, int length);
+
 		//------------------
-		// Messages
+		// LSE Messages
 		//------------------
 		/**
 		 * Encode a cancel request

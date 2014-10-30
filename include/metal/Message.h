@@ -13,6 +13,9 @@
 
 namespace Metal {
 
+/**
+ * This class purpose is message data storage. It does not contain functional information about content.
+ */
 class Message {
 public:
 	Message();

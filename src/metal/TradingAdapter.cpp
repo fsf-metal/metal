@@ -26,6 +26,7 @@
 
 #include <metal/TradingAdapter.h>
 #include <metal/MetalExceptions.h>
+#include <metal/Codec.h>
 
 namespace Metal {
 
@@ -37,13 +38,6 @@ TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid
 TradingAdapter::~TradingAdapter() {
 };
 
-
-/**
- * This is a placeholder because bsubclasses have the choice between implementing encode() or send()
- */
-void TradingAdapter::encode( const NewOrderSingle& nos, Message & msg) {
-	throw MissingImplementationException( "encode NewOrderSingle");
-}
 
 /**
  * We just managed to connect physically<br>
@@ -64,12 +58,6 @@ void TradingAdapter::onPhysicalConnection() {
 		changeStatus(RETRYING);
 		std::cerr << "TradingAdapter: Could not send logon because " << e.what() << std::endl;
 	}*/
-}
-
-void TradingAdapter::send( const NewOrderSingle& nos) {
-	Message msg;
-	encode( nos, msg);
-	send( msg);
 }
 
 }

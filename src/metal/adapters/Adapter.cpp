@@ -168,7 +168,7 @@ namespace Metal {
 					if (readSize > 0) {
 						offset += readSize;
 						// do we have a complete message?
-						msgLength = this->codec->decode( buffer, offset, msg);
+						msgLength = this->codec->getMessageLength( buffer, offset);
 						if ( msgLength == 0) continue;
 
 						offset -= msgLength;
@@ -224,12 +224,8 @@ namespace Metal {
 		} catch (std::exception &e) {
 			std::cerr << "Adapter: Could not send message, " << e.what() << std::endl;
 			changeStatus( RETRYING);
-
-			//		SendMessageException sme( e.what());
-			//		throw sme;
-		}
-		catch (...) {
-			std::cerr << "Could not send message" << std::endl;
+		} catch (...) {
+			std::cerr << "Adapter: Could not send message" << std::endl;
 			// change the status so we can retry a connection
 			changeStatus(RETRYING);
 		}

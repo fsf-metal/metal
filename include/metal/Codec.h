@@ -22,6 +22,8 @@
 #define CODEC_H
 
 #include <stdint.h>
+
+#include <metal/metal.h>
 #include <metal/Message.h>
 
 namespace Metal {
@@ -32,11 +34,25 @@ public:
 	Codec();
 
 	/**
-	 * Decode a message from its wire representation
+	 * Find out message length from its wire representation.
+	 * Will find out message length and copy data into msg bytes.
+	 * @param data Byte array containing data
+	 * @param size Number of bytes in array
 	 * @return Message length or 0 if no message was found in data
 	 */
-	virtual int decode(char* data, int size, Message &msg) = 0;
+	virtual int getMessageLength(char* data, int size) = 0;
 
+	/**
+	 * Decodes a 16 bits integer from a message in little endian format
+	 */
+	inline int16_t decodeInt16_LE( char * data, int position) {
+		return ((int16_t)data[0]) + (((int16_t)(data[1])) << 8);
+	}
+
+	/**
+	 * Encode a string up to the given length.
+	 * @param str String to be encoded
+	 */
 	inline void encode(const std::string &str, Message &msg, int position, int maxLength){
 		msg.set(position, str, maxLength);
 	};
@@ -139,13 +155,13 @@ public:
 	};
 
 	/**
-	 * This method should be overriden by subclasses<br>
+	 * This method should be overriden for exchanges that require a heartbeat<br>
 	 * @param msg Where encoded HeartBeat Message will be stored
 	 */
 	virtual void encodeHeartBeat(Message &msg){};
 
 	/**
-	 * This method should be overriden by subclasses<br>
+	 * This method should be overriden by exchanges that require a logon<br>
 	 * @param msg Where encoded Logon Message will be stored
 	 */
 	virtual void encodeLogon(Message &msg){};
