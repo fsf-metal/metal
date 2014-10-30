@@ -43,10 +43,88 @@ public:
 	virtual int getMessageLength(char* data, int size) = 0;
 
 	/**
+	 * Decodes a 8 bits integer from a message
+	 */
+	inline void decode(const char * data, int position, int8_t &output) {
+		output = (int8_t)data[position];
+	}
+
+	/**
+	 * Decodes a 8 bits integer from a message
+	 */
+	inline void decode(const char * data, int position, uint8_t &output) {
+		output = (uint8_t)data[position];
+	}
+
+	/**
 	 * Decodes a 16 bits integer from a message in little endian format
 	 */
-	inline int16_t decodeInt16_LE( char * data, int position) {
-		return ((int16_t)data[0]) + (((int16_t)(data[1])) << 8);
+	inline void decodeLE( const char * data, int position, int16_t &output) {
+		output  = (int16_t)( data[position] & 0xFF);
+		output += ((int16_t)( data[position + 1] & 0xFF)) << 8;
+	}
+
+	/**
+	 * Decodes a 16 bits integer from a message in little endian format
+	 */
+	inline void decodeLE(char * data, int position, uint16_t &output) {
+		output = (uint16_t)data[position];
+		output += ((uint16_t)(data[position + 1])) << 8;
+	}
+
+	/**
+	 * Decodes a 32 bits integer from a message in little endian format
+	 */
+	inline void decodeLE(const char * data, int position, int32_t &output) {
+		output  =  (int32_t)data[position];
+		output += ((int32_t)(data[position + 1])) << 8;
+		output += ((int32_t)(data[position + 2])) << 16;
+		output += ((int32_t)(data[position + 3])) << 24;
+	}
+
+	/**
+	 * Decodes an unsigned 32 bits integer from a message in little endian format
+	 */
+	inline void decodeLE(const char * data, int position, uint32_t &output) {
+		output  =  (uint32_t)data[position];
+		output += ((uint32_t)(data[position + 1])) << 8;
+		output += ((uint32_t)(data[position + 2])) << 16;
+		output += ((uint32_t)(data[position + 3])) << 24;
+	}
+
+	/**
+	 * Decodes a 64 bits integer from a message in little endian format
+	 */
+	inline void decodeLE(const char * data, int position, int64_t &output) {
+		output  =  (int64_t)data[position];
+		output += ((int64_t)(data[position + 1])) << 8;
+		output += ((int64_t)(data[position + 2])) << 16;
+		output += ((int64_t)(data[position + 3])) << 24;
+		output += ((int64_t)(data[position + 4])) << 32;
+		output += ((int64_t)(data[position + 5])) << 40;
+		output += ((int64_t)(data[position + 6])) << 48;
+		output += ((int64_t)(data[position + 7])) << 56;
+	}
+
+	/**
+	 * Decodes an unsigned 64 bits integer from a message in little endian format
+	 */
+	inline void decodeLE(const char * data, int position, uint64_t &output) {
+		output  =  (uint64_t)data[position];
+		output += ((uint64_t)(data[position + 1])) << 8;
+		output += ((uint64_t)(data[position + 2])) << 16;
+		output += ((uint64_t)(data[position + 3])) << 24;
+		output += ((uint64_t)(data[position + 4])) << 32;
+		output += ((uint64_t)(data[position + 5])) << 40;
+		output += ((uint64_t)(data[position + 6])) << 48;
+		output += ((uint64_t)(data[position + 7])) << 56;
+	}
+
+	/**
+	 * Copies data into a string
+	 */
+	inline void decode(const char * data, int position, std::string &output, int maxLength) {
+		output.assign( &data[position], maxLength);
 	}
 
 	/**
@@ -61,56 +139,56 @@ public:
 		msg.set(position, i);
 	};
 
-	inline void encodeLittleEndian(const int16_t &i, Message &msg, int position) {
+	inline void encodeLE(const int16_t &i, Message &msg, int position) {
 		msg.set(  position, (char) (i & 0x00FF));
 		msg.set(++position, (char)((i & 0xFF00) >> 8));
 	};
 
-	inline void encodeLittleEndian( const uint16_t &i, Message &msg, int position) {
+	inline void encodeLE( const uint16_t &i, Message &msg, int position) {
 		msg.set(  position, (char) (i & 0x00FF));
 		msg.set(++position, (char)((i & 0xFF00) >> 8));
 	}
 
-	inline void encodeBigEndian(const int16_t &i, Message &msg, int position) {
+	inline void encodeBE(const int16_t &i, Message &msg, int position) {
 		msg.set(  position, ((i & 0xFF00) >> 8));
 		msg.set(++position, (i & 0x00FF));
 	};
 
-	inline void encodeBigEndian(const uint16_t &i, Message &msg, int position) {
+	inline void encodeBE(const uint16_t &i, Message &msg, int position) {
 		msg.set(  position, ((i & 0xFF00) >> 8));
 		msg.set(++position, (i & 0x00FF));
 	};
 
 	// revised
-	inline void encodeLittleEndian(const int32_t &i, Message &msg, int position) {
+	inline void encodeLE(const int32_t &i, Message &msg, int position) {
 		msg.set(  position, (char)( i & 0x000000FF));
 		msg.set(++position, (char)((i & 0x0000FF00) >> 8));
 		msg.set(++position, (char)((i & 0x00FF0000) >> 16));
 		msg.set(++position, (char)((i & 0xFF000000) >> 24));
 	};
 
-	inline void encodeLittleEndian(const uint32_t &i, Message &msg, int position) {
+	inline void encodeLE(const uint32_t &i, Message &msg, int position) {
 		msg.set(  position, (char)( i & 0x000000FF));
 		msg.set(++position, (char)((i & 0x0000FF00) >> 8));
 		msg.set(++position, (char)((i & 0x00FF0000) >> 16));
 		msg.set(++position, (char)((i & 0xFF000000) >> 24));
 	};
 
-	inline void encodeBigEndian(const int32_t &i, Message &msg, int position){
+	inline void encodeBE(const int32_t &i, Message &msg, int position){
 		msg.set(  position, (char)((i & 0xFF000000) >> 24));
 		msg.set(++position, (char)((i & 0x00FF0000) >> 16));
 		msg.set(++position, (char)((i & 0x0000FF00) >> 8));
 		msg.set(++position, (char) (i & 0x000000FF));
 	};
 
-	inline void encodeBigEndian(const uint32_t &i, Message &msg, int position){
+	inline void encodeBE(const uint32_t &i, Message &msg, int position){
 		msg.set(  position, (char)((i & 0xFF000000) >> 24));
 		msg.set(++position, (char)((i & 0x00FF0000) >> 16));
 		msg.set(++position, (char)((i & 0x0000FF00) >> 8));
 		msg.set(++position, (char) (i & 0x000000FF));
     }
 
-	inline void encodeLittleEndian(const int64_t &i, Message &msg, int position){
+	inline void encodeLE(const int64_t &i, Message &msg, int position){
 		msg.set(  position, (char) (i & 0x00000000000000FF));
 		msg.set(++position, (char)((i & 0x000000000000FF00) >> 8));
 		msg.set(++position, (char)((i & 0x0000000000FF0000) >> 16));
@@ -121,7 +199,7 @@ public:
 		msg.set(++position, (char)((i & 0xFF00000000000000) >> 56));
 	};
 
-	inline void encodeLittleEndian(const uint64_t &i, Message &msg, int position){
+	inline void encodeLE(const uint64_t &i, Message &msg, int position){
 		msg.set(  position, (char) (i & 0x00000000000000FF));
 		msg.set(++position, (char)((i & 0x000000000000FF00) >> 8));
 		msg.set(++position, (char)((i & 0x0000000000FF0000) >> 16));
@@ -132,7 +210,7 @@ public:
 		msg.set(++position, (char)((i & 0xFF00000000000000) >> 56));
 	};
 
-	inline void encodeBigEndian(const int64_t &i, Message &msg, int position){
+	inline void encodeBE(const int64_t &i, Message &msg, int position){
 		msg.set(  position, (char)((i & 0xFF00000000000000) >> 56));
 		msg.set(++position, (char)((i & 0x00FF000000000000) >> 48));
 		msg.set(++position, (char)((i & 0x0000FF0000000000) >> 40));
@@ -143,7 +221,7 @@ public:
 		msg.set(++position, (char) (i & 0x00000000000000FF));
 	};
 
-	inline void encodeBigEndian(const uint64_t &i, Message &msg, int position){
+	inline void encodeBE(const uint64_t &i, Message &msg, int position){
 		msg.set(  position, (char)((i & 0xFF00000000000000) >> 56));
 		msg.set(++position, (char)((i & 0x00FF000000000000) >> 48));
 		msg.set(++position, (char)((i & 0x0000FF0000000000) >> 40));
@@ -166,6 +244,7 @@ public:
 	 */
 	virtual void encodeLogon(Message &msg){};
 
+	static std::string Codec::formatHex(char * data, int length);
 
 	virtual ~Codec();
 };

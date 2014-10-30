@@ -101,6 +101,7 @@
     <ClCompile Include="..\..\metal\TradingAdapter.cpp" />
     <ClCompile Include="..\..\metal\Translator.cpp" />
     <ClCompile Include="..\..\metal\Codec.cpp" />
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\ExecutionReport.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

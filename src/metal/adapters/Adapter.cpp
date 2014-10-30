@@ -46,8 +46,6 @@ namespace Metal {
 	}
 
 	Adapter::~Adapter() {
-		stopListenner();
-		stopKeepAlive();
 	}
 
 	void Adapter::changeStatus(Status newStatus) {
@@ -60,6 +58,7 @@ namespace Metal {
 	}
 
 	void Adapter::closeSocket(int delayMillis) {
+		//cout << "Adapter: Closing socket" << endl;
 		if (this->socket != NULL) {
 			// should we wait?
 			if (delayMillis > 0) {
@@ -71,6 +70,7 @@ namespace Metal {
 			delete this->socket;
 			this->socket = NULL;
 		}
+		//cout << "Adapter: socket closed" << endl;
 	}
 
 	const Adapter::Status Adapter::getStatus() {
@@ -85,8 +85,9 @@ namespace Metal {
 	string Adapter::getStatusName(const Status &status, string &output) {
 		switch (status) {
 		case IDLE: output = "Idle"; break;
-		case HEARTBEATING: output = "HeartBeating"; break;
+		case CONNECTED: output = "Connected"; break;
 		case RETRYING: output = "Retrying"; break;
+		case STOPPING: output = "Stopping"; break;
 //		case KILLED: output = "Killed"; break;
 		default: output = "?";
 		}
@@ -95,7 +96,7 @@ namespace Metal {
 	}
 
 	void Adapter::keepAliveLoop() {
-		//	cout << "HeartBeat: thread is running" << endl;
+		//cout << "Adapter: keep alive is running" << endl;
 		chrono::time_point<chrono::system_clock> lastBeat, lastRetry;
 		lastBeat = chrono::system_clock::now();
 		lastRetry = lastBeat;
@@ -105,8 +106,8 @@ namespace Metal {
 		while ( this->keepAlive) {
 			this_thread::sleep_for( this->granularity);
 
-			//	string output;
-			//	cout << "KeepAlive: " << getStatusName( getStatus(), output) << endl;
+			//string output;
+			//cout << "KeepAlive: " << getStatusName( getStatus(), output) << endl;
 			switch ( getStatus()) {
 			case IDLE:
 				// Watchout, this can be quite verbose
@@ -117,7 +118,7 @@ namespace Metal {
 				// Just wait for connection
 				break;
 
-			case HEARTBEATING: { // send the heatbeat if we have waited long enough
+			case CONNECTED: { // send the heatbeat if we have waited long enough
 				// cout << "Adapter: Heartbeat" << endl;
 				using namespace chrono;
 				time_point<system_clock> now = system_clock::now();
@@ -144,51 +145,62 @@ namespace Metal {
 
 			}
 		}
-		//	cout << "HeartBeat: thread is stopping" << endl;
-
+		//cout << "Adapter: keep alive terminated" << endl;
 	}
 
 
 	void Adapter::listennerLoop() {
+		//cout << "Adapter: Listenner is running" << endl;
 		chrono::seconds granularity = chrono::seconds(5);
-		char buffer[4096];
-		size_t size = sizeof(buffer);
 		int readSize = 0;
-		int offset = 0;
+		int offset;
 		int msgLength = 0;
 		Message msg;
+		char * buffer = msg.getData();
+		size_t size = Message::MAX_LENGTH;
 
 		/**
 		 * The purpose of this loop is to transform network bytes into messages and detect connection problems
 		 */
 		while (this->listenning) {
 			try {
-				if (this->socket != NULL) {
-					readSize = this->socket->read( &buffer[offset], size - offset);
-					if (readSize > 0) {
+				if (this->socket != NULL && getStatus() == CONNECTED) {
+					offset = 0;
+
+					// this loop will scan for data for the duration of the current physical session
+					while ( (readSize = this->socket->read(&buffer[offset], size - offset)) > 0) {
 						offset += readSize;
+						cout << "Adapter: received " << readSize << " bytes, offset=" << offset << endl;
+						cout << Codec::formatHex(buffer, offset) << endl;
 						// do we have a complete message?
-						msgLength = this->codec->getMessageLength( buffer, offset);
-						if ( msgLength == 0) continue;
+						while ((msgLength = this->codec->getMessageLength(buffer, offset)) != 0) {
+							offset -= msgLength;
+							//cout << "Adapter: Message Received. Len=" << msgLength << ", Offset=" << offset << endl;
 
-						offset -= msgLength;
+							onMessage(msg);
 
-						// do we have leftovers?
-						if (offset > 0) { // if so move them at the beginning of the buffer
-							memcpy(buffer, &buffer[msgLength], offset);
+							// do we have leftovers?
+							if (offset > 0) { // if so move them at the beginning of the buffer
+								memcpy(buffer, &buffer[msgLength], offset);
+							}
 						}
-
-						// cout << "Adapter::dataListenner received " << readSize << " bytes" << endl;
 					}
 				}
+
 			} catch (NL::Exception e) {
-				cerr << "Adapter::dataListenner exception " << e.what() << endl;
+				// Network exception
+//				stop( string("Network Exception ") + e.what());
+			} catch ( std::runtime_error e) {
+				cout << "Adapter: Closing socket because " << e.what() << endl;
+				// Data exception
+				closeSocket();
 			}
-			// cout << "Adapter::dataListenner is not doing much for now" << endl;
+
+			// wait for reconnection
 			this_thread::sleep_for(granularity);
 		}
 
-		cout << "Adapter::dataListenner Killed" << endl;
+		//cout << "Adapter: listenner terminated" << endl;
 	}
 
 	void Adapter::openSocket() {
@@ -198,16 +210,15 @@ namespace Metal {
 			std::cout << "Connecting to " << this->remoteHost << ":" << this->remotePort << std::endl;
 			changeStatus(CONNECTING);
 			this->socket = new NL::Socket(this->remoteHost, this->remotePort);
+			changeStatus(CONNECTED);
 			std::cout << "Connected." << std::endl;
 
-			// Start listenning
-			Adapter::start();
-
-//			this->onPhysicalConnection();
+			// propagate physical connection
+			this->onPhysicalConnection();
 
 		} catch (NL::Exception &e) {
 			// Connection failed. Do we still need to try?
-			std::cerr << "Could not connect to remote host because " << e.what() << e.nativeErrorCode() << std::endl;
+			std::cerr << "Could not connect to remote host because " << e.what() << " " << e.nativeErrorCode() << std::endl;
 			if (CONNECTING == getStatus()){
 				changeStatus(RETRYING);
 			}
@@ -215,20 +226,23 @@ namespace Metal {
 
 	}
 	/**
-	 * Write a message on the socket
+	 * Write a message to the socket
 	 */
-	void Adapter::send(Message &msg) {
+	bool Adapter::send(Message &msg) {
 		try {
-			this->socket->send(msg.getData(), msg.getLength());
-			// cout << "Adapter: sent " << msg.getLength() << " bytes" << std::endl;
+			if (this->socket != NULL) {
+				this->socket->send(msg.getData(), msg.getLength());
+				// cout << "Adapter: sent " << msg.getLength() << " bytes" << std::endl;
+				return true;
+			}
 		} catch (std::exception &e) {
 			std::cerr << "Adapter: Could not send message, " << e.what() << std::endl;
-			changeStatus( RETRYING);
 		} catch (...) {
 			std::cerr << "Adapter: Could not send message" << std::endl;
-			// change the status so we can retry a connection
-			changeStatus(RETRYING);
 		}
+		// change the status so we can retry a connection
+		changeStatus(RETRYING);
+		return false;
 	}
 
 	void Adapter::setRemoteHost(const std::string & hostName, unsigned int portNumber) {
@@ -238,7 +252,7 @@ namespace Metal {
 
 	void Adapter::start() {
 		// Prevent Duplicates
-		stop();
+		stop( "Prevent duplicates");
 
 		if (this->remoteHost.length() == 0 || this->remotePort == 0) {
 			std::cerr << "Remote host and port are required and missing [" << this->remoteHost << ":" << this->remotePort << "]" << std::endl;
@@ -254,28 +268,34 @@ namespace Metal {
 		openSocket();
 	}
 
-	void Adapter::stop() {
-		stopKeepAlive();
-		stopListenner();
-		closeSocket();
-	}
+	void Adapter::stop( string reason) {
+		// cout << "Adapter: stopping because=" << reason << endl;
 
-	void Adapter::stopKeepAlive() {
-		if (this->keepAliveThread != NULL){
-			this->keepAlive = false;
+		// Prevent encapsulated termination
+		// This may happen when we close the socket
+		if (getStatus() == STOPPING) return;
+		changeStatus(STOPPING);
+
+		this->keepAlive = false;
+		this->listenning = false;
+
+		// Wait for thread if it is not the invoker
+		if (this->keepAliveThread != NULL && this_thread::get_id() != this->keepAliveThread->get_id()){
 			this->keepAliveThread->join();
 			this->keepAliveThread = NULL;
-			this->keepAlive = true;
 		}
-	}
 
-	void Adapter::stopListenner() {
-		if (this->listennerThread != NULL){
-			this->listenning = false;
+		// we must close the socket before waiting the listenner
+		// which is otherwise blocked on read() call
+		closeSocket();
+
+		// Wait for thread if it is not the invoker
+		if (this->listennerThread != NULL && this_thread::get_id() != this->listennerThread->get_id()){
 			this->listennerThread->join();
 			this->listennerThread = NULL;
-			this->listenning = true;
 		}
+
+		cout << "Adapter: Stopped. Reason=" << reason << endl;
 	}
 
 }

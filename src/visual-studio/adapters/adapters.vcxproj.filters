@@ -71,5 +71,8 @@
     <ClCompile Include="..\..\metal\adapters\Adapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\ExecutionReport.cpp">
+      <Filter>Source Files\LSETradingAdapter</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

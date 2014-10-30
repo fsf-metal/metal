@@ -18,7 +18,16 @@ class MilleniumAdapter : public TradingAdapter {
 		 */
 		void send( const NewOrderSingle& nos);
 
-		virtual void onMessage( const ExecutionReport &er);
+		/**
+		 * Generic entry point for all messages
+		 * @see Adapter#onMessage
+		 */
+		virtual void onMessage( Message &msg);
+
+		/**
+		 *
+		 */
+		virtual void onMessage(const Metal::LSE::ExecutionReport &er);
 
 		/**
 		 * @see TradingAdapter#benchmark

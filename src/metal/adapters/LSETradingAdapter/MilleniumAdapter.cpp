@@ -10,6 +10,7 @@
 #include "MilleniumMapper.h"
 #include "MilleniumCodec.h"
 #include "Logon.h"
+#include "LSEValues.h"
 
 namespace Metal {
 namespace LSE {
@@ -89,9 +90,32 @@ void MilleniumAdapter::encodeLogon(Message &msg) {
 	this->mCodec->encode(logon, msg);
 }
 
-void MilleniumAdapter::onMessage(const ExecutionReport &er) {
-	std::cout << "LSETradingAdapter: Execution Report received but not processed" << std::endl;
+void MilleniumAdapter::onMessage(Message &msg) {
+	char msgType = msg.get(3);
+	//std::cout << "MilleniumAdapter: Message type=" << msgType << std::endl;
+	switch (msgType) {
+	case MessageType_ExecutionReport: {
+		ExecutionReport er;
+		this->mCodec->decode(msg, er);
+
+		// propagate this message
+		onMessage(er);
+	}	break;
+
+	// don't react to other messages
+	case MessageType_HEARTBEAT:
+	default:
+		;
+	}
 }
+
+void MilleniumAdapter::onMessage( const Metal::LSE::ExecutionReport &nativeER) {
+	Metal::ExecutionReport metalER;
+	MilleniumMapper::map(nativeER, metalER);
+	// Propagate the normalized message
+	TradingAdapter::onMessage( metalER);
+}
+
 
 void MilleniumAdapter::send( const NewOrderSingle& nos) {
 	NewOrder no;

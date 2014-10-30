@@ -45,19 +45,15 @@ TradingAdapter::~TradingAdapter() {
  */
 void TradingAdapter::onPhysicalConnection() {
 //	std::cout << "TradingAdapter: Physical connection" << std::endl;
-	// Change status to IDLE to stop retries
-/*	changeStatus( IDLE);
-
 	try {
 		// 
 		Message logon;
-		this->encodeLogon(logon);
-		this->send(logon);
-		changeStatus(HEARTBEATING);
+		this->codec->encodeLogon(logon);
+		Adapter::send(logon);
 	} catch ( std::exception &e) {
 		changeStatus(RETRYING);
 		std::cerr << "TradingAdapter: Could not send logon because " << e.what() << std::endl;
-	}*/
+	}
 }
 
 }

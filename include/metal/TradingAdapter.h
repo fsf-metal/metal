@@ -59,11 +59,17 @@ class TradingAdapter : public Adapter {
 		virtual void send( const NewOrderSingle &) = 0;
 
 		/**
-		 * This method will invoked upon receiving an execution report<br>
+		 * This is invoked for every new message
+		 * It should be overriden for custom processing
+		 */
+		virtual void onMessage(Message &msg){};
+
+		/**
+		 * This method will invoked upon receiving a normalized execution report<br>
 		 * Subclasses should override this method to capture execution reports in generic format<br>
 		 * @param ExecutionReport incomming execution report
 		 */
-		virtual void onExecutionReport(const ExecutionReport &er){};
+		virtual void onMessage(const ExecutionReport &er){};
 
 		/**
 		 * This method is invoked once the socket is connected<br>
@@ -83,12 +89,12 @@ class TradingAdapter : public Adapter {
 				std::chrono::milliseconds &encodingDuration) = 0;
 
 		/**
-		* The purpose is to measure Mapping and Encoding speed for OrderCancelRequest<br>
-		* Subclasses should make sure to execute both as opposed to just mapping
+		 * The purpose is to measure Mapping and Encoding speed for OrderCancelRequest<br>
+		 * Subclasses should make sure to execute both as opposed to just mapping
 		 * @param list A list of NewOrderSingle better if randomly generated
 		 * @param mappingDuration Time used to map messages
 		 * @param encodingDuration Time used to encode messages
-		*/
+		 */
 		virtual void benchmark( const std::vector<OrderCancelRequest> &list,
 				std::chrono::milliseconds &mappingDuration,
 				std::chrono::milliseconds &encodingDuration) = 0;

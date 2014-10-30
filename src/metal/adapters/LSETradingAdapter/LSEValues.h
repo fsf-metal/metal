@@ -26,6 +26,7 @@ namespace LSE {
 	const ClearingAcount ClearingAccount_CLIENT = 1;
 	const ClearingAcount ClearingAccount_HOUSE = 3;
 
+	const char MessageType_ExecutionReport = '8';
 	const char MessageType_HEARTBEAT = '0';
 	const char MessageType_LOGON = 'A';
 	const char MessageType_LOGON_REPLY = 'B';

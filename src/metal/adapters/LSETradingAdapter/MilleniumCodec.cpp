@@ -18,6 +18,35 @@ MilleniumCodec::MilleniumCodec() {
 MilleniumCodec::~MilleniumCodec() {
 }
 
+void MilleniumCodec::decode(Message &msg, ExecutionReport &er) {
+	const char * data = msg.getData();
+	Codec::decode( data, 4, er.appID);
+	Codec::decodeLE( data, 5, er.sequenceNo);
+	Codec::decode( data, 9, er.executionID, 12);
+	Codec::decode( data, 21, er.clientOrderID, 20);
+	Codec::decode( data, 41, er.orderID, 12);
+	er.execType = data[53];
+	Codec::decode( data, 54, er.executionReportRefID, 12);
+	Codec::decode( data, 66, er.orderStatus);
+	Codec::decodeLE( data, 67, er.orderRejectCode);
+	Codec::decodeLE( data, 71, er.executedPrice);
+	Codec::decodeLE( data, 79, er.executedQty);
+	Codec::decodeLE( data, 83, er.leavesQty);
+	Codec::decode(data, 87, er.container);
+	Codec::decodeLE(data, 88, er.displayQty);
+	Codec::decodeLE(data, 92, er.instrumentID);
+	Codec::decode(data, 96, er.restatementReason);
+	Codec::decode(data, 98, er.side);
+	Codec::decode(data, 107, er.counterparty, 11);
+	er.tradeLiquidityIndicator = data[118];
+	Codec::decodeLE(data, 119, er.tradeMatchID);
+	Codec::decodeLE(data, 127, er.transactTime);
+	Codec::decode(data, 136, er.typeOfTrade);
+	Codec::decode(data, 137, er.capacity);
+	er.priceDifferential = data[138];
+	Codec::decode(data, 139, er.publicOrderID, 12);
+}
+
 void MilleniumCodec::encode( const Logon &logon, Metal::Message &msg) {
 	encodeHeader( msg, 80, MessageType_LOGON);
 	Codec::encode( logon.userName, msg, 4, 25);
@@ -96,7 +125,15 @@ void MilleniumCodec::encodeHeartBeat(Metal::Message &msg) {
 
 int MilleniumCodec::getMessageLength(char * data, int size) {
 	if (size < HEADER_LENGTH) return 0;
-	int16_t msgLength = decodeInt16_LE(data, 1);
+
+	// validate first char which is always 0x02 for LSE
+	if ( (data[0] & 0xFF) != 0x02) throw std::runtime_error( "Invalid message header " + std::to_string((int)data[0]));
+
+	int16_t msgLength = 0;
+	decodeLE(data, 1, msgLength);
+
+	// Simple check on message size to avoid garbage
+	if (msgLength > 1024 || msgLength < HEADER_LENGTH) throw std::runtime_error( "Invalid message size " + std::to_string(msgLength));
 
 	// do we have enough data available?
 	if (size < msgLength) return 0;

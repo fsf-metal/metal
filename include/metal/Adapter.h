@@ -53,9 +53,9 @@ namespace Metal {
 		Adapter(const string& nameParam, const string& uuidParam, Codec *codec = NULL, int heartBeatInterval = 0, int retryInterval = 0);
 
 		/**
-		 * These are the possible statuses for keep alive.<br>
+		 * Here are the possible statuses for Adapter session.<br>
 		 */
-		enum Status { IDLE, CONNECTING, HEARTBEATING, RETRYING };
+		enum Status { IDLE, CONNECTING, CONNECTED, RETRYING, STOPPING };
 
 		/**
 		 * Thread safe function to change adapter status
@@ -84,9 +84,22 @@ namespace Metal {
 		const string & getUUID() { return this->uuid; };
 
 		/**
-		* This methods sends an message in native format.
-		*/
-		void send(Message& msg);
+		 * This is the entry point for all new messages
+		 * @param msg Contains incomming message data
+		 */
+		virtual void onMessage(Message &msg) = 0;
+
+		/**
+		 * This method is invoked when we have established a physical connection (socket is up)
+		 */
+		virtual void onPhysicalConnection(){};
+
+		/**
+		 * This methods sends an message in native format.
+		 * @param msg Whatever should be sent
+		 * @return Success flag.
+		 */
+		bool send(Message& msg);
 
 		/**
 		 * This method should be invoked before starting the adapter to set remote host properties
@@ -102,8 +115,9 @@ namespace Metal {
 
 		/**
 		 * Stops the listenner thread
+		 * @param reason
 		 */
-		virtual void stop();
+		virtual void stop( string reason);
 
 	protected:
 		~Adapter();

@@ -2,15 +2,52 @@
 #include <metal/MetalExceptions.h>
 #include "MilleniumMapper.h"
 #include "LSEValues.h"
+#include "ExecutionReport.h"
 
 namespace Metal {
 namespace LSE {
 /**
  * Translate LSE NewOrder into Metal representation
  */
-void MilleniumMapper::map( const NewOrder& message,
-                                 NewOrderSingle &nos){
+void MilleniumMapper::map( const NewOrder& message, NewOrderSingle &nos){
 	std::cout << "LSEMessageMapper: NewOrderSingle map invoked (LSE->MeTAL) but not implemented" << std::endl;
+
+}
+
+/**
+ * ExecutionReport LSE -> MeTAL
+ */
+void MilleniumMapper::map(const Metal::LSE::ExecutionReport & nativeER, Metal::ExecutionReport &metalER) {
+	// Order ID
+	FIX::OrderID orderID = nativeER.orderID;
+	metalER.setField(orderID);
+
+	// Execution ID
+	FIX::ExecID execID = nativeER.executionID;
+	metalER.setField(execID);
+
+	// ExecType
+	FIX::ExecType execType;
+	metalER.setField( execType);
+
+	// OrdStatus
+	FIX::OrdStatus ordStatus;
+	metalER.setField( ordStatus);
+
+	// Instrument
+	// Translate and map
+
+	// Side
+	FIX::Side side;
+	metalER.setField(side);
+
+	// Leaves Qty
+	FIX::LeavesQty leavesQty;
+	metalER.setField(leavesQty);
+
+	// CumQty
+	FIX::CumQty cumQty;
+	metalER.setField(cumQty);
 
 }
 
@@ -95,13 +132,13 @@ void MilleniumMapper::map( const Metal::NewOrderSingle &nos, Metal::LSE::NewOrde
     // Order Qty @59 L4
     FIX::OrderQty ordQty;
     nos.getField( ordQty);
-    newOrder.orderQty = (OrderQty)ordQty;
+    newOrder.orderQty = (Quantity)ordQty;
 
     // Display Qty @63 L4
     if( nos.isSetField( FIX::FIELD::DisplayQty)) {
     	FIX::DisplayQty displayQty;
     	nos.getField( displayQty);
-    	newOrder.displayQty = (DisplayQty) displayQty;
+    	newOrder.displayQty = (Quantity) displayQty;
     }
 
     // Limit Price @67 L8

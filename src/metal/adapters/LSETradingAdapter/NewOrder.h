@@ -31,8 +31,8 @@ public:
 	TimeInForce timeInForce;
 	ExpireDateTime expireDateTime;
 	Side side;
-	OrderQty orderQty;
-	DisplayQty displayQty;
+	Quantity orderQty;
+	Quantity displayQty;
 	/**
 	 * Price is stored with 8 implied decimal places
 	 */

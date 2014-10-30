@@ -5,14 +5,20 @@
 #include <metal/Mapper.h>
 #include "NewOrder.h"
 #include "OrderCancelRequest.h"
+#include "ExecutionReport.h"
 
 namespace Metal {
 namespace LSE {
 
 class MilleniumMapper : public Mapper {
 	public:
+		//-------------
         // LSE to MeTAL
-		static void map( const NewOrder&, NewOrderSingle&);
+		//-------------
+		static void map(const NewOrder&, NewOrderSingle&);
+		/** Execution report */
+		static void map(const Metal::LSE::ExecutionReport & nativeER, Metal::ExecutionReport &metalER);
+
         /**
          * MeTAL to LSE for NewOrderSingle
          */

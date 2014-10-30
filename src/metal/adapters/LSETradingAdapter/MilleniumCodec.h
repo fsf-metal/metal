@@ -13,6 +13,7 @@
 #include "NewOrder.h"
 #include "OrderCancelRequest.h"
 #include "Logon.h"
+#include "ExecutionReport.h"
 
 namespace Metal {
 namespace LSE {
@@ -33,9 +34,9 @@ namespace LSE {
 		static const int HEADER_LENGTH = 4;
 
 		/**
-		 * Local implementation to Codec#getMessageLength
+		 * Read inbound execution report
 		 */
-		int getMessageLength(char* data, int length);
+		void decode(Message &msg, ExecutionReport &er);
 
 		//------------------
 		// LSE Messages
@@ -65,12 +66,18 @@ namespace LSE {
 		// Fields
 		// We are relying on Codec:: little endian methods, just wrapping them for ease of use
 		//------------------------------------------------------------------------------------
-		inline void encode(const int16_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
-		inline void encode(const int32_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
-		inline void encode(const int64_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
+		inline void encode(const int16_t &i, Message &msg, int position) { encodeLE(i, msg, position); };
+		inline void encode(const int32_t &i, Message &msg, int position) { encodeLE(i, msg, position); };
+		inline void encode(const int64_t &i, Message &msg, int position) { encodeLE(i, msg, position); };
 
 		inline void encodeHeader(Message &msg, int16_t length, char type);
 		void encodeHeartBeat(Message &msg);
+
+		/**
+		* Local implementation to Codec#getMessageLength
+		*/
+		int getMessageLength(char* data, int length);
+
 	};
 
 

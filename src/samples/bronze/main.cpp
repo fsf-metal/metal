@@ -51,7 +51,7 @@ int main( int argc, char *argv[]) {
 			if( command == "") continue;
 			if (command == "exit") break;
 			if (command == "stop") {
-				adapter.stop();
+				adapter.stop( "Requested by user");
 			} else if (command.substr( 0,4) == "host") {
 				vector<string> tokens =	split(command, ' ');
 				if (tokens.size() != 3) throw runtime_error( "Expecting two arguments for \"host\"");
@@ -74,7 +74,7 @@ int main( int argc, char *argv[]) {
 		}
 	}
 
-	adapter.stop();
+	adapter.stop("Bronze termination");
 
 	cout << "Good Bye!" << endl;
 
