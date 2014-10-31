@@ -14,37 +14,48 @@ class MilleniumAdapter : public TradingAdapter {
 		MilleniumAdapter();
 
 		/**
-		 * @see TradingAdapter#send( const NewOrderSingle&)
+		 * @see TradingAdapter#benchmark
 		 */
-		void send( const NewOrderSingle& nos);
+		void benchmark(const std::vector<Metal::NewOrderSingle> &,
+			std::chrono::milliseconds& mappingDuration,
+			std::chrono::milliseconds& encodingDuration);
+
+		/**
+		 * @see TradingAdapter#benchmark
+		 */
+		void benchmark(const std::vector<Metal::OrderCancelRequest> &,
+			std::chrono::milliseconds &,
+			std::chrono::milliseconds &);
+
+		void encodeHeartBeat(Message &msg);
 
 		/**
 		 * Generic entry point for all messages
+		 * This method is reponsible for decoding and propagating inbound messages
 		 * @see Adapter#onMessage
 		 */
 		virtual void onMessage( Message &msg);
 
 		/**
-		 *
+		 * Native Execution Report
 		 */
 		virtual void onMessage(const Metal::LSE::ExecutionReport &er);
 
 		/**
-		 * @see TradingAdapter#benchmark
+		 * Normalized Execution Report
 		 */
-		void benchmark( const std::vector<Metal::NewOrderSingle> &,
-				std::chrono::milliseconds& mappingDuration,
-				std::chrono::milliseconds& encodingDuration);
+		virtual void onMessage(const Metal::ExecutionReport &er){};
 
 		/**
-		* @see TradingAdapter#benchmark
-		*/
-		void benchmark( const std::vector<Metal::OrderCancelRequest> &,
-				std::chrono::milliseconds &,
-				std::chrono::milliseconds &);
+		 * Sends a logon message
+		 */
+		void sendLogon();
 
-		void encodeHeartBeat( Message &msg);
-		void encodeLogon( Message &msg);
+		/**
+		 * Sends a normalized new order
+		 */
+		void sendNewOrder(const Metal::NewOrderSingle &nos);
+
 
 		virtual ~MilleniumAdapter(){};
 

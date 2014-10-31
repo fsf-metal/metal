@@ -170,8 +170,8 @@ namespace Metal {
 					// this loop will scan for data for the duration of the current physical session
 					while ( (readSize = this->socket->read(&buffer[offset], size - offset)) > 0) {
 						offset += readSize;
-						cout << "Adapter: received " << readSize << " bytes, offset=" << offset << endl;
-						cout << Codec::formatHex(buffer, offset) << endl;
+						//cout << "Adapter: received " << readSize << " bytes, offset=" << offset << endl;
+						//cout << Codec::formatHex(buffer, offset) << endl;
 						// do we have a complete message?
 						while ((msgLength = this->codec->getMessageLength(buffer, offset)) != 0) {
 							offset -= msgLength;
@@ -214,7 +214,7 @@ namespace Metal {
 			std::cout << "Connected." << std::endl;
 
 			// propagate physical connection
-			this->onPhysicalConnection();
+			onPhysicalConnection();
 
 		} catch (NL::Exception &e) {
 			// Connection failed. Do we still need to try?

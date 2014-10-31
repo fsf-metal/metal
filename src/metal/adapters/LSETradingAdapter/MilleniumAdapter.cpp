@@ -85,10 +85,22 @@ void MilleniumAdapter::benchmark( const std::vector<Metal::OrderCancelRequest> &
 
 }
 
-void MilleniumAdapter::encodeLogon(Message &msg) {
+void MilleniumAdapter::sendLogon() {
 	Logon logon(this->userName, this->password, "");
+	Message msg;
 	this->mCodec->encode(logon, msg);
+	send(msg);
 }
+
+void MilleniumAdapter::sendNewOrder(const NewOrderSingle& nos) {
+	NewOrder no;
+	MilleniumMapper::map(nos, no);
+
+	Message msg;
+	this->mCodec->encode(no, msg);
+	send(msg);
+}
+
 
 void MilleniumAdapter::onMessage(Message &msg) {
 	char msgType = msg.get(3);
@@ -110,22 +122,13 @@ void MilleniumAdapter::onMessage(Message &msg) {
 }
 
 void MilleniumAdapter::onMessage( const Metal::LSE::ExecutionReport &nativeER) {
+	//std::cout << "MilleniumAdapter: Received Native Execution Report" << std::endl;
 	Metal::ExecutionReport metalER;
 	MilleniumMapper::map(nativeER, metalER);
 	// Propagate the normalized message
-	TradingAdapter::onMessage( metalER);
+	onMessage( metalER);
 }
 
-
-void MilleniumAdapter::send( const NewOrderSingle& nos) {
-	NewOrder no;
-	MilleniumMapper::map( nos, no);
-
-	Message msg;
-	this->mCodec->encode( no, msg);
-
-	Adapter::send( msg);
-}
 
 
 } // LSE::

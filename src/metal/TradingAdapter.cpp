@@ -44,16 +44,8 @@ TradingAdapter::~TradingAdapter() {
  * We should send a long
  */
 void TradingAdapter::onPhysicalConnection() {
-//	std::cout << "TradingAdapter: Physical connection" << std::endl;
-	try {
-		// 
-		Message logon;
-		this->codec->encodeLogon(logon);
-		Adapter::send(logon);
-	} catch ( std::exception &e) {
-		changeStatus(RETRYING);
-		std::cerr << "TradingAdapter: Could not send logon because " << e.what() << std::endl;
-	}
+	//std::cout << "TradingAdapter: Physical connection" << std::endl;
+	sendLogon();
 }
 
 }

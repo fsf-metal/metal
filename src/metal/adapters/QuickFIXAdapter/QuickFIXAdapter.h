@@ -18,7 +18,7 @@ class QuickFIXAdapter : public TradingAdapter {
 		/**
 		 * We override this method to leverage QuickFIX sending capacity
 		 */
-		void send( const NewOrderSingle &nos);
+		void sendNewOrder( const NewOrderSingle &nos);
 
 		virtual void onMessage( const ExecutionReport &er);
 

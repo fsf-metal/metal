@@ -99,7 +99,7 @@ namespace Metal {
 		 * @param msg Whatever should be sent
 		 * @return Success flag.
 		 */
-		bool send(Message& msg);
+		virtual bool send(Message& msg);
 
 		/**
 		 * This method should be invoked before starting the adapter to set remote host properties

@@ -62,7 +62,7 @@ int main( int argc, char *argv[]) {
 
 				// Transform command into NewOrderSingle (implemented in parsing.cpp)
 				parseNOS(command, nos);
-				adapter.send(nos);
+				adapter.sendNewOrder(nos);
 				cout << "Order sent " << nos.getField(11) << endl;
 			}
 		} catch( ParsingException &e) {

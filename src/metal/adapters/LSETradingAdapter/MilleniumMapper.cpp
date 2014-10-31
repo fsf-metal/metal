@@ -27,26 +27,26 @@ void MilleniumMapper::map(const Metal::LSE::ExecutionReport & nativeER, Metal::E
 	metalER.setField(execID);
 
 	// ExecType
-	FIX::ExecType execType;
+	FIX::ExecType execType = nativeER.execType;
 	metalER.setField( execType);
 
 	// OrdStatus
-	FIX::OrdStatus ordStatus;
+	FIX::OrdStatus ordStatus = nativeER.orderStatus;
 	metalER.setField( ordStatus);
 
 	// Instrument
 	// Translate and map
 
 	// Side
-	FIX::Side side;
+	FIX::Side side = nativeER.side;
 	metalER.setField(side);
 
 	// Leaves Qty
-	FIX::LeavesQty leavesQty;
+	FIX::LeavesQty leavesQty = nativeER.leavesQty;
 	metalER.setField(leavesQty);
 
 	// CumQty
-	FIX::CumQty cumQty;
+	FIX::CumQty cumQty = nativeER.executedQty;
 	metalER.setField(cumQty);
 
 }

@@ -52,13 +52,6 @@ class TradingAdapter : public Adapter {
 		TradingAdapter( const std::string& name, const std::string& uuid, Codec * codec = NULL, int heartBeatInterval = 30, int retryInterval = 5);
 
 		/**
-		 * This method will be called by users to send new orders<br>
-		 * It should map from generic to specific format then encode and send<br>
-		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
-		 */
-		virtual void send( const NewOrderSingle &) = 0;
-
-		/**
 		 * This is invoked for every new message
 		 * It should be overriden for custom processing
 		 */
@@ -98,6 +91,18 @@ class TradingAdapter : public Adapter {
 		virtual void benchmark( const std::vector<OrderCancelRequest> &list,
 				std::chrono::milliseconds &mappingDuration,
 				std::chrono::milliseconds &encodingDuration) = 0;
+
+		/**
+		 * Sends a logon message to initiate the session
+		 */
+		virtual void sendLogon(){};
+
+		/**
+		 * This method will be called by users to send new orders<br>
+		 * It should map from generic to specific format then encode and send<br>
+		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
+		 */
+		virtual void sendNewOrder( const NewOrderSingle &) = 0;
 
 	protected:
 		~TradingAdapter();

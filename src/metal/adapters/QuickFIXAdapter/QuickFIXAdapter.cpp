@@ -148,9 +148,9 @@ void QuickFIXAdapter::benchmark( const std::vector<OrderCancelRequest> &allCance
 }
 
 /**
- * Tranform incomming NewOrderSingle into QuickFIX message and send it
+ * Send normalized New Order
  */
-void QuickFIXAdapter::send( const NewOrderSingle &nos) {
+void QuickFIXAdapter::sendNewOrder( const NewOrderSingle &nos) {
 //	std::cout << "QuickFIXAdapter: send NewOrderSingle" << std::endl;
 
 	// TODO : Read protocol version from session properties
