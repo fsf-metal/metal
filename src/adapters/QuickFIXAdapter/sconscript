@@ -2,7 +2,7 @@ import glob
 
 src_files = 'QuickFIXAdapter.cpp QuickFIXMessageMapper.cpp'
 lib_files = 'Metal pthread xml2 z'
-include_path = '../../../../include'
+include_path = '../../../include'
 lib_path = '../../../lib'
 output_file = 'AdapterQuickFIX.so'
 

@@ -29,7 +29,7 @@ using namespace std;
 
 namespace Metal {
 	Adapter::Adapter(const std::string& nameParam, const std::string& uuidParam, Codec * codec, int heartBeatInterval, int retryInterval) 
-		:name(name), uuid(uuidParam), heartBeatIntervalInSeconds(heartBeatInterval), retryIntervalInSeconds(retryInterval) {
+		:name(nameParam), uuid(uuidParam), heartBeatIntervalInSeconds(heartBeatInterval), retryIntervalInSeconds(retryInterval) {
 
 		this->keepAlive = false;
 		this->keepAliveThread = NULL;
@@ -109,14 +109,6 @@ namespace Metal {
 			//string output;
 			//cout << "KeepAlive: " << getStatusName( getStatus(), output) << endl;
 			switch ( getStatus()) {
-			case IDLE:
-				// Watchout, this can be quite verbose
-				// cout << "KeepAlive: Idle" << endl;
-				break;
-
-			case CONNECTING:
-				// Just wait for connection
-				break;
 
 			case CONNECTED: { // send the heatbeat if we have waited long enough
 				// cout << "Adapter: Heartbeat" << endl;
@@ -128,8 +120,7 @@ namespace Metal {
 					send(msg);
 					lastBeat = now;
 				}
-			}
-				break;
+			} break;
 
 			case RETRYING: { // retry the connection if we have waited long enough
 				//cout << "Adapter: Retry" << endl;
@@ -140,8 +131,13 @@ namespace Metal {
 					openSocket();
 					lastRetry = now;
 				}
-			}
-				break;
+			} break;
+
+			case CONNECTING:
+			case IDLE:
+            case STOPPING:
+            default: // don't don anything
+                ;
 
 			}
 		}

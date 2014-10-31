@@ -29,6 +29,11 @@ SConscript( 'metal/sconscript')
 SConscript( 'bootstrapper/sconscript')
 SConscript( '3rdparties/netLink/sconscript')
 SConscript( '3rdparties/jsoncpp/sconscript')
-SConscript( 'metal/adapters/QuickFIXAdapter/sconscript')
-SConscript( 'metal/adapters/LSETradingAdapter/sconscript')
-#SConscript( 'metal/adapters/AquisATPAdapter/sconscript')
+SConscript( 'adapters/QuickFIXAdapter/sconscript')
+SConscript( 'adapters/LSETradingAdapter/sconscript')
+#SConscript( 'adapters/AquisATPAdapter/sconscript')
+
+
+# Samples
+SConscript( 'samples/bronze/sconscript')
+SConscript( 'samples/benchmark/sconscript')

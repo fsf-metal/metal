@@ -1,14 +1,28 @@
-#Object('main.cpp')
-src_files = 'main.cpp parsing.cpp MyAdapter.cpp'
-lib_files = 'AdapterQuickFIX AdapterLSETrading Metal NetLink quickfix pthread xml2 z'
-include_path = '../../../include ../../'
-output_file = 'bronze'
-#output_file = 'bronze'
-cpp_flags='-Wall -std=c++11 -fexceptions -finline-functions'
+#get the mode flag from the command line
+#default to 'release' if the user didn't specify
+mymode = ARGUMENTS.get('mode', 'release')   #holds current mode
+
+#check if the user has been naughty: only 'debug' or 'release' allowed
+if not (mymode in ['debug', 'release']):
+    print "Error: expected 'debug' or 'release', found: " + mymode
+    Exit(1)
+
+#tell the user what we're doing
+print '**** Compiling in ' + mymode + ' mode...'
+
+ccflags = '-std=c++11 -fexceptions -Wall -fPIC '
+#extra compile flags for debug
+debugcflags = ccflags + '-D_DEBUG '
+#extra compile flags for release
+releasecflags = ccflags + '-O3 -DNDEBUG'
 
 env = Environment()
-env.Append( CPPPATH=Split( include_path))
-env.Append( CPPFLAGS=Split( cpp_flags))
 
-# Produce the executable
-env.Program( output_file, Split( src_files), LIBS=Split(lib_files), LIBPATH='../../../lib');
+#make sure the sconscripts can get to the variables
+Export('env', 'mymode', 'debugcflags', 'releasecflags')
+
+#put all .sconsign files in one place
+env.SConsignFile()
+
+# Compile core
+SConscript( 'sconscript')

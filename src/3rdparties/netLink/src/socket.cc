@@ -27,7 +27,7 @@
 
 #ifdef _WIN32
 #   define SEND_FLAGS 0
-#else if __linux__
+#elif __linux__
 #   define SEND_FLAGS MSG_NOSIGNAL 
 #endif
 

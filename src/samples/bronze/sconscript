@@ -1,10 +1,10 @@
 import glob
 
-src_files = 'Adapter.cpp TradingAdapter.cpp Translator.cpp Mapper.cpp Message.cpp Codec.cpp KeepAlive.cpp'
-lib_files = 'quickfix'
-include_path = '../../include'
-lib_path='../../lib'
-output_file = 'Metal.so'
+src_files = 'main.cpp parsing.cpp MyAdapter.cpp'
+lib_files = 'AdapterQuickFIX AdapterLSETrading Metal NetLink quickfix pthread xml2 z'
+include_path = '../../../include/ ../..'
+lib_path = '../../../lib'
+output_file = 'bronze'
 
 # Get all the build variables we need
 Import('env', 'mymode', 'debugcflags', 'releasecflags')
@@ -19,6 +19,5 @@ else:
 
 localenv.Append(CPPPATH=Split( include_path))
 
-# Actually build the Library
-localenv.Library( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH=Split(lib_path))
-
+# Actually build Binaries
+localenv.Program( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH=Split(lib_path))

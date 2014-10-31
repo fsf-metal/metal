@@ -25,4 +25,5 @@ Export('env', 'mymode', 'debugcflags', 'releasecflags')
 env.SConsignFile()
 
 # Compile core
-SConscript( 'sconscript')
+SConscript( 'benchmark/sconscript')
+SConscript( 'bronze/sconscript')
