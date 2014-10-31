@@ -54,9 +54,9 @@ public:
 	// Fields
 	// We are relying on Codec:: little endian methods, just wrapping them for ease of use
 	//------------------------------------------------------------------------------------
-	inline void encode(const uint16_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
-	inline void encode(const uint32_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
-	inline void encode(const uint64_t &i, Message &msg, int position) { encodeLittleEndian(i, msg, position); };
+	inline void encode(const uint16_t &i, Message &msg, int position) { encodeLE(i, msg, position); };
+	inline void encode(const uint32_t &i, Message &msg, int position) { encodeLE(i, msg, position); };
+	inline void encode(const uint64_t &i, Message &msg, int position) { encodeLE(i, msg, position); };
 
 	/**
 	 * Encode Aquis ATP Header

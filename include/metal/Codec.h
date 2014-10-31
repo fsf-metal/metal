@@ -308,7 +308,7 @@ public:
 	 */
 	virtual void encodeLogon(Message &msg){};
 
-	static std::string Codec::formatHex(char * data, int length);
+	static std::string formatHex(char * data, int length);
 
 	virtual ~Codec();
 };
