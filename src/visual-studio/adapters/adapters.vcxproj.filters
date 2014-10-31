@@ -13,66 +13,40 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\LSETradingAdapter">
-      <UniqueIdentifier>{03a9b90a-48e1-4520-9135-d3a132202245}</UniqueIdentifier>
+    <Filter Include="Source Files\QuickFIX">
+      <UniqueIdentifier>{4ebab89d-6698-43f2-9b4b-5ff5e468dd9c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\QuickFIXAdapter">
-      <UniqueIdentifier>{2e26deb2-2d2a-4823-8dc9-133d05ebec26}</UniqueIdentifier>
+    <Filter Include="Source Files\LSETrading">
+      <UniqueIdentifier>{37411134-0caf-4854-883c-4c85c2511b5e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\metal\Codec.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\metal\adapters\LSETradingAdapter\Logon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HeartBeat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\metal\TradingAdapter.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\ExecutionReport.cpp">
+      <Filter>Source Files\LSETrading</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\Translator.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\Logon.cpp">
+      <Filter>Source Files\LSETrading</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\Message.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\MilleniumAdapter.cpp">
+      <Filter>Source Files\LSETrading</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumAdapter.cpp">
-      <Filter>Source Files\LSETradingAdapter</Filter>
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\MilleniumCodec.cpp">
+      <Filter>Source Files\LSETrading</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumCodec.cpp">
-      <Filter>Source Files\LSETradingAdapter</Filter>
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\MilleniumMapper.cpp">
+      <Filter>Source Files\LSETrading</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\MilleniumMapper.cpp">
-      <Filter>Source Files\LSETradingAdapter</Filter>
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\NewOrder.cpp">
+      <Filter>Source Files\LSETrading</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\OrderCancelRequest.cpp">
-      <Filter>Source Files\LSETradingAdapter</Filter>
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\OrderCancelRequest.cpp">
+      <Filter>Source Files\LSETrading</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\NewOrder.cpp">
-      <Filter>Source Files\LSETradingAdapter</Filter>
+    <ClCompile Include="..\..\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp">
+      <Filter>Source Files\QuickFIX</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp">
-      <Filter>Source Files\QuickFIXAdapter</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
-      <Filter>Source Files\QuickFIXAdapter</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\metal\Codec.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\Logon.cpp">
-      <Filter>Source Files\LSETradingAdapter</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\Adapter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\metal\adapters\LSETradingAdapter\ExecutionReport.cpp">
-      <Filter>Source Files\LSETradingAdapter</Filter>
+    <ClCompile Include="..\..\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
+      <Filter>Source Files\QuickFIX</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

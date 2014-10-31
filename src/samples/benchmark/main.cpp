@@ -14,8 +14,8 @@
 
 #include <metal/metal.h>
 #include <metal/Mapper.h>
-#include <metal/adapters/QuickFIXAdapter/QuickFIXAdapter.h>
-#include <metal/adapters/LSETradingAdapter/MilleniumAdapter.h>
+#include <adapters/QuickFIXAdapter/QuickFIXAdapter.h>
+#include <adapters/LSETradingAdapter/MilleniumAdapter.h>
 
 #include "Display.h"
 
