@@ -30,13 +30,6 @@ class MilleniumAdapter : public TradingAdapter {
 		void encodeHeartBeat(Message &msg);
 
 		/**
-		 * Generic entry point for all messages
-		 * This method is reponsible for decoding and propagating inbound messages
-		 * @see Adapter#onMessage
-		 */
-		virtual void onMessage( Message &msg);
-
-		/**
 		 * Native Execution Report
 		 */
 		virtual void onMessage(const Metal::LSE::ExecutionReport &er);
@@ -45,6 +38,11 @@ class MilleniumAdapter : public TradingAdapter {
 		 * Normalized Execution Report
 		 */
 		virtual void onMessage(const Metal::ExecutionReport &er){};
+
+		/**
+		 * LSE specific implementation of data processing
+		 */
+		virtual int processData(const char * data, int size);
 
 		/**
 		 * Sends a logon message

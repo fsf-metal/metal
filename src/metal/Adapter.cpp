@@ -88,7 +88,6 @@ namespace Metal {
 		case CONNECTED: output = "Connected"; break;
 		case RETRYING: output = "Retrying"; break;
 		case STOPPING: output = "Stopping"; break;
-//		case KILLED: output = "Killed"; break;
 		default: output = "?";
 		}
 
@@ -110,28 +109,32 @@ namespace Metal {
 			//cout << "KeepAlive: " << getStatusName( getStatus(), output) << endl;
 			switch ( getStatus()) {
 
-			case CONNECTED: { // send the heatbeat if we have waited long enough
-				// cout << "Adapter: Heartbeat" << endl;
-				using namespace chrono;
-				time_point<system_clock> now = system_clock::now();
-				duration<double> elapsed = now - lastBeat;
-				if (elapsed.count() > this->heartBeatIntervalInSeconds) {
-					this->codec->encodeHeartBeat(msg);
-					send(msg);
-					lastBeat = now;
-				}
-			} break;
+			case CONNECTED: 
+				if( this->heartBeatIntervalInSeconds > 0) { // send the heatbeat if we have waited long enough
+					// cout << "Adapter: Heartbeat" << endl;
+					using namespace chrono;
+					time_point<system_clock> now = system_clock::now();
+					duration<double> elapsed = now - lastBeat;
+					if (elapsed.count() > this->heartBeatIntervalInSeconds) {
+						this->codec->encodeHeartBeat(msg);
+						send(msg);
+						lastBeat = now;
+					}
+				} 
+				break;
 
-			case RETRYING: { // retry the connection if we have waited long enough
-				//cout << "Adapter: Retry" << endl;
-				using namespace chrono;
-				time_point<system_clock> now = system_clock::now();
-				duration<double> elapsed = now - lastRetry;
-				if (elapsed.count() > this->retryIntervalInSeconds) {
-					openSocket();
-					lastRetry = now;
-				}
-			} break;
+			case RETRYING: 
+				if( this->retryIntervalInSeconds > 0) { // retry the connection if we have waited long enough
+					//cout << "Adapter: Retry" << endl;
+					using namespace chrono;
+					time_point<system_clock> now = system_clock::now();
+					duration<double> elapsed = now - lastRetry;
+					if (elapsed.count() > this->retryIntervalInSeconds) {
+						openSocket();
+						lastRetry = now;
+					}
+				} 
+				break;
 
 			case CONNECTING:
 			case IDLE:
@@ -152,6 +155,7 @@ namespace Metal {
 		int offset;
 		int msgLength = 0;
 		Message msg;
+		// link message data to buffer
 		char * buffer = msg.getData();
 		size_t size = Message::MAX_LENGTH;
 
@@ -168,16 +172,17 @@ namespace Metal {
 						offset += readSize;
 						//cout << "Adapter: received " << readSize << " bytes, offset=" << offset << endl;
 						//cout << Codec::formatHex(buffer, offset) << endl;
-						// do we have a complete message?
-						while ((msgLength = this->codec->getMessageLength(buffer, offset)) != 0) {
-							offset -= msgLength;
+
+						// Ask subclasses to translate raw data into messages
+						//while ((msgLength = this->codec->getMessageLength(buffer, offset)) != 0) {
+						while ((msgLength = processData(buffer, offset)) != 0) {
 							//cout << "Adapter: Message Received. Len=" << msgLength << ", Offset=" << offset << endl;
-
-							onMessage(msg);
-
 							// do we have leftovers?
-							if (offset > 0) { // if so move them at the beginning of the buffer
+							if (offset > msgLength) { // if so move them at the beginning of the buffer
+								offset -= msgLength;
 								memcpy(buffer, &buffer[msgLength], offset);
+							} else {
+								offset = 0;
 							}
 						}
 					}

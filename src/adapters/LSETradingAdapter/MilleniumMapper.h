@@ -33,7 +33,17 @@ class MilleniumMapper : public Mapper {
 		 */
 		static void map( const FIX::Side &, Metal::LSE::Side &);
 
-        // only used by benchmarker
+		/**
+		 * Translate Native Order Status to FIX
+		 */
+		static FIX::OrdStatus MilleniumMapper::map( OrderStatus nativeStatus);
+			
+		/**
+		 * Translate Native Side to FIX
+		 */
+		static FIX::Side MilleniumMapper::map( Side nativeStatus);
+
+		// only used by benchmarker
 		void benchmark( std::vector<NewOrderSingle> &);
 
 		// Encoding functions

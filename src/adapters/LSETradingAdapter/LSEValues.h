@@ -33,6 +33,14 @@ namespace LSE {
 	const char MessageType_NEW_ORDER = 'D';
 	const char MessageType_ORDER_CANCEL_REQUEST = 'F';
 
+	const OrderStatus OrderStatus_New = 0;
+	const OrderStatus OrderStatus_PatiallyFilled = 1;
+	const OrderStatus OrderStatus_Filled = 2;
+	const OrderStatus OrderStatus_Cancelled = 4;
+	const OrderStatus OrderStatus_Expired = 6;
+	const OrderStatus OrderStatus_Rejected = 8;
+	const OrderStatus OrderStatus_Suspended = 9;
+
 	const OrderSubType OrderSubType_ORDER = 0;
 	const OrderSubType OrderSubType_PEGGED_ORDER = 5;
 	const OrderSubType OrderSubType_RANDOM_PEEK_SIZE = 51;

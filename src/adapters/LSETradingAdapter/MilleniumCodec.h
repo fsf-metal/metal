@@ -36,7 +36,17 @@ namespace LSE {
 		/**
 		 * Read inbound execution report
 		 */
-		void decode(Message &msg, ExecutionReport &er);
+		void decode(const char * data, ExecutionReport &er);
+
+		//-------------------------------------------
+		// Few handy aliases, LSE Uses little endian
+		//-------------------------------------------
+		inline void decode(const char * data, int position, int16_t &output) { decodeLE(data, position, output); }
+		inline void decode(const char * data, int position, uint16_t &output) { decodeLE(data, position, output); }
+		inline void decode(const char * data, int position, int32_t &output) { decodeLE(data, position, output); }
+		inline void decode(const char * data, int position, uint32_t &output) { decodeLE(data, position, output); }
+		inline void decode(const char * data, int position, int64_t &output) { decodeLE(data, position, output); }
+		inline void decode(const char * data, int position, uint64_t &output) { decodeLE(data, position, output); }
 
 		//------------------
 		// LSE Messages
@@ -72,11 +82,6 @@ namespace LSE {
 
 		inline void encodeHeader(Message &msg, int16_t length, char type);
 		void encodeHeartBeat(Message &msg);
-
-		/**
-		* Local implementation to Codec#getMessageLength
-		*/
-		int getMessageLength(char* data, int length);
 
 	};
 

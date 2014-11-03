@@ -63,6 +63,7 @@ class MyApplication: public Application,public MessageCracker {
 					this->adapter->onMessage( er);
 				}
         };
+
 	private:
 		QuickFIXAdapter *adapter;
 

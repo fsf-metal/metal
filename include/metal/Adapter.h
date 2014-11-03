@@ -84,12 +84,6 @@ namespace Metal {
 		const string & getUUID() { return this->uuid; };
 
 		/**
-		 * This is the entry point for all new messages
-		 * @param msg Contains incomming message data
-		 */
-		virtual void onMessage(Message &msg) = 0;
-
-		/**
 		 * This method is invoked when we have established a physical connection (socket is up)
 		 */
 		virtual void onPhysicalConnection(){};
@@ -129,6 +123,14 @@ namespace Metal {
 		 */
 		NL::Socket *socket;
 		Codec *codec;
+
+		/**
+		 * Processes inbound data into message. Should invoke onMessage if appropriate
+		 * @param buffer Raw data read from network
+		 * @param length Number of bytes available.
+		 * @return processed message length if enough data is availble in buffer
+		 */
+		virtual int processData(const char * buffer, int length) = 0;
 
 	private:
 		/**

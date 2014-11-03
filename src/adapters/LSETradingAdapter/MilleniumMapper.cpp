@@ -31,14 +31,14 @@ void MilleniumMapper::map(const Metal::LSE::ExecutionReport & nativeER, Metal::E
 	metalER.setField( execType);
 
 	// OrdStatus
-	FIX::OrdStatus ordStatus = nativeER.orderStatus;
+	FIX::OrdStatus ordStatus = map(nativeER.orderStatus);
 	metalER.setField( ordStatus);
 
 	// Instrument
 	// Translate and map
 
 	// Side
-	FIX::Side side = nativeER.side;
+	FIX::Side side = map( nativeER.side);
 	metalER.setField(side);
 
 	// Leaves Qty
@@ -201,6 +201,27 @@ void MilleniumMapper::map( const FIX::Side &sideFrom, Metal::LSE::Side &sideTo) 
 			message << sideTo;
 			throw MappingException( message.str());
     }
+}
+
+FIX::OrdStatus MilleniumMapper::map(OrderStatus nativeStatus) {
+	switch (nativeStatus) {
+	case OrderStatus_New: return FIX::OrdStatus_NEW;
+	case OrderStatus_PatiallyFilled: return FIX::OrdStatus_PARTIALLY_FILLED;
+	case OrderStatus_Filled: return FIX::OrdStatus_FILLED;
+	case OrderStatus_Cancelled: return FIX::OrdStatus_CANCELED;
+	case OrderStatus_Expired: return FIX::OrdStatus_EXPIRED;
+	case OrderStatus_Rejected: return FIX::OrdStatus_REJECTED;
+	case OrderStatus_Suspended: return FIX::OrdStatus_SUSPENDED;
+	default: throw new std::runtime_error("MilleniumMapper: Unknown Status " + nativeStatus);
+	}
+}
+
+FIX::Side MilleniumMapper::map( Side nativeSide) {
+	switch (nativeSide) {
+	case Side_BUY: return FIX::Side_BUY;
+	case Side_SELL: return FIX::Side_SELL;
+	default: throw new std::runtime_error("MilleniumMapper: Unknown Side " + nativeSide);
+	}
 }
 
 

@@ -46,6 +46,13 @@ class QuickFIXAdapter : public TradingAdapter {
 
 		virtual ~QuickFIXAdapter(){};
 
+	protected:
+		/**
+		* We don't implement a real data processor because we are leveraging QuickFIX parsing ability
+		*/
+		int processData(const char *data, int length) { return 0; }
+
+
 	private:
         FIX::SocketInitiator *initiator;
         FIX::Session *session;

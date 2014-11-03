@@ -18,29 +18,28 @@ MilleniumCodec::MilleniumCodec() {
 MilleniumCodec::~MilleniumCodec() {
 }
 
-void MilleniumCodec::decode(Message &msg, ExecutionReport &er) {
-	const char * data = msg.getData();
+void MilleniumCodec::decode( const char * data, ExecutionReport &er) {
 	Codec::decode( data, 4, er.appID);
-	Codec::decodeLE( data, 5, er.sequenceNo);
-	Codec::decode( data, 9, er.executionID, 12);
-	Codec::decode( data, 21, er.clientOrderID, 20);
-	Codec::decode( data, 41, er.orderID, 12);
+	decode( data, 5, er.sequenceNo);
+	Codec::decode(data, 9, er.executionID, 12);
+	Codec::decode(data, 21, er.clientOrderID, 20);
+	Codec::decode(data, 41, er.orderID, 12);
 	er.execType = data[53];
 	Codec::decode( data, 54, er.executionReportRefID, 12);
 	Codec::decode( data, 66, er.orderStatus);
-	Codec::decodeLE( data, 67, er.orderRejectCode);
-	Codec::decodeLE( data, 71, er.executedPrice);
-	Codec::decodeLE( data, 79, er.executedQty);
-	Codec::decodeLE( data, 83, er.leavesQty);
+	decode( data, 67, er.orderRejectCode);
+	decode( data, 71, er.executedPrice);
+	decode( data, 79, er.executedQty);
+	decode( data, 83, er.leavesQty);
 	Codec::decode(data, 87, er.container);
-	Codec::decodeLE(data, 88, er.displayQty);
-	Codec::decodeLE(data, 92, er.instrumentID);
+	decode(data, 88, er.displayQty);
+	decode(data, 92, er.instrumentID);
 	Codec::decode(data, 96, er.restatementReason);
 	Codec::decode(data, 98, er.side);
 	Codec::decode(data, 107, er.counterparty, 11);
 	er.tradeLiquidityIndicator = data[118];
-	Codec::decodeLE(data, 119, er.tradeMatchID);
-	Codec::decodeLE(data, 127, er.transactTime);
+	decode(data, 119, er.tradeMatchID);
+	decode(data, 127, er.transactTime);
 	Codec::decode(data, 136, er.typeOfTrade);
 	Codec::decode(data, 137, er.capacity);
 	er.priceDifferential = data[138];
@@ -121,24 +120,6 @@ void MilleniumCodec::encodeHeader( Metal::Message &msg, int16_t length, char typ
 
 void MilleniumCodec::encodeHeartBeat(Metal::Message &msg) {
 	encodeHeader( msg, 4, MessageType_HEARTBEAT);
-}
-
-int MilleniumCodec::getMessageLength(char * data, int size) {
-	if (size < HEADER_LENGTH) return 0;
-
-	// validate first char which is always 0x02 for LSE
-	if ( (data[0] & 0xFF) != 0x02) throw std::runtime_error( "Invalid message header " + std::to_string((int)data[0]));
-
-	int16_t msgLength = 0;
-	decodeLE(data, 1, msgLength);
-
-	// Simple check on message size to avoid garbage
-	if (msgLength > 1024 || msgLength < HEADER_LENGTH) throw std::runtime_error( "Invalid message size " + std::to_string(msgLength));
-
-	// do we have enough data available?
-	if (size < msgLength) return 0;
-
-	return msgLength;
 }
 
 
