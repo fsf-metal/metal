@@ -15,8 +15,8 @@
 namespace Metal {
 namespace LSE {
 
-MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading", "acba8ab0-4564-11e4-916c-0800200c9a66", new MilleniumCodec(), 3) {
-	this->mCodec = (MilleniumCodec*) this->codec;
+MilleniumAdapter::MilleniumAdapter() : TradingAdapter("LSE Trading", "acba8ab0-4564-11e4-916c-0800200c9a66", 3) {
+	this->mCodec = new MilleniumCodec();
 }
 
 void MilleniumAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
@@ -134,6 +134,11 @@ int MilleniumAdapter::processData(const char * data, int length) {
 
 	return msgLength;
 
+}
+
+void MilleniumAdapter::sendHeartBeat() {
+	Logon logon( this->userName, this->password);
+	send(logon);
 }
 
 void MilleniumAdapter::sendLogon() {

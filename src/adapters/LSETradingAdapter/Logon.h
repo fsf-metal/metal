@@ -3,12 +3,14 @@
 
 #include <string>
 
+#include <metal/Message.h>
+
 namespace Metal {
 namespace LSE {
-class Logon
-{
+
+class Logon : public Message {
 public:
-	Logon(std::string userNameParam, std::string passwordParam, std::string newPasswordParam) : userName(userNameParam), password(passwordParam), newPassword(newPasswordParam){};
+	Logon(std::string userNameParam, std::string passwordParam, std::string newPasswordParam = NULL);
 	~Logon(){};
 
 	std::string userName;

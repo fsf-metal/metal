@@ -28,14 +28,13 @@
 using namespace std;
 
 namespace Metal {
-	Adapter::Adapter(const std::string& nameParam, const std::string& uuidParam, Codec * codec, int heartBeatInterval, int retryInterval) 
+	Adapter::Adapter(const std::string& nameParam, const std::string& uuidParam, int heartBeatInterval, int retryInterval) 
 		:name(nameParam), uuid(uuidParam), heartBeatIntervalInSeconds(heartBeatInterval), retryIntervalInSeconds(retryInterval) {
 
 		this->keepAlive = false;
 		this->keepAliveThread = NULL;
 		this->listenning = false;
 		this->listennerThread = NULL;
-		this->codec = codec;
 
 		// Half the smallest
 		this->granularity = chrono::seconds(min(heartBeatInterval, retryInterval) / 2);
@@ -116,8 +115,7 @@ namespace Metal {
 					time_point<system_clock> now = system_clock::now();
 					duration<double> elapsed = now - lastBeat;
 					if (elapsed.count() > this->heartBeatIntervalInSeconds) {
-						this->codec->encodeHeartBeat(msg);
-						send(msg);
+						this->sendHeartBeat();
 						lastBeat = now;
 					}
 				} 
@@ -174,7 +172,6 @@ namespace Metal {
 						//cout << Codec::formatHex(buffer, offset) << endl;
 
 						// Ask subclasses to translate raw data into messages
-						//while ((msgLength = this->codec->getMessageLength(buffer, offset)) != 0) {
 						while ((msgLength = processData(buffer, offset)) != 0) {
 							//cout << "Adapter: Message Received. Len=" << msgLength << ", Offset=" << offset << endl;
 							// do we have leftovers?

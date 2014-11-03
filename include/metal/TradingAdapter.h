@@ -44,12 +44,11 @@ class TradingAdapter : public Adapter {
 		/**
 		 * @param name Whatever should be used to identify this adapter.
 		 * @param uuid a unique identifier. Check out http://www.famkruithof.net/uuid/uuidgen to create your own
-		 * @param codec whatever codec should be used to crack messages
 		 * @param heartBeatInterval number of seconds between heartbeats. Defaults to 30 seconds.
 		 * @param retryInterval number of seconds between retries when connection is lost. Defaults to 5 seconds.
 		 * Subclasses will perform mapping, encoding then write to the active session
 		 */
-		TradingAdapter( const std::string& name, const std::string& uuid, Codec * codec = NULL, int heartBeatInterval = 30, int retryInterval = 5);
+		TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval = 30, int retryInterval = 5);
 
 		/**
 		 * This is invoked for every new message
@@ -93,11 +92,6 @@ class TradingAdapter : public Adapter {
 				std::chrono::milliseconds &encodingDuration) = 0;
 
 		/**
-		 * Sends a logon message to initiate the session
-		 */
-		virtual void sendLogon(){};
-
-		/**
 		 * This method will be called by users to send new orders<br>
 		 * It should map from generic to specific format then encode and send<br>
 		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle
@@ -106,6 +100,16 @@ class TradingAdapter : public Adapter {
 
 	protected:
 		~TradingAdapter();
+
+		/**
+		 * Formats and sends a Heart Beat message
+		 */
+		virtual void sendHeartBeat() = 0;
+
+		/**
+		 * Sends a logon message to initiate the session
+		 */
+		virtual void sendLogon() = 0;
 
 
 

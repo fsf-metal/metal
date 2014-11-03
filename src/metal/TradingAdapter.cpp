@@ -30,8 +30,8 @@
 
 namespace Metal {
 
-TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid, Codec * codec, int heartBeatInterval, int retryInterval) :
-		Adapter(name, uuid, codec, heartBeatInterval, retryInterval) {
+TradingAdapter::TradingAdapter( const std::string& name, const std::string& uuid, int heartBeatInterval, int retryInterval) :
+		Adapter(name, uuid, heartBeatInterval, retryInterval) {
 	this->socket = NULL;
 }
 

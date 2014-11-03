@@ -28,7 +28,7 @@
 
 #include <netlink/socket.h>
 #include <netlink/socket_group.h>
-#include <metal/Codec.h>
+#include <metal/Message.h>
 
 namespace Metal {
 	using namespace std;
@@ -46,11 +46,10 @@ namespace Metal {
 		 * Constructor
 		 * @param nameParam the actual adapter name in english
 		 * @param uuidParam a unique adapter identifier. checkout http://www.famkruithof.net/uuid/uuidgen to create your own.
-		 * @param codec
 		 * @param heartBeatInterval Number of seconds between heartbeats. Set to 0 to disable heartbeats
 		 * @param retryInterval Number of seconds between retries. Set to 0 to disable retries.
 		 */
-		Adapter(const string& nameParam, const string& uuidParam, Codec *codec = NULL, int heartBeatInterval = 0, int retryInterval = 0);
+		Adapter(const string& nameParam, const string& uuidParam, int heartBeatInterval = 0, int retryInterval = 0);
 
 		/**
 		 * Here are the possible statuses for Adapter session.<br>
@@ -122,7 +121,6 @@ namespace Metal {
 		 * This is the active socket
 		 */
 		NL::Socket *socket;
-		Codec *codec;
 
 		/**
 		 * Processes inbound data into message. Should invoke onMessage if appropriate
@@ -131,6 +129,11 @@ namespace Metal {
 		 * @return processed message length if enough data is availble in buffer
 		 */
 		virtual int processData(const char * buffer, int length) = 0;
+
+		/**
+		 * Send a heartbeat to the remote party
+		 */
+		virtual void sendHeartBeat() = 0;
 
 	private:
 		/**
@@ -190,11 +193,6 @@ namespace Metal {
 		 * This method is meant to be used at the thread entry point
 		 */
 		void listennerLoop();
-
-		/**
-		 * Send a heartbeat to the remote party
-		 */
-		void heartBeat();
 
 		/**
 		 * Performs connection

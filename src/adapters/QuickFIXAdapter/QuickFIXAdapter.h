@@ -34,8 +34,8 @@ class QuickFIXAdapter : public TradingAdapter {
 		void benchmark( const std::vector<NewOrderSingle> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
 
 		/**
-		* @see TradingAdapter#benchmark
-		*/
+		 * @see TradingAdapter#benchmark
+		 */
 		void benchmark( const std::vector<OrderCancelRequest> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
 
 		/**
@@ -48,10 +48,12 @@ class QuickFIXAdapter : public TradingAdapter {
 
 	protected:
 		/**
-		* We don't implement a real data processor because we are leveraging QuickFIX parsing ability
-		*/
-		int processData(const char *data, int length) { return 0; }
+		 * We don't implement a real data processor because we are leveraging QuickFIX parsing ability
+		 */
+		int processData(const char *data, int length) { throw new std::runtime_error("QuickFIX adapters should leverage QuickFIX session to read data"); }
 
+		void sendHeartBeat() { throw new std::runtime_error("QuickFIX adapters should leverage QuickFIX engine to send heartbeats"); }
+		void sendLogon() { throw new std::runtime_error( "QuickFIX adapters should leverage QuickFIX engine to send logons"); }
 
 	private:
         FIX::SocketInitiator *initiator;

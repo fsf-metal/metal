@@ -45,15 +45,9 @@ class MilleniumAdapter : public TradingAdapter {
 		virtual int processData(const char * data, int size);
 
 		/**
-		 * Sends a logon message
-		 */
-		void sendLogon();
-
-		/**
 		 * Sends a normalized new order
 		 */
 		void sendNewOrder(const Metal::NewOrderSingle &nos);
-
 
 		virtual ~MilleniumAdapter(){};
 
@@ -61,6 +55,14 @@ class MilleniumAdapter : public TradingAdapter {
 		MilleniumCodec *mCodec;
 		std::string userName;
 		std::string password;
+
+		void sendHeartBeat();
+
+		/**
+		 * Sends a logon message
+		 */
+		void sendLogon();
+
 };
 
 } // LSE
