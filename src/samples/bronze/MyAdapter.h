@@ -18,7 +18,7 @@ class MyAdapter : public Metal::LSE::MilleniumAdapter {
 		MyAdapter();
 		virtual ~MyAdapter();
 
-		virtual void onMessage( const Metal::ExecutionReport &er);
+		virtual void onExecutionReport( const Metal::ExecutionReport &er);
 
 };
 

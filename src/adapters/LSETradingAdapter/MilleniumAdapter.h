@@ -2,6 +2,7 @@
 #define __METAL_LSETRADINGADAPTER_H
 
 #include <metal/TradingAdapter.h>
+#include <metal/NormalizedTrading.h>
 #include "NewOrder.h"
 #include "OrderCancelRequest.h"
 #include "MilleniumCodec.h"
@@ -9,40 +10,28 @@
 namespace Metal {
 namespace LSE {
 
-class MilleniumAdapter : public TradingAdapter {
+class MilleniumAdapter : public TradingAdapter, public NormalizedTrading {
 	public:
+
+		static const std::string NAME;
+		static const std::string UUID;
+
 		MilleniumAdapter();
 
 		/**
-		 * @see TradingAdapter#benchmark
+		 * Invoked when a native execution report has been received
 		 */
-		void benchmark(const std::vector<Metal::NewOrderSingle> &,
-			std::chrono::milliseconds& mappingDuration,
-			std::chrono::milliseconds& encodingDuration);
-
-		/**
-		 * @see TradingAdapter#benchmark
-		 */
-		void benchmark(const std::vector<Metal::OrderCancelRequest> &,
-			std::chrono::milliseconds &,
-			std::chrono::milliseconds &);
-
-		void encodeHeartBeat(Message &msg);
-
-		/**
-		 * Native Execution Report
-		 */
-		virtual void onMessage(const Metal::LSE::ExecutionReport &er);
-
-		/**
-		 * Normalized Execution Report
-		 */
-		virtual void onMessage(const Metal::ExecutionReport &er){};
-
+		void onMessage(const Metal::LSE::ExecutionReport &nativeER);
+			
 		/**
 		 * LSE specific implementation of data processing
 		 */
 		virtual int processData(const char * data, int size);
+
+		/**
+		 * Sends a normalized cancel
+		 */
+		void sendCancel(const Metal::OrderCancelRequest& ocr);
 
 		/**
 		 * Sends a normalized new order
@@ -52,7 +41,7 @@ class MilleniumAdapter : public TradingAdapter {
 		virtual ~MilleniumAdapter(){};
 
 	protected:
-		MilleniumCodec *mCodec;
+		MilleniumCodec *codec;
 		std::string userName;
 		std::string password;
 

@@ -47,7 +47,7 @@ void MilleniumCodec::decode( const char * data, ExecutionReport &er) {
 }
 
 void MilleniumCodec::encode( const Logon &logon, Metal::Message &msg) {
-	encodeHeader( msg, 80, MessageType_LOGON);
+	MilleniumCodec::encodeHeader( msg, 80, MessageType_LOGON);
 	Codec::encode( logon.userName, msg, 4, 25);
 	Codec::encode( logon.password, msg, 29, 25);
 	Codec::encode( logon.newPassword, msg, 54, 25);

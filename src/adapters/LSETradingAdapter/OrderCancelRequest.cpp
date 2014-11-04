@@ -10,13 +10,10 @@
 namespace Metal {
 namespace LSE {
 
-OrderCancelRequest::OrderCancelRequest() {
-	// TODO Auto-generated constructor stub
-
+OrderCancelRequest::OrderCancelRequest() : Message() {
 }
 
 OrderCancelRequest::~OrderCancelRequest() {
-	// TODO Auto-generated destructor stub
 }
 
 } /* namespace LSE */

@@ -18,9 +18,9 @@ MyAdapter::~MyAdapter() {
 }
 
 /**
- * Display whatever can be displayed
+ * Display whatever is available
  */
-void MyAdapter::onMessage( const Metal::ExecutionReport &er) {
+void MyAdapter::onExecutionReport( const Metal::ExecutionReport &er) {
 	std::cout << "\nExecution Report:";
 	if (er.isSetField(FIX::FIELD::ClOrdID)) {
 		FIX::ClOrdID clOrdID;

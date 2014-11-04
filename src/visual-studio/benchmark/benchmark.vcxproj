@@ -54,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../;../../../include;../../netlink/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../;../../../include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,7 +73,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../;../../../include;../../netlink/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../;../../../include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -88,13 +88,17 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\samples\benchmark\Benchmarker.h" />
     <ClInclude Include="CPU.h" />
+    <ClInclude Include="..\..\samples\benchmark\QuickFIXBenchmarker.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\samples\benchmark\LSEBenchmarker.cpp" />
     <ClCompile Include="..\..\samples\benchmark\main.cpp" />
     <ClCompile Include="..\..\samples\benchmark\Display.cpp" />
+    <ClCompile Include="..\..\samples\benchmark\QuickFIXBenchmarker.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

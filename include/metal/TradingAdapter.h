@@ -70,28 +70,6 @@ class TradingAdapter : public Adapter {
 		virtual void onPhysicalConnection();
 
 		/**
-		 * The purpose is to measure Mapping and Encoding speed for NewOrderSingle<br>
-		 * Subclasses should make sure to execute both as opposed to just mapping
-		 * @param list A list of NewOrderSingle better if randomly generated
-		 * @param mappingDuration Time used to map messages
-		 * @param encodingDuration Time used to encode messages
-		 */
-		virtual void benchmark( const std::vector<NewOrderSingle> &list,
-				std::chrono::milliseconds &mappingDuration,
-				std::chrono::milliseconds &encodingDuration) = 0;
-
-		/**
-		 * The purpose is to measure Mapping and Encoding speed for OrderCancelRequest<br>
-		 * Subclasses should make sure to execute both as opposed to just mapping
-		 * @param list A list of NewOrderSingle better if randomly generated
-		 * @param mappingDuration Time used to map messages
-		 * @param encodingDuration Time used to encode messages
-		 */
-		virtual void benchmark( const std::vector<OrderCancelRequest> &list,
-				std::chrono::milliseconds &mappingDuration,
-				std::chrono::milliseconds &encodingDuration) = 0;
-
-		/**
 		 * This method will be called by users to send new orders<br>
 		 * It should map from generic to specific format then encode and send<br>
 		 * @param NewOrderSingle Inbound order in unified format @see NewOrderSingle

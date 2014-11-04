@@ -9,6 +9,9 @@ namespace QuickFIX {
 
 class QuickFIXAdapter : public TradingAdapter {
 	public:
+		static const std::string NAME;
+		static const std::string UUID;
+
 		QuickFIXAdapter();
 
 		//----------
@@ -27,16 +30,6 @@ class QuickFIXAdapter : public TradingAdapter {
 		//-----------
 		void start();
 		void stop();
-
-		/**
-		* @see TradingAdapter#benchmark
-		*/
-		void benchmark( const std::vector<NewOrderSingle> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
-
-		/**
-		 * @see TradingAdapter#benchmark
-		 */
-		void benchmark( const std::vector<OrderCancelRequest> &, std::chrono::milliseconds &, std::chrono::milliseconds &);
 
 		/**
 		 * We don't need to provide Logon Encoding because QuickFIX provides its own session management

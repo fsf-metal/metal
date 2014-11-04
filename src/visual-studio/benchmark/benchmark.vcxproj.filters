@@ -27,12 +27,24 @@
     <ClInclude Include="CPU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\samples\benchmark\QuickFIXBenchmarker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\samples\benchmark\Benchmarker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\samples\benchmark\Display.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\samples\benchmark\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\samples\benchmark\QuickFIXBenchmarker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\samples\benchmark\LSEBenchmarker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -8,12 +8,14 @@
 #ifndef METAL_LSE_ORDERCANCELREQUEST_H_
 #define METAL_LSE_ORDERCANCELREQUEST_H_
 
+#include <metal/Message.h>
+
 #include "LSETypes.h"
 
 namespace Metal {
 namespace LSE {
 
-class OrderCancelRequest {
+class OrderCancelRequest : public Message {
 public:
 	OrderCancelRequest();
 	virtual ~OrderCancelRequest();

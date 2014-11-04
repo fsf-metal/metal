@@ -19,6 +19,8 @@ using namespace FIX;
 namespace Metal {
 namespace QuickFIX {
 
+	const std::string QuickFIXAdapter::NAME = "QuickFIX";
+	const std::string QuickFIXAdapter::UUID = "e32cd5d0-4564-11e4-916c-0800200c9a66";
 
 class MyApplication: public Application,public MessageCracker {
 	public:
@@ -78,77 +80,6 @@ QuickFIXAdapter::QuickFIXAdapter() :TradingAdapter("QuickFIX", "e32cd5d0-4564-11
 }
 
 /**
- * This (dumb) loop maps and encodes all incoming NewOrderSingle.<br>
- * In the case of QuickFIX, encoding simply means calling toString()
- */
-void QuickFIXAdapter::benchmark( const std::vector<NewOrderSingle> &allOrders,
-		std::chrono::milliseconds &mappingDuration,
-		std::chrono::milliseconds &encodingDuration) {
-	std::string messageString;
-	std::vector<FIX44::NewOrderSingle*> mappedNewOrders;
-
-	int size = allOrders.size();
-	// Save room and allocate resulting objects
-	mappedNewOrders.reserve( size);
-	for( int index = 0; index < size; ++index) {
-        mappedNewOrders.push_back( new FIX44::NewOrderSingle());
-    }
-
-	auto t0 = std::chrono::system_clock::now();
-	for( int index = 0; index < size; ++index) {
-		QuickFIXMessageMapper::map( allOrders.at( index), *mappedNewOrders.at( index));
-	}
-
-	auto t1 = std::chrono::system_clock::now();
-	for( int index = 0; index < size; ++index) {
-		mappedNewOrders.at( index)->toString( messageString);
-	}
-
-	auto t2 = std::chrono::system_clock::now();
-
-	// free allocated memory
-	while (!mappedNewOrders.empty()) {
-		delete mappedNewOrders.back();
-		mappedNewOrders.pop_back();
-	}
-
-	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t1 - t0);
-	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
-}
-
-void QuickFIXAdapter::benchmark( const std::vector<OrderCancelRequest> &allCancels,
-		std::chrono::milliseconds &mappingDuration,
-		std::chrono::milliseconds &encodingDuration) {
-	std::string messageString;
-	std::vector<FIX::Message *> mappedCancels;
-
-	int size = allCancels.size();
-	mappedCancels.reserve( size);
-
-	for( int index = 0; index < size; ++index) {
-        mappedCancels.push_back( new (FIX::Message));
-    }
-	auto t0 = std::chrono::system_clock::now();
-	for( int index = 0; index < size; ++index) {
-		QuickFIXMessageMapper::map( allCancels.at( index), *mappedCancels.at( index));
-	}
-	auto t1 = std::chrono::system_clock::now();
-	for( int index = 0; index < size; ++index) {
-		mappedCancels.at( index)->toString( messageString);
-	}
-	auto t2 = std::chrono::system_clock::now();
-
-	// free allocated memory
-	while (!mappedCancels.empty()) {
-		delete mappedCancels.back();
-		mappedCancels.pop_back();
-	}
-
-	mappingDuration = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0);
-	encodingDuration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1);
-}
-
-/**
  * Send normalized New Order
  */
 void QuickFIXAdapter::sendNewOrder( const NewOrderSingle &nos) {
@@ -166,6 +97,9 @@ void QuickFIXAdapter::onMessage( const ExecutionReport &er) {
 	std::cout << "QuickFIXAdapter: Execution Report received but not processed" << std::endl;
 }
 
+/**
+ * We are overidding start to prevent Adapter processing of session life cycle
+ */
 void QuickFIXAdapter::start() {
 	//std::cout << "QuickFIXAdapter: start()" << std::endl;
 

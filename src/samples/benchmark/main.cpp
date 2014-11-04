@@ -13,11 +13,10 @@
 #include <algorithm>
 
 #include <metal/metal.h>
-#include <metal/Mapper.h>
-#include <adapters/QuickFIXAdapter/QuickFIXAdapter.h>
-#include <adapters/LSETradingAdapter/MilleniumAdapter.h>
 
 #include "Display.h"
+#include "QuickFIXBenchmarker.h"
+#include "LSEBenchmarker.h"
 
 #define BATCH_SIZE 100000L
 #define LOOPS      5L
@@ -42,7 +41,7 @@ int main( int argc, char* argv[]) {
 	allOrders.reserve( BATCH_SIZE);
 	allCancels.reserve( BATCH_SIZE);
 
-
+	// Create normalized orders and cancels
 	for( int index = 0; index < BATCH_SIZE; index++) {
 		NewOrderSingle * pNos = new NewOrderSingle();
 		FIX::UTCTIMESTAMP now;
@@ -50,7 +49,7 @@ int main( int argc, char* argv[]) {
         char clOrdID[16];
         randomString( clOrdID, 15);
 		pNos->setField(FIX::ClOrdID( clOrdID));
-        char symbol[6];
+        char symbol[10];
         randomString( symbol, 6);
 		pNos->setField(FIX::Symbol( symbol));
         FIX::Side side = rand() >=0/5 ? FIX::Side_BUY : FIX::Side_SELL;
@@ -72,7 +71,6 @@ int main( int argc, char* argv[]) {
 		pOcr->setField(FIX::OrderQty(qty));
 
 		allCancels.push_back(*pOcr);
-
 	}
 
 	cout << "Allocated " << BATCH_SIZE << " random NewOrderSingle and OrderCancelRequest" << endl;
@@ -85,9 +83,9 @@ int main( int argc, char* argv[]) {
 	cout << "OS  : " << osDescription << endl;
 
 	// what should be benchmarked?
-	vector<TradingAdapter*> allAdapters;
-	allAdapters.push_back(new QuickFIX::QuickFIXAdapter());
-	allAdapters.push_back(new LSE::MilleniumAdapter());
+	vector<Benchmarker*> allAdapters;
+	allAdapters.push_back(new QuickFIXBenchmarker());
+	allAdapters.push_back(new LSEBenchmarker());
 
 	unsigned int selection;
 	while( true) {
@@ -107,7 +105,7 @@ int main( int argc, char* argv[]) {
 
 	// at this point, we should have a proper selection
 	// let's turn it into a vector of trading adapters
-	vector<TradingAdapter*> selectedAdapters;
+	vector<Benchmarker*> selectedAdapters;
 	if (selection == 0) {
 		selectedAdapters = allAdapters;
 	}
@@ -115,7 +113,7 @@ int main( int argc, char* argv[]) {
 		selectedAdapters.push_back(allAdapters.at(selection - 1));
 	}
 
-	for( vector<TradingAdapter*>::iterator iter = selectedAdapters.begin(); iter != selectedAdapters.end(); ++iter) {
+	for( vector<Benchmarker*>::iterator iter = selectedAdapters.begin(); iter != selectedAdapters.end(); ++iter) {
 		cout << endl << SEP1 << endl;
 		cout << "Benchmarking : " << (*iter)->getName() << " " << flush;
 
