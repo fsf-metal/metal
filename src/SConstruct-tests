@@ -26,3 +26,4 @@ env.SConsignFile()
 
 # Compile core
 SConscript( 'metal/test/sconscript')
+SConscript( 'bootstrapper/test/sconscript')
