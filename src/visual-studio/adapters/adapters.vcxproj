@@ -20,6 +20,10 @@
     <ClCompile Include="..\..\adapters\LSETradingAdapter\OrderCancelRequest.cpp" />
     <ClCompile Include="..\..\adapters\QuickFIXAdapter\QuickFIXAdapter.cpp" />
     <ClCompile Include="..\..\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp" />
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\NormalizedMillenium.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NormalizedMillenium.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CC0C5B3B-1F05-4E2E-8192-FBA4D721A01D}</ProjectGuid>

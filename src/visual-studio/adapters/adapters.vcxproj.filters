@@ -48,5 +48,13 @@
     <ClCompile Include="..\..\adapters\QuickFIXAdapter\QuickFIXMessageMapper.cpp">
       <Filter>Source Files\QuickFIX</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\adapters\LSETradingAdapter\NormalizedMillenium.cpp">
+      <Filter>Source Files\LSETrading</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NormalizedMillenium.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

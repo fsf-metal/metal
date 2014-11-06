@@ -18,8 +18,8 @@
 	along with MeTAL source code. If not, see <http://www.gnu.org/licenses/>.
 
 */
-#ifndef __METAL_NORMALIZEDTRADING_H
-#define __METAL_NORMALIZEDTRADING_H
+#ifndef METAL_NORMALIZEDTRADING_H
+#define METAL_NORMALIZEDTRADING_H
 
 #include <string>
 
@@ -36,11 +36,6 @@ class NormalizedTrading {
 		NormalizedTrading(){};
 
 		/**
-		 * This should be invoked for every execution report
-		 */
-		virtual void onExecutionReport(const ExecutionReport &) = 0;
-
-		/**
 		 * Formats and sends a normalized Order Cancel Request
 		 */
 		virtual void sendCancel( const OrderCancelRequest&) = 0;
@@ -54,8 +49,14 @@ class NormalizedTrading {
 
 	protected:
 		~NormalizedTrading(){};
+
+		/**
+		 * Entry point for every execution reports
+		 */
+		virtual void onExecutionReport(const ExecutionReport &) = 0;
+
 };
 
 } // namespace Metal
 
-#endif //__METAL_NORMALIZEDTRADING_H
+#endif // METAL_NORMALIZEDTRADING_H

@@ -1,13 +1,26 @@
 /*
- * LSETradingAdapter.cpp
- *
- *  Created on: Sep 18, 2014
- *      Author: jc
- */
+MeTAL: My Electronic Trading Adapters Library
+Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)
+
+This file is part of MeTAL.
+
+MeTAL is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+MeTAL is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MeTAL source code. If not, see <http://www.gnu.org/licenses/>.
+
+*/
 
 #include <chrono>
 #include "MilleniumAdapter.h"
-#include "MilleniumMapper.h"
 #include "MilleniumCodec.h"
 #include "Logon.h"
 #include "LSEValues.h"
@@ -18,19 +31,10 @@ namespace LSE {
 const std::string MilleniumAdapter::NAME = "LSE Trading";
 const std::string MilleniumAdapter::UUID = "acba8ab0-4564-11e4-916c-0800200c9a66";
 
-MilleniumAdapter::MilleniumAdapter() : TradingAdapter( NAME, UUID, 3) {
+MilleniumAdapter::MilleniumAdapter( std::string userNameParam, std::string passwordParam) 
+	: TradingAdapter( NAME, UUID, 3), userName( userNameParam), password( passwordParam) {
 	this->codec = new MilleniumCodec();
 }
-
-void MilleniumAdapter::onMessage(const Metal::LSE::ExecutionReport &nativeER) {
-	//std::cout << "MilleniumAdapter: Received Native Execution Report" << std::endl;
-	Metal::ExecutionReport metalER;
-	MilleniumMapper::map(nativeER, metalER);
-
-	// Propagate the normalized message
-	onExecutionReport(metalER);
-}
-
 
 int MilleniumAdapter::processData(const char * data, int length) {
 	if (length < MilleniumCodec::HEADER_LENGTH) return 0;
@@ -74,30 +78,16 @@ int MilleniumAdapter::processData(const char * data, int length) {
 
 }
 
-void MilleniumAdapter::sendCancel(const Metal::OrderCancelRequest& ocr) {
-	OrderCancelRequest nativeOCR;
-	MilleniumMapper::map(ocr, nativeOCR);
-	send(nativeOCR);
-}
-
 void MilleniumAdapter::sendHeartBeat() {
-	Logon logon( this->userName, this->password);
-	send(logon);
+	Message heartbeat;
+	this->codec->encodeHeartBeat(heartbeat);
+	send(heartbeat);
 }
 
 void MilleniumAdapter::sendLogon() {
 	Logon logon(this->userName, this->password, "");
 	Message msg;
 	this->codec->encode(logon, msg);
-	send(msg);
-}
-
-void MilleniumAdapter::sendNewOrder(const NewOrderSingle& nos) {
-	NewOrder no;
-	MilleniumMapper::map(nos, no);
-
-	Message msg;
-	this->codec->encode(no, msg);
 	send(msg);
 }
 

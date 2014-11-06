@@ -8,7 +8,7 @@
 #include <metal/Translator.h>
 #include "MyAdapter.h"
 
-MyAdapter::MyAdapter() {
+MyAdapter::MyAdapter() : NormalizedMillenium( "myself", "mypass") {
 	// TODO Auto-generated constructor stub
 
 }
