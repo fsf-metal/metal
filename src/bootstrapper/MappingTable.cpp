@@ -1,5 +1,6 @@
 #include <sstream>
 #include <cstring>
+#include <stdexcept>
 
 #include "MappingTable.h"
 #include "Field.h"

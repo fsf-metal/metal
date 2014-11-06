@@ -24,11 +24,11 @@ Export('env', 'mymode', 'debugcflags', 'releasecflags')
 #put all .sconsign files in one place
 env.SConsignFile()
 
+SConscript( '3rdparties/netLink/sconscript')
+SConscript( '3rdparties/jsoncpp/sconscript')
 # Compile core
 SConscript( 'metal/sconscript')
 SConscript( 'bootstrapper/sconscript')
-SConscript( '3rdparties/netLink/sconscript')
-SConscript( '3rdparties/jsoncpp/sconscript')
 SConscript( 'adapters/QuickFIXAdapter/sconscript')
 SConscript( 'adapters/LSETradingAdapter/sconscript')
 #SConscript( 'adapters/AquisATPAdapter/sconscript')

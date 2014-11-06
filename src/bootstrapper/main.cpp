@@ -7,6 +7,7 @@
 #include <ctime>
 #include <locale>
 #include <ctype.h>
+#include <stdexcept>
 
 #include <json/json.h>
 
