@@ -1,6 +1,6 @@
 import glob
 
-src_files = 'MilleniumAdapter.cpp MilleniumMapper.cpp MilleniumCodec.cpp NewOrder.cpp OrderCancelRequest.cpp ExecutionReport.cpp'
+src_files = 'MilleniumAdapter.cpp MilleniumMapper.cpp MilleniumCodec.cpp NewOrder.cpp OrderCancelRequest.cpp ExecutionReport.cpp Logon.cpp NormalizedMillenium.cpp'
 lib_files = 'Metal pthread xml2 z'
 include_path = '../../../include/'
 lib_path = '../../../lib'

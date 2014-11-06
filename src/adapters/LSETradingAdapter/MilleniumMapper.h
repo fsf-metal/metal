@@ -36,12 +36,12 @@ class MilleniumMapper : public Mapper {
 		/**
 		 * Translate Native Order Status to FIX
 		 */
-		static FIX::OrdStatus MilleniumMapper::map( OrderStatus nativeStatus);
+		static FIX::OrdStatus map( OrderStatus nativeStatus);
 			
 		/**
 		 * Translate Native Side to FIX
 		 */
-		static FIX::Side MilleniumMapper::map( Side nativeStatus);
+		static FIX::Side map( Side nativeStatus);
 
 		// only used by benchmarker
 		void benchmark( std::vector<NewOrderSingle> &);

@@ -23,7 +23,7 @@
 
 #include <string>
 
-#include <metal/Metal.h>
+#include <metal/metal.h>
 
 namespace Metal {
 

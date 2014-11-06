@@ -1,6 +1,6 @@
 import glob
 
-src_files = 'main.cpp Display.cpp'
+src_files = 'main.cpp Display.cpp QuickFIXBenchmarker.cpp LSEBenchmarker.cpp'
 lib_files = 'AdapterQuickFIX AdapterLSETrading Metal NetLink quickfix pthread xml2 z'
 include_path = '../../../include/ ../..'
 lib_path = '../../../lib'
