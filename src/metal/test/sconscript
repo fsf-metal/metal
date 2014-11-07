@@ -1,10 +1,11 @@
 import glob
+import os
 
 src_files = 'test.cpp'
 lib_files = 'gtest pthread Metal'
 output_file = 'test'
 include_path = '../../../include/'
-lib_path = '../../../lib'
+lib_path = ['../../../lib', os.environ['GOOGLE_TEST_PATH']]
 
 # Get all the build variables we need
 Import('env', 'mymode', 'debugcflags', 'releasecflags')
@@ -23,5 +24,5 @@ localenv.Append(CPPPATH=Split( include_path))
 localenv.Program( output_file, \
                 Split(src_files), \
                 LIBS=Split(lib_files), \
-                LIBPATH=Split(lib_path))
+                LIBPATH=lib_path)
 
