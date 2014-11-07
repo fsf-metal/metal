@@ -4,6 +4,7 @@ src_files = 'src/core.cc src/smart_buffer.cc src/socket.cc src/socket_group.cc s
 lib_files = 'pthread xml2 z'
 include_path = '../../../include/'
 output_file = 'NetLink.so'
+lib_path = '../../../lib'
 
 # Get all the build variables we need
 Import('env', 'mymode', 'debugcflags', 'releasecflags')
@@ -19,5 +20,5 @@ else:
 localenv.Append(CPPPATH=Split( include_path))
 
 # Actually build the Library
-localenv.Library( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH='../../../lib')
-
+library = localenv.Library( output_file, Split(src_files), LIBS=Split(lib_files),LIBPATH=Split(lib_path))
+Default(localenv.Install( lib_path, library))
