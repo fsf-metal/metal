@@ -1,3 +1,4 @@
+import os
 #get the mode flag from the command line
 #default to 'release' if the user didn't specify
 mymode = ARGUMENTS.get('mode', 'release')   #holds current mode
@@ -17,6 +18,7 @@ debugcflags = ccflags + '-D_DEBUG '
 releasecflags = ccflags + '-O3 -DNDEBUG'
 
 env = Environment()
+env.Append( GOOGLE_TEST_PATH = os.environ['GOOGLE_TEST_PATH'])
 
 #make sure the sconscripts can get to the variables
 Export('env', 'mymode', 'debugcflags', 'releasecflags')

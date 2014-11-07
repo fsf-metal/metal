@@ -1,15 +1,16 @@
 import glob
 import os
 
+# Get all the build variables we need
+Import('env', 'mymode', 'debugcflags', 'releasecflags')
+localenv = env.Clone()
+
 src_files = 'test.cpp'
 lib_files = 'gtest pthread Metal'
 output_file = 'test'
 include_path = '../../../include/'
-lib_path = ['../../../lib', os.environ['GOOGLE_TEST_PATH']]
+lib_path = ['../../../lib', localenv['GOOGLE_TEST_PATH']]
 
-# Get all the build variables we need
-Import('env', 'mymode', 'debugcflags', 'releasecflags')
-localenv = env.Clone()
 
 # Append the user's additional compile flags
 # Assume debugcflags and releasecflags are defined

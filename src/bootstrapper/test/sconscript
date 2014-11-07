@@ -1,14 +1,15 @@
 import glob
 
+# Get all the build variables we need
+Import('env', 'mymode', 'debugcflags', 'releasecflags')
+localenv = env.Clone()
+
 src_files = 'test.cpp ../Field.cpp'
 lib_files = 'gtest pthread json'
 output_file = 'test'
 include_path = '../../../include/'
-lib_path = '../../../lib'
+lib_path = ['../../../lib', localenv['GOOGLE_TEST_PATH']]
 
-# Get all the build variables we need
-Import('env', 'mymode', 'debugcflags', 'releasecflags')
-localenv = env.Clone()
 
 # Append the user's additional compile flags
 # Assume debugcflags and releasecflags are defined
@@ -23,5 +24,5 @@ localenv.Append(CPPPATH=Split( include_path))
 localenv.Program( output_file, \
                 Split(src_files), \
                 LIBS=Split(lib_files), \
-                LIBPATH=Split(lib_path))
+                LIBPATH=lib_path)
 
