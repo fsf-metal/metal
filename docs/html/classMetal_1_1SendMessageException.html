@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Metal</b></li><li class="navelem"><a class="el" href="classMetal_1_1SendMessageException.html">SendMessageException</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceMetal.html">Metal</a></li><li class="navelem"><a class="el" href="classMetal_1_1SendMessageException.html">SendMessageException</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -94,6 +93,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Metal::SendMessageException Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="MetalExceptions_8h_source.html">MetalExceptions.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Metal::SendMessageException:</div>
 <div class="dyncontent">
@@ -106,24 +107,46 @@ Inheritance diagram for Metal::SendMessageException:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4aeb690808ab3639bbd837b7c57cc419"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4aeb690808ab3639bbd837b7c57cc419"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessageException</b> (const std::string &amp;message)</td></tr>
+<tr class="memitem:a4aeb690808ab3639bbd837b7c57cc419"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1SendMessageException.html#a4aeb690808ab3639bbd837b7c57cc419">SendMessageException</a> (const std::string &amp;message)</td></tr>
 <tr class="separator:a4aeb690808ab3639bbd837b7c57cc419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classMetal_1_1MetalException"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMetal_1_1MetalException')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMetal_1_1MetalException.html">Metal::MetalException</a></td></tr>
-<tr class="memitem:afa58e4cd82c3aca7a138024fd1b6f090 inherit pub_methods_classMetal_1_1MetalException"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa58e4cd82c3aca7a138024fd1b6f090"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MetalException</b> (const std::string &amp;message)</td></tr>
+<tr class="memitem:afa58e4cd82c3aca7a138024fd1b6f090 inherit pub_methods_classMetal_1_1MetalException"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1MetalException.html#afa58e4cd82c3aca7a138024fd1b6f090">MetalException</a> (const std::string &amp;message)</td></tr>
 <tr class="separator:afa58e4cd82c3aca7a138024fd1b6f090 inherit pub_methods_classMetal_1_1MetalException"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74fa237bd4484764faccfbebd54801b5 inherit pub_methods_classMetal_1_1MetalException"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74fa237bd4484764faccfbebd54801b5"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const   throw ()</td></tr>
+<tr class="memitem:a74fa237bd4484764faccfbebd54801b5 inherit pub_methods_classMetal_1_1MetalException"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1MetalException.html#a74fa237bd4484764faccfbebd54801b5">what</a> () const   throw ()</td></tr>
 <tr class="separator:a74fa237bd4484764faccfbebd54801b5 inherit pub_methods_classMetal_1_1MetalException"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4aeb690808ab3639bbd837b7c57cc419"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Metal::SendMessageException::SendMessageException </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/jc/metal/src/metal/<a class="el" href="MetalExceptions_8h_source.html">MetalExceptions.h</a></li>
+<li>/home/jc/metal/github/include/metal/<a class="el" href="MetalExceptions_8h_source.html">MetalExceptions.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:16 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

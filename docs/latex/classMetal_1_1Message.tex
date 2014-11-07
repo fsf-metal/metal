@@ -1,21 +1,97 @@
 \hypertarget{classMetal_1_1Message}{}\section{Metal\+:\+:Message Class Reference}
 \label{classMetal_1_1Message}\index{Metal\+::\+Message@{Metal\+::\+Message}}
+
+
+{\ttfamily \#include $<$Message.\+h$>$}
+
+Inheritance diagram for Metal\+:\+:Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMetal_1_1Message}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classMetal_1_1Message_abc94615951dbde67368f977b717176fe}{}const char $\ast$ {\bfseries get\+Data} ()\label{classMetal_1_1Message_abc94615951dbde67368f977b717176fe}
-
+\hyperlink{classMetal_1_1Message_a21fcdea056dd410289c7cef6daf876f5}{Message} ()
 \item 
-\hypertarget{classMetal_1_1Message_a22984c81035306cfde91a575ac19d32a}{}const size\+\_\+t {\bfseries get\+Length} ()\label{classMetal_1_1Message_a22984c81035306cfde91a575ac19d32a}
-
+virtual \hyperlink{classMetal_1_1Message_a4c7f8e4a8dd99d69c3f29688b1fc820b}{$\sim$\+Message} ()
+\item 
+char $\ast$ \hyperlink{classMetal_1_1Message_aa662a9e07a4b0d47ab4a785bee70fa8d}{get\+Data} ()
+\item 
+const size\+\_\+t \hyperlink{classMetal_1_1Message_a22984c81035306cfde91a575ac19d32a}{get\+Length} ()
+\item 
+void \hyperlink{classMetal_1_1Message_ae8b03ceaf25a8bd6715772ecf0ba7b0a}{set\+Length} (size\+\_\+t length)
+\item 
+char \hyperlink{classMetal_1_1Message_aa14725bc08c942aa37e49d358f19dd79}{get} (int position)
+\item 
+void \hyperlink{classMetal_1_1Message_a39c87aec7a5302ff3d24cca76ac692d5}{reset} ()
 \item 
 void \hyperlink{classMetal_1_1Message_a9f9b7fb98dbe697d9cf7ad394fd45a2e}{set} (int position, char value)
 \item 
 void \hyperlink{classMetal_1_1Message_a7cb33179723ecc8a05860a97d9a518e3}{set} (int position, std\+::string str, int max\+Length)
 \end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classMetal_1_1Message_ac233914a72987d5539a50035aec1a575}{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H} = 4096
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class purpose is message data storage. It does not contain functional information about content. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMetal_1_1Message_a21fcdea056dd410289c7cef6daf876f5}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!Message@{Message}}
+\index{Message@{Message}!Metal\+::\+Message@{Metal\+::\+Message}}
+\subsubsection[{Message}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Message\+::\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1Message_a21fcdea056dd410289c7cef6daf876f5}
+\hypertarget{classMetal_1_1Message_a4c7f8e4a8dd99d69c3f29688b1fc820b}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!````~Message@{$\sim$\+Message}}
+\index{````~Message@{$\sim$\+Message}!Metal\+::\+Message@{Metal\+::\+Message}}
+\subsubsection[{$\sim$\+Message}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Message\+::$\sim$\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1Message_a4c7f8e4a8dd99d69c3f29688b1fc820b}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1Message_aa14725bc08c942aa37e49d358f19dd79}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!get@{get}}
+\index{get@{get}!Metal\+::\+Message@{Metal\+::\+Message}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}char Metal\+::\+Message\+::get (
+\begin{DoxyParamCaption}
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Message_aa14725bc08c942aa37e49d358f19dd79}
+Read character at given position. Position must be valid 
+\begin{DoxyParams}{Parameters}
+{\em position} & A valid position ($<$ length) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Message_aa662a9e07a4b0d47ab4a785bee70fa8d}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Metal\+::\+Message@{Metal\+::\+Message}}
+\subsubsection[{get\+Data}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Metal\+::\+Message\+::get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Message_aa662a9e07a4b0d47ab4a785bee70fa8d}
+\hypertarget{classMetal_1_1Message_a22984c81035306cfde91a575ac19d32a}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!Metal\+::\+Message@{Metal\+::\+Message}}
+\subsubsection[{get\+Length}]{\setlength{\rightskip}{0pt plus 5cm}const size\+\_\+t Metal\+::\+Message\+::get\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Message_a22984c81035306cfde91a575ac19d32a}
+\hypertarget{classMetal_1_1Message_a39c87aec7a5302ff3d24cca76ac692d5}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!reset@{reset}}
+\index{reset@{reset}!Metal\+::\+Message@{Metal\+::\+Message}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Message\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1Message_a39c87aec7a5302ff3d24cca76ac692d5}
 \hypertarget{classMetal_1_1Message_a9f9b7fb98dbe697d9cf7ad394fd45a2e}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!set@{set}}
 \index{set@{set}!Metal\+::\+Message@{Metal\+::\+Message}}
 \subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Message\+::set (
@@ -24,9 +100,9 @@ void \hyperlink{classMetal_1_1Message_a7cb33179723ecc8a05860a97d9a518e3}{set} (i
 \item[{char}]{value}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Message_a9f9b7fb98dbe697d9cf7ad394fd45a2e}
-Write a single character at given position 
+Write a single character at given position. 
 \begin{DoxyParams}{Parameters}
-{\em position} & Where the character should be writted \\
+{\em position} & Where the character should be written. Must be valid ($<$length) \\
 \hline
 {\em value} & Value to be written \\
 \hline
@@ -49,9 +125,22 @@ Write a complete string at given position
 {\em max\+Length} & maximum length to be copied from the string \\
 \hline
 \end{DoxyParams}
+\hypertarget{classMetal_1_1Message_ae8b03ceaf25a8bd6715772ecf0ba7b0a}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!set\+Length@{set\+Length}}
+\index{set\+Length@{set\+Length}!Metal\+::\+Message@{Metal\+::\+Message}}
+\subsubsection[{set\+Length}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Message\+::set\+Length (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Message_ae8b03ceaf25a8bd6715772ecf0ba7b0a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classMetal_1_1Message_ac233914a72987d5539a50035aec1a575}{}\index{Metal\+::\+Message@{Metal\+::\+Message}!M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H@{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H@{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}!Metal\+::\+Message@{Metal\+::\+Message}}
+\subsubsection[{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}const int Metal\+::\+Message\+::\+M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H = 4096\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1Message_ac233914a72987d5539a50035aec1a575}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/jc/metal/src/metal/Message.\+h\item 
-/home/jc/metal/src/metal/Message.\+cpp\end{DoxyCompactItemize}
+/home/jc/metal/github/include/metal/\hyperlink{Message_8h}{Message.\+h}\item 
+/home/jc/metal/github/src/metal/\hyperlink{Message_8cpp}{Message.\+cpp}\end{DoxyCompactItemize}

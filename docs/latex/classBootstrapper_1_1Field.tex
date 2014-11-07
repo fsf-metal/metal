@@ -1,0 +1,99 @@
+\hypertarget{classBootstrapper_1_1Field}{}\section{Bootstrapper\+:\+:Field Class Reference}
+\label{classBootstrapper_1_1Field}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+
+
+{\ttfamily \#include $<$Field.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBootstrapper_1_1Field_abd088815820d4e09209371878fcdb5b9}{Field} (const Json\+::\+Value \&field)
+\item 
+\hyperlink{classBootstrapper_1_1Field_a0f82fdaf05566ab8553b76fd8b5f81b1}{$\sim$\+Field} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespaceBootstrapper_abb268c54c14e352b0204f5f0f928955f}{Field\+Type} \hyperlink{classBootstrapper_1_1Field_a3645ec61d64aad4f836ab87ce55d7fce}{get\+Type} (const Json\+::\+Value \&field)
+\item 
+static std\+::string \hyperlink{classBootstrapper_1_1Field_ab88f0ac745d4aca91713f46d669a3e2c}{get\+Type\+Name} (\hyperlink{namespaceBootstrapper_abb268c54c14e352b0204f5f0f928955f}{Field\+Type} \hyperlink{classBootstrapper_1_1Field_a3b51be0dcd155bb84173f1a73596d963}{type})
+\item 
+static std\+::string \hyperlink{classBootstrapper_1_1Field_a95c450dfe9ecedd662bdf07c6ed1d2d8}{get\+Value\+Code} (\hyperlink{namespaceBootstrapper_abb268c54c14e352b0204f5f0f928955f}{Field\+Type} \hyperlink{classBootstrapper_1_1Field_a3b51be0dcd155bb84173f1a73596d963}{type}, \hyperlink{unionNativeValue}{Native\+Value} \&native)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classBootstrapper_1_1Field_a0c0b21db786e8e7463906fb18466f119}{position}
+\item 
+int \hyperlink{classBootstrapper_1_1Field_af0d0093eaaf445b55a91f12b33174442}{size}
+\item 
+\hyperlink{namespaceBootstrapper_abb268c54c14e352b0204f5f0f928955f}{Field\+Type} \hyperlink{classBootstrapper_1_1Field_a3b51be0dcd155bb84173f1a73596d963}{type}
+\item 
+std\+::string \hyperlink{classBootstrapper_1_1Field_abd1494c46c02219a339bf1a4c33d7763}{name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBootstrapper_1_1Field_abd088815820d4e09209371878fcdb5b9}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!Field@{Field}}
+\index{Field@{Field}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{Field}]{\setlength{\rightskip}{0pt plus 5cm}Bootstrapper\+::\+Field\+::\+Field (
+\begin{DoxyParamCaption}
+\item[{const Json\+::\+Value \&}]{field}
+\end{DoxyParamCaption}
+)}\label{classBootstrapper_1_1Field_abd088815820d4e09209371878fcdb5b9}
+\hypertarget{classBootstrapper_1_1Field_a0f82fdaf05566ab8553b76fd8b5f81b1}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!````~Field@{$\sim$\+Field}}
+\index{````~Field@{$\sim$\+Field}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{$\sim$\+Field}]{\setlength{\rightskip}{0pt plus 5cm}Bootstrapper\+::\+Field\+::$\sim$\+Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classBootstrapper_1_1Field_a0f82fdaf05566ab8553b76fd8b5f81b1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBootstrapper_1_1Field_a3645ec61d64aad4f836ab87ce55d7fce}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Field\+Type} Bootstrapper\+::\+Field\+::get\+Type (
+\begin{DoxyParamCaption}
+\item[{const Json\+::\+Value \&}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classBootstrapper_1_1Field_a3645ec61d64aad4f836ab87ce55d7fce}
+Get a field type from its Json representation \hypertarget{classBootstrapper_1_1Field_ab88f0ac745d4aca91713f46d669a3e2c}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!get\+Type\+Name@{get\+Type\+Name}}
+\index{get\+Type\+Name@{get\+Type\+Name}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{get\+Type\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Bootstrapper\+::\+Field\+::get\+Type\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Field\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classBootstrapper_1_1Field_ab88f0ac745d4aca91713f46d669a3e2c}
+\begin{DoxyReturn}{Returns}
+the c++ representation of a Field\+Type 
+\end{DoxyReturn}
+\hypertarget{classBootstrapper_1_1Field_a95c450dfe9ecedd662bdf07c6ed1d2d8}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!get\+Value\+Code@{get\+Value\+Code}}
+\index{get\+Value\+Code@{get\+Value\+Code}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{get\+Value\+Code}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Bootstrapper\+::\+Field\+::get\+Value\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Field\+Type}}]{type, }
+\item[{{\bf Native\+Value} \&}]{native}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classBootstrapper_1_1Field_a95c450dfe9ecedd662bdf07c6ed1d2d8}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBootstrapper_1_1Field_abd1494c46c02219a339bf1a4c33d7763}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!name@{name}}
+\index{name@{name}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Bootstrapper\+::\+Field\+::name}\label{classBootstrapper_1_1Field_abd1494c46c02219a339bf1a4c33d7763}
+\hypertarget{classBootstrapper_1_1Field_a0c0b21db786e8e7463906fb18466f119}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!position@{position}}
+\index{position@{position}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}int Bootstrapper\+::\+Field\+::position}\label{classBootstrapper_1_1Field_a0c0b21db786e8e7463906fb18466f119}
+\hypertarget{classBootstrapper_1_1Field_af0d0093eaaf445b55a91f12b33174442}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!size@{size}}
+\index{size@{size}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int Bootstrapper\+::\+Field\+::size}\label{classBootstrapper_1_1Field_af0d0093eaaf445b55a91f12b33174442}
+\hypertarget{classBootstrapper_1_1Field_a3b51be0dcd155bb84173f1a73596d963}{}\index{Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}!type@{type}}
+\index{type@{type}!Bootstrapper\+::\+Field@{Bootstrapper\+::\+Field}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Field\+Type} Bootstrapper\+::\+Field\+::type}\label{classBootstrapper_1_1Field_a3b51be0dcd155bb84173f1a73596d963}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/github/src/bootstrapper/\hyperlink{Field_8h}{Field.\+h}\item 
+/home/jc/metal/github/src/bootstrapper/\hyperlink{Field_8cpp}{Field.\+cpp}\end{DoxyCompactItemize}

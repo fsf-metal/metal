@@ -1,0 +1,160 @@
+\hypertarget{classBootstrapper_1_1Functions}{}\section{Bootstrapper\+:\+:Functions Class Reference}
+\label{classBootstrapper_1_1Functions}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+
+
+{\ttfamily \#include $<$Functions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBootstrapper_1_1Functions_a328406eb87b860a0551fc655165e289a}{Functions} ()
+\item 
+\hyperlink{classBootstrapper_1_1Functions_a36b95e782d59ec747cc0056aced7e3c6}{$\sim$\+Functions} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classBootstrapper_1_1Functions_ad0e49b87fddca35ccd6d199359355480}{copy\+From} (const string \&fix\+Field\+Name, const \hyperlink{classBootstrapper_1_1Field}{Field} \&field, stringstream \&source\+Code)
+\item 
+static void \hyperlink{classBootstrapper_1_1Functions_a27b7cf28d634bb3769fe7ae2cf7a7568}{mapping\+From} (const \hyperlink{classBootstrapper_1_1MappingTable}{Mapping\+Table} \&mapping\+Table, const string \&fix\+Field\+Name, const \hyperlink{classBootstrapper_1_1Field}{Field} \&field, stringstream \&source\+Code)
+\item 
+static \hyperlink{Functions_8h_a42a11575cc237e37732d560240e04371}{Function\+Type} \hyperlink{classBootstrapper_1_1Functions_a6c6b4f7e952437243515fa7d087eff46}{get\+Function\+Type} (std\+::string value)
+\item 
+static string \& \hyperlink{classBootstrapper_1_1Functions_aaeb97edc7fdc8770ad048a09952d8bdc}{get\+Parameter} (const string \&value, int index, string \&output)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classBootstrapper_1_1Functions_a31f2c8d919b68f8019187d461961cf89}{encode} (const string \&str\+Var\+Name, const string \&fix\+Field\+Name, const \hyperlink{classBootstrapper_1_1Field}{Field} \&field, stringstream \&source\+Code)
+\item 
+static string \hyperlink{classBootstrapper_1_1Functions_ac7c241b51bb4d5aca60501b2a0946d54}{get\+F\+I\+X\+Value} (const string \&fix\+Field\+Name, const \hyperlink{classBootstrapper_1_1Field}{Field} \&field, stringstream \&source\+Code)
+\item 
+static string \hyperlink{classBootstrapper_1_1Functions_a4cf71bcb098965b006ae9c728e83151d}{get\+Mapped\+Value} (const \hyperlink{classBootstrapper_1_1MappingTable}{Mapping\+Table} \&mapping\+Table, const string \&str\+Var\+Name, const \hyperlink{classBootstrapper_1_1Field}{Field} \&field, stringstream \&source\+Code)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBootstrapper_1_1Functions_a328406eb87b860a0551fc655165e289a}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!Functions@{Functions}}
+\index{Functions@{Functions}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{Functions}]{\setlength{\rightskip}{0pt plus 5cm}Bootstrapper\+::\+Functions\+::\+Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classBootstrapper_1_1Functions_a328406eb87b860a0551fc655165e289a}
+\hypertarget{classBootstrapper_1_1Functions_a36b95e782d59ec747cc0056aced7e3c6}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!````~Functions@{$\sim$\+Functions}}
+\index{````~Functions@{$\sim$\+Functions}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{$\sim$\+Functions}]{\setlength{\rightskip}{0pt plus 5cm}Bootstrapper\+::\+Functions\+::$\sim$\+Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classBootstrapper_1_1Functions_a36b95e782d59ec747cc0056aced7e3c6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBootstrapper_1_1Functions_ad0e49b87fddca35ccd6d199359355480}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!copy\+From@{copy\+From}}
+\index{copy\+From@{copy\+From}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{copy\+From}]{\setlength{\rightskip}{0pt plus 5cm}void Bootstrapper\+::\+Functions\+::copy\+From (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{fix\+Field\+Name, }
+\item[{const {\bf Field} \&}]{field, }
+\item[{stringstream \&}]{source\+Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classBootstrapper_1_1Functions_ad0e49b87fddca35ccd6d199359355480}
+Read the fix value in a string and convert to the proper type (if need be)~\newline
+ Sample Code for int32\+\_\+t\+:~\newline
+ std\+::string str\+Field\+Name = nos.\+get\+Field(\+F\+I\+X\+::\+F\+I\+E\+L\+D\+::\+Field\+Name); \hypertarget{classBootstrapper_1_1Functions_a31f2c8d919b68f8019187d461961cf89}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!encode@{encode}}
+\index{encode@{encode}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Bootstrapper\+::\+Functions\+::encode (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{str\+Var\+Name, }
+\item[{const string \&}]{fix\+Field\+Name, }
+\item[{const {\bf Field} \&}]{field, }
+\item[{stringstream \&}]{source\+Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{classBootstrapper_1_1Functions_a31f2c8d919b68f8019187d461961cf89}
+Encode a string value into the appropriate output format (based on field type)~\newline
+ Sample Code for int32\+\_\+t~\newline
+ int32\+\_\+t i\+Value = std\+::atoi( str\+Fix\+Value); Codec\+::encode( i\+Value, pos); Sample code for string~\newline
+ Codec\+::encode( str\+Var, pos, size); \hypertarget{classBootstrapper_1_1Functions_ac7c241b51bb4d5aca60501b2a0946d54}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!get\+F\+I\+X\+Value@{get\+F\+I\+X\+Value}}
+\index{get\+F\+I\+X\+Value@{get\+F\+I\+X\+Value}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{get\+F\+I\+X\+Value}]{\setlength{\rightskip}{0pt plus 5cm}string Bootstrapper\+::\+Functions\+::get\+F\+I\+X\+Value (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{fix\+Field\+Name, }
+\item[{const {\bf Field} \&}]{field, }
+\item[{stringstream \&}]{source\+Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{classBootstrapper_1_1Functions_ac7c241b51bb4d5aca60501b2a0946d54}
+\hypertarget{classBootstrapper_1_1Functions_a6c6b4f7e952437243515fa7d087eff46}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!get\+Function\+Type@{get\+Function\+Type}}
+\index{get\+Function\+Type@{get\+Function\+Type}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{get\+Function\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Type} Bootstrapper\+::\+Functions\+::get\+Function\+Type (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classBootstrapper_1_1Functions_a6c6b4f7e952437243515fa7d087eff46}
+Find out the function type from it's text representation 
+\begin{DoxyParams}{Parameters}
+{\em text} & something like \char`\"{}copy\+From('\+Account')\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the corresponding function type or Function\+Type.\+U\+N\+K\+N\+O\+W\+N 
+\end{DoxyReturn}
+\hypertarget{classBootstrapper_1_1Functions_a4cf71bcb098965b006ae9c728e83151d}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!get\+Mapped\+Value@{get\+Mapped\+Value}}
+\index{get\+Mapped\+Value@{get\+Mapped\+Value}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{get\+Mapped\+Value}]{\setlength{\rightskip}{0pt plus 5cm}string Bootstrapper\+::\+Functions\+::get\+Mapped\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mapping\+Table} \&}]{mapping\+Table, }
+\item[{const string \&}]{str\+Var\+Name, }
+\item[{const {\bf Field} \&}]{field, }
+\item[{stringstream \&}]{source\+Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{classBootstrapper_1_1Functions_a4cf71bcb098965b006ae9c728e83151d}
+Produces the code to map a F\+I\+X value into native 
+\begin{DoxyParams}{Parameters}
+{\em mapping\+Table} & mapping table. \\
+\hline
+{\em str\+Var\+Name} & variable holding the string representation of the F\+I\+X value \\
+\hline
+{\em field} & the native field representation \\
+\hline
+{\em source\+Code} & where code should be generated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the variable that is storing the output. Could be of any type.
+\end{DoxyReturn}
+Source Code sample\+:~\newline
+ int8\+\_\+t mapped\+Value = mapper.\+side\+From( str\+F\+I\+X\+Value\+Var\+Name); \hypertarget{classBootstrapper_1_1Functions_aaeb97edc7fdc8770ad048a09952d8bdc}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!get\+Parameter@{get\+Parameter}}
+\index{get\+Parameter@{get\+Parameter}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{get\+Parameter}]{\setlength{\rightskip}{0pt plus 5cm}string \& Bootstrapper\+::\+Functions\+::get\+Parameter (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{value, }
+\item[{int}]{index, }
+\item[{string \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classBootstrapper_1_1Functions_aaeb97edc7fdc8770ad048a09952d8bdc}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & string containing the function call \\
+\hline
+{\em index} & 1 based parameter index \\
+\hline
+{\em output} & where the result will go (besides return value) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBootstrapper_1_1Functions_a27b7cf28d634bb3769fe7ae2cf7a7568}{}\index{Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}!mapping\+From@{mapping\+From}}
+\index{mapping\+From@{mapping\+From}!Bootstrapper\+::\+Functions@{Bootstrapper\+::\+Functions}}
+\subsubsection[{mapping\+From}]{\setlength{\rightskip}{0pt plus 5cm}void Bootstrapper\+::\+Functions\+::mapping\+From (
+\begin{DoxyParamCaption}
+\item[{const {\bf Mapping\+Table} \&}]{mapping\+Table, }
+\item[{const string \&}]{fix\+Field\+Name, }
+\item[{const {\bf Field} \&}]{field, }
+\item[{stringstream \&}]{source\+Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classBootstrapper_1_1Functions_a27b7cf28d634bb3769fe7ae2cf7a7568}
+The objective is to read the F\+I\+X representation in a string and invoke the Mapper on this Sample code\+: std\+::string str\+Field\+Name = nos.\+get\+Field( F\+I\+X\+::\+F\+I\+E\+L\+D\+::\+Field\+Name); std\+::string mapped\+Value = mapper.\+side\+From( str\+Field\+Name); Codec\+::encode( mapped\+Value, pos, size); 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/github/src/bootstrapper/\hyperlink{Functions_8h}{Functions.\+h}\item 
+/home/jc/metal/github/src/bootstrapper/\hyperlink{Functions_8cpp}{Functions.\+cpp}\end{DoxyCompactItemize}

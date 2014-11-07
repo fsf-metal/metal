@@ -1,0 +1,55 @@
+\hypertarget{chatClient_8cc}{}\section{/home/jc/metal/github/src/3rdparties/net\+Link/examples/socket\+\_\+group/chat\+Client.cc File Reference}
+\label{chatClient_8cc}\index{/home/jc/metal/github/src/3rdparties/net\+Link/examples/socket\+\_\+group/chat\+Client.\+cc@{/home/jc/metal/github/src/3rdparties/net\+Link/examples/socket\+\_\+group/chat\+Client.\+cc}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$netlink/socket.\+h$>$}\\*
+{\ttfamily \#include $<$netlink/socket\+\_\+group.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classOnRead}{On\+Read}
+\item 
+class \hyperlink{classOnDisconnect}{On\+Disconnect}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{chatClient_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const string \hyperlink{chatClient_8cc_aedc07661b0e13137e4928b5b972ff4bf}{H\+O\+S\+T} = \char`\"{}localhost\char`\"{}
+\item 
+const unsigned \hyperlink{chatClient_8cc_adc4796af3c0e0eae9c41479698cb4510}{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+R\+T} = 5000
+\item 
+bool \hyperlink{chatClient_8cc_a831d9e90749c9d1c3c3b010b5172a836}{disconnect} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{chatClient_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{chat\+Client.\+cc@{chat\+Client.\+cc}!main@{main}}
+\index{main@{main}!chat\+Client.\+cc@{chat\+Client.\+cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{chatClient_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+\subsection{Variable Documentation}
+\hypertarget{chatClient_8cc_a831d9e90749c9d1c3c3b010b5172a836}{}\index{chat\+Client.\+cc@{chat\+Client.\+cc}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!chat\+Client.\+cc@{chat\+Client.\+cc}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\+::disconnect = false}\label{chatClient_8cc_a831d9e90749c9d1c3c3b010b5172a836}
+Closes (disconnects) the socket. After this call the socket can not be used.
+
+\begin{DoxyWarning}{Warning}
+Any use of the Socket after disconnection leads to undefined behaviour. 
+\end{DoxyWarning}
+\hypertarget{chatClient_8cc_aedc07661b0e13137e4928b5b972ff4bf}{}\index{chat\+Client.\+cc@{chat\+Client.\+cc}!H\+O\+S\+T@{H\+O\+S\+T}}
+\index{H\+O\+S\+T@{H\+O\+S\+T}!chat\+Client.\+cc@{chat\+Client.\+cc}}
+\subsubsection[{H\+O\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}const string H\+O\+S\+T = \char`\"{}localhost\char`\"{}}\label{chatClient_8cc_aedc07661b0e13137e4928b5b972ff4bf}
+\hypertarget{chatClient_8cc_adc4796af3c0e0eae9c41479698cb4510}{}\index{chat\+Client.\+cc@{chat\+Client.\+cc}!S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+R\+T@{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+R\+T}}
+\index{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+R\+T@{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+R\+T}!chat\+Client.\+cc@{chat\+Client.\+cc}}
+\subsubsection[{S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+R\+T = 5000}\label{chatClient_8cc_adc4796af3c0e0eae9c41479698cb4510}

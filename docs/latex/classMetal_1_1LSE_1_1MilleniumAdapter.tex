@@ -1,105 +1,100 @@
 \hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter}{}\section{Metal\+:\+:L\+S\+E\+:\+:Millenium\+Adapter Class Reference}
 \label{classMetal_1_1LSE_1_1MilleniumAdapter}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+
+
+{\ttfamily \#include $<$Millenium\+Adapter.\+h$>$}
+
 Inheritance diagram for Metal\+:\+:L\+S\+E\+:\+:Millenium\+Adapter\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{classMetal_1_1LSE_1_1MilleniumAdapter}
+\includegraphics[height=4.000000cm]{classMetal_1_1LSE_1_1MilleniumAdapter}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_ab3da43142636043e0ade20b0881c9976}{send} (const \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&nos)
+\hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_abc4133dd6d89a8271d4c64eb46d365c1}{Millenium\+Adapter} (std\+::string \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a1c12122da30ec79f3907a82ac1847c33}{user\+Name}, std\+::string \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_aa8120f11aac5d4825a5766d86e53e5a2}{password})
 \item 
-virtual void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_add4508b367a6383b42fb2fd1744946cd}{recv} (const Execution\+Report \&er)
+virtual void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a202fb52a6d4f4434c93375dd68d27093}{on\+Message} (const \hyperlink{classMetal_1_1LSE_1_1ExecutionReport}{Metal\+::\+L\+S\+E\+::\+Execution\+Report} \&native\+E\+R)=0
 \item 
-\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a402c564b7a955fac6660e6bfeee66093}{}void {\bfseries start} ()\label{classMetal_1_1LSE_1_1MilleniumAdapter_a402c564b7a955fac6660e6bfeee66093}
-
+virtual int \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_aaf1486db897674d020aaa9a67a350158}{process\+Data} (const char $\ast$data, int size)
 \item 
-\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_acb5018d36915f34612958d87ad8325af}{}void {\bfseries stop} ()\label{classMetal_1_1LSE_1_1MilleniumAdapter_acb5018d36915f34612958d87ad8325af}
-
+virtual \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_ae41556fc2351e0dd76e0334b19366af7}{$\sim$\+Millenium\+Adapter} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a605b1fe02491549ae9ad643db57335bd}{N\+A\+M\+E} = \char`\"{}L\+S\+E Trading\char`\"{}
+\item 
+static const std\+::string \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a5d93beb732517c12013a007611377341}{U\+U\+I\+D} = \char`\"{}acba8ab0-\/4564-\/11e4-\/916c-\/0800200c9a66\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a9b097537db390f3d552fd4ecbff5ab6f}{send\+Heart\+Beat} ()
 \item 
 void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}{send\+Logon} ()
-\item 
-void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a01a0796b972925d6a430e2f788eec5ee}{benchmark} (const std\+::vector$<$ \hyperlink{classMetal_1_1NewOrderSingle}{Metal\+::\+New\+Order\+Single} $>$ \&, std\+::chrono\+::milliseconds \&mapping\+Duration, std\+::chrono\+::milliseconds \&encoding\+Duration)
-\item 
-void \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_acdfc9b84439e745de42c0f72a1e22a67}{benchmark} (const std\+::vector$<$ \hyperlink{classMetal_1_1OrderCancelRequest}{Metal\+::\+Order\+Cancel\+Request} $>$ \&, std\+::chrono\+::milliseconds \&, std\+::chrono\+::milliseconds \&)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a1c12122da30ec79f3907a82ac1847c33}{}std\+::string {\bfseries user\+Name}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a1c12122da30ec79f3907a82ac1847c33}
-
+\hyperlink{classMetal_1_1LSE_1_1MilleniumCodec}{Millenium\+Codec} $\ast$ \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a09725d05caee94db4f4768ab73ebdafa}{codec}
 \item 
-\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_aa8120f11aac5d4825a5766d86e53e5a2}{}std\+::string {\bfseries password}\label{classMetal_1_1LSE_1_1MilleniumAdapter_aa8120f11aac5d4825a5766d86e53e5a2}
-
+std\+::string \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a1c12122da30ec79f3907a82ac1847c33}{user\+Name}
+\item 
+std\+::string \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_aa8120f11aac5d4825a5766d86e53e5a2}{password}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_abc4133dd6d89a8271d4c64eb46d365c1}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!Millenium\+Adapter@{Millenium\+Adapter}}
+\index{Millenium\+Adapter@{Millenium\+Adapter}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{Millenium\+Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::\+Millenium\+Adapter (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{user\+Name, }
+\item[{std\+::string}]{password}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1LSE_1_1MilleniumAdapter_abc4133dd6d89a8271d4c64eb46d365c1}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_ae41556fc2351e0dd76e0334b19366af7}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!````~Millenium\+Adapter@{$\sim$\+Millenium\+Adapter}}
+\index{````~Millenium\+Adapter@{$\sim$\+Millenium\+Adapter}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{$\sim$\+Millenium\+Adapter}]{\setlength{\rightskip}{0pt plus 5cm}virtual Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::$\sim$\+Millenium\+Adapter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_ae41556fc2351e0dd76e0334b19366af7}
+
+
 \subsection{Member Function Documentation}
-\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a01a0796b972925d6a430e2f788eec5ee}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!benchmark@{benchmark}}
-\index{benchmark@{benchmark}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
-\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::benchmark (
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a202fb52a6d4f4434c93375dd68d27093}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{on\+Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::on\+Message (
 \begin{DoxyParamCaption}
-\item[{const std\+::vector$<$ {\bf Metal\+::\+New\+Order\+Single} $>$ \&}]{, }
-\item[{std\+::chrono\+::milliseconds \&}]{mapping\+Duration, }
-\item[{std\+::chrono\+::milliseconds \&}]{encoding\+Duration}
+\item[{const {\bf Metal\+::\+L\+S\+E\+::\+Execution\+Report} \&}]{native\+E\+R}
 \end{DoxyParamCaption}
-)}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a01a0796b972925d6a430e2f788eec5ee}
-\begin{DoxySeeAlso}{See also}
-\hyperlink{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{Trading\+Adapter\+::benchmark} 
-\end{DoxySeeAlso}
-\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_acdfc9b84439e745de42c0f72a1e22a67}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!benchmark@{benchmark}}
-\index{benchmark@{benchmark}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
-\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::benchmark (
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a202fb52a6d4f4434c93375dd68d27093}
+Invoked when a native execution report has been received \hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_aaf1486db897674d020aaa9a67a350158}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!process\+Data@{process\+Data}}
+\index{process\+Data@{process\+Data}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{process\+Data}]{\setlength{\rightskip}{0pt plus 5cm}int Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::process\+Data (
 \begin{DoxyParamCaption}
-\item[{const std\+::vector$<$ {\bf Metal\+::\+Order\+Cancel\+Request} $>$ \&}]{all\+Cancels, }
-\item[{std\+::chrono\+::milliseconds \&}]{mapping\+Duration, }
-\item[{std\+::chrono\+::milliseconds \&}]{encoding\+Duration}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{size}
 \end{DoxyParamCaption}
-)}\label{classMetal_1_1LSE_1_1MilleniumAdapter_acdfc9b84439e745de42c0f72a1e22a67}
-\begin{DoxySeeAlso}{See also}
-\hyperlink{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{Trading\+Adapter\+::benchmark} 
-\end{DoxySeeAlso}
-\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_add4508b367a6383b42fb2fd1744946cd}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!recv@{recv}}
-\index{recv@{recv}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
-\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::recv (
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_aaf1486db897674d020aaa9a67a350158}
+\hyperlink{namespaceMetal_1_1LSE}{L\+S\+E} specific implementation of data processing 
+
+Implements \hyperlink{classMetal_1_1Adapter_a195072772568dc0fd7a859ed2c99d5c7}{Metal\+::\+Adapter}.
+
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a9b097537db390f3d552fd4ecbff5ab6f}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!send\+Heart\+Beat@{send\+Heart\+Beat}}
+\index{send\+Heart\+Beat@{send\+Heart\+Beat}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{send\+Heart\+Beat}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::send\+Heart\+Beat (
 \begin{DoxyParamCaption}
-\item[{const Execution\+Report \&}]{er}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_add4508b367a6383b42fb2fd1744946cd}
-This method will invoked upon receiving an execution report~\newline
- Subclasses will perform mapping, encoding then write to the active session~\newline
- 
-\begin{DoxyParams}{Parameters}
-{\em Execution\+Report} & incomming execution report \\
-\hline
-\end{DoxyParams}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a9b097537db390f3d552fd4ecbff5ab6f}
+Formats and sends a Heart Beat message 
 
-
-Implements \hyperlink{classMetal_1_1TradingAdapter_af0015d51815dedb1bc78258b3030d751}{Metal\+::\+Trading\+Adapter}.
-
-\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_ab3da43142636043e0ade20b0881c9976}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!send@{send}}
-\index{send@{send}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
-\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::send (
-\begin{DoxyParamCaption}
-\item[{const {\bf New\+Order\+Single} \&}]{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_ab3da43142636043e0ade20b0881c9976}
-This method will be called by users to send new orders~\newline
- Subclasses will perform mapping, encoding then write to the active session~\newline
- 
-\begin{DoxyParams}{Parameters}
-{\em \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single}} & Inbound order in unified format \\
-\hline
-\end{DoxyParams}
-\begin{DoxySeeAlso}{See also}
-\hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} 
-\end{DoxySeeAlso}
-
-
-Implements \hyperlink{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473f1c3}{Metal\+::\+Trading\+Adapter}.
+Implements \hyperlink{classMetal_1_1TradingAdapter_a39caec739aaad9593ba1b93b8e130385}{Metal\+::\+Trading\+Adapter}.
 
 \hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!send\+Logon@{send\+Logon}}
 \index{send\+Logon@{send\+Logon}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
@@ -107,14 +102,32 @@ Implements \hyperlink{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}
-This pure virtual method should be implemented in each adapter. 
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}
+Sends a logon message 
 
 Implements \hyperlink{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}{Metal\+::\+Trading\+Adapter}.
 
 
 
+\subsection{Member Data Documentation}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a09725d05caee94db4f4768ab73ebdafa}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!codec@{codec}}
+\index{codec@{codec}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{codec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Millenium\+Codec}$\ast$ Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::codec\hspace{0.3cm}{\ttfamily [protected]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a09725d05caee94db4f4768ab73ebdafa}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a605b1fe02491549ae9ad643db57335bd}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!N\+A\+M\+E@{N\+A\+M\+E}}
+\index{N\+A\+M\+E@{N\+A\+M\+E}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::\+N\+A\+M\+E = \char`\"{}L\+S\+E Trading\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a605b1fe02491549ae9ad643db57335bd}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_aa8120f11aac5d4825a5766d86e53e5a2}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!password@{password}}
+\index{password@{password}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::password\hspace{0.3cm}{\ttfamily [protected]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_aa8120f11aac5d4825a5766d86e53e5a2}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a1c12122da30ec79f3907a82ac1847c33}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!user\+Name@{user\+Name}}
+\index{user\+Name@{user\+Name}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{user\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::user\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a1c12122da30ec79f3907a82ac1847c33}
+\hypertarget{classMetal_1_1LSE_1_1MilleniumAdapter_a5d93beb732517c12013a007611377341}{}\index{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}!U\+U\+I\+D@{U\+U\+I\+D}}
+\index{U\+U\+I\+D@{U\+U\+I\+D}!Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter@{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}}
+\subsubsection[{U\+U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter\+::\+U\+U\+I\+D = \char`\"{}acba8ab0-\/4564-\/11e4-\/916c-\/0800200c9a66\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1LSE_1_1MilleniumAdapter_a5d93beb732517c12013a007611377341}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/jc/metal/src/metal/adapters/\+L\+S\+E\+Trading\+Adapter/Millenium\+Adapter.\+h\item 
-/home/jc/metal/src/metal/adapters/\+L\+S\+E\+Trading\+Adapter/Millenium\+Adapter.\+cpp\end{DoxyCompactItemize}
+/home/jc/metal/github/src/adapters/\+L\+S\+E\+Trading\+Adapter/\hyperlink{MilleniumAdapter_8h}{Millenium\+Adapter.\+h}\item 
+/home/jc/metal/github/src/adapters/\+L\+S\+E\+Trading\+Adapter/\hyperlink{MilleniumAdapter_8cpp}{Millenium\+Adapter.\+cpp}\end{DoxyCompactItemize}

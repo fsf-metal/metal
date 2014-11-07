@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Metal: /home/jc/metal/src/metal/adapters/LSETradingAdapter/MilleniumAdapter.h Source File</title>
+<title>Metal: /home/jc/metal/github/src/adapters/LSETradingAdapter/MilleniumAdapter.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4e72e9fc9ba9fb430abdd09432f28b9a.html">metal</a></li><li class="navelem"><a class="el" href="dir_862131fbfe8add6479528b230a5c183a.html">adapters</a></li><li class="navelem"><a class="el" href="dir_ac69232def94543cd914accad5997144.html">LSETradingAdapter</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_085924db4bed469054a9264cf96b0d5e.html">adapters</a></li><li class="navelem"><a class="el" href="dir_3d25d589cbe592ac632d08e81d0691a5.html">LSETradingAdapter</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,64 +88,95 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MilleniumAdapter.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __METAL_LSETRADINGADAPTER_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __METAL_LSETRADINGADAPTER_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;metal/TradingAdapter.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;NewOrder.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;OrderCancelRequest.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceMetal.html">Metal</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>LSE {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classMetal_1_1LSE_1_1MilleniumAdapter.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html">MilleniumAdapter</a> : <span class="keyword">public</span> <a class="code" href="classMetal_1_1TradingAdapter.html">TradingAdapter</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html">MilleniumAdapter</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">// messaging</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ab3da43142636043e0ade20b0881c9976">send</a>( <span class="keyword">const</span> <a class="code" href="classMetal_1_1NewOrderSingle.html">NewOrderSingle</a> &amp;nos);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#add4508b367a6383b42fb2fd1744946cd">recv</a>( <span class="keyword">const</span> ExecutionReport &amp;er);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">// life cycle</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> start();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> stop();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">// Send a logon message</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ab4bba2e8403ae7ed5b335985b4295b9f">sendLogon</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a01a0796b972925d6a430e2f788eec5ee">benchmark</a>( <span class="keyword">const</span> std::vector&lt;Metal::NewOrderSingle&gt; &amp;,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                std::chrono::milliseconds&amp; mappingDuration,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                std::chrono::milliseconds&amp; encodingDuration);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a01a0796b972925d6a430e2f788eec5ee">benchmark</a>( <span class="keyword">const</span> std::vector&lt;Metal::OrderCancelRequest&gt; &amp;,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                std::chrono::milliseconds &amp;,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                std::chrono::milliseconds &amp;);</div>
+<a href="MilleniumAdapter_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">MeTAL: My Electronic Trading Adapters Library</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">This file is part of MeTAL.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">MeTAL is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">(at your option) any later version.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">MeTAL is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">along with MeTAL source code. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef METAL_LSE_TRADINGADAPTER_H</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define METAL_LSE_TRADINGADAPTER_H</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="TradingAdapter_8h.html">metal/TradingAdapter.h</a>&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="NormalizedTrading_8h.html">metal/NormalizedTrading.h</a>&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="NewOrder_8h.html">NewOrder.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="OrderCancelRequest_8h.html">OrderCancelRequest.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MilleniumCodec_8h.html">MilleniumCodec.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceMetal.html">Metal</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>LSE {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classMetal_1_1LSE_1_1MilleniumAdapter.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html">MilleniumAdapter</a> : <span class="keyword">public</span> <a class="code" href="classMetal_1_1TradingAdapter.html">TradingAdapter</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a605b1fe02491549ae9ad643db57335bd">   37</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> std::string <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a605b1fe02491549ae9ad643db57335bd">NAME</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a5d93beb732517c12013a007611377341">   38</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> std::string <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a5d93beb732517c12013a007611377341">UUID</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html">MilleniumAdapter</a>(){};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#abc4133dd6d89a8271d4c64eb46d365c1">MilleniumAdapter</a>( std::string <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a1c12122da30ec79f3907a82ac1847c33">userName</a>, std::string <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#aa8120f11aac5d4825a5766d86e53e5a2">password</a>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::string userName;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::string password;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <span class="comment">// LSE</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// namespace Metal</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // __METAL_LSETRADINGADAPTER_H</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a202fb52a6d4f4434c93375dd68d27093">onMessage</a>(<span class="keyword">const</span> <a class="code" href="classMetal_1_1LSE_1_1ExecutionReport.html">Metal::LSE::ExecutionReport</a> &amp;nativeER) = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#aaf1486db897674d020aaa9a67a350158">processData</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * data, <span class="keywordtype">int</span> size);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_ab4bba2e8403ae7ed5b335985b4295b9f"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ab4bba2e8403ae7ed5b335985b4295b9f">Metal::LSE::MilleniumAdapter::sendLogon</a></div><div class="ttdeci">void sendLogon()</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.cpp:96</div></div>
-<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_add4508b367a6383b42fb2fd1744946cd"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#add4508b367a6383b42fb2fd1744946cd">Metal::LSE::MilleniumAdapter::recv</a></div><div class="ttdeci">virtual void recv(const ExecutionReport &amp;er)</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.cpp:87</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html">Metal::TradingAdapter</a></div><div class="ttdef"><b>Definition:</b> TradingAdapter.h:14</div></div>
-<div class="ttc" id="namespaceMetal_html"><div class="ttname"><a href="namespaceMetal.html">Metal</a></div><div class="ttdef"><b>Definition:</b> Adapter.h:6</div></div>
-<div class="ttc" id="classMetal_1_1NewOrderSingle_html"><div class="ttname"><a href="classMetal_1_1NewOrderSingle.html">Metal::NewOrderSingle</a></div><div class="ttdef"><b>Definition:</b> metal.h:10</div></div>
-<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_a01a0796b972925d6a430e2f788eec5ee"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a01a0796b972925d6a430e2f788eec5ee">Metal::LSE::MilleniumAdapter::benchmark</a></div><div class="ttdeci">void benchmark(const std::vector&lt; Metal::NewOrderSingle &gt; &amp;, std::chrono::milliseconds &amp;mappingDuration, std::chrono::milliseconds &amp;encodingDuration)</div></div>
-<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html">Metal::LSE::MilleniumAdapter</a></div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.h:11</div></div>
-<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_ab3da43142636043e0ade20b0881c9976"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ab3da43142636043e0ade20b0881c9976">Metal::LSE::MilleniumAdapter::send</a></div><div class="ttdeci">void send(const NewOrderSingle &amp;nos)</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.cpp:91</div></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ae41556fc2351e0dd76e0334b19366af7">   52</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ae41556fc2351e0dd76e0334b19366af7">~MilleniumAdapter</a>(){};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classMetal_1_1LSE_1_1MilleniumCodec.html">MilleniumCodec</a> *<a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a09725d05caee94db4f4768ab73ebdafa">codec</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a1c12122da30ec79f3907a82ac1847c33">   56</a></span>&#160;        std::string <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a1c12122da30ec79f3907a82ac1847c33">userName</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#aa8120f11aac5d4825a5766d86e53e5a2">   57</a></span>&#160;        std::string <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#aa8120f11aac5d4825a5766d86e53e5a2">password</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a9b097537db390f3d552fd4ecbff5ab6f">sendHeartBeat</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ab4bba2e8403ae7ed5b335985b4295b9f">sendLogon</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// LSE</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <span class="comment">// namespace Metal</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif // METAL_LSE_TRADINGADAPTER_H</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="ttc" id="NormalizedTrading_8h_html"><div class="ttname"><a href="NormalizedTrading_8h.html">NormalizedTrading.h</a></div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_ab4bba2e8403ae7ed5b335985b4295b9f"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ab4bba2e8403ae7ed5b335985b4295b9f">Metal::LSE::MilleniumAdapter::sendLogon</a></div><div class="ttdeci">void sendLogon()</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.cpp:87</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_a5d93beb732517c12013a007611377341"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a5d93beb732517c12013a007611377341">Metal::LSE::MilleniumAdapter::UUID</a></div><div class="ttdeci">static const std::string UUID</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.h:38</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_aa8120f11aac5d4825a5766d86e53e5a2"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#aa8120f11aac5d4825a5766d86e53e5a2">Metal::LSE::MilleniumAdapter::password</a></div><div class="ttdeci">std::string password</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.h:57</div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html">Metal::TradingAdapter</a></div><div class="ttdef"><b>Definition:</b> TradingAdapter.h:42</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_a09725d05caee94db4f4768ab73ebdafa"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a09725d05caee94db4f4768ab73ebdafa">Metal::LSE::MilleniumAdapter::codec</a></div><div class="ttdeci">MilleniumCodec * codec</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.h:52</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_a9b097537db390f3d552fd4ecbff5ab6f"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a9b097537db390f3d552fd4ecbff5ab6f">Metal::LSE::MilleniumAdapter::sendHeartBeat</a></div><div class="ttdeci">void sendHeartBeat()</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.cpp:81</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_a1c12122da30ec79f3907a82ac1847c33"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a1c12122da30ec79f3907a82ac1847c33">Metal::LSE::MilleniumAdapter::userName</a></div><div class="ttdeci">std::string userName</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.h:56</div></div>
+<div class="ttc" id="namespaceMetal_html"><div class="ttname"><a href="namespaceMetal.html">Metal</a></div><div class="ttdef"><b>Definition:</b> Adapter.cpp:11</div></div>
+<div class="ttc" id="MilleniumCodec_8h_html"><div class="ttname"><a href="MilleniumCodec_8h.html">MilleniumCodec.h</a></div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_aaf1486db897674d020aaa9a67a350158"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#aaf1486db897674d020aaa9a67a350158">Metal::LSE::MilleniumAdapter::processData</a></div><div class="ttdeci">virtual int processData(const char *data, int size)</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.cpp:39</div></div>
+<div class="ttc" id="NewOrder_8h_html"><div class="ttname"><a href="NewOrder_8h.html">NewOrder.h</a></div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html">Metal::LSE::MilleniumAdapter</a></div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.h:34</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1ExecutionReport_html"><div class="ttname"><a href="classMetal_1_1LSE_1_1ExecutionReport.html">Metal::LSE::ExecutionReport</a></div><div class="ttdef"><b>Definition:</b> ExecutionReport.h:34</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_ae41556fc2351e0dd76e0334b19366af7"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#ae41556fc2351e0dd76e0334b19366af7">Metal::LSE::MilleniumAdapter::~MilleniumAdapter</a></div><div class="ttdeci">virtual ~MilleniumAdapter()</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.h:52</div></div>
+<div class="ttc" id="OrderCancelRequest_8h_html"><div class="ttname"><a href="OrderCancelRequest_8h.html">OrderCancelRequest.h</a></div></div>
+<div class="ttc" id="TradingAdapter_8h_html"><div class="ttname"><a href="TradingAdapter_8h.html">TradingAdapter.h</a></div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_a605b1fe02491549ae9ad643db57335bd"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a605b1fe02491549ae9ad643db57335bd">Metal::LSE::MilleniumAdapter::NAME</a></div><div class="ttdeci">static const std::string NAME</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.h:37</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_a202fb52a6d4f4434c93375dd68d27093"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a202fb52a6d4f4434c93375dd68d27093">Metal::LSE::MilleniumAdapter::onMessage</a></div><div class="ttdeci">virtual void onMessage(const Metal::LSE::ExecutionReport &amp;nativeER)=0</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumAdapter_html_abc4133dd6d89a8271d4c64eb46d365c1"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumAdapter.html#abc4133dd6d89a8271d4c64eb46d365c1">Metal::LSE::MilleniumAdapter::MilleniumAdapter</a></div><div class="ttdeci">MilleniumAdapter(std::string userName, std::string password)</div><div class="ttdef"><b>Definition:</b> MilleniumAdapter.cpp:34</div></div>
+<div class="ttc" id="classMetal_1_1LSE_1_1MilleniumCodec_html"><div class="ttname"><a href="classMetal_1_1LSE_1_1MilleniumCodec.html">Metal::LSE::MilleniumCodec</a></div><div class="ttdef"><b>Definition:</b> MilleniumCodec.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:15 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

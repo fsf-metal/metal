@@ -1,0 +1,166 @@
+\hypertarget{classMetal_1_1Aquis_1_1Codec}{}\section{Metal\+:\+:Aquis\+:\+:Codec Class Reference}
+\label{classMetal_1_1Aquis_1_1Codec}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+
+
+{\ttfamily \#include $<$Codec.\+h$>$}
+
+Inheritance diagram for Metal\+:\+:Aquis\+:\+:Codec\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMetal_1_1Aquis_1_1Codec}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMetal_1_1Aquis_1_1Codec_ab68190600daa2d1b8105e6d8ff83afd6}{Codec} ()
+\item 
+virtual \hyperlink{classMetal_1_1Aquis_1_1Codec_a7bdeb61cbb583a2a77476cd7b196c0c2}{$\sim$\+Codec} ()
+\item 
+void \hyperlink{classMetal_1_1Aquis_1_1Codec_a361dc20ec705f056891468c8b0312699}{encode} (const \hyperlink{classMetal_1_1Aquis_1_1OrderCancel}{Order\+Cancel} \&oc, \hyperlink{namespaceMetal_1_1Aquis_a2e28795915a9bf76ccc4574a24376487}{Seq\+Num} seq\+Num, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+void \hyperlink{classMetal_1_1Aquis_1_1Codec_aaf73f35bd28f5f59ac6b2a968354bb91}{encode} (const \hyperlink{classMetal_1_1Aquis_1_1OrderAdd}{Order\+Add} \&oa, \hyperlink{namespaceMetal_1_1Aquis_a2e28795915a9bf76ccc4574a24376487}{Seq\+Num} seq\+Num, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+void \hyperlink{classMetal_1_1Aquis_1_1Codec_a1162f3fd1a0f6351dba465a23af0f114}{encode} (const \hyperlink{classMetal_1_1Aquis_1_1Login}{Login} \&login, \hyperlink{namespaceMetal_1_1Aquis_a2e28795915a9bf76ccc4574a24376487}{Seq\+Num} seq\+Num, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+void \hyperlink{classMetal_1_1Aquis_1_1Codec_a8aa920b8a5422358a2529056e36094d7}{encode} (const uint16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Aquis_1_1Codec_a82ef20e51a8850db3213c60a9348b59e}{encode} (const uint32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Aquis_1_1Codec_abd44b89febe2913fbe8505653ce17cb4}{encode} (const uint64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Aquis_1_1Codec_ae0e2296c1a295fa7f6000e94d8cc7f13}{encode\+Header} (\hyperlink{namespaceMetal_1_1Aquis_ac6c095b7eefa1d7918de0fe9387f3786}{Msg\+Type} type, uint16\+\_\+t length, \hyperlink{namespaceMetal_1_1Aquis_a2e28795915a9bf76ccc4574a24376487}{Seq\+Num} seq\+Num, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_ab68190600daa2d1b8105e6d8ff83afd6}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!Codec@{Codec}}
+\index{Codec@{Codec}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{Codec}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Aquis\+::\+Codec\+::\+Codec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1Aquis_1_1Codec_ab68190600daa2d1b8105e6d8ff83afd6}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_a7bdeb61cbb583a2a77476cd7b196c0c2}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!````~Codec@{$\sim$\+Codec}}
+\index{````~Codec@{$\sim$\+Codec}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{$\sim$\+Codec}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Aquis\+::\+Codec\+::$\sim$\+Codec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1Aquis_1_1Codec_a7bdeb61cbb583a2a77476cd7b196c0c2}
+
+
+Reimplemented from \hyperlink{classMetal_1_1Codec_a68847484c9c80e04e4e4e5592cf113db}{Metal\+::\+Codec}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_a361dc20ec705f056891468c8b0312699}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Aquis\+::\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Order\+Cancel} \&}]{oc, }
+\item[{{\bf Seq\+Num}}]{seq\+Num, }
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1Aquis_1_1Codec_a361dc20ec705f056891468c8b0312699}
+Encodes a cancel request 
+\begin{DoxyParams}{Parameters}
+{\em oc} & The Order Cancel representation \\
+\hline
+{\em seq\+Num} & the current sequence number \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_aaf73f35bd28f5f59ac6b2a968354bb91}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Aquis\+::\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Order\+Add} \&}]{oa, }
+\item[{{\bf Seq\+Num}}]{seq\+Num, }
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1Aquis_1_1Codec_aaf73f35bd28f5f59ac6b2a968354bb91}
+Encodes a new order 
+\begin{DoxyParams}{Parameters}
+{\em oq} & The Order Add representation \\
+\hline
+{\em seq\+Num} & the current sequence number \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_a1162f3fd1a0f6351dba465a23af0f114}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Aquis\+::\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Login} \&}]{login, }
+\item[{{\bf Seq\+Num}}]{seq\+Num, }
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1Aquis_1_1Codec_a1162f3fd1a0f6351dba465a23af0f114}
+Encodes a login 
+\begin{DoxyParams}{Parameters}
+{\em login} & \hyperlink{classMetal_1_1Aquis_1_1Login}{Login} representation. Must be constructed with all values \\
+\hline
+{\em seq\+Num} & The sequence number \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_a8aa920b8a5422358a2529056e36094d7}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Aquis\+::\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const uint16\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Aquis_1_1Codec_a8aa920b8a5422358a2529056e36094d7}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_a82ef20e51a8850db3213c60a9348b59e}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Aquis\+::\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const uint32\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Aquis_1_1Codec_a82ef20e51a8850db3213c60a9348b59e}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_abd44b89febe2913fbe8505653ce17cb4}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Aquis\+::\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const uint64\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Aquis_1_1Codec_abd44b89febe2913fbe8505653ce17cb4}
+\hypertarget{classMetal_1_1Aquis_1_1Codec_ae0e2296c1a295fa7f6000e94d8cc7f13}{}\index{Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}!encode\+Header@{encode\+Header}}
+\index{encode\+Header@{encode\+Header}!Metal\+::\+Aquis\+::\+Codec@{Metal\+::\+Aquis\+::\+Codec}}
+\subsubsection[{encode\+Header}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Aquis\+::\+Codec\+::encode\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf Msg\+Type}}]{type, }
+\item[{uint16\+\_\+t}]{length, }
+\item[{{\bf Seq\+Num}}]{seq\+Num, }
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Aquis_1_1Codec_ae0e2296c1a295fa7f6000e94d8cc7f13}
+Encode \hyperlink{namespaceMetal_1_1Aquis}{Aquis} A\+T\+P Header 
+\begin{DoxyParams}{Parameters}
+{\em length} & full message length \\
+\hline
+{\em seq\+Num} & \hyperlink{classMetal_1_1Message}{Message} sequence number \\
+\hline
+{\em type} & \hyperlink{classMetal_1_1Message}{Message} Type \\
+\hline
+{\em msg} & the output message \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/github/src/adapters/\+Aquis\+A\+T\+P\+Adapter/\hyperlink{src_2adapters_2AquisATPAdapter_2Codec_8h}{Codec.\+h}\item 
+/home/jc/metal/github/src/adapters/\+Aquis\+A\+T\+P\+Adapter/\hyperlink{adapters_2AquisATPAdapter_2Codec_8cpp}{Codec.\+cpp}\end{DoxyCompactItemize}

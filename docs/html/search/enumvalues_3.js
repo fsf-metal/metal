@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['server',['SERVER',['../core_8h.html#aa78c7398fa81f7f62aa233159d4d8d97a67c96b24b23bcb408bae7626730a04b7',1,'core.h']]]
+  ['killed',['KILLED',['../classMetal_1_1KeepAlive.html#ac47e726ea693a76d0779c0bf29ee7038a47defdafb4c082a8848645b806b8fb77',1,'Metal::KeepAlive']]]
 ];

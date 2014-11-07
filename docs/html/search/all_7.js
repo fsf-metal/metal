@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['init',['init',['../core_8h.html#a9b878fee41d5996021dea123e7d071b4',1,'core.cc']]],
-  ['ip4',['IP4',['../core_8h.html#a3afbe2755e4a6912bfce39e7069c2d3da7cecc0cd33e7aadefd2826553c9e634e',1,'core.h']]],
-  ['ip6',['IP6',['../core_8h.html#a3afbe2755e4a6912bfce39e7069c2d3dabf4c53a0c24e17362bbe8ecb0347e4e6',1,'core.h']]],
-  ['ipver',['ipVer',['../classSocket.html#a00640e1194207685a9169d130dd31500',1,'Socket::ipVer()'],['../core_8h.html#a3afbe2755e4a6912bfce39e7069c2d3d',1,'IPVer():&#160;core.h']]]
+  ['header_5flength',['HEADER_LENGTH',['../classMetal_1_1LSE_1_1MilleniumCodec.html#a6bdaa076554a16c07ae8e73d6933acfd',1,'Metal::LSE::MilleniumCodec']]],
+  ['heartbeat',['heartBeat',['../classMetal_1_1KeepAlive.html#afbc7886ac1ce05daadca60c6c75eef84',1,'Metal::KeepAlive']]],
+  ['heartbeating',['HEARTBEATING',['../classMetal_1_1KeepAlive.html#ac47e726ea693a76d0779c0bf29ee7038ac0d3ef69ef689828c5bb46fdd61aea5b',1,'Metal::KeepAlive']]]
 ];

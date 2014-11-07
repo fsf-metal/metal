@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['display',['Display',['../classDisplay.html',1,'']]]
+  ['executionreport',['ExecutionReport',['../classMetal_1_1LSE_1_1ExecutionReport.html',1,'Metal::LSE']]]
 ];

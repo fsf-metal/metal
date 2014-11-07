@@ -1,6 +1,19 @@
 var searchData=
 [
-  ['portfrom',['portFrom',['../classSocket.html#acea4e417eb685f5f9c8e743b918cd84e',1,'Socket']]],
-  ['portto',['portTo',['../classSocket.html#aea64c4f67d903198cff5a6285a0f9a7e',1,'Socket']]],
-  ['protocol',['protocol',['../classSocket.html#a4e03da6ff0420bf0a2e123142ce11093',1,'Socket::protocol()'],['../core_8h.html#aac39b55be6469395f55ff0292ad8184c',1,'Protocol():&#160;core.h']]]
+  ['name',['name',['../classBootstrapper_1_1Field.html#abd1494c46c02219a339bf1a4c33d7763',1,'Bootstrapper::Field::name()'],['../classBootstrapper_1_1MappingEntry.html#a65b7b8ad84053949d5213f3faedba59a',1,'Bootstrapper::MappingEntry::name()'],['../classBootstrapper_1_1MappingTable.html#aa1b11e86b77f9514cb067f6bf9ab5ef1',1,'Bootstrapper::MappingTable::name()'],['../classMetal_1_1Adapter.html#a8d86d5f95e20d3b9feeb4f0bedcf5785',1,'Metal::Adapter::name()'],['../classMetal_1_1LSE_1_1MilleniumAdapter.html#a605b1fe02491549ae9ad643db57335bd',1,'Metal::LSE::MilleniumAdapter::NAME()'],['../classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#aad5f72f920f26469fa0192dcbdb3a59a',1,'Metal::QuickFIX::QuickFIXAdapter::NAME()']]],
+  ['nativevalue',['NativeValue',['../unionNativeValue.html',1,'NativeValue'],['../classBootstrapper_1_1MappingEntry.html#af9a9f599c7e96481c276d0a7f1589152',1,'Bootstrapper::MappingEntry::nativeValue()']]],
+  ['nativevalues_2eh',['NativeValues.h',['../NativeValues_8h.html',1,'']]],
+  ['neworder',['NewOrder',['../classMetal_1_1LSE_1_1NewOrder.html',1,'Metal::LSE']]],
+  ['neworder',['NewOrder',['../classMetal_1_1LSE_1_1NewOrder.html#aeaedaf6e5ebd46fbb1448b95c2791dcd',1,'Metal::LSE::NewOrder']]],
+  ['neworder_2ecpp',['NewOrder.cpp',['../NewOrder_8cpp.html',1,'']]],
+  ['neworder_2eh',['NewOrder.h',['../NewOrder_8h.html',1,'']]],
+  ['newordersingle',['NewOrderSingle',['../classMetal_1_1NewOrderSingle.html',1,'Metal']]],
+  ['newpassword',['newPassword',['../classMetal_1_1LSE_1_1Logon.html#a53afe9b298d908d8580462e9af4cdd5a',1,'Metal::LSE::Logon']]],
+  ['normalizedmillenium',['NormalizedMillenium',['../classMetal_1_1LSE_1_1NormalizedMillenium.html',1,'Metal::LSE']]],
+  ['normalizedmillenium',['NormalizedMillenium',['../classMetal_1_1LSE_1_1NormalizedMillenium.html#a5716062f452358e985155bbbc2736fdd',1,'Metal::LSE::NormalizedMillenium']]],
+  ['normalizedmillenium_2ecpp',['NormalizedMillenium.cpp',['../NormalizedMillenium_8cpp.html',1,'']]],
+  ['normalizedmillenium_2eh',['NormalizedMillenium.h',['../NormalizedMillenium_8h.html',1,'']]],
+  ['normalizedtrading',['NormalizedTrading',['../classMetal_1_1NormalizedTrading.html#ae307873f365b0d321076c8c3967a0fbd',1,'Metal::NormalizedTrading']]],
+  ['normalizedtrading',['NormalizedTrading',['../classMetal_1_1NormalizedTrading.html',1,'Metal']]],
+  ['normalizedtrading_2eh',['NormalizedTrading.h',['../NormalizedTrading_8h.html',1,'']]]
 ];

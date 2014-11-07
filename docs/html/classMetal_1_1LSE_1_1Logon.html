@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Metal</b></li><li class="navelem"><b>LSE</b></li><li class="navelem"><a class="el" href="classMetal_1_1LSE_1_1Logon.html">Logon</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceMetal.html">Metal</a></li><li class="navelem"><a class="el" href="namespaceMetal_1_1LSE.html">LSE</a></li><li class="navelem"><a class="el" href="classMetal_1_1LSE_1_1Logon.html">Logon</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,33 +94,160 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Metal::LSE::Logon Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Logon_8h_source.html">Logon.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Metal::LSE::Logon:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMetal_1_1LSE_1_1Logon.png" usemap="#Metal::LSE::Logon_map" alt=""/>
+  <map id="Metal::LSE::Logon_map" name="Metal::LSE::Logon_map">
+<area href="classMetal_1_1Message.html" alt="Metal::Message" shape="rect" coords="0,0,113,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afdff6d189d154169b3f0c32a0ca1d134"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdff6d189d154169b3f0c32a0ca1d134"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Logon</b> (std::string userNameParam, std::string passwordParam, std::string newPasswordParam)</td></tr>
-<tr class="separator:afdff6d189d154169b3f0c32a0ca1d134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75776118c55da42fc39a07d929b922b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1LSE_1_1Logon.html#a75776118c55da42fc39a07d929b922b9">Logon</a> (std::string userNameParam, std::string passwordParam, std::string newPasswordParam=NULL)</td></tr>
+<tr class="separator:a75776118c55da42fc39a07d929b922b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e00af90de09f6977e50ca9ddebafec7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1LSE_1_1Logon.html#a2e00af90de09f6977e50ca9ddebafec7">~Logon</a> ()</td></tr>
+<tr class="separator:a2e00af90de09f6977e50ca9ddebafec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classMetal_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMetal_1_1Message')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMetal_1_1Message.html">Metal::Message</a></td></tr>
+<tr class="memitem:a21fcdea056dd410289c7cef6daf876f5 inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a21fcdea056dd410289c7cef6daf876f5">Message</a> ()</td></tr>
+<tr class="separator:a21fcdea056dd410289c7cef6daf876f5 inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7f8e4a8dd99d69c3f29688b1fc820b inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a4c7f8e4a8dd99d69c3f29688b1fc820b">~Message</a> ()</td></tr>
+<tr class="separator:a4c7f8e4a8dd99d69c3f29688b1fc820b inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa662a9e07a4b0d47ab4a785bee70fa8d inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#aa662a9e07a4b0d47ab4a785bee70fa8d">getData</a> ()</td></tr>
+<tr class="separator:aa662a9e07a4b0d47ab4a785bee70fa8d inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22984c81035306cfde91a575ac19d32a inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a22984c81035306cfde91a575ac19d32a">getLength</a> ()</td></tr>
+<tr class="separator:a22984c81035306cfde91a575ac19d32a inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b03ceaf25a8bd6715772ecf0ba7b0a inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#ae8b03ceaf25a8bd6715772ecf0ba7b0a">setLength</a> (size_t length)</td></tr>
+<tr class="separator:ae8b03ceaf25a8bd6715772ecf0ba7b0a inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14725bc08c942aa37e49d358f19dd79 inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#aa14725bc08c942aa37e49d358f19dd79">get</a> (int position)</td></tr>
+<tr class="separator:aa14725bc08c942aa37e49d358f19dd79 inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c87aec7a5302ff3d24cca76ac692d5 inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a39c87aec7a5302ff3d24cca76ac692d5">reset</a> ()</td></tr>
+<tr class="separator:a39c87aec7a5302ff3d24cca76ac692d5 inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9b7fb98dbe697d9cf7ad394fd45a2e inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e">set</a> (int position, char value)</td></tr>
+<tr class="separator:a9f9b7fb98dbe697d9cf7ad394fd45a2e inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb33179723ecc8a05860a97d9a518e3 inherit pub_methods_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3">set</a> (int position, std::string str, int maxLength)</td></tr>
+<tr class="separator:a7cb33179723ecc8a05860a97d9a518e3 inherit pub_methods_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a10fa4ed887ed159b7157e5aab908b18f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10fa4ed887ed159b7157e5aab908b18f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>userName</b></td></tr>
+<tr class="memitem:a10fa4ed887ed159b7157e5aab908b18f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1LSE_1_1Logon.html#a10fa4ed887ed159b7157e5aab908b18f">userName</a></td></tr>
 <tr class="separator:a10fa4ed887ed159b7157e5aab908b18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8181000986aeb93bf3e3b989fc238ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8181000986aeb93bf3e3b989fc238ae"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>password</b></td></tr>
+<tr class="memitem:ae8181000986aeb93bf3e3b989fc238ae"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1LSE_1_1Logon.html#ae8181000986aeb93bf3e3b989fc238ae">password</a></td></tr>
 <tr class="separator:ae8181000986aeb93bf3e3b989fc238ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53afe9b298d908d8580462e9af4cdd5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53afe9b298d908d8580462e9af4cdd5a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>newPassword</b></td></tr>
+<tr class="memitem:a53afe9b298d908d8580462e9af4cdd5a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1LSE_1_1Logon.html#a53afe9b298d908d8580462e9af4cdd5a">newPassword</a></td></tr>
 <tr class="separator:a53afe9b298d908d8580462e9af4cdd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_classMetal_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classMetal_1_1Message')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classMetal_1_1Message.html">Metal::Message</a></td></tr>
+<tr class="memitem:ac233914a72987d5539a50035aec1a575 inherit pub_static_attribs_classMetal_1_1Message"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#ac233914a72987d5539a50035aec1a575">MAX_LENGTH</a> = 4096</td></tr>
+<tr class="separator:ac233914a72987d5539a50035aec1a575 inherit pub_static_attribs_classMetal_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a75776118c55da42fc39a07d929b922b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Metal::LSE::Logon::Logon </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>userNameParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>passwordParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>newPasswordParam</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e00af90de09f6977e50ca9ddebafec7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Metal::LSE::Logon::~Logon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a53afe9b298d908d8580462e9af4cdd5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Metal::LSE::Logon::newPassword</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8181000986aeb93bf3e3b989fc238ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Metal::LSE::Logon::password</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a10fa4ed887ed159b7157e5aab908b18f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Metal::LSE::Logon::userName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/jc/metal/src/metal/adapters/LSETradingAdapter/<a class="el" href="Logon_8h_source.html">Logon.h</a></li>
-<li>/home/jc/metal/src/metal/adapters/LSETradingAdapter/Logon.cpp</li>
+<li>/home/jc/metal/github/src/adapters/LSETradingAdapter/<a class="el" href="Logon_8h_source.html">Logon.h</a></li>
+<li>/home/jc/metal/github/src/adapters/LSETradingAdapter/<a class="el" href="Logon_8cpp.html">Logon.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:16 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

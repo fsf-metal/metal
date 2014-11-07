@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['init',['init',['../core_8h.html#a9b878fee41d5996021dea123e7d071b4',1,'core.cc']]],
-  ['ipver',['ipVer',['../classSocket.html#a00640e1194207685a9169d130dd31500',1,'Socket']]]
+  ['heartbeat',['heartBeat',['../classMetal_1_1KeepAlive.html#afbc7886ac1ce05daadca60c6c75eef84',1,'Metal::KeepAlive']]]
 ];

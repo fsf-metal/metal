@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['protocol',['Protocol',['../core_8h.html#aac39b55be6469395f55ff0292ad8184c',1,'core.h']]]
+  ['status',['Status',['../classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27',1,'Metal::Adapter::Status()'],['../classMetal_1_1KeepAlive.html#ac47e726ea693a76d0779c0bf29ee7038',1,'Metal::KeepAlive::Status()']]]
 ];

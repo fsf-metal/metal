@@ -1,0 +1,96 @@
+\hypertarget{main_8cpp}{}\section{/home/jc/metal/github/src/bootstrapper/main.cpp File Reference}
+\label{main_8cpp}\index{/home/jc/metal/github/src/bootstrapper/main.\+cpp@{/home/jc/metal/github/src/bootstrapper/main.\+cpp}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$streambuf$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$locale$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$json/json.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Functions.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Field.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Mapping\+Table.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8cpp_a1c6d5de492ac61ad29aec7aa9a436bbf}{V\+E\+R\+S\+I\+O\+N}~\char`\"{}Bootstrapper v0.\+1\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a951073f5a317e419882e496f14154c38}{pattern\+Replace} (const string \&pattern, const string \&value, string \&source)
+\item 
+\hyperlink{classBootstrapper_1_1MappingTable}{Mapping\+Table} $\ast$ \hyperlink{main_8cpp_ad9a747b3c7487ff1615c08c70ce73352}{get\+Mapping\+Table\+By\+Name} (vector$<$ \hyperlink{classBootstrapper_1_1MappingTable}{Mapping\+Table} $\ast$ $>$mapping\+Tables, string mapping\+Table\+Name)
+\item 
+string \& \hyperlink{main_8cpp_af9a2493bc4ac9ae0e9a918731c508301}{load\+File} (const string \&template\+Dir, const string \&file\+Name, string \&source\+String)
+\item 
+void \hyperlink{main_8cpp_ad6948bccae5b3ebcc4be4f6c8014a184}{write\+File} (const string \&adapter\+Dir, const string \&file\+Name, const string \&content)
+\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main_8cpp_a1c6d5de492ac61ad29aec7aa9a436bbf}{}\index{main.\+cpp@{main.\+cpp}!V\+E\+R\+S\+I\+O\+N@{V\+E\+R\+S\+I\+O\+N}}
+\index{V\+E\+R\+S\+I\+O\+N@{V\+E\+R\+S\+I\+O\+N}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+E\+R\+S\+I\+O\+N~\char`\"{}Bootstrapper v0.\+1\char`\"{}}\label{main_8cpp_a1c6d5de492ac61ad29aec7aa9a436bbf}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_ad9a747b3c7487ff1615c08c70ce73352}{}\index{main.\+cpp@{main.\+cpp}!get\+Mapping\+Table\+By\+Name@{get\+Mapping\+Table\+By\+Name}}
+\index{get\+Mapping\+Table\+By\+Name@{get\+Mapping\+Table\+By\+Name}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{get\+Mapping\+Table\+By\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mapping\+Table} $\ast$ get\+Mapping\+Table\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Mapping\+Table} $\ast$ $>$}]{mapping\+Tables, }
+\item[{string}]{mapping\+Table\+Name}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_ad9a747b3c7487ff1615c08c70ce73352}
+Locate a specific mapping table in the list of existing tables 
+\begin{DoxyParams}{Parameters}
+{\em mapping\+Tables} & list of all known mapping tables \\
+\hline
+{\em mapping\+Table\+Name} & Name of the table we are looing for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whatever has been found or N\+U\+L\+L if this table does not exist 
+\end{DoxyReturn}
+\hypertarget{main_8cpp_af9a2493bc4ac9ae0e9a918731c508301}{}\index{main.\+cpp@{main.\+cpp}!load\+File@{load\+File}}
+\index{load\+File@{load\+File}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{load\+File}]{\setlength{\rightskip}{0pt plus 5cm}string \& load\+File (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{template\+Dir, }
+\item[{const string \&}]{file\+Name, }
+\item[{string \&}]{source\+String}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_af9a2493bc4ac9ae0e9a918731c508301}
+Loads file content into a string \hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+Main source \hypertarget{main_8cpp_a951073f5a317e419882e496f14154c38}{}\index{main.\+cpp@{main.\+cpp}!pattern\+Replace@{pattern\+Replace}}
+\index{pattern\+Replace@{pattern\+Replace}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{pattern\+Replace}]{\setlength{\rightskip}{0pt plus 5cm}void pattern\+Replace (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{pattern, }
+\item[{const string \&}]{value, }
+\item[{string \&}]{source}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a951073f5a317e419882e496f14154c38}
+\hypertarget{main_8cpp_ad6948bccae5b3ebcc4be4f6c8014a184}{}\index{main.\+cpp@{main.\+cpp}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{write\+File}]{\setlength{\rightskip}{0pt plus 5cm}void write\+File (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{adapter\+Dir, }
+\item[{const string \&}]{file\+Name, }
+\item[{const string \&}]{content}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_ad6948bccae5b3ebcc4be4f6c8014a184}

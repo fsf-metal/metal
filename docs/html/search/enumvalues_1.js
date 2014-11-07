@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['client',['CLIENT',['../core_8h.html#aa78c7398fa81f7f62aa233159d4d8d97a48e4cb37544c8e69715d45e5a83b2109',1,'core.h']]]
+  ['heartbeating',['HEARTBEATING',['../classMetal_1_1KeepAlive.html#ac47e726ea693a76d0779c0bf29ee7038ac0d3ef69ef689828c5bb46fdd61aea5b',1,'Metal::KeepAlive']]]
 ];

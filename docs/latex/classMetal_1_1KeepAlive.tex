@@ -1,0 +1,154 @@
+\hypertarget{classMetal_1_1KeepAlive}{}\section{Metal\+:\+:Keep\+Alive Class Reference}
+\label{classMetal_1_1KeepAlive}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+
+
+{\ttfamily \#include $<$Keep\+Alive.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038}{Status} \{ \\*
+\hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a0ab6be78225116671e556638503ab303}{I\+D\+L\+E}, 
+\hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a285081598416837c9850eb58102a58b0}{C\+O\+N\+N\+E\+C\+T\+I\+N\+G}, 
+\hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038ac0d3ef69ef689828c5bb46fdd61aea5b}{H\+E\+A\+R\+T\+B\+E\+A\+T\+I\+N\+G}, 
+\hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038ad1a1538e89dac841fe462074656bd930}{R\+E\+T\+R\+Y\+I\+N\+G}, 
+\\*
+\hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a47defdafb4c082a8848645b806b8fb77}{K\+I\+L\+L\+E\+D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMetal_1_1KeepAlive_a7cd53cadf8e84e855690c852f1f3d0c4}{Keep\+Alive} (int hear\+Beat\+Interval, int retry\+Interval)
+\item 
+\hyperlink{classMetal_1_1KeepAlive_a7eb713c179b8d4d472a31f75b7e5df49}{$\sim$\+Keep\+Alive} ()
+\item 
+void \hyperlink{classMetal_1_1KeepAlive_a3b499808ace15ca0c9935ebd3f8bf90a}{change\+Status} (\hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038}{Status} new\+Status)
+\item 
+const \hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038}{Status} \hyperlink{classMetal_1_1KeepAlive_aacfa8b8fae38445b67e7826d2ba98060}{get\+Status} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{classMetal_1_1KeepAlive_a701c68654a7d52327e4233b2b06cd708}{get\+Status\+Name} (const \hyperlink{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038}{Status} \&status, std\+::string \&output)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classMetal_1_1KeepAlive_afbc7886ac1ce05daadca60c6c75eef84}{heart\+Beat} ()=0
+\item 
+virtual void \hyperlink{classMetal_1_1KeepAlive_a16379cf581c5b0d097b3258970724895}{retry\+Connection} ()=0
+\item 
+int \hyperlink{classMetal_1_1KeepAlive_a295dbe169bafefaf8e6af0bd981077e7}{get\+Heart\+Beat\+Interval} ()
+\item 
+int \hyperlink{classMetal_1_1KeepAlive_a6037eb7ab5caba718cc5d78b60aba8d4}{get\+Retry\+Interval} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is responsible for sending heartbeats and retrying lost connections~\newline
+ Actions are based on a status which can be changed using \hyperlink{classMetal_1_1KeepAlive_a3b499808ace15ca0c9935ebd3f8bf90a}{Keep\+Alive\+::change\+Status()}~\newline
+ Checks are perfomed in a dedicated thread which checks status and reacts accordingly 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!Status@{Status}}
+\index{Status@{Status}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Metal\+::\+Keep\+Alive\+::\+Status}}\label{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038}
+These are the possible statuses for keep alive.~\newline
+ You can suspend operation using I\+D\+L\+E or terminate the thread using K\+I\+L\+L\+E\+D \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\+D\+L\+E@{I\+D\+L\+E}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!I\+D\+L\+E@{I\+D\+L\+E}}\item[{\em 
+\hypertarget{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a0ab6be78225116671e556638503ab303}{}I\+D\+L\+E\label{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a0ab6be78225116671e556638503ab303}
+}]\index{C\+O\+N\+N\+E\+C\+T\+I\+N\+G@{C\+O\+N\+N\+E\+C\+T\+I\+N\+G}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!C\+O\+N\+N\+E\+C\+T\+I\+N\+G@{C\+O\+N\+N\+E\+C\+T\+I\+N\+G}}\item[{\em 
+\hypertarget{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a285081598416837c9850eb58102a58b0}{}C\+O\+N\+N\+E\+C\+T\+I\+N\+G\label{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a285081598416837c9850eb58102a58b0}
+}]\index{H\+E\+A\+R\+T\+B\+E\+A\+T\+I\+N\+G@{H\+E\+A\+R\+T\+B\+E\+A\+T\+I\+N\+G}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!H\+E\+A\+R\+T\+B\+E\+A\+T\+I\+N\+G@{H\+E\+A\+R\+T\+B\+E\+A\+T\+I\+N\+G}}\item[{\em 
+\hypertarget{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038ac0d3ef69ef689828c5bb46fdd61aea5b}{}H\+E\+A\+R\+T\+B\+E\+A\+T\+I\+N\+G\label{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038ac0d3ef69ef689828c5bb46fdd61aea5b}
+}]\index{R\+E\+T\+R\+Y\+I\+N\+G@{R\+E\+T\+R\+Y\+I\+N\+G}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!R\+E\+T\+R\+Y\+I\+N\+G@{R\+E\+T\+R\+Y\+I\+N\+G}}\item[{\em 
+\hypertarget{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038ad1a1538e89dac841fe462074656bd930}{}R\+E\+T\+R\+Y\+I\+N\+G\label{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038ad1a1538e89dac841fe462074656bd930}
+}]\index{K\+I\+L\+L\+E\+D@{K\+I\+L\+L\+E\+D}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!K\+I\+L\+L\+E\+D@{K\+I\+L\+L\+E\+D}}\item[{\em 
+\hypertarget{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a47defdafb4c082a8848645b806b8fb77}{}K\+I\+L\+L\+E\+D\label{classMetal_1_1KeepAlive_ac47e726ea693a76d0779c0bf29ee7038a47defdafb4c082a8848645b806b8fb77}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMetal_1_1KeepAlive_a7cd53cadf8e84e855690c852f1f3d0c4}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!Keep\+Alive@{Keep\+Alive}}
+\index{Keep\+Alive@{Keep\+Alive}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{Keep\+Alive}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Keep\+Alive\+::\+Keep\+Alive (
+\begin{DoxyParamCaption}
+\item[{int}]{hear\+Beat\+Interval, }
+\item[{int}]{retry\+Interval}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1KeepAlive_a7cd53cadf8e84e855690c852f1f3d0c4}
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em interval} & number of seconds between heartbeats \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1KeepAlive_a7eb713c179b8d4d472a31f75b7e5df49}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!````~Keep\+Alive@{$\sim$\+Keep\+Alive}}
+\index{````~Keep\+Alive@{$\sim$\+Keep\+Alive}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{$\sim$\+Keep\+Alive}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Keep\+Alive\+::$\sim$\+Keep\+Alive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1KeepAlive_a7eb713c179b8d4d472a31f75b7e5df49}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1KeepAlive_a3b499808ace15ca0c9935ebd3f8bf90a}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!change\+Status@{change\+Status}}
+\index{change\+Status@{change\+Status}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{change\+Status}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Keep\+Alive\+::change\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Status}}]{new\+Status}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1KeepAlive_a3b499808ace15ca0c9935ebd3f8bf90a}
+Thread safe function to change status \hypertarget{classMetal_1_1KeepAlive_a295dbe169bafefaf8e6af0bd981077e7}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!get\+Heart\+Beat\+Interval@{get\+Heart\+Beat\+Interval}}
+\index{get\+Heart\+Beat\+Interval@{get\+Heart\+Beat\+Interval}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{get\+Heart\+Beat\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}int Metal\+::\+Keep\+Alive\+::get\+Heart\+Beat\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{classMetal_1_1KeepAlive_a295dbe169bafefaf8e6af0bd981077e7}
+\hypertarget{classMetal_1_1KeepAlive_a6037eb7ab5caba718cc5d78b60aba8d4}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!get\+Retry\+Interval@{get\+Retry\+Interval}}
+\index{get\+Retry\+Interval@{get\+Retry\+Interval}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{get\+Retry\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}int Metal\+::\+Keep\+Alive\+::get\+Retry\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{classMetal_1_1KeepAlive_a6037eb7ab5caba718cc5d78b60aba8d4}
+\hypertarget{classMetal_1_1KeepAlive_aacfa8b8fae38445b67e7826d2ba98060}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{get\+Status}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Keep\+Alive\+::\+Status} Metal\+::\+Keep\+Alive\+::get\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1KeepAlive_aacfa8b8fae38445b67e7826d2ba98060}
+Thread safe method to get current status \hypertarget{classMetal_1_1KeepAlive_a701c68654a7d52327e4233b2b06cd708}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!get\+Status\+Name@{get\+Status\+Name}}
+\index{get\+Status\+Name@{get\+Status\+Name}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{get\+Status\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string Metal\+::\+Keep\+Alive\+::get\+Status\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Status} \&}]{status, }
+\item[{std\+::string \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1KeepAlive_a701c68654a7d52327e4233b2b06cd708}
+\hypertarget{classMetal_1_1KeepAlive_afbc7886ac1ce05daadca60c6c75eef84}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!heart\+Beat@{heart\+Beat}}
+\index{heart\+Beat@{heart\+Beat}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{heart\+Beat}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Keep\+Alive\+::heart\+Beat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{classMetal_1_1KeepAlive_afbc7886ac1ce05daadca60c6c75eef84}
+This function should be implemented by subclasses when a beat needs to be sent \hypertarget{classMetal_1_1KeepAlive_a16379cf581c5b0d097b3258970724895}{}\index{Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}!retry\+Connection@{retry\+Connection}}
+\index{retry\+Connection@{retry\+Connection}!Metal\+::\+Keep\+Alive@{Metal\+::\+Keep\+Alive}}
+\subsubsection[{retry\+Connection}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Keep\+Alive\+::retry\+Connection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{classMetal_1_1KeepAlive_a16379cf581c5b0d097b3258970724895}
+This function should be implemented by subclasses when a connection should be attempted 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/github/include/metal/\hyperlink{KeepAlive_8h}{Keep\+Alive.\+h}\item 
+/home/jc/metal/github/src/metal/\hyperlink{KeepAlive_8cpp}{Keep\+Alive.\+cpp}\end{DoxyCompactItemize}

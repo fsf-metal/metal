@@ -1,0 +1,142 @@
+\hypertarget{classMetal_1_1Base_1_1BaseCodec}{}\section{Metal\+:\+:Base\+:\+:Base\+Codec Class Reference}
+\label{classMetal_1_1Base_1_1BaseCodec}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+
+
+{\ttfamily \#include $<$Codec.\+h$>$}
+
+Inheritance diagram for Metal\+:\+:Base\+:\+:Base\+Codec\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMetal_1_1Base_1_1BaseCodec}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMetal_1_1Base_1_1BaseCodec_afc95b15c33e4ea76965d23652c107a78}{Base\+Codec} ()
+\item 
+virtual \hyperlink{classMetal_1_1Base_1_1BaseCodec_af6595e9626b1b3b7ede78387a3090fa2}{$\sim$\+Base\+Codec} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classMetal_1_1Base_1_1BaseCodec_a9c9d56c7c8c94aa5d95aa0e4f92e737c}{encode} (const \hyperlink{classMetal_1_1OrderCancelRequest}{Order\+Cancel\+Request} \&ocr, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+static void \hyperlink{classMetal_1_1Base_1_1BaseCodec_a9cd8a655ce38ed29201f58e61d7c9922}{encode} (const New\+Order \&no, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+static void \hyperlink{classMetal_1_1Base_1_1BaseCodec_a8cb8bf939adb665a5fd470f9878e15be}{encode} (const \hyperlink{classMetal_1_1Logon}{Logon} \&logon, \hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+static void \hyperlink{classMetal_1_1Base_1_1BaseCodec_a096c6ac977be644c731eecd1ca17b462}{encode} (const int16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+static void \hyperlink{classMetal_1_1Base_1_1BaseCodec_a159b2c7a3e655eb52980f2074f0b2734}{encode} (const int32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+static void \hyperlink{classMetal_1_1Base_1_1BaseCodec_a5c80d6166f8e0dce1d88cb5f966aaa6d}{encode} (const int64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+static void \hyperlink{classMetal_1_1Base_1_1BaseCodec_a0ef4c6382f18ea670f2d8603e3749717}{encode\+Header} (\hyperlink{classMetal_1_1Message}{Message} \&msg, int16\+\_\+t length, char type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_afc95b15c33e4ea76965d23652c107a78}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!Base\+Codec@{Base\+Codec}}
+\index{Base\+Codec@{Base\+Codec}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{Base\+Codec}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Base\+::\+Base\+Codec\+::\+Base\+Codec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1Base_1_1BaseCodec_afc95b15c33e4ea76965d23652c107a78}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_af6595e9626b1b3b7ede78387a3090fa2}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!````~Base\+Codec@{$\sim$\+Base\+Codec}}
+\index{````~Base\+Codec@{$\sim$\+Base\+Codec}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{$\sim$\+Base\+Codec}]{\setlength{\rightskip}{0pt plus 5cm}virtual Metal\+::\+Base\+::\+Base\+Codec\+::$\sim$\+Base\+Codec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1Base_1_1BaseCodec_af6595e9626b1b3b7ede78387a3090fa2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_a9c9d56c7c8c94aa5d95aa0e4f92e737c}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}static void Metal\+::\+Base\+::\+Base\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Order\+Cancel\+Request} \&}]{ocr, }
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1Base_1_1BaseCodec_a9c9d56c7c8c94aa5d95aa0e4f92e737c}
+Encodes a cancel request 
+\begin{DoxyParams}{Parameters}
+{\em ocr} & The Order Cancel Request representation \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_a9cd8a655ce38ed29201f58e61d7c9922}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}static void Metal\+::\+Base\+::\+Base\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const New\+Order \&}]{no, }
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1Base_1_1BaseCodec_a9cd8a655ce38ed29201f58e61d7c9922}
+Encodes a new order 
+\begin{DoxyParams}{Parameters}
+{\em no} & The New Order representation \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_a8cb8bf939adb665a5fd470f9878e15be}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}static void Metal\+::\+Base\+::\+Base\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Logon} \&}]{logon, }
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1Base_1_1BaseCodec_a8cb8bf939adb665a5fd470f9878e15be}
+Encodes a logon 
+\begin{DoxyParams}{Parameters}
+{\em logon} & \hyperlink{classMetal_1_1Logon}{Logon} representation. Must be constructed with all values \\
+\hline
+{\em msg} & The destination message \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_a096c6ac977be644c731eecd1ca17b462}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}static void Metal\+::\+Base\+::\+Base\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const int16\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classMetal_1_1Base_1_1BaseCodec_a096c6ac977be644c731eecd1ca17b462}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_a159b2c7a3e655eb52980f2074f0b2734}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}static void Metal\+::\+Base\+::\+Base\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const int32\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classMetal_1_1Base_1_1BaseCodec_a159b2c7a3e655eb52980f2074f0b2734}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_a5c80d6166f8e0dce1d88cb5f966aaa6d}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}static void Metal\+::\+Base\+::\+Base\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const int64\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classMetal_1_1Base_1_1BaseCodec_a5c80d6166f8e0dce1d88cb5f966aaa6d}
+\hypertarget{classMetal_1_1Base_1_1BaseCodec_a0ef4c6382f18ea670f2d8603e3749717}{}\index{Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}!encode\+Header@{encode\+Header}}
+\index{encode\+Header@{encode\+Header}!Metal\+::\+Base\+::\+Base\+Codec@{Metal\+::\+Base\+::\+Base\+Codec}}
+\subsubsection[{encode\+Header}]{\setlength{\rightskip}{0pt plus 5cm}static void Metal\+::\+Base\+::\+Base\+Codec\+::encode\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf Message} \&}]{msg, }
+\item[{int16\+\_\+t}]{length, }
+\item[{char}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classMetal_1_1Base_1_1BaseCodec_a0ef4c6382f18ea670f2d8603e3749717}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/github/src/bootstrapper/templates/\hyperlink{src_2bootstrapper_2templates_2Codec_8h}{Codec.\+h}\end{DoxyCompactItemize}

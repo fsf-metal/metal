@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,32 +82,190 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Metal</b></li><li class="navelem"><a class="el" href="classMetal_1_1Message.html">Message</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceMetal.html">Metal</a></li><li class="navelem"><a class="el" href="classMetal_1_1Message.html">Message</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classMetal_1_1Message-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Metal::Message Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Message_8h_source.html">Message.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Metal::Message:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classMetal_1_1Message.png" usemap="#Metal::Message_map" alt=""/>
+  <map id="Metal::Message_map" name="Metal::Message_map">
+<area href="classMetal_1_1LSE_1_1Logon.html" alt="Metal::LSE::Logon" shape="rect" coords="0,56,196,80"/>
+<area href="classMetal_1_1LSE_1_1OrderCancelRequest.html" alt="Metal::LSE::OrderCancelRequest" shape="rect" coords="206,56,402,80"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abc94615951dbde67368f977b717176fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc94615951dbde67368f977b717176fe"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> ()</td></tr>
-<tr class="separator:abc94615951dbde67368f977b717176fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22984c81035306cfde91a575ac19d32a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22984c81035306cfde91a575ac19d32a"></a>
-const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getLength</b> ()</td></tr>
+<tr class="memitem:a21fcdea056dd410289c7cef6daf876f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a21fcdea056dd410289c7cef6daf876f5">Message</a> ()</td></tr>
+<tr class="separator:a21fcdea056dd410289c7cef6daf876f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7f8e4a8dd99d69c3f29688b1fc820b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a4c7f8e4a8dd99d69c3f29688b1fc820b">~Message</a> ()</td></tr>
+<tr class="separator:a4c7f8e4a8dd99d69c3f29688b1fc820b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa662a9e07a4b0d47ab4a785bee70fa8d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#aa662a9e07a4b0d47ab4a785bee70fa8d">getData</a> ()</td></tr>
+<tr class="separator:aa662a9e07a4b0d47ab4a785bee70fa8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22984c81035306cfde91a575ac19d32a"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a22984c81035306cfde91a575ac19d32a">getLength</a> ()</td></tr>
 <tr class="separator:a22984c81035306cfde91a575ac19d32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b03ceaf25a8bd6715772ecf0ba7b0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#ae8b03ceaf25a8bd6715772ecf0ba7b0a">setLength</a> (size_t length)</td></tr>
+<tr class="separator:ae8b03ceaf25a8bd6715772ecf0ba7b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14725bc08c942aa37e49d358f19dd79"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#aa14725bc08c942aa37e49d358f19dd79">get</a> (int position)</td></tr>
+<tr class="separator:aa14725bc08c942aa37e49d358f19dd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c87aec7a5302ff3d24cca76ac692d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a39c87aec7a5302ff3d24cca76ac692d5">reset</a> ()</td></tr>
+<tr class="separator:a39c87aec7a5302ff3d24cca76ac692d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f9b7fb98dbe697d9cf7ad394fd45a2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e">set</a> (int position, char value)</td></tr>
 <tr class="separator:a9f9b7fb98dbe697d9cf7ad394fd45a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cb33179723ecc8a05860a97d9a518e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3">set</a> (int position, std::string str, int maxLength)</td></tr>
 <tr class="separator:a7cb33179723ecc8a05860a97d9a518e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ac233914a72987d5539a50035aec1a575"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Message.html#ac233914a72987d5539a50035aec1a575">MAX_LENGTH</a> = 4096</td></tr>
+<tr class="separator:ac233914a72987d5539a50035aec1a575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class purpose is message data storage. It does not contain functional information about content. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a21fcdea056dd410289c7cef6daf876f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Metal::Message::Message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4c7f8e4a8dd99d69c3f29688b1fc820b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Metal::Message::~Message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa14725bc08c942aa37e49d358f19dd79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Metal::Message::get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read character at given position. Position must be valid </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>A valid position (&lt; length) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa662a9e07a4b0d47ab4a785bee70fa8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Metal::Message::getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a22984c81035306cfde91a575ac19d32a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t Metal::Message::getLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a39c87aec7a5302ff3d24cca76ac692d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Message::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9f9b7fb98dbe697d9cf7ad394fd45a2e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -140,9 +297,9 @@ const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getLength</b>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Write a single character at given position </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Write a single character at given position. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">position</td><td>Where the character should be writted </td></tr>
+    <tr><td class="paramname">position</td><td>Where the character should be written. Must be valid (&lt;length) </td></tr>
     <tr><td class="paramname">value</td><td>Value to be written </td></tr>
   </table>
   </dd>
@@ -198,14 +355,59 @@ const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getLength</b>
 
 </div>
 </div>
+<a class="anchor" id="ae8b03ceaf25a8bd6715772ecf0ba7b0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Message::setLength </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ac233914a72987d5539a50035aec1a575"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Metal::Message::MAX_LENGTH = 4096</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/jc/metal/src/metal/<a class="el" href="Message_8h_source.html">Message.h</a></li>
-<li>/home/jc/metal/src/metal/Message.cpp</li>
+<li>/home/jc/metal/github/include/metal/<a class="el" href="Message_8h_source.html">Message.h</a></li>
+<li>/home/jc/metal/github/src/metal/<a class="el" href="Message_8cpp.html">Message.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:16 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

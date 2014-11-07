@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,74 +82,155 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Metal</b></li><li class="navelem"><a class="el" href="classMetal_1_1Adapter.html">Adapter</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceMetal.html">Metal</a></li><li class="navelem"><a class="el" href="classMetal_1_1Adapter.html">Adapter</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classMetal_1_1Adapter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Metal::Adapter Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="include_2metal_2Adapter_8h_source.html">Adapter.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Metal::Adapter:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classMetal_1_1Adapter.png" usemap="#Metal::Adapter_map" alt=""/>
   <map id="Metal::Adapter_map" name="Metal::Adapter_map">
-<area href="classMetal_1_1TradingAdapter.html" alt="Metal::TradingAdapter" shape="rect" coords="108,56,314,80"/>
-<area href="classMetal_1_1LSE_1_1MilleniumAdapter.html" alt="Metal::LSE::MilleniumAdapter" shape="rect" coords="0,112,206,136"/>
-<area href="classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html" alt="Metal::QuickFIX::QuickFIXAdapter" shape="rect" coords="216,112,422,136"/>
+<area href="classMetal_1_1TradingAdapter.html" alt="Metal::TradingAdapter" shape="rect" coords="216,56,422,80"/>
+<area href="classMetal_1_1Aquis_1_1Adapter.html" alt="Metal::Aquis::Adapter" shape="rect" coords="0,112,206,136"/>
+<area href="classMetal_1_1LSE_1_1MilleniumAdapter.html" alt="Metal::LSE::MilleniumAdapter" shape="rect" coords="216,112,422,136"/>
+<area href="classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html" alt="Metal::QuickFIX::QuickFIXAdapter" shape="rect" coords="432,112,638,136"/>
+<area href="classMetal_1_1LSE_1_1NormalizedMillenium.html" alt="Metal::LSE::NormalizedMillenium" shape="rect" coords="216,168,422,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a61c44194e1ca48fb73a122997c5c7f27"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27">Status</a> { <br />
+&#160;&#160;<a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27ab5de0d70e12c0acd465fc7d54cc28721">IDLE</a>, 
+<a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27a20c2433a05eb7f50345bf628ab79220d">CONNECTING</a>, 
+<a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27a63b94ce825c3dacb5f4edab173a52fa6">CONNECTED</a>, 
+<a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27a4a0ba8e6cbbf8dc448d212a63a6b0b0f">RETRYING</a>, 
+<br />
+&#160;&#160;<a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27a046def181606c3f36a2e3d2363a6cf10">STOPPING</a>
+<br />
+ }</td></tr>
+<tr class="separator:a61c44194e1ca48fb73a122997c5c7f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a04519bef3780569a6e1bd26865b69577"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a04519bef3780569a6e1bd26865b69577">Adapter</a> (const std::string &amp;nameParam, const std::string &amp;uuidParam)</td></tr>
-<tr class="separator:a04519bef3780569a6e1bd26865b69577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a548dd70ecda0b21ddf3a459719d10377"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a548dd70ecda0b21ddf3a459719d10377"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
-<tr class="separator:a548dd70ecda0b21ddf3a459719d10377"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd274a92f404cdc435a4d7030a7b1b58"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#acd274a92f404cdc435a4d7030a7b1b58">getUUID</a> ()</td></tr>
-<tr class="separator:acd274a92f404cdc435a4d7030a7b1b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c51b1d584d5110384782e4d535f52dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c51b1d584d5110384782e4d535f52dc"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()=0</td></tr>
-<tr class="separator:a2c51b1d584d5110384782e4d535f52dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afac53c6c3aa80b5d09519b1daa0ccf86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afac53c6c3aa80b5d09519b1daa0ccf86"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()=0</td></tr>
-<tr class="separator:afac53c6c3aa80b5d09519b1daa0ccf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a828179536cd26810f7e8b5974f9b5d59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a828179536cd26810f7e8b5974f9b5d59">Adapter</a> (const string &amp;nameParam, const string &amp;uuidParam, int heartBeatInterval=0, int retryInterval=0)</td></tr>
+<tr class="separator:a828179536cd26810f7e8b5974f9b5d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56933c0ff40eefd301f8c7e3dce3bd2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a56933c0ff40eefd301f8c7e3dce3bd2d">changeStatus</a> (<a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27">Status</a> newStatus)</td></tr>
+<tr class="separator:a56933c0ff40eefd301f8c7e3dce3bd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1e1794f66b7ee2baa83fa0ced358f9"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a5f1e1794f66b7ee2baa83fa0ced358f9">getName</a> ()</td></tr>
+<tr class="separator:a5f1e1794f66b7ee2baa83fa0ced358f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78f5196b54e66eda97f5cdf30bb4054"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#ae78f5196b54e66eda97f5cdf30bb4054">getStatus</a> ()</td></tr>
+<tr class="separator:ae78f5196b54e66eda97f5cdf30bb4054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afe15d61b6a463cf8de59fca1edb4ab"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a8afe15d61b6a463cf8de59fca1edb4ab">getUUID</a> ()</td></tr>
+<tr class="separator:a8afe15d61b6a463cf8de59fca1edb4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3f9988b655d117839ed0d1596bd874"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a1b3f9988b655d117839ed0d1596bd874">onPhysicalConnection</a> ()</td></tr>
+<tr class="separator:a1b3f9988b655d117839ed0d1596bd874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e4e326e38e09a0cdb99cd115631935"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#ac2e4e326e38e09a0cdb99cd115631935">send</a> (<a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg)</td></tr>
+<tr class="separator:ac2e4e326e38e09a0cdb99cd115631935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace438124a6a9016dd5c16f8da6d8e34b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#ace438124a6a9016dd5c16f8da6d8e34b">setRemoteHost</a> (const std::string &amp;hostName, unsigned int portNumber)</td></tr>
+<tr class="separator:ace438124a6a9016dd5c16f8da6d8e34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeed43dfa9e2d18bd66dd2f806b1e182"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#adeed43dfa9e2d18bd66dd2f806b1e182">start</a> ()</td></tr>
+<tr class="separator:adeed43dfa9e2d18bd66dd2f806b1e182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61dfa08ff92a37a9344bbe8f6c385d8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a61dfa08ff92a37a9344bbe8f6c385d8a">stop</a> (string reason)</td></tr>
+<tr class="separator:a61dfa08ff92a37a9344bbe8f6c385d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a3bfecebf45be6afa8aa59ed0b2fd9f23"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a3bfecebf45be6afa8aa59ed0b2fd9f23">getStatusName</a> (const <a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27">Status</a> &amp;status, std::string &amp;output)</td></tr>
+<tr class="separator:a3bfecebf45be6afa8aa59ed0b2fd9f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa29cb8913565cd6dbc62cb760fdfd2b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#aa29cb8913565cd6dbc62cb760fdfd2b4">~Adapter</a> ()</td></tr>
+<tr class="separator:aa29cb8913565cd6dbc62cb760fdfd2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195072772568dc0fd7a859ed2c99d5c7"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a195072772568dc0fd7a859ed2c99d5c7">processData</a> (const char *buffer, int length)=0</td></tr>
+<tr class="separator:a195072772568dc0fd7a859ed2c99d5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d045031f6daa5bf72a5cb87acde907e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a6d045031f6daa5bf72a5cb87acde907e">sendHeartBeat</a> ()=0</td></tr>
+<tr class="separator:a6d045031f6daa5bf72a5cb87acde907e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a6f0924d1c38de9c07c2fee73ce75d5f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f0924d1c38de9c07c2fee73ce75d5f6"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
-<tr class="separator:a6f0924d1c38de9c07c2fee73ce75d5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20096a0f4ad14b746ca2e1f58ac4a969"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20096a0f4ad14b746ca2e1f58ac4a969"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>uuid</b></td></tr>
-<tr class="separator:a20096a0f4ad14b746ca2e1f58ac4a969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d86d5f95e20d3b9feeb4f0bedcf5785"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a8d86d5f95e20d3b9feeb4f0bedcf5785">name</a></td></tr>
+<tr class="separator:a8d86d5f95e20d3b9feeb4f0bedcf5785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5175a897fa7c1ad65ebf03baea3c5479"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a5175a897fa7c1ad65ebf03baea3c5479">uuid</a></td></tr>
+<tr class="separator:a5175a897fa7c1ad65ebf03baea3c5479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4326175a27a003918fafb0d738e64d1c"><td class="memItemLeft" align="right" valign="top">NL::Socket *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Adapter.html#a4326175a27a003918fafb0d738e64d1c">socket</a></td></tr>
+<tr class="separator:a4326175a27a003918fafb0d738e64d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a04519bef3780569a6e1bd26865b69577"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h1><a class="el" href="classMetal_1_1Adapter.html">Adapter</a> class Responsibility&lt;h1&gt; 1) Session Life Cycle: Physical connection, reconnections, logon and heartbeats 2) grouping inbound data into messages<br />
+ It is also storing basic ID about the adapter<br />
+ Inbound data is read in a separate thread which entry point is Adapter::listennerLoop() </h1>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a61c44194e1ca48fb73a122997c5c7f27"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27">Metal::Adapter::Status</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Here are the possible statuses for <a class="el" href="classMetal_1_1Adapter.html">Adapter</a> session.<br />
+ </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a61c44194e1ca48fb73a122997c5c7f27ab5de0d70e12c0acd465fc7d54cc28721"></a>IDLE&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a61c44194e1ca48fb73a122997c5c7f27a20c2433a05eb7f50345bf628ab79220d"></a>CONNECTING&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a61c44194e1ca48fb73a122997c5c7f27a63b94ce825c3dacb5f4edab173a52fa6"></a>CONNECTED&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a61c44194e1ca48fb73a122997c5c7f27a4a0ba8e6cbbf8dc448d212a63a6b0b0f"></a>RETRYING&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a61c44194e1ca48fb73a122997c5c7f27a046def181606c3f36a2e3d2363a6cf10"></a>STOPPING&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a828179536cd26810f7e8b5974f9b5d59"></a>
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Metal::Adapter::Adapter </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>nameParam</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>uuidParam</em>&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>uuidParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>heartBeatInterval</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>retryInterval</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,23 +238,20 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>uuid</b></td><
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Constructor </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">nameParam</td><td>the actual adapter name in english </td></tr>
+    <tr><td class="paramname">uuidParam</td><td>a unique adapter identifier. checkout <a href="http://www.famkruithof.net/uuid/uuidgen">http://www.famkruithof.net/uuid/uuidgen</a> to create your own. </td></tr>
+    <tr><td class="paramname">heartBeatInterval</td><td>Number of seconds between heartbeats. Set to 0 to disable heartbeats </td></tr>
+    <tr><td class="paramname">retryInterval</td><td>Number of seconds between retries. Set to 0 to disable retries. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acd274a92f404cdc435a4d7030a7b1b58"></a>
+<a class="anchor" id="aa29cb8913565cd6dbc62cb760fdfd2b4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -182,7 +259,48 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>uuid</b></td><
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string&amp; Metal::Adapter::getUUID </td>
+          <td class="memname">Metal::Adapter::~Adapter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a56933c0ff40eefd301f8c7e3dce3bd2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Adapter::changeStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27">Status</a>&#160;</td>
+          <td class="paramname"><em>newStatus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Thread safe function to change adapter status </p>
+
+</div>
+</div>
+<a class="anchor" id="a5f1e1794f66b7ee2baa83fa0ced358f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string&amp; Metal::Adapter::getName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -194,18 +312,373 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>uuid</b></td><
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieve Unique ID For example, this is used by benchmarking to report results<br />
+<p>Find out <a class="el" href="classMetal_1_1Adapter.html">Adapter</a> name </p><dl class="section return"><dt>Returns</dt><dd>Current adapter name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae78f5196b54e66eda97f5cdf30bb4054"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27">Adapter::Status</a> Metal::Adapter::getStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Thread safe method to get current status </p>
+
+</div>
+</div>
+<a class="anchor" id="a3bfecebf45be6afa8aa59ed0b2fd9f23"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Metal::Adapter::getStatusName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMetal_1_1Adapter.html#a61c44194e1ca48fb73a122997c5c7f27">Status</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>utility </p>
+
+</div>
+</div>
+<a class="anchor" id="a8afe15d61b6a463cf8de59fca1edb4ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string&amp; Metal::Adapter::getUUID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve <a class="el" href="classMetal_1_1Adapter.html">Adapter</a> Unique ID For example, this is used by benchmarking to report results<br />
  This is also used on the web site to identify adapters. </p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/jc/metal/src/metal/<a class="el" href="Adapter_8h_source.html">Adapter.h</a></li>
+<a class="anchor" id="a1b3f9988b655d117839ed0d1596bd874"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Metal::Adapter::onPhysicalConnection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method is invoked when we have established a physical connection (socket is up) </p>
+
+<p>Reimplemented in <a class="el" href="classMetal_1_1TradingAdapter.html#a10208ab030e4b3a9db4dc71206a1812e">Metal::TradingAdapter</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a195072772568dc0fd7a859ed2c99d5c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Metal::Adapter::processData </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Processes inbound data into message. Should invoke onMessage if appropriate </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Raw data read from network </td></tr>
+    <tr><td class="paramname">length</td><td>Number of bytes available. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>processed message length if enough data is availble in buffer </dd></dl>
+
+<p>Implemented in <a class="el" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#aaf1486db897674d020aaa9a67a350158">Metal::LSE::MilleniumAdapter</a>, and <a class="el" href="classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#a0598785e8408706cde97d532090d3fcb">Metal::QuickFIX::QuickFIXAdapter</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2e4e326e38e09a0cdb99cd115631935"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Metal::Adapter::send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This methods sends an message in native format. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Whatever should be sent </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Success flag.</dd></dl>
+<p>Write a message to the socket </p>
+
+</div>
+</div>
+<a class="anchor" id="a6d045031f6daa5bf72a5cb87acde907e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Metal::Adapter::sendHeartBeat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Send a heartbeat to the remote party </p>
+
+<p>Implemented in <a class="el" href="classMetal_1_1TradingAdapter.html#a39caec739aaad9593ba1b93b8e130385">Metal::TradingAdapter</a>, <a class="el" href="classMetal_1_1LSE_1_1MilleniumAdapter.html#a9b097537db390f3d552fd4ecbff5ab6f">Metal::LSE::MilleniumAdapter</a>, and <a class="el" href="classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#a6bb8af5a8dd9c4ad157bce0e8ef35ef1">Metal::QuickFIX::QuickFIXAdapter</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace438124a6a9016dd5c16f8da6d8e34b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Adapter::setRemoteHost </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>hostName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>portNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This method should be invoked before starting the adapter to set remote host properties </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hostName</td><td>name of the remote host </td></tr>
+    <tr><td class="paramname">portNumber</td><td>remote port number </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adeed43dfa9e2d18bd66dd2f806b1e182"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Adapter::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts the listenner thread </p>
+
+<p>Reimplemented in <a class="el" href="classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#a20f5db6305b3f479e12553f021765d60">Metal::QuickFIX::QuickFIXAdapter</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61dfa08ff92a37a9344bbe8f6c385d8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Adapter::stop </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>reason</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Stops the listenner thread </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a8d86d5f95e20d3b9feeb4f0bedcf5785"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Metal::Adapter::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4326175a27a003918fafb0d738e64d1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NL::Socket* Metal::Adapter::socket</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This is the active socket </p>
+
+</div>
+</div>
+<a class="anchor" id="a5175a897fa7c1ad65ebf03baea3c5479"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Metal::Adapter::uuid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/jc/metal/github/include/metal/<a class="el" href="include_2metal_2Adapter_8h_source.html">Adapter.h</a></li>
+<li>/home/jc/metal/github/src/metal/<a class="el" href="metal_2Adapter_8cpp.html">Adapter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:16 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

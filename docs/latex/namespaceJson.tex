@@ -1,0 +1,125 @@
+\hypertarget{namespaceJson}{}\section{Json Namespace Reference}
+\label{namespaceJson}\index{Json@{Json}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classJson_1_1BatchAllocator}{Batch\+Allocator}
+\item 
+class \hyperlink{classJson_1_1DefaultValueArrayAllocator}{Default\+Value\+Array\+Allocator}
+\item 
+class \hyperlink{classJson_1_1DefaultValueMapAllocator}{Default\+Value\+Map\+Allocator}
+\item 
+struct {\bfseries Dummy\+Array\+Allocator\+Initializer}
+\item 
+struct {\bfseries Dummy\+Map\+Allocator\+Initializer}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{namespaceJson_a602bcf69c2042fb61c3b243cb16f04ca}{U\+Int\+To\+String\+Buffer}\mbox{[}\hyperlink{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820ae4f2008c7919f20d81286121d1374424}{uint\+To\+String\+Buffer\+Size}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820ae4f2008c7919f20d81286121d1374424}{uint\+To\+String\+Buffer\+Size} = 3 $\ast$ sizeof(Largest\+U\+Int) + 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \hyperlink{namespaceJson_a2434499c0c7f057890b32787c05fc4a3}{operator$>$$>$} (std\+::istream \&sin, Value \&root)
+\item 
+std\+::string \hyperlink{namespaceJson_abd9c650f70d9434f98f9025e2e2faf2d}{value\+To\+String} (Largest\+Int value)
+\item 
+std\+::string \hyperlink{namespaceJson_a3f46b0bc62b95a9426a2da0117bdf9f0}{value\+To\+String} (Largest\+U\+Int value)
+\item 
+std\+::string \hyperlink{namespaceJson_a99995d7dafa4f4970b349d7d3c8d1d99}{value\+To\+String} (double value)
+\item 
+std\+::string \hyperlink{namespaceJson_a979ed531f091985e22f0051cd2a8e341}{value\+To\+String} (bool value)
+\item 
+std\+::string \hyperlink{namespaceJson_aa0c8235a4a5c6599da5d3332743db8ac}{value\+To\+Quoted\+String} (const char $\ast$value)
+\item 
+std\+::ostream \& \hyperlink{namespaceJson_a170ed6561399621db20f291e33b64fb7}{operator$<$$<$} (std\+::ostream \&sout, const Value \&root)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char \& \hyperlink{namespaceJson_ab30055b4bbd82aecaca57ccecd63bbe6}{k\+Null\+Ref} = k\+Null\mbox{[}0\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceJson_a602bcf69c2042fb61c3b243cb16f04ca}{}\index{Json@{Json}!U\+Int\+To\+String\+Buffer@{U\+Int\+To\+String\+Buffer}}
+\index{U\+Int\+To\+String\+Buffer@{U\+Int\+To\+String\+Buffer}!Json@{Json}}
+\subsubsection[{U\+Int\+To\+String\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}typedef char Json\+::\+U\+Int\+To\+String\+Buffer\mbox{[}{\bf uint\+To\+String\+Buffer\+Size}\mbox{]}}\label{namespaceJson_a602bcf69c2042fb61c3b243cb16f04ca}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}!Json@{Json}}\index{Json@{Json}!uint\+To\+String\+Buffer\+Size@{uint\+To\+String\+Buffer\+Size}}\item[{\em 
+\hypertarget{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820ae4f2008c7919f20d81286121d1374424}{}uint\+To\+String\+Buffer\+Size\label{namespaceJson_a0c5f614b019f20b4598dcaec09d9e820ae4f2008c7919f20d81286121d1374424}
+}]Constant that specify the size of the buffer that must be passed to uint\+To\+String. \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceJson_a170ed6561399621db20f291e33b64fb7}{}\index{Json@{Json}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Json@{Json}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& Json\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{sout, }
+\item[{const Value \&}]{root}
+\end{DoxyParamCaption}
+)}\label{namespaceJson_a170ed6561399621db20f291e33b64fb7}
+\hypertarget{namespaceJson_a2434499c0c7f057890b32787c05fc4a3}{}\index{Json@{Json}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Json@{Json}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& Json\+::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{sin, }
+\item[{Value \&}]{root}
+\end{DoxyParamCaption}
+)}\label{namespaceJson_a2434499c0c7f057890b32787c05fc4a3}
+\hypertarget{namespaceJson_aa0c8235a4a5c6599da5d3332743db8ac}{}\index{Json@{Json}!value\+To\+Quoted\+String@{value\+To\+Quoted\+String}}
+\index{value\+To\+Quoted\+String@{value\+To\+Quoted\+String}!Json@{Json}}
+\subsubsection[{value\+To\+Quoted\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::value\+To\+Quoted\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{namespaceJson_aa0c8235a4a5c6599da5d3332743db8ac}
+\hypertarget{namespaceJson_abd9c650f70d9434f98f9025e2e2faf2d}{}\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{value\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{Largest\+Int}]{value}
+\end{DoxyParamCaption}
+)}\label{namespaceJson_abd9c650f70d9434f98f9025e2e2faf2d}
+\hypertarget{namespaceJson_a3f46b0bc62b95a9426a2da0117bdf9f0}{}\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{value\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{Largest\+U\+Int}]{value}
+\end{DoxyParamCaption}
+)}\label{namespaceJson_a3f46b0bc62b95a9426a2da0117bdf9f0}
+\hypertarget{namespaceJson_a99995d7dafa4f4970b349d7d3c8d1d99}{}\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{value\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{namespaceJson_a99995d7dafa4f4970b349d7d3c8d1d99}
+\hypertarget{namespaceJson_a979ed531f091985e22f0051cd2a8e341}{}\index{Json@{Json}!value\+To\+String@{value\+To\+String}}
+\index{value\+To\+String@{value\+To\+String}!Json@{Json}}
+\subsubsection[{value\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Json\+::value\+To\+String (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{namespaceJson_a979ed531f091985e22f0051cd2a8e341}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceJson_ab30055b4bbd82aecaca57ccecd63bbe6}{}\index{Json@{Json}!k\+Null\+Ref@{k\+Null\+Ref}}
+\index{k\+Null\+Ref@{k\+Null\+Ref}!Json@{Json}}
+\subsubsection[{k\+Null\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char\& Json\+::k\+Null\+Ref = k\+Null\mbox{[}0\mbox{]}}\label{namespaceJson_ab30055b4bbd82aecaca57ccecd63bbe6}

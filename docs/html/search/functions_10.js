@@ -1,5 +1,14 @@
 var searchData=
 [
-  ['tradingadapter',['TradingAdapter',['../classMetal_1_1TradingAdapter.html#a472ad74753a0bd77a3e78c1f7f8d0398',1,'Metal::TradingAdapter']]],
-  ['type',['type',['../classSocket.html#a4dadcac478a053c6fe6111dae36eb2b3',1,'Socket']]]
+  ['send',['send',['../classMetal_1_1Adapter.html#ac2e4e326e38e09a0cdb99cd115631935',1,'Metal::Adapter']]],
+  ['sendcancel',['sendCancel',['../classMetal_1_1LSE_1_1NormalizedMillenium.html#a0307ee675723035de1c9a83de1e54ead',1,'Metal::LSE::NormalizedMillenium::sendCancel()'],['../classMetal_1_1NormalizedTrading.html#afbc20b8631fdde2e55c28d3a26515ab4',1,'Metal::NormalizedTrading::sendCancel()']]],
+  ['sendheartbeat',['sendHeartBeat',['../classMetal_1_1LSE_1_1MilleniumAdapter.html#a9b097537db390f3d552fd4ecbff5ab6f',1,'Metal::LSE::MilleniumAdapter::sendHeartBeat()'],['../classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#a6bb8af5a8dd9c4ad157bce0e8ef35ef1',1,'Metal::QuickFIX::QuickFIXAdapter::sendHeartBeat()'],['../classMetal_1_1Adapter.html#a6d045031f6daa5bf72a5cb87acde907e',1,'Metal::Adapter::sendHeartBeat()'],['../classMetal_1_1TradingAdapter.html#a39caec739aaad9593ba1b93b8e130385',1,'Metal::TradingAdapter::sendHeartBeat()']]],
+  ['sendlogon',['sendLogon',['../classMetal_1_1LSE_1_1MilleniumAdapter.html#ab4bba2e8403ae7ed5b335985b4295b9f',1,'Metal::LSE::MilleniumAdapter::sendLogon()'],['../classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#a3f9dba36bbaa3d8db8af62ac07a9fff5',1,'Metal::QuickFIX::QuickFIXAdapter::sendLogon()'],['../classMetal_1_1TradingAdapter.html#a39562015df3e7202a5e8f932b8bde43e',1,'Metal::TradingAdapter::sendLogon()']]],
+  ['sendmessageexception',['SendMessageException',['../classMetal_1_1SendMessageException.html#a4aeb690808ab3639bbd837b7c57cc419',1,'Metal::SendMessageException']]],
+  ['sendneworder',['sendNewOrder',['../classMetal_1_1LSE_1_1NormalizedMillenium.html#a0779d0218ce1dd1b9f0381dbd16ee142',1,'Metal::LSE::NormalizedMillenium::sendNewOrder()'],['../classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#ae53ab5057d4e2003a486ddc5761935a1',1,'Metal::QuickFIX::QuickFIXAdapter::sendNewOrder()'],['../classMetal_1_1NormalizedTrading.html#a900b56c2898d265326539ece79c7931a',1,'Metal::NormalizedTrading::sendNewOrder()'],['../classMetal_1_1TradingAdapter.html#abccc3fdb238887112e1a0820a70f0fce',1,'Metal::TradingAdapter::sendNewOrder()']]],
+  ['set',['set',['../classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e',1,'Metal::Message::set(int position, char value)'],['../classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3',1,'Metal::Message::set(int position, std::string str, int maxLength)']]],
+  ['setlength',['setLength',['../classMetal_1_1Message.html#ae8b03ceaf25a8bd6715772ecf0ba7b0a',1,'Metal::Message']]],
+  ['setremotehost',['setRemoteHost',['../classMetal_1_1Adapter.html#ace438124a6a9016dd5c16f8da6d8e34b',1,'Metal::Adapter']]],
+  ['start',['start',['../classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#a20f5db6305b3f479e12553f021765d60',1,'Metal::QuickFIX::QuickFIXAdapter::start()'],['../classMetal_1_1Adapter.html#adeed43dfa9e2d18bd66dd2f806b1e182',1,'Metal::Adapter::start()']]],
+  ['stop',['stop',['../classMetal_1_1QuickFIX_1_1QuickFIXAdapter.html#af0e438d5d64fa8a0aa3024b5a995f885',1,'Metal::QuickFIX::QuickFIXAdapter::stop()'],['../classMetal_1_1Adapter.html#a61dfa08ff92a37a9344bbe8f6c385d8a',1,'Metal::Adapter::stop()']]]
 ];

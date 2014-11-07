@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Metal: /home/jc/metal/src/metal/Message.h Source File</title>
+<title>Metal: /home/jc/metal/github/include/metal/Message.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4e72e9fc9ba9fb430abdd09432f28b9a.html">metal</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_cc6311b76aec51701f5af348d1b9b1d6.html">metal</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Message.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="Message_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Message.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Sep 22, 2014</span></div>
@@ -100,41 +99,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define METAL_MESSAGE_H_</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceMetal.html">Metal</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1Message.html">Message</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classMetal_1_1Message.html">Message</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classMetal_1_1Message.html">Message</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* getData() { <span class="keywordflow">return</span> data; };</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> getLength() { <span class="keywordflow">return</span> length; };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e">   28</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e">set</a>( <span class="keywordtype">int</span> position, <span class="keywordtype">char</span> value) { this-&gt;data[position] = value;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3">   36</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3">set</a>(<span class="keywordtype">int</span> position, std::string str, <span class="keywordtype">int</span> maxLength) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">int</span> remainder = str.length();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span>( maxLength &lt; remainder) remainder = maxLength;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::strncpy( &amp;this-&gt;data[position], str.c_str(), remainder);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">char</span> data[2048];</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> length;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <span class="comment">/* namespace Metal */</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* METAL_MESSAGE_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classMetal_1_1Message_html_a9f9b7fb98dbe697d9cf7ad394fd45a2e"><div class="ttname"><a href="classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e">Metal::Message::set</a></div><div class="ttdeci">void set(int position, char value)</div><div class="ttdef"><b>Definition:</b> Message.h:28</div></div>
-<div class="ttc" id="classMetal_1_1Message_html_a7cb33179723ecc8a05860a97d9a518e3"><div class="ttname"><a href="classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3">Metal::Message::set</a></div><div class="ttdeci">void set(int position, std::string str, int maxLength)</div><div class="ttdef"><b>Definition:</b> Message.h:36</div></div>
-<div class="ttc" id="namespaceMetal_html"><div class="ttname"><a href="namespaceMetal.html">Metal</a></div><div class="ttdef"><b>Definition:</b> Adapter.h:6</div></div>
-<div class="ttc" id="classMetal_1_1Message_html"><div class="ttname"><a href="classMetal_1_1Message.html">Metal::Message</a></div><div class="ttdef"><b>Definition:</b> Message.h:15</div></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceMetal.html">Metal</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1Message.html">Message</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#ac233914a72987d5539a50035aec1a575">   21</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classMetal_1_1Message.html#ac233914a72987d5539a50035aec1a575">MAX_LENGTH</a> = 4096;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classMetal_1_1Message.html#a21fcdea056dd410289c7cef6daf876f5">Message</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classMetal_1_1Message.html#a4c7f8e4a8dd99d69c3f29688b1fc820b">~Message</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#aa662a9e07a4b0d47ab4a785bee70fa8d">   25</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">char</span>* <a class="code" href="classMetal_1_1Message.html#aa662a9e07a4b0d47ab4a785bee70fa8d">getData</a>() { <span class="keywordflow">return</span> data; };</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#a22984c81035306cfde91a575ac19d32a">   26</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="classMetal_1_1Message.html#a22984c81035306cfde91a575ac19d32a">getLength</a>() { <span class="keywordflow">return</span> length; };</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#ae8b03ceaf25a8bd6715772ecf0ba7b0a">   27</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1Message.html#ae8b03ceaf25a8bd6715772ecf0ba7b0a">setLength</a>( <span class="keywordtype">size_t</span> length) { this-&gt;length = length; };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#aa14725bc08c942aa37e49d358f19dd79">   33</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">char</span> <span class="keyword">get</span>(<span class="keywordtype">int</span> position) { <span class="keywordflow">return</span> this-&gt;data[position]; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1Message.html#a39c87aec7a5302ff3d24cca76ac692d5">reset</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e">   42</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e">set</a>( <span class="keywordtype">int</span> position, <span class="keywordtype">char</span> value) { this-&gt;data[position] = value;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3">   50</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3">set</a>(<span class="keywordtype">int</span> position, std::string str, <span class="keywordtype">int</span> maxLength) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">int</span> remainder = maxLength - str.length();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> ( remainder &lt;= 0) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            strncpy(&amp;this-&gt;data[position], str.c_str(), maxLength);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            strcpy(&amp;this-&gt;data[position], str.c_str());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            memset(&amp;this-&gt;data[position + str.length()], 0, remainder);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">char</span> data[ <a class="code" href="classMetal_1_1Message.html#ac233914a72987d5539a50035aec1a575">MAX_LENGTH</a>];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> length;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">/* namespace Metal */</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* METAL_MESSAGE_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classMetal_1_1Message_html_a9f9b7fb98dbe697d9cf7ad394fd45a2e"><div class="ttname"><a href="classMetal_1_1Message.html#a9f9b7fb98dbe697d9cf7ad394fd45a2e">Metal::Message::set</a></div><div class="ttdeci">void set(int position, char value)</div><div class="ttdef"><b>Definition:</b> Message.h:42</div></div>
+<div class="ttc" id="classMetal_1_1Message_html_a22984c81035306cfde91a575ac19d32a"><div class="ttname"><a href="classMetal_1_1Message.html#a22984c81035306cfde91a575ac19d32a">Metal::Message::getLength</a></div><div class="ttdeci">const size_t getLength()</div><div class="ttdef"><b>Definition:</b> Message.h:26</div></div>
+<div class="ttc" id="classMetal_1_1Message_html_a39c87aec7a5302ff3d24cca76ac692d5"><div class="ttname"><a href="classMetal_1_1Message.html#a39c87aec7a5302ff3d24cca76ac692d5">Metal::Message::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> Message.cpp:33</div></div>
+<div class="ttc" id="classMetal_1_1Message_html_ae8b03ceaf25a8bd6715772ecf0ba7b0a"><div class="ttname"><a href="classMetal_1_1Message.html#ae8b03ceaf25a8bd6715772ecf0ba7b0a">Metal::Message::setLength</a></div><div class="ttdeci">void setLength(size_t length)</div><div class="ttdef"><b>Definition:</b> Message.h:27</div></div>
+<div class="ttc" id="classMetal_1_1Message_html_a7cb33179723ecc8a05860a97d9a518e3"><div class="ttname"><a href="classMetal_1_1Message.html#a7cb33179723ecc8a05860a97d9a518e3">Metal::Message::set</a></div><div class="ttdeci">void set(int position, std::string str, int maxLength)</div><div class="ttdef"><b>Definition:</b> Message.h:50</div></div>
+<div class="ttc" id="namespaceMetal_html"><div class="ttname"><a href="namespaceMetal.html">Metal</a></div><div class="ttdef"><b>Definition:</b> Adapter.cpp:11</div></div>
+<div class="ttc" id="classMetal_1_1Message_html_a4c7f8e4a8dd99d69c3f29688b1fc820b"><div class="ttname"><a href="classMetal_1_1Message.html#a4c7f8e4a8dd99d69c3f29688b1fc820b">Metal::Message::~Message</a></div><div class="ttdeci">virtual ~Message()</div><div class="ttdef"><b>Definition:</b> Message.cpp:29</div></div>
+<div class="ttc" id="classMetal_1_1Message_html_aa662a9e07a4b0d47ab4a785bee70fa8d"><div class="ttname"><a href="classMetal_1_1Message.html#aa662a9e07a4b0d47ab4a785bee70fa8d">Metal::Message::getData</a></div><div class="ttdeci">char * getData()</div><div class="ttdef"><b>Definition:</b> Message.h:25</div></div>
+<div class="ttc" id="classMetal_1_1Message_html_ac233914a72987d5539a50035aec1a575"><div class="ttname"><a href="classMetal_1_1Message.html#ac233914a72987d5539a50035aec1a575">Metal::Message::MAX_LENGTH</a></div><div class="ttdeci">static const int MAX_LENGTH</div><div class="ttdef"><b>Definition:</b> Message.h:21</div></div>
+<div class="ttc" id="classMetal_1_1Message_html_a21fcdea056dd410289c7cef6daf876f5"><div class="ttname"><a href="classMetal_1_1Message.html#a21fcdea056dd410289c7cef6daf876f5">Metal::Message::Message</a></div><div class="ttdeci">Message()</div><div class="ttdef"><b>Definition:</b> Message.cpp:26</div></div>
+<div class="ttc" id="classMetal_1_1Message_html"><div class="ttname"><a href="classMetal_1_1Message.html">Metal::Message</a></div><div class="ttdef"><b>Definition:</b> Message.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:15 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

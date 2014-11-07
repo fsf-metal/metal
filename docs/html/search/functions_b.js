@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['onphysicalconnection',['onPhysicalConnection',['../classMetal_1_1TradingAdapter.html#a10208ab030e4b3a9db4dc71206a1812e',1,'Metal::TradingAdapter']]],
-  ['operator_2a',['operator*',['../classSmartBuffer.html#afc1dc164bd7107b515b2d0642fdc5d43',1,'SmartBuffer']]],
-  ['operator_3d',['operator=',['../classSmartBuffer.html#aad00b9914962b562c6d59e2391b9deb3',1,'SmartBuffer']]],
-  ['operator_5b_5d',['operator[]',['../classSmartBuffer.html#a8e17ba4a6f2f8dfdbe368469201fc4ef',1,'SmartBuffer']]]
+  ['neworder',['NewOrder',['../classMetal_1_1LSE_1_1NewOrder.html#aeaedaf6e5ebd46fbb1448b95c2791dcd',1,'Metal::LSE::NewOrder']]],
+  ['normalizedmillenium',['NormalizedMillenium',['../classMetal_1_1LSE_1_1NormalizedMillenium.html#a5716062f452358e985155bbbc2736fdd',1,'Metal::LSE::NormalizedMillenium']]],
+  ['normalizedtrading',['NormalizedTrading',['../classMetal_1_1NormalizedTrading.html#ae307873f365b0d321076c8c3967a0fbd',1,'Metal::NormalizedTrading']]]
 ];

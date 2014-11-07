@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Metal: /home/jc/metal/src/metal/TradingAdapter.h Source File</title>
+<title>Metal: /home/jc/metal/github/include/metal/TradingAdapter.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4e72e9fc9ba9fb430abdd09432f28b9a.html">metal</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_cc6311b76aec51701f5af348d1b9b1d6.html">metal</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,79 +88,95 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">TradingAdapter.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __METAL_TRADINGADAPTER_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __METAL_TRADINGADAPTER_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;netlink/socket.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Adapter.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;metal.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;Mapper.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceMetal.html">Metal</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classMetal_1_1TradingAdapter.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1TradingAdapter.html">TradingAdapter</a> : <span class="keyword">public</span> <a class="code" href="classMetal_1_1Adapter.html">Adapter</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classMetal_1_1TradingAdapter.html#a472ad74753a0bd77a3e78c1f7f8d0398">TradingAdapter</a>( <span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; uuid);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#ae0b309ccc7e9ec5dfe262d071dde4c17">setRemoteHost</a>(<span class="keyword">const</span> std::string &amp;hostName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> portNumber);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a1ba0cd89d6475faf9da358140660e886">start</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#aa5e283e9e0a339c738cfba37fed3c7ff">stop</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#ac99cc99c695715fc396756441e68abc0">send</a>( <a class="code" href="classMetal_1_1Message.html">Message</a>&amp; msg);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#ac99cc99c695715fc396756441e68abc0">send</a>( <span class="keyword">const</span> <a class="code" href="classMetal_1_1NewOrderSingle.html">NewOrderSingle</a> &amp;) = 0;</div>
+<a href="TradingAdapter_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">    MeTAL: My Electronic Trading Adapters Library</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">    Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    This file is part of MeTAL.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    MeTAL is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    (at your option) any later version.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    MeTAL is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    along with MeTAL source code. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef __METAL_TRADINGADAPTER_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define __METAL_TRADINGADAPTER_H</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;netlink/socket.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_2metal_2Adapter_8h.html">Adapter.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="metal_8h.html">metal.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_2metal_2Mapper_8h.html">Mapper.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Message_8h.html">Message.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="KeepAlive_8h.html">KeepAlive.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceMetal.html">Metal</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classMetal_1_1TradingAdapter.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1TradingAdapter.html">TradingAdapter</a> : <span class="keyword">public</span> <a class="code" href="classMetal_1_1Adapter.html">Adapter</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classMetal_1_1TradingAdapter.html#a469004504d9929b76a9c38cf7d9bd9f9">TradingAdapter</a>( <span class="keyword">const</span> std::string&amp; <a class="code" href="classMetal_1_1Adapter.html#a8d86d5f95e20d3b9feeb4f0bedcf5785">name</a>, <span class="keyword">const</span> std::string&amp; <a class="code" href="classMetal_1_1Adapter.html#a5175a897fa7c1ad65ebf03baea3c5479">uuid</a>, <span class="keywordtype">int</span> heartBeatInterval = 30, <span class="keywordtype">int</span> retryInterval = 5);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a39562015df3e7202a5e8f932b8bde43e">sendLogon</a>() = 0;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#af0015d51815dedb1bc78258b3030d751">recv</a>( <span class="keyword">const</span> ExecutionReport &amp;er) = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a10208ab030e4b3a9db4dc71206a1812e">onPhysicalConnection</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a161ad3db17091807d091d1b236de0105">benchmark</a>( <span class="keyword">const</span> std::vector&lt;NewOrderSingle&gt; &amp;list,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                std::chrono::milliseconds &amp;mappingDuration,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                std::chrono::milliseconds &amp;encodingDuration) = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classMetal_1_1TradingAdapter.html#abe4a886b1942247785641c93c02def54">   57</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#abe4a886b1942247785641c93c02def54">onMessage</a>(<a class="code" href="classMetal_1_1Message.html">Message</a> &amp;msg){};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classMetal_1_1TradingAdapter.html#a44332505b213c0428d901ef6a530efff">   64</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a44332505b213c0428d901ef6a530efff">onMessage</a>(<span class="keyword">const</span> <a class="code" href="namespaceMetal.html#af4294c176f6aecf9f75e9b106b117aa1">ExecutionReport</a> &amp;er){};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a10208ab030e4b3a9db4dc71206a1812e">onPhysicalConnection</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#abccc3fdb238887112e1a0820a70f0fce">sendNewOrder</a>( <span class="keyword">const</span> <a class="code" href="classMetal_1_1NewOrderSingle.html">NewOrderSingle</a> &amp;) = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classMetal_1_1TradingAdapter.html#ad063b23fe4df53d16729f56f7f303ada">~TradingAdapter</a>();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a161ad3db17091807d091d1b236de0105">benchmark</a>( <span class="keyword">const</span> std::vector&lt;OrderCancelRequest&gt; &amp;list,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                std::chrono::milliseconds &amp;mappingDuration,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                std::chrono::milliseconds &amp;encodingDuration) = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a39caec739aaad9593ba1b93b8e130385">sendHeartBeat</a>() = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a39562015df3e7202a5e8f932b8bde43e">sendLogon</a>() = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        ~<a class="code" href="classMetal_1_1TradingAdapter.html">TradingAdapter</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::string remoteHost;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> remotePort;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        NL::Socket *socket;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMetal_1_1TradingAdapter.html#a51851f504678002634259b8fd5b22d3e">closeSocket</a>( <span class="keywordtype">int</span> delay = 0);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">// namespace Metal</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif //__METAL_TRADINGADAPTER_H</span></div>
-<div class="ttc" id="classMetal_1_1Adapter_html"><div class="ttname"><a href="classMetal_1_1Adapter.html">Metal::Adapter</a></div><div class="ttdef"><b>Definition:</b> Adapter.h:7</div></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;} <span class="comment">// namespace Metal</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif //__METAL_TRADINGADAPTER_H</span></div>
+<div class="ttc" id="classMetal_1_1Adapter_html"><div class="ttname"><a href="classMetal_1_1Adapter.html">Metal::Adapter</a></div><div class="ttdef"><b>Definition:</b> Adapter.h:43</div></div>
+<div class="ttc" id="metal_8h_html"><div class="ttname"><a href="metal_8h.html">metal.h</a></div></div>
 <div class="ttc" id="classMetal_1_1TradingAdapter_html_a39562015df3e7202a5e8f932b8bde43e"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a39562015df3e7202a5e8f932b8bde43e">Metal::TradingAdapter::sendLogon</a></div><div class="ttdeci">virtual void sendLogon()=0</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_ae0b309ccc7e9ec5dfe262d071dde4c17"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#ae0b309ccc7e9ec5dfe262d071dde4c17">Metal::TradingAdapter::setRemoteHost</a></div><div class="ttdeci">void setRemoteHost(const std::string &amp;hostName, unsigned int portNumber)</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:20</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_a161ad3db17091807d091d1b236de0105"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a161ad3db17091807d091d1b236de0105">Metal::TradingAdapter::benchmark</a></div><div class="ttdeci">virtual void benchmark(const std::vector&lt; NewOrderSingle &gt; &amp;list, std::chrono::milliseconds &amp;mappingDuration, std::chrono::milliseconds &amp;encodingDuration)=0</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_af0015d51815dedb1bc78258b3030d751"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#af0015d51815dedb1bc78258b3030d751">Metal::TradingAdapter::recv</a></div><div class="ttdeci">virtual void recv(const ExecutionReport &amp;er)=0</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html">Metal::TradingAdapter</a></div><div class="ttdef"><b>Definition:</b> TradingAdapter.h:14</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_a1ba0cd89d6475faf9da358140660e886"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a1ba0cd89d6475faf9da358140660e886">Metal::TradingAdapter::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:52</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_a472ad74753a0bd77a3e78c1f7f8d0398"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a472ad74753a0bd77a3e78c1f7f8d0398">Metal::TradingAdapter::TradingAdapter</a></div><div class="ttdeci">TradingAdapter(const std::string &amp;name, const std::string &amp;uuid)</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:10</div></div>
-<div class="ttc" id="namespaceMetal_html"><div class="ttname"><a href="namespaceMetal.html">Metal</a></div><div class="ttdef"><b>Definition:</b> Adapter.h:6</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_a51851f504678002634259b8fd5b22d3e"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a51851f504678002634259b8fd5b22d3e">Metal::TradingAdapter::closeSocket</a></div><div class="ttdeci">void closeSocket(int delay=0)</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:25</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_ac99cc99c695715fc396756441e68abc0"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#ac99cc99c695715fc396756441e68abc0">Metal::TradingAdapter::send</a></div><div class="ttdeci">void send(Message &amp;msg)</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:42</div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html_a44332505b213c0428d901ef6a530efff"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a44332505b213c0428d901ef6a530efff">Metal::TradingAdapter::onMessage</a></div><div class="ttdeci">virtual void onMessage(const ExecutionReport &amp;er)</div><div class="ttdef"><b>Definition:</b> TradingAdapter.h:64</div></div>
+<div class="ttc" id="Message_8h_html"><div class="ttname"><a href="Message_8h.html">Message.h</a></div></div>
+<div class="ttc" id="include_2metal_2Adapter_8h_html"><div class="ttname"><a href="include_2metal_2Adapter_8h.html">Adapter.h</a></div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html">Metal::TradingAdapter</a></div><div class="ttdef"><b>Definition:</b> TradingAdapter.h:42</div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html_a469004504d9929b76a9c38cf7d9bd9f9"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a469004504d9929b76a9c38cf7d9bd9f9">Metal::TradingAdapter::TradingAdapter</a></div><div class="ttdeci">TradingAdapter(const std::string &amp;name, const std::string &amp;uuid, int heartBeatInterval=30, int retryInterval=5)</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:33</div></div>
+<div class="ttc" id="classMetal_1_1Adapter_html_a5175a897fa7c1ad65ebf03baea3c5479"><div class="ttname"><a href="classMetal_1_1Adapter.html#a5175a897fa7c1ad65ebf03baea3c5479">Metal::Adapter::uuid</a></div><div class="ttdeci">string uuid</div><div class="ttdef"><b>Definition:</b> Adapter.h:118</div></div>
+<div class="ttc" id="namespaceMetal_html_af4294c176f6aecf9f75e9b106b117aa1"><div class="ttname"><a href="namespaceMetal.html#af4294c176f6aecf9f75e9b106b117aa1">Metal::ExecutionReport</a></div><div class="ttdeci">FIX50SP2::ExecutionReport ExecutionReport</div><div class="ttdef"><b>Definition:</b> metal.h:12</div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html_abccc3fdb238887112e1a0820a70f0fce"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#abccc3fdb238887112e1a0820a70f0fce">Metal::TradingAdapter::sendNewOrder</a></div><div class="ttdeci">virtual void sendNewOrder(const NewOrderSingle &amp;)=0</div></div>
+<div class="ttc" id="namespaceMetal_html"><div class="ttname"><a href="namespaceMetal.html">Metal</a></div><div class="ttdef"><b>Definition:</b> Adapter.cpp:11</div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html_ad063b23fe4df53d16729f56f7f303ada"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#ad063b23fe4df53d16729f56f7f303ada">Metal::TradingAdapter::~TradingAdapter</a></div><div class="ttdeci">~TradingAdapter()</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:38</div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html_a39caec739aaad9593ba1b93b8e130385"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a39caec739aaad9593ba1b93b8e130385">Metal::TradingAdapter::sendHeartBeat</a></div><div class="ttdeci">virtual void sendHeartBeat()=0</div></div>
 <div class="ttc" id="classMetal_1_1NewOrderSingle_html"><div class="ttname"><a href="classMetal_1_1NewOrderSingle.html">Metal::NewOrderSingle</a></div><div class="ttdef"><b>Definition:</b> metal.h:10</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_aa5e283e9e0a339c738cfba37fed3c7ff"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#aa5e283e9e0a339c738cfba37fed3c7ff">Metal::TradingAdapter::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:63</div></div>
-<div class="ttc" id="classMetal_1_1Message_html"><div class="ttname"><a href="classMetal_1_1Message.html">Metal::Message</a></div><div class="ttdef"><b>Definition:</b> Message.h:15</div></div>
-<div class="ttc" id="classMetal_1_1TradingAdapter_html_a10208ab030e4b3a9db4dc71206a1812e"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a10208ab030e4b3a9db4dc71206a1812e">Metal::TradingAdapter::onPhysicalConnection</a></div><div class="ttdeci">virtual void onPhysicalConnection()</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:38</div></div>
+<div class="ttc" id="classMetal_1_1Adapter_html_a8d86d5f95e20d3b9feeb4f0bedcf5785"><div class="ttname"><a href="classMetal_1_1Adapter.html#a8d86d5f95e20d3b9feeb4f0bedcf5785">Metal::Adapter::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> Adapter.h:117</div></div>
+<div class="ttc" id="KeepAlive_8h_html"><div class="ttname"><a href="KeepAlive_8h.html">KeepAlive.h</a></div></div>
+<div class="ttc" id="classMetal_1_1Message_html"><div class="ttname"><a href="classMetal_1_1Message.html">Metal::Message</a></div><div class="ttdef"><b>Definition:</b> Message.h:19</div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html_a10208ab030e4b3a9db4dc71206a1812e"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#a10208ab030e4b3a9db4dc71206a1812e">Metal::TradingAdapter::onPhysicalConnection</a></div><div class="ttdeci">virtual void onPhysicalConnection()</div><div class="ttdef"><b>Definition:</b> TradingAdapter.cpp:46</div></div>
+<div class="ttc" id="classMetal_1_1TradingAdapter_html_abe4a886b1942247785641c93c02def54"><div class="ttname"><a href="classMetal_1_1TradingAdapter.html#abe4a886b1942247785641c93c02def54">Metal::TradingAdapter::onMessage</a></div><div class="ttdeci">virtual void onMessage(Message &amp;msg)</div><div class="ttdef"><b>Definition:</b> TradingAdapter.h:57</div></div>
+<div class="ttc" id="include_2metal_2Mapper_8h_html"><div class="ttname"><a href="include_2metal_2Mapper_8h.html">Mapper.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:15 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

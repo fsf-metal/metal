@@ -1,0 +1,62 @@
+\hypertarget{classJson_1_1BatchAllocator}{}\section{Json\+:\+:Batch\+Allocator$<$ Allocated\+Type, object\+Per\+Allocation $>$ Class Template Reference}
+\label{classJson_1_1BatchAllocator}\index{Json\+::\+Batch\+Allocator$<$ Allocated\+Type, object\+Per\+Allocation $>$@{Json\+::\+Batch\+Allocator$<$ Allocated\+Type, object\+Per\+Allocation $>$}}
+
+
+{\ttfamily \#include $<$json\+\_\+batchallocator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJson_1_1BatchAllocator_a96aae4d9032847b074e72a0cf32bc9ea}{Batch\+Allocator} (unsigned int objects\+Per\+Page=255)
+\item 
+\hyperlink{classJson_1_1BatchAllocator_a823a98097ec40ccc8d88da9378be228d}{$\sim$\+Batch\+Allocator} ()
+\item 
+Allocated\+Type $\ast$ \hyperlink{classJson_1_1BatchAllocator_a4909756c2d33bd0f07662e88e4f850dd}{allocate} ()
+\item 
+void \hyperlink{classJson_1_1BatchAllocator_aceb116aceb6bb5bbcfd05433abc04ba5}{release} (Allocated\+Type $\ast$object)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classJson_1_1BatchAllocator_a96aae4d9032847b074e72a0cf32bc9ea}{}\index{Json\+::\+Batch\+Allocator@{Json\+::\+Batch\+Allocator}!Batch\+Allocator@{Batch\+Allocator}}
+\index{Batch\+Allocator@{Batch\+Allocator}!Json\+::\+Batch\+Allocator@{Json\+::\+Batch\+Allocator}}
+\subsubsection[{Batch\+Allocator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Allocated\+Type, const unsigned int object\+Per\+Allocation$>$ {\bf Json\+::\+Batch\+Allocator}$<$ Allocated\+Type, object\+Per\+Allocation $>$\+::{\bf Batch\+Allocator} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{objects\+Per\+Page = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classJson_1_1BatchAllocator_a96aae4d9032847b074e72a0cf32bc9ea}
+\hypertarget{classJson_1_1BatchAllocator_a823a98097ec40ccc8d88da9378be228d}{}\index{Json\+::\+Batch\+Allocator@{Json\+::\+Batch\+Allocator}!````~Batch\+Allocator@{$\sim$\+Batch\+Allocator}}
+\index{````~Batch\+Allocator@{$\sim$\+Batch\+Allocator}!Json\+::\+Batch\+Allocator@{Json\+::\+Batch\+Allocator}}
+\subsubsection[{$\sim$\+Batch\+Allocator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Allocated\+Type, const unsigned int object\+Per\+Allocation$>$ {\bf Json\+::\+Batch\+Allocator}$<$ Allocated\+Type, object\+Per\+Allocation $>$\+::$\sim${\bf Batch\+Allocator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classJson_1_1BatchAllocator_a823a98097ec40ccc8d88da9378be228d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classJson_1_1BatchAllocator_a4909756c2d33bd0f07662e88e4f850dd}{}\index{Json\+::\+Batch\+Allocator@{Json\+::\+Batch\+Allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!Json\+::\+Batch\+Allocator@{Json\+::\+Batch\+Allocator}}
+\subsubsection[{allocate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Allocated\+Type, const unsigned int object\+Per\+Allocation$>$ Allocated\+Type$\ast$ {\bf Json\+::\+Batch\+Allocator}$<$ Allocated\+Type, object\+Per\+Allocation $>$\+::allocate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classJson_1_1BatchAllocator_a4909756c2d33bd0f07662e88e4f850dd}
+allocate space for an array of object\+Per\+Allocation object. \begin{DoxyWarning}{Warning}
+it is the responsability of the caller to call objects constructors. 
+\end{DoxyWarning}
+\hypertarget{classJson_1_1BatchAllocator_aceb116aceb6bb5bbcfd05433abc04ba5}{}\index{Json\+::\+Batch\+Allocator@{Json\+::\+Batch\+Allocator}!release@{release}}
+\index{release@{release}!Json\+::\+Batch\+Allocator@{Json\+::\+Batch\+Allocator}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Allocated\+Type, const unsigned int object\+Per\+Allocation$>$ void {\bf Json\+::\+Batch\+Allocator}$<$ Allocated\+Type, object\+Per\+Allocation $>$\+::release (
+\begin{DoxyParamCaption}
+\item[{Allocated\+Type $\ast$}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classJson_1_1BatchAllocator_aceb116aceb6bb5bbcfd05433abc04ba5}
+Release the object. \begin{DoxyWarning}{Warning}
+it is the responsability of the caller to actually destruct the object. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/github/src/3rdparties/jsoncpp/\hyperlink{json__batchallocator_8h}{json\+\_\+batchallocator.\+h}\end{DoxyCompactItemize}

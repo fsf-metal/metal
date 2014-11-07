@@ -1,41 +1,442 @@
 \hypertarget{classMetal_1_1Codec}{}\section{Metal\+:\+:Codec Class Reference}
 \label{classMetal_1_1Codec}\index{Metal\+::\+Codec@{Metal\+::\+Codec}}
+
+
+{\ttfamily \#include $<$Codec.\+h$>$}
+
 Inheritance diagram for Metal\+:\+:Codec\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classMetal_1_1Codec}
 \end{center}
 \end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMetal_1_1Codec_a439fd8e827fabe656f49a7a043ab98d0}{Codec} ()
+\item 
+virtual int \hyperlink{classMetal_1_1Codec_a4d532631bde9029d9b5875fccaa5934e}{get\+Message\+Length} (char $\ast$data, int size)
+\item 
+void \hyperlink{classMetal_1_1Codec_a5b9970f32f2ff95981794993e2293011}{decode} (const char $\ast$data, int position, int8\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_abf3b5c0af60d724c810b72b7dec909ee}{decode} (const char $\ast$data, int position, uint8\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_a3f6d5f3018ae686f80512ad88e9a3329}{decode\+B\+E} (const char $\ast$data, int position, int16\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_a2d51b5e2c7ab2d27ab12de4ac62e9eca}{decode\+B\+E} (const char $\ast$data, int position, uint16\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_aa858a2edfd1227118d696f906746e7a1}{decode\+B\+E} (const char $\ast$data, int position, int32\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_a84257d127b1918965b47e7df825fcfcb}{decode\+B\+E} (const char $\ast$data, int position, uint32\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_a992488cf4e72ff2e26644ee0b719d7a3}{decode\+B\+E} (const char $\ast$data, int position, int64\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_a4af4488934bd2dd20dcc82fbef75cca5}{decode\+B\+E} (const char $\ast$data, int position, uint64\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_a9de32d0f9bbd0c25d3970b1fd748eb08}{decode\+L\+E} (const char $\ast$data, int position, int16\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_afc62b66910d365f4cddcdc2d869371ea}{decode\+L\+E} (const char $\ast$data, int position, uint16\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_ac8f4b899ca5f19400e7acbbf8ba28f33}{decode\+L\+E} (const char $\ast$data, int position, int32\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_aa698a26f90f1f2874183c7b7c90c7b61}{decode\+L\+E} (const char $\ast$data, int position, uint32\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_a1836678a806c987d7d96587a5130b3c6}{decode\+L\+E} (const char $\ast$data, int position, int64\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_ae69549741e857cce3b915c9ef6ab6a7b}{decode\+L\+E} (const char $\ast$data, int position, uint64\+\_\+t \&output)
+\item 
+void \hyperlink{classMetal_1_1Codec_a22284aa82f334f7e81755dc044e05c58}{decode} (const char $\ast$data, int position, std\+::string \&output, int max\+Length)
+\item 
+void \hyperlink{classMetal_1_1Codec_aa6be9650e0fc53f01f1c94a771300665}{encode} (const std\+::string \&str, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position, int max\+Length)
+\item 
+void \hyperlink{classMetal_1_1Codec_a2483a02d8022a4aae4345758244a154b}{encode} (const int8\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_a638c8eccf2d989ea31a0670764b9cb0b}{encode\+L\+E} (const int16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_a08aafff1f98ec3d4b3c0490606d109f6}{encode\+L\+E} (const uint16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_a0c3cf0c6a614610c1d56859ea3fadc48}{encode\+B\+E} (const int16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_a188c8fdc0fb07affe85c8141a5314017}{encode\+B\+E} (const uint16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_a312401c93d9fdc7ec9468e87534c2f90}{encode\+L\+E} (const int32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_a5713bcd5042c5ded9e71a336f0ad42bf}{encode\+L\+E} (const uint32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_a30d84ca7c8a95a10103555b0364d3c0b}{encode\+B\+E} (const int32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_aa721fe0d642e0a6f127a2c1fc7410293}{encode\+B\+E} (const uint32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_a32a01360f4aff4c57a7c54c72e1e8a27}{encode\+L\+E} (const int64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_acbe0a9a61a63cbfc4373b1e72603a70f}{encode\+L\+E} (const uint64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_afd8c4138467dd3e593e17fe2cbd41a01}{encode\+B\+E} (const int64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+void \hyperlink{classMetal_1_1Codec_ae8e4c0fcd43cb06917f833f66e59b413}{encode\+B\+E} (const uint64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)
+\item 
+virtual void \hyperlink{classMetal_1_1Codec_ae4796fc3d128fa650e28acdfe4277bd7}{encode\+Heart\+Beat} (\hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+virtual void \hyperlink{classMetal_1_1Codec_a14c3cc3c624726297171e843da71fa83}{encode\+Logon} (\hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+virtual \hyperlink{classMetal_1_1Codec_a68847484c9c80e04e4e4e5592cf113db}{$\sim$\+Codec} ()
+\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classMetal_1_1Codec_a6ba3a30358ee1d925d36ca2352339ecb}{}static void {\bfseries encode} (const std\+::string \&str, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position, int max\+Length)\label{classMetal_1_1Codec_a6ba3a30358ee1d925d36ca2352339ecb}
-
-\item 
-\hypertarget{classMetal_1_1Codec_a735d410b92c6209426c35ed6b7228cac}{}static void {\bfseries encode} (const int8\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1Codec_a735d410b92c6209426c35ed6b7228cac}
-
-\item 
-\hypertarget{classMetal_1_1Codec_a1c885cc8d6bd0e1e41064f5d96695cc9}{}static void {\bfseries encode\+Little\+Endian} (const int16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1Codec_a1c885cc8d6bd0e1e41064f5d96695cc9}
-
-\item 
-\hypertarget{classMetal_1_1Codec_af017a852f13da38d33926f0eda171da2}{}static void {\bfseries encode\+Big\+Endian} (const int16\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1Codec_af017a852f13da38d33926f0eda171da2}
-
-\item 
-\hypertarget{classMetal_1_1Codec_a796f4a871e2113286607bf0e93f1c101}{}static void {\bfseries encode\+Little\+Endian} (const int32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1Codec_a796f4a871e2113286607bf0e93f1c101}
-
-\item 
-\hypertarget{classMetal_1_1Codec_a338f378655819f66be12ede9a09d0266}{}static void {\bfseries encode\+Big\+Endian} (const int32\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1Codec_a338f378655819f66be12ede9a09d0266}
-
-\item 
-\hypertarget{classMetal_1_1Codec_ab33fd9d4bba018d8efbab701f58ccff6}{}static void {\bfseries encode\+Little\+Endian} (const int64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1Codec_ab33fd9d4bba018d8efbab701f58ccff6}
-
-\item 
-\hypertarget{classMetal_1_1Codec_a20ae33fa4bcba44602b6c862fe182506}{}static void {\bfseries encode\+Big\+Endian} (const int64\+\_\+t \&i, \hyperlink{classMetal_1_1Message}{Message} \&msg, int position)\label{classMetal_1_1Codec_a20ae33fa4bcba44602b6c862fe182506}
-
+static std\+::string \hyperlink{classMetal_1_1Codec_afe39c79b73724a05feea4c06a59b4d53}{format\+Hex} (char $\ast$data, int length)
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMetal_1_1Codec_a439fd8e827fabe656f49a7a043ab98d0}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!Codec@{Codec}}
+\index{Codec@{Codec}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{Codec}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Codec\+::\+Codec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1Codec_a439fd8e827fabe656f49a7a043ab98d0}
+\hypertarget{classMetal_1_1Codec_a68847484c9c80e04e4e4e5592cf113db}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!````~Codec@{$\sim$\+Codec}}
+\index{````~Codec@{$\sim$\+Codec}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{$\sim$\+Codec}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Codec\+::$\sim$\+Codec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1Codec_a68847484c9c80e04e4e4e5592cf113db}
+
+
+Reimplemented in \hyperlink{classMetal_1_1Aquis_1_1Codec_a7bdeb61cbb583a2a77476cd7b196c0c2}{Metal\+::\+Aquis\+::\+Codec}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMetal_1_1Codec_a5b9970f32f2ff95981794993e2293011}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode@{decode}}
+\index{decode@{decode}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{int8\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a5b9970f32f2ff95981794993e2293011}
+Decodes a 8 bits integer from a message \hypertarget{classMetal_1_1Codec_abf3b5c0af60d724c810b72b7dec909ee}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode@{decode}}
+\index{decode@{decode}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{uint8\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_abf3b5c0af60d724c810b72b7dec909ee}
+Decodes a 8 bits integer from a message \hypertarget{classMetal_1_1Codec_a22284aa82f334f7e81755dc044e05c58}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode@{decode}}
+\index{decode@{decode}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{std\+::string \&}]{output, }
+\item[{int}]{max\+Length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a22284aa82f334f7e81755dc044e05c58}
+Copies data into a string \hypertarget{classMetal_1_1Codec_a3f6d5f3018ae686f80512ad88e9a3329}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+B\+E@{decode\+B\+E}}
+\index{decode\+B\+E@{decode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{int16\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a3f6d5f3018ae686f80512ad88e9a3329}
+Decodes a 16 bits integer from a message in big endian format \hypertarget{classMetal_1_1Codec_a2d51b5e2c7ab2d27ab12de4ac62e9eca}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+B\+E@{decode\+B\+E}}
+\index{decode\+B\+E@{decode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{uint16\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a2d51b5e2c7ab2d27ab12de4ac62e9eca}
+Decodes an unsigned 16 bits integer from a message in big endian format \hypertarget{classMetal_1_1Codec_aa858a2edfd1227118d696f906746e7a1}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+B\+E@{decode\+B\+E}}
+\index{decode\+B\+E@{decode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{int32\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_aa858a2edfd1227118d696f906746e7a1}
+Decodes a 32 bits integer from a message in big endian format \hypertarget{classMetal_1_1Codec_a84257d127b1918965b47e7df825fcfcb}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+B\+E@{decode\+B\+E}}
+\index{decode\+B\+E@{decode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{uint32\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a84257d127b1918965b47e7df825fcfcb}
+Decodes an unsigned 32 bits integer from a message in big endian format \hypertarget{classMetal_1_1Codec_a992488cf4e72ff2e26644ee0b719d7a3}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+B\+E@{decode\+B\+E}}
+\index{decode\+B\+E@{decode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{int64\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a992488cf4e72ff2e26644ee0b719d7a3}
+Decodes a 64 bits integer from a message in big endian format \hypertarget{classMetal_1_1Codec_a4af4488934bd2dd20dcc82fbef75cca5}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+B\+E@{decode\+B\+E}}
+\index{decode\+B\+E@{decode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{uint64\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a4af4488934bd2dd20dcc82fbef75cca5}
+Decodes a 64 bits integer from a message in big endian format \hypertarget{classMetal_1_1Codec_a9de32d0f9bbd0c25d3970b1fd748eb08}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+L\+E@{decode\+L\+E}}
+\index{decode\+L\+E@{decode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{int16\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a9de32d0f9bbd0c25d3970b1fd748eb08}
+Decodes a 16 bits integer from a message in little endian format \hypertarget{classMetal_1_1Codec_afc62b66910d365f4cddcdc2d869371ea}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+L\+E@{decode\+L\+E}}
+\index{decode\+L\+E@{decode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{uint16\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_afc62b66910d365f4cddcdc2d869371ea}
+Decodes a 16 bits integer from a message in little endian format \hypertarget{classMetal_1_1Codec_ac8f4b899ca5f19400e7acbbf8ba28f33}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+L\+E@{decode\+L\+E}}
+\index{decode\+L\+E@{decode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{int32\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_ac8f4b899ca5f19400e7acbbf8ba28f33}
+Decodes a 32 bits integer from a message in little endian format \hypertarget{classMetal_1_1Codec_aa698a26f90f1f2874183c7b7c90c7b61}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+L\+E@{decode\+L\+E}}
+\index{decode\+L\+E@{decode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{uint32\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_aa698a26f90f1f2874183c7b7c90c7b61}
+Decodes an unsigned 32 bits integer from a message in little endian format \hypertarget{classMetal_1_1Codec_a1836678a806c987d7d96587a5130b3c6}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+L\+E@{decode\+L\+E}}
+\index{decode\+L\+E@{decode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{int64\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a1836678a806c987d7d96587a5130b3c6}
+Decodes a 64 bits integer from a message in little endian format \hypertarget{classMetal_1_1Codec_ae69549741e857cce3b915c9ef6ab6a7b}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!decode\+L\+E@{decode\+L\+E}}
+\index{decode\+L\+E@{decode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{decode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::decode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{position, }
+\item[{uint64\+\_\+t \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_ae69549741e857cce3b915c9ef6ab6a7b}
+Decodes an unsigned 64 bits integer from a message in little endian format \hypertarget{classMetal_1_1Codec_aa6be9650e0fc53f01f1c94a771300665}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position, }
+\item[{int}]{max\+Length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_aa6be9650e0fc53f01f1c94a771300665}
+Encode a string up to the given length. 
+\begin{DoxyParams}{Parameters}
+{\em str} & String to be encoded \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Codec_a2483a02d8022a4aae4345758244a154b}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode@{encode}}
+\index{encode@{encode}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode (
+\begin{DoxyParamCaption}
+\item[{const int8\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a2483a02d8022a4aae4345758244a154b}
+\hypertarget{classMetal_1_1Codec_a0c3cf0c6a614610c1d56859ea3fadc48}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+B\+E@{encode\+B\+E}}
+\index{encode\+B\+E@{encode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const int16\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a0c3cf0c6a614610c1d56859ea3fadc48}
+\hypertarget{classMetal_1_1Codec_a188c8fdc0fb07affe85c8141a5314017}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+B\+E@{encode\+B\+E}}
+\index{encode\+B\+E@{encode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const uint16\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a188c8fdc0fb07affe85c8141a5314017}
+\hypertarget{classMetal_1_1Codec_a30d84ca7c8a95a10103555b0364d3c0b}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+B\+E@{encode\+B\+E}}
+\index{encode\+B\+E@{encode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const int32\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a30d84ca7c8a95a10103555b0364d3c0b}
+\hypertarget{classMetal_1_1Codec_aa721fe0d642e0a6f127a2c1fc7410293}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+B\+E@{encode\+B\+E}}
+\index{encode\+B\+E@{encode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const uint32\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_aa721fe0d642e0a6f127a2c1fc7410293}
+\hypertarget{classMetal_1_1Codec_afd8c4138467dd3e593e17fe2cbd41a01}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+B\+E@{encode\+B\+E}}
+\index{encode\+B\+E@{encode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const int64\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_afd8c4138467dd3e593e17fe2cbd41a01}
+\hypertarget{classMetal_1_1Codec_ae8e4c0fcd43cb06917f833f66e59b413}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+B\+E@{encode\+B\+E}}
+\index{encode\+B\+E@{encode\+B\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+B\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+B\+E (
+\begin{DoxyParamCaption}
+\item[{const uint64\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_ae8e4c0fcd43cb06917f833f66e59b413}
+\hypertarget{classMetal_1_1Codec_ae4796fc3d128fa650e28acdfe4277bd7}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+Heart\+Beat@{encode\+Heart\+Beat}}
+\index{encode\+Heart\+Beat@{encode\+Heart\+Beat}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+Heart\+Beat}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Codec\+::encode\+Heart\+Beat (
+\begin{DoxyParamCaption}
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1Codec_ae4796fc3d128fa650e28acdfe4277bd7}
+This method should be overriden for exchanges that require a heartbeat~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Where encoded Heart\+Beat \hyperlink{classMetal_1_1Message}{Message} will be stored \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classMetal_1_1LSE_1_1MilleniumCodec_a208c3b0765080cd8fe55b82f9df5a39f}{Metal\+::\+L\+S\+E\+::\+Millenium\+Codec}.
+
+\hypertarget{classMetal_1_1Codec_a638c8eccf2d989ea31a0670764b9cb0b}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+L\+E@{encode\+L\+E}}
+\index{encode\+L\+E@{encode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const int16\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a638c8eccf2d989ea31a0670764b9cb0b}
+\hypertarget{classMetal_1_1Codec_a08aafff1f98ec3d4b3c0490606d109f6}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+L\+E@{encode\+L\+E}}
+\index{encode\+L\+E@{encode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const uint16\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a08aafff1f98ec3d4b3c0490606d109f6}
+\hypertarget{classMetal_1_1Codec_a312401c93d9fdc7ec9468e87534c2f90}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+L\+E@{encode\+L\+E}}
+\index{encode\+L\+E@{encode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const int32\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a312401c93d9fdc7ec9468e87534c2f90}
+\hypertarget{classMetal_1_1Codec_a5713bcd5042c5ded9e71a336f0ad42bf}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+L\+E@{encode\+L\+E}}
+\index{encode\+L\+E@{encode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const uint32\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a5713bcd5042c5ded9e71a336f0ad42bf}
+\hypertarget{classMetal_1_1Codec_a32a01360f4aff4c57a7c54c72e1e8a27}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+L\+E@{encode\+L\+E}}
+\index{encode\+L\+E@{encode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const int64\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_a32a01360f4aff4c57a7c54c72e1e8a27}
+\hypertarget{classMetal_1_1Codec_acbe0a9a61a63cbfc4373b1e72603a70f}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+L\+E@{encode\+L\+E}}
+\index{encode\+L\+E@{encode\+L\+E}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Codec\+::encode\+L\+E (
+\begin{DoxyParamCaption}
+\item[{const uint64\+\_\+t \&}]{i, }
+\item[{{\bf Message} \&}]{msg, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMetal_1_1Codec_acbe0a9a61a63cbfc4373b1e72603a70f}
+\hypertarget{classMetal_1_1Codec_a14c3cc3c624726297171e843da71fa83}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!encode\+Logon@{encode\+Logon}}
+\index{encode\+Logon@{encode\+Logon}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{encode\+Logon}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Codec\+::encode\+Logon (
+\begin{DoxyParamCaption}
+\item[{{\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1Codec_a14c3cc3c624726297171e843da71fa83}
+This method should be overriden by exchanges that require a logon~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Where encoded \hyperlink{classMetal_1_1Logon}{Logon} \hyperlink{classMetal_1_1Message}{Message} will be stored \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMetal_1_1Codec_afe39c79b73724a05feea4c06a59b4d53}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!format\+Hex@{format\+Hex}}
+\index{format\+Hex@{format\+Hex}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{format\+Hex}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Metal\+::\+Codec\+::format\+Hex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1Codec_afe39c79b73724a05feea4c06a59b4d53}
+\hypertarget{classMetal_1_1Codec_a4d532631bde9029d9b5875fccaa5934e}{}\index{Metal\+::\+Codec@{Metal\+::\+Codec}!get\+Message\+Length@{get\+Message\+Length}}
+\index{get\+Message\+Length@{get\+Message\+Length}!Metal\+::\+Codec@{Metal\+::\+Codec}}
+\subsubsection[{get\+Message\+Length}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Metal\+::\+Codec\+::get\+Message\+Length (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1Codec_a4d532631bde9029d9b5875fccaa5934e}
+Find out message length from its wire representation. Will find out message length and copy data into msg bytes. 
+\begin{DoxyParams}{Parameters}
+{\em data} & Byte array containing data \\
+\hline
+{\em size} & Number of bytes in array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classMetal_1_1Message}{Message} length or 0 if no message was found in data 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/jc/metal/src/metal/Codec.\+h\item 
-/home/jc/metal/src/metal/Codec.\+cpp\end{DoxyCompactItemize}
+/home/jc/metal/github/include/metal/\hyperlink{include_2metal_2Codec_8h}{Codec.\+h}\item 
+/home/jc/metal/github/src/metal/\hyperlink{metal_2Codec_8cpp}{Codec.\+cpp}\end{DoxyCompactItemize}

@@ -40,6 +40,7 @@ public:
 
 	/**
 	 * Sends a normalized cancel
+     * @see NormalizedTrading#sendCancel()
 	 */
 	void sendCancel(const Metal::OrderCancelRequest& ocr);
 

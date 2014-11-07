@@ -1,5 +1,9 @@
 \hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter}{}\section{Metal\+:\+:Quick\+F\+I\+X\+:\+:Quick\+F\+I\+X\+Adapter Class Reference}
 \label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+
+
+{\ttfamily \#include $<$Quick\+F\+I\+X\+Adapter.\+h$>$}
+
 Inheritance diagram for Metal\+:\+:Quick\+F\+I\+X\+:\+:Quick\+F\+I\+X\+Adapter\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,21 +15,35 @@ Inheritance diagram for Metal\+:\+:Quick\+F\+I\+X\+:\+:Quick\+F\+I\+X\+Adapter\+
 \item 
 \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ac437c5ed10c4b0ed06a49b31d194be70}{Quick\+F\+I\+X\+Adapter} ()
 \item 
-void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_afda717ce98408850ccd9b7a2c953aedd}{send} (const \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&nos)
+void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ae53ab5057d4e2003a486ddc5761935a1}{send\+New\+Order} (const \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&nos)
+\item 
+virtual void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_acf1ae68d29b8a22c7252891665d218a8}{on\+Message} (const \hyperlink{namespaceMetal_af4294c176f6aecf9f75e9b106b117aa1}{Execution\+Report} \&er)
+\item 
+void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a20f5db6305b3f479e12553f021765d60}{start} ()
+\item 
+void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_af0e438d5d64fa8a0aa3024b5a995f885}{stop} ()
+\item 
+virtual void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ade65590a3da99272d88059e8f031b4d4}{encode\+Logon} (\hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+virtual void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_afa4aac6757cb58c2723eda4043156a4a}{encode\+Heart\+Beat} (\hyperlink{classMetal_1_1Message}{Message} \&msg)
+\item 
+virtual \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3023c5d511ae87ee7a1cf73897fd09aa}{$\sim$\+Quick\+F\+I\+X\+Adapter} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aad5f72f920f26469fa0192dcbdb3a59a}{N\+A\+M\+E} = \char`\"{}Quick\+F\+I\+X\char`\"{}
+\item 
+static const std\+::string \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aa8a9ed777bdbc2c9a138fa35741da77a}{U\+U\+I\+D} = \char`\"{}e32cd5d0-\/4564-\/11e4-\/916c-\/0800200c9a66\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a0598785e8408706cde97d532090d3fcb}{process\+Data} (const char $\ast$data, int length)
+\item 
+void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a6bb8af5a8dd9c4ad157bce0e8ef35ef1}{send\+Heart\+Beat} ()
 \item 
 void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3f9dba36bbaa3d8db8af62ac07a9fff5}{send\+Logon} ()
-\item 
-virtual void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a2556160da779a6cde56d52889b9a93db}{recv} (const Execution\+Report \&er)
-\item 
-\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a20f5db6305b3f479e12553f021765d60}{}void {\bfseries start} ()\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a20f5db6305b3f479e12553f021765d60}
-
-\item 
-\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_af0e438d5d64fa8a0aa3024b5a995f885}{}void {\bfseries stop} ()\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_af0e438d5d64fa8a0aa3024b5a995f885}
-
-\item 
-void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ae987b07f906db9fc74d7f7a55eb38efe}{benchmark} (const std\+::vector$<$ \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} $>$ \&, std\+::chrono\+::milliseconds \&, std\+::chrono\+::milliseconds \&)
-\item 
-void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aee108bf917ca43b2a5995c5d2d993e99}{benchmark} (const std\+::vector$<$ \hyperlink{classMetal_1_1OrderCancelRequest}{Order\+Cancel\+Request} $>$ \&, std\+::chrono\+::milliseconds \&, std\+::chrono\+::milliseconds \&)
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -38,51 +56,39 @@ void \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aee108bf917ca43b2a5995
 {}
 \end{DoxyParamCaption}
 )}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ac437c5ed10c4b0ed06a49b31d194be70}
-Default Constructor 
+Default Constructor \hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3023c5d511ae87ee7a1cf73897fd09aa}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!````~Quick\+F\+I\+X\+Adapter@{$\sim$\+Quick\+F\+I\+X\+Adapter}}
+\index{````~Quick\+F\+I\+X\+Adapter@{$\sim$\+Quick\+F\+I\+X\+Adapter}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{$\sim$\+Quick\+F\+I\+X\+Adapter}]{\setlength{\rightskip}{0pt plus 5cm}virtual Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::$\sim$\+Quick\+F\+I\+X\+Adapter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3023c5d511ae87ee7a1cf73897fd09aa}
+
 
 \subsection{Member Function Documentation}
-\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ae987b07f906db9fc74d7f7a55eb38efe}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!benchmark@{benchmark}}
-\index{benchmark@{benchmark}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
-\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::benchmark (
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_afa4aac6757cb58c2723eda4043156a4a}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!encode\+Heart\+Beat@{encode\+Heart\+Beat}}
+\index{encode\+Heart\+Beat@{encode\+Heart\+Beat}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{encode\+Heart\+Beat}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::encode\+Heart\+Beat (
 \begin{DoxyParamCaption}
-\item[{const std\+::vector$<$ {\bf New\+Order\+Single} $>$ \&}]{all\+Orders, }
-\item[{std\+::chrono\+::milliseconds \&}]{mapping\+Duration, }
-\item[{std\+::chrono\+::milliseconds \&}]{encoding\+Duration}
+\item[{{\bf Message} \&}]{msg}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ae987b07f906db9fc74d7f7a55eb38efe}
-\begin{DoxySeeAlso}{See also}
-\hyperlink{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{Trading\+Adapter\+::benchmark}
-\end{DoxySeeAlso}
-This (dumb) loop maps and encodes all incoming \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single}.~\newline
- In the case of Quick\+F\+I\+X, encoding simply means calling to\+String() 
-
-Implements \hyperlink{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{Metal\+::\+Trading\+Adapter}.
-
-\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aee108bf917ca43b2a5995c5d2d993e99}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!benchmark@{benchmark}}
-\index{benchmark@{benchmark}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
-\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::benchmark (
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_afa4aac6757cb58c2723eda4043156a4a}
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ade65590a3da99272d88059e8f031b4d4}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!encode\+Logon@{encode\+Logon}}
+\index{encode\+Logon@{encode\+Logon}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{encode\+Logon}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::encode\+Logon (
 \begin{DoxyParamCaption}
-\item[{const std\+::vector$<$ {\bf Order\+Cancel\+Request} $>$ \&}]{all\+Cancels, }
-\item[{std\+::chrono\+::milliseconds \&}]{mapping\+Duration, }
-\item[{std\+::chrono\+::milliseconds \&}]{encoding\+Duration}
+\item[{{\bf Message} \&}]{msg}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aee108bf917ca43b2a5995c5d2d993e99}
-\begin{DoxySeeAlso}{See also}
-\hyperlink{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{Trading\+Adapter\+::benchmark} 
-\end{DoxySeeAlso}
-
-
-Implements \hyperlink{classMetal_1_1TradingAdapter_ae0513f6865414f61a41a8f62bafb0187}{Metal\+::\+Trading\+Adapter}.
-
-\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a2556160da779a6cde56d52889b9a93db}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!recv@{recv}}
-\index{recv@{recv}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
-\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::recv (
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ade65590a3da99272d88059e8f031b4d4}
+We don't need to provide \hyperlink{classMetal_1_1Logon}{Logon} Encoding because \hyperlink{namespaceMetal_1_1QuickFIX}{Quick\+F\+I\+X} provides its own session management \hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_acf1ae68d29b8a22c7252891665d218a8}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{on\+Message}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::on\+Message (
 \begin{DoxyParamCaption}
-\item[{const Execution\+Report \&}]{er}
+\item[{const {\bf Execution\+Report} \&}]{er}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a2556160da779a6cde56d52889b9a93db}
-This method will invoked upon receiving an execution report~\newline
- Subclasses will perform mapping, encoding then write to the active session~\newline
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_acf1ae68d29b8a22c7252891665d218a8}
+This method will invoked upon receiving a normalized execution report~\newline
+ Subclasses should override this method to capture execution reports in generic format~\newline
  
 \begin{DoxyParams}{Parameters}
 {\em Execution\+Report} & incomming execution report \\
@@ -90,18 +96,30 @@ This method will invoked upon receiving an execution report~\newline
 \end{DoxyParams}
 
 
-Implements \hyperlink{classMetal_1_1TradingAdapter_af0015d51815dedb1bc78258b3030d751}{Metal\+::\+Trading\+Adapter}.
+Reimplemented from \hyperlink{classMetal_1_1TradingAdapter_a44332505b213c0428d901ef6a530efff}{Metal\+::\+Trading\+Adapter}.
 
-\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_afda717ce98408850ccd9b7a2c953aedd}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!send@{send}}
-\index{send@{send}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
-\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::send (
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a0598785e8408706cde97d532090d3fcb}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!process\+Data@{process\+Data}}
+\index{process\+Data@{process\+Data}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{process\+Data}]{\setlength{\rightskip}{0pt plus 5cm}int Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::process\+Data (
 \begin{DoxyParamCaption}
-\item[{const {\bf New\+Order\+Single} \&}]{nos}
+\item[{const char $\ast$}]{data, }
+\item[{int}]{length}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_afda717ce98408850ccd9b7a2c953aedd}
-Tranform incomming \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} into Quick\+F\+I\+X message and send it 
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a0598785e8408706cde97d532090d3fcb}
+We don't implement a real data processor because we are leveraging \hyperlink{namespaceMetal_1_1QuickFIX}{Quick\+F\+I\+X} parsing ability 
 
-Implements \hyperlink{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473f1c3}{Metal\+::\+Trading\+Adapter}.
+Implements \hyperlink{classMetal_1_1Adapter_a195072772568dc0fd7a859ed2c99d5c7}{Metal\+::\+Adapter}.
+
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a6bb8af5a8dd9c4ad157bce0e8ef35ef1}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!send\+Heart\+Beat@{send\+Heart\+Beat}}
+\index{send\+Heart\+Beat@{send\+Heart\+Beat}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{send\+Heart\+Beat}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::send\+Heart\+Beat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a6bb8af5a8dd9c4ad157bce0e8ef35ef1}
+Formats and sends a Heart Beat message 
+
+Implements \hyperlink{classMetal_1_1TradingAdapter_a39caec739aaad9593ba1b93b8e130385}{Metal\+::\+Trading\+Adapter}.
 
 \hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3f9dba36bbaa3d8db8af62ac07a9fff5}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!send\+Logon@{send\+Logon}}
 \index{send\+Logon@{send\+Logon}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
@@ -109,14 +127,54 @@ Implements \hyperlink{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3f9dba36bbaa3d8db8af62ac07a9fff5}
-This pure virtual method should be implemented in each adapter. 
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3f9dba36bbaa3d8db8af62ac07a9fff5}
+Sends a logon message to initiate the session 
 
 Implements \hyperlink{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}{Metal\+::\+Trading\+Adapter}.
 
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ae53ab5057d4e2003a486ddc5761935a1}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!send\+New\+Order@{send\+New\+Order}}
+\index{send\+New\+Order@{send\+New\+Order}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{send\+New\+Order}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::send\+New\+Order (
+\begin{DoxyParamCaption}
+\item[{const {\bf New\+Order\+Single} \&}]{nos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ae53ab5057d4e2003a486ddc5761935a1}
+We override this method to leverage \hyperlink{namespaceMetal_1_1QuickFIX}{Quick\+F\+I\+X} sending capacity
+
+Send normalized New Order 
+
+Implements \hyperlink{classMetal_1_1TradingAdapter_abccc3fdb238887112e1a0820a70f0fce}{Metal\+::\+Trading\+Adapter}.
+
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a20f5db6305b3f479e12553f021765d60}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!start@{start}}
+\index{start@{start}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a20f5db6305b3f479e12553f021765d60}
+We are overidding start to prevent \hyperlink{classMetal_1_1Adapter}{Adapter} processing of session life cycle 
+
+Reimplemented from \hyperlink{classMetal_1_1Adapter_adeed43dfa9e2d18bd66dd2f806b1e182}{Metal\+::\+Adapter}.
+
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_af0e438d5d64fa8a0aa3024b5a995f885}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!stop@{stop}}
+\index{stop@{stop}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_af0e438d5d64fa8a0aa3024b5a995f885}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aad5f72f920f26469fa0192dcbdb3a59a}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!N\+A\+M\+E@{N\+A\+M\+E}}
+\index{N\+A\+M\+E@{N\+A\+M\+E}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::\+N\+A\+M\+E = \char`\"{}Quick\+F\+I\+X\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aad5f72f920f26469fa0192dcbdb3a59a}
+\hypertarget{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aa8a9ed777bdbc2c9a138fa35741da77a}{}\index{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}!U\+U\+I\+D@{U\+U\+I\+D}}
+\index{U\+U\+I\+D@{U\+U\+I\+D}!Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter@{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}}
+\subsubsection[{U\+U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter\+::\+U\+U\+I\+D = \char`\"{}e32cd5d0-\/4564-\/11e4-\/916c-\/0800200c9a66\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aa8a9ed777bdbc2c9a138fa35741da77a}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/jc/metal/src/metal/adapters/\+Quick\+F\+I\+X\+Adapter/Quick\+F\+I\+X\+Adapter.\+h\item 
-/home/jc/metal/src/metal/adapters/\+Quick\+F\+I\+X\+Adapter/Quick\+F\+I\+X\+Adapter.\+cpp\end{DoxyCompactItemize}
+/home/jc/metal/github/src/adapters/\+Quick\+F\+I\+X\+Adapter/\hyperlink{QuickFIXAdapter_8h}{Quick\+F\+I\+X\+Adapter.\+h}\item 
+/home/jc/metal/github/src/adapters/\+Quick\+F\+I\+X\+Adapter/\hyperlink{QuickFIXAdapter_8cpp}{Quick\+F\+I\+X\+Adapter.\+cpp}\end{DoxyCompactItemize}

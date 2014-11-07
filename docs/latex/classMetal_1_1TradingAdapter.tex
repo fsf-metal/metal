@@ -1,130 +1,101 @@
 \hypertarget{classMetal_1_1TradingAdapter}{}\section{Metal\+:\+:Trading\+Adapter Class Reference}
 \label{classMetal_1_1TradingAdapter}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
+
+
+{\ttfamily \#include $<$Trading\+Adapter.\+h$>$}
+
 Inheritance diagram for Metal\+:\+:Trading\+Adapter\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{classMetal_1_1TradingAdapter}
+\includegraphics[height=3.489097cm]{classMetal_1_1TradingAdapter}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classMetal_1_1TradingAdapter_a472ad74753a0bd77a3e78c1f7f8d0398}{Trading\+Adapter} (const std\+::string \&name, const std\+::string \&uuid)
+\hyperlink{classMetal_1_1TradingAdapter_a469004504d9929b76a9c38cf7d9bd9f9}{Trading\+Adapter} (const std\+::string \&\hyperlink{classMetal_1_1Adapter_a8d86d5f95e20d3b9feeb4f0bedcf5785}{name}, const std\+::string \&\hyperlink{classMetal_1_1Adapter_a5175a897fa7c1ad65ebf03baea3c5479}{uuid}, int heart\+Beat\+Interval=30, int retry\+Interval=5)
 \item 
-void \hyperlink{classMetal_1_1TradingAdapter_ae0b309ccc7e9ec5dfe262d071dde4c17}{set\+Remote\+Host} (const std\+::string \&host\+Name, unsigned int port\+Number)
+virtual void \hyperlink{classMetal_1_1TradingAdapter_abe4a886b1942247785641c93c02def54}{on\+Message} (\hyperlink{classMetal_1_1Message}{Message} \&msg)
 \item 
-void \hyperlink{classMetal_1_1TradingAdapter_a1ba0cd89d6475faf9da358140660e886}{start} ()
-\item 
-void \hyperlink{classMetal_1_1TradingAdapter_aa5e283e9e0a339c738cfba37fed3c7ff}{stop} ()
-\item 
-void \hyperlink{classMetal_1_1TradingAdapter_ac99cc99c695715fc396756441e68abc0}{send} (\hyperlink{classMetal_1_1Message}{Message} \&msg)
-\item 
-virtual void \hyperlink{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473f1c3}{send} (const \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&)=0
-\item 
-virtual void \hyperlink{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}{send\+Logon} ()=0
-\item 
-virtual void \hyperlink{classMetal_1_1TradingAdapter_af0015d51815dedb1bc78258b3030d751}{recv} (const Execution\+Report \&er)=0
+virtual void \hyperlink{classMetal_1_1TradingAdapter_a44332505b213c0428d901ef6a530efff}{on\+Message} (const \hyperlink{namespaceMetal_af4294c176f6aecf9f75e9b106b117aa1}{Execution\+Report} \&er)
 \item 
 virtual void \hyperlink{classMetal_1_1TradingAdapter_a10208ab030e4b3a9db4dc71206a1812e}{on\+Physical\+Connection} ()
 \item 
-virtual void \hyperlink{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{benchmark} (const std\+::vector$<$ \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} $>$ \&list, std\+::chrono\+::milliseconds \&mapping\+Duration, std\+::chrono\+::milliseconds \&encoding\+Duration)=0
-\item 
-virtual void \hyperlink{classMetal_1_1TradingAdapter_ae0513f6865414f61a41a8f62bafb0187}{benchmark} (const std\+::vector$<$ \hyperlink{classMetal_1_1OrderCancelRequest}{Order\+Cancel\+Request} $>$ \&list, std\+::chrono\+::milliseconds \&mapping\+Duration, std\+::chrono\+::milliseconds \&encoding\+Duration)=0
+virtual void \hyperlink{classMetal_1_1TradingAdapter_abccc3fdb238887112e1a0820a70f0fce}{send\+New\+Order} (const \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} \&)=0
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classMetal_1_1TradingAdapter_a51851f504678002634259b8fd5b22d3e}{close\+Socket} (int delay=0)
+\hyperlink{classMetal_1_1TradingAdapter_ad063b23fe4df53d16729f56f7f303ada}{$\sim$\+Trading\+Adapter} ()
+\item 
+virtual void \hyperlink{classMetal_1_1TradingAdapter_a39caec739aaad9593ba1b93b8e130385}{send\+Heart\+Beat} ()=0
+\item 
+virtual void \hyperlink{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}{send\+Logon} ()=0
 \end{DoxyCompactItemize}
-\subsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classMetal_1_1TradingAdapter_a0948ce848a4bd3f4d48019dde792eb5d}{}std\+::string {\bfseries remote\+Host}\label{classMetal_1_1TradingAdapter_a0948ce848a4bd3f4d48019dde792eb5d}
+\subsection*{Additional Inherited Members}
 
-\item 
-\hypertarget{classMetal_1_1TradingAdapter_ac657baf65b2e469f6fa9b641ca50cc21}{}unsigned int {\bfseries remote\+Port}\label{classMetal_1_1TradingAdapter_ac657baf65b2e469f6fa9b641ca50cc21}
 
-\item 
-\hypertarget{classMetal_1_1TradingAdapter_a1a742b88c94b305071035985437f49c2}{}N\+L\+::\+Socket $\ast$ {\bfseries socket}\label{classMetal_1_1TradingAdapter_a1a742b88c94b305071035985437f49c2}
-
-\end{DoxyCompactItemize}
-
+\subsection{Detailed Description}
+\hyperlink{classMetal_1_1TradingAdapter}{Trading\+Adapter} responsibility~\newline
+ 1) Send New Orders, Receive execution reports 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classMetal_1_1TradingAdapter_a472ad74753a0bd77a3e78c1f7f8d0398}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!Trading\+Adapter@{Trading\+Adapter}}
+\hypertarget{classMetal_1_1TradingAdapter_a469004504d9929b76a9c38cf7d9bd9f9}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!Trading\+Adapter@{Trading\+Adapter}}
 \index{Trading\+Adapter@{Trading\+Adapter}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
 \subsubsection[{Trading\+Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Trading\+Adapter\+::\+Trading\+Adapter (
 \begin{DoxyParamCaption}
 \item[{const std\+::string \&}]{name, }
-\item[{const std\+::string \&}]{uuid}
+\item[{const std\+::string \&}]{uuid, }
+\item[{int}]{heart\+Beat\+Interval = {\ttfamily 30}, }
+\item[{int}]{retry\+Interval = {\ttfamily 5}}
 \end{DoxyParamCaption}
-)}\label{classMetal_1_1TradingAdapter_a472ad74753a0bd77a3e78c1f7f8d0398}
+)}\label{classMetal_1_1TradingAdapter_a469004504d9929b76a9c38cf7d9bd9f9}
 
 \begin{DoxyParams}{Parameters}
-{\em name} & Whatever should be used to identify this adapter. Subclasses will perform mapping, encoding then write to the active session \\
+{\em name} & Whatever should be used to identify this adapter. \\
+\hline
+{\em uuid} & a unique identifier. Check out \href{http://www.famkruithof.net/uuid/uuidgen}{\tt http\+://www.\+famkruithof.\+net/uuid/uuidgen} to create your own \\
+\hline
+{\em heart\+Beat\+Interval} & number of seconds between heartbeats. Defaults to 30 seconds. \\
+\hline
+{\em retry\+Interval} & number of seconds between retries when connection is lost. Defaults to 5 seconds. Subclasses will perform mapping, encoding then write to the active session \\
 \hline
 \end{DoxyParams}
+\hypertarget{classMetal_1_1TradingAdapter_ad063b23fe4df53d16729f56f7f303ada}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!````~Trading\+Adapter@{$\sim$\+Trading\+Adapter}}
+\index{````~Trading\+Adapter@{$\sim$\+Trading\+Adapter}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
+\subsubsection[{$\sim$\+Trading\+Adapter}]{\setlength{\rightskip}{0pt plus 5cm}Metal\+::\+Trading\+Adapter\+::$\sim$\+Trading\+Adapter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classMetal_1_1TradingAdapter_ad063b23fe4df53d16729f56f7f303ada}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!benchmark@{benchmark}}
-\index{benchmark@{benchmark}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::benchmark (
+\hypertarget{classMetal_1_1TradingAdapter_abe4a886b1942247785641c93c02def54}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
+\subsubsection[{on\+Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::on\+Message (
 \begin{DoxyParamCaption}
-\item[{const std\+::vector$<$ {\bf New\+Order\+Single} $>$ \&}]{list, }
-\item[{std\+::chrono\+::milliseconds \&}]{mapping\+Duration, }
-\item[{std\+::chrono\+::milliseconds \&}]{encoding\+Duration}
+\item[{{\bf Message} \&}]{msg}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classMetal_1_1TradingAdapter_a161ad3db17091807d091d1b236de0105}
-The purpose is to measure Mapping and Encoding speed for \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single}~\newline
- Subclasses should make sure to execute both as opposed to just mapping 
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1TradingAdapter_abe4a886b1942247785641c93c02def54}
+This is invoked for every new message It should be overriden for custom processing \hypertarget{classMetal_1_1TradingAdapter_a44332505b213c0428d901ef6a530efff}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
+\subsubsection[{on\+Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::on\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Execution\+Report} \&}]{er}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classMetal_1_1TradingAdapter_a44332505b213c0428d901ef6a530efff}
+This method will invoked upon receiving a normalized execution report~\newline
+ Subclasses should override this method to capture execution reports in generic format~\newline
+ 
 \begin{DoxyParams}{Parameters}
-{\em list} & A list of \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} better if randomly generated \\
-\hline
-{\em mapping\+Duration} & Time used to map messages \\
-\hline
-{\em encoding\+Duration} & Time used to encode messages \\
+{\em Execution\+Report} & incomming execution report \\
 \hline
 \end{DoxyParams}
 
 
-Implemented in \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ae987b07f906db9fc74d7f7a55eb38efe}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
+Reimplemented in \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_acf1ae68d29b8a22c7252891665d218a8}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
 
-\hypertarget{classMetal_1_1TradingAdapter_ae0513f6865414f61a41a8f62bafb0187}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!benchmark@{benchmark}}
-\index{benchmark@{benchmark}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{benchmark}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::benchmark (
-\begin{DoxyParamCaption}
-\item[{const std\+::vector$<$ {\bf Order\+Cancel\+Request} $>$ \&}]{list, }
-\item[{std\+::chrono\+::milliseconds \&}]{mapping\+Duration, }
-\item[{std\+::chrono\+::milliseconds \&}]{encoding\+Duration}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classMetal_1_1TradingAdapter_ae0513f6865414f61a41a8f62bafb0187}
-The purpose is to measure Mapping and Encoding speed for \hyperlink{classMetal_1_1OrderCancelRequest}{Order\+Cancel\+Request}~\newline
- Subclasses should make sure to execute both as opposed to just mapping 
-\begin{DoxyParams}{Parameters}
-{\em list} & A list of \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single} better if randomly generated \\
-\hline
-{\em mapping\+Duration} & Time used to map messages \\
-\hline
-{\em encoding\+Duration} & Time used to encode messages \\
-\hline
-\end{DoxyParams}
-
-
-Implemented in \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_aee108bf917ca43b2a5995c5d2d993e99}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
-
-\hypertarget{classMetal_1_1TradingAdapter_a51851f504678002634259b8fd5b22d3e}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!close\+Socket@{close\+Socket}}
-\index{close\+Socket@{close\+Socket}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{close\+Socket}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Trading\+Adapter\+::close\+Socket (
-\begin{DoxyParamCaption}
-\item[{int}]{delay = {\ttfamily 0}}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [protected]}}\label{classMetal_1_1TradingAdapter_a51851f504678002634259b8fd5b22d3e}
-This will terminate the physical connection if need be 
-\begin{DoxyParams}{Parameters}
-{\em delay} & in milliseconds if we should wait before closing \\
-\hline
-\end{DoxyParams}
 \hypertarget{classMetal_1_1TradingAdapter_a10208ab030e4b3a9db4dc71206a1812e}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!on\+Physical\+Connection@{on\+Physical\+Connection}}
 \index{on\+Physical\+Connection@{on\+Physical\+Connection}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
 \subsubsection[{on\+Physical\+Connection}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Trading\+Adapter\+::on\+Physical\+Connection (
@@ -133,40 +104,48 @@ This will terminate the physical connection if need be
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1TradingAdapter_a10208ab030e4b3a9db4dc71206a1812e}
 This method is invoked once the socket is connected~\newline
- The default behavior is to send a \hyperlink{classMetal_1_1Logon}{Logon} message. Which you may want to override. \hypertarget{classMetal_1_1TradingAdapter_af0015d51815dedb1bc78258b3030d751}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!recv@{recv}}
-\index{recv@{recv}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::recv (
+ The default behavior is to send a \hyperlink{classMetal_1_1Logon}{Logon} message. Which you may want to override.
+
+We just managed to connect physically~\newline
+ We should send a long 
+
+Reimplemented from \hyperlink{classMetal_1_1Adapter_a1b3f9988b655d117839ed0d1596bd874}{Metal\+::\+Adapter}.
+
+\hypertarget{classMetal_1_1TradingAdapter_a39caec739aaad9593ba1b93b8e130385}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!send\+Heart\+Beat@{send\+Heart\+Beat}}
+\index{send\+Heart\+Beat@{send\+Heart\+Beat}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
+\subsubsection[{send\+Heart\+Beat}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::send\+Heart\+Beat (
 \begin{DoxyParamCaption}
-\item[{const Execution\+Report \&}]{er}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classMetal_1_1TradingAdapter_af0015d51815dedb1bc78258b3030d751}
-This method will invoked upon receiving an execution report~\newline
- Subclasses will perform mapping, encoding then write to the active session~\newline
- 
-\begin{DoxyParams}{Parameters}
-{\em Execution\+Report} & incomming execution report \\
-\hline
-\end{DoxyParams}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{classMetal_1_1TradingAdapter_a39caec739aaad9593ba1b93b8e130385}
+Formats and sends a Heart Beat message 
+
+Implements \hyperlink{classMetal_1_1Adapter_a6d045031f6daa5bf72a5cb87acde907e}{Metal\+::\+Adapter}.
 
 
-Implemented in \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_add4508b367a6383b42fb2fd1744946cd}{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}, and \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a2556160da779a6cde56d52889b9a93db}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
 
-\hypertarget{classMetal_1_1TradingAdapter_ac99cc99c695715fc396756441e68abc0}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!send@{send}}
-\index{send@{send}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Trading\+Adapter\+::send (
+Implemented in \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_a9b097537db390f3d552fd4ecbff5ab6f}{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}, and \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a6bb8af5a8dd9c4ad157bce0e8ef35ef1}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
+
+\hypertarget{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!send\+Logon@{send\+Logon}}
+\index{send\+Logon@{send\+Logon}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
+\subsubsection[{send\+Logon}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::send\+Logon (
 \begin{DoxyParamCaption}
-\item[{{\bf Message} \&}]{msg}
+{}
 \end{DoxyParamCaption}
-)}\label{classMetal_1_1TradingAdapter_ac99cc99c695715fc396756441e68abc0}
-This methods sends an message in native format. \hypertarget{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473f1c3}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!send@{send}}
-\index{send@{send}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::send (
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}
+Sends a logon message to initiate the session 
+
+Implemented in \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}, and \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3f9dba36bbaa3d8db8af62ac07a9fff5}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
+
+\hypertarget{classMetal_1_1TradingAdapter_abccc3fdb238887112e1a0820a70f0fce}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!send\+New\+Order@{send\+New\+Order}}
+\index{send\+New\+Order@{send\+New\+Order}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
+\subsubsection[{send\+New\+Order}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::send\+New\+Order (
 \begin{DoxyParamCaption}
 \item[{const {\bf New\+Order\+Single} \&}]{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classMetal_1_1TradingAdapter_a2ecc8f1c8fe8a8d29625d142f473f1c3}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classMetal_1_1TradingAdapter_abccc3fdb238887112e1a0820a70f0fce}
 This method will be called by users to send new orders~\newline
- Subclasses will perform mapping, encoding then write to the active session~\newline
+ It should map from generic to specific format then encode and send~\newline
  
 \begin{DoxyParams}{Parameters}
 {\em \hyperlink{classMetal_1_1NewOrderSingle}{New\+Order\+Single}} & Inbound order in unified format \\
@@ -177,61 +156,11 @@ This method will be called by users to send new orders~\newline
 \end{DoxySeeAlso}
 
 
-Implemented in \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_ab3da43142636043e0ade20b0881c9976}{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}, and \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_afda717ce98408850ccd9b7a2c953aedd}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
-
-\hypertarget{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!send\+Logon@{send\+Logon}}
-\index{send\+Logon@{send\+Logon}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{send\+Logon}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Metal\+::\+Trading\+Adapter\+::send\+Logon (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classMetal_1_1TradingAdapter_a39562015df3e7202a5e8f932b8bde43e}
-This pure virtual method should be implemented in each adapter. 
-
-Implemented in \hyperlink{classMetal_1_1LSE_1_1MilleniumAdapter_ab4bba2e8403ae7ed5b335985b4295b9f}{Metal\+::\+L\+S\+E\+::\+Millenium\+Adapter}, and \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_a3f9dba36bbaa3d8db8af62ac07a9fff5}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
-
-\hypertarget{classMetal_1_1TradingAdapter_ae0b309ccc7e9ec5dfe262d071dde4c17}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!set\+Remote\+Host@{set\+Remote\+Host}}
-\index{set\+Remote\+Host@{set\+Remote\+Host}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{set\+Remote\+Host}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Trading\+Adapter\+::set\+Remote\+Host (
-\begin{DoxyParamCaption}
-\item[{const std\+::string \&}]{host\+Name, }
-\item[{unsigned int}]{port\+Number}
-\end{DoxyParamCaption}
-)}\label{classMetal_1_1TradingAdapter_ae0b309ccc7e9ec5dfe262d071dde4c17}
-This method should be invoked before starting the adapter to set remote host properties 
-\begin{DoxyParams}{Parameters}
-{\em host\+Name} & name of the remote host \\
-\hline
-{\em port\+Number} & remote port number \\
-\hline
-\end{DoxyParams}
-\hypertarget{classMetal_1_1TradingAdapter_a1ba0cd89d6475faf9da358140660e886}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!start@{start}}
-\index{start@{start}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Trading\+Adapter\+::start (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1TradingAdapter_a1ba0cd89d6475faf9da358140660e886}
-This function should be invoked to initiate physical connection~\newline
- It will create a new Thread for incomming messages 
-
-Implements \hyperlink{classMetal_1_1Adapter}{Metal\+::\+Adapter}.
-
-\hypertarget{classMetal_1_1TradingAdapter_aa5e283e9e0a339c738cfba37fed3c7ff}{}\index{Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}!stop@{stop}}
-\index{stop@{stop}!Metal\+::\+Trading\+Adapter@{Metal\+::\+Trading\+Adapter}}
-\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Metal\+::\+Trading\+Adapter\+::stop (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classMetal_1_1TradingAdapter_aa5e283e9e0a339c738cfba37fed3c7ff}
-This method will close logical and physical connection~\newline
- All created threads will be terminated 
-
-Implements \hyperlink{classMetal_1_1Adapter}{Metal\+::\+Adapter}.
+Implemented in \hyperlink{classMetal_1_1LSE_1_1NormalizedMillenium_a0779d0218ce1dd1b9f0381dbd16ee142}{Metal\+::\+L\+S\+E\+::\+Normalized\+Millenium}, and \hyperlink{classMetal_1_1QuickFIX_1_1QuickFIXAdapter_ae53ab5057d4e2003a486ddc5761935a1}{Metal\+::\+Quick\+F\+I\+X\+::\+Quick\+F\+I\+X\+Adapter}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/jc/metal/src/metal/Trading\+Adapter.\+h\item 
-/home/jc/metal/src/metal/Trading\+Adapter.\+cpp\end{DoxyCompactItemize}
+/home/jc/metal/github/include/metal/\hyperlink{TradingAdapter_8h}{Trading\+Adapter.\+h}\item 
+/home/jc/metal/github/src/metal/\hyperlink{TradingAdapter_8cpp}{Trading\+Adapter.\+cpp}\end{DoxyCompactItemize}

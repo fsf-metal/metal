@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>Metal: /home/jc/metal/src/metal/metal.h Source File</title>
+<title>Metal: /home/jc/metal/github/include/metal/metal.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -70,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4e72e9fc9ba9fb430abdd09432f28b9a.html">metal</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_cc6311b76aec51701f5af348d1b9b1d6.html">metal</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">metal.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __METAL_H</span></div>
+<a href="metal_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __METAL_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __METAL_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// We rely on QuickFIX to represent messages</span></div>
@@ -100,21 +99,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceMetal.html">Metal</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classMetal_1_1NewOrderSingle.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1NewOrderSingle.html">NewOrderSingle</a> : <span class="keyword">public</span> FIX50SP2::NewOrderSingle {};</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classMetal_1_1OrderCancelRequest.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1OrderCancelRequest.html">OrderCancelRequest</a> : <span class="keyword">public</span> FIX50SP2::OrderCancelRequest {};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">typedef</span> FIX50SP2::ExecutionReport ExecutionReport;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespaceMetal.html#af4294c176f6aecf9f75e9b106b117aa1">   12</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="namespaceMetal.html#af4294c176f6aecf9f75e9b106b117aa1">FIX50SP2::ExecutionReport</a> <a class="code" href="namespaceMetal.html#af4294c176f6aecf9f75e9b106b117aa1">ExecutionReport</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classMetal_1_1Logon.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMetal_1_1Logon.html">Logon</a> {};</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif // __METAL_H</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="ttc" id="namespaceMetal_html"><div class="ttname"><a href="namespaceMetal.html">Metal</a></div><div class="ttdef"><b>Definition:</b> Adapter.h:6</div></div>
+<div class="ttc" id="namespaceMetal_html_af4294c176f6aecf9f75e9b106b117aa1"><div class="ttname"><a href="namespaceMetal.html#af4294c176f6aecf9f75e9b106b117aa1">Metal::ExecutionReport</a></div><div class="ttdeci">FIX50SP2::ExecutionReport ExecutionReport</div><div class="ttdef"><b>Definition:</b> metal.h:12</div></div>
+<div class="ttc" id="namespaceMetal_html"><div class="ttname"><a href="namespaceMetal.html">Metal</a></div><div class="ttdef"><b>Definition:</b> Adapter.cpp:11</div></div>
 <div class="ttc" id="classMetal_1_1NewOrderSingle_html"><div class="ttname"><a href="classMetal_1_1NewOrderSingle.html">Metal::NewOrderSingle</a></div><div class="ttdef"><b>Definition:</b> metal.h:10</div></div>
 <div class="ttc" id="classMetal_1_1OrderCancelRequest_html"><div class="ttname"><a href="classMetal_1_1OrderCancelRequest.html">Metal::OrderCancelRequest</a></div><div class="ttdef"><b>Definition:</b> metal.h:11</div></div>
 <div class="ttc" id="classMetal_1_1Logon_html"><div class="ttname"><a href="classMetal_1_1Logon.html">Metal::Logon</a></div><div class="ttdef"><b>Definition:</b> metal.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:15 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

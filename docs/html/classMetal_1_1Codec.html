@@ -40,7 +40,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
-      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,62 +82,1490 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Metal</b></li><li class="navelem"><a class="el" href="classMetal_1_1Codec.html">Codec</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceMetal.html">Metal</a></li><li class="navelem"><a class="el" href="classMetal_1_1Codec.html">Codec</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classMetal_1_1Codec-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Metal::Codec Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="include_2metal_2Codec_8h_source.html">Codec.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Metal::Codec:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classMetal_1_1Codec.png" usemap="#Metal::Codec_map" alt=""/>
   <map id="Metal::Codec_map" name="Metal::Codec_map">
-<area href="classMetal_1_1LSE_1_1MilleniumCodec.html" alt="Metal::LSE::MilleniumCodec" shape="rect" coords="0,56,168,80"/>
+<area href="classMetal_1_1Aquis_1_1Codec.html" alt="Metal::Aquis::Codec" shape="rect" coords="0,56,168,80"/>
+<area href="classMetal_1_1LSE_1_1MilleniumCodec.html" alt="Metal::LSE::MilleniumCodec" shape="rect" coords="178,56,346,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a439fd8e827fabe656f49a7a043ab98d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a439fd8e827fabe656f49a7a043ab98d0">Codec</a> ()</td></tr>
+<tr class="separator:a439fd8e827fabe656f49a7a043ab98d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d532631bde9029d9b5875fccaa5934e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a4d532631bde9029d9b5875fccaa5934e">getMessageLength</a> (char *data, int size)</td></tr>
+<tr class="separator:a4d532631bde9029d9b5875fccaa5934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9970f32f2ff95981794993e2293011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a5b9970f32f2ff95981794993e2293011">decode</a> (const char *data, int position, int8_t &amp;output)</td></tr>
+<tr class="separator:a5b9970f32f2ff95981794993e2293011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3b5c0af60d724c810b72b7dec909ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#abf3b5c0af60d724c810b72b7dec909ee">decode</a> (const char *data, int position, uint8_t &amp;output)</td></tr>
+<tr class="separator:abf3b5c0af60d724c810b72b7dec909ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6d5f3018ae686f80512ad88e9a3329"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a3f6d5f3018ae686f80512ad88e9a3329">decodeBE</a> (const char *data, int position, int16_t &amp;output)</td></tr>
+<tr class="separator:a3f6d5f3018ae686f80512ad88e9a3329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d51b5e2c7ab2d27ab12de4ac62e9eca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a2d51b5e2c7ab2d27ab12de4ac62e9eca">decodeBE</a> (const char *data, int position, uint16_t &amp;output)</td></tr>
+<tr class="separator:a2d51b5e2c7ab2d27ab12de4ac62e9eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa858a2edfd1227118d696f906746e7a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#aa858a2edfd1227118d696f906746e7a1">decodeBE</a> (const char *data, int position, int32_t &amp;output)</td></tr>
+<tr class="separator:aa858a2edfd1227118d696f906746e7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84257d127b1918965b47e7df825fcfcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a84257d127b1918965b47e7df825fcfcb">decodeBE</a> (const char *data, int position, uint32_t &amp;output)</td></tr>
+<tr class="separator:a84257d127b1918965b47e7df825fcfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992488cf4e72ff2e26644ee0b719d7a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a992488cf4e72ff2e26644ee0b719d7a3">decodeBE</a> (const char *data, int position, int64_t &amp;output)</td></tr>
+<tr class="separator:a992488cf4e72ff2e26644ee0b719d7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af4488934bd2dd20dcc82fbef75cca5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a4af4488934bd2dd20dcc82fbef75cca5">decodeBE</a> (const char *data, int position, uint64_t &amp;output)</td></tr>
+<tr class="separator:a4af4488934bd2dd20dcc82fbef75cca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de32d0f9bbd0c25d3970b1fd748eb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a9de32d0f9bbd0c25d3970b1fd748eb08">decodeLE</a> (const char *data, int position, int16_t &amp;output)</td></tr>
+<tr class="separator:a9de32d0f9bbd0c25d3970b1fd748eb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc62b66910d365f4cddcdc2d869371ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#afc62b66910d365f4cddcdc2d869371ea">decodeLE</a> (const char *data, int position, uint16_t &amp;output)</td></tr>
+<tr class="separator:afc62b66910d365f4cddcdc2d869371ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f4b899ca5f19400e7acbbf8ba28f33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#ac8f4b899ca5f19400e7acbbf8ba28f33">decodeLE</a> (const char *data, int position, int32_t &amp;output)</td></tr>
+<tr class="separator:ac8f4b899ca5f19400e7acbbf8ba28f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa698a26f90f1f2874183c7b7c90c7b61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#aa698a26f90f1f2874183c7b7c90c7b61">decodeLE</a> (const char *data, int position, uint32_t &amp;output)</td></tr>
+<tr class="separator:aa698a26f90f1f2874183c7b7c90c7b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1836678a806c987d7d96587a5130b3c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a1836678a806c987d7d96587a5130b3c6">decodeLE</a> (const char *data, int position, int64_t &amp;output)</td></tr>
+<tr class="separator:a1836678a806c987d7d96587a5130b3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69549741e857cce3b915c9ef6ab6a7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#ae69549741e857cce3b915c9ef6ab6a7b">decodeLE</a> (const char *data, int position, uint64_t &amp;output)</td></tr>
+<tr class="separator:ae69549741e857cce3b915c9ef6ab6a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22284aa82f334f7e81755dc044e05c58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a22284aa82f334f7e81755dc044e05c58">decode</a> (const char *data, int position, std::string &amp;output, int maxLength)</td></tr>
+<tr class="separator:a22284aa82f334f7e81755dc044e05c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6be9650e0fc53f01f1c94a771300665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#aa6be9650e0fc53f01f1c94a771300665">encode</a> (const std::string &amp;str, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position, int maxLength)</td></tr>
+<tr class="separator:aa6be9650e0fc53f01f1c94a771300665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2483a02d8022a4aae4345758244a154b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a2483a02d8022a4aae4345758244a154b">encode</a> (const int8_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a2483a02d8022a4aae4345758244a154b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a638c8eccf2d989ea31a0670764b9cb0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a638c8eccf2d989ea31a0670764b9cb0b">encodeLE</a> (const int16_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a638c8eccf2d989ea31a0670764b9cb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08aafff1f98ec3d4b3c0490606d109f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a08aafff1f98ec3d4b3c0490606d109f6">encodeLE</a> (const uint16_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a08aafff1f98ec3d4b3c0490606d109f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3cf0c6a614610c1d56859ea3fadc48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a0c3cf0c6a614610c1d56859ea3fadc48">encodeBE</a> (const int16_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a0c3cf0c6a614610c1d56859ea3fadc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188c8fdc0fb07affe85c8141a5314017"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a188c8fdc0fb07affe85c8141a5314017">encodeBE</a> (const uint16_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a188c8fdc0fb07affe85c8141a5314017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312401c93d9fdc7ec9468e87534c2f90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a312401c93d9fdc7ec9468e87534c2f90">encodeLE</a> (const int32_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a312401c93d9fdc7ec9468e87534c2f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5713bcd5042c5ded9e71a336f0ad42bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a5713bcd5042c5ded9e71a336f0ad42bf">encodeLE</a> (const uint32_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a5713bcd5042c5ded9e71a336f0ad42bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d84ca7c8a95a10103555b0364d3c0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a30d84ca7c8a95a10103555b0364d3c0b">encodeBE</a> (const int32_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a30d84ca7c8a95a10103555b0364d3c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa721fe0d642e0a6f127a2c1fc7410293"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#aa721fe0d642e0a6f127a2c1fc7410293">encodeBE</a> (const uint32_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:aa721fe0d642e0a6f127a2c1fc7410293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a01360f4aff4c57a7c54c72e1e8a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a32a01360f4aff4c57a7c54c72e1e8a27">encodeLE</a> (const int64_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:a32a01360f4aff4c57a7c54c72e1e8a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe0a9a61a63cbfc4373b1e72603a70f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#acbe0a9a61a63cbfc4373b1e72603a70f">encodeLE</a> (const uint64_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:acbe0a9a61a63cbfc4373b1e72603a70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd8c4138467dd3e593e17fe2cbd41a01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#afd8c4138467dd3e593e17fe2cbd41a01">encodeBE</a> (const int64_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:afd8c4138467dd3e593e17fe2cbd41a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e4c0fcd43cb06917f833f66e59b413"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#ae8e4c0fcd43cb06917f833f66e59b413">encodeBE</a> (const uint64_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
+<tr class="separator:ae8e4c0fcd43cb06917f833f66e59b413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4796fc3d128fa650e28acdfe4277bd7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#ae4796fc3d128fa650e28acdfe4277bd7">encodeHeartBeat</a> (<a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg)</td></tr>
+<tr class="separator:ae4796fc3d128fa650e28acdfe4277bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c3cc3c624726297171e843da71fa83"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a14c3cc3c624726297171e843da71fa83">encodeLogon</a> (<a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg)</td></tr>
+<tr class="separator:a14c3cc3c624726297171e843da71fa83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68847484c9c80e04e4e4e5592cf113db"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#a68847484c9c80e04e4e4e5592cf113db">~Codec</a> ()</td></tr>
+<tr class="separator:a68847484c9c80e04e4e4e5592cf113db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6ba3a30358ee1d925d36ca2352339ecb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ba3a30358ee1d925d36ca2352339ecb"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>encode</b> (const std::string &amp;str, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position, int maxLength)</td></tr>
-<tr class="separator:a6ba3a30358ee1d925d36ca2352339ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a735d410b92c6209426c35ed6b7228cac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a735d410b92c6209426c35ed6b7228cac"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>encode</b> (const int8_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
-<tr class="separator:a735d410b92c6209426c35ed6b7228cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c885cc8d6bd0e1e41064f5d96695cc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c885cc8d6bd0e1e41064f5d96695cc9"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>encodeLittleEndian</b> (const int16_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
-<tr class="separator:a1c885cc8d6bd0e1e41064f5d96695cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af017a852f13da38d33926f0eda171da2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af017a852f13da38d33926f0eda171da2"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>encodeBigEndian</b> (const int16_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
-<tr class="separator:af017a852f13da38d33926f0eda171da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a796f4a871e2113286607bf0e93f1c101"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a796f4a871e2113286607bf0e93f1c101"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>encodeLittleEndian</b> (const int32_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
-<tr class="separator:a796f4a871e2113286607bf0e93f1c101"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a338f378655819f66be12ede9a09d0266"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a338f378655819f66be12ede9a09d0266"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>encodeBigEndian</b> (const int32_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
-<tr class="separator:a338f378655819f66be12ede9a09d0266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab33fd9d4bba018d8efbab701f58ccff6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab33fd9d4bba018d8efbab701f58ccff6"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>encodeLittleEndian</b> (const int64_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
-<tr class="separator:ab33fd9d4bba018d8efbab701f58ccff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20ae33fa4bcba44602b6c862fe182506"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20ae33fa4bcba44602b6c862fe182506"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>encodeBigEndian</b> (const int64_t &amp;i, <a class="el" href="classMetal_1_1Message.html">Message</a> &amp;msg, int position)</td></tr>
-<tr class="separator:a20ae33fa4bcba44602b6c862fe182506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe39c79b73724a05feea4c06a59b4d53"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMetal_1_1Codec.html#afe39c79b73724a05feea4c06a59b4d53">formatHex</a> (char *data, int length)</td></tr>
+<tr class="separator:afe39c79b73724a05feea4c06a59b4d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a439fd8e827fabe656f49a7a043ab98d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Metal::Codec::Codec </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a68847484c9c80e04e4e4e5592cf113db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Metal::Codec::~Codec </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classMetal_1_1Aquis_1_1Codec.html#a7bdeb61cbb583a2a77476cd7b196c0c2">Metal::Aquis::Codec</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5b9970f32f2ff95981794993e2293011"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decode </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 8 bits integer from a message </p>
+
+</div>
+</div>
+<a class="anchor" id="abf3b5c0af60d724c810b72b7dec909ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decode </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 8 bits integer from a message </p>
+
+</div>
+</div>
+<a class="anchor" id="a22284aa82f334f7e81755dc044e05c58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decode </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Copies data into a string </p>
+
+</div>
+</div>
+<a class="anchor" id="a3f6d5f3018ae686f80512ad88e9a3329"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 16 bits integer from a message in big endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="a2d51b5e2c7ab2d27ab12de4ac62e9eca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes an unsigned 16 bits integer from a message in big endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="aa858a2edfd1227118d696f906746e7a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 32 bits integer from a message in big endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="a84257d127b1918965b47e7df825fcfcb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes an unsigned 32 bits integer from a message in big endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="a992488cf4e72ff2e26644ee0b719d7a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 64 bits integer from a message in big endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="a4af4488934bd2dd20dcc82fbef75cca5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 64 bits integer from a message in big endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="a9de32d0f9bbd0c25d3970b1fd748eb08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 16 bits integer from a message in little endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="afc62b66910d365f4cddcdc2d869371ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 16 bits integer from a message in little endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="ac8f4b899ca5f19400e7acbbf8ba28f33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 32 bits integer from a message in little endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="aa698a26f90f1f2874183c7b7c90c7b61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes an unsigned 32 bits integer from a message in little endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="a1836678a806c987d7d96587a5130b3c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes a 64 bits integer from a message in little endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="ae69549741e857cce3b915c9ef6ab6a7b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::decodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Decodes an unsigned 64 bits integer from a message in little endian format </p>
+
+</div>
+</div>
+<a class="anchor" id="aa6be9650e0fc53f01f1c94a771300665"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Encode a string up to the given length. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>String to be encoded </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2483a02d8022a4aae4345758244a154b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encode </td>
+          <td>(</td>
+          <td class="paramtype">const int8_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0c3cf0c6a614610c1d56859ea3fadc48"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const int16_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a188c8fdc0fb07affe85c8141a5314017"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a30d84ca7c8a95a10103555b0364d3c0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const int32_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa721fe0d642e0a6f127a2c1fc7410293"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd8c4138467dd3e593e17fe2cbd41a01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const int64_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8e4c0fcd43cb06917f833f66e59b413"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeBE </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4796fc3d128fa650e28acdfe4277bd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Metal::Codec::encodeHeartBeat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method should be overriden for exchanges that require a heartbeat<br />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Where encoded HeartBeat <a class="el" href="classMetal_1_1Message.html">Message</a> will be stored </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classMetal_1_1LSE_1_1MilleniumCodec.html#a208c3b0765080cd8fe55b82f9df5a39f">Metal::LSE::MilleniumCodec</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a638c8eccf2d989ea31a0670764b9cb0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const int16_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a08aafff1f98ec3d4b3c0490606d109f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a312401c93d9fdc7ec9468e87534c2f90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const int32_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5713bcd5042c5ded9e71a336f0ad42bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a32a01360f4aff4c57a7c54c72e1e8a27"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const int64_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acbe0a9a61a63cbfc4373b1e72603a70f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metal::Codec::encodeLE </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14c3cc3c624726297171e843da71fa83"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Metal::Codec::encodeLogon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMetal_1_1Message.html">Message</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method should be overriden by exchanges that require a logon<br />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>Where encoded <a class="el" href="classMetal_1_1Logon.html">Logon</a> <a class="el" href="classMetal_1_1Message.html">Message</a> will be stored </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afe39c79b73724a05feea4c06a59b4d53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Metal::Codec::formatHex </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4d532631bde9029d9b5875fccaa5934e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Metal::Codec::getMessageLength </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Find out message length from its wire representation. Will find out message length and copy data into msg bytes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Byte array containing data </td></tr>
+    <tr><td class="paramname">size</td><td>Number of bytes in array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classMetal_1_1Message.html">Message</a> length or 0 if no message was found in data </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/jc/metal/src/metal/<a class="el" href="Codec_8h_source.html">Codec.h</a></li>
-<li>/home/jc/metal/src/metal/Codec.cpp</li>
+<li>/home/jc/metal/github/include/metal/<a class="el" href="include_2metal_2Codec_8h_source.html">Codec.h</a></li>
+<li>/home/jc/metal/github/src/metal/<a class="el" href="metal_2Codec_8cpp.html">Codec.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 29 2014 12:29:01 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 7 2014 16:28:16 for Metal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['onaccept',['OnAccept',['../classOnAccept.html',1,'']]],
-  ['ondisconnect',['OnDisconnect',['../classOnDisconnect.html',1,'']]],
-  ['onread',['OnRead',['../classOnRead.html',1,'']]],
-  ['ordercancelrequest',['OrderCancelRequest',['../classMetal_1_1OrderCancelRequest.html',1,'Metal']]],
-  ['ordercancelrequest',['OrderCancelRequest',['../classMetal_1_1LSE_1_1OrderCancelRequest.html',1,'Metal::LSE']]]
+  ['nativevalue',['NativeValue',['../unionNativeValue.html',1,'']]],
+  ['neworder',['NewOrder',['../classMetal_1_1LSE_1_1NewOrder.html',1,'Metal::LSE']]],
+  ['newordersingle',['NewOrderSingle',['../classMetal_1_1NewOrderSingle.html',1,'Metal']]],
+  ['normalizedmillenium',['NormalizedMillenium',['../classMetal_1_1LSE_1_1NormalizedMillenium.html',1,'Metal::LSE']]],
+  ['normalizedtrading',['NormalizedTrading',['../classMetal_1_1NormalizedTrading.html',1,'Metal']]]
 ];

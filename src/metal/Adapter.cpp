@@ -1,4 +1,4 @@
-/*
+/**
     MeTAL: My Electronic Trading Adapters Library
     Copyright 2014 Jean-Cedric JOLLANT (jc@jollant.net)
 

@@ -1,0 +1,87 @@
+\hypertarget{classJson_1_1DefaultValueMapAllocator}{}\section{Json\+:\+:Default\+Value\+Map\+Allocator Class Reference}
+\label{classJson_1_1DefaultValueMapAllocator}\index{Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}}
+Inheritance diagram for Json\+:\+:Default\+Value\+Map\+Allocator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJson_1_1DefaultValueMapAllocator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Value\+Internal\+Map $\ast$ \hyperlink{classJson_1_1DefaultValueMapAllocator_acffb887039c2eb07def0c75c4294ef81}{new\+Map} ()
+\item 
+virtual Value\+Internal\+Map $\ast$ \hyperlink{classJson_1_1DefaultValueMapAllocator_aac63732e7747debe8452431f6753d9cb}{new\+Map\+Copy} (const Value\+Internal\+Map \&other)
+\item 
+virtual void \hyperlink{classJson_1_1DefaultValueMapAllocator_ab6b20f1aa936ab2f23b8c4e4e8f72afd}{destruct\+Map} (Value\+Internal\+Map $\ast$map)
+\item 
+virtual Value\+Internal\+Link $\ast$ \hyperlink{classJson_1_1DefaultValueMapAllocator_a13d2ed971884a87bad1efdf20d4c0dc2}{allocate\+Map\+Buckets} (unsigned int size)
+\item 
+virtual void \hyperlink{classJson_1_1DefaultValueMapAllocator_aab37ecc63def9ff464feca12376d6d97}{release\+Map\+Buckets} (Value\+Internal\+Link $\ast$links)
+\item 
+virtual Value\+Internal\+Link $\ast$ \hyperlink{classJson_1_1DefaultValueMapAllocator_af63fd492b4dcd5efddec40aa23bfbd73}{allocate\+Map\+Link} ()
+\item 
+virtual void \hyperlink{classJson_1_1DefaultValueMapAllocator_ae93b651330bc67ad0b1f8bb59755c106}{release\+Map\+Link} (Value\+Internal\+Link $\ast$link)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]make this thread-\/safe (lock when accessign batch allocator) \end{DoxyRefDesc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classJson_1_1DefaultValueMapAllocator_a13d2ed971884a87bad1efdf20d4c0dc2}{}\index{Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}!allocate\+Map\+Buckets@{allocate\+Map\+Buckets}}
+\index{allocate\+Map\+Buckets@{allocate\+Map\+Buckets}!Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}}
+\subsubsection[{allocate\+Map\+Buckets}]{\setlength{\rightskip}{0pt plus 5cm}virtual Value\+Internal\+Link$\ast$ Json\+::\+Default\+Value\+Map\+Allocator\+::allocate\+Map\+Buckets (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classJson_1_1DefaultValueMapAllocator_a13d2ed971884a87bad1efdf20d4c0dc2}
+\hypertarget{classJson_1_1DefaultValueMapAllocator_af63fd492b4dcd5efddec40aa23bfbd73}{}\index{Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}!allocate\+Map\+Link@{allocate\+Map\+Link}}
+\index{allocate\+Map\+Link@{allocate\+Map\+Link}!Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}}
+\subsubsection[{allocate\+Map\+Link}]{\setlength{\rightskip}{0pt plus 5cm}virtual Value\+Internal\+Link$\ast$ Json\+::\+Default\+Value\+Map\+Allocator\+::allocate\+Map\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classJson_1_1DefaultValueMapAllocator_af63fd492b4dcd5efddec40aa23bfbd73}
+\hypertarget{classJson_1_1DefaultValueMapAllocator_ab6b20f1aa936ab2f23b8c4e4e8f72afd}{}\index{Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}!destruct\+Map@{destruct\+Map}}
+\index{destruct\+Map@{destruct\+Map}!Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}}
+\subsubsection[{destruct\+Map}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Json\+::\+Default\+Value\+Map\+Allocator\+::destruct\+Map (
+\begin{DoxyParamCaption}
+\item[{Value\+Internal\+Map $\ast$}]{map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classJson_1_1DefaultValueMapAllocator_ab6b20f1aa936ab2f23b8c4e4e8f72afd}
+\hypertarget{classJson_1_1DefaultValueMapAllocator_acffb887039c2eb07def0c75c4294ef81}{}\index{Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}!new\+Map@{new\+Map}}
+\index{new\+Map@{new\+Map}!Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}}
+\subsubsection[{new\+Map}]{\setlength{\rightskip}{0pt plus 5cm}virtual Value\+Internal\+Map$\ast$ Json\+::\+Default\+Value\+Map\+Allocator\+::new\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classJson_1_1DefaultValueMapAllocator_acffb887039c2eb07def0c75c4294ef81}
+\hypertarget{classJson_1_1DefaultValueMapAllocator_aac63732e7747debe8452431f6753d9cb}{}\index{Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}!new\+Map\+Copy@{new\+Map\+Copy}}
+\index{new\+Map\+Copy@{new\+Map\+Copy}!Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}}
+\subsubsection[{new\+Map\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}virtual Value\+Internal\+Map$\ast$ Json\+::\+Default\+Value\+Map\+Allocator\+::new\+Map\+Copy (
+\begin{DoxyParamCaption}
+\item[{const Value\+Internal\+Map \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classJson_1_1DefaultValueMapAllocator_aac63732e7747debe8452431f6753d9cb}
+\hypertarget{classJson_1_1DefaultValueMapAllocator_aab37ecc63def9ff464feca12376d6d97}{}\index{Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}!release\+Map\+Buckets@{release\+Map\+Buckets}}
+\index{release\+Map\+Buckets@{release\+Map\+Buckets}!Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}}
+\subsubsection[{release\+Map\+Buckets}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Json\+::\+Default\+Value\+Map\+Allocator\+::release\+Map\+Buckets (
+\begin{DoxyParamCaption}
+\item[{Value\+Internal\+Link $\ast$}]{links}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classJson_1_1DefaultValueMapAllocator_aab37ecc63def9ff464feca12376d6d97}
+\hypertarget{classJson_1_1DefaultValueMapAllocator_ae93b651330bc67ad0b1f8bb59755c106}{}\index{Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}!release\+Map\+Link@{release\+Map\+Link}}
+\index{release\+Map\+Link@{release\+Map\+Link}!Json\+::\+Default\+Value\+Map\+Allocator@{Json\+::\+Default\+Value\+Map\+Allocator}}
+\subsubsection[{release\+Map\+Link}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Json\+::\+Default\+Value\+Map\+Allocator\+::release\+Map\+Link (
+\begin{DoxyParamCaption}
+\item[{Value\+Internal\+Link $\ast$}]{link}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classJson_1_1DefaultValueMapAllocator_ae93b651330bc67ad0b1f8bb59755c106}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/jc/metal/github/src/3rdparties/jsoncpp/\hyperlink{json__internalmap_8inl}{json\+\_\+internalmap.\+inl}\end{DoxyCompactItemize}

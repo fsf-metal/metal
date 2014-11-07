@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['ordercapacity',['orderCapacity',['../classMetal_1_1Aquis_1_1OrderAdd.html#a6d33517e78c0d5aa0959cc0ef75aaeb0',1,'Metal::Aquis::OrderAdd']]],
+  ['orderid',['orderID',['../classMetal_1_1LSE_1_1ExecutionReport.html#a45783f7d1498e21889836f303cbd4309',1,'Metal::LSE::ExecutionReport::orderID()'],['../classMetal_1_1LSE_1_1OrderCancelRequest.html#ad35bf5f0e86e582724e8e6868028b976',1,'Metal::LSE::OrderCancelRequest::orderId()']]],
+  ['orderqty',['orderQty',['../classMetal_1_1LSE_1_1NewOrder.html#a79d35c9c9c65c2acded727062c1b70bd',1,'Metal::LSE::NewOrder']]],
+  ['orderref',['orderRef',['../classMetal_1_1Aquis_1_1OrderCancel.html#a7b4ac3d47774e8c17f79ff1f2b51d8f8',1,'Metal::Aquis::OrderCancel']]],
+  ['orderrejectcode',['orderRejectCode',['../classMetal_1_1LSE_1_1ExecutionReport.html#afef904b5ec57c7aea395adb5c8d4b3e1',1,'Metal::LSE::ExecutionReport']]],
+  ['orderstatus',['orderStatus',['../classMetal_1_1LSE_1_1ExecutionReport.html#a92ea50fa59f974b38d71c8fa1c045291',1,'Metal::LSE::ExecutionReport']]],
+  ['orderstatus_5fcancelled',['OrderStatus_Cancelled',['../namespaceMetal_1_1LSE.html#a9e1f0bac9d6e0df6416ebc4bad1d6dd8',1,'Metal::LSE']]],
+  ['orderstatus_5fexpired',['OrderStatus_Expired',['../namespaceMetal_1_1LSE.html#aea7b1ba047539f98d66882aa6f67640b',1,'Metal::LSE']]],
+  ['orderstatus_5ffilled',['OrderStatus_Filled',['../namespaceMetal_1_1LSE.html#ae230547018dfcd71a8c6dd11a7986c95',1,'Metal::LSE']]],
+  ['orderstatus_5fnew',['OrderStatus_New',['../namespaceMetal_1_1LSE.html#ad542efa8a02f99fc9a173c8b8b9aa4ac',1,'Metal::LSE']]],
+  ['orderstatus_5fpatiallyfilled',['OrderStatus_PatiallyFilled',['../namespaceMetal_1_1LSE.html#abdf55f340dddb1aa7b2ed7df2c412273',1,'Metal::LSE']]],
+  ['orderstatus_5frejected',['OrderStatus_Rejected',['../namespaceMetal_1_1LSE.html#a7bb9b804174d716e32b49871dedd9c85',1,'Metal::LSE']]],
+  ['orderstatus_5fsuspended',['OrderStatus_Suspended',['../namespaceMetal_1_1LSE.html#a13917e08125f7bd58e34e49edbcb7abc',1,'Metal::LSE']]],
+  ['ordersubtype',['orderSubType',['../classMetal_1_1LSE_1_1NewOrder.html#a11797541566225395362ff7f9c0e3557',1,'Metal::LSE::NewOrder']]],
+  ['ordersubtype_5forder',['OrderSubType_ORDER',['../namespaceMetal_1_1LSE.html#a1cad1afe3d85e628f3d3eaa526600a3d',1,'Metal::LSE']]],
+  ['ordersubtype_5fpegged_5forder',['OrderSubType_PEGGED_ORDER',['../namespaceMetal_1_1LSE.html#a588c50b00ae49539a0cf8f40cdd30064',1,'Metal::LSE']]],
+  ['ordersubtype_5frandom_5fpeek_5fsize',['OrderSubType_RANDOM_PEEK_SIZE',['../namespaceMetal_1_1LSE.html#a52238bd7fc267f5e8aa228b16060e0db',1,'Metal::LSE']]],
+  ['ordertype',['orderType',['../classMetal_1_1Aquis_1_1OrderAdd.html#a1b9869d70224141118898b0892282e43',1,'Metal::Aquis::OrderAdd::orderType()'],['../classMetal_1_1LSE_1_1NewOrder.html#aca679f638141bbae5505ed8bb6961378',1,'Metal::LSE::NewOrder::orderType()']]],
+  ['ordertype_5flimit',['OrderType_LIMIT',['../namespaceMetal_1_1LSE.html#a60f6e325c56bf482cdb16cb907e932fc',1,'Metal::LSE']]],
+  ['ordertype_5fmarket',['OrderType_MARKET',['../namespaceMetal_1_1LSE.html#aedbd348edd17bdad7696cd68635cdb1c',1,'Metal::LSE']]],
+  ['ordertype_5fstop',['OrderType_STOP',['../namespaceMetal_1_1LSE.html#a0a91ae7f21459f30131bc3dbf7d78526',1,'Metal::LSE']]],
+  ['ordertype_5fstop_5flimit',['OrderType_STOP_LIMIT',['../namespaceMetal_1_1LSE.html#ac96e8ca8890880e4a1780fcc2455ff85',1,'Metal::LSE']]],
+  ['originalclientorderid',['originalClientOrderId',['../classMetal_1_1LSE_1_1OrderCancelRequest.html#a96b6730c82337371d5de0354566a616c',1,'Metal::LSE::OrderCancelRequest']]]
+];
