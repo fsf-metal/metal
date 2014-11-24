@@ -94,6 +94,10 @@ namespace LSE {
 		inline void encode(const int32_t &i, Message &msg, int position) { encodeLE(i, msg, position); };
 		inline void encode(const int64_t &i, Message &msg, int position) { encodeLE(i, msg, position); };
 
+		/**
+		 * LSE heartbeat encoding
+		 * @see Codec#encodeHeader
+		 */
 		inline void encodeHeader(Message &msg, int16_t length, char type);
 		void encodeHeartBeat(Message &msg);
 

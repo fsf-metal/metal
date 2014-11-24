@@ -170,8 +170,3 @@ TEST( Codec, 64bits) {
 	codec.decodeBE(data, 30, decode64u);
 	ASSERT_EQ(test64u, decode64u);
 }
-
-int main( int argc, char **argv) {
-    testing::InitGoogleTest( &argc, argv);
-    return RUN_ALL_TESTS();
-}
