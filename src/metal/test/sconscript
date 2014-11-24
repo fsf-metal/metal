@@ -5,10 +5,10 @@ import os
 Import('env', 'mymode', 'debugcflags', 'releasecflags')
 localenv = env.Clone()
 
-src_files = 'test.cpp'
+src_files = 'main.cpp testCodec.cpp testLSE.cpp'
 lib_files = 'gtest pthread Metal'
 output_file = 'test'
-include_path = '../../../include/'
+include_path = '../../../include/ ../../../src/'
 lib_path = ['../../../lib', localenv['GOOGLE_TEST_PATH']]
 
 
