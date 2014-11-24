@@ -6,7 +6,7 @@ Import('env', 'mymode', 'debugcflags', 'releasecflags')
 localenv = env.Clone()
 
 src_files = 'main.cpp testCodec.cpp testLSE.cpp'
-lib_files = 'gtest pthread Metal'
+lib_files = 'gtest pthread Metal AdapterLSETrading'
 output_file = 'test'
 include_path = '../../../include/ ../../../src/'
 lib_path = ['../../../lib', localenv['GOOGLE_TEST_PATH']]
