@@ -10,7 +10,7 @@ namespace LSE {
 
 class Logon : public Message {
 public:
-	Logon(std::string userNameParam, std::string passwordParam, std::string newPasswordParam = NULL);
+	Logon(std::string userNameParam, std::string passwordParam, std::string newPasswordParam = "");
 	~Logon(){};
 
 	std::string userName;
