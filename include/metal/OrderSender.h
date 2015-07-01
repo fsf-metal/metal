@@ -36,7 +36,9 @@ namespace Metal {
  */
 class OrderSender {
 	public:
-		OrderSender(){};
+		OrderSender(){
+			observer = NULL;
+		};
 
 		/**
 		 * Formats and sends a normalized Order Cancel Request
@@ -50,13 +52,15 @@ class OrderSender {
 		 */
 		virtual void sendNewOrder( const NewOrderSingle &) = 0;
 
+		/**
+		 * Register the observer that will receive notifications
+		 */
+		void setObserver( const OrderSenderObserver&);
+
 	protected:
 		~OrderSender(){};
 
-		/**
-		 * Entry point for every execution reports
-		 */
-		virtual void onExecutionReport(const ExecutionReport &) = 0;
+		OrderSenderObserver* observer;
 
 };
 

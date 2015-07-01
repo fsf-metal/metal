@@ -30,7 +30,7 @@ SConscript( '3rdparties/jsoncpp/sconscript')
 SConscript( 'metal/sconscript')
 SConscript( 'bootstrapper/sconscript')
 SConscript( 'adapters/QuickFIXAdapter/sconscript')
-SConscript( 'adapters/LSETradingAdapter/sconscript')
+SConscript( 'adapters/LSEOrderSender/sconscript')
 #SConscript( 'adapters/AquisATPAdapter/sconscript')
 
 
